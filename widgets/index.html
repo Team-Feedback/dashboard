@@ -294,17 +294,132 @@
         for (let entry of entries) {
             const cr = entry.contentRect;
 
+            if (cr.width >= 1200) {
+                chart01.data.labels = [
+                    'January',
+                    'February',
+                    'March',
+                    'April',
+                    'May',
+                    'June',
+                    'July',
+                    'August',
+                    'September',
+                    'October',
+                    'November',
+                    'Devember']
+                chart01.data.datasets[0].data = [1.5, 2, 3, 3.5, 3, 3.8, 4, 4.5, 4.8, 4.2, 3.3, 2.8];
+                chart01.data.datasets[1].data = [1.2, 1.4, 2, 3, 4, 3.5, 3.5, 3.8, 4, 4.5, 4.8, 4.2];
 
-
-            if(cr.width < 600) {
+            } else if (cr.width < 1200 && cr.width > 1100) {
+                chart01.data.labels = [
+                    'January',
+                    'February',
+                    'March',
+                    'April',
+                    'May',
+                    'June',
+                    'July',
+                    'August',
+                    'September',
+                    'October',
+                    'November']
+                chart01.data.datasets[0].data = [1.5, 2, 3, 3.5, 3, 3.8, 4, 4.5, 4.8, 4.2, 3.3];
+                chart01.data.datasets[1].data = [1.2, 1.4, 2, 3, 4, 3.5, 3.5, 3.8, 4, 4.5, 4.8];
+            } else if (cr.width < 1100 && cr.width > 1000) {
+                chart01.data.labels = [
+                    'January',
+                    'February',
+                    'March',
+                    'April',
+                    'May',
+                    'June',
+                    'July',
+                    'August',
+                    'September',
+                    'October']
+                chart01.data.datasets[0].data = [1.5, 2, 3, 3.5, 3, 3.8, 4, 4.5, 4.8, 4.2];
+                chart01.data.datasets[1].data = [1.2, 1.4, 2, 3, 4, 3.5, 3.5, 3.8, 4, 4.5];
+            } else if (cr.width < 1000 && cr.width > 900) {
+                chart01.data.labels = [
+                    'January',
+                    'February',
+                    'March',
+                    'April',
+                    'May',
+                    'June',
+                    'July',
+                    'August',
+                    'September',
+                    'October']
+                chart01.data.datasets[0].data = [1.5, 2, 3, 3.5, 3, 3.8, 4, 4.5, 4.8, 4.2];
+                chart01.data.datasets[1].data = [1.2, 1.4, 2, 3, 4, 3.5, 3.5, 3.8, 4, 4.5];
+            } else if (cr.width < 900 && cr.width > 800) {
+                chart01.data.labels = [
+                    'January',
+                    'February',
+                    'March',
+                    'April',
+                    'May',
+                    'June',
+                    'July',
+                    'August',
+                    'September']
+                chart01.data.datasets[0].data = [1.5, 2, 3, 3.5, 3, 3.8, 4, 4.5, 4.8];
+                chart01.data.datasets[1].data = [1.2, 1.4, 2, 3, 4, 3.5, 3.5, 3.8, 4];
+            } else if (cr.width < 800 && cr.width > 700) {
+                chart01.data.labels = [
+                    'January',
+                    'February',
+                    'March',
+                    'April',
+                    'May',
+                    'June',
+                    'July',
+                    'August']
+                chart01.data.datasets[0].data = [1.5, 2, 3, 3.5, 3, 3.8, 4, 4.5];
+                chart01.data.datasets[1].data = [1.2, 1.4, 2, 3, 4, 3.5, 3.5, 3.8];
+            } else if (cr.width < 700 && cr.width > 600) {
+                chart01.data.labels = [
+                    'January',
+                    'February',
+                    'March',
+                    'April',
+                    'May',
+                    'June',
+                    'July']
+                chart01.data.datasets[0].data = [1.5, 2, 3, 3.5, 3, 3.8, 4];
+                chart01.data.datasets[1].data = [1.2, 1.4, 2, 3, 4, 3.5, 3.5];
+            } else if (cr.width < 600 && cr.width > 500) {
+                chart01.data.labels = [
+                    'January',
+                    'February',
+                    'March',
+                    'April',
+                    'May',
+                    'June']
+                chart01.data.datasets[0].data = [1.5, 2, 3, 3.5, 3, 3.8];
+                chart01.data.datasets[1].data = [1.2, 1.4, 2, 3, 4, 3.5];
+            } else if (cr.width < 500 && cr.width > 400) {
+                chart01.data.labels = [
+                    'January',
+                    'February',
+                    'March',
+                    'April',
+                    'May']
+                chart01.data.datasets[0].data = [1.5, 2, 3, 3.5, 3];
+                chart01.data.datasets[1].data = [1.2, 1.4, 2, 3, 4];
+            } 
+            if (cr.width < 400) {
                 chart01.data.labels = [
                     'Jan',
                     'Feb',
                     'Mar',
                     'Apr',
-                    'May',
-                    'Jun',
-                    'Jul',]
+                    'May']
+                chart01.data.datasets[0].data = [1.5, 2, 3, 3.5, 3];
+                chart01.data.datasets[1].data = [1.2, 1.4, 2, 3, 4];
+
                 chart01.options.scales.yAxes[0].ticks.callback = function (label, index, labels) {
                                 switch (label) {
                                     case 1:
@@ -320,51 +435,76 @@
                                 }
                             }
                 entry.target.classList.add('small')
-            }else {
-                chart01.data.labels = [
-                    'January',
-                    'February',
-                    'March',
-                    'April',
-                    'May',
-                    'June',
-                    'July',]
-
-                    chart01.options.scales.yAxes[0].ticks.callback = function (label, index, labels) {
-                                switch (label) {
-                                    case 1:
-                                        return 'Bad (1.0)';
-                                    case 2:
-                                        return 'Weak (2.0)';
-                                    case 3:
-                                        return 'Ok (3.0)';
-                                    case 4:
-                                        return 'Good (4.0)';
-                                    case 5:
-                                        return 'Great (5.0)';
-                                }
+            } else {
+                chart01.options.scales.yAxes[0].ticks.callback = function (label, index, labels) {
+                            switch (label) {
+                                case 1:
+                                    return 'Bad (1.0)';
+                                case 2:
+                                    return 'Weak (2.0)';
+                                case 3:
+                                    return 'Ok (3.0)';
+                                case 4:
+                                    return 'Good (4.0)';
+                                case 5:
+                                    return 'Great (5.0)';
                             }
+                        }
                 entry.target.classList.remove('small')
             }
 
-            if (cr.width > 800) {
-                chart01.data.labels = [
-                    'January',
-                    'February',
-                    'March',
-                    'April',
-                    'May',
-                    'June',
-                    'July',
-                    'August',
-                    'September']
-                
-                chart01.data.datasets[0].data = [1.5, 2, 3, 3.5, 3, 3.8, 4, 4.2, 4.5];
-                chart01.data.datasets[1].data = [1.2, 1.4, 2, 3, 4, 3.5, 3.5, 4, 4.2];
-            }
-            // console.log('Element:', entry.target);
-            // console.log(`Element size: ${cr.width}px x ${cr.height}px`);
-            // console.log(`Element padding: ${cr.top}px ; ${cr.left}px`);
+            // if(cr.width < 600) {
+            //     chart01.data.labels = [
+            //         'Jan',
+            //         'Feb',
+            //         'Mar',
+            //         'Apr',
+            //         'May',
+            //         'Jun',
+            //         'Jul',]
+                // chart01.options.scales.yAxes[0].ticks.callback = function (label, index, labels) {
+                //                 switch (label) {
+                //                     case 1:
+                //                         return 'Bad';
+                //                     case 2:
+                //                         return 'Weak';
+                //                     case 3:
+                //                         return 'Ok';
+                //                     case 4:
+                //                         return 'Good';
+                //                     case 5:
+                //                         return 'Great';
+                //                 }
+                //             }
+                // entry.target.classList.add('small')
+
+            // }else {
+            //     chart01.data.labels = [
+            //         'January',
+            //         'February',
+            //         'March',
+            //         'April',
+            //         'May',
+            //         'June',
+            //         'July',]
+
+                // chart01.options.scales.yAxes[0].ticks.callback = function (label, index, labels) {
+                //             switch (label) {
+                //                 case 1:
+                //                     return 'Bad (1.0)';
+                //                 case 2:
+                //                     return 'Weak (2.0)';
+                //                 case 3:
+                //                     return 'Ok (3.0)';
+                //                 case 4:
+                //                     return 'Good (4.0)';
+                //                 case 5:
+                //                     return 'Great (5.0)';
+                //             }
+                //         }
+                // entry.target.classList.remove('small')
+            // }
+
         }
         });
 
