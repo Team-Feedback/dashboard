@@ -4387,11 +4387,9 @@ body {
       border-bottom: none; }
     #widgets .content .widget-line-chart .widget-body {
       padding: 0;
-      padding-bottom: 2em; }
+      padding-bottom: 3em; }
     #widgets .content .widget-line-chart.small .line-chart {
       max-height: 100%; }
-    #widgets .content .widget-line-chart.small .chart-legend {
-      display: none; }
     #widgets .content .widget-header {
       padding: 2em 0;
       margin: 0 4.7em;
@@ -4598,8 +4596,8 @@ body {
     align-items: center; }
     .line-chart-wrapper .chart-legend {
       position: relative;
-      padding: 0.3rem 2rem;
-      margin: 2.4rem 2.5rem;
+      padding: 0.3em 2em;
+      margin: 2.4em 2.5em;
       margin-bottom: 0;
       display: -webkit-box;
       display: -webkit-flex;
@@ -4620,7 +4618,7 @@ body {
       -webkit-justify-content: center;
       -moz-justify-content: center;
       justify-content: center;
-      min-height: 4.1rem;
+      min-height: 4.1em;
       width: 87%;
       border-radius: 3px;
       border: solid 1px #e4e8ec; }
@@ -4641,13 +4639,13 @@ body {
         -moz-justify-content: center;
         justify-content: center; }
         .line-chart-wrapper .chart-legend-item:not(:last-of-type) {
-          margin-right: 3rem; }
+          margin-right: 3em; }
         .line-chart-wrapper .chart-legend-item-color {
-          margin-right: 0.85rem;
-          width: 2.5rem;
+          margin-right: 0.85em;
+          width: 2.5em;
           height: 3px; }
         .line-chart-wrapper .chart-legend-item-name {
-          font-size: 1.2rem;
+          font-size: 1.2em;
           font-weight: 400;
           letter-spacing: -0.18px;
           color: #16222f; }

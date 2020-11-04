@@ -10,7 +10,7 @@
 
     <main class="main" id="widgets">
         <!-- Header -->
-        <div class="header">
+        <div class="header small">
             <!-- Buttons -->
             <div class="header-buttons">
                 <div class="header-buttons-settings"><i class="icon-cog"></i></div>
@@ -65,29 +65,30 @@
                 </ul>
             </div>
 
-            <div class="header-sub-nav">
-                <ul class="header-sub-nav-list">
-                    <li class="header-sub-nav-list-item active">
-                        <p class="header-sub-nav-list-item-text" text="Overall charts">Overall charts</p>
-                    </li>
-                    <li class="header-sub-nav-list-item">
-                        <p class="header-sub-nav-list-item-text" text="Team member charts">Team member charts</p>
-                    </li>
-                    <li class="header-sub-nav-list-item">
-                        <p class="header-sub-nav-list-item-text" text="Team lead charts">Team lead charts</p>
-                    </li>
-                    <li class="add-new-widgets">
-                        <button>Add new widgets</button>
-                    </li>
-                </ul>
-            </div>
+            
         </div>
 
         <!-- Content -->
         <div class="content-wrapper">
             <div class="content">
+                <div class="header-sub-nav">
+                    <ul class="header-sub-nav-list">
+                        <li class="header-sub-nav-list-item active">
+                            <p class="header-sub-nav-list-item-text" text="Overall charts">Overall charts</p>
+                        </li>
+                        <li class="header-sub-nav-list-item">
+                            <p class="header-sub-nav-list-item-text" text="Team member charts">Team member charts</p>
+                        </li>
+                        <li class="header-sub-nav-list-item">
+                            <p class="header-sub-nav-list-item-text" text="Team lead charts">Team lead charts</p>
+                        </li>
+                        <li class="add-new-widgets">
+                            <button>Add new widgets</button>
+                        </li>
+                    </ul>
+                </div>
                 <div class="widgets">
-                    <div class="widget-wrapper big">
+                    <div class="widget-wrapper big" style="display: none;">
                       <div class="widget">
                           <div class="widget-header">
                               <p class="widget-header-title">Overview how this team is doing at the moment</p>
@@ -344,6 +345,22 @@
                                 }
                             }
                 entry.target.classList.remove('small')
+            }
+
+            if (cr.width > 800) {
+                chart01.data.labels = [
+                    'January',
+                    'February',
+                    'March',
+                    'April',
+                    'May',
+                    'June',
+                    'July',
+                    'August',
+                    'September']
+                
+                chart01.data.datasets[0].data = [1.5, 2, 3, 3.5, 3, 3.8, 4, 4.2, 4.5];
+                chart01.data.datasets[1].data = [1.2, 1.4, 2, 3, 4, 3.5, 3.5, 4, 4.2];
             }
             // console.log('Element:', entry.target);
             // console.log(`Element size: ${cr.width}px x ${cr.height}px`);
