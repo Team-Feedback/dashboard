@@ -5557,6 +5557,15 @@ body {
           padding: 0;
           padding-bottom: 2em;
         }
+
+        &.small {
+          & .line-chart {
+            max-height: 100%;
+          }
+          & .chart-legend {
+            display: none;
+          }
+        }
       }
 
       &-header {

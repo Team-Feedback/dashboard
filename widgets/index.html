@@ -266,9 +266,11 @@
             })
         })
 
-        var someElement = document.querySelector('.widget-bar-graph');
+        var barGraph = document.querySelector('.widget-bar-graph');
+        var lineChart = document.querySelector('.widget-line-chart');
 
-        var ro = new ResizeObserver(entries => {
+        // BAR CHART RESIZE OBSERVER
+        var roBarGraph = new ResizeObserver(entries => {
         for (let entry of entries) {
             const cr = entry.contentRect;
 
@@ -282,9 +284,76 @@
             console.log(`Element padding: ${cr.top}px ; ${cr.left}px`);
         }
         });
+        let small = false;
+
+        // LINE CHART RESIZE OBSERVER
+        var roLineChart = new ResizeObserver(entries => {
+
+
+        for (let entry of entries) {
+            const cr = entry.contentRect;
+
+
+
+            if(cr.width < 600) {
+                chart01.data.labels = [
+                    'Jan',
+                    'Feb',
+                    'Mar',
+                    'Apr',
+                    'May',
+                    'Jun',
+                    'Jul',]
+                chart01.options.scales.yAxes[0].ticks.callback = function (label, index, labels) {
+                                switch (label) {
+                                    case 1:
+                                        return 'Bad';
+                                    case 2:
+                                        return 'Weak';
+                                    case 3:
+                                        return 'Ok';
+                                    case 4:
+                                        return 'Good';
+                                    case 5:
+                                        return 'Great';
+                                }
+                            }
+                entry.target.classList.add('small')
+            }else {
+                chart01.data.labels = [
+                    'January',
+                    'February',
+                    'March',
+                    'April',
+                    'May',
+                    'June',
+                    'July',]
+
+                    chart01.options.scales.yAxes[0].ticks.callback = function (label, index, labels) {
+                                switch (label) {
+                                    case 1:
+                                        return 'Bad (1.0)';
+                                    case 2:
+                                        return 'Weak (2.0)';
+                                    case 3:
+                                        return 'Ok (3.0)';
+                                    case 4:
+                                        return 'Good (4.0)';
+                                    case 5:
+                                        return 'Great (5.0)';
+                                }
+                            }
+                entry.target.classList.remove('small')
+            }
+            // console.log('Element:', entry.target);
+            // console.log(`Element size: ${cr.width}px x ${cr.height}px`);
+            // console.log(`Element padding: ${cr.top}px ; ${cr.left}px`);
+        }
+        });
 
         // Observe one or multiple elements
-        ro.observe(someElement);
+        roBarGraph.observe(barGraph);
+        roLineChart.observe(lineChart);
 
         var ctx01 = document.getElementById('chart-01').getContext('2d');
 

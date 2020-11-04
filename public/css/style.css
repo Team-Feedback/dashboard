@@ -4388,6 +4388,10 @@ body {
     #widgets .content .widget-line-chart .widget-body {
       padding: 0;
       padding-bottom: 2em; }
+    #widgets .content .widget-line-chart.small .line-chart {
+      max-height: 100%; }
+    #widgets .content .widget-line-chart.small .chart-legend {
+      display: none; }
     #widgets .content .widget-header {
       padding: 2em 0;
       margin: 0 4.7em;
