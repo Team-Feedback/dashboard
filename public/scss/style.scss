@@ -5565,6 +5565,21 @@ body {
           & .chart-legend {
             //display: none;
             //font-size: 0.5em;
+
+            &-item {
+              @include justify-content(flex-start);
+              margin-right: 0;
+              width: 50%;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+
+              &-name {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+            }
           }
         }
       }
