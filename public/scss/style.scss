@@ -5548,6 +5548,17 @@ body {
         }
       }
 
+      &-line-chart {
+        & .widget-header {
+          border-bottom: none;
+        }
+
+        & .widget-body {
+          padding: 0;
+          padding-bottom: 2em;
+        }
+      }
+
       &-header {
         padding: 2em 0;
         margin: 0 4.7em;
@@ -5597,7 +5608,7 @@ body {
 
       &-body {
         padding: 0 2em 3em;
-        height: calc(100% - 7.9em);
+        height: calc(100% - 8em);
       }
     }
   }
@@ -5617,12 +5628,24 @@ body {
     border-left: 1px solid #43546a;
     overflow: visible;
 
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -12.5em;
+      width: calc(100% + 12.5em);
+      height: 3.2em;
+      background: linear-gradient(0deg, #fff 70%, transparent);
+      z-index: -1;
+    }
+
     &-data {
       padding-bottom: 1.5em;
       margin-left: -12.5em;
       padding-left: 12.5em;
       max-height: 100%;
       height: 100%;
+      z-index: -10;
       overflow-y: auto;
       scrollbar-width: none;
       /* Firefox */
@@ -5715,6 +5738,74 @@ body {
         margin-right: 0.5em;
       }
     }
+  }
+}
+
+.line-chart {
+  padding-left: 2.5rem;
+  padding-right: 5rem;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-height: 27.3rem;
+
+  &-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+    @include justify-content(flex-start);
+    @include align-items(center);
+
+    & .chart-legend {
+      position: relative;
+      padding: 0.3rem 2rem;
+      margin: 2.4rem 2.5rem;
+      margin-bottom: 0;
+      @include flexbox();
+      @include flex-wrap(wrap);
+      @include align-items(center);
+      @include justify-content(center);
+      min-height: 4.1rem;
+      width: 87%;
+      border-radius: 3px;
+      border: solid 1px #e4e8ec;
+
+      &-item {
+        @include inline-flex();
+        @include align-items(center);
+        @include justify-content(center);
+
+        &:not(:last-of-type) {
+          margin-right: 3rem;
+        }
+
+        &-color {
+          margin-right: 0.85rem;
+          width: 2.5rem;
+          height: 3px;
+        }
+
+        &-name {
+          font-size: 1.2rem;
+          font-weight: 400;
+          letter-spacing: -0.18px;
+          color: #16222f;
+        }
+      }
+    }
+  }
+
+  &-canvas {
+    // height: 100%;
+    // min-height: 0;
+    // max-height: 100%;
+    //width: 100%;
+    // position: relative!important;
+    // width: 100%;
+    //height: auto!important;
+    // max-height: 100%!important;
   }
 }
 
