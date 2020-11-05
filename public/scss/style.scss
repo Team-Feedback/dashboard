@@ -5534,21 +5534,13 @@ body {
 
       &-pie-chart {
         overflow-x: hidden;
-      }
-    }
 
-    .widget {
-      position: relative;
-      width: 100%;
-      height: 42.5em;
-      border-radius: 6px;
-      box-shadow: 0 3px 6px 0 rgba(226, 226, 226, 0.11);
-      border: solid 1px #e4e8ec;
-      background-color: #ffffff;
+        & .widget-header {
+          border-bottom: none;
+        }
 
-      &.small {
-        & .bar-graph {
-          padding-right: 2em;
+        & .widget-body {
+          padding: 0;
         }
       }
 
@@ -5559,7 +5551,6 @@ body {
 
         & .widget-body {
           padding: 0;
-          padding-bottom: 3em;
         }
 
         &.small {
@@ -5585,6 +5576,22 @@ body {
               }
             }
           }
+        }
+      }
+    }
+
+    .widget {
+      position: relative;
+      width: 100%;
+      height: 42.5em;
+      border-radius: 6px;
+      box-shadow: 0 3px 6px 0 rgba(226, 226, 226, 0.11);
+      border: solid 1px #e4e8ec;
+      background-color: #ffffff;
+
+      &.small {
+        & .bar-graph {
+          padding-right: 2em;
         }
       }
 
@@ -5644,12 +5651,9 @@ body {
 }
 
 .pie-chart {
-  // padding-left: 4.6rem;
-  // padding-right: 6.8rem;
   position: relative;
   width: 100%;
   height: 100%;
-  // max-height: 27.3rem;
 
   &-wrapper {
     position: relative;
@@ -5658,6 +5662,7 @@ body {
     @include flexbox();
     @include flex-direction(column);
     @include justify-content(flex-start);
+    @include justify-content(space-between);
     @include align-items(center);
 
     & .chart-legend {
@@ -5666,14 +5671,15 @@ body {
       max-width: 55.1rem;
       padding: 0.3rem 2rem;
       margin: 2.4rem 3.5rem;
-      margin-bottom: 0;
+      margin-bottom: 2em;
+      margin-top: 0;
       @include flexbox();
       @include flex-wrap(wrap);
       @include align-items(center);
       @include justify-content(center);
-      min-height: 4.4rem;
-      border-radius: 1.5px;
-      border: solid 0.5px #a3a3a3;
+      min-height: 4.1rem;
+      border-radius: 3px;
+      border: solid 1px #e4e8ec;
 
       &-item {
         @include inline-flex();
@@ -5692,7 +5698,7 @@ body {
         }
 
         &-name {
-          font-size: 1.2rem;
+          font-size: 1.2em;
           font-weight: 400;
           letter-spacing: -0.18px;
           color: #16222f;
@@ -5854,14 +5860,14 @@ body {
     height: 100%;
     @include flexbox();
     @include flex-direction(column);
-    @include justify-content(flex-start);
+    @include justify-content(space-between);
     @include align-items(center);
 
     & .chart-legend {
       position: relative;
       padding: 0.3em 2em;
       margin: 2.4em 2.5em;
-      margin-bottom: 0;
+      margin-bottom: 2em;
       @include flexbox();
       @include flex-wrap(wrap);
       @include align-items(center);

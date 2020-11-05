@@ -199,8 +199,8 @@
                       </div>
                     </div>
         
-                    <div class="widget-wrapper small">
-                      <div class="widget widget-line-chart">
+                    <div class="widget-wrapper small widget-wrapper-line-chart">
+                      <div class="widget">
                           <div class="widget-header">
                               <p class="widget-header-title">Atmosphere in team and how work is organised</p>
                               <p class="widget-header-text">Longterm development chart based on 64 reviews</p>
@@ -312,7 +312,7 @@
         })
 
         var barGraph = document.querySelector('.widget-bar-graph');
-        var lineChart = document.querySelector('.widget-line-chart');
+        var lineChart = document.querySelector('.widget-wrapper-line-chart');
 
         // BAR CHART RESIZE OBSERVER
         var roBarGraph = new ResizeObserver(entries => {
