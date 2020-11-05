@@ -4420,6 +4420,7 @@ body {
     #widgets .content .widget-wrapper-value-box .widget-header {
       border-bottom: none; }
     #widgets .content .widget-wrapper-value-box.small-width .value-box {
+      max-width: 44em;
       grid-template-rows: 1fr 1fr;
       grid-template-columns: 1fr 1fr; }
       #widgets .content .widget-wrapper-value-box.small-width .value-box-item {
@@ -4431,6 +4432,7 @@ body {
         #widgets .content .widget-wrapper-value-box.small-width .value-box-item:nth-of-type(5), #widgets .content .widget-wrapper-value-box.small-width .value-box-item:nth-of-type(6) {
           display: none; }
     #widgets .content .widget-wrapper-value-box.extra-small-width .value-box {
+      max-width: 22em;
       grid-template-rows: 1fr;
       grid-template-columns: 1fr; }
       #widgets .content .widget-wrapper-value-box.extra-small-width .value-box-item {
@@ -4473,6 +4475,20 @@ body {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis; }
+      #widgets .content .widget-header-options-link {
+        font-size: 1.2em;
+        font-weight: 400;
+        letter-spacing: -0.18px;
+        color: #435365;
+        cursor: pointer; }
+        #widgets .content .widget-header-options-link.active {
+          font-weight: 600; }
+      #widgets .content .widget-header-options-divider {
+        margin: 0 0.2em;
+        font-size: 1.2em;
+        font-weight: 500;
+        letter-spacing: -0.18px;
+        color: #435365; }
       #widgets .content .widget-header-icons {
         margin-left: 2em;
         position: absolute;
@@ -4989,7 +5005,7 @@ body {
   position: relative;
   min-width: 0;
   width: 80%;
-  max-width: 52em;
+  max-width: 66em;
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
@@ -4998,7 +5014,6 @@ body {
   background-color: #fbfbfc; }
   .value-box-item {
     padding: 2.8em 1.5em;
-    padding-top: 2.2em;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;
@@ -5034,15 +5049,15 @@ body {
         position: absolute;
         top: 0;
         right: 0;
-        transform: translate(120%, 50%);
-        margin-left: 0.4rem;
-        width: 1.5rem;
-        height: 1.5394rem; }
+        transform: translate(140%, 15%);
+        margin-left: 1rem;
+        width: 1.316rem;
+        height: 1.35rem; }
         .value-box-item-title-arrow.good {
           fill: #32ba12; }
         .value-box-item-title-arrow.bad {
           fill: #ff9d00;
-          transform: rotateZ(180deg) translate(-120%, -50%); }
+          transform: rotateZ(180deg) translate(-133%, -15%); }
     .value-box-item-info {
       margin-bottom: 0.3076923077em;
       font-size: 1.3em;

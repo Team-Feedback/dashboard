@@ -5617,6 +5617,7 @@ body {
 
         &.small-width {
           & .value-box {
+            max-width: 44em;
             grid-template-rows: 1fr 1fr;
             grid-template-columns: 1fr 1fr;
 
@@ -5643,6 +5644,7 @@ body {
 
         &.extra-small-width {
           & .value-box {
+            max-width: 22em;
             grid-template-rows: 1fr;
             grid-template-columns: 1fr;
 
@@ -5712,6 +5714,28 @@ body {
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
+        }
+
+        &-options {
+          &-link {
+            font-size: 1.2em;
+            font-weight: 400;
+            letter-spacing: -0.18px;
+            color: #435365;
+            cursor: pointer;
+
+            &.active {
+              font-weight: 600;
+            }
+          }
+
+          &-divider {
+            margin: 0 0.2em;
+            font-size: 1.2em;
+            font-weight: 500;
+            letter-spacing: -0.18px;
+            color: #435365;
+          }
         }
 
         &-icons {
@@ -6187,7 +6211,7 @@ body {
   position: relative;
   min-width: 0;
   width: 80%;
-  max-width: 52em;
+  max-width: 66em;
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
@@ -6217,7 +6241,8 @@ body {
 
   &-item {
     padding: 2.8em 1.5em;
-    padding-top: 2.2em;
+    //padding-bottom: 3.3em;
+    //padding-top: 2.2em;
     @include flexbox();
     @include flex-direction(column);
     @include align-items(center);
@@ -6238,10 +6263,10 @@ body {
         position: absolute;
         top: 0;
         right: 0;
-        transform: translate(120%, 50%);
-        margin-left: 0.4rem;
-        width: 1.5rem;
-        height: 1.5394rem;
+        transform: translate(140%, 15%);
+        margin-left: 1rem;
+        width: 1.316rem;
+        height: 1.35rem;
 
         &.good {
           fill: #32ba12;
@@ -6249,7 +6274,7 @@ body {
 
         &.bad {
           fill: #ff9d00;
-          transform: rotateZ(180deg) translate(-120%, -50%);
+          transform: rotateZ(180deg) translate(-133%, -15%);
         }
       }
     }
