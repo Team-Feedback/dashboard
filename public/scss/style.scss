@@ -5583,6 +5583,31 @@ body {
         & .widget-header {
           border-bottom: none;
         }
+
+        &.small-width {
+          & .chart-column {
+            grid-template-rows: 1fr 10em;
+
+            &-h-axis {
+              padding-top: 0.4em;
+              overflow: visible;
+
+              &-item {
+                position: relative;
+                height: 100%;
+                overflow: visible;
+
+                &-label {
+                  position: absolute;
+                  top: 0;
+                  left: 50%;
+                  transform: rotateZ(45deg);
+                  transform-origin: 0 0;
+                }
+              }
+            }
+          }
+        }
       }
     }
 

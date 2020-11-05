@@ -4402,6 +4402,21 @@ body {
         text-overflow: ellipsis; }
     #widgets .content .widget-wrapper-column-chart .widget-header {
       border-bottom: none; }
+    #widgets .content .widget-wrapper-column-chart.small-width .chart-column {
+      grid-template-rows: 1fr 10em; }
+      #widgets .content .widget-wrapper-column-chart.small-width .chart-column-h-axis {
+        padding-top: 0.4em;
+        overflow: visible; }
+        #widgets .content .widget-wrapper-column-chart.small-width .chart-column-h-axis-item {
+          position: relative;
+          height: 100%;
+          overflow: visible; }
+          #widgets .content .widget-wrapper-column-chart.small-width .chart-column-h-axis-item-label {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: rotateZ(45deg);
+            transform-origin: 0 0; }
   #widgets .content .widget {
     position: relative;
     width: 100%;
