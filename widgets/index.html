@@ -239,6 +239,48 @@
                           </div>
                       </div>
                     </div>
+
+                    <div class="widget-wrapper small widget-wrapper-pie-chart">
+                        <div class="widget widget-line-chart">
+                            <div class="widget-header">
+                                <p class="widget-header-title">Atmosphere in team and how work is organised</p>
+                                <p class="widget-header-text">Longterm development chart based on 64 reviews</p>
+                                <div class="widget-header-icons">
+                                    <i class="icon-expand-outlined"></i>
+                                    <i class="icon-cog-outlined"></i>
+                                </div>
+                            </div>
+
+                            <div class="widget-body">
+                                <div class="pie-chart-wrapper">
+                                    <div class="pie-chart" style="width:auto; height: 100%;">
+                                        <div id="piechart02" style="width:auto; height: 100%;"></div>
+                                    </div>
+                                    <div class="chart-legend">
+                                        <div class="chart-legend-item">
+                                            <span class="chart-legend-item-color" style="background-color: #07487F;"></span>
+                                            <span class="chart-legend-item-name">Attitude</span>
+                                        </div>
+    
+                                        <div class="chart-legend-item">
+                                            <span class="chart-legend-item-color" style="background-color: #559A19;"></span>
+                                            <span class="chart-legend-item-name">Productivity</span>
+                                        </div>
+    
+                                        <div class="chart-legend-item">
+                                            <span class="chart-legend-item-color" style="background-color: #F7DD31;"></span>
+                                            <span class="chart-legend-item-name">Teamworking</span>
+                                        </div>
+    
+                                        <div class="chart-legend-item">
+                                            <span class="chart-legend-item-color" style="background-color: #EA2725;"></span>
+                                            <span class="chart-legend-item-name">Average</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                   </div>
             </div>
         </div>
@@ -246,6 +288,8 @@
     
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
     <script>
         //HEADER SMALL/BIG TOGGLE
@@ -289,6 +333,43 @@
 
         // LINE CHART RESIZE OBSERVER
         var roLineChart = new ResizeObserver(entries => {
+
+
+            google.charts.load('current', {
+            'packages': ['corechart']
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Work', 11],
+                ['Eat', 2],
+                ['Commute', 2],
+                ['Watch TV', 2],
+                ['Sleep', 7]
+            ]);
+
+            var options = {
+                backgroundColor: 'transparent',
+                legend: 'none',
+                title: false,
+                width: 'auto',
+                height: 'auto',
+                chartArea: {
+                    height: '94%',
+                    left: '0',
+                    right: '0',
+                }
+            };
+
+            //var chart01 = new google.visualization.PieChart(document.getElementById('piechart01'));
+            var chart02 = new google.visualization.PieChart(document.getElementById('piechart02'));
+
+            //chart01.draw(data, options);
+            chart02.draw(data, options);
+        }
 
 
         for (let entry of entries) {
