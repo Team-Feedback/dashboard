@@ -2159,6 +2159,12 @@ body {
     height: 7.1em; }
   .settings-table-row.row-03, .settings-table-row.row-04, .settings-table-row.row-05, .settings-table-row.row-07 {
     height: 9em; }
+  .settings-table-row .settings-table-row-column-02.edit, .settings-table-row .settings-table-row-column-03.edit {
+    display: none; }
+  .settings-table-row.editable.edit .settings-table-row-column-02, .settings-table-row.editable.edit .settings-table-row-column-03 {
+    display: none; }
+    .settings-table-row.editable.edit .settings-table-row-column-02.edit, .settings-table-row.editable.edit .settings-table-row-column-03.edit {
+      display: inline-block; }
 .settings-table-text {
   font-size: 1.28rem;
   font-weight: 400;
@@ -2186,6 +2192,27 @@ body {
 .settings-table-icon i {
   font-size: 5.7em;
   color: #ffa800; }
+.settings-table .settings-input {
+  padding: 0.5rem 1.1rem;
+  min-width: 0;
+  width: 100%;
+  max-width: 20.5rem;
+  height: 3.4rem;
+  font-size: 1.23rem;
+  line-height: 1.22;
+  letter-spacing: -0.06px;
+  color: #2d3640;
+  outline: none;
+  border-radius: 4px;
+  border: solid 1px #cfd7e0;
+  min-width: 0; }
+  .settings-table .settings-input::placeholder {
+    color: #c6c6c6; }
+  .settings-table .settings-input.desc {
+    width: 100%;
+    max-width: 40rem; }
+    .settings-table .settings-input.desc.empty::placeholder {
+      color: #c6c6c6 !important; }
 .settings-table .custom-dropdown-trigger {
   padding: 0 0.9756097561em;
   display: -webkit-inline-box;
