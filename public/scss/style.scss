@@ -5546,7 +5546,7 @@ body {
 //=================================================================
 //                      WIDGETS
 //=================================================================
-#widgets {
+#widgets-new {
   & .content {
     margin: 0 2em;
 
@@ -6048,6 +6048,7 @@ body {
   padding-bottom: 3em;
   padding-top: 2em;
   height: 100%;
+  overflow: hidden;
 
   &-main {
     position: relative;
@@ -7231,7 +7232,6 @@ body {
 }
 
 .flex {
-  margin-top: 5em;
   display: flex;
   flex-direction: row;
 }
@@ -7239,19 +7239,19 @@ body {
   cursor: ew-resize;
 }
 
-.split {
-  height: 200px;
-  border: 1px solid #e3e3e3;
-}
+// .split {
+//   height: 200px;
+//   border: 1px solid #e3e3e3;
+// }
 
-#one {
-  background-color: red;
-}
+// #one {
+//   background-color: red;
+// }
 
-#two {
-  background-color: blue;
-}
+// #two {
+//   background-color: blue;
+// }
 
-#three {
-  background-color: green;
-}
+// #three {
+//   background-color: green;
+// }
