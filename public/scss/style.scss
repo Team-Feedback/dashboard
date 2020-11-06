@@ -5548,6 +5548,7 @@ body {
 //=================================================================
 #widgets-new {
   & .content {
+    padding-top: 2em;
     margin: 0 2em;
 
     //========================
@@ -6048,7 +6049,6 @@ body {
   padding-bottom: 3em;
   padding-top: 2em;
   height: 100%;
-  overflow: hidden;
 
   &-main {
     position: relative;

@@ -4363,6 +4363,7 @@ body {
             text-overflow: ellipsis; }
 
 #widgets-new .content {
+  padding-top: 2em;
   margin: 0 2em; }
   #widgets-new .content .widgets {
     height: auto;
@@ -4735,8 +4736,7 @@ body {
   padding-right: 8.4em;
   padding-bottom: 3em;
   padding-top: 2em;
-  height: 100%;
-  overflow: hidden; }
+  height: 100%; }
   .bar-graph-main {
     position: relative;
     height: 100%;
