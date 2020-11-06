@@ -4444,6 +4444,112 @@ body {
             left: 50%;
             transform: rotateZ(45deg);
             transform-origin: 0 0; }
+    #widgets .content .widget-wrapper-combo-chart .widget-header {
+      border-bottom: none; }
+    #widgets .content .widget-wrapper-combo-chart.size-1200 .combo-chart-area-graph-set {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    #widgets .content .widget-wrapper-combo-chart.size-1200 .combo-chart-h-axis-item {
+      display: inline-block; }
+    #widgets .content .widget-wrapper-combo-chart.size-1100 .combo-chart-area-graph-set {
+      display: none; }
+      #widgets .content .widget-wrapper-combo-chart.size-1100 .combo-chart-area-graph-set:not(:nth-last-of-type(1)) {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex; }
+    #widgets .content .widget-wrapper-combo-chart.size-1100 .combo-chart-h-axis-item {
+      display: none; }
+      #widgets .content .widget-wrapper-combo-chart.size-1100 .combo-chart-h-axis-item:not(:nth-last-of-type(1)) {
+        display: inline-block; }
+    #widgets .content .widget-wrapper-combo-chart.size-1000 .combo-chart-area-graph-set {
+      display: none; }
+      #widgets .content .widget-wrapper-combo-chart.size-1000 .combo-chart-area-graph-set:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)) {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex; }
+    #widgets .content .widget-wrapper-combo-chart.size-1000 .combo-chart-h-axis-item {
+      display: none; }
+      #widgets .content .widget-wrapper-combo-chart.size-1000 .combo-chart-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)) {
+        display: inline-block; }
+    #widgets .content .widget-wrapper-combo-chart.size-900 .combo-chart-area-graph-set {
+      display: none; }
+      #widgets .content .widget-wrapper-combo-chart.size-900 .combo-chart-area-graph-set:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)) {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex; }
+    #widgets .content .widget-wrapper-combo-chart.size-900 .combo-chart-h-axis-item {
+      display: none; }
+      #widgets .content .widget-wrapper-combo-chart.size-900 .combo-chart-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)) {
+        display: inline-block; }
+    #widgets .content .widget-wrapper-combo-chart.size-800 .combo-chart-area-graph-set {
+      display: none; }
+      #widgets .content .widget-wrapper-combo-chart.size-800 .combo-chart-area-graph-set:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)) {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex; }
+    #widgets .content .widget-wrapper-combo-chart.size-800 .combo-chart-h-axis-item {
+      display: none; }
+      #widgets .content .widget-wrapper-combo-chart.size-800 .combo-chart-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)) {
+        display: inline-block; }
+    #widgets .content .widget-wrapper-combo-chart.size-700 .combo-chart-area-graph-set {
+      display: none; }
+      #widgets .content .widget-wrapper-combo-chart.size-700 .combo-chart-area-graph-set:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)) {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex; }
+    #widgets .content .widget-wrapper-combo-chart.size-700 .combo-chart-h-axis-item {
+      display: none; }
+      #widgets .content .widget-wrapper-combo-chart.size-700 .combo-chart-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)) {
+        display: inline-block; }
+    #widgets .content .widget-wrapper-combo-chart.size-600 .combo-chart-area-graph-set {
+      display: none; }
+      #widgets .content .widget-wrapper-combo-chart.size-600 .combo-chart-area-graph-set:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)):not(:nth-last-of-type(6)) {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex; }
+    #widgets .content .widget-wrapper-combo-chart.size-600 .combo-chart-h-axis-item {
+      display: none; }
+      #widgets .content .widget-wrapper-combo-chart.size-600 .combo-chart-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)):not(:nth-last-of-type(6)) {
+        display: inline-block; }
+    #widgets .content .widget-wrapper-combo-chart.size-500 .combo-chart-area-graph-set {
+      display: none; }
+      #widgets .content .widget-wrapper-combo-chart.size-500 .combo-chart-area-graph-set:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)):not(:nth-last-of-type(6)):not(:nth-last-of-type(7)) {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex; }
+    #widgets .content .widget-wrapper-combo-chart.size-500 .combo-chart-h-axis-item {
+      display: none; }
+      #widgets .content .widget-wrapper-combo-chart.size-500 .combo-chart-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)):not(:nth-last-of-type(6)):not(:nth-last-of-type(7)) {
+        display: inline-block; }
+    #widgets .content .widget-wrapper-combo-chart.size-400 .combo-chart-area-graph-set {
+      display: none; }
+      #widgets .content .widget-wrapper-combo-chart.size-400 .combo-chart-area-graph-set:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)):not(:nth-last-of-type(6)):not(:nth-last-of-type(7)):not(:nth-last-of-type(8)) {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex; }
+    #widgets .content .widget-wrapper-combo-chart.size-400 .combo-chart-h-axis-item {
+      display: none; }
+      #widgets .content .widget-wrapper-combo-chart.size-400 .combo-chart-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)):not(:nth-last-of-type(6)):not(:nth-last-of-type(7)):not(:nth-last-of-type(8)) {
+        display: inline-block; }
     #widgets .content .widget-wrapper-value-box .widget-header {
       border-bottom: none; }
     #widgets .content .widget-wrapper-value-box.small-width .value-box {
@@ -5021,6 +5127,188 @@ body {
     -moz-justify-content: space-evenly;
     justify-content: space-evenly; }
   .chart-column.small .chart-column-h-axis {
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    -webkit-justify-content: space-evenly;
+    -moz-justify-content: space-evenly;
+    justify-content: space-evenly; }
+
+.combo-chart {
+  margin-left: 6%;
+  width: 90%;
+  height: 100%;
+  display: grid;
+  grid-template-areas: "a b" "c d";
+  grid-template-rows: 1fr 3em;
+  grid-template-columns: auto 1fr; }
+  .combo-chart-area {
+    position: relative;
+    border-bottom: 1px solid #43546a; }
+    .combo-chart-area-graph {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      z-index: 100;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: end;
+      -ms-flex-align: end;
+      -webkit-align-items: flex-end;
+      -moz-align-items: flex-end;
+      align-items: flex-end;
+      -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+      -webkit-justify-content: space-evenly;
+      -moz-justify-content: space-evenly;
+      justify-content: space-evenly; }
+      .combo-chart-area-graph-set {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        -webkit-align-items: flex-end;
+        -moz-align-items: flex-end;
+        align-items: flex-end;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        justify-content: center;
+        height: 100%; }
+        .combo-chart-area-graph-set-item {
+          width: 1.2em; }
+          .combo-chart-area-graph-set-item:not(:last-of-type) {
+            margin-right: 0.5em; }
+    .combo-chart-area-back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0; }
+      .combo-chart-area-back-v {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-direction: normal;
+        -webkit-box-orient: vertical;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        justify-content: space-between; }
+        .combo-chart-area-back-v-line {
+          width: 100%; }
+          .combo-chart-area-back-v-line:not(:last-of-type) {
+            border-top: 0.25px solid #e3e3e3; }
+      .combo-chart-area-back-h {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        justify-content: space-between;
+        display: none; }
+        .combo-chart-area-back-h-line {
+          height: 100%; }
+          .combo-chart-area-back-h-line:not(:first-of-type) {
+            border-right: 0.25px solid #e3e3e3; }
+  .combo-chart-v-axis, .combo-chart-h-axis {
+    z-index: 200;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0; }
+    .combo-chart-v-axis-item, .combo-chart-h-axis-item {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      min-width: 0; }
+      .combo-chart-v-axis-item-label, .combo-chart-h-axis-item-label {
+        font-size: 1.2em;
+        font-weight: 400;
+        letter-spacing: -0.18px;
+        color: #16222f;
+        min-width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+  .combo-chart-v-axis {
+    margin: -1em 0;
+    grid-area: a;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between; }
+    .combo-chart-v-axis-item {
+      height: 2em;
+      margin-right: 1.2em; }
+      .combo-chart-v-axis-item-label {
+        white-space: nowrap; }
+  .combo-chart-h-axis {
+    grid-area: d;
+    display: flex;
+    align-items: flex-end;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    -webkit-justify-content: space-evenly;
+    -moz-justify-content: space-evenly;
+    justify-content: space-evenly; }
+    .combo-chart-h-axis-item {
+      position: relative;
+      width: 4.6em;
+      height: 100%;
+      text-align: center;
+      overflow: visible; }
+      .combo-chart-h-axis-item-label {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        white-space: nowrap; }
+  .combo-chart.small .chart-column-area-graph {
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    -webkit-justify-content: space-evenly;
+    -moz-justify-content: space-evenly;
+    justify-content: space-evenly; }
+  .combo-chart.small .chart-column-h-axis {
     -webkit-box-pack: space-evenly;
     -ms-flex-pack: space-evenly;
     -webkit-justify-content: space-evenly;
