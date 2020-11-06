@@ -7229,3 +7229,29 @@ body {
     }
   }
 }
+
+.flex {
+  margin-top: 5em;
+  display: flex;
+  flex-direction: row;
+}
+.gutter.gutter-horizontal {
+  cursor: ew-resize;
+}
+
+.split {
+  height: 200px;
+  border: 1px solid #e3e3e3;
+}
+
+#one {
+  background-color: red;
+}
+
+#two {
+  background-color: blue;
+}
+
+#three {
+  background-color: green;
+}
