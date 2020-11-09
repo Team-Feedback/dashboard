@@ -4364,7 +4364,7 @@ body {
 
 #widgets-new .content {
   padding-top: 2em;
-  margin: 0 2em; }
+  margin: 0 3em; }
   #widgets-new .content .widgets {
     height: auto;
     width: 100%;
@@ -4390,7 +4390,7 @@ body {
     -moz-justify-content: flex-start;
     justify-content: flex-start; }
   #widgets-new .content .widget-wrapper {
-    margin: 0 2em;
+    margin: 0 1em;
     margin-bottom: 2em;
     resize: horizontal;
     overflow: auto;
