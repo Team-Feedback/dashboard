@@ -182,25 +182,6 @@
     </main>
     
 
-    <script>
-        //HEADER SMALL/BIG TOGGLE
-        let header = document.querySelector('.header');
-        let headerMain = document.querySelector('.header-main');
-
-        headerMain.addEventListener('click', function () {
-            console.log('double click')
-            header.classList.toggle('small')
-        });
-
-        //ACTIVE LINK
-        let headerNavLinks = document.querySelectorAll('.header-nav-list-item');
-
-        headerNavLinks.forEach(e => {
-            e.addEventListener('click', function() {
-                headerNavLinks.forEach(x => x.classList.remove('active'));
-                this.classList.add('active')
-            })
-        })
-    </script>
+    <script src="../public/js/main.js"></script>
 </body>
 </html>

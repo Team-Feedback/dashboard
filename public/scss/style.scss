@@ -5547,9 +5547,35 @@ body {
 //                      WIDGETS
 //=================================================================
 #widgets-new {
+  & .header {
+    &-sub-nav {
+      & .plus-minus {
+        margin-left: 3em;
+        & button {
+          font-size: 2em;
+          cursor: pointer;
+
+          &:not(:last-of-type) {
+            margin-right: 0.3em;
+          }
+        }
+      }
+    }
+  }
   & .content {
     padding-top: 2em;
     margin: 0 3em;
+    &.small {
+      & .widget {
+        height: 35em;
+      }
+    }
+
+    &.big {
+      & .widget {
+        height: 42.5em;
+      }
+    }
 
     //========================
     //        WIDGETS
@@ -5563,14 +5589,27 @@ body {
       @include flex-wrap(wrap);
       @include align-items(flex-start);
       @include justify-content(flex-start);
+
+      // &.small {
+      //   & .widget {
+      //     height: 35em;
+      //   }
+      // }
+
+      // &.big {
+      //   & .widget {
+      //     height: 42.5em;
+      //   }
+      // }
     }
 
     .widget-wrapper {
       margin: 0 1em;
       margin-bottom: 2em;
       resize: horizontal;
-      overflow: auto;
+      overflow: visible;
       flex-shrink: 1;
+      min-width: 40em;
 
       &.small {
         width: calc(50% - 4em);
@@ -5583,7 +5622,7 @@ body {
       }
 
       &-pie-chart {
-        overflow-x: hidden;
+        overflow-x: visible;
 
         & .widget-header {
           border-bottom: none;
@@ -5898,8 +5937,8 @@ body {
       }
 
       &-header {
-        padding: 2em 0;
-        margin: 0 4.7em;
+        padding: 2em 6%;
+        margin-right: 3.7em;
         text-align: center;
         white-space: nowrap;
         overflow: hidden;
@@ -5951,8 +5990,8 @@ body {
         &-icons {
           margin-left: 2em;
           position: absolute;
-          top: 1.45em;
-          right: 1.7em;
+          top: 1.25em;
+          right: 1.35em;
 
           & i {
             display: block;
@@ -5978,6 +6017,7 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
+  height: calc(100% - 8.5em) !important;
 
   &-wrapper {
     position: relative;
@@ -6005,13 +6045,54 @@ body {
       border-radius: 3px;
       border: solid 1px #e4e8ec;
 
+      &:hover .chart-legend-content {
+        @include flexbox();
+      }
+
+      &-text {
+        font-size: 1.2em;
+        font-weight: 400;
+        letter-spacing: -0.18px;
+        color: #2c3c4d;
+        cursor: pointer;
+
+        & button {
+          font-weight: 500;
+          text-decoration: underline;
+        }
+      }
+
+      &-content {
+        padding: 2em 1.7em;
+        top: -2px;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        transform: translate(0, 0);
+
+        display: none;
+        @include flex-direction(column);
+        @include align-items(flex-start);
+        @include justify-content(flex-start);
+        border-radius: 3px;
+        box-shadow: 0 6px 12px 0 rgba(137, 137, 137, 0.27);
+        border: solid 1px #e4e8ec;
+        background-color: #ffffff;
+        //display: none;
+        z-index: 500;
+
+        &:hover {
+          @include flexbox();
+        }
+      }
+
       &-item {
         @include inline-flex();
         @include align-items(center);
         @include justify-content(center);
 
         &:not(:last-of-type) {
-          margin-right: 3rem;
+          margin-bottom: 1.4rem;
         }
 
         &-color {
@@ -6057,16 +6138,16 @@ body {
     border-left: 1px solid #43546a;
     overflow: visible;
 
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: -12.5em;
-      width: calc(100% + 12.5em);
-      height: 3.2em;
-      background: linear-gradient(0deg, #fff 70%, transparent);
-      z-index: -1;
-    }
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: -12.5em;
+    //   width: calc(100% + 12.5em);
+    //   height: 3.2em;
+    //   background: linear-gradient(0deg, #fff 70%, transparent);
+    //   z-index: -1;
+    // }
 
     &-data {
       padding-bottom: 1.5em;
@@ -6175,11 +6256,11 @@ body {
   padding-right: 5rem;
   position: relative;
   width: 100%;
-  height: 100%;
-  max-height: 27.3rem;
+  height: calc(100% - 8.5em);
+  //max-height: 27.3rem;
 
   &-wrapper {
-    position: relative;
+    //position: relative;
     width: 100%;
     height: 100%;
     @include flexbox();
@@ -6201,13 +6282,54 @@ body {
       border-radius: 3px;
       border: solid 1px #e4e8ec;
 
+      &:hover .chart-legend-content {
+        @include flexbox();
+      }
+
+      &-text {
+        font-size: 1.2em;
+        font-weight: 400;
+        letter-spacing: -0.18px;
+        color: #2c3c4d;
+        cursor: pointer;
+
+        & button {
+          font-weight: 500;
+          text-decoration: underline;
+        }
+      }
+
+      &-content {
+        padding: 2em 1.7em;
+        top: -2px;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        transform: translate(0, 0);
+
+        display: none;
+        @include flex-direction(column);
+        @include align-items(flex-start);
+        @include justify-content(flex-start);
+        border-radius: 3px;
+        box-shadow: 0 6px 12px 0 rgba(137, 137, 137, 0.27);
+        border: solid 1px #e4e8ec;
+        background-color: #ffffff;
+        //display: none;
+        z-index: 500;
+
+        &:hover {
+          @include flexbox();
+        }
+      }
+
       &-item {
         @include inline-flex();
         @include align-items(center);
         @include justify-content(center);
 
         &:not(:last-of-type) {
-          margin-right: 3em;
+          margin-bottom: 1.4em;
         }
 
         &-color {
