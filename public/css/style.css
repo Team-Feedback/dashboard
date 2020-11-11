@@ -4374,6 +4374,10 @@ body {
   margin: 0 3em; }
   #widgets-new .content.small .widget {
     height: 35em; }
+  #widgets-new .content.small .value-box {
+    font-size: 0.75em; }
+  #widgets-new .content.small .bar-graph {
+    padding-bottom: 1.1em; }
   #widgets-new .content.big .widget {
     height: 42.5em; }
   #widgets-new .content .widgets {
@@ -4797,8 +4801,9 @@ body {
 .bar-graph {
   padding-left: 12.5em;
   padding-right: 8.4em;
-  padding-bottom: 3em;
+  padding-bottom: 2.3em;
   padding-top: 2em;
+  padding-top: 0;
   height: 100%; }
   .bar-graph-main {
     position: relative;
@@ -4807,9 +4812,11 @@ body {
     border-left: 1px solid #43546a;
     overflow: visible; }
     .bar-graph-main-data {
+      position: relative;
       padding-bottom: 1.5em;
       margin-left: -12.5em;
       padding-left: 12.5em;
+      padding-top: 2em;
       max-height: 100%;
       height: 100%;
       z-index: -10;
@@ -4822,6 +4829,14 @@ body {
         /* WebKit */
         width: 0;
         height: 0; }
+      .bar-graph-main-data::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2em;
+        background-color: #fff; }
       .bar-graph-main-data-item {
         display: -webkit-box;
         display: -webkit-flex;
