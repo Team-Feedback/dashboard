@@ -391,15 +391,15 @@ var roLineChart = new ResizeObserver((entries) => {
         labels
       ) {
         switch (label) {
-          case 1:
+          case 0:
             return "Bad";
-          case 2:
+          case 1:
             return "Weak";
-          case 3:
+          case 2:
             return "Ok";
-          case 4:
+          case 3:
             return "Good";
-          case 5:
+          case 4:
             return "Great";
         }
       };
@@ -412,15 +412,15 @@ var roLineChart = new ResizeObserver((entries) => {
         labels
       ) {
         switch (label) {
-          case 1:
+          case 0:
             return "Bad (1.0)";
-          case 2:
+          case 1:
             return "Weak (2.0)";
-          case 3:
+          case 2:
             return "Ok (3.0)";
-          case 4:
+          case 3:
             return "Good (4.0)";
-          case 5:
+          case 4:
             return "Great (5.0)";
         }
       };
@@ -1544,20 +1544,20 @@ function drawLineChart() {
               fontStyle: "400",
               beginAtZero: false,
               padding: 8.6,
-              max: 5,
-              min: 1,
+              max: 4,
+              min: 0,
               stepSize: 1,
               callback: function (label, index, labels) {
                 switch (label) {
-                  case 1:
+                  case 0:
                     return "Bad (1.0)";
-                  case 2:
+                  case 1:
                     return "Weak (2.0)";
-                  case 3:
+                  case 2:
                     return "Ok (3.0)";
-                  case 4:
+                  case 3:
                     return "Good (4.0)";
-                  case 5:
+                  case 4:
                     return "Great (5.0)";
                 }
               },
@@ -1567,6 +1567,8 @@ function drawLineChart() {
               display: true,
               drawTicks: true,
               drawOnChartArea: true,
+              zeroLineWidth: 1,
+              zeroLineColor: '#42546b',
             },
           },
         ],
@@ -1585,7 +1587,9 @@ function drawLineChart() {
               drawBorder: false,
               display: true,
               drawTicks: true,
-              drawOnChartArea: false,
+              drawOnChartArea: true,
+              zeroLineWidth: 1,
+              zeroLineColor: '#42546b',
             },
           },
         ],
