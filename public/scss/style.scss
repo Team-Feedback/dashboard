@@ -5941,12 +5941,22 @@ body {
       &.small {
         & .bar-graph {
           padding-right: 2em;
+          padding-left: 11em;
+
+          &-main {
+            &-data {
+              padding-left: 11em;
+              margin-left: -11em;
+            }
+          }
         }
       }
 
       &-header {
         padding: 2em 6%;
+        padding-left: 0;
         margin-right: 3.7em;
+        margin-left: 6%;
         text-align: center;
         white-space: nowrap;
         overflow: hidden;
@@ -6215,6 +6225,10 @@ body {
           color: var(--color-dark-gray);
           text-align: right;
           white-space: nowrap;
+          max-width: emcalc(10, 1.18);
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
 
         &-amount {
