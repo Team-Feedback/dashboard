@@ -21,6 +21,12 @@ var roColumnChart = new ResizeObserver((entries) => {
     } else {
       entry.target.classList.remove("small-width");
     }
+
+    if (cr.width < 600) {
+      entry.target.classList.add("extra-small-width");
+    } else {
+      entry.target.classList.remove("extra-small-width");
+    }
   }
 });
 
