@@ -1626,7 +1626,7 @@ body {
     -webkit-justify-content: flex-start;
     -moz-justify-content: flex-start;
     justify-content: flex-start;
-    margin: 0 -1.4em;
+    margin: 0 -1.2em;
     padding-top: 2em; }
   #modalCard .feedback {
     position: relative;
@@ -1652,18 +1652,18 @@ body {
     -webkit-justify-content: stretch;
     -moz-justify-content: stretch;
     justify-content: stretch;
-    margin: 0 1.4em;
+    margin: 0 1em;
     margin-bottom: 2em;
-    width: calc(33.333% - 2.8em);
+    width: calc(33.333% - 2em);
     background-color: rgba(246, 247, 248, 0);
     border-radius: 5px;
     border: solid 1px #efefef; }
     @media (max-width: 1440px) {
       #modalCard .feedback {
-        width: calc(50% - 2.8em); } }
+        width: calc(50% - 2em); } }
     @media (max-width: 850px) {
       #modalCard .feedback {
-        width: calc(100% - 2.6em); } }
+        width: calc(100% - 2em); } }
     @media (min-width: 1441px) and (max-width: 1860px) {
       #modalCard .feedback {
         min-height: 31.4em; } }
@@ -1685,7 +1685,7 @@ body {
       display: block; }
     #modalCard .feedback-header {
       width: 100%;
-      padding-left: 1.7em;
+      padding-left: 1.6em;
       padding-right: 1.6em;
       min-height: 6em;
       display: -webkit-box;
@@ -1705,9 +1705,9 @@ body {
       justify-content: flex-start;
       border-bottom: 1px solid #efefef; }
       #modalCard .feedback-header-img {
-        margin-right: 1.4em;
-        width: 4em;
-        height: 4em;
+        margin-right: 1.1em;
+        width: 4.25em;
+        height: 4.25em;
         object-fit: contain;
         border-radius: 50%; }
       #modalCard .feedback-header-name {
@@ -1725,9 +1725,10 @@ body {
       #modalCard .feedback-header .feedback-read-more {
         margin-top: 0.1666666667em;
         margin-left: 0.6em;
-        font-size: 1.2em;
+        font-size: 1.3em;
         color: #5a5f71; }
       #modalCard .feedback-header-options {
+        margin-top: 0.2em;
         margin-left: auto;
         display: -webkit-inline-box;
         display: -webkit-inline-flex;
@@ -1760,18 +1761,17 @@ body {
       -webkit-justify-content: flex-start;
       -moz-justify-content: flex-start;
       justify-content: flex-start;
-      width: 100%;
       width: calc(100% - 2.3em);
       height: 4.5em;
       margin: 1.15em 1.15em;
+      margin-top: 0;
       margin-bottom: 0;
       padding: 0 0.45em;
-      padding-bottom: 0.43em;
       border-bottom: 1px solid #efefef;
       transition: all 0.5s ease-in-out; }
       @media (min-width: 1441px) and (max-width: 1860px) {
         #modalCard .feedback-rating {
-          height: 7.629em;
+          height: 8.9em;
           -webkit-box-direction: normal;
           -webkit-box-orient: vertical;
           -webkit-flex-direction: column;
@@ -1782,10 +1782,15 @@ body {
           -ms-flex-align: start;
           -webkit-align-items: flex-start;
           -moz-align-items: flex-start;
-          align-items: flex-start; } }
+          align-items: flex-start;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          -moz-justify-content: center;
+          justify-content: center; } }
       @media (min-width: 851px) and (max-width: 1300px) {
         #modalCard .feedback-rating {
-          height: 7.629em;
+          height: 8.9em;
           -webkit-box-direction: normal;
           -webkit-box-orient: vertical;
           -webkit-flex-direction: column;
@@ -1796,10 +1801,15 @@ body {
           -ms-flex-align: start;
           -webkit-align-items: flex-start;
           -moz-align-items: flex-start;
-          align-items: flex-start; } }
+          align-items: flex-start;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          -moz-justify-content: center;
+          justify-content: center; } }
       @media (max-width: 720px) {
         #modalCard .feedback-rating {
-          height: 7.629em;
+          height: 8.9em;
           -webkit-box-direction: normal;
           -webkit-box-orient: vertical;
           -webkit-flex-direction: column;
@@ -1810,9 +1820,13 @@ body {
           -ms-flex-align: start;
           -webkit-align-items: flex-start;
           -moz-align-items: flex-start;
-          align-items: flex-start; } }
+          align-items: flex-start;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          -moz-justify-content: center;
+          justify-content: center; } }
       #modalCard .feedback-rating-item {
-        margin-bottom: 0.7em;
         display: -webkit-box;
         display: -webkit-flex;
         display: -moz-flex;
@@ -1830,7 +1844,19 @@ body {
         justify-content: flex-start;
         white-space: nowrap; }
         #modalCard .feedback-rating-item:not(:last-of-type) {
-          margin-right: 1.5em; }
+          margin-right: 2.1em; }
+        @media (min-width: 1441px) and (max-width: 1860px) {
+          #modalCard .feedback-rating-item:not(:last-of-type) {
+            margin-bottom: 1em;
+            margin-right: 0; } }
+        @media (min-width: 851px) and (max-width: 1300px) {
+          #modalCard .feedback-rating-item:not(:last-of-type) {
+            margin-bottom: 1em;
+            margin-right: 0; } }
+        @media (max-width: 720px) {
+          #modalCard .feedback-rating-item:not(:last-of-type) {
+            margin-bottom: 1em;
+            margin-right: 0; } }
         #modalCard .feedback-rating-item-name {
           width: auto;
           font-size: 1.23em;
@@ -1847,7 +1873,8 @@ body {
             #modalCard .feedback-rating-item-name {
               width: 7.9166666667em; } }
         #modalCard .feedback-rating-item-stars {
-          margin-left: 1em; }
+          margin-bottom: -0.4em;
+          margin-left: 0.8em; }
           @media (min-width: 1441px) and (max-width: 1860px) {
             #modalCard .feedback-rating-item-stars {
               margin-left: 0;
@@ -1903,7 +1930,7 @@ body {
       #modalCard .feedback-main-item {
         position: relative; }
         #modalCard .feedback-main-item:not(:last-of-type) {
-          margin-bottom: 1.3em; }
+          margin-bottom: 1em; }
         #modalCard .feedback-main-item-text {
           font-size: 1.23em;
           font-weight: 400;

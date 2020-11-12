@@ -2514,7 +2514,7 @@ body {
     @include flex-wrap(wrap);
     @include align-items(flex-start);
     @include justify-content(flex-start);
-    margin: 0 -1.4em;
+    margin: 0 -1.2em;
     padding-top: 2em;
   }
 
@@ -2525,19 +2525,19 @@ body {
     @include flex-direction(column);
     @include align-items(flex-start);
     @include justify-content(stretch);
-    margin: 0 1.4em;
+    margin: 0 1em;
     margin-bottom: 2em;
-    width: calc(33.333% - 2.8em);
+    width: calc(33.333% - 2em);
     background-color: rgba(246, 247, 248, 0);
     border-radius: 5px;
     border: solid 1px #efefef;
 
     @include custom-respond(1440) {
-      width: calc(50% - 2.8em);
+      width: calc(50% - 2em);
     }
 
     @include custom-respond(850) {
-      width: calc(100% - 2.6em);
+      width: calc(100% - 2em);
     }
 
     @include custom-respond-range(1441, 1860) {
@@ -2574,7 +2574,7 @@ body {
 
     &-header {
       width: 100%;
-      padding-left: 1.7em;
+      padding-left: 1.6em;
       padding-right: 1.6em;
       min-height: 6em;
       @include flexbox();
@@ -2583,9 +2583,9 @@ body {
       border-bottom: 1px solid #efefef;
 
       &-img {
-        margin-right: 1.4em;
-        width: 4em;
-        height: 4em;
+        margin-right: 1.1em;
+        width: 4.25em;
+        height: 4.25em;
         object-fit: contain;
         border-radius: 50%;
       }
@@ -2609,11 +2609,12 @@ body {
       & .feedback-read-more {
         margin-top: emcalc(0.2, 1.2);
         margin-left: emcalc(0.72, 1.2);
-        font-size: 1.2em;
+        font-size: 1.3em;
         color: #5a5f71;
       }
 
       &-options {
+        margin-top: 0.2em;
         margin-left: auto;
         @include inline-flex();
         @include align-items(center);
@@ -2625,43 +2626,68 @@ body {
       @include inline-flex();
       @include align-items(center);
       @include justify-content(flex-start);
-      width: 100%;
+      //width: 100%;
       width: calc(100% - 2.3em);
       height: 4.5em;
       margin: 1.15em 1.15em;
+      margin-top: 0;
       margin-bottom: 0;
       padding: 0 0.45em;
-      padding-bottom: 0.43em;
+      //padding-bottom: 0.43em;
       border-bottom: 1px solid #efefef;
       transition: all 0.5s ease-in-out;
 
       @include custom-respond-range(1441, 1860) {
-        height: 7.629em;
+        height: 8.9em;
         @include flex-direction(column);
         @include align-items(flex-start);
+        @include justify-content(center);
       }
 
       @include custom-respond-range(851, 1300) {
-        height: 7.629em;
+        height: 8.9em;
         @include flex-direction(column);
         @include align-items(flex-start);
+        @include justify-content(center);
       }
 
       @include custom-respond(720) {
-        height: 7.629em;
+        height: 8.9em;
         @include flex-direction(column);
         @include align-items(flex-start);
+        @include justify-content(center);
       }
 
       &-item {
-        margin-bottom: 0.7em;
+        // margin-bottom: 0.7em;
         @include flexbox();
         @include align-items(center);
         @include justify-content(flex-start);
         white-space: nowrap;
 
         &:not(:last-of-type) {
-          margin-right: 1.5em;
+          margin-right: 2.1em;
+        }
+
+        @include custom-respond-range(1441, 1860) {
+          &:not(:last-of-type) {
+            margin-bottom: 1em;
+            margin-right: 0;
+          }
+        }
+
+        @include custom-respond-range(851, 1300) {
+          &:not(:last-of-type) {
+            margin-bottom: 1em;
+            margin-right: 0;
+          }
+        }
+
+        @include custom-respond(720) {
+          &:not(:last-of-type) {
+            margin-bottom: 1em;
+            margin-right: 0;
+          }
         }
 
         &-name {
@@ -2685,7 +2711,8 @@ body {
         }
 
         &-stars {
-          margin-left: 1em;
+          margin-bottom: -0.4em;
+          margin-left: 0.8em;
           //width: 8.7em;
 
           @include custom-respond-range(1441, 1860) {
@@ -2769,7 +2796,7 @@ body {
       &-item {
         position: relative;
         &:not(:last-of-type) {
-          margin-bottom: 1.3em;
+          margin-bottom: 1em;
         }
 
         &-text {
