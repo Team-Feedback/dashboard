@@ -2626,6 +2626,7 @@ body {
       @include align-items(center);
       @include justify-content(flex-start);
       width: 100%;
+      width: calc(100% - 2.3em);
       height: 4.5em;
       margin: 1.15em 1.15em;
       margin-bottom: 0;
@@ -2665,9 +2666,9 @@ body {
 
         &-name {
           width: auto;
-          font-size: 1.2em;
+          font-size: 1.23em;
           font-weight: 500;
-          letter-spacing: -0.03px;
+          line-height: 1.22;
           color: #2c374a;
 
           @include custom-respond-range(1441, 1860) {
@@ -2703,9 +2704,28 @@ body {
           }
 
           & i {
+            display: inline-block;
             margin-right: 0;
             font-size: 1.5em;
             color: #ffdd00;
+
+            @include custom-respond-range(1441, 1860) {
+              &:not(:last-of-type) {
+                margin-right: emcalc(0.1, 1.5);
+              }
+            }
+
+            @include custom-respond-range(851, 1300) {
+              &:not(:last-of-type) {
+                margin-right: emcalc(0.1, 1.5);
+              }
+            }
+
+            @include custom-respond(720) {
+              &:not(:last-of-type) {
+                margin-right: emcalc(0.1, 1.5);
+              }
+            }
           }
         }
       }
