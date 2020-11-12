@@ -37,8 +37,8 @@
   src: url("../fonts/inter/Inter-Bold.woff2") format("woff2"); }
 @font-face {
   font-family: "dashoard-icons";
-  src: url("../fonts/dashoard-icons.eot?7xzlv2");
-  src: url("../fonts/dashoard-icons.eot?7xzlv2#iefix") format("embedded-opentype"), url("../fonts/dashoard-icons.ttf?7xzlv2") format("truetype"), url("../fonts/dashoard-icons.woff?7xzlv2") format("woff"), url("../fonts/dashoard-icons.svg?7xzlv2#dashoard-icons") format("svg");
+  src: url("../fonts/dashoard-icons.eot?i0h6uh");
+  src: url("../fonts/dashoard-icons.eot?i0h6uh#iefix") format("embedded-opentype"), url("../fonts/dashoard-icons.ttf?i0h6uh") format("truetype"), url("../fonts/dashoard-icons.woff?i0h6uh") format("woff"), url("../fonts/dashoard-icons.svg?i0h6uh#dashoard-icons") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block; }
@@ -55,6 +55,9 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+.icon-expand:before {
+  content: "\e948"; }
 
 .icon-eye-open:before {
   content: "\e946"; }
@@ -1627,7 +1630,7 @@ body {
     padding-top: 2em; }
   #modalCard .feedback {
     position: relative;
-    height: 25.9em;
+    min-height: 25.2em;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;
@@ -1658,9 +1661,18 @@ body {
     @media (max-width: 1440px) {
       #modalCard .feedback {
         width: calc(50% - 2.8em); } }
-    @media (max-width: 900px) {
+    @media (max-width: 850px) {
       #modalCard .feedback {
         width: calc(100% - 2.6em); } }
+    @media (min-width: 1441px) and (max-width: 1860px) {
+      #modalCard .feedback {
+        min-height: 31.4em; } }
+    @media (min-width: 851px) and (max-width: 1300px) {
+      #modalCard .feedback {
+        min-height: 31.4em; } }
+    @media (max-width: 720px) {
+      #modalCard .feedback {
+        min-height: 31.4em; } }
     #modalCard .feedback.open .feedback-rating {
       margin-top: 0;
       padding-bottom: 0;
@@ -1704,11 +1716,34 @@ body {
         letter-spacing: -0.1px;
         color: #172b4d; }
       #modalCard .feedback-header-amount {
-        margin-left: auto;
+        padding-right: 0.5em;
         font-size: 1.2em;
         font-weight: 400;
         letter-spacing: -0.09px;
+        color: #5a5f71;
+        border-right: 1.5px solid #5a5f71; }
+      #modalCard .feedback-header .feedback-read-more {
+        margin-top: 0.1666666667em;
+        margin-left: 0.6em;
+        font-size: 1.2em;
         color: #5a5f71; }
+      #modalCard .feedback-header-options {
+        margin-left: auto;
+        display: -webkit-inline-box;
+        display: -webkit-inline-flex;
+        display: -moz-inline-flex;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        -webkit-justify-content: flex-start;
+        -moz-justify-content: flex-start;
+        justify-content: flex-start; }
     #modalCard .feedback-rating {
       display: -webkit-inline-box;
       display: -webkit-inline-flex;
@@ -1726,14 +1761,42 @@ body {
       -moz-justify-content: flex-start;
       justify-content: flex-start;
       width: 100%;
-      height: 4em;
+      height: 4.5em;
       margin: 1.15em 1.15em;
       margin-bottom: 0;
       padding: 0 0.45em;
       padding-bottom: 0.43em;
       border-bottom: 1px solid #efefef;
       transition: all 0.5s ease-in-out; }
-      @media (max-width: 1360px) {
+      @media (min-width: 1441px) and (max-width: 1860px) {
+        #modalCard .feedback-rating {
+          height: 7.629em;
+          -webkit-box-direction: normal;
+          -webkit-box-orient: vertical;
+          -webkit-flex-direction: column;
+          -moz-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-align: start;
+          -ms-flex-align: start;
+          -webkit-align-items: flex-start;
+          -moz-align-items: flex-start;
+          align-items: flex-start; } }
+      @media (min-width: 851px) and (max-width: 1300px) {
+        #modalCard .feedback-rating {
+          height: 7.629em;
+          -webkit-box-direction: normal;
+          -webkit-box-orient: vertical;
+          -webkit-flex-direction: column;
+          -moz-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-align: start;
+          -ms-flex-align: start;
+          -webkit-align-items: flex-start;
+          -moz-align-items: flex-start;
+          align-items: flex-start; } }
+      @media (max-width: 720px) {
         #modalCard .feedback-rating {
           height: 7.629em;
           -webkit-box-direction: normal;
@@ -1773,12 +1836,26 @@ body {
           font-weight: 500;
           letter-spacing: -0.03px;
           color: #2c374a; }
-          @media (max-width: 1360px) {
+          @media (min-width: 1441px) and (max-width: 1860px) {
+            #modalCard .feedback-rating-item-name {
+              width: 7.9166666667em; } }
+          @media (min-width: 851px) and (max-width: 1300px) {
+            #modalCard .feedback-rating-item-name {
+              width: 7.9166666667em; } }
+          @media (max-width: 720px) {
             #modalCard .feedback-rating-item-name {
               width: 7.9166666667em; } }
         #modalCard .feedback-rating-item-stars {
           margin-left: 1em; }
-          @media (max-width: 1360px) {
+          @media (min-width: 1441px) and (max-width: 1860px) {
+            #modalCard .feedback-rating-item-stars {
+              margin-left: 0;
+              width: auto; } }
+          @media (min-width: 851px) and (max-width: 1300px) {
+            #modalCard .feedback-rating-item-stars {
+              margin-left: 0;
+              width: auto; } }
+          @media (max-width: 720px) {
             #modalCard .feedback-rating-item-stars {
               margin-left: 0;
               width: auto; } }
@@ -1788,7 +1865,7 @@ body {
             color: #ffdd00; }
     #modalCard .feedback-main {
       width: 100%;
-      padding: 1.15em 1.81em 1.5em 1.6em;
+      padding: 1.45em 1.81em 1.5em 1.6em;
       background-color: #fff;
       transition: all 0.5s ease-in-out;
       z-index: 100;
@@ -1815,15 +1892,16 @@ body {
       #modalCard .feedback-main-item {
         position: relative; }
         #modalCard .feedback-main-item:not(:last-of-type) {
-          margin-bottom: 1em; }
+          margin-bottom: 1.3em; }
         #modalCard .feedback-main-item-text {
-          font-size: 1.2em;
+          font-size: 1.23em;
           font-weight: 400;
+          line-height: 1.47;
           letter-spacing: -0.03px;
-          line-height: 1.33;
-          color: #252b34; }
+          color: #2c374a; }
           #modalCard .feedback-main-item-text-strong {
             font-weight: 500;
+            line-height: 1.47;
             color: #2c374a; }
         #modalCard .feedback-main-item .read-more {
           display: none;
@@ -1833,7 +1911,9 @@ body {
           right: 0;
           font-weight: 500;
           color: #adadad;
-          font-size: 1.2em;
+          font-size: 1.23em;
+          font-weight: 400;
+          line-height: 1.47;
           letter-spacing: -0.03px;
           background-color: #fff;
           background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, white 25%, white 100%);
@@ -1842,7 +1922,7 @@ body {
           overflow: hidden;
           text-overflow: ellipsis;
           display: -webkit-box;
-          -webkit-line-clamp: 2;
+          -webkit-line-clamp: 3;
           -webkit-box-orient: vertical; }
 
 #peerToPeerFeedbackModal .custom-modal,

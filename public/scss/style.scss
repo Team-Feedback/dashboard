@@ -254,6 +254,12 @@
   }
 }
 
+@mixin custom-respond-range($value1, $value2) {
+  @media (min-width: $value1 * 1px) and (max-width: $value2 * 1px) {
+    @content;
+  }
+}
+
 @mixin custom-respond-vertical($value) {
   @media (max-height: $value * 1px) {
     @content;
@@ -823,12 +829,12 @@
 
 @font-face {
   font-family: "dashoard-icons";
-  src: url("../fonts/dashoard-icons.eot?7xzlv2");
-  src: url("../fonts/dashoard-icons.eot?7xzlv2#iefix")
+  src: url("../fonts/dashoard-icons.eot?i0h6uh");
+  src: url("../fonts/dashoard-icons.eot?i0h6uh#iefix")
       format("embedded-opentype"),
-    url("../fonts/dashoard-icons.ttf?7xzlv2") format("truetype"),
-    url("../fonts/dashoard-icons.woff?7xzlv2") format("woff"),
-    url("../fonts/dashoard-icons.svg?7xzlv2#dashoard-icons") format("svg");
+    url("../fonts/dashoard-icons.ttf?i0h6uh") format("truetype"),
+    url("../fonts/dashoard-icons.woff?i0h6uh") format("woff"),
+    url("../fonts/dashoard-icons.svg?i0h6uh#dashoard-icons") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -850,6 +856,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-expand:before {
+  content: "\e948";
+}
 .icon-eye-open:before {
   content: "\e946";
 }
@@ -2511,7 +2520,7 @@ body {
 
   & .feedback {
     position: relative;
-    height: 25.9em;
+    min-height: 25.2em;
     @include flexbox();
     @include flex-direction(column);
     @include align-items(flex-start);
@@ -2527,8 +2536,20 @@ body {
       width: calc(50% - 2.8em);
     }
 
-    @include custom-respond(900) {
+    @include custom-respond(850) {
       width: calc(100% - 2.6em);
+    }
+
+    @include custom-respond-range(1441, 1860) {
+      min-height: 31.4em;
+    }
+
+    @include custom-respond-range(851, 1300) {
+      min-height: 31.4em;
+    }
+
+    @include custom-respond(720) {
+      min-height: 31.4em;
     }
 
     &.open {
@@ -2577,11 +2598,26 @@ body {
       }
 
       &-amount {
-        margin-left: auto;
+        padding-right: emcalc(0.6, 1.2);
         font-size: 1.2em;
         font-weight: 400;
         letter-spacing: -0.09px;
         color: #5a5f71;
+        border-right: 1.5px solid #5a5f71;
+      }
+
+      & .feedback-read-more {
+        margin-top: emcalc(0.2, 1.2);
+        margin-left: emcalc(0.72, 1.2);
+        font-size: 1.2em;
+        color: #5a5f71;
+      }
+
+      &-options {
+        margin-left: auto;
+        @include inline-flex();
+        @include align-items(center);
+        @include justify-content(flex-start);
       }
     }
 
@@ -2590,7 +2626,7 @@ body {
       @include align-items(center);
       @include justify-content(flex-start);
       width: 100%;
-      height: 4em;
+      height: 4.5em;
       margin: 1.15em 1.15em;
       margin-bottom: 0;
       padding: 0 0.45em;
@@ -2598,7 +2634,19 @@ body {
       border-bottom: 1px solid #efefef;
       transition: all 0.5s ease-in-out;
 
-      @include custom-respond(1360) {
+      @include custom-respond-range(1441, 1860) {
+        height: 7.629em;
+        @include flex-direction(column);
+        @include align-items(flex-start);
+      }
+
+      @include custom-respond-range(851, 1300) {
+        height: 7.629em;
+        @include flex-direction(column);
+        @include align-items(flex-start);
+      }
+
+      @include custom-respond(720) {
         height: 7.629em;
         @include flex-direction(column);
         @include align-items(flex-start);
@@ -2622,7 +2670,15 @@ body {
           letter-spacing: -0.03px;
           color: #2c374a;
 
-          @include custom-respond(1360) {
+          @include custom-respond-range(1441, 1860) {
+            width: emcalc(9.5, 1.2);
+          }
+
+          @include custom-respond-range(851, 1300) {
+            width: emcalc(9.5, 1.2);
+          }
+
+          @include custom-respond(720) {
             width: emcalc(9.5, 1.2);
           }
         }
@@ -2631,10 +2687,21 @@ body {
           margin-left: 1em;
           //width: 8.7em;
 
-          @include custom-respond(1360) {
+          @include custom-respond-range(1441, 1860) {
             margin-left: 0;
             width: auto;
           }
+
+          @include custom-respond-range(851, 1300) {
+            margin-left: 0;
+            width: auto;
+          }
+
+          @include custom-respond(720) {
+            margin-left: 0;
+            width: auto;
+          }
+
           & i {
             margin-right: 0;
             font-size: 1.5em;
@@ -2647,7 +2714,7 @@ body {
     &-main {
       width: 100%;
       //height: 9.85em;
-      padding: 1.15em 1.81em 1.5em 1.6em;
+      padding: 1.45em 1.81em 1.5em 1.6em;
       background-color: #fff;
       transition: all 0.5s ease-in-out;
       z-index: 100;
@@ -2682,19 +2749,20 @@ body {
       &-item {
         position: relative;
         &:not(:last-of-type) {
-          margin-bottom: 1em;
+          margin-bottom: 1.3em;
         }
 
         &-text {
           //min-height: emcalc(3.06, 1.2);
-          font-size: 1.2em;
+          font-size: 1.23em;
           font-weight: 400;
+          line-height: 1.47;
           letter-spacing: -0.03px;
-          line-height: 1.33;
-          color: #252b34;
+          color: #2c374a;
 
           &-strong {
             font-weight: 500;
+            line-height: 1.47;
             color: #2c374a;
           }
         }
@@ -2707,7 +2775,9 @@ body {
           right: 0;
           font-weight: 500;
           color: #adadad;
-          font-size: 1.2em;
+          font-size: 1.23em;
+          font-weight: 400;
+          line-height: 1.47;
           letter-spacing: -0.03px;
           background-color: #fff;
           background: linear-gradient(
@@ -2724,7 +2794,7 @@ body {
           text-overflow: ellipsis;
           display: -webkit-box;
 
-          -webkit-line-clamp: 2;
+          -webkit-line-clamp: 3;
           -webkit-box-orient: vertical;
         }
       }
