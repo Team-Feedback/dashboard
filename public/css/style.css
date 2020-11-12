@@ -1626,7 +1626,7 @@ body {
     -webkit-justify-content: flex-start;
     -moz-justify-content: flex-start;
     justify-content: flex-start;
-    margin: 0 -1.2em;
+    margin: 0 -1em;
     padding-top: 2em; }
   #modalCard .feedback {
     position: relative;

@@ -2514,7 +2514,7 @@ body {
     @include flex-wrap(wrap);
     @include align-items(flex-start);
     @include justify-content(flex-start);
-    margin: 0 -1.2em;
+    margin: 0 -1em;
     padding-top: 2em;
   }
 
