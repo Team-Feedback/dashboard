@@ -2981,6 +2981,134 @@ body {
   }
 }
 
+#exportPdfModal {
+  & .custom-modal {
+    width: 115em;
+    &-body {
+      padding: 3.6em 7em 3.8em 5em;
+
+      & .export-pdf {
+        width: 100%;
+
+        &-header {
+          width: 100%;
+          &-title {
+            margin-bottom: emcalc(1, 1.6);
+            font-size: 1.6em;
+            font-weight: 400;
+            letter-spacing: -0.08px;
+            color: #000;
+          }
+
+          &-text {
+            font-size: 1.23em;
+            font-weight: 400;
+            letter-spacing: -0.06px;
+            color: #435365;
+          }
+
+          &-bottom {
+            margin-top: 3.2em;
+            margin-bottom: 2.5em;
+            padding-block-end: 1.1em;
+            width: 100%;
+            @include flexbox();
+            @include align-items(flex-start);
+            @include justify-content(flex-start);
+            border-bottom: 2px solid #ebecf0;
+
+            &-item {
+              font-size: 1.15em;
+              font-weight: 500;
+              color: #6c798f;
+
+              &.column-01 {
+                flex: 0.26;
+              }
+
+              &.column-02 {
+                flex: 1;
+              }
+
+              &.column-03 {
+                flex: 0.1;
+              }
+            }
+          }
+        }
+
+        &-body {
+          &-row {
+            width: 100%;
+            @include flexbox();
+            @include align-items(flex-start);
+            @include justify-content(flex-start);
+
+            &:not(:last-of-type) {
+              margin-bottom: 2.5em;
+            }
+
+            &-item {
+              font-size: 1.28em;
+              font-weight: 400;
+              color: #3e4550;
+
+              &.column-01 {
+                flex: 0.26;
+              }
+
+              &.column-02 {
+                flex: 1;
+              }
+
+              &.column-03 {
+                flex: 0.1;
+              }
+
+              & .pretty {
+                font-size: 1.3em;
+              }
+            }
+          }
+        }
+
+        &-preview {
+          margin-top: 4.8em;
+          margin-bottom: 4.4em;
+
+          &-caption {
+            padding-bottom: emcalc(1.1, 1.15);
+            margin-bottom: emcalc(2.5, 1.15);
+            font-size: 1.15em;
+            font-weight: 500;
+            color: #6c798f;
+            border-bottom: 2px solid #ebecf0;
+          }
+
+          &-images {
+            @include flexbox();
+            @include align-items(flex-start);
+            @include justify-content(flex-start);
+            @include flex-wrap(wrap);
+            &-img {
+              width: 100%;
+              max-width: 11em;
+            }
+          }
+        }
+
+        & .button-primary {
+          padding: 0 emcalc(2, 1.28);
+          height: emcalc(3.4, 1.28);
+          font-size: 1.28em;
+          font-weight: 500;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+
 //Image modals
 #imageUploadModal,
 #usersModal {
