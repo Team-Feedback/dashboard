@@ -2082,6 +2082,7 @@ body {
     width: 48%; }
 
 #exportPdfModal .custom-modal {
+  border-radius: 3px;
   width: 115em; }
   #exportPdfModal .custom-modal-body {
     padding: 3.6em 7em 3.8em 5em; }
