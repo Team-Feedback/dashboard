@@ -4899,9 +4899,9 @@ body {
             transform-origin: 0 0; }
     #widgets-new .content .widget-wrapper.column-chart-01.extra-small-width .chart-column {
       margin-left: 3%; }
-    #widgets-new .content .widget-wrapper.column-chart-02.size-1100 .chart-column-area-graph-item {
+    #widgets-new .content .widget-wrapper.column-chart-02.size-1100 .chart-column-area-graph-item, #widgets-new .content .widget-wrapper.column-chart-02.size-1100 .chart-column-area-graph-set {
       display: none; }
-      #widgets-new .content .widget-wrapper.column-chart-02.size-1100 .chart-column-area-graph-item:not(:nth-last-of-type(1)) {
+      #widgets-new .content .widget-wrapper.column-chart-02.size-1100 .chart-column-area-graph-item:not(:nth-last-of-type(1)), #widgets-new .content .widget-wrapper.column-chart-02.size-1100 .chart-column-area-graph-set:not(:nth-last-of-type(1)) {
         display: -webkit-box;
         display: -webkit-flex;
         display: -moz-flex;
@@ -4911,9 +4911,9 @@ body {
       display: none; }
       #widgets-new .content .widget-wrapper.column-chart-02.size-1100 .chart-column-h-axis-item:not(:nth-last-of-type(1)) {
         display: inline-block; }
-    #widgets-new .content .widget-wrapper.column-chart-02.size-1000 .chart-column-area-graph-item {
+    #widgets-new .content .widget-wrapper.column-chart-02.size-1000 .chart-column-area-graph-item, #widgets-new .content .widget-wrapper.column-chart-02.size-1000 .chart-column-area-graph-set {
       display: none; }
-      #widgets-new .content .widget-wrapper.column-chart-02.size-1000 .chart-column-area-graph-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)) {
+      #widgets-new .content .widget-wrapper.column-chart-02.size-1000 .chart-column-area-graph-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)), #widgets-new .content .widget-wrapper.column-chart-02.size-1000 .chart-column-area-graph-set:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)) {
         display: -webkit-box;
         display: -webkit-flex;
         display: -moz-flex;
@@ -4923,9 +4923,9 @@ body {
       display: none; }
       #widgets-new .content .widget-wrapper.column-chart-02.size-1000 .chart-column-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)) {
         display: inline-block; }
-    #widgets-new .content .widget-wrapper.column-chart-02.size-900 .chart-column-area-graph-item, #widgets-new .content .widget-wrapper.column-chart-02.size-800 .chart-column-area-graph-item {
+    #widgets-new .content .widget-wrapper.column-chart-02.size-900 .chart-column-area-graph-item, #widgets-new .content .widget-wrapper.column-chart-02.size-900 .chart-column-area-graph-set, #widgets-new .content .widget-wrapper.column-chart-02.size-800 .chart-column-area-graph-item, #widgets-new .content .widget-wrapper.column-chart-02.size-800 .chart-column-area-graph-set {
       display: none; }
-      #widgets-new .content .widget-wrapper.column-chart-02.size-900 .chart-column-area-graph-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)), #widgets-new .content .widget-wrapper.column-chart-02.size-800 .chart-column-area-graph-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)) {
+      #widgets-new .content .widget-wrapper.column-chart-02.size-900 .chart-column-area-graph-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)), #widgets-new .content .widget-wrapper.column-chart-02.size-900 .chart-column-area-graph-set:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)), #widgets-new .content .widget-wrapper.column-chart-02.size-800 .chart-column-area-graph-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)), #widgets-new .content .widget-wrapper.column-chart-02.size-800 .chart-column-area-graph-set:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)) {
         display: -webkit-box;
         display: -webkit-flex;
         display: -moz-flex;
@@ -4935,9 +4935,9 @@ body {
       display: none; }
       #widgets-new .content .widget-wrapper.column-chart-02.size-900 .chart-column-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)), #widgets-new .content .widget-wrapper.column-chart-02.size-800 .chart-column-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)) {
         display: inline-block; }
-    #widgets-new .content .widget-wrapper.column-chart-02.size-700 .chart-column-area-graph-item, #widgets-new .content .widget-wrapper.column-chart-02.size-600 .chart-column-area-graph-item {
+    #widgets-new .content .widget-wrapper.column-chart-02.size-700 .chart-column-area-graph-item, #widgets-new .content .widget-wrapper.column-chart-02.size-700 .chart-column-area-graph-set, #widgets-new .content .widget-wrapper.column-chart-02.size-600 .chart-column-area-graph-item, #widgets-new .content .widget-wrapper.column-chart-02.size-600 .chart-column-area-graph-set {
       display: none; }
-      #widgets-new .content .widget-wrapper.column-chart-02.size-700 .chart-column-area-graph-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)), #widgets-new .content .widget-wrapper.column-chart-02.size-600 .chart-column-area-graph-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)) {
+      #widgets-new .content .widget-wrapper.column-chart-02.size-700 .chart-column-area-graph-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)), #widgets-new .content .widget-wrapper.column-chart-02.size-700 .chart-column-area-graph-set:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)), #widgets-new .content .widget-wrapper.column-chart-02.size-600 .chart-column-area-graph-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)), #widgets-new .content .widget-wrapper.column-chart-02.size-600 .chart-column-area-graph-set:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)) {
         display: -webkit-box;
         display: -webkit-flex;
         display: -moz-flex;
@@ -4947,9 +4947,9 @@ body {
       display: none; }
       #widgets-new .content .widget-wrapper.column-chart-02.size-700 .chart-column-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)), #widgets-new .content .widget-wrapper.column-chart-02.size-600 .chart-column-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)) {
         display: inline-block; }
-    #widgets-new .content .widget-wrapper.column-chart-02.size-500 .chart-column-area-graph-item, #widgets-new .content .widget-wrapper.column-chart-02.size-400 .chart-column-area-graph-item {
+    #widgets-new .content .widget-wrapper.column-chart-02.size-500 .chart-column-area-graph-item, #widgets-new .content .widget-wrapper.column-chart-02.size-500 .chart-column-area-graph-set, #widgets-new .content .widget-wrapper.column-chart-02.size-400 .chart-column-area-graph-item, #widgets-new .content .widget-wrapper.column-chart-02.size-400 .chart-column-area-graph-set {
       display: none; }
-      #widgets-new .content .widget-wrapper.column-chart-02.size-500 .chart-column-area-graph-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)), #widgets-new .content .widget-wrapper.column-chart-02.size-400 .chart-column-area-graph-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)) {
+      #widgets-new .content .widget-wrapper.column-chart-02.size-500 .chart-column-area-graph-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)), #widgets-new .content .widget-wrapper.column-chart-02.size-500 .chart-column-area-graph-set:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)), #widgets-new .content .widget-wrapper.column-chart-02.size-400 .chart-column-area-graph-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)), #widgets-new .content .widget-wrapper.column-chart-02.size-400 .chart-column-area-graph-set:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)) {
         display: -webkit-box;
         display: -webkit-flex;
         display: -moz-flex;
