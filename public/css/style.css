@@ -2083,10 +2083,16 @@ body {
 
 #exportPdfModal .custom-modal {
   border-radius: 3px;
-  width: 115em; }
+  width: 115em;
+  max-height: 95vh; }
   #exportPdfModal .custom-modal-body {
-    padding: 3.6em 7em 3.8em 5em; }
+    height: 100%;
+    padding: 3.6em 7em 0 5em; }
+    @media (max-width: 767px) {
+      #exportPdfModal .custom-modal-body {
+        padding: 3.6em 2em; } }
     #exportPdfModal .custom-modal-body .export-pdf {
+      height: 100%;
       width: 100%; }
       #exportPdfModal .custom-modal-body .export-pdf-header {
         width: 100%; }
@@ -2103,7 +2109,6 @@ body {
           color: #435365; }
         #exportPdfModal .custom-modal-body .export-pdf-header-bottom {
           margin-top: 3.2em;
-          margin-bottom: 2.5em;
           padding-block-end: 1.1em;
           width: 100%;
           display: -webkit-box;
@@ -2127,42 +2132,91 @@ body {
             font-weight: 500;
             color: #6c798f; }
             #exportPdfModal .custom-modal-body .export-pdf-header-bottom-item.column-01 {
+              min-width: 10rem;
+              margin-right: 1.5rem;
+              white-space: nowrap;
               flex: 0.26; }
             #exportPdfModal .custom-modal-body .export-pdf-header-bottom-item.column-02 {
+              margin-right: 1.5rem;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
               flex: 1; }
             #exportPdfModal .custom-modal-body .export-pdf-header-bottom-item.column-03 {
+              margin-right: 1.5rem;
+              white-space: nowrap;
               flex: 0.1; }
-      #exportPdfModal .custom-modal-body .export-pdf-body-row {
-        width: 100%;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        -webkit-align-items: flex-start;
-        -moz-align-items: flex-start;
-        align-items: flex-start;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        -webkit-justify-content: flex-start;
-        -moz-justify-content: flex-start;
-        justify-content: flex-start; }
-        #exportPdfModal .custom-modal-body .export-pdf-body-row:not(:last-of-type) {
-          margin-bottom: 2.5em; }
-        #exportPdfModal .custom-modal-body .export-pdf-body-row-item {
-          font-size: 1.28em;
-          font-weight: 400;
-          color: #3e4550; }
-          #exportPdfModal .custom-modal-body .export-pdf-body-row-item.column-01 {
-            flex: 0.26; }
-          #exportPdfModal .custom-modal-body .export-pdf-body-row-item.column-02 {
-            flex: 1; }
-          #exportPdfModal .custom-modal-body .export-pdf-body-row-item.column-03 {
-            flex: 0.1; }
-          #exportPdfModal .custom-modal-body .export-pdf-body-row-item .pretty {
-            font-size: 1.3em; }
+      #exportPdfModal .custom-modal-body .export-pdf-body {
+        padding-bottom: 3.8em;
+        padding-top: 2.5em;
+        max-height: calc(95vh - 14em - 4px);
+        overflow-y: auto;
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* Internet Explorer 10+ */ }
+        #exportPdfModal .custom-modal-body .export-pdf-body::-webkit-scrollbar {
+          /* WebKit */
+          width: 0;
+          height: 0; }
+        #exportPdfModal .custom-modal-body .export-pdf-body-row {
+          width: 100%;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: start;
+          -ms-flex-align: start;
+          -webkit-align-items: flex-start;
+          -moz-align-items: flex-start;
+          align-items: flex-start;
+          -webkit-box-pack: start;
+          -ms-flex-pack: start;
+          -webkit-justify-content: flex-start;
+          -moz-justify-content: flex-start;
+          justify-content: flex-start; }
+          #exportPdfModal .custom-modal-body .export-pdf-body-row:not(:last-of-type) {
+            margin-bottom: 2.5em; }
+          #exportPdfModal .custom-modal-body .export-pdf-body-row-item {
+            font-size: 1.28em;
+            font-weight: 400;
+            color: #3e4550; }
+            #exportPdfModal .custom-modal-body .export-pdf-body-row-item.column-01 {
+              min-width: 10rem;
+              margin-right: 1.5rem;
+              white-space: nowrap;
+              flex: 0.26; }
+            #exportPdfModal .custom-modal-body .export-pdf-body-row-item.column-02 {
+              margin-right: 1.5rem;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              flex: 1; }
+            #exportPdfModal .custom-modal-body .export-pdf-body-row-item.column-03 {
+              margin-right: 1.5rem;
+              flex: 0.1; }
+              #exportPdfModal .custom-modal-body .export-pdf-body-row-item.column-03 .pretty {
+                margin-right: 0; }
+              @media (max-width: 767px) {
+                #exportPdfModal .custom-modal-body .export-pdf-body-row-item.column-03 {
+                  display: -webkit-box;
+                  display: -webkit-flex;
+                  display: -moz-flex;
+                  display: -ms-flexbox;
+                  display: flex;
+                  -webkit-box-align: start;
+                  -ms-flex-align: start;
+                  -webkit-align-items: flex-start;
+                  -moz-align-items: flex-start;
+                  align-items: flex-start;
+                  -webkit-box-pack: end;
+                  -ms-flex-pack: end;
+                  -webkit-justify-content: flex-end;
+                  -moz-justify-content: flex-end;
+                  justify-content: flex-end; } }
+            #exportPdfModal .custom-modal-body .export-pdf-body-row-item .pretty {
+              font-size: 1.3em; }
       #exportPdfModal .custom-modal-body .export-pdf-preview {
         margin-top: 4.8em;
         margin-bottom: 4.4em; }

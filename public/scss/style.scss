@@ -2985,10 +2985,17 @@ body {
   & .custom-modal {
     border-radius: 3px;
     width: 115em;
+    max-height: 95vh;
     &-body {
-      padding: 3.6em 7em 3.8em 5em;
+      height: 100%;
+      padding: 3.6em 7em 0 5em;
+
+      @include respond(desktop-sm) {
+        padding: 3.6em 2em;
+      }
 
       & .export-pdf {
+        height: 100%;
         width: 100%;
 
         &-header {
@@ -3010,7 +3017,6 @@ body {
 
           &-bottom {
             margin-top: 3.2em;
-            margin-bottom: 2.5em;
             padding-block-end: 1.1em;
             width: 100%;
             @include flexbox();
@@ -3024,14 +3030,27 @@ body {
               color: #6c798f;
 
               &.column-01 {
+                min-width: 10rem;
+                margin-right: 1.5rem;
+                white-space: nowrap;
+                // overflow: hidden;
+                // text-overflow: ellipsis;
                 flex: 0.26;
               }
 
               &.column-02 {
+                margin-right: 1.5rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
                 flex: 1;
               }
 
               &.column-03 {
+                margin-right: 1.5rem;
+                white-space: nowrap;
+                // overflow: hidden;
+                // text-overflow: ellipsis;
                 flex: 0.1;
               }
             }
@@ -3039,6 +3058,20 @@ body {
         }
 
         &-body {
+          padding-bottom: 3.8em;
+          padding-top: 2.5em;
+          max-height: calc(95vh - 14em - 4px);
+          overflow-y: auto;
+          scrollbar-width: none;
+          /* Firefox */
+          -ms-overflow-style: none;
+          /* Internet Explorer 10+ */
+
+          &::-webkit-scrollbar {
+            /* WebKit */
+            width: 0;
+            height: 0;
+          }
           &-row {
             width: 100%;
             @include flexbox();
@@ -3055,15 +3088,38 @@ body {
               color: #3e4550;
 
               &.column-01 {
+                min-width: 10rem;
+                margin-right: 1.5rem;
+                white-space: nowrap;
+                // overflow: hidden;
+                // text-overflow: ellipsis;
                 flex: 0.26;
               }
 
               &.column-02 {
+                margin-right: 1.5rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
                 flex: 1;
               }
 
               &.column-03 {
+                margin-right: 1.5rem;
+                // white-space: nowrap;
+                // overflow: hidden;
+                // text-overflow: ellipsis;
                 flex: 0.1;
+
+                & .pretty {
+                  margin-right: 0;
+                }
+
+                @include respond(desktop-sm) {
+                  @include flexbox();
+                  @include align-items(flex-start);
+                  @include justify-content(flex-end);
+                }
               }
 
               & .pretty {
@@ -3095,6 +3151,12 @@ body {
               width: 100%;
               max-width: 11em;
             }
+
+            // @include respond(desktop-sm) {
+            //   @include flexbox();
+            //   @include align-items(flex-start);
+            //   @include justify-content(center);
+            // }
           }
         }
 
