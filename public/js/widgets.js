@@ -431,6 +431,138 @@ var roLineChart = new ResizeObserver((entries) => {
 });
 
 //WIDGETS DATA
+
+let columnChart02 = `
+<div class="widget-wrapper small widget-wrapper-column-chart column-chart-02 split" id="widget-6">
+<div class="widget widget-line-chart">
+    <div class="widget-header">
+        <p class="widget-header-title">Atmosphere in team and how work is organised</p>
+        <p class="widget-header-text">Longterm development chart based on 64 reviews</p>
+        <div class="widget-header-icons">
+            <i class="icon-expand-outlined"></i>
+            <i class="icon-cog-outlined"></i>
+        </div>
+    </div>
+
+    <div class="widget-body">
+        <div class="chart-column cc-v02">
+            <div class="chart-column-area">
+                <div class="chart-column-area-graph">
+                    <div class="chart-column-area-graph-item"
+                        style="height: 80%; background-color: #ffb12d;">
+                        <div class="p chart-column-area-graph-item-text">18</div>
+                    </div>
+                    <div class="chart-column-area-graph-item"
+                        style="height: 72%; background-color: #64c930;">
+                        <div class="p chart-column-area-graph-item-text">18</div>
+                    </div>
+                    <div class="chart-column-area-graph-item"
+                        style="height: 65%; background-color: #64c930;">
+                        <div class="p chart-column-area-graph-item-text">18</div>
+                    </div>
+                    <div class="chart-column-area-graph-item"
+                        style="height: 50%; background-color: #ffb12d;">
+                        <div class="p chart-column-area-graph-item-text">18</div>
+                    </div>
+                    <div class="chart-column-area-graph-item"
+                        style="height: 60%; background-color: #64c930;">
+                        <div class="p chart-column-area-graph-item-text">18</div>
+                    </div>
+                    <div class="chart-column-area-graph-item"
+                        style="height: 45%; background-color: #64c930;">
+                        <div class="p chart-column-area-graph-item-text">18</div>
+                    </div>
+                    <div class="chart-column-area-graph-item"
+                    style="height: 60%; background-color: #ffb12d;">
+                    <div class="p chart-column-area-graph-item-text">18</div>
+                </div>
+                <div class="chart-column-area-graph-item"
+                    style="height: 45%; background-color: #64c930;">
+                    <div class="p chart-column-area-graph-item-text">18</div>
+                </div>
+                </div>
+                <div class="chart-column-area-back">
+                    <div class="chart-column-area-back-h">
+                        <div class="chart-column-area-back-h-line"></div>
+                        <div class="chart-column-area-back-h-line"></div>
+                        <div class="chart-column-area-back-h-line"></div>
+                        <div class="chart-column-area-back-h-line"></div>
+                        <div class="chart-column-area-back-h-line"></div>
+                    </div>
+                    <div class="chart-column-area-back-v">
+                        <div class="chart-column-area-back-v-line"></div>
+                        <div class="chart-column-area-back-v-line"></div>
+                        <div class="chart-column-area-back-v-line"></div>
+                        <div class="chart-column-area-back-v-line"></div>
+                        <div class="chart-column-area-back-v-line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="chart-column-v-axis">
+                <div class="chart-column-v-axis-item item-01">
+                    <p class="chart-column-v-axis-item-label">Great (5.0)</p>
+                    <span class="chart-column-v-axis-item-tick"></span>
+                </div>
+                <div class="chart-column-v-axis-item item-02">
+                    <p class="chart-column-v-axis-item-label">Good (4.0)</p>
+                    <span class="chart-column-v-axis-item-tick"></span>
+                </div>
+                <div class="chart-column-v-axis-item item-03">
+                    <p class="chart-column-v-axis-item-label">Ok (3.0)</p>
+                    <span class="chart-column-v-axis-item-tick"></span>
+                </div>
+                <div class="chart-column-v-axis-item item-04">
+                    <p class="chart-column-v-axis-item-label">Weak (2.0)</p>
+                    <span class="chart-column-v-axis-item-tick"></span>
+                </div>
+                <div class="chart-column-v-axis-item item-05">
+                    <p class="chart-column-v-axis-item-label">Bad (1.0)</p>
+                    <span class="chart-column-v-axis-item-tick"></span>
+                </div>
+            </div>
+
+            <div class="chart-column-h-axis">
+                <div class="chart-column-h-axis-item item-01">
+                    <p class="chart-column-h-axis-item-label">Attitude</p>
+                    <span class="chart-column-h-axis-item-tick"></span>
+                </div>
+                <div class="chart-column-h-axis-item item-02">
+                    <p class="chart-column-h-axis-item-label">Productivity</p>
+                    <span class="chart-column-h-axis-item-tick"></span>
+                </div>
+                <div class="chart-column-h-axis-item item-03">
+                    <p class="chart-column-h-axis-item-label">Teamworking</p>
+                    <span class="chart-column-h-axis-item-tick"></span>
+                </div>
+                <div class="chart-column-h-axis-item item-04">
+                    <p class="chart-column-h-axis-item-label">How do people feel working in this team</p>
+                    <span class="chart-column-h-axis-item-tick"></span>
+                </div>
+                <div class="chart-column-h-axis-item item-05">
+                    <p class="chart-column-h-axis-item-label">How well work is organized</p>
+                    <span class="chart-column-h-axis-item-tick"></span>
+                </div>
+                <div class="chart-column-h-axis-item item-06">
+                    <p class="chart-column-h-axis-item-label">Team lead</p>
+                    <span class="chart-column-h-axis-item-tick"></span>
+                </div>
+
+                <div class="chart-column-h-axis-item item-07">
+                  <p class="chart-column-h-axis-item-label">Amount of given feedback</p>
+                  <span class="chart-column-h-axis-item-tick"></span>
+                </div>
+
+                <div class="chart-column-h-axis-item item-08">
+                  <p class="chart-column-h-axis-item-label">Team average score</p>
+                  <span class="chart-column-h-axis-item-tick"></span>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+`;
+
 let barGraphEl = `
 <div class="widget-wrapper small split" id="widget-0" style="overflow: hidden;">
         <div class="widget widget-bar-graph">
@@ -1131,11 +1263,12 @@ let widgetsArr = [
   columnChartEl,
   valueBoxEl,
   comboGraphEl,
+  columnChart02
 ];
 let widgetsNewContent = document.querySelector("#widgets-new .content");
 
 let widgetsBig = function (index) {
-  widgetsNewContent.innerHTML = "";
+  widgetsNewContent.innerHTML = ``;
   widgetsArr.forEach((e, i, arr) => {
     if ((i + 1) % 3 === 0 && i !== 0) {
       let prevIndex = index;
@@ -1167,7 +1300,7 @@ let widgetsBig = function (index) {
 };
 
 let widgetsMedium = function (index) {
-  widgetsNewContent.innerHTML = "";
+  widgetsNewContent.innerHTML = ``;
   widgetsArr.forEach((e, i, arr) => {
     if ((i + 1) % 2 === 0 && i !== 0) {
       let prevIndex = index;
@@ -1197,7 +1330,7 @@ let widgetsMedium = function (index) {
 };
 
 let widgetsSmall = function (index) {
-  widgetsNewContent.innerHTML = "";
+  widgetsNewContent.innerHTML = ``;
   widgetsArr.forEach((e, i, arr) => {
     widgetsNewContent.innerHTML += `
           <div class="flex">
@@ -1230,7 +1363,7 @@ function checkWidgets() {
 
     //Reset MEDIUM function
     widgetsMedium = function (index) {
-      widgetsNewContent.innerHTML = "";
+      widgetsNewContent.innerHTML = ``;
       widgetsArr.forEach((e, i, arr) => {
         if ((i + 1) % 2 === 0 && i !== 0) {
           let prevIndex = index;
@@ -1261,7 +1394,7 @@ function checkWidgets() {
 
     //Reset SMALL function
     widgetsSmall = function (index) {
-      widgetsNewContent.innerHTML = "";
+      widgetsNewContent.innerHTML = ``;
       widgetsArr.forEach((e, i, arr) => {
         widgetsNewContent.innerHTML += `
               <div class="flex">
@@ -1289,7 +1422,7 @@ function checkWidgets() {
 
     //Reset BIG function
     widgetsBig = function (index) {
-      widgetsNewContent.innerHTML = "";
+      widgetsNewContent.innerHTML = ``;
       widgetsArr.forEach((e, i, arr) => {
         if ((i + 1) % 3 === 0 && i !== 0) {
           let prevIndex = index;
@@ -1320,7 +1453,7 @@ function checkWidgets() {
 
     //Reset SMALL function
     widgetsSmall = function (index) {
-      widgetsNewContent.innerHTML = "";
+      widgetsNewContent.innerHTML = ``;
       widgetsArr.forEach((e, i, arr) => {
         widgetsNewContent.innerHTML += `
               <div class="flex">
@@ -1348,7 +1481,7 @@ function checkWidgets() {
 
     //Reset BIG function
     widgetsBig = function (index) {
-      widgetsNewContent.innerHTML = "";
+      widgetsNewContent.innerHTML = ``;
       widgetsArr.forEach((e, i, arr) => {
         if ((i + 1) % 3 === 0 && i !== 0) {
           let prevIndex = index;
@@ -1379,7 +1512,7 @@ function checkWidgets() {
 
     //Reset MEDIUM function
     widgetsMedium = function (index) {
-      widgetsNewContent.innerHTML = "";
+      widgetsNewContent.innerHTML = ``;
       widgetsArr.forEach((e, i, arr) => {
         if ((i + 1) % 2 === 0 && i !== 0) {
           let prevIndex = index;

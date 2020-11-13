@@ -4880,24 +4880,97 @@ body {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis; }
-    #widgets-new .content .widget-wrapper-column-chart .widget-header {
+    #widgets-new .content .widget-wrapper.column-chart-01 .widget-header {
       border-bottom: none; }
-    #widgets-new .content .widget-wrapper-column-chart.small-width .chart-column {
+    #widgets-new .content .widget-wrapper.column-chart-01.small-width .chart-column {
       grid-template-rows: 1fr 10em; }
-      #widgets-new .content .widget-wrapper-column-chart.small-width .chart-column-h-axis {
+      #widgets-new .content .widget-wrapper.column-chart-01.small-width .chart-column-h-axis {
         padding-top: 0.4em;
         overflow: visible; }
-        #widgets-new .content .widget-wrapper-column-chart.small-width .chart-column-h-axis-item {
+        #widgets-new .content .widget-wrapper.column-chart-01.small-width .chart-column-h-axis-item {
           position: relative;
           height: 100%;
           overflow: visible; }
-          #widgets-new .content .widget-wrapper-column-chart.small-width .chart-column-h-axis-item-label {
+          #widgets-new .content .widget-wrapper.column-chart-01.small-width .chart-column-h-axis-item-label {
             position: absolute;
             top: 0;
             left: 50%;
             transform: rotateZ(45deg);
             transform-origin: 0 0; }
-    #widgets-new .content .widget-wrapper-column-chart.extra-small-width .chart-column {
+    #widgets-new .content .widget-wrapper.column-chart-01.extra-small-width .chart-column {
+      margin-left: 3%; }
+    #widgets-new .content .widget-wrapper.column-chart-02.size-1100 .chart-column-area-graph-item {
+      display: none; }
+      #widgets-new .content .widget-wrapper.column-chart-02.size-1100 .chart-column-area-graph-item:not(:nth-last-of-type(1)) {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex; }
+    #widgets-new .content .widget-wrapper.column-chart-02.size-1100 .chart-column-h-axis-item {
+      display: none; }
+      #widgets-new .content .widget-wrapper.column-chart-02.size-1100 .chart-column-h-axis-item:not(:nth-last-of-type(1)) {
+        display: inline-block; }
+    #widgets-new .content .widget-wrapper.column-chart-02.size-1000 .chart-column-area-graph-item {
+      display: none; }
+      #widgets-new .content .widget-wrapper.column-chart-02.size-1000 .chart-column-area-graph-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)) {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex; }
+    #widgets-new .content .widget-wrapper.column-chart-02.size-1000 .chart-column-h-axis-item {
+      display: none; }
+      #widgets-new .content .widget-wrapper.column-chart-02.size-1000 .chart-column-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)) {
+        display: inline-block; }
+    #widgets-new .content .widget-wrapper.column-chart-02.size-900 .chart-column-area-graph-item, #widgets-new .content .widget-wrapper.column-chart-02.size-800 .chart-column-area-graph-item {
+      display: none; }
+      #widgets-new .content .widget-wrapper.column-chart-02.size-900 .chart-column-area-graph-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)), #widgets-new .content .widget-wrapper.column-chart-02.size-800 .chart-column-area-graph-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)) {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex; }
+    #widgets-new .content .widget-wrapper.column-chart-02.size-900 .chart-column-h-axis-item, #widgets-new .content .widget-wrapper.column-chart-02.size-800 .chart-column-h-axis-item {
+      display: none; }
+      #widgets-new .content .widget-wrapper.column-chart-02.size-900 .chart-column-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)), #widgets-new .content .widget-wrapper.column-chart-02.size-800 .chart-column-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)) {
+        display: inline-block; }
+    #widgets-new .content .widget-wrapper.column-chart-02.size-700 .chart-column-area-graph-item, #widgets-new .content .widget-wrapper.column-chart-02.size-600 .chart-column-area-graph-item {
+      display: none; }
+      #widgets-new .content .widget-wrapper.column-chart-02.size-700 .chart-column-area-graph-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)), #widgets-new .content .widget-wrapper.column-chart-02.size-600 .chart-column-area-graph-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)) {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex; }
+    #widgets-new .content .widget-wrapper.column-chart-02.size-700 .chart-column-h-axis-item, #widgets-new .content .widget-wrapper.column-chart-02.size-600 .chart-column-h-axis-item {
+      display: none; }
+      #widgets-new .content .widget-wrapper.column-chart-02.size-700 .chart-column-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)), #widgets-new .content .widget-wrapper.column-chart-02.size-600 .chart-column-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)) {
+        display: inline-block; }
+    #widgets-new .content .widget-wrapper.column-chart-02.size-500 .chart-column-area-graph-item, #widgets-new .content .widget-wrapper.column-chart-02.size-400 .chart-column-area-graph-item {
+      display: none; }
+      #widgets-new .content .widget-wrapper.column-chart-02.size-500 .chart-column-area-graph-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)), #widgets-new .content .widget-wrapper.column-chart-02.size-400 .chart-column-area-graph-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)) {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex; }
+    #widgets-new .content .widget-wrapper.column-chart-02.size-500 .chart-column-h-axis-item, #widgets-new .content .widget-wrapper.column-chart-02.size-400 .chart-column-h-axis-item {
+      display: none; }
+      #widgets-new .content .widget-wrapper.column-chart-02.size-500 .chart-column-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)), #widgets-new .content .widget-wrapper.column-chart-02.size-400 .chart-column-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)) {
+        display: inline-block; }
+    #widgets-new .content .widget-wrapper.column-chart-02 .widget-header {
+      border-bottom: none; }
+    #widgets-new .content .widget-wrapper.column-chart-02.small-width .chart-column {
+      grid-template-rows: 1fr 10em; }
+      #widgets-new .content .widget-wrapper.column-chart-02.small-width .chart-column-h-axis {
+        padding-top: 0.4em;
+        overflow: visible; }
+        #widgets-new .content .widget-wrapper.column-chart-02.small-width .chart-column-h-axis-item {
+          position: relative;
+          height: 100%;
+          overflow: visible; }
+    #widgets-new .content .widget-wrapper.column-chart-02.extra-small-width .chart-column {
       margin-left: 3%; }
     #widgets-new .content .widget-wrapper-combo-chart .widget-header {
       border-bottom: none; }
@@ -5541,6 +5614,37 @@ body {
   grid-template-areas: "a b" "c d";
   grid-template-rows: 1fr 3em;
   grid-template-columns: auto 1fr; }
+  .chart-column.cc-v02 {
+    grid-template-rows: 1fr 10em; }
+    .chart-column.cc-v02.chart-column .chart-column-area-graph {
+      -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+      -webkit-justify-content: space-evenly;
+      -moz-justify-content: space-evenly;
+      justify-content: space-evenly; }
+      .chart-column.cc-v02.chart-column .chart-column-area-graph-item {
+        width: 6.4em;
+        margin-right: 0; }
+    .chart-column.cc-v02.chart-column .chart-column-h-axis {
+      -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+      -webkit-justify-content: space-evenly;
+      -moz-justify-content: space-evenly;
+      justify-content: space-evenly; }
+      .chart-column.cc-v02.chart-column .chart-column-h-axis-item {
+        padding-top: 1.5em;
+        position: relative;
+        width: 6.4em;
+        height: 100%;
+        overflow: visible;
+        margin-right: 0; }
+        .chart-column.cc-v02.chart-column .chart-column-h-axis-item-label {
+          width: 11.1rem;
+          position: absolute;
+          top: 1.45rem;
+          left: 50%;
+          transform: translate(-50%, 0);
+          white-space: normal; }
   .chart-column-area {
     position: relative;
     border-bottom: 1px solid #43546a; }

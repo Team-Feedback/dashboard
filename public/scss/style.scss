@@ -6137,7 +6137,7 @@ body {
         }
       }
 
-      &-column-chart {
+      &.column-chart-01 {
         & .widget-header {
           border-bottom: none;
         }
@@ -6162,6 +6162,136 @@ body {
                   transform: rotateZ(45deg);
                   transform-origin: 0 0;
                 }
+              }
+            }
+          }
+        }
+
+        &.extra-small-width {
+          & .chart-column {
+            margin-left: 3%;
+          }
+        }
+      }
+
+      &.column-chart-02 {
+        &.size-1100 {
+          & .chart-column-area-graph-item {
+            display: none;
+
+            &:not(:nth-last-of-type(1)) {
+              @include flexbox();
+            }
+          }
+
+          & .chart-column-h-axis-item {
+            display: none;
+
+            &:not(:nth-last-of-type(1)) {
+              display: inline-block;
+            }
+          }
+        }
+
+        &.size-1000 {
+          & .chart-column-area-graph-item {
+            display: none;
+
+            &:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)) {
+              @include flexbox();
+            }
+          }
+
+          & .chart-column-h-axis-item {
+            display: none;
+
+            &:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)) {
+              display: inline-block;
+            }
+          }
+        }
+
+        &.size-900,
+        &.size-800 {
+          & .chart-column-area-graph-item {
+            display: none;
+
+            &:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)) {
+              @include flexbox();
+            }
+          }
+
+          & .chart-column-h-axis-item {
+            display: none;
+
+            &:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)) {
+              display: inline-block;
+            }
+          }
+        }
+
+        &.size-700,
+        &.size-600 {
+          & .chart-column-area-graph-item {
+            display: none;
+
+            &:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)) {
+              @include flexbox();
+            }
+          }
+
+          & .chart-column-h-axis-item {
+            display: none;
+
+            &:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)) {
+              display: inline-block;
+            }
+          }
+        }
+
+        &.size-500,
+        &.size-400 {
+          & .chart-column-area-graph-item {
+            display: none;
+
+            &:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)) {
+              @include flexbox();
+            }
+          }
+
+          & .chart-column-h-axis-item {
+            display: none;
+
+            &:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)) {
+              display: inline-block;
+            }
+          }
+        }
+
+        & .widget-header {
+          border-bottom: none;
+        }
+
+        &.small-width {
+          & .chart-column {
+            grid-template-rows: 1fr 10em;
+
+            &-h-axis {
+              padding-top: 0.4em;
+              overflow: visible;
+
+              &-item {
+                position: relative;
+                height: 100%;
+                overflow: visible;
+
+                // &-label {
+                //   position: absolute;
+                //   top: 0;
+                //   left: 50%;
+                //   transform: rotateZ(45deg);
+                //   transform-origin: 0 0;
+                // }
               }
             }
           }
@@ -6903,6 +7033,52 @@ body {
     "c d";
   grid-template-rows: 1fr 3em;
   grid-template-columns: auto 1fr;
+
+  &.cc-v02 {
+    grid-template-rows: 1fr 10em;
+
+    &.chart-column {
+      & .chart-column-area {
+        &-graph {
+          @include justify-content(space-evenly);
+
+          &-item {
+            width: 6.4em;
+            margin-right: 0;
+          }
+        }
+      }
+
+      & .chart-column-h-axis {
+        @include justify-content(space-evenly);
+
+        &-item {
+          padding-top: 1.5em;
+          position: relative;
+          width: 6.4em;
+          height: 100%;
+          overflow: visible;
+          margin-right: 0;
+          // width: 7.9%;
+          // min-width: 3.1em;
+          // text-align: center;
+
+          // &:not(:last-of-type) {
+          //   margin-right: 4.13%;
+          // }
+
+          &-label {
+            width: 11.1rem;
+            position: absolute;
+            top: 1.45rem;
+            left: 50%;
+            transform: translate(-50%, 0);
+            white-space: normal;
+          }
+        }
+      }
+    }
+  }
 
   &-area {
     position: relative;
