@@ -5607,6 +5607,7 @@ body {
           color: #16222f; }
 
 .chart-column {
+  margin-top: 1em;
   margin-left: 6%;
   width: 90%;
   height: 100%;
@@ -5867,6 +5868,7 @@ body {
     justify-content: space-evenly; }
 
 .combo-chart {
+  margin-top: 1em;
   margin-left: 6%;
   width: 90%;
   height: 100%;
