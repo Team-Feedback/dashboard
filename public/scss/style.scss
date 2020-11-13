@@ -7046,6 +7046,45 @@ body {
             width: 6.4em;
             margin-right: 0;
           }
+
+          &-set {
+            margin-right: 0;
+            @include flexbox();
+            @include align-items(flex-end);
+            @include justify-content(space-between);
+            width: 6.4em;
+            height: 100%;
+
+            &-item {
+              padding-top: 0.5em;
+              @include flexbox();
+              @include align-items(flex-start);
+              @include justify-content(center);
+              width: 2.75em;
+              background-color: #64c930;
+
+              & .icon-user {
+                font-size: 1.65em;
+                color: #fff;
+              }
+
+              & .icon-users {
+                margin-top: -0.3rem;
+                font-size: 2.2em;
+                color: #fff;
+              }
+
+              &.stripped {
+                background: repeating-linear-gradient(
+                  -45deg,
+                  #64c930,
+                  #64c930 6px,
+                  #fff 6px,
+                  #fff 7px
+                );
+              }
+            }
+          }
         }
       }
 

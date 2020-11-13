@@ -5625,6 +5625,53 @@ body {
       .chart-column.cc-v02.chart-column .chart-column-area-graph-item {
         width: 6.4em;
         margin-right: 0; }
+      .chart-column.cc-v02.chart-column .chart-column-area-graph-set {
+        margin-right: 0;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        -webkit-align-items: flex-end;
+        -moz-align-items: flex-end;
+        align-items: flex-end;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        justify-content: space-between;
+        width: 6.4em;
+        height: 100%; }
+        .chart-column.cc-v02.chart-column .chart-column-area-graph-set-item {
+          padding-top: 0.5em;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: start;
+          -ms-flex-align: start;
+          -webkit-align-items: flex-start;
+          -moz-align-items: flex-start;
+          align-items: flex-start;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          -moz-justify-content: center;
+          justify-content: center;
+          width: 2.75em;
+          background-color: #64c930; }
+          .chart-column.cc-v02.chart-column .chart-column-area-graph-set-item .icon-user {
+            font-size: 1.65em;
+            color: #fff; }
+          .chart-column.cc-v02.chart-column .chart-column-area-graph-set-item .icon-users {
+            margin-top: -0.3rem;
+            font-size: 2.2em;
+            color: #fff; }
+          .chart-column.cc-v02.chart-column .chart-column-area-graph-set-item.stripped {
+            background: repeating-linear-gradient(-45deg, #64c930, #64c930 6px, #fff 6px, #fff 7px); }
     .chart-column.cc-v02.chart-column .chart-column-h-axis {
       -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
