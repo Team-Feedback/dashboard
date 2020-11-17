@@ -4995,7 +4995,6 @@ body {
   #widgets-new .content .widgets {
     height: auto;
     width: 100%;
-    max-width: 100%;
     padding-top: 2em;
     display: -webkit-box;
     display: -webkit-flex;
@@ -5016,288 +5015,46 @@ body {
     -webkit-justify-content: flex-start;
     -moz-justify-content: flex-start;
     justify-content: flex-start; }
-  #widgets-new .content .widget-wrapper {
-    margin: 0 1em;
-    margin-bottom: 2em;
+  #widgets-new .content .placeholder-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px 20px; }
+    @media (max-width: 1900px) {
+      #widgets-new .content .placeholder-wrapper {
+        grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 1350px) {
+      #widgets-new .content .placeholder-wrapper {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 950px) {
+      #widgets-new .content .placeholder-wrapper {
+        grid-template-columns: repeat(1, 1fr); } }
+  #widgets-new .content .placeholder-card {
     resize: horizontal;
-    overflow: visible;
-    flex-shrink: 1;
-    min-width: 40em; }
-    #widgets-new .content .widget-wrapper.small {
-      width: calc(50% - 4em);
-      max-width: 100%; }
-    #widgets-new .content .widget-wrapper.big {
-      width: calc(100%);
-      max-width: 100%; }
-    #widgets-new .content .widget-wrapper-pie-chart {
-      overflow-x: visible; }
-      #widgets-new .content .widget-wrapper-pie-chart .widget-header {
-        border-bottom: none; }
-      #widgets-new .content .widget-wrapper-pie-chart .widget-body {
-        padding: 0; }
-    #widgets-new .content .widget-wrapper-line-chart .widget-header {
-      border-bottom: none; }
-    #widgets-new .content .widget-wrapper-line-chart .widget-body {
-      padding: 0; }
-    #widgets-new .content .widget-wrapper-line-chart.small .line-chart {
-      max-height: 100%; }
-    #widgets-new .content .widget-wrapper-line-chart.small .chart-legend-item {
-      -webkit-box-pack: start;
-      -ms-flex-pack: start;
-      -webkit-justify-content: flex-start;
-      -moz-justify-content: flex-start;
-      justify-content: flex-start;
-      margin-right: 0;
-      width: 50%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis; }
-      #widgets-new .content .widget-wrapper-line-chart.small .chart-legend-item-name {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis; }
-    #widgets-new .content .widget-wrapper.column-chart-01 .widget-header {
-      border-bottom: none; }
-    #widgets-new .content .widget-wrapper.column-chart-01.small-width .chart-column {
-      grid-template-rows: 1fr 10em; }
-      #widgets-new .content .widget-wrapper.column-chart-01.small-width .chart-column-h-axis {
-        padding-top: 0.4em;
-        overflow: visible; }
-        #widgets-new .content .widget-wrapper.column-chart-01.small-width .chart-column-h-axis-item {
-          position: relative;
-          height: 100%;
-          overflow: visible; }
-          #widgets-new .content .widget-wrapper.column-chart-01.small-width .chart-column-h-axis-item-label {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: rotateZ(45deg);
-            transform-origin: 0 0; }
-    #widgets-new .content .widget-wrapper.column-chart-01.extra-small-width .chart-column {
-      margin-left: 3%; }
-    #widgets-new .content .widget-wrapper.column-chart-02.size-1100 .chart-column-area-graph-item, #widgets-new .content .widget-wrapper.column-chart-02.size-1100 .chart-column-area-graph-set {
-      display: none; }
-      #widgets-new .content .widget-wrapper.column-chart-02.size-1100 .chart-column-area-graph-item:not(:nth-last-of-type(1)), #widgets-new .content .widget-wrapper.column-chart-02.size-1100 .chart-column-area-graph-set:not(:nth-last-of-type(1)) {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flexbox;
-        display: flex; }
-    #widgets-new .content .widget-wrapper.column-chart-02.size-1100 .chart-column-h-axis-item {
-      display: none; }
-      #widgets-new .content .widget-wrapper.column-chart-02.size-1100 .chart-column-h-axis-item:not(:nth-last-of-type(1)) {
-        display: inline-block; }
-    #widgets-new .content .widget-wrapper.column-chart-02.size-1000 .chart-column-area-graph-item, #widgets-new .content .widget-wrapper.column-chart-02.size-1000 .chart-column-area-graph-set {
-      display: none; }
-      #widgets-new .content .widget-wrapper.column-chart-02.size-1000 .chart-column-area-graph-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)), #widgets-new .content .widget-wrapper.column-chart-02.size-1000 .chart-column-area-graph-set:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)) {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flexbox;
-        display: flex; }
-    #widgets-new .content .widget-wrapper.column-chart-02.size-1000 .chart-column-h-axis-item {
-      display: none; }
-      #widgets-new .content .widget-wrapper.column-chart-02.size-1000 .chart-column-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)) {
-        display: inline-block; }
-    #widgets-new .content .widget-wrapper.column-chart-02.size-900 .chart-column-area-graph-item, #widgets-new .content .widget-wrapper.column-chart-02.size-900 .chart-column-area-graph-set, #widgets-new .content .widget-wrapper.column-chart-02.size-800 .chart-column-area-graph-item, #widgets-new .content .widget-wrapper.column-chart-02.size-800 .chart-column-area-graph-set {
-      display: none; }
-      #widgets-new .content .widget-wrapper.column-chart-02.size-900 .chart-column-area-graph-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)), #widgets-new .content .widget-wrapper.column-chart-02.size-900 .chart-column-area-graph-set:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)), #widgets-new .content .widget-wrapper.column-chart-02.size-800 .chart-column-area-graph-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)), #widgets-new .content .widget-wrapper.column-chart-02.size-800 .chart-column-area-graph-set:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)) {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flexbox;
-        display: flex; }
-    #widgets-new .content .widget-wrapper.column-chart-02.size-900 .chart-column-h-axis-item, #widgets-new .content .widget-wrapper.column-chart-02.size-800 .chart-column-h-axis-item {
-      display: none; }
-      #widgets-new .content .widget-wrapper.column-chart-02.size-900 .chart-column-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)), #widgets-new .content .widget-wrapper.column-chart-02.size-800 .chart-column-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)) {
-        display: inline-block; }
-    #widgets-new .content .widget-wrapper.column-chart-02.size-700 .chart-column-area-graph-item, #widgets-new .content .widget-wrapper.column-chart-02.size-700 .chart-column-area-graph-set, #widgets-new .content .widget-wrapper.column-chart-02.size-600 .chart-column-area-graph-item, #widgets-new .content .widget-wrapper.column-chart-02.size-600 .chart-column-area-graph-set {
-      display: none; }
-      #widgets-new .content .widget-wrapper.column-chart-02.size-700 .chart-column-area-graph-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)), #widgets-new .content .widget-wrapper.column-chart-02.size-700 .chart-column-area-graph-set:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)), #widgets-new .content .widget-wrapper.column-chart-02.size-600 .chart-column-area-graph-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)), #widgets-new .content .widget-wrapper.column-chart-02.size-600 .chart-column-area-graph-set:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)) {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flexbox;
-        display: flex; }
-    #widgets-new .content .widget-wrapper.column-chart-02.size-700 .chart-column-h-axis-item, #widgets-new .content .widget-wrapper.column-chart-02.size-600 .chart-column-h-axis-item {
-      display: none; }
-      #widgets-new .content .widget-wrapper.column-chart-02.size-700 .chart-column-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)), #widgets-new .content .widget-wrapper.column-chart-02.size-600 .chart-column-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)) {
-        display: inline-block; }
-    #widgets-new .content .widget-wrapper.column-chart-02.size-500 .chart-column-area-graph-item, #widgets-new .content .widget-wrapper.column-chart-02.size-500 .chart-column-area-graph-set, #widgets-new .content .widget-wrapper.column-chart-02.size-400 .chart-column-area-graph-item, #widgets-new .content .widget-wrapper.column-chart-02.size-400 .chart-column-area-graph-set {
-      display: none; }
-      #widgets-new .content .widget-wrapper.column-chart-02.size-500 .chart-column-area-graph-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)), #widgets-new .content .widget-wrapper.column-chart-02.size-500 .chart-column-area-graph-set:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)), #widgets-new .content .widget-wrapper.column-chart-02.size-400 .chart-column-area-graph-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)), #widgets-new .content .widget-wrapper.column-chart-02.size-400 .chart-column-area-graph-set:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)) {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flexbox;
-        display: flex; }
-    #widgets-new .content .widget-wrapper.column-chart-02.size-500 .chart-column-h-axis-item, #widgets-new .content .widget-wrapper.column-chart-02.size-400 .chart-column-h-axis-item {
-      display: none; }
-      #widgets-new .content .widget-wrapper.column-chart-02.size-500 .chart-column-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)), #widgets-new .content .widget-wrapper.column-chart-02.size-400 .chart-column-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)) {
-        display: inline-block; }
-    #widgets-new .content .widget-wrapper.column-chart-02 .widget-header {
-      border-bottom: none; }
-    #widgets-new .content .widget-wrapper.column-chart-02.small-width .chart-column {
-      grid-template-rows: 1fr 10em; }
-      #widgets-new .content .widget-wrapper.column-chart-02.small-width .chart-column-h-axis {
-        padding-top: 0.4em;
-        overflow: visible; }
-        #widgets-new .content .widget-wrapper.column-chart-02.small-width .chart-column-h-axis-item {
-          position: relative;
-          height: 100%;
-          overflow: visible; }
-    #widgets-new .content .widget-wrapper.column-chart-02.extra-small-width .chart-column {
-      margin-left: 3%; }
-    #widgets-new .content .widget-wrapper-combo-chart .widget-header {
-      border-bottom: none; }
-    #widgets-new .content .widget-wrapper-combo-chart.size-1200 .combo-chart-area-graph-set {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flexbox;
-      display: flex; }
-    #widgets-new .content .widget-wrapper-combo-chart.size-1200 .combo-chart-h-axis-item {
-      display: inline-block; }
-    #widgets-new .content .widget-wrapper-combo-chart.size-1100 .combo-chart-area-graph-set {
-      display: none; }
-      #widgets-new .content .widget-wrapper-combo-chart.size-1100 .combo-chart-area-graph-set:not(:nth-last-of-type(1)) {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flexbox;
-        display: flex; }
-    #widgets-new .content .widget-wrapper-combo-chart.size-1100 .combo-chart-h-axis-item {
-      display: none; }
-      #widgets-new .content .widget-wrapper-combo-chart.size-1100 .combo-chart-h-axis-item:not(:nth-last-of-type(1)) {
-        display: inline-block; }
-    #widgets-new .content .widget-wrapper-combo-chart.size-1000 .combo-chart-area-graph-set {
-      display: none; }
-      #widgets-new .content .widget-wrapper-combo-chart.size-1000 .combo-chart-area-graph-set:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)) {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flexbox;
-        display: flex; }
-    #widgets-new .content .widget-wrapper-combo-chart.size-1000 .combo-chart-h-axis-item {
-      display: none; }
-      #widgets-new .content .widget-wrapper-combo-chart.size-1000 .combo-chart-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)) {
-        display: inline-block; }
-    #widgets-new .content .widget-wrapper-combo-chart.size-900 .combo-chart {
-      margin-left: 2em; }
-    #widgets-new .content .widget-wrapper-combo-chart.size-900 .combo-chart-area-graph-set {
-      display: none; }
-      #widgets-new .content .widget-wrapper-combo-chart.size-900 .combo-chart-area-graph-set:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)) {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flexbox;
-        display: flex; }
-    #widgets-new .content .widget-wrapper-combo-chart.size-900 .combo-chart-h-axis-item {
-      display: none; }
-      #widgets-new .content .widget-wrapper-combo-chart.size-900 .combo-chart-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)) {
-        display: inline-block; }
-    #widgets-new .content .widget-wrapper-combo-chart.size-800 .combo-chart {
-      margin-left: 2em; }
-    #widgets-new .content .widget-wrapper-combo-chart.size-800 .combo-chart-area-graph-set {
-      display: none; }
-      #widgets-new .content .widget-wrapper-combo-chart.size-800 .combo-chart-area-graph-set:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)) {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flexbox;
-        display: flex; }
-    #widgets-new .content .widget-wrapper-combo-chart.size-800 .combo-chart-h-axis-item {
-      display: none; }
-      #widgets-new .content .widget-wrapper-combo-chart.size-800 .combo-chart-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)) {
-        display: inline-block; }
-    #widgets-new .content .widget-wrapper-combo-chart.size-700 .combo-chart {
-      margin-left: 1em; }
-    #widgets-new .content .widget-wrapper-combo-chart.size-700 .combo-chart-area-graph-set {
-      display: none; }
-      #widgets-new .content .widget-wrapper-combo-chart.size-700 .combo-chart-area-graph-set:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)) {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flexbox;
-        display: flex; }
-    #widgets-new .content .widget-wrapper-combo-chart.size-700 .combo-chart-h-axis-item {
-      display: none; }
-      #widgets-new .content .widget-wrapper-combo-chart.size-700 .combo-chart-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)) {
-        display: inline-block; }
-    #widgets-new .content .widget-wrapper-combo-chart.size-600 .combo-chart {
-      margin-left: 1em; }
-    #widgets-new .content .widget-wrapper-combo-chart.size-600 .combo-chart-area-graph-set {
-      display: none; }
-      #widgets-new .content .widget-wrapper-combo-chart.size-600 .combo-chart-area-graph-set:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)):not(:nth-last-of-type(6)) {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flexbox;
-        display: flex; }
-    #widgets-new .content .widget-wrapper-combo-chart.size-600 .combo-chart-h-axis-item {
-      display: none; }
-      #widgets-new .content .widget-wrapper-combo-chart.size-600 .combo-chart-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)):not(:nth-last-of-type(6)) {
-        display: inline-block; }
-    #widgets-new .content .widget-wrapper-combo-chart.size-500 .combo-chart {
-      margin-left: 0; }
-    #widgets-new .content .widget-wrapper-combo-chart.size-500 .combo-chart-area-graph-set {
-      display: none; }
-      #widgets-new .content .widget-wrapper-combo-chart.size-500 .combo-chart-area-graph-set:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)):not(:nth-last-of-type(6)):not(:nth-last-of-type(7)) {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flexbox;
-        display: flex; }
-    #widgets-new .content .widget-wrapper-combo-chart.size-500 .combo-chart-h-axis-item {
-      display: none; }
-      #widgets-new .content .widget-wrapper-combo-chart.size-500 .combo-chart-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)):not(:nth-last-of-type(6)):not(:nth-last-of-type(7)) {
-        display: inline-block; }
-    #widgets-new .content .widget-wrapper-combo-chart.size-400 .combo-chart {
-      margin-left: 0; }
-    #widgets-new .content .widget-wrapper-combo-chart.size-400 .combo-chart-area-graph-set {
-      display: none; }
-      #widgets-new .content .widget-wrapper-combo-chart.size-400 .combo-chart-area-graph-set:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)):not(:nth-last-of-type(6)):not(:nth-last-of-type(7)):not(:nth-last-of-type(8)) {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flexbox;
-        display: flex; }
-    #widgets-new .content .widget-wrapper-combo-chart.size-400 .combo-chart-h-axis-item {
-      display: none; }
-      #widgets-new .content .widget-wrapper-combo-chart.size-400 .combo-chart-h-axis-item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):not(:nth-last-of-type(5)):not(:nth-last-of-type(6)):not(:nth-last-of-type(7)):not(:nth-last-of-type(8)) {
-        display: inline-block; }
-    #widgets-new .content .widget-wrapper-value-box .widget-header {
-      border-bottom: none; }
-    #widgets-new .content .widget-wrapper-value-box.small-width .value-box {
-      max-width: 44em;
-      grid-template-rows: 1fr 1fr;
-      grid-template-columns: 1fr 1fr; }
-      #widgets-new .content .widget-wrapper-value-box.small-width .value-box-item {
-        border: 0; }
-        #widgets-new .content .widget-wrapper-value-box.small-width .value-box-item:nth-of-type(3), #widgets-new .content .widget-wrapper-value-box.small-width .value-box-item:nth-of-type(4) {
-          border-top: 1.5px solid #e3e3e3; }
-        #widgets-new .content .widget-wrapper-value-box.small-width .value-box-item:nth-of-type(1), #widgets-new .content .widget-wrapper-value-box.small-width .value-box-item:nth-of-type(3) {
-          border-right: 1.5px solid #e3e3e3; }
-        #widgets-new .content .widget-wrapper-value-box.small-width .value-box-item:nth-of-type(5), #widgets-new .content .widget-wrapper-value-box.small-width .value-box-item:nth-of-type(6) {
-          display: none; }
-    #widgets-new .content .widget-wrapper-value-box.extra-small-width .value-box {
-      max-width: 22em;
-      grid-template-rows: 1fr;
-      grid-template-columns: 1fr; }
-      #widgets-new .content .widget-wrapper-value-box.extra-small-width .value-box-item {
-        border: 0 !important; }
-        #widgets-new .content .widget-wrapper-value-box.extra-small-width .value-box-item:nth-of-type(2) {
-          border-top: 1.5px solid #e3e3e3 !important; }
-        #widgets-new .content .widget-wrapper-value-box.extra-small-width .value-box-item:nth-of-type(3), #widgets-new .content .widget-wrapper-value-box.extra-small-width .value-box-item:nth-of-type(4), #widgets-new .content .widget-wrapper-value-box.extra-small-width .value-box-item:nth-of-type(5), #widgets-new .content .widget-wrapper-value-box.extra-small-width .value-box-item:nth-of-type(6) {
-          display: none; }
+    overflow: hidden;
+    height: 425px;
+    min-width: 400px; }
   #widgets-new .content .widget {
     position: relative;
     width: 100%;
-    height: 42.5em;
+    height: 100%;
     border-radius: 6px;
     box-shadow: 0 3px 6px 0 rgba(226, 226, 226, 0.11);
     border: solid 1px #e4e8ec;
     background-color: #ffffff; }
+    #widgets-new .content .widget-line-chart .widget-header {
+      border-bottom: 0; }
+    #widgets-new .content .widget-line-chart .widget-body {
+      padding-bottom: 0; }
+    #widgets-new .content .widget-pie-chart .widget-header {
+      border-bottom: 0; }
+    #widgets-new .content .widget-pie-chart .widget-body {
+      padding-bottom: 0; }
+    #widgets-new .content .widget-column-chart .widget-header {
+      border-bottom: 0; }
+    #widgets-new .content .widget-value-box .widget-header {
+      border-bottom: 0; }
+    #widgets-new .content .widget-combo-chart .widget-header {
+      border-bottom: 0; }
     #widgets-new .content .widget.small .bar-graph {
       padding-right: 2em;
       padding-left: 11em; }
@@ -5360,7 +5117,7 @@ body {
           #widgets-new .content .widget-header-icons i:not(:last-of-type) {
             margin-bottom: 0.2444444444em; }
     #widgets-new .content .widget-body {
-      padding: 0 2em 3em;
+      padding: 0 2em 0;
       height: calc(100% - 8em); }
 
 .pie-chart {
@@ -5782,8 +5539,8 @@ body {
           letter-spacing: -0.18px;
           color: #16222f; }
 
-.chart-column {
-  margin-top: 1em;
+.column-chart {
+  padding-bottom: 2em;
   margin-left: 6%;
   width: 90%;
   height: 100%;
@@ -5791,18 +5548,127 @@ body {
   grid-template-areas: "a b" "c d";
   grid-template-rows: 1fr 3em;
   grid-template-columns: auto 1fr; }
-  .chart-column.cc-v02 {
+  .column-chart.cc-v02 {
     grid-template-rows: 1fr 10em; }
-    .chart-column.cc-v02.chart-column .chart-column-area-graph {
+    .column-chart.cc-v02.column-chart.s-4 .column-chart-area-graph > *:nth-of-type(1), .column-chart.cc-v02.column-chart.s-4 .column-chart-area-graph > *:nth-of-type(2), .column-chart.cc-v02.column-chart.s-4 .column-chart-area-graph > *:nth-of-type(3) {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .column-chart.cc-v02.column-chart.s-4 .column-chart-h-axis-item:nth-of-type(1), .column-chart.cc-v02.column-chart.s-4 .column-chart-h-axis-item:nth-of-type(2), .column-chart.cc-v02.column-chart.s-4 .column-chart-h-axis-item:nth-of-type(3) {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .column-chart.cc-v02.column-chart.s-5 .column-chart-area-graph > *:nth-of-type(1), .column-chart.cc-v02.column-chart.s-5 .column-chart-area-graph > *:nth-of-type(2), .column-chart.cc-v02.column-chart.s-5 .column-chart-area-graph > *:nth-of-type(3), .column-chart.cc-v02.column-chart.s-5 .column-chart-area-graph > *:nth-of-type(4) {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .column-chart.cc-v02.column-chart.s-5 .column-chart-h-axis-item:nth-of-type(1), .column-chart.cc-v02.column-chart.s-5 .column-chart-h-axis-item:nth-of-type(2), .column-chart.cc-v02.column-chart.s-5 .column-chart-h-axis-item:nth-of-type(3), .column-chart.cc-v02.column-chart.s-5 .column-chart-h-axis-item:nth-of-type(4) {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .column-chart.cc-v02.column-chart.s-6 .column-chart-area-graph > *:nth-of-type(1), .column-chart.cc-v02.column-chart.s-6 .column-chart-area-graph > *:nth-of-type(2), .column-chart.cc-v02.column-chart.s-6 .column-chart-area-graph > *:nth-of-type(3), .column-chart.cc-v02.column-chart.s-6 .column-chart-area-graph > *:nth-of-type(4) {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .column-chart.cc-v02.column-chart.s-6 .column-chart-h-axis-item:nth-of-type(1), .column-chart.cc-v02.column-chart.s-6 .column-chart-h-axis-item:nth-of-type(2), .column-chart.cc-v02.column-chart.s-6 .column-chart-h-axis-item:nth-of-type(3), .column-chart.cc-v02.column-chart.s-6 .column-chart-h-axis-item:nth-of-type(4) {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .column-chart.cc-v02.column-chart.s-7 .column-chart-area-graph > *:nth-of-type(1), .column-chart.cc-v02.column-chart.s-7 .column-chart-area-graph > *:nth-of-type(2), .column-chart.cc-v02.column-chart.s-7 .column-chart-area-graph > *:nth-of-type(3), .column-chart.cc-v02.column-chart.s-7 .column-chart-area-graph > *:nth-of-type(4), .column-chart.cc-v02.column-chart.s-7 .column-chart-area-graph > *:nth-of-type(5) {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .column-chart.cc-v02.column-chart.s-7 .column-chart-h-axis-item:nth-of-type(1), .column-chart.cc-v02.column-chart.s-7 .column-chart-h-axis-item:nth-of-type(2), .column-chart.cc-v02.column-chart.s-7 .column-chart-h-axis-item:nth-of-type(3), .column-chart.cc-v02.column-chart.s-7 .column-chart-h-axis-item:nth-of-type(4), .column-chart.cc-v02.column-chart.s-7 .column-chart-h-axis-item:nth-of-type(5) {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .column-chart.cc-v02.column-chart.s-8 .column-chart-area-graph > *:nth-of-type(1), .column-chart.cc-v02.column-chart.s-8 .column-chart-area-graph > *:nth-of-type(2), .column-chart.cc-v02.column-chart.s-8 .column-chart-area-graph > *:nth-of-type(3), .column-chart.cc-v02.column-chart.s-8 .column-chart-area-graph > *:nth-of-type(4), .column-chart.cc-v02.column-chart.s-8 .column-chart-area-graph > *:nth-of-type(5), .column-chart.cc-v02.column-chart.s-8 .column-chart-area-graph > *:nth-of-type(6) {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .column-chart.cc-v02.column-chart.s-8 .column-chart-h-axis-item:nth-of-type(1), .column-chart.cc-v02.column-chart.s-8 .column-chart-h-axis-item:nth-of-type(2), .column-chart.cc-v02.column-chart.s-8 .column-chart-h-axis-item:nth-of-type(3), .column-chart.cc-v02.column-chart.s-8 .column-chart-h-axis-item:nth-of-type(4), .column-chart.cc-v02.column-chart.s-8 .column-chart-h-axis-item:nth-of-type(5), .column-chart.cc-v02.column-chart.s-8 .column-chart-h-axis-item:nth-of-type(6) {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .column-chart.cc-v02.column-chart.s-9 .column-chart-area-graph > *:nth-of-type(1), .column-chart.cc-v02.column-chart.s-9 .column-chart-area-graph > *:nth-of-type(2), .column-chart.cc-v02.column-chart.s-9 .column-chart-area-graph > *:nth-of-type(3), .column-chart.cc-v02.column-chart.s-9 .column-chart-area-graph > *:nth-of-type(4), .column-chart.cc-v02.column-chart.s-9 .column-chart-area-graph > *:nth-of-type(5), .column-chart.cc-v02.column-chart.s-9 .column-chart-area-graph > *:nth-of-type(6), .column-chart.cc-v02.column-chart.s-9 .column-chart-area-graph > *:nth-of-type(7) {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .column-chart.cc-v02.column-chart.s-9 .column-chart-h-axis-item:nth-of-type(1), .column-chart.cc-v02.column-chart.s-9 .column-chart-h-axis-item:nth-of-type(2), .column-chart.cc-v02.column-chart.s-9 .column-chart-h-axis-item:nth-of-type(3), .column-chart.cc-v02.column-chart.s-9 .column-chart-h-axis-item:nth-of-type(4), .column-chart.cc-v02.column-chart.s-9 .column-chart-h-axis-item:nth-of-type(5), .column-chart.cc-v02.column-chart.s-9 .column-chart-h-axis-item:nth-of-type(6), .column-chart.cc-v02.column-chart.s-9 .column-chart-h-axis-item:nth-of-type(7) {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .column-chart.cc-v02.column-chart.s-10 .column-chart-area-graph > *:nth-of-type(1), .column-chart.cc-v02.column-chart.s-10 .column-chart-area-graph > *:nth-of-type(2), .column-chart.cc-v02.column-chart.s-10 .column-chart-area-graph > *:nth-of-type(3), .column-chart.cc-v02.column-chart.s-10 .column-chart-area-graph > *:nth-of-type(4), .column-chart.cc-v02.column-chart.s-10 .column-chart-area-graph > *:nth-of-type(5), .column-chart.cc-v02.column-chart.s-10 .column-chart-area-graph > *:nth-of-type(6), .column-chart.cc-v02.column-chart.s-10 .column-chart-area-graph > *:nth-of-type(7), .column-chart.cc-v02.column-chart.s-10 .column-chart-area-graph > *:nth-of-type(8) {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .column-chart.cc-v02.column-chart.s-10 .column-chart-h-axis-item:nth-of-type(1), .column-chart.cc-v02.column-chart.s-10 .column-chart-h-axis-item:nth-of-type(2), .column-chart.cc-v02.column-chart.s-10 .column-chart-h-axis-item:nth-of-type(3), .column-chart.cc-v02.column-chart.s-10 .column-chart-h-axis-item:nth-of-type(4), .column-chart.cc-v02.column-chart.s-10 .column-chart-h-axis-item:nth-of-type(5), .column-chart.cc-v02.column-chart.s-10 .column-chart-h-axis-item:nth-of-type(6), .column-chart.cc-v02.column-chart.s-10 .column-chart-h-axis-item:nth-of-type(7), .column-chart.cc-v02.column-chart.s-10 .column-chart-h-axis-item:nth-of-type(8) {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .column-chart.cc-v02.column-chart.s-11 .column-chart-area-graph > *:nth-of-type(1), .column-chart.cc-v02.column-chart.s-11 .column-chart-area-graph > *:nth-of-type(2), .column-chart.cc-v02.column-chart.s-11 .column-chart-area-graph > *:nth-of-type(3), .column-chart.cc-v02.column-chart.s-11 .column-chart-area-graph > *:nth-of-type(4), .column-chart.cc-v02.column-chart.s-11 .column-chart-area-graph > *:nth-of-type(5), .column-chart.cc-v02.column-chart.s-11 .column-chart-area-graph > *:nth-of-type(6), .column-chart.cc-v02.column-chart.s-11 .column-chart-area-graph > *:nth-of-type(7), .column-chart.cc-v02.column-chart.s-11 .column-chart-area-graph > *:nth-of-type(8), .column-chart.cc-v02.column-chart.s-11 .column-chart-area-graph > *:nth-of-type(9), .column-chart.cc-v02.column-chart.s-11 .column-chart-area-graph-item:nth-of-type(1), .column-chart.cc-v02.column-chart.s-11 .column-chart-area-graph-item:nth-of-type(2), .column-chart.cc-v02.column-chart.s-11 .column-chart-area-graph-item:nth-of-type(3), .column-chart.cc-v02.column-chart.s-11 .column-chart-area-graph-item:nth-of-type(4), .column-chart.cc-v02.column-chart.s-11 .column-chart-area-graph-item:nth-of-type(5), .column-chart.cc-v02.column-chart.s-11 .column-chart-area-graph-item:nth-of-type(6), .column-chart.cc-v02.column-chart.s-11 .column-chart-area-graph-item:nth-of-type(7), .column-chart.cc-v02.column-chart.s-11 .column-chart-area-graph-item:nth-of-type(8), .column-chart.cc-v02.column-chart.s-11 .column-chart-area-graph-item:nth-of-type(9) {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .column-chart.cc-v02.column-chart.s-11 .column-chart-h-axis-item:nth-of-type(1), .column-chart.cc-v02.column-chart.s-11 .column-chart-h-axis-item:nth-of-type(2), .column-chart.cc-v02.column-chart.s-11 .column-chart-h-axis-item:nth-of-type(3), .column-chart.cc-v02.column-chart.s-11 .column-chart-h-axis-item:nth-of-type(4), .column-chart.cc-v02.column-chart.s-11 .column-chart-h-axis-item:nth-of-type(5), .column-chart.cc-v02.column-chart.s-11 .column-chart-h-axis-item:nth-of-type(6), .column-chart.cc-v02.column-chart.s-11 .column-chart-h-axis-item:nth-of-type(7), .column-chart.cc-v02.column-chart.s-11 .column-chart-h-axis-item:nth-of-type(8), .column-chart.cc-v02.column-chart.s-11 .column-chart-h-axis-item:nth-of-type(9) {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .column-chart.cc-v02.column-chart.s-12 .column-chart-area-graph > *:nth-of-type(n+0) {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .column-chart.cc-v02.column-chart.s-12 .column-chart-h-axis-item:nth-of-type(n+0) {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .column-chart.cc-v02.column-chart .column-chart-area-graph {
       -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
       -webkit-justify-content: space-evenly;
       -moz-justify-content: space-evenly;
       justify-content: space-evenly; }
-      .chart-column.cc-v02.chart-column .chart-column-area-graph-item {
+      .column-chart.cc-v02.column-chart .column-chart-area-graph-item {
+        display: none;
         width: 6.4em;
         margin-right: 0; }
-      .chart-column.cc-v02.chart-column .chart-column-area-graph-set {
+      .column-chart.cc-v02.column-chart .column-chart-area-graph-set {
         margin-right: 0;
         display: -webkit-box;
         display: -webkit-flex;
@@ -5821,7 +5687,7 @@ body {
         justify-content: space-between;
         width: 6.4em;
         height: 100%; }
-        .chart-column.cc-v02.chart-column .chart-column-area-graph-set-item {
+        .column-chart.cc-v02.column-chart .column-chart-area-graph-set-item {
           padding-top: 0.5em;
           display: -webkit-box;
           display: -webkit-flex;
@@ -5840,39 +5706,57 @@ body {
           justify-content: center;
           width: 2.75em;
           background-color: #64c930; }
-          .chart-column.cc-v02.chart-column .chart-column-area-graph-set-item .icon-user {
+          .column-chart.cc-v02.column-chart .column-chart-area-graph-set-item .icon-user {
             font-size: 1.65em;
             color: #fff; }
-          .chart-column.cc-v02.chart-column .chart-column-area-graph-set-item .icon-users {
+          .column-chart.cc-v02.column-chart .column-chart-area-graph-set-item .icon-users {
             margin-top: -0.3rem;
             font-size: 2.2em;
             color: #fff; }
-          .chart-column.cc-v02.chart-column .chart-column-area-graph-set-item.stripped {
+          .column-chart.cc-v02.column-chart .column-chart-area-graph-set-item.stripped {
             background: repeating-linear-gradient(-45deg, #64c930, #64c930 6px, #fff 6px, #fff 7px); }
-    .chart-column.cc-v02.chart-column .chart-column-h-axis {
+    .column-chart.cc-v02.column-chart .column-chart-h-axis {
       -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
       -webkit-justify-content: space-evenly;
       -moz-justify-content: space-evenly;
       justify-content: space-evenly; }
-      .chart-column.cc-v02.chart-column .chart-column-h-axis-item {
+      .column-chart.cc-v02.column-chart .column-chart-h-axis-item {
+        display: none;
         padding-top: 1.5em;
         position: relative;
         width: 6.4em;
         height: 100%;
         overflow: visible;
         margin-right: 0; }
-        .chart-column.cc-v02.chart-column .chart-column-h-axis-item-label {
+        .column-chart.cc-v02.column-chart .column-chart-h-axis-item-label {
           width: 11.1rem;
           position: absolute;
           top: 1.45rem;
           left: 50%;
           transform: translate(-50%, 0);
           white-space: normal; }
-  .chart-column-area {
+  .column-chart.s-10, .column-chart.s-9, .column-chart.s-8, .column-chart.s-7, .column-chart.s-6, .column-chart.s-5, .column-chart.s-4 {
+    grid-template-rows: 1fr 10em; }
+    .column-chart.s-10 .column-chart-h-axis, .column-chart.s-9 .column-chart-h-axis, .column-chart.s-8 .column-chart-h-axis, .column-chart.s-7 .column-chart-h-axis, .column-chart.s-6 .column-chart-h-axis, .column-chart.s-5 .column-chart-h-axis, .column-chart.s-4 .column-chart-h-axis {
+      padding-top: 0.4em;
+      overflow: visible; }
+      .column-chart.s-10 .column-chart-h-axis-item, .column-chart.s-9 .column-chart-h-axis-item, .column-chart.s-8 .column-chart-h-axis-item, .column-chart.s-7 .column-chart-h-axis-item, .column-chart.s-6 .column-chart-h-axis-item, .column-chart.s-5 .column-chart-h-axis-item, .column-chart.s-4 .column-chart-h-axis-item {
+        position: relative;
+        height: 100%;
+        overflow: visible; }
+        .column-chart.s-10 .column-chart-h-axis-item-label, .column-chart.s-9 .column-chart-h-axis-item-label, .column-chart.s-8 .column-chart-h-axis-item-label, .column-chart.s-7 .column-chart-h-axis-item-label, .column-chart.s-6 .column-chart-h-axis-item-label, .column-chart.s-5 .column-chart-h-axis-item-label, .column-chart.s-4 .column-chart-h-axis-item-label {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: rotateZ(45deg);
+          transform-origin: 0 0; }
+  .column-chart.s-5, .column-chart.s-4 {
+    margin-left: 3%; }
+  .column-chart-area {
     position: relative;
     border-bottom: 1px solid #43546a; }
-    .chart-column-area-graph {
+    .column-chart-area-graph {
       position: relative;
       width: 100%;
       height: 100%;
@@ -5892,7 +5776,7 @@ body {
       -webkit-justify-content: center;
       -moz-justify-content: center;
       justify-content: center; }
-      .chart-column-area-graph-item {
+      .column-chart-area-graph-item {
         display: -webkit-box;
         display: -webkit-flex;
         display: -moz-flex;
@@ -5912,22 +5796,22 @@ body {
         width: 7.9%;
         min-width: 3.1em;
         height: 80%; }
-        .chart-column-area-graph-item:not(:last-of-type) {
+        .column-chart-area-graph-item:not(:last-of-type) {
           margin-right: 4.5%; }
-        .chart-column-area-graph-item-text {
+        .column-chart-area-graph-item-text {
           margin-top: 0.6em;
           font-size: 1.2em;
           font-weight: 400;
           letter-spacing: -0.18px;
           color: #fff; }
-    .chart-column-area-back {
+    .column-chart-area-back {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       z-index: 0; }
-      .chart-column-area-back-v {
+      .column-chart-area-back-v {
         position: absolute;
         top: 0;
         left: 0;
@@ -5954,11 +5838,11 @@ body {
         -webkit-justify-content: space-between;
         -moz-justify-content: space-between;
         justify-content: space-between; }
-        .chart-column-area-back-v-line {
+        .column-chart-area-back-v-line {
           width: 100%; }
-          .chart-column-area-back-v-line:not(:last-of-type) {
+          .column-chart-area-back-v-line:not(:last-of-type) {
             border-top: 0.25px solid #e3e3e3; }
-      .chart-column-area-back-h {
+      .column-chart-area-back-h {
         position: absolute;
         top: 0;
         left: 0;
@@ -5980,22 +5864,22 @@ body {
         -moz-justify-content: space-between;
         justify-content: space-between;
         display: none; }
-        .chart-column-area-back-h-line {
+        .column-chart-area-back-h-line {
           height: 100%; }
-          .chart-column-area-back-h-line:not(:first-of-type) {
+          .column-chart-area-back-h-line:not(:first-of-type) {
             border-right: 0.25px solid #e3e3e3; }
-  .chart-column-v-axis, .chart-column-h-axis {
+  .column-chart-v-axis, .column-chart-h-axis {
     z-index: 200;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     min-width: 0; }
-    .chart-column-v-axis-item, .chart-column-h-axis-item {
+    .column-chart-v-axis-item, .column-chart-h-axis-item {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       min-width: 0; }
-      .chart-column-v-axis-item-label, .chart-column-h-axis-item-label {
+      .column-chart-v-axis-item-label, .column-chart-h-axis-item-label {
         font-size: 1.2em;
         font-weight: 400;
         letter-spacing: -0.18px;
@@ -6004,47 +5888,36 @@ body {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis; }
-  .chart-column-v-axis {
+  .column-chart-v-axis {
     margin: -1em 0;
     grid-area: a;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between; }
-    .chart-column-v-axis-item {
+    .column-chart-v-axis-item {
       height: 2em;
       margin-right: 1.2em; }
-      .chart-column-v-axis-item-label {
+      .column-chart-v-axis-item-label {
         white-space: nowrap; }
-  .chart-column-h-axis {
+  .column-chart-h-axis {
     grid-area: d;
     display: flex;
     align-items: flex-end;
     justify-content: center; }
-    .chart-column-h-axis-item {
+    .column-chart-h-axis-item {
       width: 4.4em;
       width: 7.9%;
       min-width: 3.1em;
       text-align: center; }
-      .chart-column-h-axis-item:not(:last-of-type) {
+      .column-chart-h-axis-item:not(:last-of-type) {
         margin-right: 4.13%; }
-      .chart-column-h-axis-item-label {
+      .column-chart-h-axis-item-label {
         white-space: nowrap; }
-  .chart-column.small .chart-column-area-graph {
-    -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
-    -webkit-justify-content: space-evenly;
-    -moz-justify-content: space-evenly;
-    justify-content: space-evenly; }
-  .chart-column.small .chart-column-h-axis {
-    -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
-    -webkit-justify-content: space-evenly;
-    -moz-justify-content: space-evenly;
-    justify-content: space-evenly; }
 
 .combo-chart {
   margin-top: 1em;
+  padding-bottom: 2em;
   margin-left: 6%;
   width: 90%;
   height: 100%;
@@ -6052,6 +5925,114 @@ body {
   grid-template-areas: "a b" "c d";
   grid-template-rows: 1fr 3em;
   grid-template-columns: auto 1fr; }
+  .combo-chart.s-4 .combo-chart-area-graph-set:nth-of-type(1), .combo-chart.s-4 .combo-chart-area-graph-set:nth-of-type(2), .combo-chart.s-4 .combo-chart-area-graph-set:nth-of-type(3), .combo-chart.s-4 .combo-chart-area-graph-set:nth-of-type(4) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .combo-chart.s-4 .combo-chart-h-axis-item:nth-of-type(1), .combo-chart.s-4 .combo-chart-h-axis-item:nth-of-type(2), .combo-chart.s-4 .combo-chart-h-axis-item:nth-of-type(3), .combo-chart.s-4 .combo-chart-h-axis-item:nth-of-type(4) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .combo-chart.s-5 .combo-chart-area-graph-set:nth-of-type(1), .combo-chart.s-5 .combo-chart-area-graph-set:nth-of-type(2), .combo-chart.s-5 .combo-chart-area-graph-set:nth-of-type(3), .combo-chart.s-5 .combo-chart-area-graph-set:nth-of-type(4), .combo-chart.s-5 .combo-chart-area-graph-set:nth-of-type(5) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .combo-chart.s-5 .combo-chart-h-axis-item:nth-of-type(1), .combo-chart.s-5 .combo-chart-h-axis-item:nth-of-type(2), .combo-chart.s-5 .combo-chart-h-axis-item:nth-of-type(3), .combo-chart.s-5 .combo-chart-h-axis-item:nth-of-type(4), .combo-chart.s-5 .combo-chart-h-axis-item:nth-of-type(5) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .combo-chart.s-6 .combo-chart-area-graph-set:nth-of-type(1), .combo-chart.s-6 .combo-chart-area-graph-set:nth-of-type(2), .combo-chart.s-6 .combo-chart-area-graph-set:nth-of-type(3), .combo-chart.s-6 .combo-chart-area-graph-set:nth-of-type(4), .combo-chart.s-6 .combo-chart-area-graph-set:nth-of-type(5), .combo-chart.s-6 .combo-chart-area-graph-set:nth-of-type(6) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .combo-chart.s-6 .combo-chart-h-axis-item:nth-of-type(1), .combo-chart.s-6 .combo-chart-h-axis-item:nth-of-type(2), .combo-chart.s-6 .combo-chart-h-axis-item:nth-of-type(3), .combo-chart.s-6 .combo-chart-h-axis-item:nth-of-type(4), .combo-chart.s-6 .combo-chart-h-axis-item:nth-of-type(5), .combo-chart.s-6 .combo-chart-h-axis-item:nth-of-type(6) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .combo-chart.s-7 .combo-chart-area-graph-set:nth-of-type(1), .combo-chart.s-7 .combo-chart-area-graph-set:nth-of-type(2), .combo-chart.s-7 .combo-chart-area-graph-set:nth-of-type(3), .combo-chart.s-7 .combo-chart-area-graph-set:nth-of-type(4), .combo-chart.s-7 .combo-chart-area-graph-set:nth-of-type(5), .combo-chart.s-7 .combo-chart-area-graph-set:nth-of-type(6), .combo-chart.s-7 .combo-chart-area-graph-set:nth-of-type(7) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .combo-chart.s-7 .combo-chart-h-axis-item:nth-of-type(1), .combo-chart.s-7 .combo-chart-h-axis-item:nth-of-type(2), .combo-chart.s-7 .combo-chart-h-axis-item:nth-of-type(3), .combo-chart.s-7 .combo-chart-h-axis-item:nth-of-type(4), .combo-chart.s-7 .combo-chart-h-axis-item:nth-of-type(5), .combo-chart.s-7 .combo-chart-h-axis-item:nth-of-type(6), .combo-chart.s-7 .combo-chart-h-axis-item:nth-of-type(7) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .combo-chart.s-8 .combo-chart-area-graph-set:nth-of-type(1), .combo-chart.s-8 .combo-chart-area-graph-set:nth-of-type(2), .combo-chart.s-8 .combo-chart-area-graph-set:nth-of-type(3), .combo-chart.s-8 .combo-chart-area-graph-set:nth-of-type(4), .combo-chart.s-8 .combo-chart-area-graph-set:nth-of-type(5), .combo-chart.s-8 .combo-chart-area-graph-set:nth-of-type(6), .combo-chart.s-8 .combo-chart-area-graph-set:nth-of-type(7), .combo-chart.s-8 .combo-chart-area-graph-set:nth-of-type(8) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .combo-chart.s-8 .combo-chart-h-axis-item:nth-of-type(1), .combo-chart.s-8 .combo-chart-h-axis-item:nth-of-type(2), .combo-chart.s-8 .combo-chart-h-axis-item:nth-of-type(3), .combo-chart.s-8 .combo-chart-h-axis-item:nth-of-type(4), .combo-chart.s-8 .combo-chart-h-axis-item:nth-of-type(5), .combo-chart.s-8 .combo-chart-h-axis-item:nth-of-type(6), .combo-chart.s-8 .combo-chart-h-axis-item:nth-of-type(7), .combo-chart.s-8 .combo-chart-h-axis-item:nth-of-type(8) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .combo-chart.s-9 .combo-chart-area-graph-set:nth-of-type(1), .combo-chart.s-9 .combo-chart-area-graph-set:nth-of-type(2), .combo-chart.s-9 .combo-chart-area-graph-set:nth-of-type(3), .combo-chart.s-9 .combo-chart-area-graph-set:nth-of-type(4), .combo-chart.s-9 .combo-chart-area-graph-set:nth-of-type(5), .combo-chart.s-9 .combo-chart-area-graph-set:nth-of-type(6), .combo-chart.s-9 .combo-chart-area-graph-set:nth-of-type(7), .combo-chart.s-9 .combo-chart-area-graph-set:nth-of-type(8), .combo-chart.s-9 .combo-chart-area-graph-set:nth-of-type(9) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .combo-chart.s-9 .combo-chart-h-axis-item:nth-of-type(1), .combo-chart.s-9 .combo-chart-h-axis-item:nth-of-type(2), .combo-chart.s-9 .combo-chart-h-axis-item:nth-of-type(3), .combo-chart.s-9 .combo-chart-h-axis-item:nth-of-type(4), .combo-chart.s-9 .combo-chart-h-axis-item:nth-of-type(5), .combo-chart.s-9 .combo-chart-h-axis-item:nth-of-type(6), .combo-chart.s-9 .combo-chart-h-axis-item:nth-of-type(7), .combo-chart.s-9 .combo-chart-h-axis-item:nth-of-type(8), .combo-chart.s-9 .combo-chart-h-axis-item:nth-of-type(9) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .combo-chart.s-10 .combo-chart-area-graph-set:nth-of-type(1), .combo-chart.s-10 .combo-chart-area-graph-set:nth-of-type(2), .combo-chart.s-10 .combo-chart-area-graph-set:nth-of-type(3), .combo-chart.s-10 .combo-chart-area-graph-set:nth-of-type(4), .combo-chart.s-10 .combo-chart-area-graph-set:nth-of-type(5), .combo-chart.s-10 .combo-chart-area-graph-set:nth-of-type(6), .combo-chart.s-10 .combo-chart-area-graph-set:nth-of-type(7), .combo-chart.s-10 .combo-chart-area-graph-set:nth-of-type(8), .combo-chart.s-10 .combo-chart-area-graph-set:nth-of-type(9), .combo-chart.s-10 .combo-chart-area-graph-set:nth-of-type(10) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .combo-chart.s-10 .combo-chart-h-axis-item:nth-of-type(1), .combo-chart.s-10 .combo-chart-h-axis-item:nth-of-type(2), .combo-chart.s-10 .combo-chart-h-axis-item:nth-of-type(3), .combo-chart.s-10 .combo-chart-h-axis-item:nth-of-type(4), .combo-chart.s-10 .combo-chart-h-axis-item:nth-of-type(5), .combo-chart.s-10 .combo-chart-h-axis-item:nth-of-type(6), .combo-chart.s-10 .combo-chart-h-axis-item:nth-of-type(7), .combo-chart.s-10 .combo-chart-h-axis-item:nth-of-type(8), .combo-chart.s-10 .combo-chart-h-axis-item:nth-of-type(9), .combo-chart.s-10 .combo-chart-h-axis-item:nth-of-type(10) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .combo-chart.s-11 .combo-chart-area-graph-set:nth-of-type(1), .combo-chart.s-11 .combo-chart-area-graph-set:nth-of-type(2), .combo-chart.s-11 .combo-chart-area-graph-set:nth-of-type(3), .combo-chart.s-11 .combo-chart-area-graph-set:nth-of-type(4), .combo-chart.s-11 .combo-chart-area-graph-set:nth-of-type(5), .combo-chart.s-11 .combo-chart-area-graph-set:nth-of-type(6), .combo-chart.s-11 .combo-chart-area-graph-set:nth-of-type(7), .combo-chart.s-11 .combo-chart-area-graph-set:nth-of-type(8), .combo-chart.s-11 .combo-chart-area-graph-set:nth-of-type(9), .combo-chart.s-11 .combo-chart-area-graph-set:nth-of-type(10), .combo-chart.s-11 .combo-chart-area-graph-set:nth-of-type(11) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .combo-chart.s-11 .combo-chart-h-axis-item:nth-of-type(1), .combo-chart.s-11 .combo-chart-h-axis-item:nth-of-type(2), .combo-chart.s-11 .combo-chart-h-axis-item:nth-of-type(3), .combo-chart.s-11 .combo-chart-h-axis-item:nth-of-type(4), .combo-chart.s-11 .combo-chart-h-axis-item:nth-of-type(5), .combo-chart.s-11 .combo-chart-h-axis-item:nth-of-type(6), .combo-chart.s-11 .combo-chart-h-axis-item:nth-of-type(7), .combo-chart.s-11 .combo-chart-h-axis-item:nth-of-type(8), .combo-chart.s-11 .combo-chart-h-axis-item:nth-of-type(9), .combo-chart.s-11 .combo-chart-h-axis-item:nth-of-type(10), .combo-chart.s-11 .combo-chart-h-axis-item:nth-of-type(11) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .combo-chart.s-12 .combo-chart-area-graph-set:nth-of-type(n+0) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .combo-chart.s-12 .combo-chart-h-axis-item:nth-of-type(n+0) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
   .combo-chart-area {
     position: relative;
     border-bottom: 1px solid #43546a; }
@@ -6081,6 +6062,7 @@ body {
         display: -moz-flex;
         display: -ms-flexbox;
         display: flex;
+        display: none;
         -webkit-box-align: end;
         -ms-flex-align: end;
         -webkit-align-items: flex-end;
@@ -6202,6 +6184,7 @@ body {
     -moz-justify-content: space-evenly;
     justify-content: space-evenly; }
     .combo-chart-h-axis-item {
+      display: none;
       position: relative;
       width: 4.6em;
       height: 100%;
@@ -6213,20 +6196,20 @@ body {
         transform: translate(-50%, -50%);
         position: absolute;
         white-space: nowrap; }
-  .combo-chart.small .chart-column-area-graph {
+  .combo-chart.small .column-chart-area-graph {
     -webkit-box-pack: space-evenly;
     -ms-flex-pack: space-evenly;
     -webkit-justify-content: space-evenly;
     -moz-justify-content: space-evenly;
     justify-content: space-evenly; }
-  .combo-chart.small .chart-column-h-axis {
+  .combo-chart.small .column-chart-h-axis {
     -webkit-box-pack: space-evenly;
     -ms-flex-pack: space-evenly;
     -webkit-justify-content: space-evenly;
     -moz-justify-content: space-evenly;
     justify-content: space-evenly; }
 
-.value-box {
+.value-box-content {
   margin: 0 auto;
   position: relative;
   min-width: 0;
@@ -6238,71 +6221,93 @@ body {
   border-radius: 2px;
   border: solid 1.5px #e3e3e3;
   background-color: #fbfbfc; }
-  .value-box-item {
-    padding: 2.8em 1.5em;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-direction: normal;
-    -webkit-box-orient: vertical;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    justify-content: center;
+.value-box.s-7 .value-box-content, .value-box.s-6 .value-box-content {
+  max-width: 44em;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr; }
+  .value-box.s-7 .value-box-content .value-box-item, .value-box.s-6 .value-box-content .value-box-item {
+    border: 0; }
+    .value-box.s-7 .value-box-content .value-box-item:nth-of-type(3), .value-box.s-7 .value-box-content .value-box-item:nth-of-type(4), .value-box.s-6 .value-box-content .value-box-item:nth-of-type(3), .value-box.s-6 .value-box-content .value-box-item:nth-of-type(4) {
+      border-top: 1.5px solid #e3e3e3; }
+    .value-box.s-7 .value-box-content .value-box-item:nth-of-type(1), .value-box.s-7 .value-box-content .value-box-item:nth-of-type(3), .value-box.s-6 .value-box-content .value-box-item:nth-of-type(1), .value-box.s-6 .value-box-content .value-box-item:nth-of-type(3) {
+      border-right: 1.5px solid #e3e3e3; }
+    .value-box.s-7 .value-box-content .value-box-item:nth-of-type(5), .value-box.s-7 .value-box-content .value-box-item:nth-of-type(6), .value-box.s-6 .value-box-content .value-box-item:nth-of-type(5), .value-box.s-6 .value-box-content .value-box-item:nth-of-type(6) {
+      display: none; }
+.value-box.s-5 .value-box-content, .value-box.s-4 .value-box-content {
+  max-width: 22em;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr; }
+  .value-box.s-5 .value-box-content .value-box-item, .value-box.s-4 .value-box-content .value-box-item {
+    border: 0 !important; }
+    .value-box.s-5 .value-box-content .value-box-item:nth-of-type(2), .value-box.s-4 .value-box-content .value-box-item:nth-of-type(2) {
+      border-top: 1.5px solid #e3e3e3 !important; }
+    .value-box.s-5 .value-box-content .value-box-item:nth-of-type(3), .value-box.s-5 .value-box-content .value-box-item:nth-of-type(4), .value-box.s-5 .value-box-content .value-box-item:nth-of-type(5), .value-box.s-5 .value-box-content .value-box-item:nth-of-type(6), .value-box.s-4 .value-box-content .value-box-item:nth-of-type(3), .value-box.s-4 .value-box-content .value-box-item:nth-of-type(4), .value-box.s-4 .value-box-content .value-box-item:nth-of-type(5), .value-box.s-4 .value-box-content .value-box-item:nth-of-type(6) {
+      display: none; }
+.value-box-item {
+  padding: 2.8em 1.5em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+  .value-box-item-title {
+    position: relative;
+    margin-bottom: 0.3181818182em;
+    font-size: 4.4em;
+    font-weight: 700;
+    letter-spacing: -1.32px;
+    color: #172b4d; }
+    .value-box-item-title-arrow {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(140%, 15%);
+      margin-left: 1rem;
+      width: 1.316rem;
+      height: 1.35rem; }
+      .value-box-item-title-arrow.good {
+        fill: #32ba12; }
+      .value-box-item-title-arrow.bad {
+        fill: #ff9d00;
+        transform: rotateZ(180deg) translate(-133%, -15%); }
+  .value-box-item-info {
+    margin-bottom: 0.3076923077em;
+    font-size: 1.3em;
+    font-weight: 400;
+    letter-spacing: -0.2px;
+    color: #465265; }
+  .value-box-item-name {
+    font-size: 1.3em;
+    font-weight: 500;
+    letter-spacing: -0.13px;
+    color: #172b4d;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; }
-    .value-box-item-title {
-      position: relative;
-      margin-bottom: 0.3181818182em;
-      font-size: 4.4em;
-      font-weight: 700;
-      letter-spacing: -1.32px;
-      color: #172b4d; }
-      .value-box-item-title-arrow {
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translate(140%, 15%);
-        margin-left: 1rem;
-        width: 1.316rem;
-        height: 1.35rem; }
-        .value-box-item-title-arrow.good {
-          fill: #32ba12; }
-        .value-box-item-title-arrow.bad {
-          fill: #ff9d00;
-          transform: rotateZ(180deg) translate(-133%, -15%); }
-    .value-box-item-info {
-      margin-bottom: 0.3076923077em;
-      font-size: 1.3em;
-      font-weight: 400;
-      letter-spacing: -0.2px;
-      color: #465265; }
-    .value-box-item-name {
-      font-size: 1.3em;
-      font-weight: 500;
-      letter-spacing: -0.13px;
-      color: #172b4d;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis; }
-    .value-box-item:nth-of-type(4), .value-box-item:nth-of-type(5), .value-box-item:nth-of-type(6) {
-      border-top: 1.5px solid #e3e3e3; }
-    .value-box-item:nth-of-type(2), .value-box-item:nth-of-type(5) {
-      border-right: 1.5px solid #e3e3e3;
-      border-left: 1.5px solid #e3e3e3; }
+  .value-box-item:nth-of-type(4), .value-box-item:nth-of-type(5), .value-box-item:nth-of-type(6) {
+    border-top: 1.5px solid #e3e3e3; }
+  .value-box-item:nth-of-type(2), .value-box-item:nth-of-type(5) {
+    border-right: 1.5px solid #e3e3e3;
+    border-left: 1.5px solid #e3e3e3; }
 
 .auth {
   display: -webkit-box;
