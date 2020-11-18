@@ -7756,24 +7756,11 @@ body {
       @include flex-wrap(wrap);
       @include align-items(flex-start);
       @include justify-content(flex-start);
-
-      // &.small {
-      //   & .widget {
-      //     height: 35em;
-      //   }
-      // }
-
-      // &.big {
-      //   & .widget {
-      //     height: 42.5em;
-      //   }
-      // }
     }
 
     .placeholder-wrapper {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      //grid-template-row: repeat(4, 1fr);
       grid-gap: 20px 20px;
 
       @include custom-respond(1900) {
@@ -7800,12 +7787,18 @@ body {
     .widget {
       position: relative;
       width: 100%;
-      //height: 42.5em;
       height: 100%;
       border-radius: 6px;
       box-shadow: 0 3px 6px 0 rgba(226, 226, 226, 0.11);
       border: solid 1px #e4e8ec;
       background-color: #ffffff;
+
+      &-bar-graph {
+        & .widget-body {
+          padding: 0;
+          padding-bottom: 2em;
+        }
+      }
 
       &-line-chart {
         & .widget-header {
@@ -7813,7 +7806,7 @@ body {
         }
 
         & .widget-body {
-          padding-bottom: 0;
+          padding: 0;
         }
       }
 
@@ -7843,6 +7836,10 @@ body {
         & .widget-header {
           border-bottom: 0;
         }
+
+        // & .widget-body {
+        //   padding: 0;
+        // }
       }
 
       &.small {
@@ -8045,26 +8042,46 @@ body {
       }
     }
   }
-
-  &-canvas {
-    // height: 100%;
-    // min-height: 0;
-    // max-height: 100%;
-    //width: 100%;
-    // position: relative!important;
-    // width: 100%;
-    //height: auto!important;
-    // max-height: 100%!important;
-  }
 }
 
 .bar-graph {
-  padding-left: 12.5em;
-  padding-right: 8.4em;
-  padding-bottom: 2.3em;
+  padding-left: 13.5em;
+  padding-right: 9.4em;
+  padding-bottom: 3.4em;
   padding-top: 2em;
   padding-top: 0;
   height: 100%;
+
+
+
+  &.s-4 {
+    padding-left: 12em;
+    padding-right: 5em;
+
+    & .bar-graph-x-axis {
+      &-item {
+        & span {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &.s-5 {
+    padding-right: 7em;
+  }
+
+  &.s-6 {
+    padding-right: 7em;
+  }
+
+  &.s-7 {
+    padding-right: 8em;
+  }
+
+  &.s-8 {
+    padding-right: 9em;
+  }
 
   &-main {
     position: relative;
@@ -8072,17 +8089,6 @@ body {
     z-index: 100;
     border-left: 1px solid #43546a;
     overflow: visible;
-
-    // &::after {
-    //   content: "";
-    //   position: absolute;
-    //   bottom: 0;
-    //   left: -12.5em;
-    //   width: calc(100% + 12.5em);
-    //   height: 3.2em;
-    //   background: linear-gradient(0deg, #fff 70%, transparent);
-    //   z-index: -1;
-    // }
 
     &-data {
       position: relative;
@@ -8208,10 +8214,8 @@ body {
   position: relative;
   width: 100%;
   height: calc(100% - 8.5em);
-  //max-height: 27.3rem;
 
   &-wrapper {
-    //position: relative;
     width: 100%;
     height: 100%;
     @include flexbox();
@@ -8266,7 +8270,6 @@ body {
         box-shadow: 0 6px 12px 0 rgba(137, 137, 137, 0.27);
         border: solid 1px #e4e8ec;
         background-color: #ffffff;
-        //display: none;
         z-index: 500;
 
         &:hover {
@@ -8298,24 +8301,14 @@ body {
       }
     }
   }
-
-  &-canvas {
-    // height: 100%;
-    // min-height: 0;
-    // max-height: 100%;
-    //width: 100%;
-    // position: relative!important;
-    // width: 100%;
-    //height: auto!important;
-    // max-height: 100%!important;
-  }
 }
 
 .column-chart {
-  //margin-top: 1em;
+  padding-top: 1.2em;
   padding-bottom: 2em;
-  margin-left: 6%;
-  width: 90%;
+  padding-left: 6%;
+  padding-right: 6%;
+  width: 100%;
   height: 100%;
   display: grid;
   grid-template-areas:
@@ -8349,6 +8342,14 @@ body {
         &:nth-of-type(2),
         &:nth-of-type(3) {
           @include flexbox();
+        }
+      }
+    }
+
+    & .column-chart-v-axis {
+      &-item {
+        & span {
+          display: none;
         }
       }
     }
@@ -8407,35 +8408,6 @@ body {
       }
     }
   }
-
-  // // WIDTH 600-700
-  // &.s-6 {
-  //   & .column-chart-area {
-  //     &-graph {
-  //       & > * {
-  //         &:nth-of-type(1),
-  //         &:nth-of-type(2),
-  //         &:nth-of-type(3),
-  //         &:nth-of-type(4),
-  //         &:nth-of-type(5) {
-  //           @include flexbox();
-  //         }
-  //       }
-  //     }
-  //   }
-
-  //   & .column-chart-h-axis {
-  //     &-item {
-  //       &:nth-of-type(1),
-  //       &:nth-of-type(2),
-  //       &:nth-of-type(3),
-  //       &:nth-of-type(4),
-  //       &:nth-of-type(5) {
-  //         @include flexbox();
-  //       }
-  //     }
-  //   }
-  // }
 
   // WIDTH 700-800
   &.s-7 {
@@ -8686,13 +8658,6 @@ body {
           height: 100%;
           overflow: visible;
           margin-right: 0;
-          // width: 7.9%;
-          // min-width: 3.1em;
-          // text-align: center;
-
-          // &:not(:last-of-type) {
-          //   margin-right: 4.13%;
-          // }
 
           &-label {
             width: 11.1rem;
@@ -8738,12 +8703,22 @@ body {
 
   &.s-5,
   &.s-4 {
-    margin-left: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  &.s-4 {
+    & .column-chart-v-axis {
+      &-item {
+        & span {
+          display: none;
+        }
+      }
+    }
   }
 
   &-area {
     position: relative;
-    //border-left: 1px solid #43546A;
     border-bottom: 1px solid #43546a;
 
     &-graph {
@@ -8757,7 +8732,6 @@ body {
 
       &-item {
         @include flexbox();
-        //display: none;
         @include align-items(flex-start);
         @include justify-content(center);
         width: 4.4em;
@@ -8882,7 +8856,6 @@ body {
     justify-content: center;
 
     &-item {
-      //display: none;
       width: 4.4em;
       width: 7.9%;
       min-width: 3.1em;
@@ -8897,25 +8870,14 @@ body {
       }
     }
   }
-
-  // &.small {
-  //   & .column-chart-area {
-  //     &-graph {
-  //       @include justify-content(space-evenly);
-  //     }
-  //   }
-
-  //   & .column-chart-h-axis {
-  //     @include justify-content(space-evenly);
-  //   }
-  // }
 }
 
 .combo-chart {
   margin-top: 1em;
   padding-bottom: 2em;
-  margin-left: 6%;
-  width: 90%;
+  padding-left: 6%;
+  padding-right: 6%;
+  width: 100%;
   height: 100%;
   display: grid;
   grid-template-areas:
@@ -8926,6 +8888,8 @@ body {
 
   // WIDTH 0-500
   &.s-4 {
+    padding-left: 3%;
+    padding-right: 3%;
     & .combo-chart-area {
       &-graph {
         &-set {
@@ -8946,6 +8910,14 @@ body {
         &:nth-of-type(3),
         &:nth-of-type(4) {
           @include flexbox();
+        }
+      }
+    }
+
+    & .combo-chart-v-axis {
+      &-item {
+        & span {
+          display: none;
         }
       }
     }
@@ -9352,15 +9324,9 @@ body {
       display: none;
       position: relative;
       width: 4.6em;
-      //width: 7.9%;
-      //min-width: 3.1em;
       height: 100%;
       text-align: center;
       overflow: visible;
-
-      &:not(:last-of-type) {
-        //margin-right: 4.13%;
-      }
 
       &-label {
         top: 50%;
@@ -9402,7 +9368,8 @@ body {
   }
 
   &.s-7,
-  &.s-6 {
+  &.s-6,
+  &.s-5 {
     & .value-box-content {
       max-width: 44em;
       grid-template-rows: 1fr 1fr;
@@ -9429,7 +9396,6 @@ body {
     }
   }
 
-  &.s-5,
   &.s-4 {
     & .value-box-content {
       max-width: 22em;
@@ -9442,11 +9408,6 @@ body {
         &:nth-of-type(2) {
           border-top: 1.5px solid #e3e3e3 !important;
         }
-  
-        // &:nth-of-type(1),
-        // &:nth-of-type(3) {
-        //   border-right: 1.5px solid #e3e3e3;
-        // }
   
         &:nth-of-type(3),
         &:nth-of-type(4),
@@ -9537,7 +9498,6 @@ body {
   @include justify-content(center);
   position: relative;
   min-width: 100%;
-  //height: calc(100vh - calc(100vh - 100%));
   min-height: 100%;
   background-color: #fcfdfd;
 
@@ -9558,16 +9518,11 @@ body {
       width: 100% !important;
       height: 100% !important;
     }
-
-    // & .auth-logo {
-    //   display: none;!important
-    // }
   }
 
   @include custom-respond-vertical(780) {
     & .auth-card {
       top: 50%;
-      //max-height: calc(100% - 4em);
     }
   }
 
@@ -9594,10 +9549,6 @@ body {
       width: 100% !important;
       height: 100% !important;
     }
-
-    // & .auth-logo {
-    //   display: none;!important
-    // }
   }
 
   &-logo {
@@ -9619,7 +9570,6 @@ body {
     max-width: calc(100% - 4em);
 
     min-width: 0;
-    //min-height: 0;
     position: absolute;
     top: 45%;
     left: 50%;
@@ -9628,7 +9578,6 @@ body {
     border: solid 1px #dadce0;
     background-color: #ffffff;
     text-align: center;
-    // transform: translate(0, -2em);
 
     &-title {
       font-size: 2.1em;
