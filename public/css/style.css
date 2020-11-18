@@ -5016,6 +5016,7 @@ body {
     -moz-justify-content: flex-start;
     justify-content: flex-start; }
   #widgets-new .content .placeholder-wrapper {
+    padding-bottom: 200px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px 20px; }
@@ -5058,6 +5059,111 @@ body {
       border-bottom: 0; }
     #widgets-new .content .widget-combo-chart .widget-header {
       border-bottom: 0; }
+    #widgets-new .content .widget-combo-chart .chart-legend {
+      position: relative;
+      padding: 0.3em 2em;
+      margin: 2.4em 2.5em;
+      margin-bottom: 2em;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      justify-content: center;
+      min-height: 4.1em;
+      width: 87%;
+      border-radius: 3px;
+      border: solid 1px #e4e8ec; }
+      #widgets-new .content .widget-combo-chart .chart-legend:hover .chart-legend-content {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex; }
+      #widgets-new .content .widget-combo-chart .chart-legend-text {
+        font-size: 1.2em;
+        font-weight: 400;
+        letter-spacing: -0.18px;
+        color: #2c3c4d;
+        cursor: pointer; }
+        #widgets-new .content .widget-combo-chart .chart-legend-text button {
+          font-weight: 500;
+          text-decoration: underline; }
+      #widgets-new .content .widget-combo-chart .chart-legend-content {
+        padding: 2em 1.7em;
+        top: -2px;
+        left: 50%;
+        width: calc(100% + 2px);
+        position: absolute;
+        transform: translate(-50%, 0);
+        display: none;
+        -webkit-box-direction: normal;
+        -webkit-box-orient: vertical;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        -webkit-align-items: flex-start;
+        -moz-align-items: flex-start;
+        align-items: flex-start;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        -webkit-justify-content: flex-start;
+        -moz-justify-content: flex-start;
+        justify-content: flex-start;
+        border-radius: 3px;
+        box-shadow: 0 6px 12px 0 rgba(137, 137, 137, 0.27);
+        border: solid 1px #e4e8ec;
+        background-color: #ffffff;
+        z-index: 500; }
+        #widgets-new .content .widget-combo-chart .chart-legend-content:hover {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flexbox;
+          display: flex; }
+      #widgets-new .content .widget-combo-chart .chart-legend-item {
+        display: -webkit-inline-box;
+        display: -webkit-inline-flex;
+        display: -moz-inline-flex;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        justify-content: center; }
+        #widgets-new .content .widget-combo-chart .chart-legend-item:not(:last-of-type) {
+          margin-bottom: 1.4em; }
+        #widgets-new .content .widget-combo-chart .chart-legend-item-color {
+          margin-right: 0.85em;
+          width: 2.5em;
+          height: 3px; }
+        #widgets-new .content .widget-combo-chart .chart-legend-item-name {
+          font-size: 1.2em;
+          font-weight: 400;
+          letter-spacing: -0.18px;
+          color: #16222f; }
     #widgets-new .content .widget.small .bar-graph {
       padding-right: 2em;
       padding-left: 11em; }
@@ -5940,11 +6046,10 @@ body {
 
 .combo-chart {
   margin-top: 1em;
-  padding-bottom: 2em;
   padding-left: 6%;
   padding-right: 6%;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 9.7em);
   display: grid;
   grid-template-areas: "a b" "c d";
   grid-template-rows: 1fr 3em;

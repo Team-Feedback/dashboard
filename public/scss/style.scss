@@ -7759,6 +7759,7 @@ body {
     }
 
     .placeholder-wrapper {
+      padding-bottom: 200px;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 20px 20px;
@@ -7840,6 +7841,84 @@ body {
         // & .widget-body {
         //   padding: 0;
         // }
+
+        & .chart-legend {
+          position: relative;
+          padding: 0.3em 2em;
+          margin: 2.4em 2.5em;
+          margin-bottom: 2em;
+          @include flexbox();
+          @include flex-wrap(wrap);
+          @include align-items(center);
+          @include justify-content(center);
+          min-height: 4.1em;
+          width: 87%;
+          border-radius: 3px;
+          border: solid 1px #e4e8ec;
+    
+          &:hover .chart-legend-content {
+            @include flexbox();
+          }
+    
+          &-text {
+            font-size: 1.2em;
+            font-weight: 400;
+            letter-spacing: -0.18px;
+            color: #2c3c4d;
+            cursor: pointer;
+    
+            & button {
+              font-weight: 500;
+              text-decoration: underline;
+            }
+          }
+    
+          &-content {
+            padding: 2em 1.7em;
+            top: -2px;
+            left: 50%;
+            width: calc(100% + 2px);
+            position: absolute;
+            transform: translate(-50%, 0);
+    
+            display: none;
+            @include flex-direction(column);
+            @include align-items(flex-start);
+            @include justify-content(flex-start);
+            border-radius: 3px;
+            box-shadow: 0 6px 12px 0 rgba(137, 137, 137, 0.27);
+            border: solid 1px #e4e8ec;
+            background-color: #ffffff;
+            z-index: 500;
+    
+            &:hover {
+              @include flexbox();
+            }
+          }
+    
+          &-item {
+            @include inline-flex();
+            @include align-items(center);
+            @include justify-content(center);
+    
+            &:not(:last-of-type) {
+              margin-bottom: 1.4em;
+            }
+    
+            &-color {
+              margin-right: 0.85em;
+              width: 2.5em;
+              height: 3px;
+            }
+    
+            &-name {
+              font-size: 1.2em;
+              font-weight: 400;
+              letter-spacing: -0.18px;
+              color: #16222f;
+            }
+          }
+        }
       }
 
       &.small {
@@ -8874,11 +8953,11 @@ body {
 
 .combo-chart {
   margin-top: 1em;
-  padding-bottom: 2em;
+  //padding-bottom: 2em;
   padding-left: 6%;
   padding-right: 6%;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 9.7em);
   display: grid;
   grid-template-areas:
     "a b"

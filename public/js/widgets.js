@@ -98,43 +98,10 @@ var ro = new ResizeObserver(entries => {
       //Code for line chart
       if (entry.target.classList.contains('line-chart')) {
         chart01.options.scales.xAxes[0].ticks.maxTicksLimit = "4";
-        chart01.data.labels = chart01.data.labels.map(e => { return e.substring(0, 3) });
-        chart01.options.scales.yAxes[0].ticks.callback = function (
-          label,
-          index,
-          labels
-        ) {
-          switch (label) {
-            case 1:
-              return "Bad";
-            case 2:
-              return "Weak";
-            case 3:
-              return "Ok";
-            case 4:
-              return "Good";
-            case 5:
-              return "Great";
-          }
-        };
       }
     } else if (entry.target.classList.contains('s-4')) {
       entry.target.classList.remove('s-4')
     } else {
-      chart01.data.labels = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December"
-      ]
 
       chart01.options.scales.yAxes[0].ticks.callback = function (
         label,
@@ -154,6 +121,48 @@ var ro = new ResizeObserver(entries => {
             return "Great (5.0)";
         }
       };
+    }
+
+    if (crWidth <= 700.00001) {
+      //Code for line chart
+      if (entry.target.classList.contains('line-chart')) {
+        console.log('HELLO01')
+        chart01.data.labels = chart01.data.labels.map(e => { return e.substring(0, 3) });
+        chart01.update();
+        // chart01.data.labels = [
+        //   "Jan",
+        //   "Feb",
+        //   "Mar",
+        //   "Apr",
+        //   "May",
+        //   "Jun",
+        //   "Jul",
+        //   "Aug",
+        //   "Sep",
+        //   "Oct",
+        //   "Nov",
+        //   "Decr"
+        // ]
+      }
+    } else {
+      if (entry.target.classList.contains('line-chart')) {
+        console.log('HELLO02')
+        chart01.data.labels = [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December"
+        ]
+      }
+
     }
   }
 });
@@ -189,7 +198,8 @@ function drawChart() {
       height: '94%',
       left: '0',
       right: '0',
-    }
+    },
+    fontSize: '12.75'
   };
 
   var chart02 = new google.visualization.PieChart(document.getElementById('piechart02'));
