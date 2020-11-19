@@ -12,7 +12,7 @@
 
   <main class="main" id="give-feedback">
     <!-- Header -->
-    <div class="header">
+    <div class="header small">
       <!-- Buttons -->
       <div class="header-buttons">
         <div class="header-buttons-settings"><i class="icon-cog"></i></div>
@@ -46,7 +46,9 @@
     <div class="content-wrapper">
       <div class="content">
         <div class="content-card">
-          <p class="caption-title">Your to-do list</p>
+          <div class="caption big">
+            <p class="caption-title">Your To-Do list</p>
+          </div>
           <div class="todo">
             <ul class="todo-list">
               <li class="todo-list-item">
@@ -102,10 +104,10 @@
                   <input type="text" placeholder="Search">
                   <i class="icon-search"></i>
                 </div> -->
-                <button class="button button-white search"><i class="icon-search"></i></button>
-                <button class="button button-white">Stamps</button>
-                <button class="button button-white">Filter by</button>
-                <button class="button button-white">Sort by</button>
+                <button class="button button-light-gray search"><i class="icon-search"></i></button>
+                <button class="button button-light-gray">Stamps</button>
+                <button class="button button-light-gray">Filter by</button>
+                <button class="button button-light-gray">Sort by</button>
               </div>
             </div>
           </div>
@@ -1565,9 +1567,7 @@
   <script>
     let testHeader = document.querySelector('.header');
 
-    let people = document.querySelector('.people');
 
-    people.style.height = `calc(100vh - ${testHeader.clientHeight}px - 17em)`;
 
     //console.log(`100vh - ${testHeader.clientHeight}px - 17em`)
 
