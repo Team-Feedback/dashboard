@@ -5,6 +5,14 @@ let headerMain = document.querySelector(".header-main");
 headerMain.addEventListener("click", function () {
   console.log("double click");
   header.classList.toggle("small");
+
+  // Send feedback page people container height
+  if (document.getElementById('give-feedback')) {
+    setTimeout(() => {
+      let people = document.querySelector('.people');
+      people.style.height = `calc(100vh - ${header.clientHeight}px - 17em)`;
+    }, 500);
+  }
 });
 
 //ACTIVE LINK
@@ -70,10 +78,9 @@ if (sendFeedbackBtn) {
       let modal = this.parentElement.parentElement;
       let body = modal.querySelector(".custom-modal-body");
       let successMessage = modal.querySelector(".success-message");
-      successMessage.style.maxHeight = `${
-        body.clientHeight /
+      successMessage.style.maxHeight = `${body.clientHeight /
         parseFloat(getComputedStyle(document.documentElement).fontSize)
-      }em`;
+        }em`;
       modal.classList.add("success");
     });
   });

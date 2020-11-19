@@ -1,341 +1,1578 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Example Page</title>
-    <link rel="stylesheet" href="../public/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example Page</title>
+  <link rel="stylesheet" href="../public/css/style.css">
 </head>
+
 <body>
 
-    <main class="main" id="give-feedback">
-        <!-- Header -->
-        <div class="header">
-            <!-- Buttons -->
-            <div class="header-buttons">
-                <div class="header-buttons-settings"><i class="icon-cog"></i></div>
-                <div class="header-buttons-help"><i class="icon-question"></i></div>
-                <div class="header-buttons-notifications"><i class="icon-bell"></i></div>
-                <div class="header-buttons-initials">M</div>
-            </div>
-            
-            <!-- Header top -->
-            <div class="header-top">
-                <div class="header-top-logo">
-                    <img src="../public/img/logo-only.png" alt="Team feedback logo" class="header-top-logo-img">
+  <main class="main" id="give-feedback">
+    <!-- Header -->
+    <div class="header">
+      <!-- Buttons -->
+      <div class="header-buttons">
+        <div class="header-buttons-settings"><i class="icon-cog"></i></div>
+        <div class="header-buttons-help"><i class="icon-question"></i></div>
+        <div class="header-buttons-notifications"><i class="icon-bell"></i></div>
+        <div class="header-buttons-initials">M</div>
+      </div>
+
+      <!-- Header top -->
+      <div class="header-top">
+        <div class="header-top-logo">
+          <img src="../public/img/logo-only.png" alt="Team feedback logo" class="header-top-logo-img">
+        </div>
+        <div class="header-top-input-container">
+          <input type="text" placeholder="Search">
+          <i class="icon-search"></i>
+        </div>
+      </div>
+      <!-- Header main -->
+      <div class="header-main">
+        <div class="header-main-info">
+          <div class="header-main-info-icon">
+            <i class="icon-arrow-left"></i>
+          </div>
+          <h1 class="header-main-info-title">Give feedback</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="content-card">
+          <p class="caption-title">Your to-do list</p>
+          <div class="todo">
+            <ul class="todo-list">
+              <li class="todo-list-item">
+                <div class="todo-list-item-icon">
+                  <i class="icon-users"></i>
                 </div>
-                <div class="header-top-input-container">
-                    <input type="text" placeholder="Search">
-                    <i class="icon-search"></i>
+                <div class="todo-list-item-info">
+                  <p class="todo-list-item-info-subtitle">Team Feedback</p>
+                  <p class="todo-list-item-info-title">Team React Native</p>
                 </div>
-            </div>
-            <!-- Header main -->
-            <div class="header-main">
-                <div class="header-main-info">
-                    <div class="header-main-info-icon">
-                        <i class="icon-arrow-left"></i>
-                    </div>
-                    <h1 class="header-main-info-title">Give feedback</h1>
+                <i class="icon-chevron-right"></i>
+              </li>
+
+              <li class="todo-list-item">
+                <img src="../public/img/p-01.png" alt="User's profile picture" class="todo-list-item-img" />
+                <div class="todo-list-item-info">
+                  <p class="todo-list-item-info-subtitle">
+                    Peer to peer feedback
+                  </p>
+                  <p class="todo-list-item-info-title">Peter Smith</p>
                 </div>
+                <i class="icon-chevron-right"></i>
+              </li>
+
+              <li class="todo-list-item">
+                <div class="todo-list-item-initials">MM</div>
+                <div class="todo-list-item-info">
+                  <p class="todo-list-item-info-subtitle">
+                    Peer to peer feedback
+                  </p>
+                  <p class="todo-list-item-info-title">Peter Smith</p>
+                </div>
+                <i class="icon-chevron-right"></i>
+              </li>
+            </ul>
+          </div>
+
+          <div class="caption">
+            <p class="caption-title">Select a person to give feedback</p>
+            <div class="caption-bottom">
+              <div class="options">
+                <p class="options-link active">To your colleagues</p>
+                <span class="options-divider">I</span>
+                <p class="options-link">To your subordinates</p>
+                <span class="options-divider">I</span>
+                <p class="options-link">To your supervisor</p>
+                <span class="options-divider">I</span>
+                <p class="options-link">To yourself</p>
+              </div>
+
+              <div class="buttons">
+                <!-- <div class="input-container">
+                  <input type="text" placeholder="Search">
+                  <i class="icon-search"></i>
+                </div> -->
+                <button class="button button-white search"><i class="icon-search"></i></button>
+                <button class="button button-white">Stamps</button>
+                <button class="button button-white">Filter by</button>
+                <button class="button button-white">Sort by</button>
+              </div>
             </div>
           </div>
 
-        <!-- Content -->
-        <div class="content-wrapper">
-            <div class="content">
-                <div class="content-card">
-                  <p class="caption-title">Your to-do list</p>
-                  <div class="todo">
-                    <ul class="todo-list">
-                      <li class="todo-list-item">
-                        <div class="todo-list-item-icon">
-                          <i class="icon-users"></i>
-                        </div>
-                        <div class="todo-list-item-info">
-                          <p class="todo-list-item-info-subtitle">Team Feedback</p>
-                          <p class="todo-list-item-info-title">Team React Native</p>
-                        </div>
-                        <i class="icon-chevron-right"></i>
-                      </li>
-          
-                      <li class="todo-list-item">
-                        <img
-                          src="../public/img/p-01.png"
-                          alt="User's profile picture"
-                          class="todo-list-item-img"
-                        />
-                        <div class="todo-list-item-info">
-                          <p class="todo-list-item-info-subtitle">
-                            Peer to peer feedback
-                          </p>
-                          <p class="todo-list-item-info-title">Peter Smith</p>
-                        </div>
-                        <i class="icon-chevron-right"></i>
-                      </li>
-          
-                      <li class="todo-list-item">
-                        <div class="todo-list-item-initials">MM</div>
-                        <div class="todo-list-item-info">
-                          <p class="todo-list-item-info-subtitle">
-                            Peer to peer feedback
-                          </p>
-                          <p class="todo-list-item-info-title">Peter Smith</p>
-                        </div>
-                        <i class="icon-chevron-right"></i>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="caption">
-                    <p class="caption-title">Select a person to give feedback</p>
-                    <div class="caption-bottom">
-                      <div class="input-container">
-                        <input type="text" placeholder="Search">
-                        <i class="icon-search"></i>
-                      </div>
-
-                      <div class="buttons">
-                        <button class="button button-white">Stamps</button>
-                        <button class="button button-white">Filter by</button>
-                        <button class="button button-white">Sort by</button>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="people">
-                    <div class="person">
-                      <div class="person-main">
-                        <img
-                          src="../public/img/p-01.png"
-                          alt="User's profile image"
-                          class="person-main-img"
-                        />
-                      </div>
-                      <div class="person-info">
-                        <p class="person-info-name">Abdul Aba</p>
-                        <p class="person-info-position">Product development</p>
-                      </div>
-                    </div>
-        
-                    <div class="person">
-                      <div class="person-main">
-                        <img
-                          src="../public/img/p-02.png"
-                          alt="User's profile image"
-                          class="person-main-img"
-                        />
-                      </div>
-                      <div class="person-info">
-                        <p class="person-info-name">Peter Smith</p>
-                        <p class="person-info-position">Chief Marketing Of Something</p>
-                      </div>
-                    </div>
-        
-                    <div class="person">
-                      <div class="person-main">
-                        <img
-                          src="../public/img/p-03.png"
-                          alt="User's profile image"
-                          class="person-main-img"
-                        />
-                      </div>
-                      <div class="person-info">
-                        <p class="person-info-name">John Brown</p>
-                        <p class="person-info-position">Sales Africa</p>
-                      </div>
-                    </div>
-        
-                    <div class="person">
-                      <div class="person-main">
-                        <img
-                          src="../public/img/p-01.png"
-                          alt="User's profile image"
-                          class="person-main-img"
-                        />
-                      </div>
-                      <div class="person-info">
-                        <p class="person-info-name">Abdul Aba</p>
-                        <p class="person-info-position">Product development</p>
-                      </div>
-                    </div>
-        
-                    <div class="person">
-                      <div class="person-main">
-                        <img
-                          src="../public/img/p-02.png"
-                          alt="User's profile image"
-                          class="person-main-img"
-                        />
-                      </div>
-                      <div class="person-info">
-                        <p class="person-info-name">Peter Smith</p>
-                        <p class="person-info-position">Chief Marketing Of Something</p>
-                      </div>
-                    </div>
-        
-                    <div class="person">
-                      <div class="person-main">
-                        <img
-                          src="../public/img/p-03.png"
-                          alt="User's profile image"
-                          class="person-main-img"
-                        />
-                      </div>
-                      <div class="person-info">
-                        <p class="person-info-name">John Brown</p>
-                        <p class="person-info-position">Sales Africa</p>
-                      </div>
-                    </div>
-        
-                    <div class="person">
-                      <div class="person-main">
-                        <img
-                          src="../public/img/p-01.png"
-                          alt="User's profile image"
-                          class="person-main-img"
-                        />
-                      </div>
-                      <div class="person-info">
-                        <p class="person-info-name">Abdul Aba</p>
-                        <p class="person-info-position">Product development</p>
-                      </div>
-                    </div>
-        
-                    <div class="person">
-                      <div class="person-main">
-                        <img
-                          src="../public/img/p-02.png"
-                          alt="User's profile image"
-                          class="person-main-img"
-                        />
-                      </div>
-                      <div class="person-info">
-                        <p class="person-info-name">Peter Smith</p>
-                        <p class="person-info-position">Chief Marketing Of Something</p>
-                      </div>
-                    </div>
-
-                    <div class="person">
-                      <div class="person-main">
-                        <img
-                          src="../public/img/p-01.png"
-                          alt="User's profile image"
-                          class="person-main-img"
-                        />
-                      </div>
-                      <div class="person-info">
-                        <p class="person-info-name">Abdul Aba</p>
-                        <p class="person-info-position">Product development</p>
-                      </div>
-                    </div>
-        
-                    <div class="person">
-                      <div class="person-main">
-                        <img
-                          src="../public/img/p-02.png"
-                          alt="User's profile image"
-                          class="person-main-img"
-                        />
-                      </div>
-                      <div class="person-info">
-                        <p class="person-info-name">Peter Smith</p>
-                        <p class="person-info-position">Chief Marketing Of Something</p>
-                      </div>
-                    </div>
-        
-                    <div class="person">
-                      <div class="person-main">
-                        <img
-                          src="../public/img/p-03.png"
-                          alt="User's profile image"
-                          class="person-main-img"
-                        />
-                      </div>
-                      <div class="person-info">
-                        <p class="person-info-name">John Brown</p>
-                        <p class="person-info-position">Sales Africa</p>
-                      </div>
-                    </div>
-        
-                    <div class="person">
-                      <div class="person-main">
-                        <img
-                          src="../public/img/p-01.png"
-                          alt="User's profile image"
-                          class="person-main-img"
-                        />
-                      </div>
-                      <div class="person-info">
-                        <p class="person-info-name">Abdul Aba</p>
-                        <p class="person-info-position">Product development</p>
-                      </div>
-                    </div>
-        
-                    <div class="person">
-                      <div class="person-main">
-                        <img
-                          src="../public/img/p-02.png"
-                          alt="User's profile image"
-                          class="person-main-img"
-                        />
-                      </div>
-                      <div class="person-info">
-                        <p class="person-info-name">Peter Smith</p>
-                        <p class="person-info-position">Chief Marketing Of Something</p>
-                      </div>
-                    </div>
-        
-                    <div class="person">
-                      <div class="person-main">
-                        <img
-                          src="../public/img/p-03.png"
-                          alt="User's profile image"
-                          class="person-main-img"
-                        />
-                      </div>
-                      <div class="person-info">
-                        <p class="person-info-name">John Brown</p>
-                        <p class="person-info-position">Sales Africa</p>
-                      </div>
-                    </div>
-        
-                    <div class="person">
-                      <div class="person-main">
-                        <img
-                          src="../public/img/p-01.png"
-                          alt="User's profile image"
-                          class="person-main-img"
-                        />
-                      </div>
-                      <div class="person-info">
-                        <p class="person-info-name">Abdul Aba</p>
-                        <p class="person-info-position">Product development</p>
-                      </div>
-                    </div>
-        
-                    <div class="person">
-                      <div class="person-main">
-                        <img
-                          src="../public/img/p-02.png"
-                          alt="User's profile image"
-                          class="person-main-img"
-                        />
-                      </div>
-                      <div class="person-info">
-                        <p class="person-info-name">Peter Smith</p>
-                        <p class="person-info-position">Chief Marketing Of Something</p>
-                      </div>
-                    </div>
-        
-                  </div>
-
-                </div>
+          <div class="people">
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
             </div>
-        </div>
-    </main>
-    
 
-    <script src="../public/js/main.js"></script>
-    <script src="../public/js/tm-grid.js"></script>
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <script src="../public/js/main.js"></script>
+  <script src="../public/js/tm-grid.js"></script>
+
+  <script>
+    let testHeader = document.querySelector('.header');
+
+    let people = document.querySelector('.people');
+
+    people.style.height = `calc(100vh - ${testHeader.clientHeight}px - 17em)`;
+
+    //console.log(`100vh - ${testHeader.clientHeight}px - 17em`)
+
+
+  </script>
 </body>
+
 </html>

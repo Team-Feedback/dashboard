@@ -23,29 +23,15 @@
   --table-body-row-height: 4.6em; }
 
 @font-face {
-  font-weight: 400;
-  src: url("../fonts/inter/Inter-Regular.woff2") format("woff2"); }
-@font-face {
-  font-family: "Inter-Medium";
-  src: url("../fonts/inter/Inter-Medium.woff2") format("woff2"); }
-@font-face {
-  font-family: "Inter-Semibold";
-  src: url("../fonts/inter/Inter-SemiBold.woff2") format("woff2"); }
-@font-face {
-  font-family: "Inter-Bold";
-  font-weight: 700;
-  src: url("../fonts/inter/Inter-Bold.woff2") format("woff2"); }
-@font-face {
-  font-family: "dashoard-icons";
-  src: url("../fonts/dashoard-icons.eot?i0h6uh");
-  src: url("../fonts/dashoard-icons.eot?i0h6uh#iefix") format("embedded-opentype"), url("../fonts/dashoard-icons.ttf?i0h6uh") format("truetype"), url("../fonts/dashoard-icons.woff?i0h6uh") format("woff"), url("../fonts/dashoard-icons.svg?i0h6uh#dashoard-icons") format("svg");
+  font-family: 'dashoard-icons';
+  src: url("../fonts/dashoard-icons.eot?fyi1bz");
+  src: url("../fonts/dashoard-icons.eot?fyi1bz#iefix") format("embedded-opentype"), url("../fonts/dashoard-icons.ttf?fyi1bz") format("truetype"), url("../fonts/dashoard-icons.woff?fyi1bz") format("woff"), url("../fonts/dashoard-icons.svg?fyi1bz#dashoard-icons") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block; }
-[class^="icon-"],
-[class*=" icon-"] {
+[class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "dashoard-icons" !important;
+  font-family: 'dashoard-icons' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -55,6 +41,15 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+.icon-bell:before {
+  content: "\e91f"; }
+
+.icon-cog:before {
+  content: "\e926"; }
+
+.icon-question:before {
+  content: "\e940"; }
 
 .icon-expand:before {
   content: "\e948"; }
@@ -80,20 +75,11 @@
 .icon-cog-full:before {
   content: "\e943"; }
 
-.icon-cog:before {
-  content: "\e91f"; }
-
 .icon-shield-circle:before {
   content: "\e92f"; }
 
-.icon-bell:before {
-  content: "\e940"; }
-
 .icon-search:before {
   content: "\e93f"; }
-
-.icon-question:before {
-  content: "\e926"; }
 
 .icon-exit:before {
   content: "\e93e"; }
@@ -4456,62 +4442,113 @@ body {
     border-radius: 0;
     background-color: transparent;
     box-shadow: none; }
-    #give-feedback .content-card .caption-title {
-      margin-bottom: 1.1em;
-      font-size: 2em;
-      font-weight: 600;
-      color: #172b4d; }
-    #give-feedback .content-card .caption-bottom {
-      padding-bottom: 2.2em;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      -moz-align-items: center;
-      align-items: center;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      -webkit-justify-content: space-between;
-      -moz-justify-content: space-between;
-      justify-content: space-between;
-      border-bottom: 1.5px solid #f0f0f0;
-      white-space: nowrap; }
-      #give-feedback .content-card .caption-bottom .input-container {
-        margin-right: 2em;
-        position: relative;
-        width: 100%;
-        max-width: 44.5em; }
-        #give-feedback .content-card .caption-bottom .input-container input {
-          padding-left: 2.3776223776em;
-          height: 2.5174825175em;
+    #give-feedback .content-card .caption {
+      padding-top: 6.5em; }
+      #give-feedback .content-card .caption-title {
+        margin-bottom: 1.1em;
+        font-size: 2em;
+        font-weight: 600;
+        color: #172b4d; }
+      #give-feedback .content-card .caption-bottom {
+        padding-bottom: 2.2em;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        justify-content: space-between;
+        border-bottom: 1.5px solid #f0f0f0;
+        white-space: nowrap; }
+        #give-feedback .content-card .caption-bottom .options {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          -moz-align-items: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          -moz-justify-content: center;
+          justify-content: center; }
+          #give-feedback .content-card .caption-bottom .options-link {
+            font-size: 1.3em;
+            font-weight: 400;
+            color: #5f6677; }
+            #give-feedback .content-card .caption-bottom .options-link.active {
+              font-weight: 600; }
+          #give-feedback .content-card .caption-bottom .options-divider {
+            margin: 0 0.2307692308em;
+            font-size: 1.3em;
+            font-weight: 400;
+            color: #5f6677; }
+        #give-feedback .content-card .caption-bottom .input-container {
+          display: inline-block;
+          margin-right: 1.2em;
+          position: relative;
           width: 100%;
-          font-size: 1.43em;
-          font-weight: 400;
-          color: #767d8b;
-          border-radius: 3px;
-          border: solid 1.5px #dfe1e6; }
-        #give-feedback .content-card .caption-bottom .input-container i {
-          position: absolute;
-          top: 50%;
-          left: 1.5rem;
-          transform: translate(0, -50%);
-          font-size: 1.25em;
-          color: #9ba3b2; }
-      #give-feedback .content-card .caption-bottom .buttons .button {
-        padding: 0 1.2592592593em;
-        height: 2.6666666667em;
-        font-size: 1.35em;
-        font-weight: 400;
-        letter-spacing: -0.07px;
-        color: #3e424a; }
-        #give-feedback .content-card .caption-bottom .buttons .button:not(:last-of-type) {
-          margin-right: 0.8888888889em; }
+          max-width: 44.5em; }
+          #give-feedback .content-card .caption-bottom .input-container input {
+            padding-left: 2.3776223776em;
+            height: 2.5174825175em;
+            width: 100%;
+            font-size: 1.43em;
+            font-weight: 400;
+            color: #767d8b;
+            border-radius: 3px;
+            border: solid 1.5px #dfe1e6; }
+          #give-feedback .content-card .caption-bottom .input-container i {
+            position: absolute;
+            top: 50%;
+            left: 1.5rem;
+            transform: translate(0, -50%);
+            font-size: 1.25em;
+            color: #9ba3b2; }
+        #give-feedback .content-card .caption-bottom .buttons {
+          display: -webkit-inline-box;
+          display: -webkit-inline-flex;
+          display: -moz-inline-flex;
+          display: -ms-inline-flexbox;
+          display: inline-flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          -moz-align-items: center;
+          align-items: center;
+          -webkit-box-pack: start;
+          -ms-flex-pack: start;
+          -webkit-justify-content: flex-start;
+          -moz-justify-content: flex-start;
+          justify-content: flex-start; }
+          #give-feedback .content-card .caption-bottom .buttons .button {
+            padding: 0 1.2592592593em;
+            height: 2.6666666667em;
+            font-size: 1.35em;
+            font-weight: 400;
+            letter-spacing: -0.07px;
+            color: #3e424a; }
+            #give-feedback .content-card .caption-bottom .buttons .button.search {
+              padding: 0;
+              width: 2.6666666667em; }
+              #give-feedback .content-card .caption-bottom .buttons .button.search i {
+                color: #5c6479; }
+            #give-feedback .content-card .caption-bottom .buttons .button:not(:last-of-type) {
+              margin-right: 0.8888888889em; }
     #give-feedback .content-card .todo {
-      margin-bottom: 6.5em;
+      margin-bottom: 0;
       width: 100%;
       max-width: 40em; }
       #give-feedback .content-card .todo-list {
@@ -4655,8 +4692,16 @@ body {
       -webkit-justify-content: flex-start;
       -moz-justify-content: flex-start;
       justify-content: flex-start;
-      overflow: hidden;
-      transition: opacity 0.7s ease-in-out, visibility 0.7s ease-in-out; }
+      transition: opacity 0.7s ease-in-out, visibility 0.7s ease-in-out;
+      overflow-y: auto;
+      scrollbar-width: none;
+      /* Firefox */
+      -ms-overflow-style: none;
+      /* Internet Explorer 10+ */ }
+      #give-feedback .content-card .people::-webkit-scrollbar {
+        /* WebKit */
+        width: 0;
+        height: 0; }
       @media (max-width: 767px) {
         #give-feedback .content-card .people {
           padding-left: 0;
@@ -4694,8 +4739,8 @@ body {
           margin-bottom: 1em;
           position: relative; }
           #give-feedback .content-card .people .person-main-img {
-            width: 8em;
-            height: 8em;
+            width: 7.75em;
+            height: 7.75em;
             object-fit: contain;
             border-radius: 16px; }
           #give-feedback .content-card .people .person-main-icon {
@@ -6626,13 +6671,13 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 8px;
-    border: solid 1px #dadce0;
+    border: solid 1.5px rgba(218, 220, 224, 0.5);
     background-color: #ffffff;
     text-align: center; }
     .auth-card-title {
-      font-size: 2.1em;
+      font-size: 2.2em;
       font-weight: 500;
-      letter-spacing: -0.21px;
+      letter-spacing: -0.17px;
       color: #494949; }
     .auth-card-subtitle {
       margin-bottom: 1.1428571429em;
@@ -6654,10 +6699,11 @@ body {
         height: 3.0769230769em;
         font-size: 1.43em;
         font-weight: 400;
-        color: #525252;
-        letter-spacing: -0.18px;
+        color: #464646;
+        letter-spacing: -0.04px;
         border-radius: 6px;
-        border: solid 1.8px #e3e3e3; }
+        border: solid 1.8px rgba(227, 227, 227, 0.75);
+        background-color: rgba(240, 240, 240, 0.15); }
         .auth-card .input-container input::placeholder {
           color: #a3a3a3; }
         .auth-card .input-container input:focus {
