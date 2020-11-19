@@ -126,7 +126,6 @@ var ro = new ResizeObserver(entries => {
     if (crWidth <= 700.00001) {
       //Code for line chart
       if (entry.target.classList.contains('line-chart')) {
-        console.log('HELLO01')
         chart01.data.labels = chart01.data.labels.map(e => { return e.substring(0, 3) });
         chart01.update();
         // chart01.data.labels = [
@@ -146,7 +145,6 @@ var ro = new ResizeObserver(entries => {
       }
     } else {
       if (entry.target.classList.contains('line-chart')) {
-        console.log('HELLO02')
         chart01.data.labels = [
           "January",
           "February",
@@ -169,6 +167,22 @@ var ro = new ResizeObserver(entries => {
 
 allGraphs.forEach(e => {
   ro.observe(e);
+});
+
+let allLegends = document.querySelectorAll('.chart-legend');
+
+var ro02 = new ResizeObserver(entries => {
+  for (let entry of entries) {
+    if (entry.target.clientWidth < entry.target.firstElementChild.clientWidth + 20) {
+      entry.target.classList.add('small');
+    } else {
+      entry.target.classList.remove('small');
+    }
+  }
+})
+
+allLegends.forEach(e => {
+  ro02.observe(e);
 });
 
 //PIE CHART
@@ -206,6 +220,8 @@ function drawChart() {
 
   chart02.draw(data, options);
 }
+
+
 
 //LINE CHART
 var ctx01 = document.getElementById("chart-01").getContext("2d");

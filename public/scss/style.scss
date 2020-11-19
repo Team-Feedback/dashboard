@@ -7856,11 +7856,28 @@ body {
           border-radius: 3px;
           border: solid 1px #e4e8ec;
     
-          &:hover .chart-legend-content {
+          &:hover .chart-legend-content-small {
             @include flexbox();
           }
     
+          &.small {
+            & .chart-legend-text {
+              display: block;
+            }
+    
+            & .chart-legend-content-big {
+              position: absolute;
+              opacity: 0;
+              visibility: hidden;
+            }
+    
+            // & .chart-legend-content-small {
+            //   @include flexbox();
+            // }
+          }
+    
           &-text {
+            display: none;
             font-size: 1.2em;
             font-weight: 400;
             letter-spacing: -0.18px;
@@ -7873,7 +7890,15 @@ body {
             }
           }
     
-          &-content {
+          &-content-big {
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(center);
+            opacity: 1;
+            visibility: visible;
+          }
+    
+          &-content-small {
             padding: 2em 1.7em;
             top: -2px;
             left: 50%;
@@ -7894,6 +7919,12 @@ body {
             &:hover {
               @include flexbox();
             }
+    
+            & .chart-legend-item {
+              &:not(:last-of-type) {
+                margin-bottom: 1.4em;
+              }
+            }
           }
     
           &-item {
@@ -7902,7 +7933,7 @@ body {
             @include justify-content(center);
     
             &:not(:last-of-type) {
-              margin-bottom: 1.4em;
+              margin-right: 1.4em;
             }
     
             &-color {
@@ -8041,25 +8072,40 @@ body {
 
     & .chart-legend {
       position: relative;
-      width: 90%;
-      max-width: 55.1rem;
-      padding: 0.3rem 2rem;
-      margin: 2.4rem 3.5rem;
+      padding: 0.3em 2em;
+      margin: 2.4em 2.5em;
       margin-bottom: 2em;
-      margin-top: 1.2em;
       @include flexbox();
       @include flex-wrap(wrap);
       @include align-items(center);
       @include justify-content(center);
-      min-height: 4.1rem;
+      min-height: 4.1em;
+      width: 87%;
       border-radius: 3px;
       border: solid 1px #e4e8ec;
 
-      &:hover .chart-legend-content {
+      &:hover .chart-legend-content-small {
         @include flexbox();
       }
 
+      &.small {
+        & .chart-legend-text {
+          display: block;
+        }
+
+        & .chart-legend-content-big {
+          position: absolute;
+          opacity: 0;
+          visibility: hidden;
+        }
+
+        // & .chart-legend-content-small {
+        //   @include flexbox();
+        // }
+      }
+
       &-text {
+        display: none;
         font-size: 1.2em;
         font-weight: 400;
         letter-spacing: -0.18px;
@@ -8072,7 +8118,15 @@ body {
         }
       }
 
-      &-content {
+      &-content-big {
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &-content-small {
         padding: 2em 1.7em;
         top: -2px;
         left: 50%;
@@ -8088,11 +8142,16 @@ body {
         box-shadow: 0 6px 12px 0 rgba(137, 137, 137, 0.27);
         border: solid 1px #e4e8ec;
         background-color: #ffffff;
-        //display: none;
         z-index: 500;
 
         &:hover {
           @include flexbox();
+        }
+
+        & .chart-legend-item {
+          &:not(:last-of-type) {
+            margin-bottom: 1.4em;
+          }
         }
       }
 
@@ -8102,13 +8161,13 @@ body {
         @include justify-content(center);
 
         &:not(:last-of-type) {
-          margin-bottom: 1.4rem;
+          margin-right: 1.4em;
         }
 
         &-color {
-          margin-right: 0.85rem;
-          width: 1.2rem;
-          height: 1.2rem;
+          margin-right: 0.85em;
+          width: 1.2em;
+          height: 1.2em;
           border-radius: 50%;
         }
 
@@ -8316,11 +8375,28 @@ body {
       border-radius: 3px;
       border: solid 1px #e4e8ec;
 
-      &:hover .chart-legend-content {
+      &:hover .chart-legend-content-small {
         @include flexbox();
       }
 
+      &.small {
+        & .chart-legend-text {
+          display: block;
+        }
+
+        & .chart-legend-content-big {
+          position: absolute;
+          opacity: 0;
+          visibility: hidden;
+        }
+
+        // & .chart-legend-content-small {
+        //   @include flexbox();
+        // }
+      }
+
       &-text {
+        display: none;
         font-size: 1.2em;
         font-weight: 400;
         letter-spacing: -0.18px;
@@ -8333,7 +8409,15 @@ body {
         }
       }
 
-      &-content {
+      &-content-big {
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &-content-small {
         padding: 2em 1.7em;
         top: -2px;
         left: 50%;
@@ -8354,6 +8438,12 @@ body {
         &:hover {
           @include flexbox();
         }
+
+        & .chart-legend-item {
+          &:not(:last-of-type) {
+            margin-bottom: 1.4em;
+          }
+        }
       }
 
       &-item {
@@ -8362,7 +8452,7 @@ body {
         @include justify-content(center);
 
         &:not(:last-of-type) {
-          margin-bottom: 1.4em;
+          margin-right: 1.4em;
         }
 
         &-color {
