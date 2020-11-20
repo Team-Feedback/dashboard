@@ -1479,7 +1479,6 @@ body {
 
       &-text {
         font-size: 1.45em;
-        font-family: "Inter-Medium";
         font-weight: 500;
         letter-spacing: -0.07px;
         color: #3d464d;
@@ -3911,7 +3910,28 @@ body {
 
     &-settings,
     &-help,
-    &-notifications {
+    &-notifications,
+    & .notification-dropdown .custom-dropdown-trigger {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: none;
+        transform: translate(-50%, -50%);
+        width: 3.5rem;
+        height: 3.5rem;
+        background-color: #666;
+        border-radius: 50%;
+        opacity: .2;
+      }
+
+      &:focus:before {
+        display: block;
+      }
+
       & i {
         font-size: 2.2em;
         color: #5c6f83;
@@ -3919,7 +3939,8 @@ body {
       }
     }
 
-    &-initials {
+    &-initials,
+    & .user-dropdown .custom-dropdown-trigger {
       @include flexbox();
       @include align-items(center);
       @include justify-content(center);
@@ -4246,7 +4267,14 @@ body {
 
       &-settings,
       &-help,
-      &-notifications {
+      &-notifications,
+      & .notification-dropdown .custom-dropdown-trigger {
+        position: relative;
+
+        &::before {
+          background-color: #FFF;
+        }
+
         & i {
           color: #fff;
         }
@@ -5063,9 +5091,7 @@ body {
     }
   }
   & .content {
-    padding: 3.8em;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding: 7em 2em 3.8em;
     margin-left: 2em;
     margin-right: 2em;
     width: 100%;
@@ -5090,6 +5116,7 @@ body {
       }
 
       &.my-teams {
+        margin-bottom: 3.2em;
         width: 100%;
         max-width: 124em;
         padding: 0;
@@ -5111,7 +5138,7 @@ body {
           @include flexbox();
           @include align-items(center);
           @include justify-content(space-between);
-          width: 49%;
+          width: 48.5%;
           height: 11.5em;
           //max-width: 37.2em;
           padding: 0;
@@ -5128,6 +5155,10 @@ body {
             width: 100%;
           }
 
+          &-content {
+            margin-top: -.2em;
+          }
+
           &-subtitle {
             font-size: 1.29em;
             // font-family: "Inter-Medium";
@@ -5140,14 +5171,21 @@ body {
           }
 
           &-title {
-            font-size: 2em;
+            margin-bottom: emcalc(.7,2.25);
+            font-size: 2.25em;
             // font-family: "Inter-Semibold";
-            font-weight: 600;
-            letter-spacing: -0.1px;
+            font-weight: 700;
+            letter-spacing: -0.11px;
             
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+          }
+
+          &-desc {
+            font-size: 1.3em;
+            font-weight: 400;
+            color: #5f6677;
           }
 
           & .more {
@@ -5170,6 +5208,7 @@ body {
       &.my-people {
         width: 100%;
         max-width: 124em;
+        padding-top: 3.2em;
         padding-left: 0;
         padding-right: 0;
         padding-bottom: 0;
@@ -5178,8 +5217,20 @@ body {
           @include flex-direction(column);
           @include align-items(flex-start);
           margin-bottom: 2em;
-          padding-left: 3em;
-          padding-right: 3em;
+          padding-left: 4em;
+          padding-right: 4.9em;
+
+          &-title {
+            margin-bottom: emcalc(.7,2.25);
+            font-size: 2.25em;
+            // font-family: "Inter-Semibold";
+            font-weight: 700;
+            letter-spacing: -0.11px;
+            
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
 
           &-bottom {
             width: 100%;
@@ -5264,7 +5315,8 @@ body {
             //width: 100%;
             opacity: 0;
             visibility: hidden;
-            padding-top: 3.1em;
+            padding: 2.8em 3.9em 0;
+            padding-right: 3.8em;
             @include flexbox();
             @include flex-wrap(wrap);
             @include align-items(flex-start);
@@ -5379,6 +5431,249 @@ body {
   }
 }
 
+#company-overview {
+
+  & .header {
+
+    &-nav {
+      & svg {
+        display: none;
+      }
+    }
+    
+    &-sub-nav {
+      &-list {
+        display: none;
+      }
+    }
+  }
+
+  & .content {
+    padding: 2.7em 4.4em;
+
+    &-card {
+
+      &.admin-card {
+        max-width: 110em;
+        padding: 0 3.2em;
+        margin-bottom: 2.5em;
+        height: 10.5em;
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(flex-start);
+        border-radius: 6px;
+  box-shadow: 0 3px 6px 0 rgba(191, 191, 191, 0.11);
+  border: solid 1px #e4e8ec;
+  background-color: #ffffff;
+
+        & .admin-card-info {
+          &-title {
+            margin-bottom: emcalc(1.1,1.9);
+            font-size: 1.9em;
+            font-weight: 600;
+            color: #0f6cbc;
+          }
+
+          &-text {
+            font-size: 1.3em;
+            font-weight: 500;
+            letter-spacing: -0.13px;
+            color: #9fa1a2;
+
+            & .strong {
+              font-weight: 600;
+              color: #464c4f;
+            }
+          }
+        }
+      }
+
+      &.main-card {
+        max-width: 110em;
+        padding-top: 0;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+
+        & .main-card-top {
+          @include flexbox();
+          @include align-items(flex-start);
+          @include justify-content(space-between);
+
+          @include custom-respond(1000) {
+            @include flex-direction(column);
+          }
+
+          & .data-card {
+            width: 48%;
+            position: relative;
+            padding: 2.9rem 2.6rem 4.8rem;
+            margin-bottom: 3rem;
+            border-radius: 6px;
+            box-shadow: 0 3px 6px 0 rgba(191, 191, 191, 0.11);
+            border: solid 1px #e4e8ec;
+            background-color: #ffffff;
+            background-color: #ffffff;
+
+            @include custom-respond(1000) {
+              width: 100%;
+            }
+  
+            &-header {
+              margin-bottom: 2.2rem;
+  
+              &-title {
+                margin-bottom: .8rem;
+                font-size: 1.5rem;
+                font-weight: 600;
+                line-height: 1.27;
+                color: #0f6cbc;
+  
+                & span {
+                  display: inline-block;
+                  margin-right: .6rem;
+                  width: 10px;
+                  height: 10px;
+                  background-color: #18aa52;
+                  border-radius: 50%;
+                }
+              }
+  
+              &-text {
+                font-size: 1.3rem;
+                font-weight: 500;
+                line-height: 1.23;
+                letter-spacing: -0.13px;
+                color: #9fa1a2;
+              }
+            }
+  
+            & svg {
+              position: absolute;
+              top: 2.4rem;
+              right: 2.4rem;
+              width: 2.0rem;
+              height: 2.0rem;
+            }
+  
+            &-buttons {
+              margin-bottom: 3.6rem;
+  
+              & .button-gradient {
+                min-width: 0;
+                margin-right: 1.4rem;
+                height: 2.2rem;
+                border-radius: 4px;
+                border: solid 1px #d7dbdb;
+                background-image: linear-gradient(to bottom, #ffffff, #f0f0f0);
+                padding: .4rem 1rem;
+                font-size: 1.1rem;
+                font-weight: 600;
+                line-height: 1.27;
+                color: #464c4f;
+                text-transform: uppercase;
+  
+                &.disabled {
+                  color: #C6C7C8;
+                }
+              }
+            }
+  
+            &-main {
+              @include flexbox();
+              @include align-items(center);
+              @include justify-content(space-between);
+              @include flex-wrap(wrap);
+  
+              &-item {
+                margin-bottom: 2.5rem;
+                width: 50%;
+  
+                &-title {
+                  margin-bottom: .4rem;
+                  font-size: 1.1rem;
+                  font-weight: 600;
+                  line-height: 1.27;
+                  color: #464c4f;
+                  text-transform: uppercase;
+                }
+  
+                &-amount {
+                  font-size: 1.35rem;
+                  font-weight: 500;
+                  line-height: 1.19;
+                  letter-spacing: -0.1px;
+                  color: #9fa1a2;
+                }
+              }
+            }
+          }
+        }
+
+        & .main-card-bottom {
+          @include flexbox();
+          @include flex-wrap(wrap);
+          @include align-items(flex-start);
+          @include justify-content(space-between);
+
+          & .graph-card {
+            margin-bottom: 1.6em;
+            padding: .6em 1.4em 1.1em .7em;
+            width: 32%;
+            height: 15em;
+            border-radius: 3.5px;
+            box-shadow: 0 3px 6px 0 rgba(206, 206, 206, 0.29);
+            background-color: #ffffff;
+
+            @include custom-respond(1000) {
+              width: 48%;
+            }
+
+            @include custom-respond(750) {
+              width: 100%;
+            }
+
+            &-header {
+              padding-left: .5em;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+
+              &-text {
+                font-size: 1.2em;
+                font-weight: 500;
+                letter-spacing: -0.06px;
+                color: #9fa1a2;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+
+                & .strong {
+                  font-weight: 600;
+                  color: #4f606a;
+                }
+              }
+            }
+
+            &-body {
+              height: calc(100% - 2.733em);
+            }
+
+            &-footer {
+              &-text {
+                padding-left: .5em;
+                font-size: 1.08em;
+                font-weight: 500;
+                color: #9fa1a2;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 #company-employees,
 #company-teams,

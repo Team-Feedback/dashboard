@@ -640,7 +640,6 @@ body {
       border-bottom: 1px solid #e0e2e5; }
       .custom-dropdown-menu-title-big-text {
         font-size: 1.45em;
-        font-family: "Inter-Medium";
         font-weight: 500;
         letter-spacing: -0.07px;
         color: #3d464d; }
@@ -2902,11 +2901,27 @@ body {
     animation: fade-in-out-2 0.5s ease-in-out; }
     .header-buttons > *:not(:last-of-type) {
       margin-right: 1.9em; }
-    .header-buttons-settings i, .header-buttons-help i, .header-buttons-notifications i {
-      font-size: 2.2em;
-      color: #5c6f83;
-      transition: color 0.5s ease-in-out; }
-    .header-buttons-initials {
+    .header-buttons-settings, .header-buttons-help, .header-buttons-notifications, .header-buttons .notification-dropdown .custom-dropdown-trigger {
+      position: relative; }
+      .header-buttons-settings::before, .header-buttons-help::before, .header-buttons-notifications::before, .header-buttons .notification-dropdown .custom-dropdown-trigger::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: none;
+        transform: translate(-50%, -50%);
+        width: 3.5rem;
+        height: 3.5rem;
+        background-color: #666;
+        border-radius: 50%;
+        opacity: .2; }
+      .header-buttons-settings:focus:before, .header-buttons-help:focus:before, .header-buttons-notifications:focus:before, .header-buttons .notification-dropdown .custom-dropdown-trigger:focus:before {
+        display: block; }
+      .header-buttons-settings i, .header-buttons-help i, .header-buttons-notifications i, .header-buttons .notification-dropdown .custom-dropdown-trigger i {
+        font-size: 2.2em;
+        color: #5c6f83;
+        transition: color 0.5s ease-in-out; }
+    .header-buttons-initials, .header-buttons .user-dropdown .custom-dropdown-trigger {
       display: -webkit-box;
       display: -webkit-flex;
       display: -moz-flex;
@@ -3227,8 +3242,12 @@ body {
     .header.small .header-buttons {
       top: 0.95em;
       animation: fade-in-out 0.5s ease-in-out; }
-      .header.small .header-buttons-settings i, .header.small .header-buttons-help i, .header.small .header-buttons-notifications i {
-        color: #fff; }
+      .header.small .header-buttons-settings, .header.small .header-buttons-help, .header.small .header-buttons-notifications, .header.small .header-buttons .notification-dropdown .custom-dropdown-trigger {
+        position: relative; }
+        .header.small .header-buttons-settings::before, .header.small .header-buttons-help::before, .header.small .header-buttons-notifications::before, .header.small .header-buttons .notification-dropdown .custom-dropdown-trigger::before {
+          background-color: #FFF; }
+        .header.small .header-buttons-settings i, .header.small .header-buttons-help i, .header.small .header-buttons-notifications i, .header.small .header-buttons .notification-dropdown .custom-dropdown-trigger i {
+          color: #fff; }
     .header.small .header-top {
       transform: translate(0, -100%); }
     .header.small .header-main {
@@ -3980,9 +3999,7 @@ body {
 #home-temp .header-sub-nav {
   display: none; }
 #home-temp .content {
-  padding: 3.8em;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding: 7em 2em 3.8em;
   margin-left: 2em;
   margin-right: 2em;
   width: 100%;
@@ -3999,6 +4016,7 @@ body {
       letter-spacing: -0.17px;
       color: var(--color-black); }
     #home-temp .content-card.my-teams {
+      margin-bottom: 3.2em;
       width: 100%;
       max-width: 124em;
       padding: 0;
@@ -4042,7 +4060,7 @@ body {
         -webkit-justify-content: space-between;
         -moz-justify-content: space-between;
         justify-content: space-between;
-        width: 49%;
+        width: 48.5%;
         height: 11.5em;
         padding: 0;
         padding-left: 4.2em;
@@ -4055,6 +4073,8 @@ body {
           #home-temp .content-card.my-teams .color-card {
             max-width: 100%;
             width: 100%; } }
+        #home-temp .content-card.my-teams .color-card-content {
+          margin-top: -.2em; }
         #home-temp .content-card.my-teams .color-card-subtitle {
           font-size: 1.29em;
           font-weight: 500;
@@ -4063,12 +4083,17 @@ body {
           overflow: hidden;
           text-overflow: ellipsis; }
         #home-temp .content-card.my-teams .color-card-title {
-          font-size: 2em;
-          font-weight: 600;
-          letter-spacing: -0.1px;
+          margin-bottom: 0.3111111111em;
+          font-size: 2.25em;
+          font-weight: 700;
+          letter-spacing: -0.11px;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis; }
+        #home-temp .content-card.my-teams .color-card-desc {
+          font-size: 1.3em;
+          font-weight: 400;
+          color: #5f6677; }
         #home-temp .content-card.my-teams .color-card .more {
           display: -webkit-inline-box;
           display: -webkit-inline-flex;
@@ -4095,6 +4120,7 @@ body {
     #home-temp .content-card.my-people {
       width: 100%;
       max-width: 124em;
+      padding-top: 3.2em;
       padding-left: 0;
       padding-right: 0;
       padding-bottom: 0; }
@@ -4111,8 +4137,16 @@ body {
         -moz-align-items: flex-start;
         align-items: flex-start;
         margin-bottom: 2em;
-        padding-left: 3em;
-        padding-right: 3em; }
+        padding-left: 4em;
+        padding-right: 4.9em; }
+        #home-temp .content-card.my-people .content-card-header-title {
+          margin-bottom: 0.3111111111em;
+          font-size: 2.25em;
+          font-weight: 700;
+          letter-spacing: -0.11px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis; }
         #home-temp .content-card.my-people .content-card-header-bottom {
           width: 100%;
           display: -webkit-box;
@@ -4190,7 +4224,8 @@ body {
           left: 0;
           opacity: 0;
           visibility: hidden;
-          padding-top: 3.1em;
+          padding: 2.8em 3.9em 0;
+          padding-right: 3.8em;
           display: -webkit-box;
           display: -webkit-flex;
           display: -moz-flex;
@@ -4316,6 +4351,230 @@ body {
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis; }
+
+#company-overview .header-nav svg {
+  display: none; }
+#company-overview .header-sub-nav-list {
+  display: none; }
+#company-overview .content {
+  padding: 2.7em 4.4em; }
+  #company-overview .content-card.admin-card {
+    max-width: 110em;
+    padding: 0 3.2em;
+    margin-bottom: 2.5em;
+    height: 10.5em;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    justify-content: flex-start;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px 0 rgba(191, 191, 191, 0.11);
+    border: solid 1px #e4e8ec;
+    background-color: #ffffff; }
+    #company-overview .content-card.admin-card .admin-card-info-title {
+      margin-bottom: 0.5789473684em;
+      font-size: 1.9em;
+      font-weight: 600;
+      color: #0f6cbc; }
+    #company-overview .content-card.admin-card .admin-card-info-text {
+      font-size: 1.3em;
+      font-weight: 500;
+      letter-spacing: -0.13px;
+      color: #9fa1a2; }
+      #company-overview .content-card.admin-card .admin-card-info-text .strong {
+        font-weight: 600;
+        color: #464c4f; }
+  #company-overview .content-card.main-card {
+    max-width: 110em;
+    padding-top: 0;
+    background-color: transparent;
+    border: none;
+    box-shadow: none; }
+    #company-overview .content-card.main-card .main-card-top {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      -webkit-align-items: flex-start;
+      -moz-align-items: flex-start;
+      align-items: flex-start;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      justify-content: space-between; }
+      @media (max-width: 1000px) {
+        #company-overview .content-card.main-card .main-card-top {
+          -webkit-box-direction: normal;
+          -webkit-box-orient: vertical;
+          -webkit-flex-direction: column;
+          -moz-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column; } }
+      #company-overview .content-card.main-card .main-card-top .data-card {
+        width: 48%;
+        position: relative;
+        padding: 2.9rem 2.6rem 4.8rem;
+        margin-bottom: 3rem;
+        border-radius: 6px;
+        box-shadow: 0 3px 6px 0 rgba(191, 191, 191, 0.11);
+        border: solid 1px #e4e8ec;
+        background-color: #ffffff;
+        background-color: #ffffff; }
+        @media (max-width: 1000px) {
+          #company-overview .content-card.main-card .main-card-top .data-card {
+            width: 100%; } }
+        #company-overview .content-card.main-card .main-card-top .data-card-header {
+          margin-bottom: 2.2rem; }
+          #company-overview .content-card.main-card .main-card-top .data-card-header-title {
+            margin-bottom: .8rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: 1.27;
+            color: #0f6cbc; }
+            #company-overview .content-card.main-card .main-card-top .data-card-header-title span {
+              display: inline-block;
+              margin-right: .6rem;
+              width: 10px;
+              height: 10px;
+              background-color: #18aa52;
+              border-radius: 50%; }
+          #company-overview .content-card.main-card .main-card-top .data-card-header-text {
+            font-size: 1.3rem;
+            font-weight: 500;
+            line-height: 1.23;
+            letter-spacing: -0.13px;
+            color: #9fa1a2; }
+        #company-overview .content-card.main-card .main-card-top .data-card svg {
+          position: absolute;
+          top: 2.4rem;
+          right: 2.4rem;
+          width: 2.0rem;
+          height: 2.0rem; }
+        #company-overview .content-card.main-card .main-card-top .data-card-buttons {
+          margin-bottom: 3.6rem; }
+          #company-overview .content-card.main-card .main-card-top .data-card-buttons .button-gradient {
+            min-width: 0;
+            margin-right: 1.4rem;
+            height: 2.2rem;
+            border-radius: 4px;
+            border: solid 1px #d7dbdb;
+            background-image: linear-gradient(to bottom, #ffffff, #f0f0f0);
+            padding: .4rem 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 1.27;
+            color: #464c4f;
+            text-transform: uppercase; }
+            #company-overview .content-card.main-card .main-card-top .data-card-buttons .button-gradient.disabled {
+              color: #C6C7C8; }
+        #company-overview .content-card.main-card .main-card-top .data-card-main {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          -moz-align-items: center;
+          align-items: center;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          -webkit-justify-content: space-between;
+          -moz-justify-content: space-between;
+          justify-content: space-between;
+          -webkit-flex-wrap: wrap;
+          -moz-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+          #company-overview .content-card.main-card .main-card-top .data-card-main-item {
+            margin-bottom: 2.5rem;
+            width: 50%; }
+            #company-overview .content-card.main-card .main-card-top .data-card-main-item-title {
+              margin-bottom: .4rem;
+              font-size: 1.1rem;
+              font-weight: 600;
+              line-height: 1.27;
+              color: #464c4f;
+              text-transform: uppercase; }
+            #company-overview .content-card.main-card .main-card-top .data-card-main-item-amount {
+              font-size: 1.35rem;
+              font-weight: 500;
+              line-height: 1.19;
+              letter-spacing: -0.1px;
+              color: #9fa1a2; }
+    #company-overview .content-card.main-card .main-card-bottom {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      -webkit-align-items: flex-start;
+      -moz-align-items: flex-start;
+      align-items: flex-start;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      justify-content: space-between; }
+      #company-overview .content-card.main-card .main-card-bottom .graph-card {
+        margin-bottom: 1.6em;
+        padding: .6em 1.4em 1.1em .7em;
+        width: 32%;
+        height: 15em;
+        border-radius: 3.5px;
+        box-shadow: 0 3px 6px 0 rgba(206, 206, 206, 0.29);
+        background-color: #ffffff; }
+        @media (max-width: 1000px) {
+          #company-overview .content-card.main-card .main-card-bottom .graph-card {
+            width: 48%; } }
+        @media (max-width: 750px) {
+          #company-overview .content-card.main-card .main-card-bottom .graph-card {
+            width: 100%; } }
+        #company-overview .content-card.main-card .main-card-bottom .graph-card-header {
+          padding-left: .5em;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis; }
+          #company-overview .content-card.main-card .main-card-bottom .graph-card-header-text {
+            font-size: 1.2em;
+            font-weight: 500;
+            letter-spacing: -0.06px;
+            color: #9fa1a2;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+            #company-overview .content-card.main-card .main-card-bottom .graph-card-header-text .strong {
+              font-weight: 600;
+              color: #4f606a; }
+        #company-overview .content-card.main-card .main-card-bottom .graph-card-body {
+          height: calc(100% - 2.733em); }
+        #company-overview .content-card.main-card .main-card-bottom .graph-card-footer-text {
+          padding-left: .5em;
+          font-size: 1.08em;
+          font-weight: 500;
+          color: #9fa1a2; }
 
 #company-employees .header-sub-nav,
 #company-teams .header-sub-nav,
