@@ -2111,14 +2111,14 @@ body {
         font-weight: 500;
         line-height: 1.02;
         letter-spacing: -0.21px;
-        color: #969696;
+        color: #8592ad;
       }
 
       &-title {
         font-size: 2.25em;
         font-weight: 500;
-        letter-spacing: -0.34px;
-        color: #353a48;
+        letter-spacing: -0.17px;
+        color: #172650;
       }
     }
   }
@@ -2364,7 +2364,7 @@ body {
       padding: 0 emcalc(2.5, 1.4);
       height: emcalc(3.6, 1.4);
       font-size: 1.4em;
-      letter-spacing: -0.07px;
+      letter-spacing: 0.04px;
 
       &-dark {
         display: none;
@@ -4679,17 +4679,17 @@ body {
       }
 
       & .more {
-        @include flexbox();
+        @include inline-flex();
         @include align-items(center);
         @include justify-content(center);
-        width: 2.7em;
-        height: 2.7em;
-        background-color: rgba($color: #bababa, $alpha: 0.15);
+        width: 3em;
+        height: 3em;
+        background-color: rgba(186, 186, 186, 0.15);
         border-radius: 50%;
-
+        
         & i {
-          font-size: 1.662em;
-          color: #818181;
+          font-size: 1.845em;
+          color:#818181;
         }
       }
 
@@ -5411,6 +5411,7 @@ body {
       margin: 0 auto;
       max-width: 82.5em;
       padding: 2.9em 2.9em 3.5em;
+      box-shadow: none;
 
       &:not(:last-of-type) {
         margin-bottom: 2em;
@@ -5490,6 +5491,7 @@ body {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            color: #212b41;
           }
 
           &-desc {
@@ -5502,14 +5504,14 @@ body {
             @include inline-flex();
             @include align-items(center);
             @include justify-content(center);
-            width: 2.57em;
-            height: 2.57em;
+            width: 3em;
+            height: 3em;
             background-color: rgba(186, 186, 186, 0.15);
             border-radius: 50%;
             
             & i {
-              font-size: 1.58em;
-              color: #818181;
+              font-size: 1.845em;
+              color:#818181;
             }
           }
         }
@@ -5522,6 +5524,9 @@ body {
         padding-left: 0;
         padding-right: 0;
         padding-bottom: 0;
+        border-radius: 12.5px;
+        box-shadow: 0 6px 12px 0 rgba(244, 244, 244, 0.36);
+        border: solid 1.5px rgba(228, 232, 236, 0.7);
 
         & .content-card-header {
           @include flex-direction(column);
@@ -5540,6 +5545,7 @@ body {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            color: #212b41;
           }
 
           &-bottom {
@@ -5572,11 +5578,13 @@ body {
               }
             }
 
+
+
             & .more:not(:last-of-type) {
               margin-right: 1.1em;
 
               & i {
-                font-size: 1.3em;
+                font-size: 1.4em;
               }
             }
           }
@@ -5625,7 +5633,7 @@ body {
             //width: 100%;
             opacity: 0;
             visibility: hidden;
-            padding: 2.8em 3.9em 0;
+            padding: 2.8em 3.8em 5.5em;
             padding-right: 3.8em;
             @include flexbox();
             @include flex-wrap(wrap);
@@ -5665,7 +5673,8 @@ body {
                   width: 7.25em;
                   height: 7.25em;
                   object-fit: contain;
-                  border-radius: 16px;
+                  border-radius: 13px;
+                  box-shadow: 0 3px 6px 0 rgba(221, 221, 221, 0.4);
                 }
 
                 &-icon {
@@ -11362,3 +11371,15 @@ body {
 // #three {
 //   background-color: green;
 // }
+
+
+.options {
+  &-link {
+    cursor: pointer;
+    &:not(.active) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
