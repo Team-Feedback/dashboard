@@ -9,13 +9,14 @@
 </head>
 
 <body>
-  <main class="auth" id="sign-in">
+  <main class="auth" id="reset-password-02">
     <img src="../public/img/logo-only.png" alt="Team Feedback logo" class="auth-logo" />
 
     <div class="auth-card">
-      <h2 class="auth-card-title">Sign in to Team Feedback</h2>
-      <div class="input-container pass">
-        <input type="emal" placeholder="Email" />
+      <h2 class="auth-card-title">Forgot password</h2>
+      <h3 class="auth-card-subtitle">We’ve sent you confirmation code to your email.</h3>
+      <div class="input-container">
+        <input type="text" placeholder="Confirmation code" />
         <i class="icon-check-circle"></i>
         <i class="icon-exclamation-circle"></i>
         <div class="show-password">
@@ -24,22 +25,12 @@
         </div>
       </div>
 
-      <div class="input-container">
-        <input type="password" placeholder="Password" />
-        <i class="icon-check-circle"></i>
-        <i class="icon-exclamation-circle"></i>
-        <div class="show-password">
-          <i class="icon-eye-open"></i>
-          <i class="icon-eye-closed"></i>
-        </div>
-      </div>
-      <button class="button-primary">Sign in</button>
+      <button class="button-primary" onclick="location.href='../auth-reset-password-03';">Confirm</button>
       <div class="auth-card-footer">
-        <button class="auth-card-link" onclick="location.href='../auth-reset-password-01';">Forgotten your
-          password?</button>
+        <button class="auth-card-link" onclick="location.href='../auth-sign-in';">Back to sign in</button>
         <p class="auth-card-text">
           Don’t have an account yet?
-          <a href="../auth-create-account/index.html">Create yours now.</a>
+          <a href="../auth-sign-in/index.html">Create yours now.</a>
         </p>
       </div>
     </div>

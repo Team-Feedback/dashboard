@@ -7844,6 +7844,37 @@ input {
   #sign-in .auth-card-link {
     margin-bottom: 1.0769230769em; }
 
+#reset-password-01 .auth-card,
+#reset-password-02 .auth-card,
+#reset-password-03 .auth-card {
+  padding-bottom: 5.3em;
+  width: 48em;
+  height: 48em;
+  transform: translate(-50%, -27em); }
+  #reset-password-01 .auth-card-title,
+  #reset-password-02 .auth-card-title,
+  #reset-password-03 .auth-card-title {
+    margin-bottom: 0.5714285714em; }
+  #reset-password-01 .auth-card-subtitle,
+  #reset-password-02 .auth-card-subtitle,
+  #reset-password-03 .auth-card-subtitle {
+    margin-bottom: 2.7536231884em; }
+  #reset-password-01 .auth-card .button-primary,
+  #reset-password-02 .auth-card .button-primary,
+  #reset-password-03 .auth-card .button-primary {
+    margin-bottom: 0.8125em; }
+  #reset-password-01 .auth-card-footer,
+  #reset-password-02 .auth-card-footer,
+  #reset-password-03 .auth-card-footer {
+    max-width: 32.8em;
+    margin-top: auto;
+    padding-top: 1.95em;
+    border-top: 1px solid #e2e2e2; }
+  #reset-password-01 .auth-card-link,
+  #reset-password-02 .auth-card-link,
+  #reset-password-03 .auth-card-link {
+    margin-bottom: 1.0769230769em; }
+
 #create-account .auth-card {
   padding-bottom: 8.2em;
   width: 48em;
