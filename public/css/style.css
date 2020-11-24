@@ -20,7 +20,7 @@
   --page-header-height-default: 13.2em;
   --page-header-height-compare: 8.25em;
   --table-head-row-height: 3.4em;
-  --table-body-row-height: 4.6em; }
+  --table-body-row-height: 4.65em; }
 
 @font-face {
   font-family: 'dashoard-icons';
@@ -361,6 +361,43 @@ input {
     letter-spacing: -0.03px;
     background-color: #17d624;
     border: 1px solid #17d624; }
+
+.animated-input {
+  position: relative;
+  background-color: rgba(186, 186, 186, 0.15);
+  border-radius: 1.5em; }
+  .animated-input input {
+    position: relative;
+    width: 2.3076923077em;
+    height: 2.3076923077em;
+    font-size: 1.3em;
+    font-weight: 400;
+    background-color: transparent;
+    border: 0;
+    z-index: 50;
+    transition: all .3s ease-in-out; }
+    .animated-input input::placeholder {
+      visibility: hidden;
+      opacity: 0;
+      color: #5f6677; }
+    .animated-input input:focus {
+      width: 20em;
+      padding-left: 2.5em; }
+    .animated-input input:focus::placeholder {
+      visibility: visible;
+      opacity: 1;
+      transition: all .2s ease-in-out .2s; }
+    .animated-input input:focus + i {
+      left: 0.8em; }
+  .animated-input i {
+    position: absolute;
+    top: 50%;
+    left: 0.5357142857em;
+    transform: translate(0, -50%);
+    font-size: 1.4em;
+    color: #818181;
+    z-index: 10;
+    transition: left .3s ease-in-out; }
 
 .page-header {
   display: -webkit-box;
@@ -2254,6 +2291,63 @@ input {
         font-weight: 500;
         color: #ffffff; }
 
+#newQuestionModal .custom-modal {
+  width: 63.4em; }
+  #newQuestionModal .custom-modal-body {
+    padding: 4.9em 6.6em 5.1em 5.6em; }
+    #newQuestionModal .custom-modal-body-title {
+      margin-bottom: 0.7222222222em; }
+    #newQuestionModal .custom-modal-body-subtitle {
+      margin-bottom: 2.3846153846em;
+      font-size: 1.3em;
+      font-weight: 400;
+      color: #647282; }
+    #newQuestionModal .custom-modal-body-label {
+      margin-bottom: 0.6779661017em;
+      font-size: 1.18em;
+      font-weight: 600;
+      letter-spacing: -0.12px;
+      color: #6b778b; }
+    #newQuestionModal .custom-modal-body .buttons {
+      margin-bottom: 2.5em; }
+      #newQuestionModal .custom-modal-body .buttons .button {
+        padding: 0 1.171875em;
+        height: 2.65625em;
+        font-size: 1.28em;
+        font-weight: 400;
+        letter-spacing: -0.06px;
+        border-radius: 3px;
+        border: 0; }
+        #newQuestionModal .custom-modal-body .buttons .button i {
+          margin-right: .7rem;
+          font-size: 1.40625em; }
+        #newQuestionModal .custom-modal-body .buttons .button:first-of-type {
+          margin-right: 0.9375em; }
+        #newQuestionModal .custom-modal-body .buttons .button.star-rating {
+          background-color: #6b778b;
+          color: #FFF; }
+        #newQuestionModal .custom-modal-body .buttons .button.text-entry {
+          background-color: #f5f6f8;
+          color: #2e3848; }
+    #newQuestionModal .custom-modal-body input {
+      margin-bottom: 3.28125em;
+      padding: 0 1.171875em;
+      display: block;
+      width: 100%;
+      height: 3.125em;
+      font-size: 1.28em;
+      font-weight: 400;
+      letter-spacing: -0.06px;
+      color: #4c5055;
+      border-radius: 4px;
+      border: solid 1.5px #dfe1e6; }
+    #newQuestionModal .custom-modal-body .button-primary {
+      padding: 0 1.796875em;
+      height: 2.65625em;
+      font-size: 1.28em;
+      font-weight: 500;
+      letter-spacing: -0.13px; }
+
 #feedbackTransferModal {
   z-index: 11000; }
   #feedbackTransferModal .custom-modal {
@@ -2949,8 +3043,40 @@ input {
   .settings-table-row:not(:last-of-type) {
     border-bottom: 1px solid #e4e8ec; }
   .settings-table-row-column-01 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    justify-content: flex-start;
+    width: 100%;
     margin-right: auto; }
   .settings-table-row-column-02 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+    justify-content: flex-end;
+    width: 100%;
     margin-right: 2em; }
   .settings-table-row.row-01, .settings-table-row.row-02, .settings-table-row.row-06 {
     height: 7.1em; }
@@ -2991,9 +3117,7 @@ input {
   color: #ffa800; }
 .settings-table .settings-input {
   padding: 0.5rem 1.1rem;
-  min-width: 0;
   width: 100%;
-  max-width: 20.5rem;
   height: 3.4rem;
   font-size: 1.23rem;
   line-height: 1.22;
@@ -3001,12 +3125,10 @@ input {
   color: #2d3640;
   outline: none;
   border-radius: 4px;
-  border: solid 1px #cfd7e0;
-  min-width: 0; }
+  border: solid 1px #cfd7e0; }
   .settings-table .settings-input::placeholder {
     color: #c6c6c6; }
   .settings-table .settings-input.desc {
-    width: 100%;
     max-width: 40rem; }
     .settings-table .settings-input.desc.empty::placeholder {
       color: #c6c6c6 !important; }
@@ -3551,7 +3673,7 @@ input {
         font-size: 1.845em;
         color: #818181; }
     .content-card .content-card-header .options {
-      margin-bottom: 2.4em;
+      margin-bottom: 2.3em;
       display: -webkit-box;
       display: -webkit-flex;
       display: -moz-flex;
@@ -3563,7 +3685,7 @@ input {
       -moz-align-items: center;
       align-items: center; }
       .content-card .content-card-header .options-link {
-        font-size: 1.35em;
+        font-size: 1.3em;
         font-weight: 400;
         line-height: 1.19;
         letter-spacing: -0.03px;
@@ -3572,8 +3694,8 @@ input {
         .content-card .content-card-header .options-link.active {
           font-weight: 600; }
       .content-card .content-card-header .options-divider {
-        margin: 0 0.4615384615em;
-        font-size: 1.35em;
+        margin: 0 0.3846153846em;
+        font-size: 1.30em;
         color: #435365; }
   .content-card-input-container {
     position: relative;
@@ -4403,14 +4525,12 @@ input {
               #home-temp .content-card.my-people .content-card-header-bottom .options-link.active {
                 font-weight: 600; }
             #home-temp .content-card.my-people .content-card-header-bottom .options-divider {
-              margin: 0 0.5769230769em;
+              margin: 0 0.6153846154em;
               font-size: 1.3em;
               font-weight: 400;
               color: #5f6677; }
-          #home-temp .content-card.my-people .content-card-header-bottom .more:not(:last-of-type) {
+          #home-temp .content-card.my-people .content-card-header-bottom .animated-input {
             margin-right: 1.1em; }
-            #home-temp .content-card.my-people .content-card-header-bottom .more:not(:last-of-type) i {
-              font-size: 1.4em; }
       #home-temp .content-card.my-people .content-card-input-container {
         margin-left: 3em;
         margin-right: 3em; }
@@ -4778,6 +4898,10 @@ input {
 
 #custom-questions-team .content-card .add-custom-question-button {
   margin-bottom: 2.03125em; }
+#custom-questions-team .content-card-header .options {
+  margin-bottom: 0; }
+  #custom-questions-team .content-card-header .options-link {
+    font-size: 1.25em; }
 
 #company-overview .header-nav svg {
   display: none; }
@@ -5086,6 +5210,15 @@ input {
       -moz-align-items: flex-start;
       align-items: flex-start;
       z-index: 20; }
+      #company-employees .content-card-header .options-link,
+      #company-teams .content-card-header .options-link,
+      #company-admin-rights .content-card-header .options-link,
+      #team-settings-members .content-card-header .options-link,
+      #team-settings-lead .content-card-header .options-link,
+      #team-settings-viewing-rights .content-card-header .options-link,
+      #team-settings-admin-rights .content-card-header .options-link,
+      #team-members-table .content-card-header .options-link {
+        font-size: 1.3em; }
       #company-employees .content-card-header-title,
       #company-teams .content-card-header-title,
       #company-admin-rights .content-card-header-title,
@@ -5098,7 +5231,8 @@ input {
         font-size: 1.75em;
         font-weight: 600;
         line-height: 1.2;
-        letter-spacing: normal; }
+        letter-spacing: normal;
+        color: #172b4d; }
         #company-employees .content-card-header-title span,
         #company-teams .content-card-header-title span,
         #company-admin-rights .content-card-header-title span,
@@ -5338,7 +5472,7 @@ input {
     padding: 3.9em;
     padding-left: 4.1em;
     padding-bottom: 0;
-    padding-top: 0;
+    padding-top: 3.5em;
     max-width: 89.9em;
     border-radius: 6px;
     max-height: 100%;
@@ -5352,7 +5486,7 @@ input {
       width: 0;
       height: 0; }
     #team-settings-general .content-card-header {
-      padding-top: 3.9em;
+      padding-top: 0em;
       position: sticky;
       position: -webkit-sticky;
       position: -moz-sticky;
@@ -5436,7 +5570,8 @@ input {
         font-size: 1.75em;
         font-weight: 600;
         line-height: 1.2;
-        letter-spacing: normal; }
+        letter-spacing: normal;
+        color: #172b4d; }
         #company-settings-general .content-card-header-title span {
           font-weight: 400; }
       #company-settings-general .content-card-header-caption-text {
@@ -5872,8 +6007,9 @@ input {
   height: 100%; }
   #team-members-grid .content-card {
     position: relative;
-    padding: 2.2em 3em;
+    padding: 2.2em 3.1em;
     padding-top: 0;
+    border-radius: 6px;
     max-height: 100%;
     overflow-y: auto;
     scrollbar-width: none;
@@ -5893,7 +6029,7 @@ input {
         font-size: 2em;
         color: #5c6f83; }
     #team-members-grid .content-card-header {
-      padding-top: 2.2em;
+      padding-top: 2em;
       position: sticky;
       position: -webkit-sticky;
       position: -moz-sticky;
@@ -5923,7 +6059,7 @@ input {
         margin-bottom: 0.6857142857em;
         font-size: 1.75em;
         font-weight: 600;
-        color: var(--color-black); }
+        color: #172b4d; }
       #team-members-grid .content-card-header .options {
         margin-bottom: 1.4em; }
       #team-members-grid .content-card-header .content-card-input-container {

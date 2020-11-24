@@ -193,8 +193,42 @@
             target-modal="inviteNewUsersModal">
             Invite new users
           </button>
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;"
+            target-modal="newQuestionModal">
+            New question
+          </button>
         </div>
       </div>
+    </div>
+
+    <!-- NEW QUESTION MODAL -->
+    <div class="custom-modal-wrapper" id="newQuestionModal">
+      <div class="custom-modal">
+        <!-- Modal body -->
+        <div class="custom-modal-body">
+          <div class="custom-modal-close" close-modal="newQuestionModal">
+            <i class="icon-close"></i>
+          </div>
+          <p class="custom-modal-body-title">Add new question</p>
+          <p class="custom-modal-body-subtitle">Team Marketing - P2P Feedback</p>
+          <p class="custom-modal-body-label">Select type</p>
+          <div class="buttons">
+            <button class="button star-rating">
+              <i class="icon-star"></i>
+              Star rating
+            </button>
+            <button class="button text-entry">
+              <i class="icon-short-text"></i>
+              Text entry
+            </button>
+          </div>
+          <p class="custom-modal-body-label">Enter question</p>
+          <input type="text" placeholder="How could we be more productive in our team?">
+
+          <button class="button button-primary">Add question</button>
+        </div>
+      </div>
+      <div class="custom-modal-backdrop"></div>
     </div>
 
     <div class="custom-modal-wrapper" id="teamFeedbackModal">
