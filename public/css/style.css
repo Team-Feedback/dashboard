@@ -711,6 +711,27 @@ input {
         font-weight: 600;
         letter-spacing: -0.06px;
         color: #6a7c8f; }
+  .custom-dropdown.default .custom-dropdown-menu {
+    bottom: -.8em;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    border: solid 1px #EFEFEF;
+    overflow: hidden; }
+    .custom-dropdown.default .custom-dropdown-menu-item {
+      width: 100%;
+      height: 3.6em;
+      background-color: #FFF;
+      text-align: center; }
+      .custom-dropdown.default .custom-dropdown-menu-item:not(:last-of-type) {
+        border-bottom: 1px solid #efefef; }
+      .custom-dropdown.default .custom-dropdown-menu-item:hover {
+        background-color: #f1f3f4; }
+      .custom-dropdown.default .custom-dropdown-menu-item-link {
+        height: 100%;
+        padding: 0 3.3082706767em;
+        font-size: 1.33em;
+        font-weight: 400;
+        color: #202124; }
   .custom-dropdown.user-dropdown .custom-dropdown-menu {
     width: 26em;
     border-radius: 5px;
@@ -1602,7 +1623,6 @@ input {
   #modalCard .section-header {
     position: relative;
     padding-left: 1.3em;
-    padding-right: 1.9em;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;
@@ -1636,10 +1656,15 @@ input {
       cursor: pointer; }
       #modalCard .section-header-toggle i {
         font-size: 0.7079646018em; }
-    #modalCard .section-header .custom-dropdown-trigger .icon-caret-down {
-      margin-top: -0.1em;
-      margin-left: 0.2rem;
-      font-size: 0.5752212389em; }
+    #modalCard .section-header .custom-dropdown {
+      padding-right: 1.9em;
+      height: 100%; }
+      #modalCard .section-header .custom-dropdown .custom-dropdown-trigger {
+        height: 100%; }
+        #modalCard .section-header .custom-dropdown .custom-dropdown-trigger .icon-caret-down {
+          margin-top: -0.1em;
+          margin-left: 0.2rem;
+          font-size: 0.5752212389em; }
   #modalCard .feedback-wrapper {
     display: -webkit-box;
     display: -webkit-flex;

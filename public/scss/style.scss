@@ -1567,6 +1567,41 @@ input {
     }
   }
 
+  //DEFAULT DROPDOWN
+  &.default {
+
+    & .custom-dropdown-menu {
+      bottom: -.8em;
+      border-radius: 4px;
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+      border: solid 1px #EFEFEF;
+      overflow: hidden;
+
+      &-item {
+        width: 100%;
+        height: 3.6em;
+        background-color: #FFF;
+        text-align: center;
+
+        &:not(:last-of-type) {
+          border-bottom: 1px solid #efefef;
+        }
+
+        &:hover {
+          background-color: #f1f3f4;
+        }
+
+        &-link {
+          height: 100%;
+          padding: 0 emcalc(4.4,1.33);
+          font-size: 1.33em;
+          font-weight: 400;
+          color: #202124;
+        }
+      }
+    }
+  }
+
   //USER DROPDOWN
   &.user-dropdown {
     & .custom-dropdown-menu {
@@ -2511,7 +2546,7 @@ input {
   & .section-header {
     position: relative;
     padding-left: 1.3em;
-    padding-right: 1.9em;
+
     @include flexbox();
     @include align-items(center);
     @include justify-content(space-between);
@@ -2542,11 +2577,16 @@ input {
       }
     }
 
-    & .custom-dropdown-trigger {
-      & .icon-caret-down {
-        margin-top: -0.1em;
-        margin-left: 0.2rem;
-        font-size: emcalc(0.65, 1.13);
+    & .custom-dropdown {
+      padding-right: 1.9em;
+      height: 100%;
+      & .custom-dropdown-trigger {
+        height: 100%;
+        & .icon-caret-down {
+          margin-top: -0.1em;
+          margin-left: 0.2rem;
+          font-size: emcalc(0.65, 1.13);
+        }
       }
     }
   }
