@@ -2456,7 +2456,8 @@ input {
   #inviteMembersModal .custom-modal-body {
     max-height: calc(100% - 6.8em);
     padding: 3.2em 2.5em;
-    padding-bottom: 0; }
+    padding-bottom: 0;
+    z-index: 1; }
     #inviteMembersModal .custom-modal-body-label:nth-of-type(2) {
       margin-bottom: 0; }
     #inviteMembersModal .custom-modal-body .search-dropdown {
@@ -2616,6 +2617,7 @@ input {
           font-weight: 500;
           color: #f90824; }
   #inviteMembersModal .custom-modal-footer {
+    z-index: 0;
     padding: 0 2.8em;
     position: relative;
     -webkit-box-pack: end;
