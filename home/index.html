@@ -11,15 +11,109 @@
 
 <body>
 
-  <main class="main" id="home">
+  <main class="main" id="home-temp">
     <!-- Header -->
     <div class="header small">
       <!-- Buttons -->
       <div class="header-buttons">
         <div class="header-buttons-settings"><i class="icon-cog"></i></div>
         <div class="header-buttons-help"><i class="icon-question"></i></div>
-        <div class="header-buttons-notifications"><i class="icon-bell"></i></div>
-        <div class="header-buttons-initials">M</div>
+        <!-- NOTIFICATION DROPDOWN -->
+        <div class="custom-dropdown notification-dropdown">
+          <div class="custom-dropdown-trigger" tabindex="-1" onclick="this.focus()">
+            <i class="icon-bell"></i>
+          </div>
+
+          <ul class="custom-dropdown-menu">
+            <li class="custom-dropdown-menu-title-big">
+              <p class="custom-dropdown-menu-title-big-text">
+                Notifications (4)
+              </p>
+            </li>
+            <li class="custom-dropdown-menu-title-small">
+              <p class="custom-dropdown-menu-title-small-text">
+                Invitations / Rights
+              </p>
+            </li>
+            <li class="custom-dropdown-menu-notifications">
+              <div class="notification">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="notification-img" />
+                <div class="notification-main">
+                  <p class="notification-main-text">
+                    Abdula Ahmed wants to invite you to become a
+                    <span>member</span> of the team <span>salsa-kings</span>
+                  </p>
+                  <div class="notification-main-buttons">
+                    <button class="notification-button confirm">
+                      Confirm
+                    </button>
+                    <button class="notification-button deny">Deny</button>
+                  </div>
+                  <p class="notification-main-time">1 Day ago</p>
+                </div>
+              </div>
+
+              <div class="notification">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="notification-img" />
+                <div class="notification-main">
+                  <p class="notification-main-text">
+                    Abdula Ahmed wants to invite you to become a
+                    <span>member</span> of the team <span>salsa-kings</span>
+                  </p>
+                  <div class="notification-main-buttons">
+                    <button class="button notification-button confirm">
+                      Confirm
+                    </button>
+                    <button class="button notification-button deny">
+                      Deny
+                    </button>
+                  </div>
+                  <p class="notification-main-time">1 Day ago</p>
+                </div>
+              </div>
+
+              <div class="notification">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="notification-img" />
+                <div class="notification-main">
+                  <p class="notification-main-text">
+                    Abdula Ahmed wants to invite you to become a
+                    <span>member</span> of the team <span>salsa-kings</span>
+                  </p>
+                  <div class="notification-main-buttons">
+                    <button class="button notification-button confirm">
+                      Confirm
+                    </button>
+                    <button class="button notification-button deny">
+                      Deny
+                    </button>
+                  </div>
+                  <p class="notification-main-time">1 Day ago</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="custom-dropdown user-dropdown">
+          <button class="custom-dropdown-trigger initials" tabindex="-1" onclick="this.focus()">
+            M
+          </button>
+          <ul class="custom-dropdown-menu">
+            <li class="user-dropdown-menu-header">
+              <div class="user-dropdown-menu-header-set">
+                <div class="user-dropdown-menu-header-set-initials">M</div>
+                <div class="user-dropdown-menu-header-set-upload">
+                  <i class="icon-camera"></i>
+                </div>
+              </div>
+              <p class="user-dropdown-menu-header-title">Max Matinpalo</p>
+              <p class="user-dropdown-menu-header-desc">
+                Click here to add your job title
+              </p>
+            </li>
+            <li class="user-dropdown-menu-item">Open user settings</li>
+            <li class="user-dropdown-menu-item">Sign out</li>
+          </ul>
+        </div>
       </div>
 
       <!-- Header top -->
@@ -154,87 +248,135 @@
       <div class="content">
         <!-- My teams card -->
         <div class="content-card my-teams">
-          <div class="content-card-header">
-            <p class="content-card-header-title">My Teams</p>
-            <div class="more">
-              <i class="icon-ellipsis"></i>
-            </div>
-          </div>
           <div class="content-card-main">
-            <div class="color-card green">
-              <p class="color-card-subtitle">Team lead</p>
-              <p class="color-card-title">Team Marketing</p>
-              <div class="color-card-buttons">
-                <div class="more">
-                  <i class="icon-ellipsis"></i>
-                </div>
-
-                <div class="next">
-                  <i class="icon-arrow-right"></i>
-                </div>
+            <div class="color-card">
+              <div class="color-card-content">
+                <p class="color-card-title">Team Marketing</p>
+                <p class="color-card-desc">This is an example description oh the sales team.</p>
+              </div>
+              <div class="more">
+                <i class="icon-ellipsis"></i>
               </div>
             </div>
 
-            <div class="color-card orange">
-              <p class="color-card-subtitle">Team lead</p>
-              <p class="color-card-title">Team Management</p>
-              <div class="color-card-buttons">
-                <div class="more">
-                  <i class="icon-ellipsis"></i>
-                </div>
-
-                <div class="next">
-                  <i class="icon-arrow-right"></i>
-                </div>
+            <div class="color-card">
+              <div class="color-card-content">
+                <p class="color-card-title">Team Sales</p>
+                <p class="color-card-desc">This is an example description oh the sales team.</p>
+              </div>
+              <div class="more">
+                <i class="icon-ellipsis"></i>
               </div>
             </div>
-            <!-- <div class="color-card green">
-                            <p class="color-card-subtitle">Team lead</p>
-                            <p class="color-card-title">Team Marketing</p>
-                            <div class="color-card-buttons">
-                                <div class="more">
-                                    <i class="icon-ellipsis"></i>
-                                </div>
-    
-                                <div class="next">
-                                    <i class="icon-arrow-right"></i>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="color-card orange">
-                            <p class="color-card-subtitle">Team lead</p>
-                            <p class="color-card-title">Team Management</p>
-                            <div class="color-card-buttons">
-                                <div class="more">
-                                    <i class="icon-ellipsis"></i>
-                                </div>
-    
-                                <div class="next">
-                                    <i class="icon-arrow-right"></i>
-                                </div>
-                            </div>
-                        </div> -->
           </div>
         </div>
         <!-- My people card -->
         <div class="content-card my-people">
           <div class="content-card-header">
-            <p class="content-card-header-title">My People</p>
-            <div class="more">
-              <i class="icon-ellipsis"></i>
-            </div>
-          </div>
+            <p class="content-card-header-title">Give feedback</p>
+            <div class="content-card-header-bottom">
+              <div class="options">
+                <p class="options-link active">To your colleagues</p>
+                <span class="options-divider">I</span>
+                <p class="options-link">To your subordinates</p>
+                <span class="options-divider">I</span>
+                <p class="options-link">To your supervisor</p>
+                <span class="options-divider">I</span>
+                <p class="options-link">To yourself</p>
+              </div>
 
-          <div class="content-card-input-container">
-            <input type="text" placeholder="Search">
-            <i class="icon-search"></i>
+              <div class="animated-input">
+                <input type="text" placeholder="Search...">
+                <i class="icon-search"></i>
+              </div>
+              <div class="more">
+                <i class="icon-ellipsis"></i>
+              </div>
+            </div>
           </div>
 
           <div class="content-card-main">
             <div class="people-arrow right"><i class="icon-chevron-right"></i></div>
             <div class="people-arrow left" style="display: none;"><i class="icon-chevron-left"></i></div>
             <div class="people active" slide="people-01">
+              <div class="person">
+                <div class="person-main">
+                  <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+                  <div class="person-main-icon">
+                    <i class="icon-thumbs-up"></i>
+                  </div>
+                </div>
+                <div class="person-info">
+                  <p class="person-info-name">Abdul Aba</p>
+                  <p class="person-info-position">Product development</p>
+                </div>
+              </div>
+
+              <div class="person">
+                <div class="person-main">
+                  <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+                  <div class="person-main-icon">
+                    <i class="icon-exclamation-circle"></i>
+                  </div>
+                </div>
+                <div class="person-info">
+                  <p class="person-info-name">Peter Smith</p>
+                  <p class="person-info-position">Chief Marketing Of Something</p>
+                </div>
+              </div>
+
+              <div class="person">
+                <div class="person-main">
+                  <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+                  <div class="person-main-icon">
+                    <span class="ok">OK</span>
+                  </div>
+                </div>
+                <div class="person-info">
+                  <p class="person-info-name">John Brown</p>
+                  <p class="person-info-position">Sales Africa</p>
+                </div>
+              </div>
+
+              <div class="person">
+                <div class="person-main">
+                  <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+                  <div class="person-main-icon">
+                    <i class="icon-thumbs-up"></i>
+                  </div>
+                </div>
+                <div class="person-info">
+                  <p class="person-info-name">Abdul Aba</p>
+                  <p class="person-info-position">Product development</p>
+                </div>
+              </div>
+
+              <div class="person">
+                <div class="person-main">
+                  <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+                  <div class="person-main-icon">
+                    <i class="icon-exclamation-circle"></i>
+                  </div>
+                </div>
+                <div class="person-info">
+                  <p class="person-info-name">Peter Smith</p>
+                  <p class="person-info-position">Chief Marketing Of Something</p>
+                </div>
+              </div>
+
+              <div class="person">
+                <div class="person-main">
+                  <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+                  <div class="person-main-icon">
+                    <span class="ok">OK</span>
+                  </div>
+                </div>
+                <div class="person-info">
+                  <p class="person-info-name">John Brown</p>
+                  <p class="person-info-position">Sales Africa</p>
+                </div>
+              </div>
+
               <div class="person">
                 <div class="person-main">
                   <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
@@ -549,147 +691,6 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <!-- My feedback card -->
-        <div class="content-card my-feedback">
-          <div class="content-card-header">
-            <p class="content-card-header-title">My Feedback</p>
-            <div class="more">
-              <i class="icon-ellipsis"></i>
-            </div>
-          </div>
-
-          <div class="content-card-main">
-            <div class="progress">
-              <div class="progress-header">
-                <p class="progress-header-title">Attitude</p>
-                <p class="progress-header-amount">Great</p>
-              </div>
-              <div class="progress-bar">
-                <div class="progress-bar-fill" style="width: 70%;"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <div class="progress-header">
-                <p class="progress-header-title">Productivity</p>
-                <p class="progress-header-amount">Great</p>
-              </div>
-              <div class="progress-bar">
-                <div class="progress-bar-fill" style="width: 70%;"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <div class="progress-header">
-                <p class="progress-header-title">Teamworking</p>
-                <p class="progress-header-amount">Great</p>
-              </div>
-              <div class="progress-bar">
-                <div class="progress-bar-fill" style="width: 70%;"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <div class="progress-header">
-                <p class="progress-header-title">Leading team</p>
-                <p class="progress-header-amount">Great</p>
-              </div>
-              <div class="progress-bar">
-                <div class="progress-bar-fill" style="width: 70%;"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Todo card -->
-        <div class="content-card todo-card">
-          <div class="content-card-header">
-            <p class="content-card-header-title">To do list</p>
-            <div class="more">
-              <i class="icon-ellipsis"></i>
-            </div>
-          </div>
-
-          <div class="content-card-main">
-            <div class="todo">
-              <ul class="todo-list">
-                <li class="todo-list-item">
-                  <div class="todo-list-item-icon">
-                    <i class="icon-users"></i>
-                  </div>
-                  <div class="todo-list-item-info">
-                    <p class="todo-list-item-info-subtitle">Team Feedback</p>
-                    <p class="todo-list-item-info-title">Team React Native</p>
-                  </div>
-                  <i class="icon-chevron-right"></i>
-                </li>
-
-                <li class="todo-list-item">
-                  <img src="../public/img/p-01.png" alt="User's profile picture" class="todo-list-item-img" />
-                  <div class="todo-list-item-info">
-                    <p class="todo-list-item-info-subtitle">
-                      Peer to peer feedback
-                    </p>
-                    <p class="todo-list-item-info-title">Peter Smith</p>
-                  </div>
-                  <i class="icon-chevron-right"></i>
-                </li>
-
-                <li class="todo-list-item">
-                  <div class="todo-list-item-initials">MM</div>
-                  <div class="todo-list-item-info">
-                    <p class="todo-list-item-info-subtitle">
-                      Peer to peer feedback
-                    </p>
-                    <p class="todo-list-item-info-title">Peter Smith</p>
-                  </div>
-                  <i class="icon-chevron-right"></i>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- New feedback card -->
-        <div class="content-card new-feedback">
-          <div class="content-card-header">
-            <p class="content-card-header-title">New Feedback</p>
-            <div class="more">
-              <i class="icon-ellipsis"></i>
-            </div>
-          </div>
-          <div class="content-card-main">
-
-            <div class="new-feedback-item">
-              <div class="new-feedback-item-initials" style="background-color: #0ab8ff;">MF</div>
-              <div class="new-feedback-item-set">
-                <p class="new-feedback-item-set-improv">
-                  <span class="new-feedback-item-set-improv-strong">I:</span>
-                  Test task that you’re subscribed to in an feedback app is due today like this.
-                </p>
-                <p class="new-feedback-item-set-info">Maria Fernandez, 2 hours ago</p>
-              </div>
-              <div class="more">
-                <i class="icon-ellipsis"></i>
-              </div>
-            </div>
-
-            <div class="new-feedback-item">
-              <div class="new-feedback-item-initials" style="background-color: #fd7622;">AJ</div>
-              <div class="new-feedback-item-set">
-                <p class="new-feedback-item-set-improv">
-                  <span class="new-feedback-item-set-improv-strong">I:</span>
-                  Test task that you’re subscribed to in an feedback app is due today like this.
-                </p>
-                <p class="new-feedback-item-set-info">Alfred James, 2 hours ago</p>
-              </div>
-              <div class="more">
-                <i class="icon-ellipsis"></i>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
