@@ -391,7 +391,7 @@ input {
       left: 0.8em; }
   .animated-input i {
     position: absolute;
-    top: 50%;
+    top: 49%;
     left: 0.5357142857em;
     transform: translate(0, -50%);
     font-size: 1.4em;
@@ -753,8 +753,6 @@ input {
     -webkit-justify-content: center;
     -moz-justify-content: center;
     justify-content: center;
-    width: 3em;
-    height: 3em;
     border-radius: 50%; }
     .custom-dropdown.half-line .custom-dropdown-trigger i {
       font-size: 1.35em;
@@ -772,6 +770,8 @@ input {
       padding-left: 3.8em;
       width: 100%;
       height: 4.2em; }
+      .custom-dropdown.half-line .custom-dropdown-menu-item.checked .custom-dropdown-menu-item-icon {
+        display: block; }
       .custom-dropdown.half-line .custom-dropdown-menu-item:not(:last-of-type) .custom-dropdown-menu-item-link {
         border-bottom: solid 1px #e4e6e9; }
       .custom-dropdown.half-line .custom-dropdown-menu-item:not(:last-of-type):before {
@@ -799,6 +799,15 @@ input {
         font-weight: 400;
         color: #202124;
         text-align: left; }
+      .custom-dropdown.half-line .custom-dropdown-menu-item-icon {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 1.4em;
+        transform: translate(0, -50%); }
+        .custom-dropdown.half-line .custom-dropdown-menu-item-icon i {
+          font-size: 1.2em;
+          color: #000; }
   .custom-dropdown.user-dropdown .custom-dropdown-menu {
     width: 26em;
     border-radius: 5px;
@@ -2880,6 +2889,9 @@ input {
         .custom-table-body .custom-table-row:hover td.column-05 .custom-dropdown {
           visibility: visible;
           opacity: 1; }
+      .custom-table-body .custom-table-row td.column-05 .custom-dropdown-trigger {
+        width: 3em;
+        height: 3em; }
   .custom-table-row {
     display: -webkit-box;
     display: -webkit-flex;
@@ -5824,12 +5836,13 @@ input {
             border-radius: 4px;
             border: solid 1.5px rgba(223, 225, 230, 0.62); }
             #give-feedback .content-card .caption-bottom .buttons .button.search {
+              margin-right: 0.8888888889em;
               padding: 0;
               width: 2.6666666667em; }
               #give-feedback .content-card .caption-bottom .buttons .button.search i {
                 color: #5c6479; }
-            #give-feedback .content-card .caption-bottom .buttons .button:not(:last-of-type) {
-              margin-right: 0.8888888889em; }
+          #give-feedback .content-card .caption-bottom .buttons .custom-dropdown:not(:last-of-type) {
+            margin-right: 0.8888888889em; }
     #give-feedback .content-card .todo {
       margin: 0 9em;
       margin-bottom: 0;

@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Team Feedback | Company | Teams</title>
+  <title>Team Feedback | Company | Employees</title>
   <link rel="stylesheet" href="../public/css/style.css">
 </head>
 
 <body>
 
-  <main class="main" id="company-teams">
+  <main class="main" id="company-employees">
     <!-- Header -->
     <div class="header small">
       <!-- Buttons -->
@@ -60,7 +60,7 @@
               </g>
             </svg>
           </li>
-          <li class="header-nav-list-item">
+          <li class="header-nav-list-item active">
             <button onclick="location.href='../company-employees';" class="header-nav-list-item-text"
               text="Employees">Employees</button>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 15">
@@ -77,7 +77,7 @@
               </g>
             </svg>
           </li>
-          <li class="header-nav-list-item active">
+          <li class="header-nav-list-item">
             <button onclick="location.href='../company-teams';" class="header-nav-list-item-text"
               text="Teams">Teams</button>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 15">
@@ -223,11 +223,11 @@
         <div class="content-card">
           <div class="fake-card"></div>
           <div class="content-card-header">
-            <p class="content-card-header-title">Teams</p>
+            <p class="content-card-header-title">Employees <span>(243)</span></p>
             <div class="options">
-              <button class="options-link active">Active teams</button>
+              <button class="options-link">Active employees</button>
               <span class="options-divider">I</span>
-              <button class="options-link">Archived teams</button>
+              <button class="options-link active">Archived employees</button>
             </div>
             <div class="content-card-header-bottom">
               <div class="content-card-input-container">
@@ -244,19 +244,19 @@
                   <thead class="custom-table-head">
                     <tr class="custom-table-row">
                       <th class="column-01 active">
-                        <p>Team name</p>
+                        <p>Name</p>
                         <i class="icon-caret-down"></i>
                       </th>
                       <th class="column-02">
-                        <p>Team description</p>
+                        <p>Email</p>
                         <i class="icon-caret-down"></i>
                       </th>
                       <th class="column-03">
-                        <p>Team lead</p>
+                        <p>Job title</p>
                         <i class="icon-caret-down"></i>
                       </th>
                       <th class="column-04">
-                        <p>Members</p>
+                        <p>Status</p>
                         <i class="icon-caret-down"></i>
                       </th>
                       <th class="column-05"></th>
@@ -267,42 +267,456 @@
               <div class="custom-table-wrapper-body">
                 <table class="custom-table with-border">
                   <tbody class="custom-table-body">
+                    <tr class="custom-table-row">
+                      <td class="column-01">
+                        <p>Johan Sebastian Bing</p>
+                      </td>
+                      <td class="column-02">
+                        <p>johan.sebastian@gmail.com</p>
+                      </td>
+                      <td class="column-03">
+                        <input class="td-input" type="text" placeholder="Add job title" />
+                      </td>
+                      <td class="column-04 active">
+                        <p>Active</p>
+                      </td>
+                      <td class="column-05">
+                        <div class="custom-dropdown half-line">
+                          <button class="custom-dropdown-trigger">
+                            <i class="icon-ellipsis"></i>
+                          </button>
 
-                    <!-- <tr class="table-placeholder">
-                                    <td colspan="100%">
-                                      <img src="../public/img/table-placeholder-img-02.png" alt="Clip art" class="table-placeholder-img">
-                                      <p class="table-placeholder-title">No teams connected to this company yet</p>
-                                      <p class="table-placeholder-text">Click <button>here</button> to see how teams are connected.</p>
+                          <div class="custom-dropdown-menu">
+                            <div class="custom-dropdown-menu-item">
+                              <button class="custom-dropdown-menu-item-link">
+                                View profile
+                              </button>
+                            </div>
+                            <div class="custom-dropdown-menu-item">
+                              <button class="custom-dropdown-menu-item-link">
+                                Restore employee
+                              </button>
+                            </div>
+                            <div class="custom-dropdown-menu-item delete">
+                              <button class="custom-dropdown-menu-item-link">
+                                Archive employee
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr class="custom-table-row">
+                      <td class="column-01">
+                        <p>Johan Sebastian Bing</p>
+                      </td>
+                      <td class="column-02">
+                        <p>johan.sebastian@gmail.com</p>
+                      </td>
+                      <td class="column-03">
+                        <input class="td-input" type="text" placeholder="Add job title" />
+                      </td>
+                      <td class="column-04 active">
+                        <p>Active</p>
+                      </td>
+                      <td class="column-05">
+                        <div class="custom-dropdown half-line">
+                          <button class="custom-dropdown-trigger">
+                            <i class="icon-ellipsis"></i>
+                          </button>
+
+                          <div class="custom-dropdown-menu">
+                            <div class="custom-dropdown-menu-item">
+                              <button class="custom-dropdown-menu-item-link">
+                                View profile
+                              </button>
+                            </div>
+                            <div class="custom-dropdown-menu-item">
+                              <button class="custom-dropdown-menu-item-link">
+                                Restore employee
+                              </button>
+                            </div>
+                            <div class="custom-dropdown-menu-item delete">
+                              <button class="custom-dropdown-menu-item-link">
+                                Archive employee
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr class="custom-table-row">
+                      <td class="column-01">
+                        <p>Johan Sebastian Bing</p>
+                      </td>
+                      <td class="column-02">
+                        <p>johan.sebastian@gmail.com</p>
+                      </td>
+                      <td class="column-03">
+                        <input class="td-input" type="text" placeholder="Add job title" />
+                      </td>
+                      <td class="column-04 active">
+                        <p>Active</p>
+                      </td>
+                      <td class="column-05">
+                        <div class="custom-dropdown half-line">
+                          <button class="custom-dropdown-trigger">
+                            <i class="icon-ellipsis"></i>
+                          </button>
+
+                          <div class="custom-dropdown-menu">
+                            <div class="custom-dropdown-menu-item">
+                              <button class="custom-dropdown-menu-item-link">
+                                View profile
+                              </button>
+                            </div>
+                            <div class="custom-dropdown-menu-item">
+                              <button class="custom-dropdown-menu-item-link">
+                                Restore employee
+                              </button>
+                            </div>
+                            <div class="custom-dropdown-menu-item delete">
+                              <button class="custom-dropdown-menu-item-link">
+                                Archive employee
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <!-- <tr class="custom-table-row">
+                                    <td class="column-01">
+                                      <p>Johan Sebastian Bing</p>
+                                    </td>
+                                    <td class="column-02">
+                                      <p>johan.sebastian@gmail.com</p>
+                                    </td>
+                                    <td class="column-03">
+                                      <input
+                                        class="td-input"
+                                        type="text"
+                                        placeholder="Add job title"
+                                      />
+                                    </td>
+                                    <td class="column-04 active">
+                                      <p>Active</p>
+                                    </td>
+                                    <td class="column-05">
+                                      <div class="custom-dropdown table-dropdown">
+                                        <button
+                                          class="custom-dropdown-trigger"
+                                          tabindex="-1"
+                                          onclick="this.focus()"
+                                        >
+                                          <i class="icon-ellipsis"></i>
+                                        </button>
+                                        <div class="custom-dropdown-menu">
+                                          <div class="custom-dropdown-menu-item">
+                                            <button class="custom-dropdown-menu-item-link">
+                                              <i class="icon-user"></i>
+                                              <p>Open team</p>
+                                              <i class="icon-chevron-right"></i>
+                                            </button>
+                                          </div>
+                                          <div class="custom-dropdown-menu-item">
+                                            <button class="custom-dropdown-menu-item-link">
+                                              <i class="icon-give-feedback"></i>
+                                              <p>Give feedback</p>
+                                              <i class="icon-chevron-right"></i>
+                                            </button>
+                                          </div>
+                                          <div class="custom-dropdown-menu-item">
+                                            <button class="custom-dropdown-menu-item-link">
+                                              <i class="icon-bin"></i>
+                                              <p>Delete from team</p>
+                                              <i class="icon-chevron-right"></i>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
                                     </td>
                                   </tr>
 
-                                  <tr class="table-placeholder">
-                                    <td colspan="100%">
-                                      <img src="../public/img/table-placeholder-img-04.png" alt="Clip art" class="table-placeholder-img">
-                                      <p class="table-placeholder-title">No teams archived yet</p>
-                                      <p class="table-placeholder-text">Click <button>here</button> to see how teams are connected.</p>
+                                  <tr class="custom-table-row">
+                                    <td class="column-01">
+                                      <p>Johan Sebastian Bing</p>
+                                    </td>
+                                    <td class="column-02">
+                                      <p>johan.sebastian@gmail.com</p>
+                                    </td>
+                                    <td class="column-03">
+                                      <input
+                                        class="td-input"
+                                        type="text"
+                                        placeholder="Add job title"
+                                      />
+                                    </td>
+                                    <td class="column-04 active">
+                                      <p>Active</p>
+                                    </td>
+                                    <td class="column-05">
+                                      <div class="custom-dropdown table-dropdown">
+                                        <button
+                                          class="custom-dropdown-trigger"
+                                          tabindex="-1"
+                                          onclick="this.focus()"
+                                        >
+                                          <i class="icon-ellipsis"></i>
+                                        </button>
+                                        <div class="custom-dropdown-menu">
+                                          <div class="custom-dropdown-menu-item">
+                                            <button class="custom-dropdown-menu-item-link">
+                                              <i class="icon-user"></i>
+                                              <p>Open team</p>
+                                              <i class="icon-chevron-right"></i>
+                                            </button>
+                                          </div>
+                                          <div class="custom-dropdown-menu-item">
+                                            <button class="custom-dropdown-menu-item-link">
+                                              <i class="icon-give-feedback"></i>
+                                              <p>Give feedback</p>
+                                              <i class="icon-chevron-right"></i>
+                                            </button>
+                                          </div>
+                                          <div class="custom-dropdown-menu-item">
+                                            <button class="custom-dropdown-menu-item-link">
+                                              <i class="icon-bin"></i>
+                                              <p>Delete from team</p>
+                                              <i class="icon-chevron-right"></i>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
                                     </td>
                                   </tr>
 
-                                  <tr class="table-placeholder no-results">
-                                    <td colspan="100%">
-                                      <img src="../public/img/table-placeholder-img-no-results.png" alt="Clip art" class="table-placeholder-img">
-                                      <p class="table-placeholder-title">No search results</p>
+                                  <tr class="custom-table-row">
+                                    <td class="column-01">
+                                      <p>Johan Sebastian Bing</p>
+                                    </td>
+                                    <td class="column-02">
+                                      <p>johan.sebastian@gmail.com</p>
+                                    </td>
+                                    <td class="column-03">
+                                      <input
+                                        class="td-input"
+                                        type="text"
+                                        placeholder="Add job title"
+                                      />
+                                    </td>
+                                    <td class="column-04 active">
+                                      <p>Active</p>
+                                    </td>
+                                    <td class="column-05">
+                                      <div class="custom-dropdown table-dropdown">
+                                        <button
+                                          class="custom-dropdown-trigger"
+                                          tabindex="-1"
+                                          onclick="this.focus()"
+                                        >
+                                          <i class="icon-ellipsis"></i>
+                                        </button>
+                                        <div class="custom-dropdown-menu">
+                                          <div class="custom-dropdown-menu-item">
+                                            <button class="custom-dropdown-menu-item-link">
+                                              <i class="icon-user"></i>
+                                              <p>Open team</p>
+                                              <i class="icon-chevron-right"></i>
+                                            </button>
+                                          </div>
+                                          <div class="custom-dropdown-menu-item">
+                                            <button class="custom-dropdown-menu-item-link">
+                                              <i class="icon-give-feedback"></i>
+                                              <p>Give feedback</p>
+                                              <i class="icon-chevron-right"></i>
+                                            </button>
+                                          </div>
+                                          <div class="custom-dropdown-menu-item">
+                                            <button class="custom-dropdown-menu-item-link">
+                                              <i class="icon-bin"></i>
+                                              <p>Delete from team</p>
+                                              <i class="icon-chevron-right"></i>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr class="custom-table-row">
+                                    <td class="column-01">
+                                      <p>Johan Sebastian Bing</p>
+                                    </td>
+                                    <td class="column-02">
+                                      <p>johan.sebastian@gmail.com</p>
+                                    </td>
+                                    <td class="column-03">
+                                      <input
+                                        class="td-input"
+                                        type="text"
+                                        placeholder="Add job title"
+                                      />
+                                    </td>
+                                    <td class="column-04 active">
+                                      <p>Active</p>
+                                    </td>
+                                    <td class="column-05">
+                                      <div class="custom-dropdown table-dropdown">
+                                        <button
+                                          class="custom-dropdown-trigger"
+                                          tabindex="-1"
+                                          onclick="this.focus()"
+                                        >
+                                          <i class="icon-ellipsis"></i>
+                                        </button>
+                                        <div class="custom-dropdown-menu">
+                                          <div class="custom-dropdown-menu-item">
+                                            <button class="custom-dropdown-menu-item-link">
+                                              <i class="icon-user"></i>
+                                              <p>Open team</p>
+                                              <i class="icon-chevron-right"></i>
+                                            </button>
+                                          </div>
+                                          <div class="custom-dropdown-menu-item">
+                                            <button class="custom-dropdown-menu-item-link">
+                                              <i class="icon-give-feedback"></i>
+                                              <p>Give feedback</p>
+                                              <i class="icon-chevron-right"></i>
+                                            </button>
+                                          </div>
+                                          <div class="custom-dropdown-menu-item">
+                                            <button class="custom-dropdown-menu-item-link">
+                                              <i class="icon-bin"></i>
+                                              <p>Delete from team</p>
+                                              <i class="icon-chevron-right"></i>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr class="custom-table-row">
+                                    <td class="column-01">
+                                      <p>Johan Sebastian Bing</p>
+                                    </td>
+                                    <td class="column-02">
+                                      <p>johan.sebastian@gmail.com</p>
+                                    </td>
+                                    <td class="column-03">
+                                      <input
+                                        class="td-input"
+                                        type="text"
+                                        placeholder="Add job title"
+                                      />
+                                    </td>
+                                    <td class="column-04 active">
+                                      <p>Active</p>
+                                    </td>
+                                    <td class="column-05">
+                                      <div class="custom-dropdown table-dropdown">
+                                        <button
+                                          class="custom-dropdown-trigger"
+                                          tabindex="-1"
+                                          onclick="this.focus()"
+                                        >
+                                          <i class="icon-ellipsis"></i>
+                                        </button>
+                                        <div class="custom-dropdown-menu">
+                                          <div class="custom-dropdown-menu-item">
+                                            <button class="custom-dropdown-menu-item-link">
+                                              <i class="icon-user"></i>
+                                              <p>Open team</p>
+                                              <i class="icon-chevron-right"></i>
+                                            </button>
+                                          </div>
+                                          <div class="custom-dropdown-menu-item">
+                                            <button class="custom-dropdown-menu-item-link">
+                                              <i class="icon-give-feedback"></i>
+                                              <p>Give feedback</p>
+                                              <i class="icon-chevron-right"></i>
+                                            </button>
+                                          </div>
+                                          <div class="custom-dropdown-menu-item">
+                                            <button class="custom-dropdown-menu-item-link">
+                                              <i class="icon-bin"></i>
+                                              <p>Delete from team</p>
+                                              <i class="icon-chevron-right"></i>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr class="custom-table-row">
+                                    <td class="column-01">
+                                      <p>Johan Sebastian Bing</p>
+                                    </td>
+                                    <td class="column-02">
+                                      <p>johan.sebastian@gmail.com</p>
+                                    </td>
+                                    <td class="column-03">
+                                      <input
+                                        class="td-input"
+                                        type="text"
+                                        placeholder="Add job title"
+                                      />
+                                    </td>
+                                    <td class="column-04 active">
+                                      <p>Active</p>
+                                    </td>
+                                    <td class="column-05">
+                                      <div class="custom-dropdown table-dropdown">
+                                        <button
+                                          class="custom-dropdown-trigger"
+                                          tabindex="-1"
+                                          onclick="this.focus()"
+                                        >
+                                          <i class="icon-ellipsis"></i>
+                                        </button>
+                                        <div class="custom-dropdown-menu">
+                                          <div class="custom-dropdown-menu-item">
+                                            <button class="custom-dropdown-menu-item-link">
+                                              <i class="icon-user"></i>
+                                              <p>Open team</p>
+                                              <i class="icon-chevron-right"></i>
+                                            </button>
+                                          </div>
+                                          <div class="custom-dropdown-menu-item">
+                                            <button class="custom-dropdown-menu-item-link">
+                                              <i class="icon-give-feedback"></i>
+                                              <p>Give feedback</p>
+                                              <i class="icon-chevron-right"></i>
+                                            </button>
+                                          </div>
+                                          <div class="custom-dropdown-menu-item">
+                                            <button class="custom-dropdown-menu-item-link">
+                                              <i class="icon-bin"></i>
+                                              <p>Delete from team</p>
+                                              <i class="icon-chevron-right"></i>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
                                     </td>
                                   </tr> -->
 
                     <tr class="custom-table-row">
                       <td class="column-01">
-                        <p>Example team name</p>
+                        <p>Johan Sebastian Bing</p>
                       </td>
                       <td class="column-02">
-                        <p>Example team description</p>
+                        <p>johan.sebastian@gmail.com</p>
                       </td>
                       <td class="column-03">
-                        <p>Example Example</p>
+                        <input class="td-input" type="text" placeholder="Add job title" />
                       </td>
-                      <td class="column-04">
-                        <p>25</p>
+                      <td class="column-04 active">
+                        <p>Active</p>
                       </td>
                       <td class="column-05">
                         <div class="custom-dropdown half-line">
@@ -313,12 +727,17 @@
                           <div class="custom-dropdown-menu">
                             <div class="custom-dropdown-menu-item">
                               <button class="custom-dropdown-menu-item-link">
-                                View team
+                                View profile
+                              </button>
+                            </div>
+                            <div class="custom-dropdown-menu-item">
+                              <button class="custom-dropdown-menu-item-link">
+                                Restore employee
                               </button>
                             </div>
                             <div class="custom-dropdown-menu-item delete">
                               <button class="custom-dropdown-menu-item-link">
-                                Archive team
+                                Archive employee
                               </button>
                             </div>
                           </div>
@@ -328,16 +747,16 @@
 
                     <tr class="custom-table-row">
                       <td class="column-01">
-                        <p>Example team name</p>
+                        <p>Johan Sebastian Bing</p>
                       </td>
                       <td class="column-02">
-                        <p>Example team description</p>
+                        <p>johan.sebastian@gmail.com</p>
                       </td>
                       <td class="column-03">
-                        <p>Example Example</p>
+                        <input class="td-input" type="text" placeholder="Add job title" />
                       </td>
-                      <td class="column-04">
-                        <p>25</p>
+                      <td class="column-04 active">
+                        <p>Active</p>
                       </td>
                       <td class="column-05">
                         <div class="custom-dropdown half-line">
@@ -348,47 +767,17 @@
                           <div class="custom-dropdown-menu">
                             <div class="custom-dropdown-menu-item">
                               <button class="custom-dropdown-menu-item-link">
-                                View team
+                                View profile
                               </button>
                             </div>
-                            <div class="custom-dropdown-menu-item delete">
-                              <button class="custom-dropdown-menu-item-link">
-                                Archive team
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-
-                    <tr class="custom-table-row">
-                      <td class="column-01">
-                        <p>Example team name</p>
-                      </td>
-                      <td class="column-02">
-                        <p>Example team description</p>
-                      </td>
-                      <td class="column-03">
-                        <p>Example Example</p>
-                      </td>
-                      <td class="column-04">
-                        <p>25</p>
-                      </td>
-                      <td class="column-05">
-                        <div class="custom-dropdown half-line">
-                          <button class="custom-dropdown-trigger">
-                            <i class="icon-ellipsis"></i>
-                          </button>
-
-                          <div class="custom-dropdown-menu">
                             <div class="custom-dropdown-menu-item">
                               <button class="custom-dropdown-menu-item-link">
-                                View team
+                                Restore employee
                               </button>
                             </div>
                             <div class="custom-dropdown-menu-item delete">
                               <button class="custom-dropdown-menu-item-link">
-                                Archive team
+                                Archive employee
                               </button>
                             </div>
                           </div>
@@ -398,86 +787,16 @@
 
                     <tr class="custom-table-row">
                       <td class="column-01">
-                        <p>Example team name</p>
+                        <p>Johan Sebastian Bing</p>
                       </td>
                       <td class="column-02">
-                        <p>Example team description</p>
-                      </td>
-                      <td class="column-03">
-                        <p>Example Example</p>
-                      </td>
-                      <td class="column-04">
-                        <p>25</p>
-                      </td>
-                      <td class="column-05">
-                        <div class="custom-dropdown half-line">
-                          <button class="custom-dropdown-trigger">
-                            <i class="icon-ellipsis"></i>
-                          </button>
-
-                          <div class="custom-dropdown-menu">
-                            <div class="custom-dropdown-menu-item">
-                              <button class="custom-dropdown-menu-item-link">
-                                View team
-                              </button>
-                            </div>
-                            <div class="custom-dropdown-menu-item delete">
-                              <button class="custom-dropdown-menu-item-link">
-                                Archive team
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-
-                    <tr class="custom-table-row">
-                      <td class="column-01">
-                        <p>Example team name</p>
-                      </td>
-                      <td class="column-02">
-                        <p>Example team description</p>
-                      </td>
-                      <td class="column-03">
-                        <p>Example Example</p>
-                      </td>
-                      <td class="column-04">
-                        <p>25</p>
-                      </td>
-                      <td class="column-05">
-                        <div class="custom-dropdown half-line">
-                          <button class="custom-dropdown-trigger">
-                            <i class="icon-ellipsis"></i>
-                          </button>
-
-                          <div class="custom-dropdown-menu">
-                            <div class="custom-dropdown-menu-item">
-                              <button class="custom-dropdown-menu-item-link">
-                                View team
-                              </button>
-                            </div>
-                            <div class="custom-dropdown-menu-item delete">
-                              <button class="custom-dropdown-menu-item-link">
-                                Archive team
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-
-                    <tr class="custom-table-row">
-                      <td class="column-01">
-                        <p>Example team name</p>
-                      </td>
-                      <td class="column-02">
-                        <p>Example team description</p>
+                        <p>johan.sebastian@gmail.com</p>
                       </td>
                       <td class="column-03">
                         <p>Example job title</p>
                       </td>
-                      <td class="column-04">
-                        <p>25</p>
+                      <td class="column-04 pending">
+                        <p>Pending</p>
                       </td>
                       <td class="column-05">
                         <div class="custom-dropdown table-dropdown">
@@ -513,16 +832,16 @@
 
                     <tr class="custom-table-row">
                       <td class="column-01">
-                        <p>Example team name</p>
+                        <p>Johan Sebastian Bing</p>
                       </td>
                       <td class="column-02">
-                        <p>Example team description</p>
+                        <p>johan.sebastian@gmail.com</p>
                       </td>
                       <td class="column-03">
                         <p>Example job title</p>
                       </td>
-                      <td class="column-04">
-                        <p>25</p>
+                      <td class="column-04 pending">
+                        <p>Pending</p>
                       </td>
                       <td class="column-05">
                         <div class="custom-dropdown table-dropdown">
@@ -558,16 +877,16 @@
 
                     <tr class="custom-table-row">
                       <td class="column-01">
-                        <p>Example team name</p>
+                        <p>Johan Sebastian Bing</p>
                       </td>
                       <td class="column-02">
-                        <p>Example team description</p>
+                        <p>johan.sebastian@gmail.com</p>
                       </td>
                       <td class="column-03">
-                        <p>Example Example</p>
+                        <input class="td-input" type="text" placeholder="Add job title" />
                       </td>
-                      <td class="column-04">
-                        <p>25</p>
+                      <td class="column-04 active">
+                        <p>Active</p>
                       </td>
                       <td class="column-05">
                         <div class="custom-dropdown half-line">
@@ -578,12 +897,17 @@
                           <div class="custom-dropdown-menu">
                             <div class="custom-dropdown-menu-item">
                               <button class="custom-dropdown-menu-item-link">
-                                View team
+                                View profile
+                              </button>
+                            </div>
+                            <div class="custom-dropdown-menu-item">
+                              <button class="custom-dropdown-menu-item-link">
+                                Restore employee
                               </button>
                             </div>
                             <div class="custom-dropdown-menu-item delete">
                               <button class="custom-dropdown-menu-item-link">
-                                Archive team
+                                Archive employee
                               </button>
                             </div>
                           </div>

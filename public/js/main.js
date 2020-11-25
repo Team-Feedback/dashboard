@@ -8,9 +8,7 @@ headerMain.addEventListener("click", function () {
 
   // Send feedback page people container height
   if (document.getElementById('give-feedback')) {
-    console.log('RESIZE PEOPLE')
     setTimeout(() => {
-      console.log('RESIZE PEOPLE')
       let people = document.querySelector('.people');
       people.style.height = `calc(100vh - ${header.clientHeight}px - 17em)`;
     }, 500);
