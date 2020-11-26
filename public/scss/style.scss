@@ -1178,6 +1178,11 @@ input {
     background-color: #17d624;
     border: 1px solid #17d624;
   }
+
+  &-dark {
+    color: #fff;
+    background-color: #45525f;
+  }
 }
 
 .animated-input {
@@ -1267,6 +1272,25 @@ input {
       border: solid 1px #f0f0f0;
     }
 
+    &-initials {
+      text-transform: uppercase;
+      margin-right: emcalc(1.2,2.6);
+      @include inline-flex();
+      @include align-items(center);
+      @include justify-content(center);
+      width: emcalc(6.25,2.6);
+      height: emcalc(6.25,2.6);
+      font-size: 2.6em;
+      font-weight: 700;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.19;
+      letter-spacing: -0.24px;
+      color: #ffffff;
+      border-radius: 50%;
+      background-color: #fea42a;
+    }
+
     &-icon {
       @include flexbox();
       @include align-items(center);
@@ -1282,21 +1306,6 @@ input {
         font-size: 3.59em;
         color: #fff;
       }
-    }
-
-    &-initials {
-      @include flexbox();
-      @include align-items(center);
-      @include justify-content(center);
-      margin-right: emcalc(1.3, 3);
-      width: emcalc(6.25, 3);
-      height: emcalc(6.25, 3);
-      border-radius: 50%;
-      border: solid 1px #f7f7f7;
-      background-color: #fed745;
-      font-size: 3em;
-      color: #fff;
-      font-weight: 700;
     }
 
     &-name {
@@ -1742,6 +1751,7 @@ input {
           display: inline-block;
 
           &-initials {
+            text-transform: uppercase;
             @include flexbox();
             @include align-items(center);
             @include justify-content(center);
@@ -2211,6 +2221,51 @@ input {
     & .table-placeholder-title {
       margin-bottom: 0;
     }
+  }
+}
+
+//STARS
+.stars {
+  text-align: left;
+  position: relative;
+  @include flexbox;
+  @include flex-direction(row-reverse);
+
+  & input {
+    display: none;
+  }
+
+  & label {
+    display: block;
+    cursor: pointer;
+    width: 1.09em;
+    color: #e8e8e8;
+
+    &::before {
+      content: "\e935";
+      font-family: "dashoard-icons";
+      position: relative;
+      display: block;
+      font-size: 0.9em;
+      color: #e8e8e8;
+    }
+
+    &::after {
+      content: "\e935";
+      font-family: "dashoard-icons";
+      position: absolute;
+      display: block;
+      font-size: 0.9em;
+      color: #fedd31;
+      top: 0;
+      opacity: 0;
+    }
+  }
+
+  & label:hover::after,
+  & input:checked ~ label::after,
+  & label:hover ~ label::after {
+    opacity: 1;
   }
 }
 
@@ -2785,6 +2840,24 @@ input {
         border-radius: 50%;
       }
 
+      &-initials {
+        text-transform: uppercase;
+        margin-right: emcalc(1.1,1.6);
+        @include inline-flex();
+        @include align-items(center);
+        @include justify-content(center);
+        width: emcalc(4.25,1.6);
+        height: emcalc(4.25,1.6);
+        font-size: 1.6em;
+        font-weight: 700;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: -0.24px;
+        color: #ffffff;
+        border-radius: 50%;
+        background-color: #fea42a;
+      }
+
       &-name {
         font-size: 1.33em;
         font-weight: 500;
@@ -3047,7 +3120,8 @@ input {
 //feedback modals
 #peerToPeerFeedbackModal,
 #teamFeedbackModal,
-#settingsModal {
+#settingsModal,
+#feedbackModal {
   & .custom-modal {
     width: 56.1em;
     max-height: 95vh;
@@ -3684,6 +3758,100 @@ input {
   }
 }
 
+#feedbackTypeModal {
+  & .custom-modal {
+    width: 36.9em;
+
+    &-body {
+      padding: 3.4em 2.3em;
+      background-color: #F7F9FA;
+
+      &-title {
+        margin-bottom: emcalc(2,1.8);
+        font-size: 1.8em;
+        font-weight: 400;
+        letter-spacing: -0.18px;
+        color: #49566f;
+      }
+
+      &-main {
+        border-radius: 4px;
+        border: solid 1px #ebebeb;
+        background-color: #ffffff;
+
+        & .type-item {
+          padding-left: 1.4em;
+          padding-right: 2.9em;
+          height: 5.2em;
+          @include flexbox();
+          @include align-items(center);
+          @include justify-content(flex-start);
+
+          &:not(:last-of-type) {
+            border-bottom: 1px solid #ededed;
+          }
+
+          &-img {
+            margin-right: 1em;
+            width: 4em;
+            height: 4em;
+            object-fit: contain;
+            border-radius: 50%;
+          }
+
+          &-icon {
+            margin-right: 1em;
+            
+            & i {
+              font-size: 4em;
+              color: #087af9;
+            }
+          }
+
+          &-initials {
+            text-transform: uppercase;
+            @include inline-flex();
+            @include align-items(center);
+            @include justify-content(center);
+            margin-right: emcalc(1,1.6);
+            width: emcalc(4,1.6);
+            height: emcalc(4,1.6);
+            font-size: 1.6em;
+            font-weight: 700;
+            color: #FFF;
+            border-radius: 50%;
+            background-color: #FFBF12;
+          }
+
+          &-set {
+            margin-right: auto;
+
+            &-subtitle {
+              margin-bottom: emcalc(.05,1.13);
+              font-size: 1.13em;
+              font-weight: 400;
+              color: #6e6e6e;
+            }
+
+            &-title {
+              font-size: 1.38em;
+              font-weight: 400;
+              letter-spacing: 0.07px;
+              color: #1e2026;
+            }
+          }
+
+          &-button {
+            font-size: 1.28em;
+            font-weight: 500;
+            color: var(--color-primary);
+          }
+        }
+      }
+    }
+  }
+}
+
 #feedbackTransferModal {
   z-index: 11000;
 
@@ -3713,9 +3881,10 @@ input {
             text-align: right;
           }
 
-          & .person-info-img {
+          & .person-info-img,
+          & .person-info-initials {
             margin-right: 0;
-            margin-left: 1.3em;
+            margin-left: emcalc(1.3,2.35);
           }
         }
 
@@ -3725,6 +3894,22 @@ input {
           margin-right: 1.3em;
           object-fit: contain;
           border-radius: 50%;
+        }
+
+        &-initials {
+          @include inline-flex();
+          @include align-items(center);
+          @include justify-content(center);
+          text-transform: uppercase;
+          margin-right: emcalc(1.3,2.35);
+          width: emcalc(6.2,2.35);
+          height: emcalc(6.2,2.35);
+          font-size: 2.35em;
+          font-weight: 700;
+          letter-spacing: -0.35px;
+          color: #ffffff;
+          border-radius: 50%;
+          background-color: #fea42a;
         }
 
         &-set {
@@ -4011,6 +4196,13 @@ input {
         height: 16em;
         border-radius: 50%;
         object-fit: contain;
+      }
+
+      &-icon {
+        margin-bottom: emcalc(2.5,16);
+        font-size: 16em;
+        border-radius: 50%;
+        color: #ffa800;
       }
 
       &-set {
@@ -4376,6 +4568,26 @@ input {
           border-radius: 50%;
         }
 
+        &-initials {
+          text-transform: uppercase;
+          margin-right: emcalc(1.5,1.65);
+          @include inline-flex();
+          @include align-items(center);
+          @include justify-content(center);
+          width: emcalc(4,1.65);
+          height: emcalc(4,1.65);
+          font-size: 1.65em;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.21;
+          letter-spacing: -0.25px;
+          text-align: center;
+          color: #ffffff;
+          border-radius: 50%;
+          background-color: #fea42a;
+        }
+
         &-info {
           white-space: nowrap;
           overflow: hidden;
@@ -4636,6 +4848,13 @@ input {
       font-size: 5.7em;
       color: #ffa800;
     }
+  }
+
+  &-img {
+    width: 5.7em;
+    height: 5.7em;
+    object-fit: contain;
+    border-radius: 50%;
   }
 
   & .settings-input {
@@ -5767,6 +5986,7 @@ input {
                 }
 
                 &-initials {
+                  text-transform: uppercase;
                   margin-right: emcalc(1.14, 1.8);
                   @include flexbox();
                   @include align-items(center);
@@ -5847,6 +6067,7 @@ input {
           }
 
           &-initials {
+            text-transform: uppercase;
             margin-right: emcalc(1.4, 1.8);
             @include flexbox();
             @include align-items(center);
@@ -6208,6 +6429,13 @@ input {
               @include align-items(center);
               @include justify-content(center);
 
+              
+              &:hover .person-main-img,
+              &:hover .person-main-initials {
+                transform: scale(1.05);
+                box-shadow: 0px 5px 8px rgba(116,116,116,0.35);
+              }
+
               &-main {
                 margin-bottom: 0.4em;
                 position: relative;
@@ -6218,6 +6446,24 @@ input {
                   object-fit: contain;
                   border-radius: 13px;
                   box-shadow: 0 3px 6px 0 rgba(221, 221, 221, 0.4);
+                  transition: all .2s ease-in-out;
+                }
+
+                &-initials {
+                  text-transform: uppercase;
+                  @include inline-flex();
+                  @include align-items(center);
+                  @include justify-content(center);
+                  width: emcalc(7.25,2.75);
+                  height: emcalc(7.25,2.75);
+                  font-size: 2.75em;
+                  color: #FFF;
+                  font-weight: 700;
+                  letter-spacing: -0.43px;
+                  background-color: #fea42a;
+                  object-fit: contain;
+                  border-radius: 16px;
+                  transition: all .2s ease-in-out;
                 }
 
                 &-icon {
@@ -7530,6 +7776,7 @@ input {
             }
 
             &-initials {
+              text-transform: uppercase;
               margin-right: emcalc(1.24, 1.5);
               @include flexbox();
               @include align-items(center);
@@ -7624,7 +7871,8 @@ input {
           @include justify-content(center);
           cursor: pointer;
 
-          &:hover .person-main-img {
+          &:hover .person-main-img,
+          &:hover .person-main-initials {
             transform: scale(1.05);
             box-shadow: 0px 5px 8px rgba(116,116,116,0.35);
           }
@@ -7636,6 +7884,23 @@ input {
             &-img {
               width: 7.75em;
               height: 7.75em;
+              object-fit: contain;
+              border-radius: 16px;
+              transition: all .2s ease-in-out;
+            }
+
+            &-initials {
+              text-transform: uppercase;
+              @include inline-flex();
+              @include align-items(center);
+              @include justify-content(center);
+              width: emcalc(7.75,2.85);
+              height: emcalc(7.75,2.85);
+              font-size: 2.85em;
+              color: #FFF;
+              font-weight: 700;
+              letter-spacing: -0.43px;
+              background-color: #fea42a;
               object-fit: contain;
               border-radius: 16px;
               transition: all .2s ease-in-out;

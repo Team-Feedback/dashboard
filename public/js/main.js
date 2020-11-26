@@ -9,11 +9,20 @@ headerMain.addEventListener("click", function () {
   // Send feedback page people container height
   if (document.getElementById('give-feedback')) {
     setTimeout(() => {
-      let people = document.querySelector('.people');
-      people.style.height = `calc(100vh - ${header.clientHeight}px - 17em)`;
+      peopleHeightLimit();
     }, 500);
   }
 });
+
+//GIVE FEEDBACK PAGE PEOPLE CONTAINER HEIGHT LIMIT
+function peopleHeightLimit() {
+  let people = document.querySelector('#give-feedback .people');
+  if (people) {
+    people.style.height = `calc(100vh - ${header.clientHeight}px - 17em)`;
+  }
+}
+
+peopleHeightLimit();
 
 //ACTIVE LINK
 let headerNavLinks = document.querySelectorAll(".header-nav-list-item");
@@ -57,6 +66,9 @@ console.log(modalCloseBtns);
 
 modalTriggers.forEach((e) => {
   e.addEventListener("click", function () {
+    document.querySelectorAll('.custom-modal-wrapper.open').forEach(e => {
+      e.id !== 'modalCard' && e.classList.remove('open');
+    })
     let modal = document.getElementById(`${e.getAttribute("target-modal")}`);
     modal.classList.add("open");
   });

@@ -201,8 +201,62 @@
             target-modal="inviteMembersModal">
             Invite members
           </button>
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;"
+            target-modal="feedbackTypeModal">
+            Feedback type
+          </button>
         </div>
       </div>
+    </div>
+
+    <!-- FEEDBACK TYPE MODAL-->
+    <div class="custom-modal-wrapper" id="feedbackTypeModal">
+      <div class="custom-modal">
+        <!-- Modal body -->
+        <div class="custom-modal-body">
+          <div class="custom-modal-close" close-modal="feedbackTypeModal">
+            <i class="icon-close"></i>
+          </div>
+          <p class="custom-modal-body-title">Select feedback type</p>
+
+          <div class="custom-modal-body-main">
+            <div class="type-item modal-trigger" target-modal="peerToPeerFeedbackModal">
+              <!-- <img src="../public/img/p-07.png" alt="User's profile image" class="type-item-img">
+              <div class="type-item-initials">MM</div> -->
+              <div class="type-item-icon"><i class="icon-users-circle"></i></div>
+              <div class="type-item-set">
+                <p class="type-item-set-subtitle">P2P feedback</p>
+                <p class="type-item-set-title">Team Marketing</p>
+              </div>
+              <button class="button type-item-button">Select</button>
+            </div>
+
+            <div class="type-item modal-trigger" target-modal="peerToPeerFeedbackModal">
+              <!-- <img src="../public/img/p-07.png" alt="User's profile image" class="type-item-img">
+              <div class="type-item-initials">MM</div> -->
+              <div class="type-item-icon"><i class="icon-users-circle"></i></div>
+              <div class="type-item-set">
+                <p class="type-item-set-subtitle">Subordinate feedback</p>
+                <p class="type-item-set-title">Team Marketing</p>
+              </div>
+              <button class="button type-item-button">Select</button>
+            </div>
+
+            <div class="type-item modal-trigger" target-modal="peerToPeerFeedbackModal">
+              <!-- <img src="../public/img/p-07.png" alt="User's profile image" class="type-item-img">
+              <div class="type-item-initials">MM</div> -->
+              <div class="type-item-icon"><i class="icon-users-circle"></i></div>
+              <div class="type-item-set">
+                <p class="type-item-set-subtitle">Subordinate feedback</p>
+                <p class="type-item-set-title">Team Marketing</p>
+              </div>
+              <button class="button type-item-button">Select</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="custom-modal-backdrop"></div>
     </div>
 
     <!-- INVITE MEMBERS MODAL -->
