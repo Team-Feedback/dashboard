@@ -238,7 +238,8 @@
                 <input type="text" placeholder="Search">
                 <i class="icon-search"></i>
               </div>
-              <button class="button button-primary test-add-person">Invite new members</button>
+              <button class="button button-primary test-add-person modal-trigger"
+                target-modal="inviteMembersModal">Invite new members</button>
             </div>
 
             <div class="custom-dropdown card-settings-dropdown">
@@ -387,6 +388,111 @@
         </div>
       </div>
     </div>
+
+    <!-- INVITE MEMBERS MODAL -->
+    <div class="custom-modal-wrapper" id="inviteMembersModal">
+      <div class="custom-modal">
+        <!-- Modal body -->
+        <div class="custom-modal-body">
+          <div class="custom-modal-close" close-modal="inviteMembersModal">
+            <i class="icon-close"></i>
+          </div>
+
+          <p class="custom-modal-body-title">Add new team members</p>
+
+          <p class="custom-modal-body-label">Search by name or email</p>
+
+          <div class="search-dropdown">
+            <div class="input-container show-button">
+              <input type="text" placeholder="Search">
+              <i class="icon-search"></i>
+              <button class="button button-add">Add</button>
+            </div>
+            <div class="search-dropdown-list">
+              <!-- PLACEHOLDER remove display none -->
+              <div class="search-dropdown-placeholder" style="display: none;">
+                <img src="../public/img/table-placeholder-img-no-results.png" alt="Clip art"
+                  class="search-dropdown-placeholder-img">
+                <p class="search-dropdown-placeholder-title">User not found</p>
+                <p class="search-dropdown-placeholder-text">Please enter the email address.</p>
+              </div>
+              <div class="person-item">
+                <!-- <img src="../public/img/p-07.png" alt="User's profile image" class="person-item-img"> -->
+                <div class="person-item-initials">JS</div>
+                <div class="person-item-set">
+                  <p class="person-item-set-name">Julia Smith</p>
+                  <p class="person-item-set-position">Frontend developer</p>
+                </div>
+                <button class="person-item-button">Select</button>
+              </div>
+              <div class="person-item">
+                <img src="../public/img/p-07.png" alt="User's profile image" class="person-item-img">
+                <!-- <div class="person-item-initials">JS</div> -->
+                <div class="person-item-set">
+                  <p class="person-item-set-name">Julia Smith</p>
+                  <p class="person-item-set-position">Frontend developer</p>
+                </div>
+                <button class="person-item-button">Select</button>
+              </div>
+              <div class="person-item">
+                <img src="../public/img/p-07.png" alt="User's profile image" class="person-item-img">
+                <!-- <div class="person-item-initials">JS</div> -->
+                <div class="person-item-set">
+                  <p class="person-item-set-name">Julia Smith</p>
+                  <p class="person-item-set-position">Frontend developer</p>
+                </div>
+                <button class="person-item-button">Select</button>
+              </div>
+            </div>
+          </div>
+
+          <p class="custom-modal-body-label" style="margin-bottom: 0;">Selected people</p>
+          <div class="selected-people">
+
+            <div class="person-item">
+              <!-- <img src="../public/img/p-07.png" alt="User's profile image" class="person-item-img"> -->
+              <div class="person-item-initials">JS</div>
+              <div class="person-item-set">
+                <p class="person-item-set-name">Julia Smith</p>
+                <p class="person-item-set-position">Frontend developer</p>
+              </div>
+              <button class="person-item-button">Delete</button>
+            </div>
+
+            <div class="person-item">
+              <img src="../public/img/p-07.png" alt="User's profile image" class="person-item-img">
+              <!-- <div class="person-item-initials">JS</div> -->
+              <div class="person-item-set">
+                <p class="person-item-set-name">Julia Smith</p>
+                <p class="person-item-set-position">Frontend developer</p>
+              </div>
+              <button class="person-item-button">Delete</button>
+            </div>
+
+            <div class="person-item">
+              <img src="../public/img/p-07.png" alt="User's profile image" class="person-item-img">
+              <!-- <div class="person-item-initials">JS</div> -->
+              <div class="person-item-set">
+                <p class="person-item-set-name">Julia Smith</p>
+                <p class="person-item-set-position">Frontend developer</p>
+              </div>
+              <button class="person-item-button">Delete</button>
+            </div>
+          </div>
+
+        </div>
+        <!-- Modal footer -->
+        <div class="custom-modal-footer">
+          <button class="button button-light-gray" close-modal="inviteMembersModal">Cancel</button>
+          <button class="button button-primary send-feedback-modal">
+            Confirm
+          </button>
+
+        </div>
+      </div>
+      <div class="custom-modal-backdrop"></div>
+    </div>
+
   </main>
 
 

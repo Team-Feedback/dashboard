@@ -273,9 +273,10 @@
           <p class="custom-modal-body-label">Search by name or email</p>
 
           <div class="search-dropdown">
-            <div class="input-container">
+            <div class="input-container show-button">
               <input type="text" placeholder="Search">
               <i class="icon-search"></i>
+              <button class="button button-add">Add</button>
             </div>
             <div class="search-dropdown-list">
               <!-- PLACEHOLDER remove display none -->
@@ -904,16 +905,7 @@
 
   <script src="../public/js/main.js"></script>
   <script>
-    let searchDropdownInput = document.querySelector('.search-dropdown input');
 
-    if (searchDropdownInput) {
-      searchDropdownInput.addEventListener('focus', function () {
-        this.parentElement.parentElement.classList.add('open');
-      })
-      searchDropdownInput.addEventListener('blur', function () {
-        this.parentElement.parentElement.classList.remove('open');
-      })
-    }
 
     // //SEND FEEDBACK
     // let sendFeedbackBtn = document.querySelectorAll(".send-feedback-modal");

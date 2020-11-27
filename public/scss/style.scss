@@ -1655,9 +1655,11 @@ input {
         //overflow: hidden;
 
         &-section {
+          padding: .6em 0;
           position: relative;
 
           & .custom-dropdown-menu-item {
+            height: 3.2em;
             &-link {
               border-color: transparent!important;
             }
@@ -3006,6 +3008,7 @@ input {
         font-size: 1.2em;
         opacity: 0.81;
         color: #5a5f71;
+        cursor: pointer;
       }
 
       &-options {
@@ -3248,7 +3251,9 @@ input {
 #peerToPeerFeedbackModal,
 #teamFeedbackModal,
 #settingsModal,
-#feedbackModal {
+#feedbackModal,
+#settingsModalAddress,
+#settingsModalContact {
   & .custom-modal {
     width: 56.1em;
     max-height: 95vh;
@@ -3322,7 +3327,9 @@ input {
 #confirmationModal,
 #inviteUsersModal,
 #ownerTransferModal,
-#settingsModal {
+#settingsModal,
+#settingsModalAddress,
+#settingsModalContact {
   & .custom-modal {
     width: 39em;
     & .custom-modal-close {
@@ -3356,7 +3363,8 @@ input {
   }
 }
 
-#settingsModal {
+#settingsModalAddress,
+#settingsModalContact {
   & .custom-modal {
     &-body {
       padding-bottom: 2em;
@@ -3372,6 +3380,8 @@ input {
 
       & .button {
         width: 48%;
+
+
       }
     }
   }
@@ -3662,10 +3672,20 @@ input {
     &-body {
       max-height: calc(100% - 6.4em);
       padding: 3.2em 2.5em;
+      padding-left: 0;
       padding-bottom: 0;
       z-index: 1;
 
+      &-title {
+        padding-left: emcalc(2.5,1.8);
+      }
+
+      &-label {
+        padding-left: emcalc(2.5,1.2);
+      }
+
       & .search-dropdown {
+        margin-left: 2.5em;
         margin-bottom: 3.5em;
         position: relative;
         width: 100%;
@@ -3717,6 +3737,16 @@ input {
           position: relative;
           width: 100%;
 
+          &.show-button {
+            & .button-add {
+              @include inline-flex();
+            }
+
+            & input {
+              padding-right: emcalc(5.2,1.35);
+            }
+          }
+
           & input {
             padding-left: emcalc(3.1,1.35);
             height: emcalc(3.5,1.35);
@@ -3740,6 +3770,20 @@ input {
             font-size: 1.4em;
             color: #a3a3a3;
             transform: translate(0, -50%);
+          }
+
+          & .button-add {
+            display: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: emcalc(5.2,1.35);
+            height: emcalc(3.5,1.35);
+            font-size: 1.35em;
+            font-weight: 500;
+            letter-spacing: -0.17px;
+            color: var(--color-primary);
+            border-left: solid 1px #ebebeb;
           }
         }
 
@@ -3838,6 +3882,7 @@ input {
       }
 
       & .selected-people {
+        padding-left: 2.5em;
         padding-top: 1em;
         padding-bottom: 3.9em;
         max-height: calc(95vh - 16.26em - 6.4em - 6.4em);
@@ -3869,9 +3914,11 @@ input {
           @include align-items(center);
           @include justify-content(flex-start);
           border-radius: 4px;
-          box-shadow: 0 8px 16px 0 rgba(242, 242, 242, 0.39);
+          box-shadow: 0 4px 8px 0 rgba(242, 242, 242, 0.39);
+          //box-shadow: 0 4px 8px 0 rgba(242, 0, 242, 0.39);
           border: solid 1px #ebebeb;
           flex: 1 0 auto;
+          background-color: #fff;
 
           &:not(:last-of-type) {
             border-bottom: solid 1px #ededed;
@@ -3940,8 +3987,8 @@ input {
       & .button {
         height: emcalc(3.4,1.35);
         width: emcalc(12.6,1.35);
-        font-size: 1.32em;
-        letter-spacing: 0.03px;
+        font-size: 1.35em;
+        letter-spacing: -0.07px;
 
         &:not(:last-of-type) {
           margin-right: 1.4rem;
@@ -6826,19 +6873,9 @@ input {
       box-shadow: 0 3px 6px 0 rgba(191, 191, 191, 0.11);
       border: solid 1px #e4e8ec;
       background-color: #ffffff;
-      //height: 100%;
+      height: auto;
       max-height: 100%;
-      overflow-y: auto;
-      scrollbar-width: none;
-      /* Firefox */
-      -ms-overflow-style: none;
-      /* Internet Explorer 10+ */
 
-      &::-webkit-scrollbar {
-        /* WebKit */
-        width: 0;
-        height: 0;
-      }
 
       &-header {
         @include flex-direction(column);
@@ -6863,6 +6900,19 @@ input {
 
       & .custom-questions {
         margin-bottom: 4.6em;
+
+        max-height: calc(100vh - 80em);
+        overflow-y: auto;
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* Internet Explorer 10+ */
+  
+        &::-webkit-scrollbar {
+          /* WebKit */
+          width: 0;
+          height: 0;
+        }
 
         & .custom-question {
           width: 100%;
@@ -7140,12 +7190,12 @@ input {
               }
             }
   
-            & svg {
+            & .icon-refresh-circle-full {
               position: absolute;
-              top: 2.4rem;
-              right: 2.4rem;
-              width: 2.0rem;
-              height: 2.0rem;
+              top: emcalc(2.4,2);
+              right: emcalc(2.4,2);
+              font-size: 2em;
+              color: #717171;
             }
   
             &-buttons {

@@ -116,3 +116,15 @@ if (showPassToggle.length) {
     });
   });
 }
+
+//INVITE MEMBERS MODAL OPEN SEARCH DROPDOWN
+let searchDropdownInput = document.querySelector('.search-dropdown input');
+
+if (searchDropdownInput) {
+  searchDropdownInput.addEventListener('focus', function () {
+    this.parentElement.parentElement.classList.add('open');
+  })
+  searchDropdownInput.addEventListener('blur', function () {
+    this.parentElement.parentElement.classList.remove('open');
+  })
+}

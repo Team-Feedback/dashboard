@@ -774,11 +774,14 @@ input {
     border: solid 1px #EFEFEF;
     background-color: #FFF; }
     .custom-dropdown.half-line .custom-dropdown-menu-section {
+      padding: .6em 0;
       position: relative; }
-      .custom-dropdown.half-line .custom-dropdown-menu-section .custom-dropdown-menu-item-link {
-        border-color: transparent !important; }
-      .custom-dropdown.half-line .custom-dropdown-menu-section .custom-dropdown-menu-item::before {
-        display: none !important; }
+      .custom-dropdown.half-line .custom-dropdown-menu-section .custom-dropdown-menu-item {
+        height: 3.2em; }
+        .custom-dropdown.half-line .custom-dropdown-menu-section .custom-dropdown-menu-item-link {
+          border-color: transparent !important; }
+        .custom-dropdown.half-line .custom-dropdown-menu-section .custom-dropdown-menu-item::before {
+          display: none !important; }
       .custom-dropdown.half-line .custom-dropdown-menu-section:not(:last-of-type)::after {
         content: "";
         position: absolute;
@@ -2032,7 +2035,8 @@ input {
         margin-left: 0.6em;
         font-size: 1.2em;
         opacity: 0.81;
-        color: #5a5f71; }
+        color: #5a5f71;
+        cursor: pointer; }
       #modalCard .feedback-header-options {
         margin-top: 0.2em;
         margin-left: auto;
@@ -2272,7 +2276,9 @@ input {
 #peerToPeerFeedbackModal .custom-modal,
 #teamFeedbackModal .custom-modal,
 #settingsModal .custom-modal,
-#feedbackModal .custom-modal {
+#feedbackModal .custom-modal,
+#settingsModalAddress .custom-modal,
+#settingsModalContact .custom-modal {
   width: 56.1em;
   max-height: 95vh;
   overflow-y: auto;
@@ -2283,7 +2289,9 @@ input {
   #peerToPeerFeedbackModal .custom-modal::-webkit-scrollbar,
   #teamFeedbackModal .custom-modal::-webkit-scrollbar,
   #settingsModal .custom-modal::-webkit-scrollbar,
-  #feedbackModal .custom-modal::-webkit-scrollbar {
+  #feedbackModal .custom-modal::-webkit-scrollbar,
+  #settingsModalAddress .custom-modal::-webkit-scrollbar,
+  #settingsModalContact .custom-modal::-webkit-scrollbar {
     /* WebKit */
     width: 0;
     height: 0; }
@@ -2291,7 +2299,9 @@ input {
     #peerToPeerFeedbackModal .custom-modal,
     #teamFeedbackModal .custom-modal,
     #settingsModal .custom-modal,
-    #feedbackModal .custom-modal {
+    #feedbackModal .custom-modal,
+    #settingsModalAddress .custom-modal,
+    #settingsModalContact .custom-modal {
       position: relative;
       max-height: 100%;
       width: 100%;
@@ -2302,7 +2312,9 @@ input {
   #peerToPeerFeedbackModal .custom-modal-header,
   #teamFeedbackModal .custom-modal-header,
   #settingsModal .custom-modal-header,
-  #feedbackModal .custom-modal-header {
+  #feedbackModal .custom-modal-header,
+  #settingsModalAddress .custom-modal-header,
+  #settingsModalContact .custom-modal-header {
     position: sticky;
     top: 0;
     left: 0;
@@ -2315,19 +2327,25 @@ input {
   #peerToPeerFeedbackModal .custom-modal-body,
   #teamFeedbackModal .custom-modal-body,
   #settingsModal .custom-modal-body,
-  #feedbackModal .custom-modal-body {
+  #feedbackModal .custom-modal-body,
+  #settingsModalAddress .custom-modal-body,
+  #settingsModalContact .custom-modal-body {
     padding: 0 4.3em;
     padding-bottom: 2.4em;
     min-height: 0; }
   #peerToPeerFeedbackModal .custom-modal.success .custom-modal-footer .button-primary,
   #teamFeedbackModal .custom-modal.success .custom-modal-footer .button-primary,
   #settingsModal .custom-modal.success .custom-modal-footer .button-primary,
-  #feedbackModal .custom-modal.success .custom-modal-footer .button-primary {
+  #feedbackModal .custom-modal.success .custom-modal-footer .button-primary,
+  #settingsModalAddress .custom-modal.success .custom-modal-footer .button-primary,
+  #settingsModalContact .custom-modal.success .custom-modal-footer .button-primary {
     display: none; }
   #peerToPeerFeedbackModal .custom-modal.success .custom-modal-footer .button-dark,
   #teamFeedbackModal .custom-modal.success .custom-modal-footer .button-dark,
   #settingsModal .custom-modal.success .custom-modal-footer .button-dark,
-  #feedbackModal .custom-modal.success .custom-modal-footer .button-dark {
+  #feedbackModal .custom-modal.success .custom-modal-footer .button-dark,
+  #settingsModalAddress .custom-modal.success .custom-modal-footer .button-dark,
+  #settingsModalContact .custom-modal.success .custom-modal-footer .button-dark {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -moz-inline-flex;
@@ -2336,7 +2354,9 @@ input {
   #peerToPeerFeedbackModal .custom-modal.success .success-message,
   #teamFeedbackModal .custom-modal.success .success-message,
   #settingsModal .custom-modal.success .success-message,
-  #feedbackModal .custom-modal.success .success-message {
+  #feedbackModal .custom-modal.success .success-message,
+  #settingsModalAddress .custom-modal.success .success-message,
+  #settingsModalContact .custom-modal.success .success-message {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;
@@ -2345,34 +2365,46 @@ input {
   #peerToPeerFeedbackModal .custom-modal.success .rating-item,
   #teamFeedbackModal .custom-modal.success .rating-item,
   #settingsModal .custom-modal.success .rating-item,
-  #feedbackModal .custom-modal.success .rating-item {
+  #feedbackModal .custom-modal.success .rating-item,
+  #settingsModalAddress .custom-modal.success .rating-item,
+  #settingsModalContact .custom-modal.success .rating-item {
     display: none; }
   #peerToPeerFeedbackModal .custom-modal.success .feedback-item,
   #teamFeedbackModal .custom-modal.success .feedback-item,
   #settingsModal .custom-modal.success .feedback-item,
-  #feedbackModal .custom-modal.success .feedback-item {
+  #feedbackModal .custom-modal.success .feedback-item,
+  #settingsModalAddress .custom-modal.success .feedback-item,
+  #settingsModalContact .custom-modal.success .feedback-item {
     display: none; }
 
 #confirmationModal .custom-modal,
 #inviteUsersModal .custom-modal,
 #ownerTransferModal .custom-modal,
-#settingsModal .custom-modal {
+#settingsModal .custom-modal,
+#settingsModalAddress .custom-modal,
+#settingsModalContact .custom-modal {
   width: 39em; }
   #confirmationModal .custom-modal .custom-modal-close,
   #inviteUsersModal .custom-modal .custom-modal-close,
   #ownerTransferModal .custom-modal .custom-modal-close,
-  #settingsModal .custom-modal .custom-modal-close {
+  #settingsModal .custom-modal .custom-modal-close,
+  #settingsModalAddress .custom-modal .custom-modal-close,
+  #settingsModalContact .custom-modal .custom-modal-close {
     top: 2.2em;
     right: 2.2em; }
     #confirmationModal .custom-modal .custom-modal-close i,
     #inviteUsersModal .custom-modal .custom-modal-close i,
     #ownerTransferModal .custom-modal .custom-modal-close i,
-    #settingsModal .custom-modal .custom-modal-close i {
+    #settingsModal .custom-modal .custom-modal-close i,
+    #settingsModalAddress .custom-modal .custom-modal-close i,
+    #settingsModalContact .custom-modal .custom-modal-close i {
       font-size: 1.5em; }
   #confirmationModal .custom-modal-body,
   #inviteUsersModal .custom-modal-body,
   #ownerTransferModal .custom-modal-body,
-  #settingsModal .custom-modal-body {
+  #settingsModal .custom-modal-body,
+  #settingsModalAddress .custom-modal-body,
+  #settingsModalContact .custom-modal-body {
     padding: 4.6em 6em; }
 
 #inviteUsers .custom-modal {
@@ -2383,18 +2415,22 @@ input {
   #ownerTransfer .custom-modal-body-input-container {
     margin-bottom: 2.7em; }
 
-#settingsModal .custom-modal-body {
+#settingsModalAddress .custom-modal-body,
+#settingsModalContact .custom-modal-body {
   padding-bottom: 2em; }
-  #settingsModal .custom-modal-body-input-container {
+  #settingsModalAddress .custom-modal-body-input-container,
+  #settingsModalContact .custom-modal-body-input-container {
     margin-bottom: 2.6em; }
-#settingsModal .custom-modal-footer {
+#settingsModalAddress .custom-modal-footer,
+#settingsModalContact .custom-modal-footer {
   padding: 0 6em;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
   justify-content: space-between; }
-  #settingsModal .custom-modal-footer .button {
+  #settingsModalAddress .custom-modal-footer .button,
+  #settingsModalContact .custom-modal-footer .button {
     width: 48%; }
 
 #exportPdfModal .custom-modal {
@@ -2637,9 +2673,15 @@ input {
   #inviteMembersModal .custom-modal-body {
     max-height: calc(100% - 6.4em);
     padding: 3.2em 2.5em;
+    padding-left: 0;
     padding-bottom: 0;
     z-index: 1; }
+    #inviteMembersModal .custom-modal-body-title {
+      padding-left: 1.3888888889em; }
+    #inviteMembersModal .custom-modal-body-label {
+      padding-left: 2.0833333333em; }
     #inviteMembersModal .custom-modal-body .search-dropdown {
+      margin-left: 2.5em;
       margin-bottom: 3.5em;
       position: relative;
       width: 100%;
@@ -2692,6 +2734,14 @@ input {
       #inviteMembersModal .custom-modal-body .search-dropdown .input-container {
         position: relative;
         width: 100%; }
+        #inviteMembersModal .custom-modal-body .search-dropdown .input-container.show-button .button-add {
+          display: -webkit-inline-box;
+          display: -webkit-inline-flex;
+          display: -moz-inline-flex;
+          display: -ms-inline-flexbox;
+          display: inline-flex; }
+        #inviteMembersModal .custom-modal-body .search-dropdown .input-container.show-button input {
+          padding-right: 3.8518518519em; }
         #inviteMembersModal .custom-modal-body .search-dropdown .input-container input {
           padding-left: 2.2962962963em;
           height: 2.5925925926em;
@@ -2711,6 +2761,18 @@ input {
           font-size: 1.4em;
           color: #a3a3a3;
           transform: translate(0, -50%); }
+        #inviteMembersModal .custom-modal-body .search-dropdown .input-container .button-add {
+          display: none;
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 3.8518518519em;
+          height: 2.5925925926em;
+          font-size: 1.35em;
+          font-weight: 500;
+          letter-spacing: -0.17px;
+          color: var(--color-primary);
+          border-left: solid 1px #ebebeb; }
       #inviteMembersModal .custom-modal-body .search-dropdown-list {
         display: none;
         position: absolute;
@@ -2804,6 +2866,7 @@ input {
             #inviteMembersModal .custom-modal-body .search-dropdown-list .person-item-button:hover {
               text-decoration: underline; }
     #inviteMembersModal .custom-modal-body .selected-people {
+      padding-left: 2.5em;
       padding-top: 1em;
       padding-bottom: 3.9em;
       max-height: calc(95vh - 16.26em - 6.4em - 6.4em);
@@ -2837,9 +2900,10 @@ input {
         -moz-justify-content: flex-start;
         justify-content: flex-start;
         border-radius: 4px;
-        box-shadow: 0 8px 16px 0 rgba(242, 242, 242, 0.39);
+        box-shadow: 0 4px 8px 0 rgba(242, 242, 242, 0.39);
         border: solid 1px #ebebeb;
-        flex: 1 0 auto; }
+        flex: 1 0 auto;
+        background-color: #fff; }
         #inviteMembersModal .custom-modal-body .selected-people .person-item:not(:last-of-type) {
           border-bottom: solid 1px #ededed; }
         #inviteMembersModal .custom-modal-body .selected-people .person-item-img {
@@ -2903,8 +2967,8 @@ input {
     #inviteMembersModal .custom-modal-footer .button {
       height: 2.5185185185em;
       width: 9.3333333333em;
-      font-size: 1.32em;
-      letter-spacing: 0.03px; }
+      font-size: 1.35em;
+      letter-spacing: -0.07px; }
       #inviteMembersModal .custom-modal-footer .button:not(:last-of-type) {
         margin-right: 1.4rem; }
 
@@ -5492,17 +5556,8 @@ input {
     box-shadow: 0 3px 6px 0 rgba(191, 191, 191, 0.11);
     border: solid 1px #e4e8ec;
     background-color: #ffffff;
-    max-height: 100%;
-    overflow-y: auto;
-    scrollbar-width: none;
-    /* Firefox */
-    -ms-overflow-style: none;
-    /* Internet Explorer 10+ */ }
-    #custom-questions .content-card::-webkit-scrollbar,
-    #custom-questions-team .content-card::-webkit-scrollbar {
-      /* WebKit */
-      width: 0;
-      height: 0; }
+    height: auto;
+    max-height: 100%; }
     #custom-questions .content-card-header,
     #custom-questions-team .content-card-header {
       -webkit-box-direction: normal;
@@ -5532,7 +5587,18 @@ input {
         color: #435365; }
     #custom-questions .content-card .custom-questions,
     #custom-questions-team .content-card .custom-questions {
-      margin-bottom: 4.6em; }
+      margin-bottom: 4.6em;
+      max-height: calc(100vh - 80em);
+      overflow-y: auto;
+      scrollbar-width: none;
+      /* Firefox */
+      -ms-overflow-style: none;
+      /* Internet Explorer 10+ */ }
+      #custom-questions .content-card .custom-questions::-webkit-scrollbar,
+      #custom-questions-team .content-card .custom-questions::-webkit-scrollbar {
+        /* WebKit */
+        width: 0;
+        height: 0; }
       #custom-questions .content-card .custom-questions .custom-question,
       #custom-questions-team .content-card .custom-questions .custom-question {
         width: 100%;
@@ -5803,12 +5869,12 @@ input {
             line-height: 1.23;
             letter-spacing: -0.13px;
             color: #9fa1a2; }
-        #company-overview .content-card.main-card .main-card-top .data-card svg {
+        #company-overview .content-card.main-card .main-card-top .data-card .icon-refresh-circle-full {
           position: absolute;
-          top: 2.4rem;
-          right: 2.4rem;
-          width: 2.0rem;
-          height: 2.0rem; }
+          top: 1.2em;
+          right: 1.2em;
+          font-size: 2em;
+          color: #717171; }
         #company-overview .content-card.main-card .main-card-top .data-card-buttons {
           margin-bottom: 3.6rem; }
           #company-overview .content-card.main-card .main-card-top .data-card-buttons .button-gradient {
