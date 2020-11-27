@@ -3555,6 +3555,8 @@ input {
     transition: background-color 0.2s ease-in-out; }
     .custom-table-row:not(:first-of-type) {
       border-top: solid 1px #e6e8eb; }
+    .custom-table-row:nth-of-type(2) {
+      border-top: 0; }
     .custom-table-row td, .custom-table-row th {
       padding-left: 1.7rem;
       display: -webkit-box;
@@ -3748,6 +3750,7 @@ input {
     -webkit-justify-content: flex-start;
     -moz-justify-content: flex-start;
     justify-content: flex-start;
+    border-bottom: solid 1px #e6e8eb;
     border-top: none !important;
     background-color: #fbfbfb; }
     .custom-table-input-row.open {
