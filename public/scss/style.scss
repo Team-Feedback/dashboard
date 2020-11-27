@@ -4929,7 +4929,7 @@ input {
     display: none;
     @include align-items(center);
     @include justify-content(flex-start);
-    border-top: solid 1px #e6e8eb !important;
+    border-top: none !important;
 
     &.open {
       @include flexbox();
@@ -4944,9 +4944,16 @@ input {
     }
 
     & .column-01 {
+
+      & .input-container {
+        position: relative;
+        width: 100%;
+        max-width: 32em;
+      }
+      
       & input {
         width: 100%;
-        max-width: emcalc(25, 1.23);
+        //max-width: emcalc(25, 1.23);
         padding-bottom: emcalc(0.85, 1.23);
         font-size: 1.23em;
         // font-family: "Inter-Regular";
@@ -4959,6 +4966,111 @@ input {
 
         &::placeholder {
           color: #a7acb1;
+        }
+
+        &:focus + .search-menu {
+          @include flexbox();
+          box-shadow: 0 8px 16px 0 rgba(216, 216, 216, 0.39);
+        }
+      }
+
+      & .search-menu {
+        display: none;
+        
+        @include flex-direction(column);
+        @include align-items(flex-start);
+        @include justify-content(flex-start);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translate(0,100%);
+        width: 100%;
+        background-color: #FFF;
+        border-radius: 4px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border: solid 1px #ebebeb;
+        border-top: 0;
+
+        max-height: 25em;
+        overflow-y: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        scroll-behavior: smooth;
+    
+        &::-webkit-scrollbar {
+          width: 0;
+          height: 0;
+        }
+
+        &:hover {
+          @include flexbox();
+          box-shadow: 0 8px 16px 0 rgba(216, 216, 216, 0.39);
+        }
+
+        &-item {
+          width: 100%;
+          height: 5em;
+          min-height: 5em;
+          padding-left: 1.4em;
+          padding-right: 2.9em;
+          @include flexbox();
+          @include align-items(center);
+          @include justify-content(flex-start);
+          
+
+          &:not(:last-of-type) {
+            border-bottom: solid 1px #ededed;
+          }
+
+          &-img {
+            margin-right: 1em;
+            width: 4em;
+            height: 4em;
+            border-radius: 50%;
+            object-fit: contain;
+          }
+
+          &-initials {
+            @include inline-flex();
+            @include align-items(center);
+            @include justify-content(center);
+            margin-right: emcalc(1,1.6);
+            min-width: emcalc(4,1.6);
+            min-height: emcalc(4,1.6);
+            font-size: 1.6em;
+            font-weight: 700;
+            color: #FFF;
+            border-radius: 50%;
+            background-color: #FFBF12;
+          }
+
+          &-set {
+            margin-right: auto;
+            &-name {
+              margin-bottom: emcalc(.25,1.34);
+              font-size: 1.34em;
+              font-weight: 400;
+              color: #484c57;
+            }
+
+            &-position {
+              font-size: 1.15em;
+              font-weight: 400;
+              color: #6e6e6e;
+            }
+          }
+
+          &-button {
+            font-size: 12.8px;
+            font-weight: 500;
+            color: #087af9;
+            cursor: pointer;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
         }
       }
     }
