@@ -4930,6 +4930,7 @@ input {
     @include align-items(center);
     @include justify-content(flex-start);
     border-top: none !important;
+    background-color: #fbfbfb;
 
     &.open {
       @include flexbox();
@@ -4953,7 +4954,7 @@ input {
       
       & input {
         width: 100%;
-        //max-width: emcalc(25, 1.23);
+        max-width: emcalc(24.5, 1.23);
         padding-bottom: emcalc(0.85, 1.23);
         font-size: 1.23em;
         // font-family: "Inter-Regular";
@@ -4966,6 +4967,10 @@ input {
 
         &::placeholder {
           color: #a7acb1;
+        }
+
+        &:focus {
+          border-color: transparent;
         }
 
         &:focus + .search-menu {
@@ -4981,16 +4986,13 @@ input {
         @include align-items(flex-start);
         @include justify-content(flex-start);
         position: absolute;
-        bottom: 0;
+        bottom: 1.5px;
         left: 0;
         transform: translate(0,100%);
         width: 100%;
         background-color: #FFF;
         border-radius: 4px;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
         border: solid 1px #ebebeb;
-        border-top: 0;
 
         max-height: 25em;
         overflow-y: auto;
