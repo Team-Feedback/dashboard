@@ -4969,6 +4969,7 @@ input {
         border: 0;
         outline: 0;
         border-bottom: 1.5px solid #e6e8eb;
+        background-color: transparent;
 
         &::placeholder {
           color: #a7acb1;
@@ -5024,7 +5025,11 @@ input {
           @include flexbox();
           @include align-items(center);
           @include justify-content(flex-start);
+          cursor: pointer;
           
+          &:hover {
+            background-color: #fbfbfb;
+          }
 
           &:not(:last-of-type) {
             border-bottom: solid 1px #ededed;

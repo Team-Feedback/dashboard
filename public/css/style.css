@@ -3791,7 +3791,8 @@ input {
       color: #48525d;
       border: 0;
       outline: 0;
-      border-bottom: 1.5px solid #e6e8eb; }
+      border-bottom: 1.5px solid #e6e8eb;
+      background-color: transparent; }
       .custom-table-input-row .column-01 input::placeholder {
         color: #a7acb1; }
       .custom-table-input-row .column-01 input:focus {
@@ -3864,7 +3865,10 @@ input {
         -ms-flex-pack: start;
         -webkit-justify-content: flex-start;
         -moz-justify-content: flex-start;
-        justify-content: flex-start; }
+        justify-content: flex-start;
+        cursor: pointer; }
+        .custom-table-input-row .column-01 .search-menu-item:hover {
+          background-color: #fbfbfb; }
         .custom-table-input-row .column-01 .search-menu-item:not(:last-of-type) {
           border-bottom: solid 1px #ededed; }
         .custom-table-input-row .column-01 .search-menu-item-img {
