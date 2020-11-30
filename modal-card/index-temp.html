@@ -1,0 +1,2360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Card Modal</title>
+
+  <link rel="stylesheet" href="../public/css/pretty-checkbox.css">
+  <link rel="stylesheet" href="../public/css/style.css">
+</head>
+
+<body>
+
+  <main class="main" id="example-page">
+    <!-- Header -->
+    <div class="header small">
+      <!-- Buttons -->
+      <div class="header-buttons">
+        <div class="header-buttons-settings"><i class="icon-cog"></i></div>
+        <div class="header-buttons-help"><i class="icon-question"></i></div>
+        <div class="header-buttons-notifications"><i class="icon-bell"></i></div>
+        <div class="header-buttons-initials">M</div>
+      </div>
+
+      <!-- Header top -->
+      <div class="header-top">
+        <div class="header-top-logo">
+          <img src="../public/img/logo-only.png" alt="Team feedback logo" class="header-top-logo-img">
+        </div>
+        <div class="header-top-input-container">
+          <input type="text" placeholder="Search">
+          <i class="icon-search"></i>
+        </div>
+      </div>
+      <!-- Header main -->
+      <div class="header-main">
+        <div class="header-main-info">
+          <div class="header-main-info-icon">
+            <i class="icon-arrow-left"></i>
+          </div>
+          <h1 class="header-main-info-title">Header H1</h1>
+        </div>
+      </div>
+
+      <!-- Header navigation -->
+      <!-- <div class="header-nav">
+                <ul class="header-nav-list">
+                    <li class="header-nav-list-item active">
+                        <p class="header-nav-list-item-text" text="Menu point active">Menu point active</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 15"><g transform="translate(-614 -113)"><g transform="translate(615 113)" fill="#fff"><path d="M 19 13.49999809265137 L 2 13.49999809265137 C 1.80649995803833 13.49999809265137 1.639320015907288 13.39666748046875 1.55279004573822 13.22360801696777 C 1.466249942779541 13.05053806304932 1.48389995098114 12.85479831695557 1.600000023841858 12.6999979019165 L 10.10000038146973 1.366667866706848 C 10.1953296661377 1.239567875862122 10.34111976623535 1.166667819023132 10.5 1.166667819023132 C 10.65888023376465 1.166667819023132 10.8046703338623 1.239567875862122 10.89999961853027 1.366667866706848 L 19.39999961853027 12.6999979019165 C 19.51609992980957 12.85479831695557 19.53375053405762 13.05053806304932 19.44721984863281 13.22360801696777 C 19.36067962646484 13.39667797088623 19.19350051879883 13.49999809265137 19 13.49999809265137 Z" stroke="none"/><path d="M 10.5 1.666667938232422 L 2 12.99999713897705 C 2 12.99999809265137 2 12.99999809265137 2 12.99999809265137 L 18.99999237060547 12.99999809265137 C 18.9999942779541 12.99999618530273 18.9999942779541 12.9999942779541 19 12.99999809265137 L 10.50222969055176 1.666897773742676 C 10.50201034545898 1.666828155517578 10.50117015838623 1.666667938232422 10.5 1.666667938232422 M 10.5 0.6666707992553711 C 10.80000019073486 0.6666707992553711 11.10000038146973 0.8000030517578125 11.30000019073486 1.066667556762695 L 19.79999923706055 12.39999771118164 C 20.29442977905273 13.05923748016357 19.82403945922852 13.99999809265137 19 13.99999809265137 L 2 13.99999809265137 C 1.175949096679688 13.99999809265137 0.7055702209472656 13.05923748016357 1.200000762939453 12.39999771118164 L 9.699999809265137 1.066667556762695 C 9.899999618530273 0.8000030517578125 10.19999980926514 0.6666707992553711 10.5 0.6666707992553711 Z" stroke="none" fill="#eaeaea"/></g><rect width="23" height="3" transform="translate(614 125)" fill="#fff"/></g></svg>
+                    </li>
+                    <li class="header-nav-list-item">
+                        <p class="header-nav-list-item-text" text="Menu point 1">Menu point 1</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 15"><g transform="translate(-614 -113)"><g transform="translate(615 113)" fill="#fff"><path d="M 19 13.49999809265137 L 2 13.49999809265137 C 1.80649995803833 13.49999809265137 1.639320015907288 13.39666748046875 1.55279004573822 13.22360801696777 C 1.466249942779541 13.05053806304932 1.48389995098114 12.85479831695557 1.600000023841858 12.6999979019165 L 10.10000038146973 1.366667866706848 C 10.1953296661377 1.239567875862122 10.34111976623535 1.166667819023132 10.5 1.166667819023132 C 10.65888023376465 1.166667819023132 10.8046703338623 1.239567875862122 10.89999961853027 1.366667866706848 L 19.39999961853027 12.6999979019165 C 19.51609992980957 12.85479831695557 19.53375053405762 13.05053806304932 19.44721984863281 13.22360801696777 C 19.36067962646484 13.39667797088623 19.19350051879883 13.49999809265137 19 13.49999809265137 Z" stroke="none"/><path d="M 10.5 1.666667938232422 L 2 12.99999713897705 C 2 12.99999809265137 2 12.99999809265137 2 12.99999809265137 L 18.99999237060547 12.99999809265137 C 18.9999942779541 12.99999618530273 18.9999942779541 12.9999942779541 19 12.99999809265137 L 10.50222969055176 1.666897773742676 C 10.50201034545898 1.666828155517578 10.50117015838623 1.666667938232422 10.5 1.666667938232422 M 10.5 0.6666707992553711 C 10.80000019073486 0.6666707992553711 11.10000038146973 0.8000030517578125 11.30000019073486 1.066667556762695 L 19.79999923706055 12.39999771118164 C 20.29442977905273 13.05923748016357 19.82403945922852 13.99999809265137 19 13.99999809265137 L 2 13.99999809265137 C 1.175949096679688 13.99999809265137 0.7055702209472656 13.05923748016357 1.200000762939453 12.39999771118164 L 9.699999809265137 1.066667556762695 C 9.899999618530273 0.8000030517578125 10.19999980926514 0.6666707992553711 10.5 0.6666707992553711 Z" stroke="none" fill="#eaeaea"/></g><rect width="23" height="3" transform="translate(614 125)" fill="#fff"/></g></svg>
+                    </li>
+                    <li class="header-nav-list-item">
+                        <p class="header-nav-list-item-text" text="Menu point 2">Menu point 2</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 15"><g transform="translate(-614 -113)"><g transform="translate(615 113)" fill="#fff"><path d="M 19 13.49999809265137 L 2 13.49999809265137 C 1.80649995803833 13.49999809265137 1.639320015907288 13.39666748046875 1.55279004573822 13.22360801696777 C 1.466249942779541 13.05053806304932 1.48389995098114 12.85479831695557 1.600000023841858 12.6999979019165 L 10.10000038146973 1.366667866706848 C 10.1953296661377 1.239567875862122 10.34111976623535 1.166667819023132 10.5 1.166667819023132 C 10.65888023376465 1.166667819023132 10.8046703338623 1.239567875862122 10.89999961853027 1.366667866706848 L 19.39999961853027 12.6999979019165 C 19.51609992980957 12.85479831695557 19.53375053405762 13.05053806304932 19.44721984863281 13.22360801696777 C 19.36067962646484 13.39667797088623 19.19350051879883 13.49999809265137 19 13.49999809265137 Z" stroke="none"/><path d="M 10.5 1.666667938232422 L 2 12.99999713897705 C 2 12.99999809265137 2 12.99999809265137 2 12.99999809265137 L 18.99999237060547 12.99999809265137 C 18.9999942779541 12.99999618530273 18.9999942779541 12.9999942779541 19 12.99999809265137 L 10.50222969055176 1.666897773742676 C 10.50201034545898 1.666828155517578 10.50117015838623 1.666667938232422 10.5 1.666667938232422 M 10.5 0.6666707992553711 C 10.80000019073486 0.6666707992553711 11.10000038146973 0.8000030517578125 11.30000019073486 1.066667556762695 L 19.79999923706055 12.39999771118164 C 20.29442977905273 13.05923748016357 19.82403945922852 13.99999809265137 19 13.99999809265137 L 2 13.99999809265137 C 1.175949096679688 13.99999809265137 0.7055702209472656 13.05923748016357 1.200000762939453 12.39999771118164 L 9.699999809265137 1.066667556762695 C 9.899999618530273 0.8000030517578125 10.19999980926514 0.6666707992553711 10.5 0.6666707992553711 Z" stroke="none" fill="#eaeaea"/></g><rect width="23" height="3" transform="translate(614 125)" fill="#fff"/></g></svg>
+                    </li>
+                    <li class="header-nav-list-item">
+                        <p class="header-nav-list-item-text" text="Menu point 3">Menu point 3</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 15"><g transform="translate(-614 -113)"><g transform="translate(615 113)" fill="#fff"><path d="M 19 13.49999809265137 L 2 13.49999809265137 C 1.80649995803833 13.49999809265137 1.639320015907288 13.39666748046875 1.55279004573822 13.22360801696777 C 1.466249942779541 13.05053806304932 1.48389995098114 12.85479831695557 1.600000023841858 12.6999979019165 L 10.10000038146973 1.366667866706848 C 10.1953296661377 1.239567875862122 10.34111976623535 1.166667819023132 10.5 1.166667819023132 C 10.65888023376465 1.166667819023132 10.8046703338623 1.239567875862122 10.89999961853027 1.366667866706848 L 19.39999961853027 12.6999979019165 C 19.51609992980957 12.85479831695557 19.53375053405762 13.05053806304932 19.44721984863281 13.22360801696777 C 19.36067962646484 13.39667797088623 19.19350051879883 13.49999809265137 19 13.49999809265137 Z" stroke="none"/><path d="M 10.5 1.666667938232422 L 2 12.99999713897705 C 2 12.99999809265137 2 12.99999809265137 2 12.99999809265137 L 18.99999237060547 12.99999809265137 C 18.9999942779541 12.99999618530273 18.9999942779541 12.9999942779541 19 12.99999809265137 L 10.50222969055176 1.666897773742676 C 10.50201034545898 1.666828155517578 10.50117015838623 1.666667938232422 10.5 1.666667938232422 M 10.5 0.6666707992553711 C 10.80000019073486 0.6666707992553711 11.10000038146973 0.8000030517578125 11.30000019073486 1.066667556762695 L 19.79999923706055 12.39999771118164 C 20.29442977905273 13.05923748016357 19.82403945922852 13.99999809265137 19 13.99999809265137 L 2 13.99999809265137 C 1.175949096679688 13.99999809265137 0.7055702209472656 13.05923748016357 1.200000762939453 12.39999771118164 L 9.699999809265137 1.066667556762695 C 9.899999618530273 0.8000030517578125 10.19999980926514 0.6666707992553711 10.5 0.6666707992553711 Z" stroke="none" fill="#eaeaea"/></g><rect width="23" height="3" transform="translate(614 125)" fill="#fff"/></g></svg>
+                    </li>
+                    <li class="header-nav-list-item">
+                        <p class="header-nav-list-item-text" text="Menu point 4">Menu point 4</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 15"><g transform="translate(-614 -113)"><g transform="translate(615 113)" fill="#fff"><path d="M 19 13.49999809265137 L 2 13.49999809265137 C 1.80649995803833 13.49999809265137 1.639320015907288 13.39666748046875 1.55279004573822 13.22360801696777 C 1.466249942779541 13.05053806304932 1.48389995098114 12.85479831695557 1.600000023841858 12.6999979019165 L 10.10000038146973 1.366667866706848 C 10.1953296661377 1.239567875862122 10.34111976623535 1.166667819023132 10.5 1.166667819023132 C 10.65888023376465 1.166667819023132 10.8046703338623 1.239567875862122 10.89999961853027 1.366667866706848 L 19.39999961853027 12.6999979019165 C 19.51609992980957 12.85479831695557 19.53375053405762 13.05053806304932 19.44721984863281 13.22360801696777 C 19.36067962646484 13.39667797088623 19.19350051879883 13.49999809265137 19 13.49999809265137 Z" stroke="none"/><path d="M 10.5 1.666667938232422 L 2 12.99999713897705 C 2 12.99999809265137 2 12.99999809265137 2 12.99999809265137 L 18.99999237060547 12.99999809265137 C 18.9999942779541 12.99999618530273 18.9999942779541 12.9999942779541 19 12.99999809265137 L 10.50222969055176 1.666897773742676 C 10.50201034545898 1.666828155517578 10.50117015838623 1.666667938232422 10.5 1.666667938232422 M 10.5 0.6666707992553711 C 10.80000019073486 0.6666707992553711 11.10000038146973 0.8000030517578125 11.30000019073486 1.066667556762695 L 19.79999923706055 12.39999771118164 C 20.29442977905273 13.05923748016357 19.82403945922852 13.99999809265137 19 13.99999809265137 L 2 13.99999809265137 C 1.175949096679688 13.99999809265137 0.7055702209472656 13.05923748016357 1.200000762939453 12.39999771118164 L 9.699999809265137 1.066667556762695 C 9.899999618530273 0.8000030517578125 10.19999980926514 0.6666707992553711 10.5 0.6666707992553711 Z" stroke="none" fill="#eaeaea"/></g><rect width="23" height="3" transform="translate(614 125)" fill="#fff"/></g></svg>
+                    </li>
+                </ul>
+            </div> -->
+
+      <!-- <div class="header-sub-nav">
+                <ul class="header-sub-nav-list">
+                    <li class="header-sub-nav-list-item active">
+                        <p class="header-sub-nav-list-item-text" text="Menu point active">Menu point active</p>
+                    </li>
+                    <li class="header-sub-nav-list-item">
+                        <p class="header-sub-nav-list-item-text" text="Menu point 1">Menu point 1</p>
+                    </li>
+                    <li class="header-sub-nav-list-item">
+                        <p class="header-sub-nav-list-item-text" text="Menu point 2">Menu point 2</p>
+                    </li>
+                    <li class="header-sub-nav-list-item">
+                        <p class="header-sub-nav-list-item-text" text="Menu point 3">Menu point 3</p>
+                    </li>
+                    <li class="header-sub-nav-list-item">
+                        <p class="header-sub-nav-list-item-text" text="Menu point 4">Menu point 4</p>
+                    </li>
+                </ul>
+            </div> -->
+    </div>
+
+    <!-- Content -->
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="content-card">
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;"
+            target-modal="modalCard" onclick="checkForReadMore()">
+            Modal card
+          </button>
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;"
+            target-modal="exportPdfModal">
+            Export PDF
+          </button>
+        </div>
+
+        <!-- EXPORT PDF MODAL-->
+        <div class="custom-modal-wrapper" id="exportPdfModal">
+          <div class="custom-modal">
+            <!-- Modal body -->
+            <div class="custom-modal-body">
+              <div class="custom-modal-close" close-modal="exportPdfModal">
+                <i class="icon-close"></i>
+              </div>
+
+              <div class="export-pdf">
+                <div class="export-pdf-header">
+                  <p class="export-pdf-header-title">Export feedback report</p>
+                  <p class="export-pdf-header-text">This is just a placeholder text.</p>
+                  <div class="export-pdf-header-bottom">
+                    <p class="export-pdf-header-bottom-item column-01">Name</p>
+                    <p class="export-pdf-header-bottom-item column-02">Description</p>
+                    <p class="export-pdf-header-bottom-item column-03">ON/OFF</p>
+                  </div>
+                </div>
+
+                <div class="export-pdf-body">
+                  <div class="export-pdf-body-row">
+                    <p class="export-pdf-body-row-item column-01">Cover Page</p>
+                    <p class="export-pdf-body-row-item column-02">On the cover page are shown the team general
+                      information. Suggested to keep turned ON.</p>
+                    <div class="export-pdf-body-row-item column-03">
+                      <div class="pretty p-switch p-fill">
+                        <input type="checkbox" id="teams" name="teams" />
+                        <div class="state p-success">
+                          <label>&nbsp;</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="export-pdf-body-row">
+                    <p class="export-pdf-body-row-item column-01">Column Charts</p>
+                    <p class="export-pdf-body-row-item column-02">The column charts show how this team is doing at the
+                      moment.</p>
+                    <div class="export-pdf-body-row-item column-03">
+                      <div class="pretty p-switch p-fill">
+                        <input type="checkbox" id="teams" name="teams" />
+                        <div class="state p-success">
+                          <label>&nbsp;</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="export-pdf-body-row">
+                    <p class="export-pdf-body-row-item column-01">Line Charts</p>
+                    <p class="export-pdf-body-row-item column-02">The line charts show how the long term development of
+                      this team looks like.</p>
+                    <div class="export-pdf-body-row-item column-03">
+                      <div class="pretty p-switch p-fill">
+                        <input type="checkbox" id="teams" name="teams" />
+                        <div class="state p-success">
+                          <label>&nbsp;</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="export-pdf-body-row">
+                    <p class="export-pdf-body-row-item column-01">Progress bars</p>
+                    <p class="export-pdf-body-row-item column-02">The progress bars show the strength and weakness of
+                      your team members.</p>
+                    <div class="export-pdf-body-row-item column-03">
+                      <div class="pretty p-switch p-fill">
+                        <input type="checkbox" id="teams" name="teams" />
+                        <div class="state p-success">
+                          <label>&nbsp;</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="export-pdf-body-row">
+                    <p class="export-pdf-body-row-item column-01">Combo charts</p>
+                    <p class="export-pdf-body-row-item column-02">Show the development of the team members average self
+                      evaluation.</p>
+                    <div class="export-pdf-body-row-item column-03">
+                      <div class="pretty p-switch p-fill">
+                        <input type="checkbox" id="teams" name="teams" />
+                        <div class="state p-success">
+                          <label>&nbsp;</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="export-pdf-preview">
+                    <p class="export-pdf-preview-caption">Preview report</p>
+                    <div class="export-pdf-preview-images">
+                      <img src="../public/img/pdf-preview-01.png" alt="Pdf preview"
+                        class="export-pdf-preview-images-img">
+                      <img src="../public/img/pdf-preview-02.png" alt="Pdf preview"
+                        class="export-pdf-preview-images-img">
+                      <img src="../public/img/pdf-preview-03.png" alt="Pdf preview"
+                        class="export-pdf-preview-images-img">
+                      <img src="../public/img/pdf-preview-04.png" alt="Pdf preview"
+                        class="export-pdf-preview-images-img">
+                      <img src="../public/img/pdf-preview-04.png" alt="Pdf preview"
+                        class="export-pdf-preview-images-img">
+                      <img src="../public/img/pdf-preview-05.png" alt="Pdf preview"
+                        class="export-pdf-preview-images-img">
+                    </div>
+                  </div>
+
+                  <button class="button button-primary">Export report</button>
+
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="custom-modal-backdrop"></div>
+        </div>
+
+        <!-- FEEDBACK TRANSFER MODAL-->
+        <div class="custom-modal-wrapper" id="feedbackTransferModal">
+          <div class="custom-modal">
+            <!-- Modal body -->
+            <div class="custom-modal-header">
+              <div class="person-info">
+                <!-- <img src="../public/img/p-09.png" alt="User's profile image" class="person-info-img"> -->
+                <div class="person-info-initials" style="background-color: #fea42a;">EL</div>
+                <div class="person-info-set">
+                  <p class="person-info-set-name">Eve Larsson</p>
+                  <p class="person-info-set-position">This is an example job tite</p>
+                </div>
+              </div>
+
+              <div class="person-divider">
+                <p class="person-divider-text">Sent to</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="84.712" height="17.175" viewBox="0 0 84.712 17.175">
+                  <g transform="translate(-673.875 -137.913)">
+                    <line x2="69" transform="translate(675 146.5)" fill="none" stroke="#8790a3" stroke-linecap="round"
+                      stroke-width="2.25" />
+                    <g transform="translate(-30.5)">
+                      <line x2="8" y2="7" transform="translate(779.5 139.5)" fill="none" stroke="#8790a3"
+                        stroke-linecap="round" stroke-width="2.25" />
+                      <line x1="8" y2="7" transform="translate(779.5 146.5)" fill="none" stroke="#8790a3"
+                        stroke-linecap="round" stroke-width="2.25" />
+                    </g>
+                  </g>
+                </svg>
+                <div class="person-divider-icon"><i class="icon-compare"></i></div>
+              </div>
+
+              <div class="person-info">
+                <!-- <img src="../public/img/p-07.png" alt="User's profile image" class="person-info-img"> -->
+                <div class="person-info-initials" style="background-color: #1889f9;">JM</div>
+                <div class="person-info-set">
+                  <p class="person-info-set-name">Julia Martinez</p>
+                  <p class="person-info-set-position">This is an example job tite</p>
+                </div>
+              </div>
+            </div>
+            <div class="custom-modal-body">
+              <div class="feedback grid-item">
+                <div class="feedback-header">
+                  <p class="feedback-header-date">12.10.2020</p>
+                </div>
+                <div class="feedback-rating">
+                  <div class="feedback-rating-item">
+                    <p class="feedback-rating-item-name">Attitude:</p>
+                    <div class="feedback-rating-item-stars">
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                    </div>
+                  </div>
+                  <div class="feedback-rating-item">
+                    <p class="feedback-rating-item-name">Productivity:</p>
+                    <div class="feedback-rating-item-stars">
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                    </div>
+                  </div>
+                  <div class="feedback-rating-item">
+                    <p class="feedback-rating-item-name">Teamworking:</p>
+                    <div class="feedback-rating-item-stars">
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="feedback-main">
+                  <div class="feedback-main-item">
+                    <p class="feedback-main-item-text">
+                      <span class="feedback-main-item-text-strong">Compliment:</span>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi eius excepturi non.
+                    </p>
+                  </div>
+                  <div class="feedback-main-item">
+                    <p class="feedback-main-item-text">
+                      <span class="feedback-main-item-text-strong">Improver:</span>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi eius excepturi non.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="feedback grid-item">
+                <div class="feedback-header">
+                  <p class="feedback-header-date">12.10.2020</p>
+                </div>
+                <div class="feedback-rating">
+                  <div class="feedback-rating-item">
+                    <p class="feedback-rating-item-name">Attitude:</p>
+                    <div class="feedback-rating-item-stars">
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                    </div>
+                  </div>
+                  <div class="feedback-rating-item">
+                    <p class="feedback-rating-item-name">Productivity:</p>
+                    <div class="feedback-rating-item-stars">
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                    </div>
+                  </div>
+                  <div class="feedback-rating-item">
+                    <p class="feedback-rating-item-name">Teamworking:</p>
+                    <div class="feedback-rating-item-stars">
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="feedback-main">
+                  <div class="feedback-main-item">
+                    <p class="feedback-main-item-text">
+                      <span class="feedback-main-item-text-strong">Compliment:</span>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi eius excepturi non.
+                    </p>
+                  </div>
+                  <div class="feedback-main-item">
+                    <p class="feedback-main-item-text">
+                      <span class="feedback-main-item-text-strong">Improver:</span>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi eius excepturi non.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="feedback grid-item">
+                <div class="feedback-header">
+                  <p class="feedback-header-date">12.10.2020</p>
+                </div>
+                <div class="feedback-rating">
+                  <div class="feedback-rating-item">
+                    <p class="feedback-rating-item-name">Attitude:</p>
+                    <div class="feedback-rating-item-stars">
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                    </div>
+                  </div>
+                  <div class="feedback-rating-item">
+                    <p class="feedback-rating-item-name">Productivity:</p>
+                    <div class="feedback-rating-item-stars">
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                    </div>
+                  </div>
+                  <div class="feedback-rating-item">
+                    <p class="feedback-rating-item-name">Teamworking:</p>
+                    <div class="feedback-rating-item-stars">
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                      <i class="icon-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="feedback-main">
+                  <div class="feedback-main-item">
+                    <p class="feedback-main-item-text">
+                      <span class="feedback-main-item-text-strong">Compliment:</span>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi eius excepturi non.
+                    </p>
+                  </div>
+                  <div class="feedback-main-item">
+                    <p class="feedback-main-item-text">
+                      <span class="feedback-main-item-text-strong">Improver:</span>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi eius excepturi non.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="custom-modal-footer">
+              <button class="button button-white" close-modal="feedbackTransferModal">Close window</button>
+            </div>
+
+          </div>
+          <div class="custom-modal-backdrop"></div>
+        </div>
+
+        <!-- MODAL CARD -->
+        <div class="custom-modal-wrapper" id="modalCard">
+          <div class="custom-modal">
+            <div class="custom-modal-close" close-modal="modalCard">
+              <i class="icon-close"></i>
+            </div>
+            <div class="page-header">
+              <div class="page-header-info">
+                <!-- <img src="../public/img/p-01.png" alt="User's profile picture" class="page-header-info-img" /> -->
+                <!-- <div class="page-header-info-icon">
+                  <i class="icon-users"></i>
+                </div> -->
+                <div class="page-header-info-initials" style="background-color: #fea42a;">MM</div>
+                <div>
+                  <p class="page-header-info-name">
+                    <span class="page-header-info-name-strong">Julia Martinez</span>
+                  </p>
+                  <p class="page-header-info-position">
+                    <span class="page-header-info-position-strong">Job title:</span>
+                    This is an example team description.
+                  </p>
+                </div>
+              </div>
+
+              <ul class="page-header-list">
+                <li class="page-header-list-item">
+                  <button class="page-header-list-item-link">
+                    Development charts
+                  </button>
+                </li>
+                <li class="page-header-list-item">
+                  <button class="page-header-list-item-link active">
+                    Received feedback
+                    <div class="page-header-list-item-notification">9</div>
+                  </button>
+
+                </li>
+                <li class="page-header-list-item">
+                  <button class="page-header-list-item-link">Given feedback</button>
+                </li>
+                <li class="page-header-list-item">
+                  <button class="page-header-list-item-link">
+                    Self evaluations
+                  </button>
+                </li>
+                <li class="give-feedback-button">
+                  <button class="button button-primary-outlined">
+                    Give feedback
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <!-- Modal body -->
+            <div class="custom-modal-body">
+              <div class="custom-accordion">
+                <div class="custom-accordion-card open card-01">
+                  <div class="custom-accordion-card-header">
+                    <div class="section-header">
+                      <p class="section-header-text">Feedback from colleagues</p>
+                      <button class="section-header-toggle accordion-card-trigger" accordion-trigger-target="card-01"
+                        onclick="if(/Close/.test(this.innerText)) {this.innerHTML = `Open section <i class='icon-arrow-down'></i>`} else {this.innerHTML = `Close section <i class='icon-arrow-up'></i>`}">
+                        Close section <i class="icon-arrow-down"></i>
+                      </button>
+                      <div class="custom-dropdown default">
+                        <button class="custom-dropdown-trigger">
+                          Summary boxes last three months <i class="icon-caret-down"></i>
+                        </button>
+
+                        <div class="custom-dropdown-menu">
+                          <div class="custom-dropdown-menu-item">
+                            <button class="custom-dropdown-menu-item-link">
+                              Last month
+                            </button>
+                          </div>
+                          <div class="custom-dropdown-menu-item selected">
+                            <button class="custom-dropdown-menu-item-link">
+                              Last 3 months
+                            </button>
+                          </div>
+                          <div class="custom-dropdown-menu-item">
+                            <button class="custom-dropdown-menu-item-link">
+                              Last 6 months
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="custom-accordion-card-body">
+                    <div class="feedback-wrapper grid">
+
+                      <div class="feedback grid-item">
+                        <div class="feedback-header">
+                          <!-- <img src="../public/img/p-01.png" alt="User's profile picture" class="feedback-header-img" /> -->
+                          <div class="feedback-header-initials" style="background-color: #fea42a;">MM</div>
+                          <p class="feedback-header-name">Eve Larsson</p>
+                          <div class="feedback-header-options">
+                            <p class="feedback-header-amount">4 Reviews</p>
+                            <button class="feedback-read-more modal-trigger" target-modal="feedbackTransferModal"><i
+                                class="icon-expand"></i></button>
+                          </div>
+                        </div>
+                        <div class="feedback-rating">
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Attitude:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Productivity:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Teamworking:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="feedback-main">
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Compliment:</span>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              quia.
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Improver:</span>
+                              Lorem ipsum dolor sit amet consectetur.
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="close"><i class="icon-close"></i></div>
+                        </div>
+                      </div>
+
+                      <div class="feedback grid-item">
+                        <div class="feedback-header">
+                          <!-- <img src="../public/img/p-01.png" alt="User's profile picture" class="feedback-header-img" /> -->
+                          <div class="feedback-header-initials" style="background-color: #fea42a;">MM</div>
+                          <p class="feedback-header-name">Eve Larsson</p>
+                          <div class="feedback-header-options">
+                            <p class="feedback-header-amount">4 Reviews</p>
+                            <button class="feedback-read-more modal-trigger" target-modal="feedbackTransferModal"><i
+                                class="icon-expand"></i></button>
+                          </div>
+                        </div>
+                        <div class="feedback-rating">
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Attitude:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Productivity:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Teamworking:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="feedback-main">
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Compliment:</span>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              quia.
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Improver:</span>
+                              Lorem ipsum dolor sit amet consectetur.
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="close"><i class="icon-close"></i></div>
+                        </div>
+                      </div>
+
+                      <div class="feedback grid-item">
+                        <div class="feedback-header">
+                          <!-- <img src="../public/img/p-01.png" alt="User's profile picture" class="feedback-header-img" /> -->
+                          <div class="feedback-header-initials" style="background-color: #fea42a;">MM</div>
+                          <p class="feedback-header-name">Eve Larsson</p>
+                          <div class="feedback-header-options">
+                            <p class="feedback-header-amount">4 Reviews</p>
+                            <button class="feedback-read-more modal-trigger" target-modal="feedbackTransferModal"><i
+                                class="icon-expand"></i></button>
+                          </div>
+                        </div>
+                        <div class="feedback-rating">
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Attitude:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Productivity:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Teamworking:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="feedback-main">
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Compliment:</span>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              quia.
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Improver:</span>
+                              Lorem ipsum dolor sit amet consectetur.
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="close"><i class="icon-close"></i></div>
+                        </div>
+                      </div>
+
+                      <div class="feedback grid-item">
+                        <div class="feedback-header">
+                          <!-- <img src="../public/img/p-01.png" alt="User's profile picture" class="feedback-header-img" /> -->
+                          <div class="feedback-header-initials" style="background-color: #fea42a;">MM</div>
+                          <p class="feedback-header-name">Eve Larsson</p>
+                          <div class="feedback-header-options">
+                            <p class="feedback-header-amount">4 Reviews</p>
+                            <button class="feedback-read-more modal-trigger" target-modal="feedbackTransferModal"><i
+                                class="icon-expand"></i></button>
+                          </div>
+                        </div>
+                        <div class="feedback-rating">
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Attitude:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Productivity:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Teamworking:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="feedback-main">
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Compliment:</span>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              quia.
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Improver:</span>
+                              Lorem ipsum dolor sit amet consectetur.
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="close"><i class="icon-close"></i></div>
+                        </div>
+                      </div>
+
+                      <div class="feedback grid-item">
+                        <div class="feedback-header">
+                          <!-- <img src="../public/img/p-01.png" alt="User's profile picture" class="feedback-header-img" /> -->
+                          <div class="feedback-header-initials" style="background-color: #fea42a;">MM</div>
+                          <p class="feedback-header-name">Eve Larsson</p>
+                          <div class="feedback-header-options">
+                            <p class="feedback-header-amount">4 Reviews</p>
+                            <button class="feedback-read-more modal-trigger" target-modal="feedbackTransferModal"><i
+                                class="icon-expand"></i></button>
+                          </div>
+                        </div>
+                        <div class="feedback-rating">
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Attitude:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Productivity:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Teamworking:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="feedback-main">
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Compliment:</span>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              quia.
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Improver:</span>
+                              Lorem ipsum dolor sit amet consectetur.
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="close"><i class="icon-close"></i></div>
+                        </div>
+                      </div>
+
+                      <div class="feedback grid-item">
+                        <div class="feedback-header">
+                          <!-- <img src="../public/img/p-01.png" alt="User's profile picture" class="feedback-header-img" /> -->
+                          <div class="feedback-header-initials" style="background-color: #fea42a;">MM</div>
+                          <p class="feedback-header-name">Eve Larsson</p>
+                          <div class="feedback-header-options">
+                            <p class="feedback-header-amount">4 Reviews</p>
+                            <button class="feedback-read-more modal-trigger" target-modal="feedbackTransferModal"><i
+                                class="icon-expand"></i></button>
+                          </div>
+                        </div>
+                        <div class="feedback-rating">
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Attitude:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Productivity:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Teamworking:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="feedback-main">
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Compliment:</span>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              quia.
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Improver:</span>
+                              Lorem ipsum dolor sit amet consectetur.
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="close"><i class="icon-close"></i></div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="custom-accordion-card open card-02">
+                  <div class="custom-accordion-card-header">
+                    <div class="section-header">
+                      <p class="section-header-text">Feedback from colleagues</p>
+                      <button class="section-header-toggle accordion-card-trigger" accordion-trigger-target="card-02"
+                        onclick="if(/Close/.test(this.innerText)) {this.innerHTML = `Open section <i class='icon-arrow-down'></i>`} else {this.innerHTML = `Close section <i class='icon-arrow-up'></i>`}">
+                        Close section <i class="icon-arrow-down"></i>
+                      </button>
+                      <div class="custom-dropdown default">
+                        <button class="custom-dropdown-trigger">
+                          Summary boxes last three months <i class="icon-caret-down"></i>
+                        </button>
+
+                        <div class="custom-dropdown-menu">
+                          <div class="custom-dropdown-menu-item">
+                            <button class="custom-dropdown-menu-item-link">
+                              Last month
+                            </button>
+                          </div>
+                          <div class="custom-dropdown-menu-item selected">
+                            <button class="custom-dropdown-menu-item-link">
+                              Last 3 months
+                            </button>
+                          </div>
+                          <div class="custom-dropdown-menu-item">
+                            <button class="custom-dropdown-menu-item-link">
+                              Last 6 months
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="custom-accordion-card-body">
+                    <div class="feedback-wrapper grid">
+                      <div class="feedback grid-item">
+                        <div class="feedback-header">
+                          <img src="../public/img/p-01.png" alt="User's profile picture" class="feedback-header-img" />
+                          <p class="feedback-header-name">Eve Larsson</p>
+                          <div class="feedback-header-options">
+                            <p class="feedback-header-amount">4 Reviews</p>
+                            <button class="feedback-read-more modal-trigger" target-modal="feedbackTransferModal"><i
+                                class="icon-expand"></i></button>
+                          </div>
+                        </div>
+                        <div class="feedback-rating">
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Attitude:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Productivity:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Teamworking:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="feedback-main">
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Compliment:</span>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              quia.
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Improver:</span>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              quia.
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="close"><i class="icon-close"></i></div>
+                        </div>
+                      </div>
+
+                      <div class="feedback grid-item">
+                        <div class="feedback-header">
+                          <img src="../public/img/p-01.png" alt="User's profile picture" class="feedback-header-img" />
+                          <p class="feedback-header-name">Eve Larsson</p>
+                          <div class="feedback-header-options">
+                            <p class="feedback-header-amount">4 Reviews</p>
+                            <button class="feedback-read-more modal-trigger" target-modal="feedbackTransferModal"><i
+                                class="icon-expand"></i></button>
+                          </div>
+                        </div>
+                        <div class="feedback-rating">
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Attitude:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Productivity:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Teamworking:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="feedback-main">
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Compliment:</span>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              quia.
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Improver:</span>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              quia.
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="close"><i class="icon-close"></i></div>
+                        </div>
+                      </div>
+
+                      <div class="feedback grid-item">
+                        <div class="feedback-header">
+                          <img src="../public/img/p-01.png" alt="User's profile picture" class="feedback-header-img" />
+                          <p class="feedback-header-name">Eve Larsson</p>
+                          <div class="feedback-header-options">
+                            <p class="feedback-header-amount">4 Reviews</p>
+                            <button class="feedback-read-more modal-trigger" target-modal="feedbackTransferModal"><i
+                                class="icon-expand"></i></button>
+                          </div>
+                        </div>
+                        <div class="feedback-rating">
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Attitude:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Productivity:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Teamworking:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="feedback-main">
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Compliment:</span>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              quia.
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Improver:</span>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              quia.
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="close"><i class="icon-close"></i></div>
+                        </div>
+                      </div>
+
+                      <div class="feedback grid-item">
+                        <div class="feedback-header">
+                          <img src="../public/img/p-01.png" alt="User's profile picture" class="feedback-header-img" />
+                          <p class="feedback-header-name">Eve Larsson</p>
+                          <div class="feedback-header-options">
+                            <p class="feedback-header-amount">4 Reviews</p>
+                            <button class="feedback-read-more modal-trigger" target-modal="feedbackTransferModal"><i
+                                class="icon-expand"></i></button>
+                          </div>
+                        </div>
+                        <div class="feedback-rating">
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Attitude:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Productivity:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Teamworking:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="feedback-main">
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Compliment:</span>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              quia.
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Improver:</span>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              quia.
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="close"><i class="icon-close"></i></div>
+                        </div>
+                      </div>
+
+                      <div class="feedback grid-item">
+                        <div class="feedback-header">
+                          <img src="../public/img/p-01.png" alt="User's profile picture" class="feedback-header-img" />
+                          <p class="feedback-header-name">Eve Larsson</p>
+                          <div class="feedback-header-options">
+                            <p class="feedback-header-amount">4 Reviews</p>
+                            <button class="feedback-read-more modal-trigger" target-modal="feedbackTransferModal"><i
+                                class="icon-expand"></i></button>
+                          </div>
+                        </div>
+                        <div class="feedback-rating">
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Attitude:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Productivity:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Teamworking:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="feedback-main">
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Compliment:</span>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              quia.
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Improver:</span>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              quia.
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="close"><i class="icon-close"></i></div>
+                        </div>
+                      </div>
+
+                      <div class="feedback grid-item">
+                        <div class="feedback-header">
+                          <img src="../public/img/p-01.png" alt="User's profile picture" class="feedback-header-img" />
+                          <p class="feedback-header-name">Eve Larsson</p>
+                          <div class="feedback-header-options">
+                            <p class="feedback-header-amount">4 Reviews</p>
+                            <button class="feedback-read-more modal-trigger" target-modal="feedbackTransferModal"><i
+                                class="icon-expand"></i></button>
+                          </div>
+                        </div>
+                        <div class="feedback-rating">
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Attitude:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Productivity:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Teamworking:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="feedback-main">
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Compliment:</span>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              quia.
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Improver:</span>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              quia.
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="close"><i class="icon-close"></i></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="custom-accordion-card open card-03">
+                  <div class="custom-accordion-card-header">
+                    <div class="section-header">
+                      <p class="section-header-text">Feedback from colleagues</p>
+                      <button class="section-header-toggle accordion-card-trigger" accordion-trigger-target="card-03"
+                        onclick="if(/Close/.test(this.innerText)) {this.innerHTML = `Open section <i class='icon-arrow-down'></i>`} else {this.innerHTML = `Close section <i class='icon-arrow-up'></i>`}">
+                        Close section <i class="icon-arrow-down"></i>
+                      </button>
+                      <div class="custom-dropdown default">
+                        <button class="custom-dropdown-trigger">
+                          Summary boxes last three months <i class="icon-caret-down"></i>
+                        </button>
+
+                        <div class="custom-dropdown-menu">
+                          <div class="custom-dropdown-menu-item">
+                            <button class="custom-dropdown-menu-item-link">
+                              Last month
+                            </button>
+                          </div>
+                          <div class="custom-dropdown-menu-item selected">
+                            <button class="custom-dropdown-menu-item-link">
+                              Last 3 months
+                            </button>
+                          </div>
+                          <div class="custom-dropdown-menu-item">
+                            <button class="custom-dropdown-menu-item-link">
+                              Last 6 months
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="custom-accordion-card-body">
+                    <div class="feedback-wrapper grid">
+                      <div class="feedback grid-item">
+                        <div class="feedback-header">
+                          <img src="../public/img/p-01.png" alt="User's profile picture" class="feedback-header-img" />
+                          <p class="feedback-header-name">Eve Larsson</p>
+                          <div class="feedback-header-options">
+                            <p class="feedback-header-amount">4 Reviews</p>
+                            <button class="feedback-read-more modal-trigger" target-modal="feedbackTransferModal"><i
+                                class="icon-expand"></i></button>
+                          </div>
+                        </div>
+                        <div class="feedback-rating">
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Attitude:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Productivity:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Teamworking:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="feedback-main">
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Compliment:</span>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              quia.
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Improver:</span>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              quia.
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="close"><i class="icon-close"></i></div>
+                        </div>
+                      </div>
+
+                      <div class="feedback grid-item">
+                        <div class="feedback-header">
+                          <img src="../public/img/p-01.png" alt="User's profile picture" class="feedback-header-img" />
+                          <p class="feedback-header-name">Eve Larsson</p>
+                          <div class="feedback-header-options">
+                            <p class="feedback-header-amount">4 Reviews</p>
+                            <button class="feedback-read-more modal-trigger" target-modal="feedbackTransferModal"><i
+                                class="icon-expand"></i></button>
+                          </div>
+                        </div>
+                        <div class="feedback-rating">
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Attitude:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Productivity:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Teamworking:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="feedback-main">
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Compliment:</span>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              quia.
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Improver:</span>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              quia.
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="close"><i class="icon-close"></i></div>
+                        </div>
+                      </div>
+
+                      <div class="feedback grid-item">
+                        <div class="feedback-header">
+                          <img src="../public/img/p-01.png" alt="User's profile picture" class="feedback-header-img" />
+                          <p class="feedback-header-name">Eve Larsson</p>
+                          <div class="feedback-header-options">
+                            <p class="feedback-header-amount">4 Reviews</p>
+                            <button class="feedback-read-more modal-trigger" target-modal="feedbackTransferModal"><i
+                                class="icon-expand"></i></button>
+                          </div>
+                        </div>
+                        <div class="feedback-rating">
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Attitude:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Productivity:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Teamworking:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="feedback-main">
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Compliment:</span>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              quia.
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Improver:</span>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              quia.
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="close"><i class="icon-close"></i></div>
+                        </div>
+                      </div>
+
+                      <div class="feedback grid-item">
+                        <div class="feedback-header">
+                          <img src="../public/img/p-01.png" alt="User's profile picture" class="feedback-header-img" />
+                          <p class="feedback-header-name">Eve Larsson</p>
+                          <div class="feedback-header-options">
+                            <p class="feedback-header-amount">4 Reviews</p>
+                            <button class="feedback-read-more modal-trigger" target-modal="feedbackTransferModal"><i
+                                class="icon-expand"></i></button>
+                          </div>
+                        </div>
+                        <div class="feedback-rating">
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Attitude:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Productivity:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Teamworking:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="feedback-main">
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Compliment:</span>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              quia.
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Improver:</span>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              quia.
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="close"><i class="icon-close"></i></div>
+                        </div>
+                      </div>
+
+                      <div class="feedback grid-item">
+                        <div class="feedback-header">
+                          <img src="../public/img/p-01.png" alt="User's profile picture" class="feedback-header-img" />
+                          <p class="feedback-header-name">Eve Larsson</p>
+                          <div class="feedback-header-options">
+                            <p class="feedback-header-amount">4 Reviews</p>
+                            <button class="feedback-read-more modal-trigger" target-modal="feedbackTransferModal"><i
+                                class="icon-expand"></i></button>
+                          </div>
+                        </div>
+                        <div class="feedback-rating">
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Attitude:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Productivity:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Teamworking:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="feedback-main">
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Compliment:</span>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              quia.
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Improver:</span>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              quia.
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="close"><i class="icon-close"></i></div>
+                        </div>
+                      </div>
+
+                      <div class="feedback grid-item">
+                        <div class="feedback-header">
+                          <img src="../public/img/p-01.png" alt="User's profile picture" class="feedback-header-img" />
+                          <p class="feedback-header-name">Eve Larsson</p>
+                          <div class="feedback-header-options">
+                            <p class="feedback-header-amount">4 Reviews</p>
+                            <button class="feedback-read-more modal-trigger" target-modal="feedbackTransferModal"><i
+                                class="icon-expand"></i></button>
+                          </div>
+                        </div>
+                        <div class="feedback-rating">
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Attitude:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Productivity:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                          <div class="feedback-rating-item">
+                            <p class="feedback-rating-item-name">Teamworking:</p>
+                            <div class="feedback-rating-item-stars">
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                              <i class="icon-star"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="feedback-main">
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Compliment:</span>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              quia.
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="feedback-main-item trunc">
+                            <p class="feedback-main-item-text">
+                              <span class="feedback-main-item-text-strong">Improver:</span>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Animi eius excepturi non. Illo, et at
+                              perspiciatis non voluptatum tempore maxime assumenda
+                              eaque repudiandae quis? Obcaecati, quidem? Molestiae
+                              dolores nostrum est illo delectus minima, maiores
+                              mollitia officiis perspiciatis tempore cupiditate
+                              quia.
+                            </p>
+                            <button tabindex="-1" onclick="this.focus()" class="read-more">&nbsp;Read more</button>
+                          </div>
+                          <div class="close"><i class="icon-close"></i></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- <div class="custom-modal-backdrop"></div> -->
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </main>
+
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="../public/js/main.js"></script>
+  <script src="../public/js/feedback.js"></script>
+
+  <script>
+    let elem = document.querySelector('.grid');
+    let msnry = new Masonry(elem, {
+      // options
+      itemSelector: '.grid-item',
+      horizontalOrder: true
+    });
+
+    // setInterval(function () {
+    //   console.log('RUN!')
+    //   msnry = new Masonry(elem, {
+    //     // options
+    //     itemSelector: '.grid-item',
+    //     horizontalOrder: true
+    //   });
+    // }, 1000)
+  </script>
+</body>
+
+</html>

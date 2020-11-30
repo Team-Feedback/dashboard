@@ -68,9 +68,18 @@ modalTriggers.forEach((e) => {
   e.addEventListener("click", function () {
     document.querySelectorAll('.custom-modal-wrapper.open').forEach(e => {
       e.id !== 'modalCard' && e.classList.remove('open');
+
+      let elem = document.querySelector('.grid');
+      let msnry = new Masonry(elem, {
+        // options
+        itemSelector: '.grid-item',
+        horizontalOrder: true
+      });
     })
     let modal = document.getElementById(`${e.getAttribute("target-modal")}`);
     modal.classList.add("open");
+
+    masonryLayout();
   });
 });
 
@@ -127,4 +136,20 @@ if (searchDropdownInput) {
   searchDropdownInput.addEventListener('blur', function () {
     this.parentElement.parentElement.classList.remove('open');
   })
+}
+
+
+
+function masonryLayout() {
+  let elem = document.querySelectorAll('.grid');
+  if (elem.length) {
+    elem.forEach(e => {
+      new Masonry(e, {
+        // options
+        itemSelector: '.grid-item',
+        transitionDuration: '0.2s',
+        stagger: '0s'
+      });
+    })
+  }
 }
