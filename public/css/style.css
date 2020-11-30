@@ -5771,7 +5771,7 @@ input {
         -moz-align-items: center;
         align-items: center;
         height: 4em;
-        padding: .75em 1.6em .86em;
+        padding: 0 1.6em;
         border-radius: 3px;
         background-color: #f4f5f7; }
         #custom-questions .content-card .custom-questions .custom-question:not(:last-of-type),
