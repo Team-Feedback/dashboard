@@ -31,8 +31,12 @@ headerNavLinks.forEach((e) => {
   e.addEventListener("click", function () {
     headerNavLinks.forEach((x) => x.classList.remove("active"));
     this.classList.add("active");
+    this.scrollIntoView({ behavior: "smooth", inline: "center" })
   });
 });
+
+let activeNavLink = [...headerNavLinks].filter(e => e.classList.contains('active'));
+activeNavLink[0].scrollIntoView({ behavior: "smooth", inline: "center" })
 
 //SETTINGS TABLE LINK
 let editLinks = document.querySelectorAll(
@@ -154,21 +158,24 @@ function masonryLayout() {
   }
 }
 
-//HEADER SCROLL
-const innerDimensions = (node) => {
-  var computedStyle = getComputedStyle(node)
+//SCROLL NAV ELEMENT INTO VIEW
 
-  let width = node.clientWidth // width with padding
-  let height = node.clientHeight // height with padding
 
-  height -= parseFloat(computedStyle.paddingTop) + parseFloat(computedStyle.paddingBottom)
-  width -= parseFloat(computedStyle.paddingLeft) + parseFloat(computedStyle.paddingRight)
-  console.log(computedStyle.paddingLeft)
-  console.log(height, width)
-  return { height, width }
-}
+// //HEADER SCROLL
+// const innerDimensions = (node) => {
+//   var computedStyle = getComputedStyle(node)
 
-innerDimensions(document.querySelector('.header-nav'))
+//   let width = node.clientWidth // width with padding
+//   let height = node.clientHeight // height with padding
+
+//   height -= parseFloat(computedStyle.paddingTop) + parseFloat(computedStyle.paddingBottom)
+//   width -= parseFloat(computedStyle.paddingLeft) + parseFloat(computedStyle.paddingRight)
+//   console.log(computedStyle.paddingLeft)
+//   console.log(height, width)
+//   return { height, width }
+// }
+
+// innerDimensions(document.querySelector('.header-nav'))
 
 
 //ADD HORIZONTAL SCROLL FOR HEADER NAV ON MOUSE WHEEL
