@@ -3739,6 +3739,8 @@ input {
     border-bottom: solid 1px #e6e8eb;
     border-top: none !important;
     background-color: #fbfbfb; }
+    .custom-table-input-row + .custom-table-row {
+      border-top: 0 !important; }
     .custom-table-input-row.open {
       display: -webkit-box;
       display: -webkit-flex;
@@ -6399,11 +6401,11 @@ input {
   letter-spacing: -0.03px;
   color: #435365; }
 
-#company-teams .custom-table-row:nth-of-type(2),
-#company-teams-archived .custom-table-row:nth-of-type(2),
-#company-employees .custom-table-row:nth-of-type(2),
-#company-employees-archived .custom-table-row:nth-of-type(2) {
-  border-top: solid 1px #e6e8eb !important; }
+#company-teams .table-placeholder + .custom-table-row,
+#company-teams-archived .table-placeholder + .custom-table-row,
+#company-employees .table-placeholder + .custom-table-row,
+#company-employees-archived .table-placeholder + .custom-table-row {
+  border-top: 0 !important; }
 
 #company-teams .content-card-header-bottom .button {
   display: none; }

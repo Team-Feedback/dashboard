@@ -4960,8 +4960,13 @@ input {
     @include align-items(center);
     @include justify-content(flex-start);
     border-bottom: solid 1px #e6e8eb;
+    //border-bottom: none!important;
     border-top: none !important;
     background-color: #fbfbfb;
+    & + .custom-table-row {
+      //ackground-color: red;
+      border-top: 0!important;
+    }
 
     &.open {
       @include flexbox();
@@ -7688,11 +7693,23 @@ input {
 #company-teams-archived,
 #company-employees,
 #company-employees-archived {
-  & .custom-table-row {
 
-    &:nth-of-type(2) {
-      border-top: solid 1px #e6e8eb!important;
-    }
+  // & .custom-table{
+  //   &-body {
+  //     &:first-child {
+  //       background-color: yellow;
+  //     }
+  //   }
+  // }
+  // & .custom-table-row {
+
+  //   &:nth-of-type(2) {
+  //     border-top: solid 1px #e6e8eb!important;
+  //   }
+  // }
+
+  & .table-placeholder + .custom-table-row {
+    border-top: 0!important;
   }
 }
 
