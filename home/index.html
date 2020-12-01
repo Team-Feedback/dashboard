@@ -111,6 +111,7 @@
               </p>
             </li>
             <li class="user-dropdown-menu-item">Open user settings</li>
+            <li class="user-dropdown-menu-item modal-trigger" target-modal="createCompanyModal">Create company</li>
             <li class="user-dropdown-menu-item">Sign out</li>
           </ul>
         </div>
@@ -863,6 +864,33 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- OWNER TRANSFER MODAL-->
+    <div class="custom-modal-wrapper" id="createCompanyModal">
+      <div class="custom-modal">
+        <!-- Modal body -->
+        <div class="custom-modal-body">
+          <div class="custom-modal-close" close-modal="createCompanyModal">
+            <i class="icon-close"></i>
+          </div>
+          <p class="custom-modal-body-title">Create company</p>
+          <p class="custom-modal-body-label">Company name</p>
+          <div class="custom-modal-body-input-container">
+            <input type="text" placeholder="Enter name">
+            <div class="icon">
+              <i class="icon-check-circle"></i>
+            </div>
+          </div>
+
+          <div class="custom-modal-body-buttons">
+            <button class="button button-light-gray" close-modal="createCompanyModal">Cancel</button>
+            <button class="button button-primary">Create</button>
+          </div>
+
+        </div>
+      </div>
+      <div class="custom-modal-backdrop"></div>
     </div>
   </main>
 

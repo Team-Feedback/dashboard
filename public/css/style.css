@@ -2363,14 +2363,16 @@ input {
 #ownerTransferModal .custom-modal,
 #settingsModal .custom-modal,
 #settingsModalAddress .custom-modal,
-#settingsModalContact .custom-modal {
+#settingsModalContact .custom-modal,
+#createCompanyModal .custom-modal {
   width: 39em; }
   #confirmationModal .custom-modal .custom-modal-close,
   #inviteUsersModal .custom-modal .custom-modal-close,
   #ownerTransferModal .custom-modal .custom-modal-close,
   #settingsModal .custom-modal .custom-modal-close,
   #settingsModalAddress .custom-modal .custom-modal-close,
-  #settingsModalContact .custom-modal .custom-modal-close {
+  #settingsModalContact .custom-modal .custom-modal-close,
+  #createCompanyModal .custom-modal .custom-modal-close {
     top: 2.2em;
     right: 2.2em; }
     #confirmationModal .custom-modal .custom-modal-close i,
@@ -2378,14 +2380,16 @@ input {
     #ownerTransferModal .custom-modal .custom-modal-close i,
     #settingsModal .custom-modal .custom-modal-close i,
     #settingsModalAddress .custom-modal .custom-modal-close i,
-    #settingsModalContact .custom-modal .custom-modal-close i {
+    #settingsModalContact .custom-modal .custom-modal-close i,
+    #createCompanyModal .custom-modal .custom-modal-close i {
       font-size: 1.5em; }
   #confirmationModal .custom-modal-body,
   #inviteUsersModal .custom-modal-body,
   #ownerTransferModal .custom-modal-body,
   #settingsModal .custom-modal-body,
   #settingsModalAddress .custom-modal-body,
-  #settingsModalContact .custom-modal-body {
+  #settingsModalContact .custom-modal-body,
+  #createCompanyModal .custom-modal-body {
     padding: 4.6em 6em; }
 
 #inviteUsers .custom-modal {
