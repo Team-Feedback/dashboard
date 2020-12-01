@@ -234,7 +234,8 @@
                 <input type="text" placeholder="Search">
                 <i class="icon-search"></i>
               </div>
-              <button class="button button-light-gray toggle-input-row">Add new</button>
+              <button class="button button-light-gray modal-trigger" target-modal="inviteEmployeesModal">Add
+                new</button>
             </div>
           </div>
           <div class="content-card-main">
@@ -915,15 +916,6 @@
                       </td>
                     </tr>
 
-                    <tr class="custom-table-input-row">
-                      <td class="column-01">
-                        <input type="text" placeholder="Enter name or email" />
-                      </td>
-                      <td class="column-02">
-                        <button class="button button-primary">Add</button>
-                        <button class="button button-light-gray">Cancel</button>
-                      </td>
-                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -931,6 +923,34 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- INVITE EMPLOYEES MODAL-->
+    <div class="custom-modal-wrapper" id="inviteEmployeesModal">
+      <div class="custom-modal">
+        <!-- Modal body -->
+        <div class="custom-modal-body">
+          <div class="custom-modal-close" close-modal="inviteEmployeesModal">
+            <i class="icon-close"></i>
+          </div>
+          <p class="custom-modal-body-title">Invite new employees</p>
+          <p class="custom-modal-body-label">
+            <span class="custom-modal-body-label-text">Enter here the emails of the people who you want to invite</span>
+            <span class="custom-modal-body-label-amount">15 added</span></p>
+          <textarea class="custom-modal-body-textarea" placeholder="Enter emails"></textarea>
+
+        </div>
+
+        <!-- Modal footer -->
+        <div class="custom-modal-footer">
+          <button class="button button-light-gray" close-modal="inviteEmployeesModal">Cancel</button>
+          <button class="button button-primary send-feedback-modal">
+            Send Invites
+          </button>
+
+        </div>
+      </div>
+      <div class="custom-modal-backdrop"></div>
     </div>
   </main>
 

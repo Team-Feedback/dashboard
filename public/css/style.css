@@ -3364,6 +3364,7 @@ input {
     padding: 3.4em 2.6em 4.2em; }
   #inviteEmployeesModal .custom-modal-footer,
   #inviteNewUsersModal .custom-modal-footer {
+    position: relative;
     padding: 0 2.6em;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
@@ -6386,6 +6387,10 @@ input {
     #team-settings-admin-rights .content-card-input-container,
     #team-members-table .content-card-input-container {
       height: 3.2em; }
+
+#company-employees .custom-table-row:nth-of-type(2),
+#company-employees-archived .custom-table-row:nth-of-type(2) {
+  border-top: solid 1px #e6e8eb !important; }
 
 #company-teams .content-card-header-bottom .button {
   display: none; }
