@@ -139,7 +139,7 @@ if (searchDropdownInput) {
 }
 
 
-
+//FEEDBACK CARDS MASONRY LAYOUT
 function masonryLayout() {
   let elem = document.querySelectorAll('.grid');
   if (elem.length) {
@@ -153,3 +153,33 @@ function masonryLayout() {
     })
   }
 }
+
+//HEADER SCROLL
+const innerDimensions = (node) => {
+  var computedStyle = getComputedStyle(node)
+
+  let width = node.clientWidth // width with padding
+  let height = node.clientHeight // height with padding
+
+  height -= parseFloat(computedStyle.paddingTop) + parseFloat(computedStyle.paddingBottom)
+  width -= parseFloat(computedStyle.paddingLeft) + parseFloat(computedStyle.paddingRight)
+  console.log(computedStyle.paddingLeft)
+  console.log(height, width)
+  return { height, width }
+}
+
+innerDimensions(document.querySelector('.header-nav'))
+
+
+//ADD HORIZONTAL SCROLL FOR HEADER NAV ON MOUSE WHEEL
+function transformScroll(event) {
+  if (!event.deltaY) {
+    return;
+  }
+
+  event.currentTarget.scrollLeft += event.deltaY + event.deltaX;
+  event.preventDefault();
+}
+
+document.querySelector('.header-nav').addEventListener('wheel', transformScroll);
+
