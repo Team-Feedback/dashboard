@@ -5963,6 +5963,11 @@ input {
           color: #434e5a; }
           #team-feedback-request .content-card-body .request-card-header-text .strong {
             font-weight: 500; }
+        #team-feedback-request .content-card-body .request-card-header .custom-dropdown-trigger {
+          font-size: 1.13em;
+          font-weight: 500;
+          letter-spacing: -0.03px;
+          color: #526172; }
       #team-feedback-request .content-card-body .request-card-body {
         padding: 0 2.5em;
         width: 100%;
