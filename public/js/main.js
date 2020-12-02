@@ -26,16 +26,18 @@ peopleHeightLimit();
 
 //ACTIVE LINK
 let headerNavLinks = document.querySelectorAll(".header-nav-list-item");
+let headerSubNavLinks = document.querySelectorAll(".header-sub-nav-list-item");
+let allNavLinks = [...headerNavLinks, ...headerSubNavLinks]
 
-headerNavLinks.forEach((e) => {
+allNavLinks.forEach((e) => {
   e.addEventListener("click", function () {
-    headerNavLinks.forEach((x) => x.classList.remove("active"));
+    allNavLinks.forEach((x) => x.classList.remove("active"));
     this.classList.add("active");
     this.scrollIntoView({ behavior: "smooth", inline: "center" })
   });
 });
 
-let activeNavLink = [...headerNavLinks].filter(e => e.classList.contains('active'));
+let activeNavLink = [...allNavLinks].filter(e => e.classList.contains('active'));
 activeNavLink[0].scrollIntoView({ behavior: "smooth", inline: "center" })
 
 //SETTINGS TABLE LINK
@@ -188,5 +190,6 @@ function transformScroll(event) {
   event.preventDefault();
 }
 
-document.querySelector('.header-nav').addEventListener('wheel', transformScroll);
+document.querySelector('.header-nav-list').addEventListener('wheel', transformScroll);
+document.querySelector('.header-sub-nav-list').addEventListener('wheel', transformScroll);
 
