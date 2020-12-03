@@ -807,11 +807,11 @@
 
 @font-face {
   font-family: 'dashoard-icons';
-  src:  url('../fonts/dashoard-icons.eot?v94fyu');
-  src:  url('../fonts/dashoard-icons.eot?v94fyu#iefix') format('embedded-opentype'),
-    url('../fonts/dashoard-icons.ttf?v94fyu') format('truetype'),
-    url('../fonts/dashoard-icons.woff?v94fyu') format('woff'),
-    url('../fonts/dashoard-icons.svg?v94fyu#dashoard-icons') format('svg');
+  src:  url('../fonts/dashoard-icons.eot?ne4k8h');
+  src:  url('../fonts/dashoard-icons.eot?ne4k8h#iefix') format('embedded-opentype'),
+    url('../fonts/dashoard-icons.ttf?ne4k8h') format('truetype'),
+    url('../fonts/dashoard-icons.woff?ne4k8h') format('woff'),
+    url('../fonts/dashoard-icons.svg?ne4k8h#dashoard-icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -832,6 +832,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-clock:before {
+  content: "\e94d";
+}
 .icon-add-user:before {
   content: "\e94c";
 }
@@ -1063,6 +1066,7 @@
 .icon-user-check:before {
   content: "\e93c";
 }
+
 
 
 
@@ -1914,10 +1918,80 @@ input {
     }
   }
 
+  //DIVIDER DROPDOWN
+  &.divider-dropdown {
+
+    &:hover .struct-divider-symbol:after {
+      display: block!important;
+    }
+
+    & .custom-dropdown-trigger {
+      &:focus .struct-divider-symbol:after {
+        display: block!important;
+      }
+    }
+
+    & .custom-dropdown-menu {
+      padding: 1.3em 0;
+      bottom: 107%;
+      right: calc(110% + 1em);
+      width: 26em;
+      border-radius: 5px;
+      box-shadow: 0 5px 10px 0 rgba(139, 139, 139, 0.08);
+      border: solid 1.5px #eff0f2;
+      background-color: #ffffff;
+
+      &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 2em;
+        background-color: transparent;
+      }
+
+      &-item {
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(flex-start);
+        padding: .65em 2em;
+
+        & .pretty {
+          margin-right: 0;
+          font-size: 1.28em;
+        }
+
+        &-link {
+          margin-left: emcalc(.3,1.28);
+          @include align-items(center);
+          @include justify-content(flex-start);
+          font-size: 1.28em;
+          font-weight: 400;
+          letter-spacing: -0.06px;
+          color: #3b4046;
+        }
+
+        &.title {
+          & i {
+            margin-right: emcalc(.8, 1.44);
+            font-size: 1.44em;
+            color: #3b4046;
+          }
+
+          & .custom-dropdown-menu-item-link {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
   //NOTIFICATION DROPDOWN
   &.notification-dropdown {
     & .custom-dropdown-menu {
-      width: 37.6em;
+      width: 26em;
       border-radius: 5px;
       box-shadow: 0 5px 10px 0 rgba(139, 139, 139, 0.08);
       border: solid 1.5px #eff0f2;
@@ -7372,10 +7446,15 @@ input {
               background-color: #f7f9fa;
 
               &-text {
+                flex: 1;
                 font-size: 1.13em;
                 font-weight: 400;
                 letter-spacing: -0.03px;
                 color: #434e5a;
+                height: 100%;
+                @include flexbox();
+                @include align-items(center);
+                @include justify-content(flex-start);
                 & .strong {
                   font-weight: 500;
                 }
@@ -7474,7 +7553,7 @@ input {
                 }
 
                 &-divider {
-                  padding: 0 1em;
+                  padding: 0 2em;
                   position: relative;
                   @include flexbox();
                   @include align-items(center);
@@ -7510,10 +7589,16 @@ input {
                     height: 2em;
                     width: 2.5px;
                     background-color: #d9dbde;
+                    z-index: 1;
                   }
+
+                  // & .custom-dropdown {
+                  //   z-index: 10;
+                  // }
 
                   &-symbol {
                     //padding: .3em;
+                    position: relative;
                     @include flexbox();
                     @include align-items(center);
                     @include justify-content(center);
@@ -7523,6 +7608,20 @@ input {
                     border-radius: 50%;
                     background-color: var(--color-primary);
                     transform: rotateZ(45deg);
+                    z-index: 10;
+
+                    &::after {
+                      content: '';
+                      display: none;
+                      position: absolute;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%,-50%);
+                      width: 120%;
+                      height: 120%;
+                      border: 2px solid var(--color-primary);
+                      border-radius: 50%;
+                    }
 
                     &-icon {
                       width: 2.2rem;

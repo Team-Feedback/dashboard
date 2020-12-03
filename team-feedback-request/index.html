@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Team Feedback | Team | Feedback Request</title>
+  <link rel="stylesheet" href="../public/css/pretty-checkbox.css" />
   <link rel="stylesheet" href="../public/css/style.css">
 </head>
 
@@ -231,9 +232,10 @@
 
             <div class="custom-accordion request">
               <div class="custom-accordion-card request-card open card-01">
-                <div class="custom-accordion-card-header request-card-header accordion-card-trigger"
-                  accordion-trigger-target="card-01">
-                  <p class="request-card-header-text"><span class="strong">Marko Rajkovic - </span>Frontend Engineer</p>
+                <div class="custom-accordion-card-header request-card-header">
+                  <p class="request-card-header-text accordion-card-trigger" accordion-trigger-target="card-01"><span
+                      class="strong">Marko Rajkovic -
+                    </span>Frontend Engineer</p>
                   <div class="custom-dropdown">
                     <button class="custom-dropdown-trigger">4 Feedback Requests</button>
                     <div class="custom-dropdown-menu">
@@ -262,10 +264,61 @@
                       </div>
 
                       <div class="struct-divider">
-                        <div class="struct-divider-symbol">
-                          <i class="struct-divider-symbol-icon icon-calendar"></i>
-                          <div class="struct-divider-symbol-line"></div>
-                          <p class="struct-divider-symbol-text">2W</p>
+                        <div class="custom-dropdown divider-dropdown">
+                          <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1">
+                            <div class="struct-divider-symbol">
+                              <i class="struct-divider-symbol-icon icon-calendar"></i>
+                              <div class="struct-divider-symbol-line"></div>
+                              <p class="struct-divider-symbol-text">2W</p>
+                            </div>
+                          </button>
+                          <div class="custom-dropdown-menu">
+                            <div class="custom-dropdown-menu-item title">
+                              <i class="icon-clock"></i>
+                              <span class="custom-dropdown-menu-item-link">Select time period</span>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color" checked />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Weekly</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Every second week</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Monthly</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Every second month</label>
+                            </div>
+
+                          </div>
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="13.531" height="20.522"
                           viewBox="0 0 13.531 20.522">
@@ -300,10 +353,61 @@
                       </div>
 
                       <div class="struct-divider">
-                        <div class="struct-divider-symbol">
-                          <i class="struct-divider-symbol-icon icon-calendar"></i>
-                          <div class="struct-divider-symbol-line"></div>
-                          <p class="struct-divider-symbol-text">2W</p>
+                        <div class="custom-dropdown divider-dropdown">
+                          <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1">
+                            <div class="struct-divider-symbol">
+                              <i class="struct-divider-symbol-icon icon-calendar"></i>
+                              <div class="struct-divider-symbol-line"></div>
+                              <p class="struct-divider-symbol-text">2W</p>
+                            </div>
+                          </button>
+                          <div class="custom-dropdown-menu">
+                            <div class="custom-dropdown-menu-item title">
+                              <i class="icon-clock"></i>
+                              <span class="custom-dropdown-menu-item-link">Select time period</span>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color02" checked />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Weekly</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color02" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Every second week</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color02" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Monthly</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color02" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Every second month</label>
+                            </div>
+
+                          </div>
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="13.531" height="20.522"
                           viewBox="0 0 13.531 20.522">
@@ -338,10 +442,61 @@
                       </div>
 
                       <div class="struct-divider">
-                        <div class="struct-divider-symbol">
-                          <i class="struct-divider-symbol-icon icon-calendar"></i>
-                          <div class="struct-divider-symbol-line"></div>
-                          <p class="struct-divider-symbol-text">2W</p>
+                        <div class="custom-dropdown divider-dropdown">
+                          <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1">
+                            <div class="struct-divider-symbol">
+                              <i class="struct-divider-symbol-icon icon-calendar"></i>
+                              <div class="struct-divider-symbol-line"></div>
+                              <p class="struct-divider-symbol-text">2W</p>
+                            </div>
+                          </button>
+                          <div class="custom-dropdown-menu">
+                            <div class="custom-dropdown-menu-item title">
+                              <i class="icon-clock"></i>
+                              <span class="custom-dropdown-menu-item-link">Select time period</span>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color03" checked />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Weekly</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color03" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Every second week</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color03" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Monthly</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color03" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Every second month</label>
+                            </div>
+
+                          </div>
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="13.531" height="20.522"
                           viewBox="0 0 13.531 20.522">
@@ -376,10 +531,61 @@
                       </div>
 
                       <div class="struct-divider">
-                        <div class="struct-divider-symbol">
-                          <i class="struct-divider-symbol-icon icon-calendar"></i>
-                          <div class="struct-divider-symbol-line"></div>
-                          <p class="struct-divider-symbol-text">2W</p>
+                        <div class="custom-dropdown divider-dropdown">
+                          <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1">
+                            <div class="struct-divider-symbol">
+                              <i class="struct-divider-symbol-icon icon-calendar"></i>
+                              <div class="struct-divider-symbol-line"></div>
+                              <p class="struct-divider-symbol-text">2W</p>
+                            </div>
+                          </button>
+                          <div class="custom-dropdown-menu">
+                            <div class="custom-dropdown-menu-item title">
+                              <i class="icon-clock"></i>
+                              <span class="custom-dropdown-menu-item-link">Select time period</span>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color04" checked />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Weekly</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color04" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Every second week</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color04" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Monthly</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color04" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Every second month</label>
+                            </div>
+
+                          </div>
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="13.531" height="20.522"
                           viewBox="0 0 13.531 20.522">
@@ -416,9 +622,10 @@
               </div>
 
               <div class="custom-accordion-card request-card card-02">
-                <div class="custom-accordion-card-header request-card-header accordion-card-trigger"
-                  accordion-trigger-target="card-02">
-                  <p class="request-card-header-text"><span class="strong">Angelo Merte - </span>Frontend Engineer</p>
+                <div class="custom-accordion-card-header request-card-header">
+                  <p class="request-card-header-text accordion-card-trigger" accordion-trigger-target="card-02"><span
+                      class="strong">Angelo Merte -
+                    </span>Frontend Engineer</p>
                   <div class="custom-dropdown">
                     <button class="custom-dropdown-trigger">4 Feedback Requests</button>
                     <div class="custom-dropdown-menu">
@@ -447,10 +654,61 @@
                       </div>
 
                       <div class="struct-divider">
-                        <div class="struct-divider-symbol">
-                          <i class="struct-divider-symbol-icon icon-calendar"></i>
-                          <div class="struct-divider-symbol-line"></div>
-                          <p class="struct-divider-symbol-text">2W</p>
+                        <div class="custom-dropdown divider-dropdown">
+                          <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1">
+                            <div class="struct-divider-symbol">
+                              <i class="struct-divider-symbol-icon icon-calendar"></i>
+                              <div class="struct-divider-symbol-line"></div>
+                              <p class="struct-divider-symbol-text">2W</p>
+                            </div>
+                          </button>
+                          <div class="custom-dropdown-menu">
+                            <div class="custom-dropdown-menu-item title">
+                              <i class="icon-clock"></i>
+                              <span class="custom-dropdown-menu-item-link">Select time period</span>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color05" checked />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Weekly</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color05" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Every second week</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color05" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Monthly</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color05" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Every second month</label>
+                            </div>
+
+                          </div>
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="13.531" height="20.522"
                           viewBox="0 0 13.531 20.522">
@@ -485,10 +743,61 @@
                       </div>
 
                       <div class="struct-divider">
-                        <div class="struct-divider-symbol">
-                          <i class="struct-divider-symbol-icon icon-calendar"></i>
-                          <div class="struct-divider-symbol-line"></div>
-                          <p class="struct-divider-symbol-text">2W</p>
+                        <div class="custom-dropdown divider-dropdown">
+                          <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1">
+                            <div class="struct-divider-symbol">
+                              <i class="struct-divider-symbol-icon icon-calendar"></i>
+                              <div class="struct-divider-symbol-line"></div>
+                              <p class="struct-divider-symbol-text">2W</p>
+                            </div>
+                          </button>
+                          <div class="custom-dropdown-menu">
+                            <div class="custom-dropdown-menu-item title">
+                              <i class="icon-clock"></i>
+                              <span class="custom-dropdown-menu-item-link">Select time period</span>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color06" checked />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Weekly</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color06" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Every second week</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color06" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Monthly</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color06" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Every second month</label>
+                            </div>
+
+                          </div>
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="13.531" height="20.522"
                           viewBox="0 0 13.531 20.522">
@@ -523,10 +832,61 @@
                       </div>
 
                       <div class="struct-divider">
-                        <div class="struct-divider-symbol">
-                          <i class="struct-divider-symbol-icon icon-calendar"></i>
-                          <div class="struct-divider-symbol-line"></div>
-                          <p class="struct-divider-symbol-text">2W</p>
+                        <div class="custom-dropdown divider-dropdown">
+                          <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1">
+                            <div class="struct-divider-symbol">
+                              <i class="struct-divider-symbol-icon icon-calendar"></i>
+                              <div class="struct-divider-symbol-line"></div>
+                              <p class="struct-divider-symbol-text">2W</p>
+                            </div>
+                          </button>
+                          <div class="custom-dropdown-menu">
+                            <div class="custom-dropdown-menu-item title">
+                              <i class="icon-clock"></i>
+                              <span class="custom-dropdown-menu-item-link">Select time period</span>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color07" checked />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Weekly</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color07" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Every second week</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color07" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Monthly</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color07" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Every second month</label>
+                            </div>
+
+                          </div>
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="13.531" height="20.522"
                           viewBox="0 0 13.531 20.522">
@@ -561,10 +921,61 @@
                       </div>
 
                       <div class="struct-divider">
-                        <div class="struct-divider-symbol">
-                          <i class="struct-divider-symbol-icon icon-calendar"></i>
-                          <div class="struct-divider-symbol-line"></div>
-                          <p class="struct-divider-symbol-text">2W</p>
+                        <div class="custom-dropdown divider-dropdown">
+                          <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1">
+                            <div class="struct-divider-symbol">
+                              <i class="struct-divider-symbol-icon icon-calendar"></i>
+                              <div class="struct-divider-symbol-line"></div>
+                              <p class="struct-divider-symbol-text">2W</p>
+                            </div>
+                          </button>
+                          <div class="custom-dropdown-menu">
+                            <div class="custom-dropdown-menu-item title">
+                              <i class="icon-clock"></i>
+                              <span class="custom-dropdown-menu-item-link">Select time period</span>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color08" checked />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Weekly</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color08" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Every second week</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color08" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Monthly</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color08" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Every second month</label>
+                            </div>
+
+                          </div>
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="13.531" height="20.522"
                           viewBox="0 0 13.531 20.522">
@@ -601,9 +1012,10 @@
               </div>
 
               <div class="custom-accordion-card request-card card-03">
-                <div class="custom-accordion-card-header request-card-header accordion-card-trigger"
-                  accordion-trigger-target="card-03">
-                  <p class="request-card-header-text"><span class="strong">Bob Dylan - </span>Frontend Engineer</p>
+                <div class="custom-accordion-card-header request-card-header">
+                  <p class="request-card-header-text accordion-card-trigger" accordion-trigger-target="card-03"><span
+                      class="strong">Bob Dylan -
+                    </span>Frontend Engineer</p>
                   <div class="custom-dropdown">
                     <button class="custom-dropdown-trigger">4 Feedback Requests</button>
                     <div class="custom-dropdown-menu">
@@ -632,10 +1044,61 @@
                       </div>
 
                       <div class="struct-divider">
-                        <div class="struct-divider-symbol">
-                          <i class="struct-divider-symbol-icon icon-calendar"></i>
-                          <div class="struct-divider-symbol-line"></div>
-                          <p class="struct-divider-symbol-text">2W</p>
+                        <div class="custom-dropdown divider-dropdown">
+                          <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1">
+                            <div class="struct-divider-symbol">
+                              <i class="struct-divider-symbol-icon icon-calendar"></i>
+                              <div class="struct-divider-symbol-line"></div>
+                              <p class="struct-divider-symbol-text">2W</p>
+                            </div>
+                          </button>
+                          <div class="custom-dropdown-menu">
+                            <div class="custom-dropdown-menu-item title">
+                              <i class="icon-clock"></i>
+                              <span class="custom-dropdown-menu-item-link">Select time period</span>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color09" checked />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Weekly</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color09" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Every second week</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color09" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Monthly</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color09" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Every second month</label>
+                            </div>
+
+                          </div>
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="13.531" height="20.522"
                           viewBox="0 0 13.531 20.522">
@@ -670,10 +1133,61 @@
                       </div>
 
                       <div class="struct-divider">
-                        <div class="struct-divider-symbol">
-                          <i class="struct-divider-symbol-icon icon-calendar"></i>
-                          <div class="struct-divider-symbol-line"></div>
-                          <p class="struct-divider-symbol-text">2W</p>
+                        <div class="custom-dropdown divider-dropdown">
+                          <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1">
+                            <div class="struct-divider-symbol">
+                              <i class="struct-divider-symbol-icon icon-calendar"></i>
+                              <div class="struct-divider-symbol-line"></div>
+                              <p class="struct-divider-symbol-text">2W</p>
+                            </div>
+                          </button>
+                          <div class="custom-dropdown-menu">
+                            <div class="custom-dropdown-menu-item title">
+                              <i class="icon-clock"></i>
+                              <span class="custom-dropdown-menu-item-link">Select time period</span>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color10" checked />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Weekly</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color10" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Every second week</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color10" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Monthly</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color10" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Every second month</label>
+                            </div>
+
+                          </div>
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="13.531" height="20.522"
                           viewBox="0 0 13.531 20.522">
@@ -708,10 +1222,61 @@
                       </div>
 
                       <div class="struct-divider">
-                        <div class="struct-divider-symbol">
-                          <i class="struct-divider-symbol-icon icon-calendar"></i>
-                          <div class="struct-divider-symbol-line"></div>
-                          <p class="struct-divider-symbol-text">2W</p>
+                        <div class="custom-dropdown divider-dropdown">
+                          <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1">
+                            <div class="struct-divider-symbol">
+                              <i class="struct-divider-symbol-icon icon-calendar"></i>
+                              <div class="struct-divider-symbol-line"></div>
+                              <p class="struct-divider-symbol-text">2W</p>
+                            </div>
+                          </button>
+                          <div class="custom-dropdown-menu">
+                            <div class="custom-dropdown-menu-item title">
+                              <i class="icon-clock"></i>
+                              <span class="custom-dropdown-menu-item-link">Select time period</span>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color11" checked />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Weekly</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color11" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Every second week</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color11" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Monthly</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color11" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Every second month</label>
+                            </div>
+
+                          </div>
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="13.531" height="20.522"
                           viewBox="0 0 13.531 20.522">
@@ -746,10 +1311,61 @@
                       </div>
 
                       <div class="struct-divider">
-                        <div class="struct-divider-symbol">
-                          <i class="struct-divider-symbol-icon icon-calendar"></i>
-                          <div class="struct-divider-symbol-line"></div>
-                          <p class="struct-divider-symbol-text">2W</p>
+                        <div class="custom-dropdown divider-dropdown">
+                          <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1">
+                            <div class="struct-divider-symbol">
+                              <i class="struct-divider-symbol-icon icon-calendar"></i>
+                              <div class="struct-divider-symbol-line"></div>
+                              <p class="struct-divider-symbol-text">2W</p>
+                            </div>
+                          </button>
+                          <div class="custom-dropdown-menu">
+                            <div class="custom-dropdown-menu-item title">
+                              <i class="icon-clock"></i>
+                              <span class="custom-dropdown-menu-item-link">Select time period</span>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color12" checked />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Weekly</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color12" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Every second week</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color12" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Monthly</label>
+                            </div>
+
+                            <div class="custom-dropdown-menu-item">
+                              <div class="pretty p-default p-curve">
+                                <input type="radio" name="color12" />
+                                <div class="state p-primary-o">
+                                  <label>&nbsp;</label>
+                                </div>
+                              </div>
+                              <label for="" class="custom-dropdown-menu-item-link">Every second month</label>
+                            </div>
+
+                          </div>
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="13.531" height="20.522"
                           viewBox="0 0 13.531 20.522">
