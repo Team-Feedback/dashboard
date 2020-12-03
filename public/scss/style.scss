@@ -7142,9 +7142,11 @@ input {
 
       &-header {
         padding-top: 2.2em;
+        padding-bottom: 1.4em;
         @include flex-direction(column);
         @include justify-content(flex-start);
         @include align-items(flex-start);
+        border-bottom: solid 1px #ededed;
 
         &-title {
           margin-bottom: emcalc(1.2,1.75);
@@ -7163,7 +7165,7 @@ input {
 
       &-body {
 
-        max-height: calc(100% - 7.133em);
+        max-height: calc(100% - 8.533em);
         overflow-y: auto;
         scrollbar-width: none;
         /* Firefox */
@@ -7177,7 +7179,7 @@ input {
         }
 
         & .users {
-          padding-top: 3.3em;
+          padding-top: 1.85em;
           margin: 0 -1.2em 2em;
           width: 100%;
           max-width: 90em;
@@ -7374,7 +7376,6 @@ input {
                 font-weight: 400;
                 letter-spacing: -0.03px;
                 color: #434e5a;
-
                 & .strong {
                   font-weight: 500;
                 }

@@ -5778,6 +5778,7 @@ input {
     max-height: 100%; }
     #team-feedback-request .content-card-header {
       padding-top: 2.2em;
+      padding-bottom: 1.4em;
       -webkit-box-direction: normal;
       -webkit-box-orient: vertical;
       -webkit-flex-direction: column;
@@ -5793,7 +5794,8 @@ input {
       -ms-flex-align: start;
       -webkit-align-items: flex-start;
       -moz-align-items: flex-start;
-      align-items: flex-start; }
+      align-items: flex-start;
+      border-bottom: solid 1px #ededed; }
       #team-feedback-request .content-card-header-title {
         margin-bottom: 0.6857142857em;
         font-size: 1.75em;
@@ -5805,7 +5807,7 @@ input {
         letter-spacing: -0.03px;
         color: #435365; }
     #team-feedback-request .content-card-body {
-      max-height: calc(100% - 7.133em);
+      max-height: calc(100% - 8.533em);
       overflow-y: auto;
       scrollbar-width: none;
       /* Firefox */
@@ -5816,7 +5818,7 @@ input {
         width: 0;
         height: 0; }
       #team-feedback-request .content-card-body .users {
-        padding-top: 3.3em;
+        padding-top: 1.85em;
         margin: 0 -1.2em 2em;
         width: 100%;
         max-width: 90em;
