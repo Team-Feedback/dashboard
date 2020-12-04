@@ -375,3 +375,9 @@ let chart01 = new Chart(ctx01, {
 //   widgetsParent.classList.add("big");
 //   drawLineChart();
 // });
+
+
+
+// document.querySelectorAll('.react-grid-item').forEach(e => {
+//   e.style.zIndex = `${Math.abs(100 - Math.ceil(e.getBoundingClientRect().top / 100))}`;
+// })

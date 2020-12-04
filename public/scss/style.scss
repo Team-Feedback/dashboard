@@ -248,6 +248,15 @@
 
 /////////////////////////////////////
 
+@mixin loop-children {
+  @for $i from 1 through 50 {
+    &:nth-of-type(#{$i}) {
+      transition: all .2s #{$i * .1}s ease-in;
+      z-index: #{50 - $i};
+    }
+  }
+}
+
 @mixin custom-respond($value) {
   @media (max-width: $value * 1px) {
     @content;
@@ -5789,7 +5798,7 @@ input {
     border-radius: 6px;
     border: solid 1px #e4e8ec;
     background-color: #ffffff;
-    z-index: 100;
+    //z-index: 100;
     max-width: calc(100vw - 8em);
 
     &::after {
@@ -5799,6 +5808,7 @@ input {
       right: 0;
       width: 4em;
       height: 100%;
+      border-radius: 6px;
       background: -moz-linear-gradient(right, rgba(255,255,255,1) 15%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
       background: -webkit-linear-gradient(right, rgba(255,255,255,1) 15%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
       background: linear-gradient(to left, rgba(255,255,255,1) 15%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -5904,10 +5914,12 @@ input {
         margin-left: auto;
 
         & button {
+          margin-left: 1em;
           font-size: 1.25em;
           font-weight: 600;
           text-align: right;
           color: var(--color-dark-gray);
+          white-space: nowrap;
         }
       }
     }
@@ -8344,6 +8356,133 @@ input {
   }
 }
 
+#team-members-table {
+  & .content {
+    &-card {
+      //background-color: #FFF;
+
+      & .placeholder {
+        display: none;
+        @include flex-direction(column);
+        @include align-items(center);
+        @include justify-content(center);
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+        box-shadow: 0 3px 6px 0 rgba(226, 226, 226, 0.11);
+        border: solid 1.5px #ebecf0;
+        background-color: #ffffff;
+
+        &-img {
+          margin-bottom: 5.3em;
+          width: 100%;
+          max-width: 22.5em;
+          min-width: 0;
+          object-fit: contain;
+        }
+
+        &-title {
+          margin-bottom: emcalc(1.6,1.8);
+          font-size: 1.8em;
+          font-weight: 600;
+          letter-spacing: -0.45px;
+          color: #2c3952;
+        }
+
+        &-text {
+          padding-bottom: 2em;
+          font-size: 1.28em;
+          font-weight: 400;
+          letter-spacing: -0.13px;
+          color: #383838;
+        }
+      }
+
+      &.show-placeholder {
+        & .fake-card {
+          height: 100%!important;
+          z-index: -1;
+        }
+
+        & .placeholder {
+          @include flexbox();
+        }
+
+        & .custom-table-wrapper {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+#team-members-grid {
+  & .content {
+    &-card {
+      //background-color: #FFF;
+
+
+
+      & .placeholder {
+        display: none;
+        @include flex-direction(column);
+        @include align-items(center);
+        @include justify-content(center);
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+        box-shadow: 0 3px 6px 0 rgba(226, 226, 226, 0.11);
+        border: solid 1.5px #ebecf0;
+        background-color: #ffffff;
+
+        &-img {
+          margin-bottom: 5.3em;
+          width: 100%;
+          max-width: 22.5em;
+          min-width: 0;
+          object-fit: contain;
+        }
+
+        &-title {
+          margin-bottom: emcalc(1.6,1.8);
+          font-size: 1.8em;
+          font-weight: 600;
+          letter-spacing: -0.45px;
+          color: #2c3952;
+        }
+
+        &-text {
+          padding-bottom: 2em;
+          font-size: 1.28em;
+          font-weight: 400;
+          letter-spacing: -0.13px;
+          color: #383838;
+        }
+      }
+
+      &.show-placeholder {
+        height: 100%!important;
+        padding-bottom: 3.4em;
+
+        & .placeholder {
+          @include flexbox();
+        }
+
+        & .content-card-main {
+          height: 100%;
+          max-height: calc(100% - 14.454em);
+          padding: 0!important;
+          //padding-top: 1.6em!important;
+        }
+
+        & .people {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
 #company-admin-rights {
   & .content {
     &-card {
@@ -9231,8 +9370,27 @@ input {
         }
       }
 
+     
+      &-bottom {
+        // margin-bottom: 1.6em;
+        // @include justify-content(flex-start);
+
+        & .content-card-input-container {
+          // margin-right: 1.6em;
+          // max-width: 32.6em;
+          // height: 3.4em;
+        }
+
+        & .button-primary {
+          // padding: 0 emcalc(1.6, 1.28);
+          // height: emcalc(3.4, 1.28);
+          // font-size: 1.28em;
+        }
+      }
+
+
       &-header {
-        padding-top: 2em;
+        padding-top: 2.1em;
         position: sticky;
         position: -webkit-sticky;
         position: -moz-sticky;
@@ -9246,26 +9404,72 @@ input {
         background-color: #fff;
         z-index: 100;
 
+
         &-title {
-          margin-bottom: emcalc(1.2, 1.75);
-          font-size: 1.75em;
+         font-size: 1.75em;
+        margin-bottom: emcalc(1.2, 1.75);
           font-weight: 600;
+          line-height: 1.2;
+          letter-spacing: normal;
           color: #172b4d;
+
+          & span {
+            font-weight: 400;
+          }
         }
 
         & .options {
-          margin-bottom: 1.4em;
+          margin-bottom: 1.6em;
+  
+          &-link {
+            font-size: 1.35em;
+          }
+  
+          &-divider {
+            margin-right: 0.5em;
+          }
         }
 
         & .content-card-input-container {
-          margin-right: 1.5em;
+          width: 100%;
+          margin-right: 1.6em;
+          max-width: 32.6em;
+          height: 3.4em;
+
+          & input {
+            border-radius: 4px;
+            @include flexbox();
+            @include align-items(center);
+            padding-left: emcalc(3, 1.3);
+            font-size: 1.3em;
+            letter-spacing: normal;
+
+            &::placeholder {
+              color: #7e8a98;
+            }
+          }
+
+          & i {
+            top: 48%;
+            left: 1.2rem;
+            font-size: 1.3em;
+          }
         }
 
         &-bottom {
-          //margin-bottom: 3.7em;
+          margin-bottom: 1.6em;
+          @include justify-content(flex-start);
+          width: 100%;
           @include flexbox();
           @include align-items(center);
-          @include justify-content(flex-start);
+
+          & .button-light-gray {
+            margin-left: emcalc(1.5,1.28);
+            padding: 0 emcalc(2.2, 1.28);
+            height: emcalc(3.2, 1.28);
+            font-size: 1.28em;
+            font-weight: normal;
+          }
 
           & .button-primary {
             padding: 0 emcalc(1.6, 1.28);
@@ -9391,6 +9595,13 @@ input {
 #widgets-new {
   & .header {
     &-sub-nav {
+      &::after {
+        display: none;
+
+        @include respond(desktop-sm) {
+          display: block;
+        }
+      }
       & .plus-minus {
         margin-left: 3em;
         & button {
@@ -9405,8 +9616,8 @@ input {
     }
   }
   & .content {
-    padding-top: 2em;
-    margin: 0 3em;
+    padding-top: 1.6em;
+    margin: 0 1em;
     &.small {
       & .widget {
         height: 35em;
@@ -11065,11 +11276,13 @@ input {
           border-radius: 3px;
           border: solid 1px #e4e8ec;
     
-          &:hover .chart-legend-content-small {
-            @include flexbox();
-          }
+          
     
           &.small {
+            &:hover .chart-legend-content-small {
+              @include flexbox();
+            }
+
             & .chart-legend-text {
               display: block;
             }
@@ -11293,11 +11506,14 @@ input {
       border-radius: 3px;
       border: solid 1px #e4e8ec;
 
-      &:hover .chart-legend-content-small {
-        @include flexbox();
-      }
+
 
       &.small {
+
+        &:hover .chart-legend-content-small {
+          @include flexbox();
+        }
+
         & .chart-legend-text {
           display: block;
         }
@@ -11404,6 +11620,11 @@ input {
   &.s-4 {
     padding-left: 12em;
     padding-right: 5em;
+
+    & .bar-graph-main-data {
+      padding-left: 12em;
+      margin-left: -12em;
+    }
 
     & .bar-graph-x-axis {
       &-item {
@@ -11584,11 +11805,14 @@ input {
       border-radius: 3px;
       border: solid 1px #e4e8ec;
 
-      &:hover .chart-legend-content-small {
-        @include flexbox();
-      }
+
 
       &.small {
+
+        &:hover .chart-legend-content-small {
+          @include flexbox();
+        }
+
         & .chart-legend-text {
           display: block;
         }
@@ -11642,7 +11866,13 @@ input {
         box-shadow: 0 6px 12px 0 rgba(137, 137, 137, 0.27);
         border: solid 1px #e4e8ec;
         background-color: #ffffff;
+        position: absolute;
+    // top:0;
+    // left: 0;
+        // right: 0;
+        // bottom: 0;
         z-index: 500;
+        //height: 300px;
 
         &:hover {
           @include flexbox();
@@ -13500,19 +13730,24 @@ input {
 }
 
 .react-grid-layout {
+  margin-top: -30px;
   position: relative;
   transition: height 200ms ease;
+
+  
 }
 .react-grid-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 6px;
-  box-shadow: 0 3px 6px 0 rgba(226, 226, 226, 0.8);
-  border: solid 1px #e4e8ec;
-  background-color: #fdfdfd;
+  // border-radius: 6px;
+  // box-shadow: 0 3px 6px 0 rgba(226, 226, 226, 0.8);
+  // border: solid 1px #e4e8ec;
+  //background-color: #fdfdfd;
   transition: all 200ms ease;
   transition-property: left, top;
+
+  //@include loop-children();
 }
 .react-grid-item.cssTransforms {
   transition-property: transform;
@@ -13543,6 +13778,7 @@ input {
   -o-user-select: none;
   user-select: none;
   border: 1.5px dashed #bbb;
+  border-radius: 6px;
 }
 
 .react-grid-item > .react-resizable-handle {
