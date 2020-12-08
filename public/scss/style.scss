@@ -1272,7 +1272,7 @@ input {
     right: var(--padding-right);
     opacity: 1;
     visibility: visible;
-    transition: all 0.5s ease-in-out;
+    //transition: all 0.5s ease-in-out;
   }
 
   &-info {
@@ -2352,6 +2352,7 @@ input {
   @include flexbox();
   @include align-items(center);
   @include justify-content(center);
+  border: 0!important;
 
   & td {
     width: 100%;
@@ -4810,13 +4811,17 @@ input {
     @include justify-content(flex-start);
     transition: background-color 0.2s ease-in-out;
 
-    &:not(:first-of-type) {
-      border-top: solid 1px #e6e8eb;
+    &:not(:last-of-type) {
+      border-bottom: solid 1px #e6e8eb;
     }
 
-    &:nth-of-type(2) {
-      border-top: 0;
-    }
+    // &:not(:first-of-type) {
+    //   border-top: solid 1px #e6e8eb;
+    // }
+
+    // &:nth-of-type(2) {
+    //   border-top: 0;
+    // }
 
     //general table column settings (width etc.)
     & td,
@@ -5085,7 +5090,7 @@ input {
         color: #48525d;
         border: 0;
         outline: 0;
-        border-bottom: 1.5px solid #e6e8eb;
+        border-bottom: 1px solid #e6e8eb;
         background-color: transparent;
 
         &::placeholder {
@@ -5487,7 +5492,7 @@ input {
     margin-left: auto;
     z-index: 100;
     transition: top 0.3s ease-in-out;
-    animation: fade-in-out-2 0.5s ease-in-out;
+    //animation: fade-in-out-2 0.5s ease-in-out;
 
     & > *:not(:last-of-type) {
       margin-right: 1.9em;
@@ -5930,7 +5935,7 @@ input {
 
     & .header-buttons {
       top: 0.95em;
-      animation: fade-in-out 0.5s ease-in-out;
+      //animation: fade-in-out 0.5s ease-in-out;
 
       &-settings,
       &-help,
@@ -8734,7 +8739,7 @@ input {
       padding: 3.9em;
       padding-left: 4.1em;
       padding-bottom: 0;
-      padding-top: 3.5em;
+      padding-top: 0;
       max-width: 89.9em;
       border-radius: 6px;
       max-height: 100%;
@@ -8752,6 +8757,7 @@ input {
 
       &-header {
         padding-top: 0em;
+        padding-top: 3.5em;
         position: sticky;
         position: -webkit-sticky;
         position: -moz-sticky;
@@ -11199,7 +11205,7 @@ input {
     }
 
     .placeholder-card {
-      resize: horizontal;
+      resize: both;
       overflow: hidden;
       height: 425px;
       min-width: 400px;
@@ -11926,7 +11932,7 @@ input {
   grid-template-columns: auto 1fr;
 
   &.cc-v02 {
-    grid-template-rows: 1fr 10em;
+    grid-template-rows: 1fr 5em!important;
 
     &.column-chart {
 
@@ -12280,13 +12286,36 @@ input {
     }
   }
 
-  &.s-10,
-  &.s-9,
-  &.s-8,
-  &.s-7,
-  &.s-6,
-  &.s-5,
-  &.s-4 {
+  // &.s-10,
+  // &.s-9,
+  // &.s-8,
+  // &.s-7,
+  // &.s-6,
+  // &.s-5,
+  // &.s-4 {
+  //   grid-template-rows: 1fr 10em;
+
+  //   & .column-chart-h-axis {
+  //     padding-top: 0.4em;
+  //     overflow: visible;
+
+  //     &-item {
+  //       position: relative;
+  //       height: 100%;
+  //       overflow: visible;
+
+  //       &-label {
+  //         position: absolute;
+  //         top: 0;
+  //         left: 50%;
+  //         transform: rotateZ(45deg);
+  //         transform-origin: 0 0;
+  //       }
+  //     }
+  //   }
+  // }
+
+  &.rotate-text {
     grid-template-rows: 1fr 10em;
 
     & .column-chart-h-axis {
@@ -12302,7 +12331,7 @@ input {
           position: absolute;
           top: 0;
           left: 50%;
-          transform: rotateZ(45deg);
+          transform: rotateZ(-45deg) translate(-100%, 0);
           transform-origin: 0 0;
         }
       }
@@ -12325,6 +12354,26 @@ input {
     }
   }
 
+  &.regular {
+    // &.count-4 {
+    //   & .column-chart-area {
+    //     padding: 0 5.55%;
+    //     &-graph {
+    //       &-item {
+    //         width: 14.3%;
+    //       }
+    //     }
+    //   }
+
+    //   & .column-chart-h-axis {
+    //     padding: 0 5.55%;
+    //     &-item {
+    //       width: 14.3%;
+    //     }
+    //   }
+    // }
+  }
+
   &-area {
     position: relative;
     border-bottom: 1px solid #43546a;
@@ -12336,7 +12385,7 @@ input {
       z-index: 100;
       @include flexbox();
       @include align-items(flex-end);
-      @include justify-content(center);
+      @include justify-content(space-between);
 
       &-item {
         @include flexbox();
@@ -12344,12 +12393,12 @@ input {
         @include justify-content(center);
         width: 4.4em;
         width: 7.9%;
-        min-width: 3.1em;
+        //min-width: 3.1em;
         height: 80%;
 
-        &:not(:last-of-type) {
-          margin-right: 4.5%;
-        }
+        // &:not(:last-of-type) {
+        //   margin-right: 4.5%;
+        // }
 
         &-text {
           margin-top: 0.6em;
@@ -12420,20 +12469,20 @@ input {
     min-width: 0;
 
     &-item {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      min-width: 0;
+      // white-space: nowrap;
+      // overflow: hidden;
+      // text-overflow: ellipsis;
+      // min-width: 0;
 
       &-label {
         font-size: 1.2em;
         font-weight: 400;
         letter-spacing: -0.18px;
         color: #16222f;
-        min-width: 0;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        // min-width: 0;
+        // white-space: nowrap;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
       }
     }
   }
@@ -12461,20 +12510,28 @@ input {
     grid-area: d;
     display: flex;
     align-items: flex-end;
-    justify-content: center;
+    justify-content: space-between;
 
     &-item {
+      position: relative;
       width: 4.4em;
       width: 7.9%;
-      min-width: 3.1em;
+      //min-width: 3.1em;
       text-align: center;
+      height: 100%;
 
-      &:not(:last-of-type) {
-        margin-right: 4.13%;
-      }
+      // &:not(:last-of-type) {
+      //   margin-right: 4.13%;
+      // }
 
       &-label {
+        width: auto;
         white-space: nowrap;
+                  position: absolute;
+          top: 1rem;
+          left: 50%;
+          transform: translate(-50%, 0);
+          //transform: rotateZ(45deg);
       }
     }
   }
@@ -12960,6 +13017,10 @@ input {
 }
 
 .value-box {
+  height: 100%;
+  @include flexbox();
+  @include align-items(flex-start);
+  @include justify-content(center);
 
   &-content {
     margin: 0 auto;
@@ -12967,12 +13028,32 @@ input {
     min-width: 0;
     width: 80%;
     max-width: 66em;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     border-radius: 2px;
     border: solid 1.5px #e3e3e3;
     background-color: #fbfbfc;
+
+  }
+
+  &.h-35 {
+    font-size: .95em!important;
+  }
+
+  &.h-30 {
+    font-size: .85em!important;
+  }
+
+  &.h-25 {
+    font-size: .72em!important;
+  }
+
+  &.h-20 {
+    font-size: .65em!important;
   }
 
   &.s-7,
@@ -13761,6 +13842,8 @@ input {
   transition: none;
   z-index: 3;
   will-change: transform;
+  transform: rotateZ(2deg);
+  z-index: 200!important;
 }
 
 .react-grid-item.dropping {
@@ -13782,20 +13865,25 @@ input {
 }
 
 .react-grid-item > .react-resizable-handle {
+  // position: absolute;
+  // width: 20px;
+  // height: 20px;
+  // bottom: 0;
+  // right: 0;
+  // cursor: we-resize;
+  // opacity: 0;
+  // height: 100%;
+  // transform: rotate(0) translate(0,-48%);
+  // background-color: red;
   position: absolute;
   width: 20px;
   height: 20px;
-  bottom: 0;
-  right: 0;
-  cursor: we-resize;
-  opacity: 0;
-  height: 100%;
-  transform: rotate(0) translate(0,-48%);
-  background-color: red;
+  background-color: transparent;
 }
 
 .react-grid-item > .react-resizable-handle::after {
   content: "";
+  display: none;
   position: absolute;
   right: 3px;
   bottom: 3px;
@@ -13822,7 +13910,7 @@ input {
   background-repeat: no-repeat;
   background-origin: content-box;
   box-sizing: border-box;
-  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2IDYiIHN0eWxlPSJiYWNrZ3JvdW5kLWNvbG9yOiNmZmZmZmYwMCIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI2cHgiIGhlaWdodD0iNnB4Ij48ZyBvcGFjaXR5PSIwLjMwMiI+PHBhdGggZD0iTSA2IDYgTCAwIDYgTCAwIDQuMiBMIDQgNC4yIEwgNC4yIDQuMiBMIDQuMiAwIEwgNiAwIEwgNiA2IEwgNiA2IFoiIGZpbGw9IiMwMDAwMDAiLz48L2c+PC9zdmc+');
+  //background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2IDYiIHN0eWxlPSJiYWNrZ3JvdW5kLWNvbG9yOiNmZmZmZmYwMCIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI2cHgiIGhlaWdodD0iNnB4Ij48ZyBvcGFjaXR5PSIwLjMwMiI+PHBhdGggZD0iTSA2IDYgTCAwIDYgTCAwIDQuMiBMIDQgNC4yIEwgNC4yIDQuMiBMIDQuMiAwIEwgNiAwIEwgNiA2IEwgNiA2IFoiIGZpbGw9IiMwMDAwMDAiLz48L2c+PC9zdmc+');
   background-position: bottom right;
   padding: 0 3px 3px 0;
 }
@@ -13861,7 +13949,10 @@ input {
 }
 .react-resizable-handle-e {
   right: 0;
-  transform: rotate(315deg);
+  //transform: rotate(315deg);
+  height: 90%!important;
+  transform: rotate(0deg);
+  transform: translate(0, -50%);
 }
 .react-resizable-handle-n,
 .react-resizable-handle-s {

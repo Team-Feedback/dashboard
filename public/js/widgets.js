@@ -12,6 +12,7 @@ let allGraphs = [...columnCharts, comboChart, barGraph, valueBox, lineGraph];
 var ro = new ResizeObserver(entries => {
   for (let entry of entries) {
     const crWidth = entry.borderBoxSize[0].inlineSize;
+    const crHeight = entry.borderBoxSize[0].blockSize;
 
     if (crWidth > 1200.00001) {
       entry.target.classList.add('s-12')
@@ -161,6 +162,87 @@ var ro = new ResizeObserver(entries => {
         ]
       }
 
+    }
+
+
+    //HEIGHT CHECK
+    if (crHeight <= 700 && crHeight > 650.00001) {
+      entry.target.classList.add('h-65')
+    } else if (entry.target.classList.contains('h-65')) {
+      entry.target.classList.remove('h-65')
+    }
+
+    if (crHeight <= 650 && crHeight > 600.00001) {
+      entry.target.classList.add('h-60')
+    } else if (entry.target.classList.contains('h-60')) {
+      entry.target.classList.remove('h-60')
+    }
+
+    if (crHeight <= 600 && crHeight > 550.00001) {
+      entry.target.classList.add('h-55')
+    } else if (entry.target.classList.contains('h-55')) {
+      entry.target.classList.remove('h-55')
+    }
+
+
+    if (crHeight <= 550 && crHeight > 500.00001) {
+      entry.target.classList.add('h-50')
+    } else if (entry.target.classList.contains('h-50')) {
+      entry.target.classList.remove('h-50')
+    }
+
+    if (crHeight <= 500 && crHeight > 450.00001) {
+      entry.target.classList.add('h-45')
+    } else if (entry.target.classList.contains('h-45')) {
+      entry.target.classList.remove('h-45')
+    }
+
+    if (crHeight <= 450 && crHeight > 400.00001) {
+      entry.target.classList.add('h-40')
+    } else if (entry.target.classList.contains('h-40')) {
+      entry.target.classList.remove('h-40')
+    }
+
+    if (crHeight <= 400 && crHeight > 350.00001) {
+      entry.target.classList.add('h-35')
+    } else if (entry.target.classList.contains('h-35')) {
+      entry.target.classList.remove('h-35')
+    }
+
+    if (crHeight <= 350 && crHeight > 300.00001) {
+      entry.target.classList.add('h-30')
+    } else if (entry.target.classList.contains('h-30')) {
+      entry.target.classList.remove('h-30')
+    }
+
+    if (crHeight <= 300 && crHeight > 250.00001) {
+      entry.target.classList.add('h-25')
+    } else if (entry.target.classList.contains('h-25')) {
+      entry.target.classList.remove('h-25')
+    }
+
+    if (crHeight <= 250) {
+      entry.target.classList.add('h-20')
+    } else if (entry.target.classList.contains('h-20')) {
+      entry.target.classList.remove('h-20')
+    }
+
+
+    //COLUMN CHART LABELS WIDTH
+    if (entry.target.classList.contains('regular')) {
+      let countWidth = 0;
+      let parent = undefined;
+      entry.target.querySelectorAll('.column-chart-h-axis-item-label').forEach(e => {
+        parent === undefined && (parent = e.parentElement.parentElement)
+        console.log(e.scrollWidth)
+        countWidth += e.scrollWidth + 30;
+      })
+
+      if (countWidth > parent.clientWidth) {
+        entry.target.classList.add('rotate-text');
+      } else {
+        entry.target.classList.remove('rotate-text');
+      }
     }
   }
 });
@@ -381,3 +463,56 @@ let chart01 = new Chart(ctx01, {
 // document.querySelectorAll('.react-grid-item').forEach(e => {
 //   e.style.zIndex = `${Math.abs(100 - Math.ceil(e.getBoundingClientRect().top / 100))}`;
 // })
+
+//COLUMN GRAPH SIZES
+
+
+function regularColumnGraphSize() {
+  let columnChartRegular = document.querySelector('.column-chart.regular');
+  let columnChartAreaGraph = columnChartRegular.querySelector('.column-chart-area-graph');
+  let columns = columnChartAreaGraph.querySelectorAll('.column-chart-area-graph-item')
+  let columnCount = columns.length;
+  let divider = columnCount <= 1 ? 4 : 2;
+  let hAxis = columnChartRegular.querySelector('.column-chart-h-axis');
+  let hAxisItems = hAxis.querySelectorAll('.column-chart-h-axis-item');
+  //columnChartRegular.classList.add(`count-${columnCount}`)
+
+  columnChartAreaGraph.style.padding = `0 ${(100 / ((columnCount * 2) - 1)) / divider}%`
+  hAxis.style.padding = `0 ${(100 / ((columnCount * 2) - 1)) / divider}%`
+
+  for (let i = 0; i < columnCount; i++) {
+    //console.log((columnCount * 2) - 1)
+    columns[i].style.width = `${100 / ((columnCount * 2) - 1)}%`;
+    hAxisItems[i].style.width = `${100 / ((columnCount * 2) - 1)}%`;
+  }
+}
+
+regularColumnGraphSize()
+
+
+
+//ADD COLUMN TEST
+function addColumn() {
+  let columnChartRegular = document.querySelector('.column-chart.regular');
+  let columnChartAreaGraph = columnChartRegular.querySelector('.column-chart-area-graph');
+  let hAxis = columnChartRegular.querySelector('.column-chart-h-axis');
+
+  let columnItem = `
+  <div class="column-chart-area-graph-item" style="height: 65%; background-color: #559a19;">
+  <div class="p column-chart-area-graph-item-text">18</div>
+</div>
+  `
+  let labelItem = `
+  <div class="column-chart-h-axis-item item-03">
+  <p class="column-chart-h-axis-item-label">Teamworking</p>
+  <span class="column-chart-h-axis-item-tick"></span>
+</div>
+  `
+
+  columnChartAreaGraph.innerHTML += columnItem;
+  hAxis.innerHTML += labelItem;
+
+  regularColumnGraphSize()
+}
+
+document.querySelector('.add-column').addEventListener('click', addColumn)
