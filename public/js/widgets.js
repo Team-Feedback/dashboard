@@ -472,16 +472,14 @@ function regularColumnGraphSize() {
   let columnChartAreaGraph = columnChartRegular.querySelector('.column-chart-area-graph');
   let columns = columnChartAreaGraph.querySelectorAll('.column-chart-area-graph-item')
   let columnCount = columns.length;
-  let divider = columnCount <= 1 ? 4 : 2;
+  let divider = columnCount <= 1 ? 4 : 2.7;
   let hAxis = columnChartRegular.querySelector('.column-chart-h-axis');
   let hAxisItems = hAxis.querySelectorAll('.column-chart-h-axis-item');
-  //columnChartRegular.classList.add(`count-${columnCount}`)
 
   columnChartAreaGraph.style.padding = `0 ${(100 / ((columnCount * 2) - 1)) / divider}%`
   hAxis.style.padding = `0 ${(100 / ((columnCount * 2) - 1)) / divider}%`
 
   for (let i = 0; i < columnCount; i++) {
-    //console.log((columnCount * 2) - 1)
     columns[i].style.width = `${100 / ((columnCount * 2) - 1)}%`;
     hAxisItems[i].style.width = `${100 / ((columnCount * 2) - 1)}%`;
   }
