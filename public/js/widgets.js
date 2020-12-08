@@ -7,7 +7,6 @@ let lineGraph = document.querySelector('.line-chart');
 
 let allGraphs = [...columnCharts, comboChart, barGraph, valueBox, lineGraph];
 
-
 // REUSABLE RESIZE OBSERVER
 var ro = new ResizeObserver(entries => {
   for (let entry of entries) {

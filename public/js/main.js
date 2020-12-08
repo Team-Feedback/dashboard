@@ -1,16 +1,31 @@
 //HEADER SMALL/BIG TOGGLE
-let header = document.querySelector(".header");
-let headerMain = document.querySelector(".header-main");
+// let header = document.querySelector(".header");
+// let headerMain = document.querySelector(".header-main");
 
-headerMain.addEventListener("click", function () {
-  console.log("double click");
-  header.classList.toggle("small");
+// headerMain.addEventListener("click", function () {
+//   console.log("double click");
+//   header.classList.toggle("small");
 
-  // Send feedback page people container height
-  if (document.getElementById('give-feedback')) {
-    setTimeout(() => {
-      peopleHeightLimit();
-    }, 500);
+//   // Send feedback page people container height
+//   if (document.getElementById('give-feedback')) {
+//     setTimeout(() => {
+//       peopleHeightLimit();
+//     }, 500);
+//   }
+// });
+
+//SIDE MENU TOGGLE
+let main = document.querySelector(".main");
+let sideToglle = document.querySelector('.side-toggle');
+sideToglle.addEventListener('click', function () {
+  main.classList.toggle('side-open');
+})
+
+
+let side = document.querySelector('.side');
+document.addEventListener('click', function (event) {
+  if (side !== event.target && !side.contains(event.target) && sideToglle !== event.target && !sideToglle.contains(event.target)) {
+    main.classList.remove('side-open')
   }
 });
 
