@@ -472,7 +472,7 @@ function regularColumnGraphSize() {
   let columnChartAreaGraph = columnChartRegular.querySelector('.column-chart-area-graph');
   let columns = columnChartAreaGraph.querySelectorAll('.column-chart-area-graph-item')
   let columnCount = columns.length;
-  let divider = columnCount <= 1 ? 4 : 2.7;
+  let divider = columnCount <= 1 ? 4 : 2.5;
   let hAxis = columnChartRegular.querySelector('.column-chart-h-axis');
   let hAxisItems = hAxis.querySelectorAll('.column-chart-h-axis-item');
 
