@@ -2079,8 +2079,15 @@ input {
 
         &.create-new {
           & .team-initials {
+            height: emcalc(3.5,1.5);
+            width: emcalc(3.5,1.5);
             background-color: #d3d3d3;
+            font-size: 1.5em;
           }
+        }
+
+        &:hover {
+          background-color: #f0f1f4;
         }
       }
     }
@@ -2094,12 +2101,12 @@ input {
       @include justify-content(flex-start);
 
       &-initials {
-        height: emcalc(3.5,1.88);
-        width: emcalc(3.5,1.88);
+        height: emcalc(3.5,1.8);
+        width: emcalc(3.5,1.8);
         @include flexbox();
         @include align-items(center);
         @include justify-content(center);
-        font-size: 1.88em;
+        font-size: 1.8em;
         font-weight: 700;
         line-height: 1.17;
         color: #FFF;
@@ -2114,8 +2121,8 @@ input {
         text-align: left;
 
         &-name {
-          margin-bottom: emcalc(.3,1.28);
-          font-size: 1.28em;
+          margin-bottom: emcalc(.3,1.17);
+          font-size: 1.17em;
           font-weight: 500;
           line-height: 1.18;
           color: #0b2b62;
@@ -14061,6 +14068,10 @@ input {
         margin-left: 4px !important;
         font-size: 6.5px !important;
       }
+    }
+
+    .side-menu-dropdown .team-initials {
+      padding-top: 1px;
     }
   }
 }

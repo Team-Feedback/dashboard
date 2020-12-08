@@ -1124,7 +1124,12 @@ input {
         .custom-dropdown.side-menu-dropdown .custom-dropdown-menu .team:not(:last-of-type) {
           border-bottom: solid 1px #e4e8ec; }
         .custom-dropdown.side-menu-dropdown .custom-dropdown-menu .team.create-new .team-initials {
-          background-color: #d3d3d3; }
+          height: 2.3333333333em;
+          width: 2.3333333333em;
+          background-color: #d3d3d3;
+          font-size: 1.5em; }
+        .custom-dropdown.side-menu-dropdown .custom-dropdown-menu .team:hover {
+          background-color: #f0f1f4; }
     .custom-dropdown.side-menu-dropdown .team {
       padding: 0 1.4em;
       height: 6.1em;
@@ -1145,8 +1150,8 @@ input {
       -moz-justify-content: flex-start;
       justify-content: flex-start; }
       .custom-dropdown.side-menu-dropdown .team-initials {
-        height: 1.8617021277em;
-        width: 1.8617021277em;
+        height: 1.9444444444em;
+        width: 1.9444444444em;
         display: -webkit-box;
         display: -webkit-flex;
         display: -moz-flex;
@@ -1162,7 +1167,7 @@ input {
         -webkit-justify-content: center;
         -moz-justify-content: center;
         justify-content: center;
-        font-size: 1.88em;
+        font-size: 1.8em;
         font-weight: 700;
         line-height: 1.17;
         color: #FFF;
@@ -1174,8 +1179,8 @@ input {
         margin-left: .9em;
         text-align: left; }
         .custom-dropdown.side-menu-dropdown .team-set-name {
-          margin-bottom: 0.234375em;
-          font-size: 1.28em;
+          margin-bottom: 0.2564102564em;
+          font-size: 1.17em;
           font-weight: 500;
           line-height: 1.18;
           color: #0b2b62; }
@@ -10321,7 +10326,10 @@ input {
   @supports (-webkit-appearance: none) {
     .custom-table-head .icon-caret-up, .custom-table-head .icon-caret-down {
       margin-left: 4px !important;
-      font-size: 6.5px !important; } } }
+      font-size: 6.5px !important; }
+
+    .side-menu-dropdown .team-initials {
+      padding-top: 1px; } } }
 .flex {
   display: flex;
   flex-direction: row; }
