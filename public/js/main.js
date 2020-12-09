@@ -17,10 +17,12 @@
 //SIDE MENU TOGGLE
 let main = document.querySelector(".main");
 let sideToglle = document.querySelector('.side-toggle');
-sideToglle.addEventListener('click', function () {
-  main.classList.toggle('side-open');
-})
+if (sideToglle) {
+  sideToglle.addEventListener('click', function () {
+    main.classList.toggle('side-open');
+  })
 
+}
 
 let side = document.querySelector('.side');
 document.addEventListener('click', function (event) {
