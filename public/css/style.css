@@ -8946,11 +8946,21 @@ input {
         margin-right: 0.5em; }
 
 .line-chart {
-  padding-left: 2.5rem;
-  padding-right: 5rem;
+  margin-top: -.5em;
+  margin-left: 5.5em;
+  padding-right: 3rem;
   position: relative;
-  width: 100%;
-  height: calc(100% - 8.5em); }
+  width: calc(100% - 5.5em);
+  height: calc(100% - 8em); }
+  .line-chart-title {
+    position: absolute;
+    top: 50%;
+    left: -5.5em;
+    font-size: 1.18em;
+    font-weight: 400;
+    letter-spacing: 0.03px;
+    color: #989898;
+    transform: translate(0, -100%) rotate(-90deg); }
   .line-chart-wrapper {
     width: 100%;
     height: 100%;
@@ -8978,7 +8988,7 @@ input {
     .line-chart-wrapper .chart-legend {
       position: relative;
       padding: 0.3em 2em;
-      margin: 2.4em 2.5em;
+      margin: 2em 2.5em;
       margin-bottom: 2em;
       display: -webkit-box;
       display: -webkit-flex;
@@ -9002,19 +9012,21 @@ input {
       min-height: 4.1em;
       width: 87%;
       border-radius: 3px;
-      border: solid 1px #e4e8ec; }
-      .line-chart-wrapper .chart-legend.small:hover .chart-legend-content-small {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flexbox;
-        display: flex; }
-      .line-chart-wrapper .chart-legend.small .chart-legend-text {
-        display: block; }
-      .line-chart-wrapper .chart-legend.small .chart-legend-content-big {
-        position: absolute;
-        opacity: 0;
-        visibility: hidden; }
+      border: solid 1px transparent; }
+      .line-chart-wrapper .chart-legend.small {
+        border: solid 1px #e4e8ec; }
+        .line-chart-wrapper .chart-legend.small:hover .chart-legend-content-small {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flexbox;
+          display: flex; }
+        .line-chart-wrapper .chart-legend.small .chart-legend-text {
+          display: block; }
+        .line-chart-wrapper .chart-legend.small .chart-legend-content-big {
+          position: absolute;
+          opacity: 0;
+          visibility: hidden; }
       .line-chart-wrapper .chart-legend-text {
         display: none;
         font-size: 1.2em;
@@ -9101,13 +9113,14 @@ input {
           margin-right: 1.4em; }
         .line-chart-wrapper .chart-legend-item-color {
           margin-right: 0.85em;
-          width: 2.5em;
-          height: 3px; }
+          width: 1em;
+          height: 1em;
+          border: 1.5px solid #FFF;
+          border-radius: 50%; }
         .line-chart-wrapper .chart-legend-item-name {
-          font-size: 1.2em;
-          font-weight: 400;
-          letter-spacing: -0.18px;
-          color: #16222f; }
+          font-size: 1.05em;
+          font-weight: 500;
+          color: #505050; }
 
 .column-chart {
   padding-bottom: 2em;

@@ -17,7 +17,7 @@ var ro = new ResizeObserver(entries => {
       entry.target.classList.add('s-12')
       //Code for line chart
       if (entry.target.classList.contains('line-chart')) {
-        chart01.options.scales.xAxes[0].ticks.maxTicksLimit = "12";
+        // chart01.options.scales.xAxes[0].ticks.maxTicksLimit = "12";
       }
     } else if (entry.target.classList.contains('s-12')) {
       entry.target.classList.remove('s-12')
@@ -27,7 +27,7 @@ var ro = new ResizeObserver(entries => {
       entry.target.classList.add('s-11')
       //Code for line chart
       if (entry.target.classList.contains('line-chart')) {
-        chart01.options.scales.xAxes[0].ticks.maxTicksLimit = "11";
+        // chart01.options.scales.xAxes[0].ticks.maxTicksLimit = "11";
       }
     } else if (entry.target.classList.contains('s-11')) {
       entry.target.classList.remove('s-11')
@@ -37,7 +37,7 @@ var ro = new ResizeObserver(entries => {
       entry.target.classList.add('s-10')
       //Code for line chart
       if (entry.target.classList.contains('line-chart')) {
-        chart01.options.scales.xAxes[0].ticks.maxTicksLimit = "10";
+        // chart01.options.scales.xAxes[0].ticks.maxTicksLimit = "10";
       }
     } else if (entry.target.classList.contains('s-10')) {
       entry.target.classList.remove('s-10')
@@ -47,17 +47,16 @@ var ro = new ResizeObserver(entries => {
       entry.target.classList.add('s-9')
       //Code for line chart
       if (entry.target.classList.contains('line-chart')) {
-        chart01.options.scales.xAxes[0].ticks.maxTicksLimit = "9";
+        // chart01.options.scales.xAxes[0].ticks.maxTicksLimit = "9";
       }
     } else if (entry.target.classList.contains('s-9')) {
       entry.target.classList.remove('s-9')
     }
 
     if (crWidth <= 900 && crWidth > 800.00001) {
-      entry.target.classList.add('s-8')
       //Code for line chart
       if (entry.target.classList.contains('line-chart')) {
-        chart01.options.scales.xAxes[0].ticks.maxTicksLimit = "8";
+        // chart01.options.scales.xAxes[0].ticks.maxTicksLimit = "8";
       }
     } else if (entry.target.classList.contains('s-8')) {
       entry.target.classList.remove('s-8')
@@ -67,7 +66,7 @@ var ro = new ResizeObserver(entries => {
       entry.target.classList.add('s-7')
       //Code for line chart
       if (entry.target.classList.contains('line-chart')) {
-        chart01.options.scales.xAxes[0].ticks.maxTicksLimit = "7";
+        // chart01.options.scales.xAxes[0].ticks.maxTicksLimit = "7";
       }
     } else if (entry.target.classList.contains('s-7')) {
       entry.target.classList.remove('s-7')
@@ -77,7 +76,7 @@ var ro = new ResizeObserver(entries => {
       entry.target.classList.add('s-6')
       //Code for line chart
       if (entry.target.classList.contains('line-chart')) {
-        chart01.options.scales.xAxes[0].ticks.maxTicksLimit = "6";
+        // chart01.options.scales.xAxes[0].ticks.maxTicksLimit = "6";
       }
     } else if (entry.target.classList.contains('s-6')) {
       entry.target.classList.remove('s-6')
@@ -87,7 +86,7 @@ var ro = new ResizeObserver(entries => {
       entry.target.classList.add('s-5')
       //Code for line chart
       if (entry.target.classList.contains('line-chart')) {
-        chart01.options.scales.xAxes[0].ticks.maxTicksLimit = "5";
+        // chart01.options.scales.xAxes[0].ticks.maxTicksLimit = "5";
       }
     } else if (entry.target.classList.contains('s-5')) {
       entry.target.classList.remove('s-5')
@@ -97,30 +96,30 @@ var ro = new ResizeObserver(entries => {
       entry.target.classList.add('s-4')
       //Code for line chart
       if (entry.target.classList.contains('line-chart')) {
-        chart01.options.scales.xAxes[0].ticks.maxTicksLimit = "4";
+        // chart01.options.scales.xAxes[0].ticks.maxTicksLimit = "4";
       }
     } else if (entry.target.classList.contains('s-4')) {
       entry.target.classList.remove('s-4')
     } else {
 
-      chart01.options.scales.yAxes[0].ticks.callback = function (
-        label,
-        index,
-        labels
-      ) {
-        switch (label) {
-          case 1:
-            return "Bad (1.0)";
-          case 2:
-            return "Weak (2.0)";
-          case 3:
-            return "Ok (3.0)";
-          case 4:
-            return "Good (4.0)";
-          case 5:
-            return "Great (5.0)";
-        }
-      };
+      // chart01.options.scales.yAxes[0].ticks.callback = function (
+      //   label,
+      //   index,
+      //   labels
+      // ) {
+      //   switch (label) {
+      //     case 1:
+      //       return "Bad (1.0)";
+      //     case 2:
+      //       return "Weak (2.0)";
+      //     case 3:
+      //       return "Ok (3.0)";
+      //     case 4:
+      //       return "Good (4.0)";
+      //     case 5:
+      //       return "Great (5.0)";
+      //   }
+      // };
     }
 
     if (crWidth <= 700.00001) {
@@ -144,22 +143,22 @@ var ro = new ResizeObserver(entries => {
         // ]
       }
     } else {
-      if (entry.target.classList.contains('line-chart')) {
-        chart01.data.labels = [
-          "January",
-          "February",
-          "March",
-          "April",
-          "May",
-          "June",
-          "July",
-          "August",
-          "September",
-          "October",
-          "November",
-          "December"
-        ]
-      }
+      // if (entry.target.classList.contains('line-chart')) {
+      //   chart01.data.labels = [
+      //     "January",
+      //     "February",
+      //     "March",
+      //     "April",
+      //     "May",
+      //     "June",
+      //     "July",
+      //     "August",
+      //     "September",
+      //     "October",
+      //     "November",
+      //     "December"
+      //   ]
+      // }
 
     }
 
@@ -325,32 +324,31 @@ let chart01 = new Chart(ctx01, {
       {
         // showLine: false,
         label: "Attitude",
-        data: [1.5, 2, 3, 3.5, 3, 3.8, 4, 4.2, 4, 3.8, 3.5, 3],
+        data: [null, 3, 3.4, 3.5, 3.4, 3.5, 4, null],
         fill: false,
-        borderColor: "#FF7F00",
-        pointRadius: 0,
-      },
-      {
-        label: "Teamworking",
-        data: [1.2, 1.4, 2, 3, 4, 3.5, 3.5, 3.7, 4, 4, 2, 4.5, 5],
-        fill: false,
-        borderColor: "#1DA0F2",
-        pointRadius: 0,
+        borderWidth: 1.5,
+        borderColor: "#137ff6",
+        pointRadius: 4.5,
+        pointBackgroundColor: "#ffffff",
+        pointBorderColor: '#137ff6',
+        pointBorderWidth: 1.5,
       },
     ],
     labels: [
+      "",
       "January",
       "February",
       "March",
       "April",
       "May",
       "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December"
+      // "July",
+      // "August",
+      // "September",
+      // "October",
+      // "November",
+      // "December",
+      ""
     ],
   },
   options: {
@@ -398,34 +396,37 @@ let chart01 = new Chart(ctx01, {
       yAxes: [
         {
           ticks: {
-            fontColor: "#16222f",
+            fontColor: "#505050",
             fontFamily: '"Inter", sans-serif',
-            fontSize: 12,
+            fontSize: 11,
             fontStyle: "400",
-            beginAtZero: false,
+            beginAtZero: true,
             padding: 8.6,
             max: 5,
             min: 1,
             stepSize: 1,
-            callback: function (label, index, labels) {
-              switch (label) {
-                case 1:
-                  return "Bad (1.0)";
-                case 2:
-                  return "Weak (2.0)";
-                case 3:
-                  return "Ok (3.0)";
-                case 4:
-                  return "Good (4.0)";
-                case 5:
-                  return "Great (5.0)";
-              }
-            },
+            // callback: function (label, index, labels) {
+            //   switch (label) {
+            //     case 1:
+            //       return "Bad (1.0)";
+            //     case 2:
+            //       return "Weak (2.0)";
+            //     case 3:
+            //       return "Ok (3.0)";
+            //     case 4:
+            //       return "Good (4.0)";
+            //     case 5:
+            //       return "Great (5.0)";
+            //   }
+            // },
           },
           gridLines: {
+            color: "#f5f6f8",
+            lineWidth: 1.5,
             display: true,
-            drawTicks: true,
+            drawTicks: false,
             drawOnChartArea: true,
+            drawBorder: false
           },
         },
       ],
@@ -433,17 +434,18 @@ let chart01 = new Chart(ctx01, {
         {
           ticks: {
             maxRotation: 0,
-            fontColor: "#16222f",
+            fontColor: "#505050",
             fontFamily: '"Inter", sans-serif',
             fontSize: 12,
-            fontStyle: "300",
+            fontStyle: "400",
             beginAtZero: false,
             padding: 4.5,
           },
           gridLines: {
-            display: true,
-            drawTicks: true,
+            display: false,
+            drawTicks: false,
             drawOnChartArea: false,
+            drawBorder: false
           },
         },
       ],
