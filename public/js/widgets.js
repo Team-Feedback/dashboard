@@ -513,3 +513,15 @@ function addColumn() {
 }
 
 document.querySelector('.add-column').addEventListener('click', addColumn)
+
+
+
+//CHECK HEIGHT OF COLUMN CHART COLUMN
+let columnChartRegularItems = document.querySelectorAll('.column-chart.regular .column-chart-area-graph-item');
+columnChartRegularItems.forEach(e => {
+  if (parseInt(e.style.height) > 90) {
+    e.classList.add('high');
+  } else {
+    e.classList.remove('high');
+  }
+})

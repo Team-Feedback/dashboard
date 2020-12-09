@@ -11519,6 +11519,11 @@ input {
       border: solid 1px #e4e8ec;
       background-color: #ffffff;
 
+      &:hover .widget-header-icons {
+        opacity: 1;
+        visibility: visible;
+      }
+
       &-bar-graph {
         & .widget-body {
           padding: 0;
@@ -11549,6 +11554,13 @@ input {
       &-column-chart {
         & .widget-header {
           border-bottom: 0;
+
+          &-title {
+            margin-bottom: 0!important;
+            font-size: 1.7em!important;
+            font-weight: 500!important;
+            color: #333333!important;
+          }
         }
       }
 
@@ -11756,18 +11768,24 @@ input {
         }
 
         &-icons {
+          opacity: 0;
+          visibility: hidden;
+          @include flexbox();
+          @include align-items(center);
+          @include justify-content(flex-start);
           margin-left: 2em;
           position: absolute;
           top: 1.25em;
           right: 1.35em;
+          transition: all .1s ease-in-out;
 
           & i {
             display: block;
             font-size: 2.25em;
-            color: #424c5d;
+            color: #5d636f;
 
             &:not(:last-of-type) {
-              margin-bottom: emcalc(0.55, 2.25);
+              margin-right: emcalc(0.75, 2.25);
             }
           }
         }
@@ -11775,7 +11793,7 @@ input {
 
       &-body {
         padding: 0 2em 0;
-        height: calc(100% - 8em);
+        height: calc(100% - 6.06em);
       }
     }
   }
@@ -12219,15 +12237,17 @@ input {
 .column-chart {
   padding-top: 1.2em;
   padding-bottom: 2em;
-  padding-left: 6%;
-  padding-right: 6%;
+  // padding-left: 6%;
+  // padding-right: 6%;
+  padding-left: 3.2em;
+  padding-right: 1em;
   width: 100%;
   height: 100%;
   display: grid;
   grid-template-areas:
     "a b"
     "c d";
-  grid-template-rows: 1fr 3em;
+  grid-template-rows: 1fr 9em;
   grid-template-columns: auto 1fr;
 
   &.cc-v02 {
@@ -12628,8 +12648,8 @@ input {
 
         &-label {
           position: absolute;
-          top: 0;
-          left: 50%;
+          top: .5em;
+          left: 45%;
           transform: rotateZ(-45deg) translate(-100%, 0);
           transform-origin: 0 0;
         }
@@ -12639,8 +12659,8 @@ input {
 
   &.s-5,
   &.s-4 {
-    padding-left: 3%;
-    padding-right: 3%;
+    //padding-left: 3%;
+    //padding-right: 3%;
   }
 
   &.s-4 {
@@ -12675,7 +12695,7 @@ input {
 
   &-area {
     position: relative;
-    border-bottom: 1px solid #43546a;
+    border-bottom: solid 1.5px #f5f6f8;;
 
     &-graph {
       position: relative;
@@ -12687,24 +12707,28 @@ input {
       @include justify-content(space-between);
 
       &-item {
-        @include flexbox();
-        @include align-items(flex-start);
-        @include justify-content(center);
+        position: relative;
         width: 4.4em;
         width: 7.9%;
-        //min-width: 3.1em;
         height: 80%;
+        border-radius: 3px;
 
-        // &:not(:last-of-type) {
-        //   margin-right: 4.5%;
-        // }
+        &.high {
+          & .column-chart-area-graph-item-text {
+            top: 10px;
+            transform: translate(-50%, 0);
+            color: #FFF;
+          }
+        }
 
         &-text {
-          margin-top: 0.6em;
+          position: absolute;
+          top: -3px;
+          left: 50%;
+          transform: translate(-50%, -100%);
           font-size: 1.2em;
-          font-weight: 400;
-          letter-spacing: -0.18px;
-          color: #fff;
+          font-weight: 600;
+          color: #333333;
         }
       }
     }
@@ -12732,7 +12756,7 @@ input {
           width: 100%;
 
           &:not(:last-of-type) {
-            border-top: 0.25px solid #e3e3e3;
+            border-top: solid 1.5px #f5f6f8;;
           }
         }
       }
@@ -12752,7 +12776,7 @@ input {
           height: 100%;
 
           &:not(:first-of-type) {
-            border-right: 0.25px solid #e3e3e3;
+            border-right: solid 1.5px #f5f6f8;;
           }
         }
       }
@@ -12774,10 +12798,10 @@ input {
       // min-width: 0;
 
       &-label {
-        font-size: 1.2em;
+        font-size: 1.05em;
         font-weight: 400;
-        letter-spacing: -0.18px;
-        color: #16222f;
+        color: #505050;
+
         // min-width: 0;
         // white-space: nowrap;
         // overflow: hidden;
@@ -12787,14 +12811,27 @@ input {
   }
 
   &-v-axis {
+    position: relative;
     margin: -1em 0;
     grid-area: a;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
+    overflow: visible;
+
+    &-title {
+      position: absolute;
+      top: 50%;
+      left: -.4em;
+      transform: translate(-100%, -50%) rotate(-90deg);
+      font-size: 1.18em;
+      color: #989898;
+    }
 
     &-item {
+      @include inline-flex();
+      @include align-items(center);
       height: 2em;
       margin-right: 1.2em;
 
