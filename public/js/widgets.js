@@ -233,7 +233,6 @@ var ro = new ResizeObserver(entries => {
       let parent = undefined;
       entry.target.querySelectorAll('.column-chart-h-axis-item-label').forEach(e => {
         parent === undefined && (parent = e.parentElement.parentElement)
-        console.log(e.scrollWidth)
         countWidth += e.scrollWidth + 30;
       })
 
@@ -242,6 +241,18 @@ var ro = new ResizeObserver(entries => {
       } else {
         entry.target.classList.remove('rotate-text');
       }
+    }
+
+    if (entry.target.classList.contains('bar-graph')) {
+      let height = parseInt(crHeight - 60);
+      //let bars = entry.target.querySelectorAll('.bar-graph-main-data-item');
+      let bars = [...entry.target.children[0].children[0].children];
+      let barHeight = height / (bars.length * 1.5);
+
+      bars.forEach(e => {
+        e.style.height = `${barHeight}px`;
+        e.style.marginBottom = `${(barHeight / 2) <= 10 ? 10 : (barHeight / 2)}px`;
+      })
     }
   }
 });
@@ -525,3 +536,4 @@ columnChartRegularItems.forEach(e => {
     e.classList.remove('high');
   }
 })
+
