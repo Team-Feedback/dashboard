@@ -8913,7 +8913,7 @@ input {
       justify-content: space-between; }
       .bar-graph-back-x-line {
         height: 100%;
-        border-right: solid 1.5px #e6e9ef; }
+        border-right: solid 1.5px #f5f6f8; }
         .bar-graph-back-x-line:first-of-type {
           border-color: transparent; }
   .bar-graph-x-axis {
