@@ -398,27 +398,13 @@ let chart01 = new Chart(ctx01, {
           ticks: {
             fontColor: "#505050",
             fontFamily: '"Inter", sans-serif',
-            fontSize: 11,
+            fontSize: 10,
             fontStyle: "400",
             beginAtZero: true,
             padding: 8.6,
             max: 5,
             min: 1,
             stepSize: 1,
-            // callback: function (label, index, labels) {
-            //   switch (label) {
-            //     case 1:
-            //       return "Bad (1.0)";
-            //     case 2:
-            //       return "Weak (2.0)";
-            //     case 3:
-            //       return "Ok (3.0)";
-            //     case 4:
-            //       return "Good (4.0)";
-            //     case 5:
-            //       return "Great (5.0)";
-            //   }
-            // },
           },
           gridLines: {
             color: "#f5f6f8",
@@ -436,10 +422,10 @@ let chart01 = new Chart(ctx01, {
             maxRotation: 0,
             fontColor: "#505050",
             fontFamily: '"Inter", sans-serif',
-            fontSize: 12,
+            fontSize: 10.5,
             fontStyle: "400",
             beginAtZero: false,
-            padding: 4.5,
+            padding: 10,
           },
           gridLines: {
             display: false,
