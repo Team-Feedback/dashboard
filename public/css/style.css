@@ -1128,6 +1128,8 @@ input {
           width: 2.3333333333em;
           background-color: #d3d3d3;
           font-size: 1.5em; }
+        .custom-dropdown.side-menu-dropdown .custom-dropdown-menu .team.create-new .team-set-name {
+          margin-bottom: 0; }
         .custom-dropdown.side-menu-dropdown .custom-dropdown-menu .team:hover {
           background-color: #f0f1f4; }
     .custom-dropdown.side-menu-dropdown .team {
@@ -4691,6 +4693,13 @@ input {
       /* Firefox */
       -ms-overflow-style: none;
       /* Internet Explorer 10+ */ }
+      .header-nav-list::after {
+        content: '';
+        padding-right: 3.45em;
+        display: inline-block;
+        width: 0;
+        height: 100%;
+        background-color: transparent; }
       .header-nav-list::-webkit-scrollbar {
         /* WebKit */
         width: 0;
@@ -4715,7 +4724,27 @@ input {
         position: relative;
         cursor: pointer;
         white-space: nowrap;
-        padding-right: 3.45em; }
+        margin-right: 3.45em; }
+        .header-nav-list-item:hover .header-nav-list-item-text {
+          color: #202227; }
+        .header-nav-list-item:hover:before {
+          opacity: .62;
+          visibility: visible; }
+        .header-nav-list-item::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: block;
+          width: calc(100% + 3.2em);
+          height: 3.4em;
+          opacity: 0;
+          visibility: hidden;
+          border-radius: 3px;
+          background-color: #f0f0f0;
+          transition: opacity .1s ease-in;
+          z-index: -1; }
         .header-nav-list-item-text {
           font-size: 12.8px;
           font-weight: 400;
@@ -4727,16 +4756,8 @@ input {
           color: #404040;
           text-align: center;
           cursor: pointer; }
-        .header-nav-list-item:hover .header-nav-list-item-text {
-          font-weight: 500; }
-        .header-nav-list-item .header-nav-list-item-text::before {
-          display: block;
-          content: attr(text);
-          font-weight: 500;
-          height: 0;
-          overflow: hidden;
-          visibility: hidden;
-          cursor: pointer; }
+        .header-nav-list-item.active::before {
+          display: none; }
         .header-nav-list-item.active .header-nav-list-item-text {
           font-weight: 600;
           color: #000; }

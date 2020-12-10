@@ -2084,6 +2084,10 @@ input {
             background-color: #d3d3d3;
             font-size: 1.5em;
           }
+
+          & .team-set-name {
+            margin-bottom: 0;
+          }
         }
 
         &:hover {
@@ -5948,6 +5952,15 @@ input {
       width: 100%;
       min-width: 0;
 
+      &::after {
+        content: '';
+        padding-right: 3.45em;
+        display: inline-block;
+        width: 0;
+        height: 100%;
+        background-color: transparent;
+      }
+
       overflow-x: scroll;
       //max-width: 100vw;
       overflow-y: hidden;
@@ -5973,7 +5986,33 @@ input {
         position: relative;
         cursor: pointer;
         white-space: nowrap;
-        padding-right: 3.45em;
+        margin-right: 3.45em;
+
+        &:hover .header-nav-list-item-text {
+          color: #202227;
+        }
+
+        &:hover:before {
+          opacity: .62;
+          visibility: visible;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: block;
+          width: calc(100% + 3.2em);
+          height: 3.4em;
+          opacity: 0;
+          visibility: hidden;
+          border-radius: 3px;
+          background-color: #f0f0f0;
+          transition: opacity .1s ease-in;
+          z-index: -1;
+        }
 
         &-text {
           font-size: 12.8px;
@@ -5990,19 +6029,25 @@ input {
         }
 
         //on hover remove shake when changing weight
-        &:hover .header-nav-list-item-text {
-          // font-family: "Inter-Medium";
-          font-weight: 500;
-        }
-        & .header-nav-list-item-text::before {
-          display: block;
-          content: attr(text);
-          // font-family: "Inter-Medium";
-          font-weight: 500;
-          height: 0;
-          overflow: hidden;
-          visibility: hidden;
-          cursor: pointer;
+        // &:hover .header-nav-list-item-text {
+        //   // font-family: "Inter-Medium";
+        //   font-weight: 500;
+        // }
+        // & .header-nav-list-item-text::before {
+        //   display: block;
+        //   content: attr(text);
+        //   // font-family: "Inter-Medium";
+        //   font-weight: 500;
+        //   height: 0;
+        //   overflow: hidden;
+        //   visibility: hidden;
+        //   cursor: pointer;
+        // }
+
+        &.active {
+          &::before {
+            display: none;
+          }
         }
 
         &.active .header-nav-list-item-text {
