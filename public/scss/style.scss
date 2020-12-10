@@ -3502,6 +3502,103 @@ input {
   }
 }
 
+#addUsersModal {
+  & .custom-modal {
+    width: 39em;
+
+    &-header {
+      padding-top: 3.4em;
+      padding-left: 3.6em;
+      // padding-top: 3.6em;
+      height: 7.8em;
+      text-align: left;
+      border-bottom: solid 1px #efefef;
+
+      &-title {
+        font-size: 1.8em;
+        font-weight: 400;
+        letter-spacing: -0.18px;
+        color: #49566f;
+      }
+    }
+
+    &-body {
+      padding: 1.5em 3.6em 2.4em;
+      max-height: calc(95vh - 7.8em - 1px);
+      overflow-y: auto;
+      scrollbar-width: none;
+      /* Firefox */
+      -ms-overflow-style: none;
+      /* Internet Explorer 10+ */
+  
+      &::-webkit-scrollbar {
+        /* WebKit */
+        width: 0;
+        height: 0;
+      }
+
+      & .person {
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(flex-start);
+        width: 100%;
+        max-width: 30.8em;
+        height: 6.5em;
+        padding: 1em 1.2em;
+        border-radius: 3px;
+        box-shadow: 0 2px 6px 0 rgba(226, 226, 226, 0.51);
+        border: solid 1px rgba(237, 237, 237, 0.84);
+        background-color: #ffffff;
+
+        &:not(:last-of-type) {
+          margin-bottom: 1.2em;
+        }
+
+        &-img {
+          width: 4.5em;         
+          min-width: 4.5em;
+          height: 4.5em;          
+          min-height: 4.5em;
+          border-radius: 50%;
+          object-fit: contain;
+        }
+
+        &-initials {
+          @include flexbox();
+          @include align-items(center);
+          @include justify-content(center);
+          width: emcalc(4.5,1.9);         
+          height: emcalc(4.5,1.9);
+          font-size: 1.9em;
+          font-weight: 600;
+          letter-spacing: -0.19px;
+          color: #ffffff;     
+          border-radius: 50%;
+          background-color: #2cadf6;
+        }
+
+        &-set {
+          margin-left: 1em;
+
+          &-name {
+            margin-bottom: emcalc(.3,1.25);
+            font-size: 1.25em;
+            font-weight: 500;
+            letter-spacing: -0.03px;
+            color: #2b3b58;
+          }
+
+          &-requests {
+            font-size: 1.15em;
+            font-weight: 400;
+            color: #6b778c;
+          }
+        }
+      }
+    }
+  }
+}
+
 //feedback modals
 #peerToPeerFeedbackModal,
 #teamFeedbackModal,
@@ -4661,6 +4758,8 @@ input {
     }
   }
 }
+
+
 
 //Image modals
 #imageUploadModal,

@@ -209,6 +209,10 @@
             target-modal="createCompanyModal">
             Create company
           </button>
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;"
+            target-modal="addUsersModal">
+            Add users
+          </button>
         </div>
       </div>
     </div>
@@ -848,6 +852,40 @@
             <label for="uploadImage" class="button button-light-gray">Upload new</label>
             <input type="file" name="uploadImage" id="uploadImage" hidden />
             <button class="button button-primary">Done</button>
+          </div>
+
+        </div>
+      </div>
+      <div class="custom-modal-backdrop"></div>
+    </div>
+
+    <!-- IMAGE UPLOAD MODAL-->
+    <div class="custom-modal-wrapper" id="addUsersModal">
+      <div class="custom-modal">
+        <!-- Modal body -->
+        <div class="custom-modal-header">
+          <p class="custom-modal-header-title">Select a team member</p>
+          <div class="custom-modal-close" close-modal="addUsersModal">
+            <i class="icon-close"></i>
+          </div>
+        </div>
+        <div class="custom-modal-body">
+          <div class="person">
+            <img src="../public/img/p-01.png" alt="User's profile image" class="person-img">
+            <!-- <div class="person-initials">MR</div> -->
+            <div class="person-set">
+              <p class="person-set-name">Marko Rajkovic</p>
+              <p class="person-set-requests">4 Requests</p>
+            </div>
+          </div>
+
+          <div class="person">
+            <!-- <img src="../public/img/p-01.png" alt="User's profile image" class="person-img"> -->
+            <div class="person-initials">MR</div>
+            <div class="person-set">
+              <p class="person-set-name">Marko Rajkovic</p>
+              <p class="person-set-requests">4 Requests</p>
+            </div>
           </div>
 
         </div>

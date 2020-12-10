@@ -2452,6 +2452,101 @@ input {
           -webkit-line-clamp: 3;
           -webkit-box-orient: vertical; }
 
+#addUsersModal .custom-modal {
+  width: 39em; }
+  #addUsersModal .custom-modal-header {
+    padding-top: 3.4em;
+    padding-left: 3.6em;
+    height: 7.8em;
+    text-align: left;
+    border-bottom: solid 1px #efefef; }
+    #addUsersModal .custom-modal-header-title {
+      font-size: 1.8em;
+      font-weight: 400;
+      letter-spacing: -0.18px;
+      color: #49566f; }
+  #addUsersModal .custom-modal-body {
+    padding: 1.5em 3.6em 2.4em;
+    max-height: calc(95vh - 7.8em - 1px);
+    overflow-y: auto;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */ }
+    #addUsersModal .custom-modal-body::-webkit-scrollbar {
+      /* WebKit */
+      width: 0;
+      height: 0; }
+    #addUsersModal .custom-modal-body .person {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      align-items: center;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      -webkit-justify-content: flex-start;
+      -moz-justify-content: flex-start;
+      justify-content: flex-start;
+      width: 100%;
+      max-width: 30.8em;
+      height: 6.5em;
+      padding: 1em 1.2em;
+      border-radius: 3px;
+      box-shadow: 0 2px 6px 0 rgba(226, 226, 226, 0.51);
+      border: solid 1px rgba(237, 237, 237, 0.84);
+      background-color: #ffffff; }
+      #addUsersModal .custom-modal-body .person:not(:last-of-type) {
+        margin-bottom: 1.2em; }
+      #addUsersModal .custom-modal-body .person-img {
+        width: 4.5em;
+        min-width: 4.5em;
+        height: 4.5em;
+        min-height: 4.5em;
+        border-radius: 50%;
+        object-fit: contain; }
+      #addUsersModal .custom-modal-body .person-initials {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        justify-content: center;
+        width: 2.3684210526em;
+        height: 2.3684210526em;
+        font-size: 1.9em;
+        font-weight: 600;
+        letter-spacing: -0.19px;
+        color: #ffffff;
+        border-radius: 50%;
+        background-color: #2cadf6; }
+      #addUsersModal .custom-modal-body .person-set {
+        margin-left: 1em; }
+        #addUsersModal .custom-modal-body .person-set-name {
+          margin-bottom: 0.24em;
+          font-size: 1.25em;
+          font-weight: 500;
+          letter-spacing: -0.03px;
+          color: #2b3b58; }
+        #addUsersModal .custom-modal-body .person-set-requests {
+          font-size: 1.15em;
+          font-weight: 400;
+          color: #6b778c; }
+
 #peerToPeerFeedbackModal .custom-modal,
 #teamFeedbackModal .custom-modal,
 #settingsModal .custom-modal,
