@@ -9073,6 +9073,91 @@ input {
   }
 }
 
+#team-feedback {
+  & .content {
+    padding: 2em 4em;
+    height: 100%;
+
+    &-card {
+      padding-top: 0;
+      max-width: 75.1em;
+      border-radius: 6px;
+      max-height: 100%;
+      overflow-y: auto;
+      scrollbar-width: none;
+      /* Firefox */
+      -ms-overflow-style: none;
+      /* Internet Explorer 10+ */
+
+      &::-webkit-scrollbar {
+        /* WebKit */
+        width: 0;
+        height: 0;
+      }
+
+      & .answer {
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(flex-start);
+        padding: 1.6em 2.6em;
+        padding-right: 7em;
+
+        &:not(:last-of-type) {
+          border-bottom: solid 1px rgba(230, 230, 230, 0.73);
+        }
+
+        &-img {
+          min-width: 4em;
+          min-height: 4em;
+          width: 4em;
+          height: 4em;
+          object-fit: contain;
+          border-radius: 50%;
+        }
+
+        &-initials {
+          @include flexbox();
+          @include align-items(center);
+          @include justify-content(center);
+          min-width: emcalc(4,1.8);
+          min-height: emcalc(4,1.8);
+          width: emcalc(4,1.8);
+          height: emcalc(4,1.8);
+          font-size: 1.8em;
+          font-weight: 700;
+          color: #ffffff;
+          background-color: #0ab8ff;
+          border-radius: 50%;
+        }
+
+        &-set {
+          margin-left: 1.5em;
+
+          &-title {
+            margin-bottom: emcalc(.5,1.25);
+            font-size: 1.25em;
+            font-weight: 500;
+            color: #000;
+
+            &-date {
+              margin-left: emcalc(.5,1.25);
+              font-weight: 400;
+              color: #959595;
+            }
+          }
+
+          &-text {
+            font-size: 1.25em;
+            font-weight: 400;
+            line-height: 1.44;
+            color: #363636;
+          }
+        }
+      }
+    }
+  }
+}
+
 #company-employees,
 #company-employees-archived,
 #company-teams,
