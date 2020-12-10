@@ -7262,11 +7262,11 @@ input {
       display: -moz-flex;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      -moz-align-items: center;
-      align-items: center;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      -webkit-align-items: flex-start;
+      -moz-align-items: flex-start;
+      align-items: flex-start;
       -webkit-box-pack: start;
       -ms-flex-pack: start;
       -webkit-justify-content: flex-start;
@@ -7276,6 +7276,8 @@ input {
       padding-right: 7em; }
       #team-feedback .content-card .answer:not(:last-of-type) {
         border-bottom: solid 1px rgba(230, 230, 230, 0.73); }
+      #team-feedback .content-card .answer:hover {
+        background-color: rgba(246, 246, 248, 0.6); }
       #team-feedback .content-card .answer-img {
         min-width: 4em;
         min-height: 4em;

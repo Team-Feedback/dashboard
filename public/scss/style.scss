@@ -9097,13 +9097,17 @@ input {
 
       & .answer {
         @include flexbox();
-        @include align-items(center);
+        @include align-items(flex-start);
         @include justify-content(flex-start);
         padding: 1.6em 2.6em;
         padding-right: 7em;
 
         &:not(:last-of-type) {
           border-bottom: solid 1px rgba(230, 230, 230, 0.73);
+        }
+
+        &:hover {
+          background-color: rgba(246, 246, 248, 0.6);
         }
 
         &-img {
