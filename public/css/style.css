@@ -1191,7 +1191,9 @@ input {
           font-weight: 400;
           color: #757f95; }
   .custom-dropdown.notification-dropdown .custom-dropdown-menu {
-    width: 26em;
+    bottom: -.7em;
+    right: -.7em;
+    width: 37.4em;
     border-radius: 5px;
     box-shadow: 0 5px 10px 0 rgba(139, 139, 139, 0.08);
     border: solid 1.5px #eff0f2;
@@ -4477,7 +4479,8 @@ input {
     .header-buttons > *:not(:last-of-type) {
       margin-right: 1.9em; }
     .header-buttons-settings, .header-buttons-help, .header-buttons-notifications, .header-buttons .notification-dropdown .custom-dropdown-trigger {
-      position: relative; }
+      position: relative;
+      cursor: pointer; }
       .header-buttons-settings::before, .header-buttons-help::before, .header-buttons-notifications::before, .header-buttons .notification-dropdown .custom-dropdown-trigger::before {
         content: '';
         position: absolute;
@@ -4487,15 +4490,22 @@ input {
         transform: translate(-50%, -50%);
         width: 3.5rem;
         height: 3.5rem;
-        background-color: #666;
+        background-color: #FFF;
         border-radius: 50%;
-        opacity: .2; }
+        opacity: .3; }
+      .header-buttons-settings:hover:before, .header-buttons-help:hover:before, .header-buttons-notifications:hover:before, .header-buttons .notification-dropdown .custom-dropdown-trigger:hover:before {
+        display: block;
+        opacity: .15; }
       .header-buttons-settings:focus:before, .header-buttons-help:focus:before, .header-buttons-notifications:focus:before, .header-buttons .notification-dropdown .custom-dropdown-trigger:focus:before {
-        display: block; }
+        display: block;
+        opacity: 0.3 !important; }
       .header-buttons-settings i, .header-buttons-help i, .header-buttons-notifications i, .header-buttons .notification-dropdown .custom-dropdown-trigger i {
         font-size: 2.2em;
         color: #5c6f83;
         transition: color 0.5s ease-in-out; }
+    .header-buttons .notification-dropdown:hover .custom-dropdown-trigger::before {
+      display: block;
+      opacity: .15; }
     .header-buttons-initials, .header-buttons .user-dropdown .custom-dropdown-trigger {
       display: -webkit-box;
       display: -webkit-flex;
@@ -4618,7 +4628,7 @@ input {
       color: #fff; }
       .header-main-info-icon {
         padding-left: 3.1em;
-        height: 3.8em;
+        height: 3.6em;
         display: -webkit-box;
         display: -webkit-flex;
         display: -moz-flex;
@@ -4636,7 +4646,7 @@ input {
         justify-content: flex-start;
         margin-right: 1.8em;
         padding-right: 2.1em;
-        border-right: 1.5px solid #E4E8EC;
+        border-right: 2px solid rgba(228, 232, 236, 0.35);
         cursor: pointer; }
         .header-main-info-icon i {
           font-size: 2.3em; }
@@ -10234,7 +10244,7 @@ input {
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 8px;
-    border: solid 1.5px rgba(218, 220, 224, 0.5);
+    border: solid 1px rgba(218, 220, 224, 0.5);
     background-color: #ffffff;
     text-align: center; }
     .auth-card-title {
@@ -10333,7 +10343,9 @@ input {
     .auth-card-link {
       font-size: 1.3em;
       font-weight: 500;
-      color: #087af9; }
+      color: #087af9;
+      cursor: pointer;
+      text-decoration: underline; }
     .auth-card-text {
       max-width: 25.2307692308em;
       font-size: 1.3em;
