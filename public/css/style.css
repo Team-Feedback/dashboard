@@ -3896,6 +3896,7 @@ input {
       .custom-table-row td:not(.column-05) .button-green {
         padding: 0 1.52em;
         height: 2.48em;
+        width: 7.44em;
         font-size: 1.25rem; }
       .custom-table-row td:not(.column-05).choose .options-link {
         font-weight: 500; }
@@ -4351,7 +4352,7 @@ input {
   z-index: 500; }
   .header-buttons {
     position: absolute;
-    top: 1.4em;
+    top: 1.35em !important;
     right: 2.6em;
     display: -webkit-box;
     display: -webkit-flex;
@@ -4477,7 +4478,7 @@ input {
   .header-main {
     position: relative;
     padding-right: 2.6em;
-    height: 8.4em;
+    height: 6.2em;
     max-width: 100%;
     display: -webkit-box;
     display: -webkit-flex;
@@ -4514,7 +4515,7 @@ input {
       justify-content: flex-start;
       color: #fff; }
       .header-main-info-icon {
-        padding-left: 2.6em;
+        padding-left: 3.1em;
         height: 3.8em;
         display: -webkit-box;
         display: -webkit-flex;
@@ -4536,12 +4537,10 @@ input {
         border-right: 1.5px solid #E4E8EC;
         cursor: pointer; }
         .header-main-info-icon i {
-          font-size: 2.2em; }
+          font-size: 2.3em; }
       .header-main-info-title {
-        font-size: 2.38em;
+        font-size: 2.2em;
         font-weight: 600;
-        line-height: 1.2;
-        letter-spacing: -0.36px;
         color: #ffffff; }
   .header-nav {
     position: relative;
@@ -4800,7 +4799,7 @@ input {
     .header.small .header-top {
       transform: translate(0, -100%); }
     .header.small .header-main {
-      height: 5.4em; }
+      height: 6.2em; }
 
 .side {
   position: fixed;
@@ -6638,6 +6637,7 @@ input {
             color: #172c4c; }
         #custom-questions .content-card .custom-questions .custom-question-text,
         #custom-questions-team .content-card .custom-questions .custom-question-text {
+          flex: 1;
           margin-right: auto;
           font-size: 1.28em;
           font-weight: 400;
@@ -6645,14 +6645,20 @@ input {
           color: #1b304f;
           white-space: nowrap;
           overflow: hidden;
-          text-overflow: ellipsis; }
-        #custom-questions .content-card .custom-questions .custom-question-buttons .button i,
-        #custom-questions-team .content-card .custom-questions .custom-question-buttons .button i {
-          font-size: 2.4em;
-          color: #42526e; }
-        #custom-questions .content-card .custom-questions .custom-question-buttons .button:first-of-type,
-        #custom-questions-team .content-card .custom-questions .custom-question-buttons .button:first-of-type {
-          margin-right: .1em; }
+          text-overflow: ellipsis;
+          border: 0;
+          outline: none;
+          background-color: transparent; }
+        #custom-questions .content-card .custom-questions .custom-question-buttons,
+        #custom-questions-team .content-card .custom-questions .custom-question-buttons {
+          margin-left: 2em; }
+          #custom-questions .content-card .custom-questions .custom-question-buttons .button i,
+          #custom-questions-team .content-card .custom-questions .custom-question-buttons .button i {
+            font-size: 2.4em;
+            color: #42526e; }
+          #custom-questions .content-card .custom-questions .custom-question-buttons .button:first-of-type,
+          #custom-questions-team .content-card .custom-questions .custom-question-buttons .button:first-of-type {
+            margin-right: .1em; }
     #custom-questions .content-card .add-custom-question-button,
     #custom-questions-team .content-card .add-custom-question-button {
       margin-bottom: 6.875em;
