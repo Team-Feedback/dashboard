@@ -1,5 +1,5 @@
 //HEADER SMALL/BIG TOGGLE
-// let header = document.querySelector(".header");
+let header = document.querySelector(".header");
 // let headerMain = document.querySelector(".header-main");
 
 // headerMain.addEventListener("click", function () {
@@ -55,7 +55,9 @@ allNavLinks.forEach((e) => {
 });
 
 let activeNavLink = [...allNavLinks].filter(e => e.classList.contains('active'));
-activeNavLink[0].scrollIntoView({ behavior: "smooth", inline: "center" })
+if (activeNavLink.lenght) {
+  activeNavLink[0].scrollIntoView({ behavior: "smooth", inline: "center" })
+}
 
 //SETTINGS TABLE LINK
 let editLinks = document.querySelectorAll(
@@ -213,6 +215,12 @@ function transformScroll(event) {
   event.preventDefault();
 }
 
-document.querySelector('.header-nav-list').addEventListener('wheel', transformScroll);
-document.querySelector('.header-sub-nav-list').addEventListener('wheel', transformScroll);
+if (document.querySelector('.header-nav-list')) {
+  document.querySelector('.header-nav-list').addEventListener('wheel', transformScroll);
+}
+
+if (document.querySelector('.header-sub-nav-list')) {
+  document.querySelector('.header-sub-nav-list').addEventListener('wheel', transformScroll);
+}
+
 

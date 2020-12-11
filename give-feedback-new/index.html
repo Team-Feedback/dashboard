@@ -1,0 +1,1829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example Page</title>
+  <link rel="stylesheet" href="../public/css/style.css">
+</head>
+
+<body>
+
+  <main class="main" id="give-feedback">
+    <!-- Header -->
+    <div class="header small">
+      <!-- Buttons -->
+      <div class="header-buttons">
+        <div class="header-buttons-settings"><i class="icon-cog"></i></div>
+        <div class="header-buttons-help"><i class="icon-question"></i></div>
+        <div class="header-buttons-notifications"><i class="icon-bell"></i></div>
+        <div class="header-buttons-initials">M</div>
+      </div>
+
+      <!-- Header top -->
+      <div class="header-top">
+        <div class="header-top-logo">
+          <img src="../public/img/logo-only.png" alt="Team feedback logo" class="header-top-logo-img">
+        </div>
+        <div class="header-top-input-container">
+          <input type="text" placeholder="Search">
+          <i class="icon-search"></i>
+        </div>
+      </div>
+      <!-- Header main -->
+      <div class="header-main">
+        <div class="header-main-info">
+          <div class="header-main-info-icon">
+            <i class="icon-arrow-left"></i>
+          </div>
+          <h1 class="header-main-info-title">Give feedback</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="content-card">
+          <div class="caption big">
+            <p class="caption-title">Your To-Do list</p>
+          </div>
+          <div class="todo">
+            <ul class="todo-list">
+              <li class="todo-list-item">
+                <div class="todo-list-item-icon">
+                  <i class="icon-users"></i>
+                </div>
+                <div class="todo-list-item-info">
+                  <p class="todo-list-item-info-subtitle">Team Feedback</p>
+                  <p class="todo-list-item-info-title">Team React Native</p>
+                </div>
+                <i class="icon-chevron-right"></i>
+              </li>
+
+              <li class="todo-list-item">
+                <img src="../public/img/p-01.png" alt="User's profile picture" class="todo-list-item-img" />
+                <div class="todo-list-item-info">
+                  <p class="todo-list-item-info-subtitle">
+                    Peer to peer feedback
+                  </p>
+                  <p class="todo-list-item-info-title">Peter Smith</p>
+                </div>
+                <i class="icon-chevron-right"></i>
+              </li>
+
+              <li class="todo-list-item">
+                <div class="todo-list-item-initials">MM</div>
+                <div class="todo-list-item-info">
+                  <p class="todo-list-item-info-subtitle">
+                    Peer to peer feedback
+                  </p>
+                  <p class="todo-list-item-info-title">Peter Smith</p>
+                </div>
+                <i class="icon-chevron-right"></i>
+              </li>
+            </ul>
+          </div>
+
+          <div class="caption">
+            <p class="caption-title">Select a person to give feedback</p>
+            <div class="caption-bottom">
+              <div class="options">
+                <p class="options-link active">To your colleagues</p>
+                <span class="options-divider">I</span>
+                <p class="options-link">To your subordinates</p>
+                <span class="options-divider">I</span>
+                <p class="options-link">To your supervisor</p>
+                <span class="options-divider">I</span>
+                <p class="options-link">To yourself</p>
+              </div>
+
+              <div class="buttons">
+                <!-- <div class="input-container">
+                  <input type="text" placeholder="Search">
+                  <i class="icon-search"></i>
+                </div> -->
+                <button class="button button-light-gray search"><i class="icon-search"></i></button>
+
+                <div class="custom-dropdown half-line">
+                  <button class="button button-light-gray custom-dropdown-trigger">Stamps</button>
+
+                  <div class="custom-dropdown-menu">
+                    <div class="custom-dropdown-menu-item checked">
+                      <button class="custom-dropdown-menu-item-link">
+                        Stamps off
+                      </button>
+                      <div class="custom-dropdown-menu-item-icon">
+                        <i class="icon-check"></i>
+                      </div>
+                    </div>
+                    <div class="custom-dropdown-menu-item">
+                      <button class="custom-dropdown-menu-item-link">
+                        Last given feedback
+                      </button>
+                      <div class="custom-dropdown-menu-item-icon">
+                        <i class="icon-check"></i>
+                      </div>
+                    </div>
+                    <div class="custom-dropdown-menu-item">
+                      <button class="custom-dropdown-menu-item-link">
+                        Average feedback
+                      </button>
+                      <div class="custom-dropdown-menu-item-icon">
+                        <i class="icon-check"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="custom-dropdown half-line">
+                  <button class="button button-light-gray custom-dropdown-trigger">Filter by</button>
+
+                  <div class="custom-dropdown-menu">
+                    <div class="custom-dropdown-menu-item checked">
+                      <button class="custom-dropdown-menu-item-link">
+                        All teams / No filter
+                      </button>
+                      <div class="custom-dropdown-menu-item-icon">
+                        <i class="icon-check"></i>
+                      </div>
+                    </div>
+                    <div class="custom-dropdown-menu-item">
+                      <button class="custom-dropdown-menu-item-link">
+                        Team Marketing
+                      </button>
+                      <div class="custom-dropdown-menu-item-icon">
+                        <i class="icon-check"></i>
+                      </div>
+                    </div>
+                    <div class="custom-dropdown-menu-item">
+                      <button class="custom-dropdown-menu-item-link">
+                        Team Sales
+                      </button>
+                      <div class="custom-dropdown-menu-item-icon">
+                        <i class="icon-check"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="custom-dropdown half-line">
+                  <button class="button button-light-gray custom-dropdown-trigger">Sort by</button>
+
+                  <div class="custom-dropdown-menu">
+                    <div class="custom-dropdown-menu-item checked">
+                      <button class="custom-dropdown-menu-item-link">
+                        Name
+                      </button>
+                      <div class="custom-dropdown-menu-item-icon">
+                        <i class="icon-check"></i>
+                      </div>
+                    </div>
+                    <div class="custom-dropdown-menu-item">
+                      <button class="custom-dropdown-menu-item-link">
+                        Job title
+                      </button>
+                      <div class="custom-dropdown-menu-item-icon">
+                        <i class="icon-check"></i>
+                      </div>
+                    </div>
+                    <div class="custom-dropdown-menu-item">
+                      <button class="custom-dropdown-menu-item-link">
+                        Average feedback
+                      </button>
+                      <div class="custom-dropdown-menu-item-icon">
+                        <i class="icon-check"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="people">
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <!-- <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" /> -->
+                <div class="person-main-initials" style="background-color: #fea42a;">AA</div>
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <!-- <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" /> -->
+                <div class="person-main-initials" style="background-color: #1889f9;">PS</div>
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <!-- <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" /> -->
+                <div class="person-main-initials" style="background-color: #fd7622;">JB</div>
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-03.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">John Brown</p>
+                <p class="person-info-position">Sales Africa</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Abdul Aba</p>
+                <p class="person-info-position">Product development</p>
+              </div>
+            </div>
+
+            <div class="person modal-trigger" target-modal="feedbackTypeModal">
+              <div class="person-main">
+                <img src="../public/img/p-02.png" alt="User's profile image" class="person-main-img" />
+              </div>
+              <div class="person-info">
+                <p class="person-info-name">Peter Smith</p>
+                <p class="person-info-position">Chief Marketing Of Something</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- FEEDBACK TYPE MODAL-->
+    <div class="custom-modal-wrapper" id="feedbackTypeModal">
+      <div class="custom-modal">
+        <!-- Modal body -->
+        <div class="custom-modal-body">
+          <div class="custom-modal-close" close-modal="feedbackTypeModal">
+            <i class="icon-close"></i>
+          </div>
+          <p class="custom-modal-body-title">Select feedback type</p>
+
+          <div class="custom-modal-body-main">
+            <div class="type-item modal-trigger" target-modal="peerToPeerFeedbackModal">
+              <!-- <img src="../public/img/p-07.png" alt="User's profile image" class="type-item-img">
+                  <div class="type-item-initials">MM</div> -->
+              <div class="type-item-icon"><i class="icon-users-circle"></i></div>
+              <div class="type-item-set">
+                <p class="type-item-set-subtitle">P2P feedback</p>
+                <p class="type-item-set-title">Team Marketing</p>
+              </div>
+              <button class="button type-item-button">Select</button>
+            </div>
+
+            <div class="type-item modal-trigger" target-modal="peerToPeerFeedbackModal">
+              <!-- <img src="../public/img/p-07.png" alt="User's profile image" class="type-item-img">
+                  <div class="type-item-initials">MM</div> -->
+              <div class="type-item-icon"><i class="icon-users-circle"></i></div>
+              <div class="type-item-set">
+                <p class="type-item-set-subtitle">Subordinate feedback</p>
+                <p class="type-item-set-title">Team Marketing</p>
+              </div>
+              <button class="button type-item-button">Select</button>
+            </div>
+
+            <div class="type-item modal-trigger" target-modal="peerToPeerFeedbackModal">
+              <!-- <img src="../public/img/p-07.png" alt="User's profile image" class="type-item-img">
+                  <div class="type-item-initials">MM</div> -->
+              <div class="type-item-icon"><i class="icon-users-circle"></i></div>
+              <div class="type-item-set">
+                <p class="type-item-set-subtitle">Subordinate feedback</p>
+                <p class="type-item-set-title">Team Marketing</p>
+              </div>
+              <button class="button type-item-button">Select</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="custom-modal-backdrop"></div>
+    </div>
+
+    <!-- PEER TO PEER MODAL -->
+    <div class="custom-modal-wrapper" id="peerToPeerFeedbackModal">
+      <div class="custom-modal">
+        <!-- Modal header -->
+        <div class="custom-modal-header">
+          <div class="custom-modal-close" close-modal="peerToPeerFeedbackModal">
+            <i class="icon-close"></i>
+          </div>
+          <div class="custom-modal-header-set">
+            <img src="../public/img/p-01.png" alt="User's profile picture" class="custom-modal-header-set-img" />
+            <p class="custom-modal-header-set-subtitle">Give feedback to</p>
+            <p class="custom-modal-header-set-title">Marko Rajkovic</p>
+          </div>
+        </div>
+        <!-- Modal body -->
+        <div class="custom-modal-body">
+          <div class="rating-item">
+            <p class="rating-item-name">Attitude</p>
+            <div class="stars">
+              <div class="star selected">
+                <i class="icon-star"></i>
+              </div>
+              <div class="star selected">
+                <i class="icon-star"></i>
+              </div>
+              <div class="star selected">
+                <i class="icon-star"></i>
+              </div>
+              <div class="star selected">
+                <i class="icon-star"></i>
+              </div>
+              <div class="star">
+                <i class="icon-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="rating-item">
+            <p class="rating-item-name">Productivity</p>
+            <div class="stars">
+              <div class="star selected">
+                <i class="icon-star"></i>
+              </div>
+              <div class="star selected">
+                <i class="icon-star"></i>
+              </div>
+              <div class="star selected">
+                <i class="icon-star"></i>
+              </div>
+              <div class="star selected">
+                <i class="icon-star"></i>
+              </div>
+              <div class="star">
+                <i class="icon-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="rating-item">
+            <p class="rating-item-name">Teamworking</p>
+            <div class="stars">
+              <div class="star selected">
+                <i class="icon-star"></i>
+              </div>
+              <div class="star selected">
+                <i class="icon-star"></i>
+              </div>
+              <div class="star selected">
+                <i class="icon-star"></i>
+              </div>
+              <div class="star selected">
+                <i class="icon-star"></i>
+              </div>
+              <div class="star">
+                <i class="icon-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="feedback-item">
+            <p class="feedback-item-name">Add a compliment</p>
+            <input class="feedback-item-input" type="text" placeholder="Write here..." />
+          </div>
+
+          <div class="feedback-item">
+            <p class="feedback-item-name">Add an improvement idea</p>
+            <input class="feedback-item-input" type="text" placeholder="Write here..." />
+          </div>
+
+          <div class="success-message">
+            <i class="icon-check-circle-full"></i>
+            <p class="success-message-title">Feedback sent</p>
+            <p class="success-message-text">
+              Window closes automatically in 3 seconds.
+            </p>
+          </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="custom-modal-footer">
+          <button class="button button-primary send-feedback-modal">
+            Send feedback
+          </button>
+          <button class="button button-dark">Sent</button>
+        </div>
+      </div>
+      <div class="custom-modal-backdrop"></div>
+    </div>
+  </main>
+
+
+  <script src="../public/js/main.js"></script>
+  <script src="../public/js/tm-grid.js"></script>
+
+  <script>
+    let testHeader = document.querySelector('.header');
+
+
+
+    //console.log(`100vh - ${testHeader.clientHeight}px - 17em`)
+
+
+  </script>
+</body>
+
+</html>
