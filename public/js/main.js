@@ -16,17 +16,19 @@ let header = document.querySelector(".header");
 
 //SIDE MENU TOGGLE
 let main = document.querySelector(".main");
-let sideToglle = document.querySelector('.side-toggle');
-if (sideToglle) {
-  sideToglle.addEventListener('click', function () {
-    main.classList.toggle('side-open');
+let sideToglle = document.querySelectorAll('.side-toggle');
+if (sideToglle.length) {
+  sideToglle.forEach(e => {
+    e.addEventListener('click', function () {
+      main.classList.toggle('side-open');
+    })
   })
 
 }
 
 let side = document.querySelector('.side');
 document.addEventListener('click', function (event) {
-  if (side !== event.target && !side.contains(event.target) && sideToglle !== event.target && !sideToglle.contains(event.target)) {
+  if (side !== event.target && !side.contains(event.target) && sideToglle !== event.target && (!sideToglle[0].contains(event.target) && !sideToglle[1].contains(event.target))) {
     main.classList.remove('side-open')
   }
 });
@@ -35,7 +37,7 @@ document.addEventListener('click', function (event) {
 function peopleHeightLimit() {
   let people = document.querySelector('#give-feedback .people');
   if (people) {
-    people.style.height = `calc(100vh - ${header.clientHeight}px - 17em)`;
+    people.style.height = `calc(100vh - ${header.clientHeight}px - 14.7em)`;
   }
 }
 

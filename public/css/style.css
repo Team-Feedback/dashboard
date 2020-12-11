@@ -4609,6 +4609,17 @@ input {
     justify-content: flex-start;
     background-color: #0062ff;
     transition: height 0.5s ease-in-out, padding-top 0.5s ease-in-out; }
+    .header-main.hide {
+      height: 0 !important;
+      opacity: 0 !important;
+      visibility: hidden !important; }
+    .header-main.white {
+      background-color: #FFF;
+      border: solid 1px #f0f0f0; }
+      .header-main.white .header-main-info-icon {
+        border: 0; }
+        .header-main.white .header-main-info-icon i {
+          color: #000; }
     .header-main-info {
       display: -webkit-box;
       display: -webkit-flex;
@@ -8207,8 +8218,7 @@ input {
             background-color: #f7f7f7;
             z-index: -1; }
     #give-feedback .content-card .people {
-      padding: 0 9em;
-      padding-left: 10em;
+      padding: 0 10%;
       padding-top: 4em;
       width: 100%;
       max-width: 100%;
@@ -8282,8 +8292,8 @@ input {
           margin-bottom: 1em;
           position: relative; }
           #give-feedback .content-card .people .person-main-img {
-            width: 7.75em;
-            height: 7.75em;
+            width: 8.5em;
+            height: 8.5em;
             object-fit: contain;
             border-radius: 16px;
             transition: all .2s ease-in-out; }
@@ -8304,8 +8314,8 @@ input {
             -webkit-justify-content: center;
             -moz-justify-content: center;
             justify-content: center;
-            width: 2.7192982456em;
-            height: 2.7192982456em;
+            width: 2.9824561404em;
+            height: 2.9824561404em;
             font-size: 2.85em;
             color: #FFF;
             font-weight: 700;
@@ -8358,8 +8368,8 @@ input {
           overflow: hidden;
           text-overflow: ellipsis; }
           #give-feedback .content-card .people .person-info-name {
-            margin-bottom: 0.16em;
-            font-size: 1.25em;
+            margin-bottom: 0.1538461538em;
+            font-size: 1.3em;
             font-weight: 500;
             color: #172b4d;
             white-space: nowrap;

@@ -32,13 +32,124 @@
         </div>
       </div>
       <!-- Header main -->
-      <div class="header-main">
+      <div class="header-main hide">
         <div class="header-main-info">
-          <div class="header-main-info-icon">
-            <i class="icon-arrow-left"></i>
+          <div class="header-main-info-icon side-toggle">
+            <i class="icon-burger"></i>
           </div>
-          <h1 class="header-main-info-title">Give feedback</h1>
+          <h1 class="header-main-info-title">Team Marketing</h1>
         </div>
+      </div>
+
+      <div class="header-main white">
+        <div class="header-main-info">
+          <div class="header-main-info-icon side-toggle">
+            <i class="icon-burger"></i>
+          </div>
+          <h1 class="header-main-info-title">Team Marketing</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="side">
+      <div class="side-menu">
+        <div class="side-menu-header">
+          <div class="custom-dropdown side-menu-dropdown">
+            <button class="custom-dropdown-trigger" tabindex="-1" onclick="this.focus()">
+              <div class="team">
+                <div class="team-initials">M</div>
+                <div class="team-set">
+                  <p class="team-set-name">Marketing</p>
+                  <p class="team-set-members">32 Members</p>
+                </div>
+              </div>
+              <div class="icons">
+                <i class="icon-chevron-up"></i>
+                <i class="icon-chevron-down"></i>
+              </div>
+            </button>
+
+            <div class="custom-dropdown-menu">
+              <div class="team">
+                <div class="team-initials" style="background-color: #6c00ff;">S</div>
+                <div class="team-set">
+                  <p class="team-set-name">Sales</p>
+                  <p class="team-set-members">32 Members</p>
+                </div>
+              </div>
+              <div class="team">
+                <div class="team-initials" style="background-color: #0089ff;">C</div>
+                <div class="team-set">
+                  <p class="team-set-name">Coders</p>
+                  <p class="team-set-members">32 Members</p>
+                </div>
+              </div>
+              <div class="team create-new">
+                <div class="team-initials"><i class="icon-plus"></i></div>
+                <div class="team-set">
+                  <p class="team-set-name">Create new</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="side-menu-main">
+          <div class="side-menu-main-list">
+            <button class="side-menu-main-list-item active">
+              <i class="icon-badge-star-thin"></i>
+              <p class="side-menu-main-list-item-text">Give feedback</p>
+            </button>
+            <button class="side-menu-main-list-item">
+              <i class="icon-chart-thin"></i>
+              <p class="side-menu-main-list-item-text">Feedback charts</p>
+            </button>
+            <button class="side-menu-main-list-item">
+              <i class="icon-users-male-thin"></i>
+              <p class="side-menu-main-list-item-text">Team members</p>
+            </button>
+            <button class="side-menu-main-list-item">
+              <i class="icon-chat-thin"></i>
+              <p class="side-menu-main-list-item-text">Team feedback</p>
+            </button>
+            <button class="side-menu-main-list-item">
+              <i class="icon-cog-thin"></i>
+              <p class="side-menu-main-list-item-text">Settings</p>
+            </button>
+          </div>
+
+          <div class="side-menu-main-list">
+            <div class="side-menu-main-list-item title">
+              <p class="side-menu-main-list-item-text">SHORTCUTS</p>
+            </div>
+            <button class="side-menu-main-list-item">
+              <i class="icon-text-blocks"></i>
+              <p class="side-menu-main-list-item-text">Feedback requests</p>
+            </button>
+            <button class="side-menu-main-list-item">
+              <i class="icon-users-male-thin"></i>
+              <p class="side-menu-main-list-item-text">Invite new members</p>
+            </button>
+            <button class="side-menu-main-list-item">
+              <i class="icon-plus"></i>
+              <p class="side-menu-main-list-item-text">Add shortcut</p>
+            </button>
+          </div>
+
+          <div class="footer-button">
+            <button class="button button-primary">
+              <i class="icon-plus"></i>
+              Create a new team
+            </button>
+          </div>
+        </div>
+
+        <!-- <div class="side-menu-footer">
+          <button class="button button-primary">
+            <i class="icon-plus"></i>
+            Create a new team
+          </button>
+        </div> -->
       </div>
     </div>
 
@@ -99,106 +210,6 @@
                 <p class="options-link">To yourself</p>
               </div>
 
-              <div class="buttons">
-                <!-- <div class="input-container">
-                  <input type="text" placeholder="Search">
-                  <i class="icon-search"></i>
-                </div> -->
-                <button class="button button-light-gray search"><i class="icon-search"></i></button>
-
-                <div class="custom-dropdown half-line">
-                  <button class="button button-light-gray custom-dropdown-trigger">Stamps</button>
-
-                  <div class="custom-dropdown-menu">
-                    <div class="custom-dropdown-menu-item checked">
-                      <button class="custom-dropdown-menu-item-link">
-                        Stamps off
-                      </button>
-                      <div class="custom-dropdown-menu-item-icon">
-                        <i class="icon-check"></i>
-                      </div>
-                    </div>
-                    <div class="custom-dropdown-menu-item">
-                      <button class="custom-dropdown-menu-item-link">
-                        Last given feedback
-                      </button>
-                      <div class="custom-dropdown-menu-item-icon">
-                        <i class="icon-check"></i>
-                      </div>
-                    </div>
-                    <div class="custom-dropdown-menu-item">
-                      <button class="custom-dropdown-menu-item-link">
-                        Average feedback
-                      </button>
-                      <div class="custom-dropdown-menu-item-icon">
-                        <i class="icon-check"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="custom-dropdown half-line">
-                  <button class="button button-light-gray custom-dropdown-trigger">Filter by</button>
-
-                  <div class="custom-dropdown-menu">
-                    <div class="custom-dropdown-menu-item checked">
-                      <button class="custom-dropdown-menu-item-link">
-                        All teams / No filter
-                      </button>
-                      <div class="custom-dropdown-menu-item-icon">
-                        <i class="icon-check"></i>
-                      </div>
-                    </div>
-                    <div class="custom-dropdown-menu-item">
-                      <button class="custom-dropdown-menu-item-link">
-                        Team Marketing
-                      </button>
-                      <div class="custom-dropdown-menu-item-icon">
-                        <i class="icon-check"></i>
-                      </div>
-                    </div>
-                    <div class="custom-dropdown-menu-item">
-                      <button class="custom-dropdown-menu-item-link">
-                        Team Sales
-                      </button>
-                      <div class="custom-dropdown-menu-item-icon">
-                        <i class="icon-check"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="custom-dropdown half-line">
-                  <button class="button button-light-gray custom-dropdown-trigger">Sort by</button>
-
-                  <div class="custom-dropdown-menu">
-                    <div class="custom-dropdown-menu-item checked">
-                      <button class="custom-dropdown-menu-item-link">
-                        Name
-                      </button>
-                      <div class="custom-dropdown-menu-item-icon">
-                        <i class="icon-check"></i>
-                      </div>
-                    </div>
-                    <div class="custom-dropdown-menu-item">
-                      <button class="custom-dropdown-menu-item-link">
-                        Job title
-                      </button>
-                      <div class="custom-dropdown-menu-item-icon">
-                        <i class="icon-check"></i>
-                      </div>
-                    </div>
-                    <div class="custom-dropdown-menu-item">
-                      <button class="custom-dropdown-menu-item-link">
-                        Average feedback
-                      </button>
-                      <div class="custom-dropdown-menu-item-icon">
-                        <i class="icon-check"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -1815,15 +1826,6 @@
   <script src="../public/js/main.js"></script>
   <script src="../public/js/tm-grid.js"></script>
 
-  <script>
-    let testHeader = document.querySelector('.header');
-
-
-
-    //console.log(`100vh - ${testHeader.clientHeight}px - 17em`)
-
-
-  </script>
 </body>
 
 </html>
