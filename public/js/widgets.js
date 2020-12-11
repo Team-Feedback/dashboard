@@ -17,7 +17,7 @@ var ro = new ResizeObserver(entries => {
       entry.target.classList.add('s-12')
       //Code for line chart
       if (entry.target.classList.contains('line-chart')) {
-        chart01.options.scales.xAxes[0].ticks.maxTicksLimit = "14";
+
       }
     } else if (entry.target.classList.contains('s-12')) {
       entry.target.classList.remove('s-12')
@@ -27,7 +27,7 @@ var ro = new ResizeObserver(entries => {
       entry.target.classList.add('s-11')
       //Code for line chart
       if (entry.target.classList.contains('line-chart')) {
-        chart01.options.scales.xAxes[0].ticks.maxTicksLimit = "13";
+
       }
     } else if (entry.target.classList.contains('s-11')) {
       entry.target.classList.remove('s-11')
@@ -37,7 +37,7 @@ var ro = new ResizeObserver(entries => {
       entry.target.classList.add('s-10')
       //Code for line chart
       if (entry.target.classList.contains('line-chart')) {
-        chart01.options.scales.xAxes[0].ticks.maxTicksLimit = "12";
+
       }
     } else if (entry.target.classList.contains('s-10')) {
       entry.target.classList.remove('s-10')
@@ -47,7 +47,7 @@ var ro = new ResizeObserver(entries => {
       entry.target.classList.add('s-9')
       //Code for line chart
       if (entry.target.classList.contains('line-chart')) {
-        chart01.options.scales.xAxes[0].ticks.maxTicksLimit = "11";
+
       }
     } else if (entry.target.classList.contains('s-9')) {
       entry.target.classList.remove('s-9')
@@ -56,7 +56,7 @@ var ro = new ResizeObserver(entries => {
     if (crWidth <= 900 && crWidth > 800.00001) {
       //Code for line chart
       if (entry.target.classList.contains('line-chart')) {
-        chart01.options.scales.xAxes[0].ticks.maxTicksLimit = "10";
+
       }
     } else if (entry.target.classList.contains('s-8')) {
       entry.target.classList.remove('s-8')
@@ -66,7 +66,6 @@ var ro = new ResizeObserver(entries => {
       entry.target.classList.add('s-7')
       //Code for line chart
       if (entry.target.classList.contains('line-chart')) {
-        chart01.options.scales.xAxes[0].ticks.maxTicksLimit = "9";
       }
     } else if (entry.target.classList.contains('s-7')) {
       entry.target.classList.remove('s-7')
@@ -76,7 +75,6 @@ var ro = new ResizeObserver(entries => {
       entry.target.classList.add('s-6')
       //Code for line chart
       if (entry.target.classList.contains('line-chart')) {
-        chart01.options.scales.xAxes[0].ticks.maxTicksLimit = "8";
       }
     } else if (entry.target.classList.contains('s-6')) {
       entry.target.classList.remove('s-6')
@@ -86,7 +84,6 @@ var ro = new ResizeObserver(entries => {
       entry.target.classList.add('s-5')
       //Code for line chart
       if (entry.target.classList.contains('line-chart')) {
-        chart01.options.scales.xAxes[0].ticks.maxTicksLimit = "7";
       }
     } else if (entry.target.classList.contains('s-5')) {
       entry.target.classList.remove('s-5')
@@ -96,7 +93,6 @@ var ro = new ResizeObserver(entries => {
       entry.target.classList.add('s-4')
       //Code for line chart
       if (entry.target.classList.contains('line-chart')) {
-        chart01.options.scales.xAxes[0].ticks.maxTicksLimit = "6";
       }
     } else if (entry.target.classList.contains('s-4')) {
       entry.target.classList.remove('s-4')
@@ -146,6 +142,12 @@ var ro = new ResizeObserver(entries => {
 
 
     //HEIGHT CHECK
+    if (crHeight > 700.00001) {
+      entry.target.classList.add('h-70')
+    } else if (entry.target.classList.contains('h-70')) {
+      entry.target.classList.remove('h-70')
+    }
+
     if (crHeight <= 700 && crHeight > 650.00001) {
       entry.target.classList.add('h-65')
     } else if (entry.target.classList.contains('h-65')) {
