@@ -4799,13 +4799,13 @@ input {
 
     &-header {
       @include justify-content(flex-start);
-      padding: 6.5em 0 2em;
+      padding: 2.5em 0 2em;
       margin: 0 11%;
       width: calc(100% - 22%);
       border-bottom: solid 1px #dee7f0;
 
       &-title {
-        padding-top: 4.4vh;
+        padding-top: 8.88vh;
         font-size: 2.6em;
         font-weight: 600;
         letter-spacing: -0.26px;
