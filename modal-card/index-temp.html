@@ -102,6 +102,53 @@
             target-modal="exportPdfModal">
             Export PDF
           </button>
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;"
+            target-modal="createNewTeamModal">
+            Create new team
+          </button>
+        </div>
+
+        <!-- CREATE NEW TEAM MODAL-->
+        <div class="custom-modal-wrapper" id="createNewTeamModal">
+          <div class="custom-modal">
+            <!-- Modal header -->
+            <div class="custom-modal-header">
+              <div class="custom-modal-close" close-modal="createNewTeamModal">
+                <i class="icon-close"></i>
+              </div>
+              <p class="custom-modal-header-title">Create a new team</p>
+            </div>
+            <!-- Modal body -->
+            <div class="custom-modal-body">
+              <p class="custom-modal-body-label">Add team name</p>
+              <div class="input-container team-name">
+                <input type="text" placeholder="Enter here">
+                <i class="icon-check"></i>
+              </div>
+
+              <p class="custom-modal-body-label">Add team description</p>
+              <div class="input-container team-desc">
+                <input type="text" placeholder="Enter here">
+                <i class="icon-check"></i>
+              </div>
+
+              <p class="custom-modal-body-label">Add team members</p>
+              <div class="members">
+                <div class="member">
+                  <img src="../public/img/p-01.png" alt="User's profile image" class="member-img">
+                  <div class="memeber-initials">MR</div>
+                  <div class="member-set">
+                    <p class="member-set-name">Marko Rajkovic</p>
+                    <p class="member-set-position">Example Job Title</p>
+                  </div>
+                  <button class="button delete">Delete</button>
+                </div>
+              </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="custom-modal-footer"></div>
+          </div>
+          <div class="custom-modal-backdrop"></div>
         </div>
 
         <!-- EXPORT PDF MODAL-->

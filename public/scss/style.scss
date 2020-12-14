@@ -4774,6 +4774,45 @@ input {
 }
 
 
+#createNewTeamModal {
+  & .custom-modal {
+    padding: 0 16.6em;
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(flex-start);
+    @include justify-content(flex-start);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    transform: translate(0,0);
+
+    &-header {
+      padding: 10.5em 0 2em;
+      width: 100%;
+
+      &-title {
+        font-size: 2.6em;
+        font-weight: 600;
+        letter-spacing: -0.26px;
+        color: #172b4d;
+      }
+    }
+
+    &-body {
+      width: 100%;
+      flex: 1;
+    }
+
+    &-footer {
+      position: relative;
+    }
+  }
+}
+
 
 //Image modals
 #imageUploadModal,
@@ -6326,7 +6365,7 @@ input {
   // transition: transform .3s ease-in-out;
   // transition: transform .3s ease-in-out;
   transition: all .3s ease-in-out;
-    transition-property: transform visibility;
+    transition-property: transform, visibility;
 
   &-menu {
     padding: 0 0;
