@@ -2963,6 +2963,10 @@ input {
 
   &-footer {
     position: sticky;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -3649,6 +3653,10 @@ input {
     &-header {
       //height: 20em;
       position: sticky;
+      position: -webkit-sticky;
+      position: -moz-sticky;
+      position: -ms-sticky;
+      position: -o-sticky;
       top: 0;
       left: 0;
       width: 100%;
@@ -6251,6 +6259,13 @@ input {
             color: #000
           }
         }
+      }
+
+      & .header-buttons-initials {
+        min-width: 4.12em;
+        min-height: 4.12em;
+        width: 4.12em;
+        height: 4.12em;
       }
     }
 
@@ -10279,7 +10294,8 @@ input {
     }
 
     &-card {
-      padding-top: 6em;
+      padding: 0 9em;
+      padding-top: 3.7em;
       padding-bottom: 6.4em;
       width: 100%;
       //height: 100%;
@@ -10288,35 +10304,54 @@ input {
       background-color: transparent;
       box-shadow: none;
 
+      @include respond(desktop-md) {
+        padding-left: clamp(4em, 6%, 9em);
+        padding-right: clamp(4em, 6%, 9em);
+      }
+
+      // @include respond(desktop-sm) {
+      //   padding-left: 3.1em;
+      //   padding-right: 3.1em;
+      // }
+
       & .caption {
-        padding: 0 9em;
-        padding-top: 7em;
+        padding: 0;
+        padding-top: 7.9em;
         background-color: #FFF;
 
 
         &.sticky {
           position: sticky;
-          top: -3.5em;
+          position: -webkit-sticky;
+          position: -moz-sticky;
+          position: -ms-sticky;
+          position: -o-sticky;
+          top: -4.5em;
           z-index: 100;
+
+          & .caption-title {
+            @include respond(desktop-sm) {
+              margin-bottom: 0;
+            }
+          }
         }
 
         &.big {
           padding-top: 0;
 
           & .caption-title {
-            margin-bottom: emcalc(2.2,2.2);
-            font-size: 2.2em;
+            margin-bottom: emcalc(2.7,2.8);
           }
         }
         &-title {
-          margin-bottom: emcalc(1.2, 2);
-          font-size: 2.2em;
+          margin-bottom: emcalc(2.6, 2.8);
+          font-size: 2.8em;
           font-weight: 600;
-          color: #172b4d;
+          color: #121f36;
         }
 
         &-bottom {
-          padding-bottom: 2.2em;
+          padding-bottom: 3.5em;
           @include flexbox();
           @include align-items(center);
           @include justify-content(space-between);
@@ -10328,8 +10363,12 @@ input {
             @include align-items(center);
             @include justify-content(center);
 
+            @include respond(desktop-sm) {
+              display: none;
+            }
+
             &-link {
-              font-size: 1.3em;
+              font-size: 1.38em;
               font-weight: 400;
               color: #5f6677;
 
@@ -10339,8 +10378,8 @@ input {
             }
 
             &-divider {
-              margin: 0 emcalc(.75,1.3);
-              font-size: 1.3em;
+              margin: 0 emcalc(.75,1.38);
+              font-size: 1.38em;
               font-weight: 400;
               color: #5f6677;
             }
@@ -10410,7 +10449,7 @@ input {
       }
 
       & .todo {
-        margin: 0 9em;
+        //margin: 0 9em;
         margin-bottom: 0;
         width: 100%;
         max-width: 40em;
@@ -10421,12 +10460,12 @@ input {
 
           &-item {
             position: relative;
-            padding-left: .9em;
+            padding-left: 1.1em;
             padding-right: 3.4em;
             @include flexbox();
             @include align-items(center);
             @include justify-content(flex-start);
-            height: 6.4em;
+            height: 6.5em;
             cursor: pointer;
             z-index: 100;
 
@@ -10484,7 +10523,7 @@ input {
             &-info {
               &-subtitle {
                 margin-bottom: emcalc(0.1, 1.125);
-                font-size: 1.15em;
+                font-size: 1.18em;
                 font-weight: 500;
                 letter-spacing: -0.06px;
                 color: #7c7c7c;
@@ -10523,10 +10562,10 @@ input {
       }
 
       & .people {
-        padding: 0 9em;
+        padding: 0 3.5rem;
         //padding-left: clamp(9em, 10%, 9em);
         //padding-left: 10em;
-        padding-top: 4em;
+        padding-top: 5.5em;
         width: 100%;
         max-width: 100%;
         @include flexbox();
@@ -10547,15 +10586,15 @@ input {
           height: 0;
         }
 
-        @include respond(desktop-sm) {
+        @include respond(desktop-md) {
           padding-left: 0;
           padding-right: 0;
           @include justify-content(center);
         }
 
         & .person {
-          width: 15.5em;
-          margin-bottom: 4em;
+          width: 17em;
+          margin-bottom: 4.5em;
           @include inline-flex();
           @include flex-direction(column);
           @include align-items(center);
@@ -10569,7 +10608,7 @@ input {
           }
 
           &-main {
-            margin-bottom: 1em;
+            margin-bottom: .7em;
             position: relative;
 
             &-img {

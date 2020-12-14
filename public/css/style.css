@@ -1895,6 +1895,10 @@ input {
       color: #a9a9a9; }
 .custom-modal-footer {
   position: sticky;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -2595,6 +2599,10 @@ input {
   #settingsModalAddress .custom-modal-header,
   #settingsModalContact .custom-modal-header {
     position: sticky;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
     top: 0;
     left: 0;
     width: 100%;
@@ -4914,6 +4922,11 @@ input {
         border: 0; }
         .header-main.white .header-main-info-icon i {
           color: #000; }
+      .header-main.white .header-buttons-initials {
+        min-width: 4.12em;
+        min-height: 4.12em;
+        width: 4.12em;
+        height: 4.12em; }
     .header-main-info {
       display: -webkit-box;
       display: -webkit-flex;
@@ -8263,33 +8276,44 @@ input {
   #give-feedback .content-wrapper {
     height: 100%; }
   #give-feedback .content-card {
-    padding-top: 6em;
+    padding: 0 9em;
+    padding-top: 3.7em;
     padding-bottom: 6.4em;
     width: 100%;
     border: 0;
     border-radius: 0;
     background-color: transparent;
     box-shadow: none; }
+    @media (max-width: 991px) {
+      #give-feedback .content-card {
+        padding-left: clamp(4em, 6%, 9em);
+        padding-right: clamp(4em, 6%, 9em); } }
     #give-feedback .content-card .caption {
-      padding: 0 9em;
-      padding-top: 7em;
+      padding: 0;
+      padding-top: 7.9em;
       background-color: #FFF; }
       #give-feedback .content-card .caption.sticky {
         position: sticky;
-        top: -3.5em;
+        position: -webkit-sticky;
+        position: -moz-sticky;
+        position: -ms-sticky;
+        position: -o-sticky;
+        top: -4.5em;
         z-index: 100; }
+        @media (max-width: 767px) {
+          #give-feedback .content-card .caption.sticky .caption-title {
+            margin-bottom: 0; } }
       #give-feedback .content-card .caption.big {
         padding-top: 0; }
         #give-feedback .content-card .caption.big .caption-title {
-          margin-bottom: 1em;
-          font-size: 2.2em; }
+          margin-bottom: 0.9642857143em; }
       #give-feedback .content-card .caption-title {
-        margin-bottom: 0.6em;
-        font-size: 2.2em;
+        margin-bottom: 0.9285714286em;
+        font-size: 2.8em;
         font-weight: 600;
-        color: #172b4d; }
+        color: #121f36; }
       #give-feedback .content-card .caption-bottom {
-        padding-bottom: 2.2em;
+        padding-bottom: 3.5em;
         display: -webkit-box;
         display: -webkit-flex;
         display: -moz-flex;
@@ -8323,15 +8347,18 @@ input {
           -webkit-justify-content: center;
           -moz-justify-content: center;
           justify-content: center; }
+          @media (max-width: 767px) {
+            #give-feedback .content-card .caption-bottom .options {
+              display: none; } }
           #give-feedback .content-card .caption-bottom .options-link {
-            font-size: 1.3em;
+            font-size: 1.38em;
             font-weight: 400;
             color: #5f6677; }
             #give-feedback .content-card .caption-bottom .options-link.active {
               font-weight: 600; }
           #give-feedback .content-card .caption-bottom .options-divider {
-            margin: 0 0.5769230769em;
-            font-size: 1.3em;
+            margin: 0 0.5434782609em;
+            font-size: 1.38em;
             font-weight: 400;
             color: #5f6677; }
         #give-feedback .content-card .caption-bottom .input-container {
@@ -8390,7 +8417,6 @@ input {
           #give-feedback .content-card .caption-bottom .buttons .custom-dropdown:not(:last-of-type) {
             margin-right: 0.8888888889em; }
     #give-feedback .content-card .todo {
-      margin: 0 9em;
       margin-bottom: 0;
       width: 100%;
       max-width: 40em; }
@@ -8399,7 +8425,7 @@ input {
         width: 100%; }
         #give-feedback .content-card .todo-list-item {
           position: relative;
-          padding-left: .9em;
+          padding-left: 1.1em;
           padding-right: 3.4em;
           display: -webkit-box;
           display: -webkit-flex;
@@ -8416,7 +8442,7 @@ input {
           -webkit-justify-content: flex-start;
           -moz-justify-content: flex-start;
           justify-content: flex-start;
-          height: 6.4em;
+          height: 6.5em;
           cursor: pointer;
           z-index: 100; }
           #give-feedback .content-card .todo-list-item:first-of-type {
@@ -8486,7 +8512,7 @@ input {
             color: #fff; }
           #give-feedback .content-card .todo-list-item-info-subtitle {
             margin-bottom: 0.0888888889em;
-            font-size: 1.15em;
+            font-size: 1.18em;
             font-weight: 500;
             letter-spacing: -0.06px;
             color: #7c7c7c; }
@@ -8513,8 +8539,8 @@ input {
             background-color: #f7f7f7;
             z-index: -1; }
     #give-feedback .content-card .people {
-      padding: 0 9em;
-      padding-top: 4em;
+      padding: 0 3.5rem;
+      padding-top: 5.5em;
       width: 100%;
       max-width: 100%;
       display: -webkit-box;
@@ -8546,7 +8572,7 @@ input {
         /* WebKit */
         width: 0;
         height: 0; }
-      @media (max-width: 767px) {
+      @media (max-width: 991px) {
         #give-feedback .content-card .people {
           padding-left: 0;
           padding-right: 0;
@@ -8556,8 +8582,8 @@ input {
           -moz-justify-content: center;
           justify-content: center; } }
       #give-feedback .content-card .people .person {
-        width: 15.5em;
-        margin-bottom: 4em;
+        width: 17em;
+        margin-bottom: 4.5em;
         display: -webkit-inline-box;
         display: -webkit-inline-flex;
         display: -moz-inline-flex;
@@ -8584,7 +8610,7 @@ input {
           transform: scale(1.05);
           box-shadow: 0px 5px 8px rgba(116, 116, 116, 0.35); }
         #give-feedback .content-card .people .person-main {
-          margin-bottom: 1em;
+          margin-bottom: .7em;
           position: relative; }
           #give-feedback .content-card .people .person-main-img {
             width: 8.5em;
