@@ -31,13 +31,13 @@ document.addEventListener('click', function (event) {
   }
 });
 
-//GIVE FEEDBACK PAGE PEOPLE CONTAINER HEIGHT LIMIT
-function peopleHeightLimit() {
-  let people = document.querySelector('#give-feedback .people');
-  if (people) {
-    people.style.height = `calc(100vh - ${header.clientHeight}px - 14.7em)`;
-  }
-}
+// //GIVE FEEDBACK PAGE PEOPLE CONTAINER HEIGHT LIMIT
+// function peopleHeightLimit() {
+//   let people = document.querySelector('#give-feedback .people');
+//   if (people) {
+//     people.style.height = `calc(100vh - ${header.clientHeight}px - 14.7em)`;
+//   }
+// }
 
 peopleHeightLimit();
 

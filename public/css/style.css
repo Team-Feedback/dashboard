@@ -8266,14 +8266,18 @@ input {
     padding-top: 6em;
     padding-bottom: 6.4em;
     width: 100%;
-    height: 100%;
     border: 0;
     border-radius: 0;
     background-color: transparent;
     box-shadow: none; }
     #give-feedback .content-card .caption {
       padding: 0 9em;
-      padding-top: 7em; }
+      padding-top: 7em;
+      background-color: #FFF; }
+      #give-feedback .content-card .caption.sticky {
+        position: sticky;
+        top: -3.5em;
+        z-index: 100; }
       #give-feedback .content-card .caption.big {
         padding-top: 0; }
         #give-feedback .content-card .caption.big .caption-title {
@@ -8509,7 +8513,7 @@ input {
             background-color: #f7f7f7;
             z-index: -1; }
     #give-feedback .content-card .people {
-      padding: 0 10%;
+      padding: 0 9em;
       padding-top: 4em;
       width: 100%;
       max-width: 100%;
