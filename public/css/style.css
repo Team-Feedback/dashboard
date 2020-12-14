@@ -4862,8 +4862,7 @@ input {
       opacity: 0 !important;
       visibility: hidden !important; }
     .header-main.white {
-      background-color: #FFF;
-      border: solid 1px #f0f0f0; }
+      background-color: #FFF; }
       .header-main.white .header-main-info-icon {
         border-color: transparent; }
         .header-main.white .header-main-info-icon i {
