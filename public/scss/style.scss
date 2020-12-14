@@ -4792,14 +4792,20 @@ input {
     transform: translate(0,0);
     animation: none!important;
 
+    // &-close {
+    //   top: 4.7em;
+    //   right: 5.2em;
+    // }
+
     &-header {
       @include justify-content(flex-start);
-      padding: 10.5em 0 2em;
+      padding: 6.5em 0 2em;
       margin: 0 11%;
       width: calc(100% - 22%);
       border-bottom: solid 1px #dee7f0;
 
       &-title {
+        padding-top: 4.4vh;
         font-size: 2.6em;
         font-weight: 600;
         letter-spacing: -0.26px;
@@ -5073,7 +5079,8 @@ input {
     }
 
     &-footer {
-      padding: 3.4em 0 14em;
+      padding: 3.4em 0 0;
+      padding-bottom: clamp(4em, 14vh, 14em);
       @include justify-content(flex-start);
       position: relative;
       margin: 0 11%;
