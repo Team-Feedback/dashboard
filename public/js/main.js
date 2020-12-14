@@ -15,21 +15,19 @@ let header = document.querySelector(".header");
 // });
 
 //SIDE MENU TOGGLE
-let main = document.querySelector(".main");
+let side = document.querySelector('.side');
 let sideToglle = document.querySelectorAll('.side-toggle');
 if (sideToglle.length) {
   sideToglle.forEach(e => {
     e.addEventListener('click', function () {
-      main.classList.toggle('side-open');
+      side.classList.toggle('open');
     })
   })
-
 }
 
-let side = document.querySelector('.side');
 document.addEventListener('click', function (event) {
-  if (side !== event.target && !side.contains(event.target) && sideToglle !== event.target && (!sideToglle[0].contains(event.target) && !sideToglle[1].contains(event.target))) {
-    main.classList.remove('side-open')
+  if (side !== event.target && !side.contains(event.target) && sideToglle !== event.target && !sideToglle[0].contains(event.target)) {
+    side.classList.remove('open')
   }
 });
 

@@ -1177,13 +1177,14 @@ input {
   grid-template-rows: auto 1fr;
   background-color: #f6f6f8;
 
-  &.side-open {
-    & .side {
-      opacity: 1!important;
-      visibility: visible!important;
-      transform: translate(0,0)!important;
-    }
-  }
+  // &.side-open {
+  //   & .side {
+  //     opacity: 1!important;
+  //     visibility: visible!important;
+  //     transform: translate(0,0)!important;
+  //     transition-property: transform, visibility;
+  //   }
+  // }
 }
 
 //COMPONENTS
@@ -6360,12 +6361,19 @@ input {
   box-shadow: 0 0 8px 0 rgba(214, 214, 214, 0.42);
   z-index: 500;
   transform: translate(-100%, 0);
-  opacity: 0;
+  //opacity: 0;
   visibility: hidden;
   // transition: transform .3s ease-in-out;
   // transition: transform .3s ease-in-out;
   transition: all .3s ease-in-out;
     transition-property: transform, visibility;
+
+    &.open {
+      opacity: 1!important;
+      visibility: visible!important;
+      transform: translate(0,0)!important;
+      transition-property: transform, visibility;
+    }
 
   &-menu {
     padding: 0 0;
