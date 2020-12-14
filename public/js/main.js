@@ -1,18 +1,17 @@
 //HEADER SMALL/BIG TOGGLE
 let header = document.querySelector(".header");
-// let headerMain = document.querySelector(".header-main");
+let headerMain = document.querySelector(".header-main");
 
-// headerMain.addEventListener("click", function () {
-//   console.log("double click");
-//   header.classList.toggle("small");
+headerMain.addEventListener("click", function () {
+  this.classList.toggle("white");
 
-//   // Send feedback page people container height
-//   if (document.getElementById('give-feedback')) {
-//     setTimeout(() => {
-//       peopleHeightLimit();
-//     }, 500);
-//   }
-// });
+  // // Send feedback page people container height
+  // if (document.getElementById('give-feedback')) {
+  //   setTimeout(() => {
+  //     peopleHeightLimit();
+  //   }, 500);
+  // }
+});
 
 //SIDE MENU TOGGLE
 let side = document.querySelector('.side');

@@ -1299,15 +1299,6 @@ input {
   background-color: #fff;
   z-index: 800;
 
-  & .header-buttons {
-    position: absolute;
-    top: var(--padding-top);
-    right: var(--padding-right);
-    opacity: 1;
-    visibility: visible;
-    //transition: all 0.5s ease-in-out;
-  }
-
   &-info {
     @include inline-flex();
     @include align-items(center);
@@ -2148,6 +2139,27 @@ input {
 
   //NOTIFICATION DROPDOWN
   &.notification-dropdown {
+
+    & .notification-dropdown-trigger {
+      &-amount {
+        padding: 0 .45rem;
+        position: absolute;
+        top: -.2rem;
+        right: -.7rem;
+        transform: translate(50%,-50%);
+        @include inline-flex();
+        @include align-items(center);
+        @include justify-content(center);
+        height: 1.5rem;
+        font-size: 1.05em;
+        font-weight: 700;
+        color: #ffffff;
+        border-radius: 8px;
+        background-color: rgba($color: #FFF, $alpha: .15);
+        backface-visibility: hidden;
+      }
+
+    }
     & .custom-dropdown-menu {
       bottom: -.7em;
       right: -.7em;
@@ -6086,88 +6098,7 @@ input {
   transition: padding-top 0.5s ease-in-out;
   z-index: 500;
 
-  &-buttons {
-    position: absolute;
-    top: 1.35em!important;
-    right: 2.6em;
-    @include flexbox();
-    @include align-items(center);
-    @include justify-content(flex-start);
-    margin-left: auto;
-    z-index: 100;
-    transition: top 0.3s ease-in-out;
-    //animation: fade-in-out-2 0.5s ease-in-out;
 
-    & > *:not(:last-of-type) {
-      margin-right: 1.9em;
-    }
-
-
-
-    &-settings,
-    &-help,
-    &-notifications,
-    & .notification-dropdown .custom-dropdown-trigger {
-      position: relative;
-      cursor: pointer;
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        display: none;
-        transform: translate(-50%, -50%);
-        width: 3.5rem;
-        height: 3.5rem;
-        background-color: #FFF;
-        border-radius: 50%;
-        opacity: .3;
-      }
-
-      &:hover:before {
-        display: block;
-        opacity: .15;
-      }
-
-      &:focus:before {
-        display: block;
-        opacity: .3!important;
-      }
-
-      & i {
-        font-size: 2.2em;
-        color: #5c6f83;
-        transition: color 0.5s ease-in-out;
-      }
-    }
-
-    & .notification-dropdown {
-      &:hover {
-        & .custom-dropdown-trigger {
-          &::before {
-            display: block;
-            opacity: .15;
-          }
-        }
-      }
-    }
-
-    &-initials,
-    & .user-dropdown .custom-dropdown-trigger {
-      @include flexbox();
-      @include align-items(center);
-      @include justify-content(center);
-      width: emcalc(3.5, 1.83);
-      height: emcalc(3.5, 1.83);
-      font-size: 1.83em;
-      font-weight: 700;
-      letter-spacing: 0.09px;
-      color: #ffffff;
-      background-color: #ffce00;
-      border-radius: 50%;
-    }
-  }
 
   &-top {
     position: absolute;
@@ -6254,18 +6185,113 @@ input {
 
       & .header-main-info {
         &-icon {
-          border: 0;
+          border-color: transparent;
           & i {
             color: #000
           }
         }
+
+        &-title {
+          display: none;
+        }
       }
 
-      & .header-buttons-initials {
-        min-width: 4.12em;
-        min-height: 4.12em;
-        width: 4.12em;
-        height: 4.12em;
+      & .header-buttons {
+
+          
+      &-settings,
+      &-help,
+      & .notification-dropdown {
+        display: none;
+      }
+
+        // &-initials {
+        //   min-width: 4.12rem;
+        //   min-height: 4.12rem;
+        //   width: 4.12rem;
+        //   height: 4.12rem;
+        // }
+      }
+    }
+
+    & .header-buttons {
+      position: relative;
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(flex-start);
+      margin-left: auto;
+      z-index: 100;
+      //transition: top 0.3s ease-in-out;
+      //animation: fade-in-out-2 0.5s ease-in-out;
+  
+      & > *:not(:last-of-type) {
+        margin-right: 1.9em;
+      }
+  
+  
+  
+      &-settings,
+      &-help,
+      &-notifications,
+      & .notification-dropdown .custom-dropdown-trigger {
+        position: relative;
+        cursor: pointer;
+  
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          display: none;
+          transform: translate(-50%, -50%);
+          width: 3.5rem;
+          height: 3.5rem;
+          background-color: #FFF;
+          border-radius: 50%;
+          opacity: .3;
+        }
+  
+        &:hover:before {
+          display: block;
+          opacity: .15;
+        }
+  
+        &:focus:before {
+          display: block;
+          opacity: .3!important;
+        }
+  
+        & i {
+          font-size: 2.2em;
+          color: #5c6f83;
+          transition: color 0.5s ease-in-out;
+        }
+      }
+  
+      & .notification-dropdown {
+        &:hover {
+          & .custom-dropdown-trigger {
+            &::before {
+              display: block;
+              opacity: .15;
+            }
+          }
+        }
+      }
+  
+      &-initials,
+      & .user-dropdown .custom-dropdown-trigger {
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+        width: emcalc(3.5, 1.83);
+        height: emcalc(3.5, 1.83);
+        font-size: 1.83em;
+        font-weight: 700;
+        letter-spacing: 0.09px;
+        color: #ffffff;
+        background-color: #ffce00;
+        border-radius: 50%;
       }
     }
 
@@ -6632,8 +6658,6 @@ input {
     padding-top: 0;
 
     & .header-buttons {
-      top: 0.95em;
-      //animation: fade-in-out 0.5s ease-in-out;
 
       &-settings,
       &-help,

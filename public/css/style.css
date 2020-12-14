@@ -458,12 +458,6 @@ input {
   width: 100%;
   background-color: #fff;
   z-index: 800; }
-  .page-header .header-buttons {
-    position: absolute;
-    top: var(--padding-top);
-    right: var(--padding-right);
-    opacity: 1;
-    visibility: visible; }
   .page-header-info {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
@@ -1186,6 +1180,34 @@ input {
           font-size: 1.2em;
           font-weight: 400;
           color: #757f95; }
+  .custom-dropdown.notification-dropdown .notification-dropdown-trigger-amount {
+    padding: 0 .45rem;
+    position: absolute;
+    top: -.2rem;
+    right: -.7rem;
+    transform: translate(50%, -50%);
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
+    height: 1.5rem;
+    font-size: 1.05em;
+    font-weight: 700;
+    color: #ffffff;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backface-visibility: hidden; }
   .custom-dropdown.notification-dropdown .custom-dropdown-menu {
     bottom: -.7em;
     right: -.7em;
@@ -4756,82 +4778,6 @@ input {
   position: relative;
   transition: padding-top 0.5s ease-in-out;
   z-index: 500; }
-  .header-buttons {
-    position: absolute;
-    top: 1.35em !important;
-    right: 2.6em;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    align-items: center;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    -webkit-justify-content: flex-start;
-    -moz-justify-content: flex-start;
-    justify-content: flex-start;
-    margin-left: auto;
-    z-index: 100;
-    transition: top 0.3s ease-in-out; }
-    .header-buttons > *:not(:last-of-type) {
-      margin-right: 1.9em; }
-    .header-buttons-settings, .header-buttons-help, .header-buttons-notifications, .header-buttons .notification-dropdown .custom-dropdown-trigger {
-      position: relative;
-      cursor: pointer; }
-      .header-buttons-settings::before, .header-buttons-help::before, .header-buttons-notifications::before, .header-buttons .notification-dropdown .custom-dropdown-trigger::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        display: none;
-        transform: translate(-50%, -50%);
-        width: 3.5rem;
-        height: 3.5rem;
-        background-color: #FFF;
-        border-radius: 50%;
-        opacity: .3; }
-      .header-buttons-settings:hover:before, .header-buttons-help:hover:before, .header-buttons-notifications:hover:before, .header-buttons .notification-dropdown .custom-dropdown-trigger:hover:before {
-        display: block;
-        opacity: .15; }
-      .header-buttons-settings:focus:before, .header-buttons-help:focus:before, .header-buttons-notifications:focus:before, .header-buttons .notification-dropdown .custom-dropdown-trigger:focus:before {
-        display: block;
-        opacity: 0.3 !important; }
-      .header-buttons-settings i, .header-buttons-help i, .header-buttons-notifications i, .header-buttons .notification-dropdown .custom-dropdown-trigger i {
-        font-size: 2.2em;
-        color: #5c6f83;
-        transition: color 0.5s ease-in-out; }
-    .header-buttons .notification-dropdown:hover .custom-dropdown-trigger::before {
-      display: block;
-      opacity: .15; }
-    .header-buttons-initials, .header-buttons .user-dropdown .custom-dropdown-trigger {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      -moz-align-items: center;
-      align-items: center;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      -moz-justify-content: center;
-      justify-content: center;
-      width: 1.912568306em;
-      height: 1.912568306em;
-      font-size: 1.83em;
-      font-weight: 700;
-      letter-spacing: 0.09px;
-      color: #ffffff;
-      background-color: #ffce00;
-      border-radius: 50%; }
   .header-top {
     position: absolute;
     top: 0;
@@ -4919,14 +4865,86 @@ input {
       background-color: #FFF;
       border: solid 1px #f0f0f0; }
       .header-main.white .header-main-info-icon {
-        border: 0; }
+        border-color: transparent; }
         .header-main.white .header-main-info-icon i {
           color: #000; }
-      .header-main.white .header-buttons-initials {
-        min-width: 4.12em;
-        min-height: 4.12em;
-        width: 4.12em;
-        height: 4.12em; }
+      .header-main.white .header-main-info-title {
+        display: none; }
+      .header-main.white .header-buttons-settings, .header-main.white .header-buttons-help, .header-main.white .header-buttons .notification-dropdown {
+        display: none; }
+    .header-main .header-buttons {
+      position: relative;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      align-items: center;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      -webkit-justify-content: flex-start;
+      -moz-justify-content: flex-start;
+      justify-content: flex-start;
+      margin-left: auto;
+      z-index: 100; }
+      .header-main .header-buttons > *:not(:last-of-type) {
+        margin-right: 1.9em; }
+      .header-main .header-buttons-settings, .header-main .header-buttons-help, .header-main .header-buttons-notifications, .header-main .header-buttons .notification-dropdown .custom-dropdown-trigger {
+        position: relative;
+        cursor: pointer; }
+        .header-main .header-buttons-settings::before, .header-main .header-buttons-help::before, .header-main .header-buttons-notifications::before, .header-main .header-buttons .notification-dropdown .custom-dropdown-trigger::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          display: none;
+          transform: translate(-50%, -50%);
+          width: 3.5rem;
+          height: 3.5rem;
+          background-color: #FFF;
+          border-radius: 50%;
+          opacity: .3; }
+        .header-main .header-buttons-settings:hover:before, .header-main .header-buttons-help:hover:before, .header-main .header-buttons-notifications:hover:before, .header-main .header-buttons .notification-dropdown .custom-dropdown-trigger:hover:before {
+          display: block;
+          opacity: .15; }
+        .header-main .header-buttons-settings:focus:before, .header-main .header-buttons-help:focus:before, .header-main .header-buttons-notifications:focus:before, .header-main .header-buttons .notification-dropdown .custom-dropdown-trigger:focus:before {
+          display: block;
+          opacity: 0.3 !important; }
+        .header-main .header-buttons-settings i, .header-main .header-buttons-help i, .header-main .header-buttons-notifications i, .header-main .header-buttons .notification-dropdown .custom-dropdown-trigger i {
+          font-size: 2.2em;
+          color: #5c6f83;
+          transition: color 0.5s ease-in-out; }
+      .header-main .header-buttons .notification-dropdown:hover .custom-dropdown-trigger::before {
+        display: block;
+        opacity: .15; }
+      .header-main .header-buttons-initials, .header-main .header-buttons .user-dropdown .custom-dropdown-trigger {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        justify-content: center;
+        width: 1.912568306em;
+        height: 1.912568306em;
+        font-size: 1.83em;
+        font-weight: 700;
+        letter-spacing: 0.09px;
+        color: #ffffff;
+        background-color: #ffce00;
+        border-radius: 50%; }
     .header-main-info {
       display: -webkit-box;
       display: -webkit-flex;
@@ -5237,14 +5255,12 @@ input {
           white-space: nowrap; }
   .header.small {
     padding-top: 0; }
-    .header.small .header-buttons {
-      top: 0.95em; }
-      .header.small .header-buttons-settings, .header.small .header-buttons-help, .header.small .header-buttons-notifications, .header.small .header-buttons .notification-dropdown .custom-dropdown-trigger {
-        position: relative; }
-        .header.small .header-buttons-settings::before, .header.small .header-buttons-help::before, .header.small .header-buttons-notifications::before, .header.small .header-buttons .notification-dropdown .custom-dropdown-trigger::before {
-          background-color: #FFF; }
-        .header.small .header-buttons-settings i, .header.small .header-buttons-help i, .header.small .header-buttons-notifications i, .header.small .header-buttons .notification-dropdown .custom-dropdown-trigger i {
-          color: #fff; }
+    .header.small .header-buttons-settings, .header.small .header-buttons-help, .header.small .header-buttons-notifications, .header.small .header-buttons .notification-dropdown .custom-dropdown-trigger {
+      position: relative; }
+      .header.small .header-buttons-settings::before, .header.small .header-buttons-help::before, .header.small .header-buttons-notifications::before, .header.small .header-buttons .notification-dropdown .custom-dropdown-trigger::before {
+        background-color: #FFF; }
+      .header.small .header-buttons-settings i, .header.small .header-buttons-help i, .header.small .header-buttons-notifications i, .header.small .header-buttons .notification-dropdown .custom-dropdown-trigger i {
+        color: #fff; }
     .header.small .header-top {
       transform: translate(0, -100%); }
     .header.small .header-main {
