@@ -3634,6 +3634,10 @@ input {
       position: relative;
       height: 3.6em;
       width: 100%; }
+      #createNewTeamModal .custom-modal-body .input-container.check input {
+        padding-right: 2.34375em; }
+      #createNewTeamModal .custom-modal-body .input-container.check i {
+        display: block; }
       #createNewTeamModal .custom-modal-body .input-container.team-name {
         margin-bottom: 3.2em;
         max-width: 26em; }
@@ -3642,7 +3646,7 @@ input {
         max-width: 32.6em; }
       #createNewTeamModal .custom-modal-body .input-container input {
         padding-left: 1.015625em;
-        padding-right: 2.34375em;
+        padding-right: 1.015625em;
         width: 100%;
         height: 100%;
         font-size: 1.28em;
@@ -3655,6 +3659,7 @@ input {
           font-weight: 400;
           color: #6c7b86; }
       #createNewTeamModal .custom-modal-body .input-container i {
+        display: none;
         position: absolute;
         top: 50%;
         right: 1.27rem;
@@ -3768,6 +3773,8 @@ input {
           font-weight: 500;
           letter-spacing: 0.06px;
           cursor: pointer; }
+          #createNewTeamModal .custom-modal-body .members .member .button:hover {
+            text-decoration: underline; }
           #createNewTeamModal .custom-modal-body .members .member .button.delete {
             color: #fa411f; }
       #createNewTeamModal .custom-modal-body .members .search-dropdown {
