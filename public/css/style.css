@@ -3594,7 +3594,8 @@ input {
   height: 100%;
   max-width: 100%;
   border-radius: 0;
-  transform: translate(0, 0); }
+  transform: translate(0, 0);
+  animation: none !important; }
   #createNewTeamModal .custom-modal-header {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
