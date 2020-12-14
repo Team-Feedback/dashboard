@@ -38,7 +38,7 @@ document.addEventListener('click', function (event) {
 //   }
 // }
 
-peopleHeightLimit();
+// peopleHeightLimit();
 
 //ACTIVE LINK
 let headerNavLinks = document.querySelectorAll(".header-nav-list-item");
