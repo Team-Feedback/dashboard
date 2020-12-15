@@ -1,7 +1,7 @@
 // SELECT ALL CHARTS
 let columnCharts = document.querySelectorAll('.widget-column-chart');
 
-let allGraphs = [...columnCharts];
+let allcolumnCharts = [...columnCharts];
 
 // REUSABLE RESIZE OBSERVER
 var ro = new ResizeObserver(entries => {
@@ -110,7 +110,7 @@ var ro = new ResizeObserver(entries => {
   }
 });
 
-allGraphs.forEach(e => {
+allcolumnCharts.forEach(e => {
   ro.observe(e);
 });
 

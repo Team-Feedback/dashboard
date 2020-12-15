@@ -9123,250 +9123,369 @@ input {
               overflow: hidden;
               text-overflow: ellipsis; }
 
-#widgets .content .placeholder-card {
-  width: 630px;
-  height: 392px;
-  resize: both;
-  overflow: hidden; }
-#widgets .content .widget {
-  position: relative;
-  padding: 0 5%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  -webkit-align-items: flex-start;
-  -moz-align-items: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  -moz-justify-content: flex-start;
-  justify-content: flex-start;
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  box-shadow: 0 3px 6px 0 rgba(206, 206, 206, 0.16);
-  border: solid 1px #eff0f2;
-  background-color: #ffffff; }
-  #widgets .content .widget:hover .widget-header-buttons {
-    visibility: visible;
-    opacity: 1; }
-  #widgets .content .widget.widget-column-chart {
-    padding-bottom: 2.7em; }
-    #widgets .content .widget.widget-column-chart.rotate-text .column-chart {
-      grid-template-rows: 1fr 6em; }
-    #widgets .content .widget.widget-column-chart.rotate-text .column-chart-x-axis-item {
-      position: relative;
-      height: 100%;
-      white-space: nowrap;
-      overflow: visible;
-      text-overflow: ellipsis; }
-      #widgets .content .widget.widget-column-chart.rotate-text .column-chart-x-axis-item-label {
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: rotate(-45deg) translate(-50%, -50%);
-        top: -.3em;
-        left: 42.5%;
-        transform: rotateZ(-45deg) translate(-100%, 0);
-        transform-origin: 0 0;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        width: 7em;
-        text-align: right; }
-    #widgets .content .widget.widget-column-chart.h-70 .column-chart-y-axis-item, #widgets .content .widget.widget-column-chart.h-65 .column-chart-y-axis-item, #widgets .content .widget.widget-column-chart.h-60 .column-chart-y-axis-item {
-      display: inline-block !important; }
-    #widgets .content .widget.widget-column-chart.h-55 .column-chart-y-axis-item:nth-of-type(2n + 1), #widgets .content .widget.widget-column-chart.h-50 .column-chart-y-axis-item:nth-of-type(2n + 1), #widgets .content .widget.widget-column-chart.h-45 .column-chart-y-axis-item:nth-of-type(2n + 1), #widgets .content .widget.widget-column-chart.h-40 .column-chart-y-axis-item:nth-of-type(2n + 1), #widgets .content .widget.widget-column-chart.h-35 .column-chart-y-axis-item:nth-of-type(2n + 1) {
-      display: inline-block !important; }
-    #widgets .content .widget.widget-column-chart.h-30 .column-chart-y-axis-item:first-of-type, #widgets .content .widget.widget-column-chart.h-25 .column-chart-y-axis-item:first-of-type, #widgets .content .widget.widget-column-chart.h-20 .column-chart-y-axis-item:first-of-type {
-      display: inline-block !important; }
-    #widgets .content .widget.widget-column-chart.h-30 .column-chart-y-axis-item:nth-of-type(5), #widgets .content .widget.widget-column-chart.h-25 .column-chart-y-axis-item:nth-of-type(5), #widgets .content .widget.widget-column-chart.h-20 .column-chart-y-axis-item:nth-of-type(5) {
-      display: inline-block !important; }
-    #widgets .content .widget.widget-column-chart.h-30 .column-chart-y-axis-item:last-of-type, #widgets .content .widget.widget-column-chart.h-25 .column-chart-y-axis-item:last-of-type, #widgets .content .widget.widget-column-chart.h-20 .column-chart-y-axis-item:last-of-type {
-      display: inline-block !important; }
-  #widgets .content .widget-header {
+#widgets .content {
+  padding: 4em; }
+  #widgets .content .placeholder-card {
+    width: 630px;
+    height: 392px;
+    resize: both;
+    overflow: hidden; }
+  #widgets .content .widget {
+    position: relative;
+    padding: 0 5%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    align-items: flex-start;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    justify-content: flex-start;
     width: 100%;
-    padding-top: 2.1em;
-    padding-bottom: 2.8em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; }
-    #widgets .content .widget-header-title {
-      padding: 0 4em;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px 0 rgba(206, 206, 206, 0.16);
+    border: solid 1px #eff0f2;
+    background-color: #ffffff; }
+    #widgets .content .widget:hover .widget-header-buttons {
+      visibility: visible;
+      opacity: 1; }
+    #widgets .content .widget.widget-column-chart {
+      padding-bottom: 2.7em; }
+      #widgets .content .widget.widget-column-chart.rotate-text .column-chart {
+        grid-template-rows: 1fr 6em; }
+      #widgets .content .widget.widget-column-chart.rotate-text .column-chart-x-axis-item {
+        position: relative;
+        height: 100%;
+        white-space: nowrap;
+        overflow: visible;
+        text-overflow: ellipsis; }
+        #widgets .content .widget.widget-column-chart.rotate-text .column-chart-x-axis-item-label {
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: rotate(-45deg) translate(-50%, -50%);
+          top: -.3em;
+          left: 42.5%;
+          transform: rotateZ(-45deg) translate(-100%, 0);
+          transform-origin: 0 0;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 7em;
+          text-align: right; }
+      #widgets .content .widget.widget-column-chart.h-70 .column-chart-y-axis-item, #widgets .content .widget.widget-column-chart.h-65 .column-chart-y-axis-item, #widgets .content .widget.widget-column-chart.h-60 .column-chart-y-axis-item {
+        display: inline-block !important; }
+      #widgets .content .widget.widget-column-chart.h-55 .column-chart-y-axis-item:nth-of-type(2n + 1), #widgets .content .widget.widget-column-chart.h-50 .column-chart-y-axis-item:nth-of-type(2n + 1), #widgets .content .widget.widget-column-chart.h-45 .column-chart-y-axis-item:nth-of-type(2n + 1), #widgets .content .widget.widget-column-chart.h-40 .column-chart-y-axis-item:nth-of-type(2n + 1), #widgets .content .widget.widget-column-chart.h-35 .column-chart-y-axis-item:nth-of-type(2n + 1) {
+        display: inline-block !important; }
+      #widgets .content .widget.widget-column-chart.h-30 .column-chart-y-axis-item:first-of-type, #widgets .content .widget.widget-column-chart.h-25 .column-chart-y-axis-item:first-of-type, #widgets .content .widget.widget-column-chart.h-20 .column-chart-y-axis-item:first-of-type {
+        display: inline-block !important; }
+      #widgets .content .widget.widget-column-chart.h-30 .column-chart-y-axis-item:nth-of-type(5), #widgets .content .widget.widget-column-chart.h-25 .column-chart-y-axis-item:nth-of-type(5), #widgets .content .widget.widget-column-chart.h-20 .column-chart-y-axis-item:nth-of-type(5) {
+        display: inline-block !important; }
+      #widgets .content .widget.widget-column-chart.h-30 .column-chart-y-axis-item:last-of-type, #widgets .content .widget.widget-column-chart.h-25 .column-chart-y-axis-item:last-of-type, #widgets .content .widget.widget-column-chart.h-20 .column-chart-y-axis-item:last-of-type {
+        display: inline-block !important; }
+    #widgets .content .widget.widget-bar-chart {
+      padding-bottom: 2.1em; }
+      #widgets .content .widget.widget-bar-chart .widget-header {
+        border-bottom: solid 1.5px #f5f6f8; }
+      #widgets .content .widget.widget-bar-chart .widget-body {
+        max-height: calc(100% - 6.9em); }
+    #widgets .content .widget-header {
       width: 100%;
-      font-size: 1.7em;
-      font-weight: 500;
-      color: #333333;
-      border: 0;
-      outline: 0;
-      text-align: center;
+      padding-top: 2.1em;
+      padding-bottom: 2.8em;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis; }
-    #widgets .content .widget-header-buttons {
-      visibility: hidden;
-      opacity: 0;
-      position: absolute;
-      top: 1.8em;
-      right: 1.8em;
-      transition: opacity .2s ease-in-out .1s, visibility .2s ease-in-out .1s; }
-      #widgets .content .widget-header-buttons i {
-        font-size: 2.2em;
-        color: #5d636f;
-        cursor: pointer; }
-        #widgets .content .widget-header-buttons i:not(:last-of-type) {
-          margin-right: 0.25em; }
-  #widgets .content .widget-body {
-    width: 100%;
-    flex: 1; }
-    #widgets .content .widget-body .column-chart {
-      height: 100%;
-      display: grid;
-      grid-template-areas: "title yAxis area" "none none xAxis";
-      grid-template-columns: auto auto 1fr;
-      grid-template-rows: 1fr auto; }
-      #widgets .content .widget-body .column-chart-title {
-        grid-area: title;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        -moz-align-items: center;
-        align-items: center; }
-        #widgets .content .widget-body .column-chart-title-text {
-          font-size: 1.18em;
-          font-weight: 400;
-          color: #989898;
-          transform: rotateX(180deg) rotateY(180deg);
-          writing-mode: vertical-rl; }
-      #widgets .content .widget-body .column-chart-area {
-        grid-area: area;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: end;
-        -ms-flex-align: end;
-        -webkit-align-items: flex-end;
-        -moz-align-items: flex-end;
-        align-items: flex-end;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        -webkit-justify-content: space-between;
-        -moz-justify-content: space-between;
-        justify-content: space-between;
-        border-bottom: solid 1.5px #e6e9ef;
-        border-top: solid 1.5px #f5f6f8;
-        z-index: 1; }
-        #widgets .content .widget-body .column-chart-area-item {
-          margin: 0 5%;
-          position: relative;
-          width: 10%;
-          height: 80%;
-          border-radius: 4px;
-          background-color: #fa711f; }
-          #widgets .content .widget-body .column-chart-area-item-label {
-            top: .8rem;
-            left: 50%;
-            transform: translate(-50%, 0);
-            position: absolute;
-            font-size: 1.28em;
-            font-weight: 600;
-            color: #ffffff; }
-      #widgets .content .widget-body .column-chart-y-axis {
+      #widgets .content .widget-header-title {
+        padding: 0 4em;
         width: 100%;
-        grid-area: yAxis;
-        margin: -.5em 0;
-        padding: 0 .8em;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-direction: normal;
-        -webkit-box-orient: vertical;
-        -webkit-flex-direction: column;
-        -moz-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        -webkit-align-items: flex-start;
-        -moz-align-items: flex-start;
-        align-items: flex-start;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        -webkit-justify-content: space-between;
-        -moz-justify-content: space-between;
-        justify-content: space-between; }
-        #widgets .content .widget-body .column-chart-y-axis-item {
-          display: none;
-          position: relative; }
-          #widgets .content .widget-body .column-chart-y-axis-item-line {
-            position: absolute;
-            top: 50%;
-            right: -.8em;
-            transform: translate(100%, -50%);
-            width: 47em;
-            border-bottom: solid 1.5px #f5f6f8; }
-          #widgets .content .widget-body .column-chart-y-axis-item:first-of-type .column-chart-y-axis-item-line, #widgets .content .widget-body .column-chart-y-axis-item:last-of-type .column-chart-y-axis-item-line {
-            border-bottom: 0; }
-          #widgets .content .widget-body .column-chart-y-axis-item-label {
-            font-size: 1.05em;
+        font-size: 1.7em;
+        font-weight: 500;
+        color: #333333;
+        border: 0;
+        outline: 0;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      #widgets .content .widget-header-buttons {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 1.8em;
+        right: 1.8em;
+        transition: opacity .2s ease-in-out .1s, visibility .2s ease-in-out .1s; }
+        #widgets .content .widget-header-buttons i {
+          font-size: 2.2em;
+          color: #5d636f;
+          cursor: pointer; }
+          #widgets .content .widget-header-buttons i:not(:last-of-type) {
+            margin-right: 0.25em; }
+    #widgets .content .widget-body {
+      width: 100%;
+      flex: 1; }
+      #widgets .content .widget-body .column-chart {
+        height: 100%;
+        display: grid;
+        grid-template-areas: "title yAxis area" "none none xAxis";
+        grid-template-columns: auto auto 1fr;
+        grid-template-rows: 1fr auto; }
+        #widgets .content .widget-body .column-chart-title {
+          grid-area: title;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          -moz-align-items: center;
+          align-items: center; }
+          #widgets .content .widget-body .column-chart-title-text {
+            font-size: 1.18em;
             font-weight: 400;
-            color: #505050; }
-      #widgets .content .widget-body .column-chart-x-axis {
-        padding-top: .9em;
-        grid-area: xAxis;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: end;
-        -ms-flex-align: end;
-        -webkit-align-items: flex-end;
-        -moz-align-items: flex-end;
-        align-items: flex-end;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        -webkit-justify-content: space-between;
-        -moz-justify-content: space-between;
-        justify-content: space-between; }
-        #widgets .content .widget-body .column-chart-x-axis-item {
-          height: 100%;
-          margin: 0 2.5%;
-          width: 15%;
-          text-align: center; }
-          #widgets .content .widget-body .column-chart-x-axis-item-label {
-            font-size: 1.05em;
-            font-weight: 400;
-            line-height: 1.14;
-            color: #505050;
+            color: #989898;
+            transform: rotateX(180deg) rotateY(180deg);
+            writing-mode: vertical-rl; }
+        #widgets .content .widget-body .column-chart-area {
+          grid-area: area;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: end;
+          -ms-flex-align: end;
+          -webkit-align-items: flex-end;
+          -moz-align-items: flex-end;
+          align-items: flex-end;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          -webkit-justify-content: space-between;
+          -moz-justify-content: space-between;
+          justify-content: space-between;
+          border-bottom: solid 1.5px #e6e9ef;
+          border-top: solid 1.5px #f5f6f8;
+          z-index: 1; }
+          #widgets .content .widget-body .column-chart-area-item {
+            margin: 0 5%;
+            position: relative;
+            width: 10%;
+            height: 80%;
+            border-radius: 4px;
+            background-color: #fa711f; }
+            #widgets .content .widget-body .column-chart-area-item-label {
+              top: .8rem;
+              left: 50%;
+              transform: translate(-50%, 0);
+              position: absolute;
+              font-size: 1.28em;
+              font-weight: 600;
+              color: #ffffff; }
+        #widgets .content .widget-body .column-chart-y-axis {
+          width: 100%;
+          grid-area: yAxis;
+          margin: -.5em 0;
+          padding: 0 .8em;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-direction: normal;
+          -webkit-box-orient: vertical;
+          -webkit-flex-direction: column;
+          -moz-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-align: start;
+          -ms-flex-align: start;
+          -webkit-align-items: flex-start;
+          -moz-align-items: flex-start;
+          align-items: flex-start;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          -webkit-justify-content: space-between;
+          -moz-justify-content: space-between;
+          justify-content: space-between; }
+          #widgets .content .widget-body .column-chart-y-axis-item {
+            display: none;
+            position: relative; }
+            #widgets .content .widget-body .column-chart-y-axis-item-line {
+              position: absolute;
+              top: 50%;
+              right: -.8em;
+              transform: translate(100%, -50%);
+              width: 47em;
+              border-bottom: solid 1.5px #f5f6f8; }
+            #widgets .content .widget-body .column-chart-y-axis-item:first-of-type .column-chart-y-axis-item-line, #widgets .content .widget-body .column-chart-y-axis-item:last-of-type .column-chart-y-axis-item-line {
+              border-bottom: 0; }
+            #widgets .content .widget-body .column-chart-y-axis-item-label {
+              font-size: 1.05em;
+              font-weight: 400;
+              color: #505050; }
+        #widgets .content .widget-body .column-chart-x-axis {
+          padding-top: .9em;
+          grid-area: xAxis;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: end;
+          -ms-flex-align: end;
+          -webkit-align-items: flex-end;
+          -moz-align-items: flex-end;
+          align-items: flex-end;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          -webkit-justify-content: space-between;
+          -moz-justify-content: space-between;
+          justify-content: space-between; }
+          #widgets .content .widget-body .column-chart-x-axis-item {
+            height: 100%;
+            margin: 0 2.5%;
+            width: 15%;
+            text-align: center; }
+            #widgets .content .widget-body .column-chart-x-axis-item-label {
+              font-size: 1.05em;
+              font-weight: 400;
+              line-height: 1.14;
+              color: #505050;
+              display: -webkit-box;
+              -webkit-line-clamp: 4;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+              word-break: break-word;
+              -webkit-hyphens: auto;
+              -ms-hyphens: auto;
+              hyphens: auto; }
+      #widgets .content .widget-body .bar-chart {
+        height: 100%;
+        display: grid;
+        grid-template-areas: "area area" "xAxis xAxis";
+        grid-template-columns: auto 1fr;
+        grid-template-rows: 1fr auto; }
+        #widgets .content .widget-body .bar-chart-area {
+          padding-right: 6.3%;
+          padding-top: 2em;
+          padding-left: calc(12.4em + 1.5px);
+          grid-area: area;
+          z-index: 1;
+          overflow-y: auto;
+          overflow-x: visible;
+          scrollbar-width: none;
+          /* Firefox */
+          -ms-overflow-style: none;
+          /* Internet Explorer 10+ */ }
+          #widgets .content .widget-body .bar-chart-area::-webkit-scrollbar {
+            /* WebKit */
+            width: 0;
+            height: 0; }
+          #widgets .content .widget-body .bar-chart-area-item {
             display: -webkit-box;
-            -webkit-line-clamp: 4;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            word-break: break-word;
-            -webkit-hyphens: auto;
-            -ms-hyphens: auto;
-            hyphens: auto; }
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            -moz-align-items: center;
+            align-items: center;
+            -webkit-box-pack: end;
+            -ms-flex-pack: end;
+            -webkit-justify-content: flex-end;
+            -moz-justify-content: flex-end;
+            justify-content: flex-end;
+            margin-bottom: 2em;
+            position: relative;
+            width: 100%;
+            height: 2em;
+            min-height: 2em;
+            background-color: #9cd333;
+            border-radius: 0 3px 3px 0; }
+            #widgets .content .widget-body .bar-chart-area-item:hover .bar-chart-area-item-amount {
+              opacity: 1;
+              visibility: visible; }
+            #widgets .content .widget-body .bar-chart-area-item-label {
+              position: absolute;
+              top: 50%;
+              left: -.9rem;
+              transform: translate(-100%, -50%);
+              font-size: 1.05em;
+              font-weight: 400;
+              color: #505050;
+              width: 11em;
+              text-align: right;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+            #widgets .content .widget-body .bar-chart-area-item-amount {
+              opacity: 0;
+              visibility: hidden;
+              margin-right: 0.5423728814em;
+              font-size: 1.18em;
+              font-weight: 600;
+              letter-spacing: 0.06px;
+              color: #ffffff;
+              transition: opacity .2s ease-in-out .1s, visibility .2s ease-in-out .1s; }
+        #widgets .content .widget-body .bar-chart-x-axis {
+          padding-top: 1em;
+          padding-bottom: 1em;
+          padding-left: 12.4em;
+          padding-right: 6.3%;
+          grid-area: xAxis;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          -moz-align-items: center;
+          align-items: center;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          -webkit-justify-content: space-between;
+          -moz-justify-content: space-between;
+          justify-content: space-between; }
+          #widgets .content .widget-body .bar-chart-x-axis-item {
+            height: 100%;
+            position: relative; }
+            #widgets .content .widget-body .bar-chart-x-axis-item-label {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              font-size: 1.05em;
+              font-weight: 400;
+              color: #505050; }
+            #widgets .content .widget-body .bar-chart-x-axis-item-line {
+              position: absolute;
+              top: -1em;
+              left: 0;
+              transform: translate(0, -100%);
+              height: 200px;
+              border-left: solid 1.5px #f5f6f8; }
+            #widgets .content .widget-body .bar-chart-x-axis-item:first-of-type .bar-chart-x-axis-item-line {
+              border-color: #e6e9ef !important; }
 
 .auth {
   display: -webkit-box;

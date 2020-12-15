@@ -11141,6 +11141,7 @@ input {
 //=================================================================
 #widgets {
   & .content {
+    padding: 4em;
 
     & .placehoder-wrapper {}
     
@@ -11172,6 +11173,7 @@ input {
         }
       }
 
+      // COLUMN CHART WIDGET MODIFIERS
       &.widget-column-chart {
         padding-bottom: 2.7em;
 
@@ -11255,6 +11257,19 @@ input {
         }
       }
 
+      // COLUMN CHART WIDGET MODIFIERS
+      &.widget-bar-chart {
+        padding-bottom: 2.1em;
+
+        & .widget-header {
+          border-bottom: solid 1.5px #f5f6f8;
+        }
+
+        & .widget-body {
+          max-height: calc(100% - 6.9em);
+        }
+      }
+
       &-header {
         width: 100%;
         padding-top: 2.1em;
@@ -11301,6 +11316,7 @@ input {
         width: 100%;
         flex: 1;
 
+        // COLUMN CHART
         & .column-chart {
           height: 100%;
           display: grid;
@@ -11420,6 +11436,127 @@ input {
             }
           }
 
+        }
+
+        // BAR CHART
+        & .bar-chart {
+          height: 100%;
+          display: grid;
+          grid-template-areas: 
+          "area area"
+          "xAxis xAxis";
+          grid-template-columns: auto 1fr;
+          grid-template-rows: 1fr auto;
+
+          &-area {
+            padding-right: 6.3%;
+            padding-top: 2em;
+            padding-left: calc(12.4em + 1.5px);
+            grid-area: area;
+            z-index: 1;
+
+            overflow-y: auto;
+            overflow-x: visible;
+            scrollbar-width: none;
+            /* Firefox */
+            -ms-overflow-style: none;
+            /* Internet Explorer 10+ */
+      
+            &::-webkit-scrollbar {
+              /* WebKit */
+              width: 0;
+              height: 0;
+            }
+
+            & .content {}
+
+            &-item {
+              @include flexbox();
+              @include align-items(center);
+              @include justify-content(flex-end);
+              margin-bottom: 2em;
+              position: relative;
+              width: 100%;
+              height: 2em;
+              min-height: 2em;
+              background-color: #9cd333;
+              border-radius: 0 3px 3px 0;
+
+              &:hover {
+                & .bar-chart-area-item-amount {
+                  opacity: 1;
+                  visibility: visible;
+                }
+              }
+
+              &-label {
+                position: absolute;
+                top: 50%;
+                left: -.9rem;
+                transform: translate(-100%, -50%);
+                font-size: 1.05em;
+                font-weight: 400;
+                color: #505050;
+                width: 11em;
+                text-align: right;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+
+              &-amount {
+                opacity: 0;
+                visibility: hidden;
+                margin-right: emcalc(.64,1.18);
+                font-size: 1.18em;
+                font-weight: 600;
+                letter-spacing: 0.06px;
+                color: #ffffff;
+                transition: opacity .2s ease-in-out .1s, visibility .2s ease-in-out .1s;
+              }
+            }
+          }
+
+          &-x-axis {
+            padding-top: 1em;
+            padding-bottom: 1em;
+            padding-left: 12.4em;
+            padding-right: 6.3%;
+            grid-area: xAxis;
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(space-between);
+
+            &-item {
+              height: 100%;
+              position: relative;
+
+              &-label {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 1.05em;
+                font-weight: 400;
+                color: #505050;
+              }
+
+              &-line {
+                position: absolute;
+                top: -1em;
+                left: 0;
+                transform: translate(0, -100%);
+                height: 200px;
+                border-left: solid 1.5px #f5f6f8;
+              }
+
+              &:first-of-type {
+                & .bar-chart-x-axis-item-line {
+                  border-color: #e6e9ef!important;
+                }
+              }
+            }
+          }
         }
       }
     }
