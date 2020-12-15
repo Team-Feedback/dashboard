@@ -4861,8 +4861,15 @@ input {
         & .widget-card {
           margin-bottom: 3.6em;
           width: 31%;
-          box-shadow: 0 6px 12px 0 rgba(232, 232, 232, 0.16);
-          overflow: hidden;
+          border-radius: 8px;
+          box-shadow: 0 6px 12px 0 rgba(220, 220, 220, .16);;
+          //overflow: hidden;
+          transition: all .3s ease-in-out;
+
+          &:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px 0 rgba(200, 200, 200, 0.3);;
+          }
 
           @include respond(desktop-md) {
             width: 48%;
@@ -4911,6 +4918,10 @@ input {
                 font-size: 1.15em;
                 font-weight: 500;
                 color: #1088f9;
+
+                &:hover {
+                  text-decoration: undeline;
+                }
               }
 
               &-likes {
