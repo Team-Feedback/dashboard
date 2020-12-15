@@ -4794,6 +4794,142 @@ input {
   }
 }
 
+#addWidgetModal {
+  & .custom-modal {
+    padding: 0 4.2%;
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(flex-start);
+    @include justify-content(flex-start);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    transform: translate(0,0);
+    animation: none!important;
+    border: 0;
+
+    // &-close {
+    //   top: 4.7em;
+    //   right: 5.2em;
+    // }
+
+    &-header {
+      @include justify-content(flex-start);
+      padding: 4.3em 0 2.7em;
+      // margin: 0 11%;
+      width: 100%;
+      border-bottom: solid 1px #dee7f0;
+
+      &-title {
+        font-size: 1.8em;
+        font-weight: 400;
+        color: #323338;
+        text-align: left;
+
+        & .strong {
+          font-weight: 600;
+        }
+      }
+    }
+
+    &-body {
+      padding: 7.4em 0;
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      scroll-behavior: smooth;
+  
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+
+      & .widgets {
+        margin: 0 auto;
+        max-width: 100em;
+        @include flexbox();
+        @include flex-wrap(wrap);
+        @include align-items(flex-start);
+        @include justify-content(space-between);
+
+        & .widget-card {
+          margin-bottom: 3.6em;
+          width: 30%;
+          box-shadow: 0 6px 12px 0 rgba(232, 232, 232, 0.16);
+          overflow: hidden;
+
+          @include respond(desktop-md) {
+            width: 48%;
+          }
+
+          @include respond(desktop-xsm) {
+            width: 100%;
+          }
+
+          &-header {
+            height: 10.8em;
+            background-color: #1f9bf5;
+            border-radius: 8px 8px 0 0;
+            border: solid 1px #ececec;
+            border-bottom: 0;
+          }
+
+          &-body {
+            padding: 1.2em 1.2em 1.7em;
+            background-color: #FFF;
+            border-radius: 0 0 8px 8px;
+            border: solid 1px #ececec;
+            border-top: 0;
+
+            &-title {
+              margin-bottom: emcalc(.8,1.4);
+              font-size: 1.4em;
+              font-weight: 500;
+              color: #2c3d58;
+            }
+
+            &-text {
+              margin-bottom: emcalc(2.6, 1.18);
+              font-size: 1.18em;
+              font-weight: 400;
+              letter-spacing: 0.03px;
+              color: #7e7f8d;
+            }
+
+            &-bottom {
+              @include flexbox();
+              @include align-items(center);
+              @include justify-content(space-between);
+
+              &-link {
+                font-size: 1.15em;
+                font-weight: 500;
+                color: #1088f9;
+              }
+
+              &-likes {
+                font-size: 1.15em;
+                font-weight: 500;
+                letter-spacing: 0.03px;
+                color: #676879;
+
+                & i {
+                  margin-right: emcalc(.2,1.15);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 #createNewTeamModal {
   & .custom-modal {
@@ -4811,7 +4947,8 @@ input {
     border-radius: 0;
     transform: translate(0,0);
     animation: none!important;
-
+    border: 0;
+    
     // &-close {
     //   top: 4.7em;
     //   right: 5.2em;
