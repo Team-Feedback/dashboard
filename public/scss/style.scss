@@ -11016,6 +11016,13 @@ input {
       border: solid 1px #eff0f2;
       background-color: #ffffff;
 
+      &:hover {
+        & .widget-header-buttons {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+
       &.widget-column-chart {
         padding-bottom: 2.7em;
 
@@ -11103,18 +11110,31 @@ input {
         width: 100%;
         padding-top: 2.1em;
         padding-bottom: 2.8em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
 
         &-title {
+          padding: 0 4em;
+          width: 100%;
           font-size: 1.7em;
           font-weight: 500;
           color: #333333;
+          border: 0;
+          outline: 0;
           text-align: center;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
 
         &-buttons {
+          visibility: hidden;
+          opacity: 0;
           position: absolute;
           top: 1.8em;
           right: 1.8em;
+          transition: opacity .2s ease-in-out .1s, visibility .2s ease-in-out .1s;
 
           & i {
             font-size: 2.2em;
@@ -11122,7 +11142,7 @@ input {
             cursor: pointer;
 
             &:not(:last-of-type) {
-              margin-right: emcalc(.75,2.2);
+              margin-right: emcalc(.55,2.2);
             }
           }
         }

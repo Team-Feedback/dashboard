@@ -9006,6 +9006,9 @@ input {
   box-shadow: 0 3px 6px 0 rgba(206, 206, 206, 0.16);
   border: solid 1px #eff0f2;
   background-color: #ffffff; }
+  #widgets .content .widget:hover .widget-header-buttons {
+    visibility: visible;
+    opacity: 1; }
   #widgets .content .widget.widget-column-chart {
     padding-bottom: 2.7em; }
     #widgets .content .widget.widget-column-chart.rotate-text .column-chart {
@@ -9043,22 +9046,35 @@ input {
   #widgets .content .widget-header {
     width: 100%;
     padding-top: 2.1em;
-    padding-bottom: 2.8em; }
+    padding-bottom: 2.8em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
     #widgets .content .widget-header-title {
+      padding: 0 4em;
+      width: 100%;
       font-size: 1.7em;
       font-weight: 500;
       color: #333333;
-      text-align: center; }
+      border: 0;
+      outline: 0;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
     #widgets .content .widget-header-buttons {
+      visibility: hidden;
+      opacity: 0;
       position: absolute;
       top: 1.8em;
-      right: 1.8em; }
+      right: 1.8em;
+      transition: opacity .2s ease-in-out .1s, visibility .2s ease-in-out .1s; }
       #widgets .content .widget-header-buttons i {
         font-size: 2.2em;
         color: #5d636f;
         cursor: pointer; }
         #widgets .content .widget-header-buttons i:not(:last-of-type) {
-          margin-right: 0.3409090909em; }
+          margin-right: 0.25em; }
   #widgets .content .widget-body {
     width: 100%;
     flex: 1; }
