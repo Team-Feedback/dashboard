@@ -3679,7 +3679,7 @@ input {
       justify-content: space-between; }
       #addWidgetModal .custom-modal-body .widgets .widget-card {
         margin-bottom: 3.6em;
-        width: 30%;
+        width: 31%;
         box-shadow: 0 6px 12px 0 rgba(232, 232, 232, 0.16);
         overflow: hidden; }
         @media (max-width: 991px) {
