@@ -11,32 +11,30 @@ var ro = new ResizeObserver(entries => {
 
         const widgetHeader = entry.target.children[0];
         const widgetBody = entry.target.children[1];
+        const lineChart = widgetBody.children[0];
+        const lineChartTitle = lineChart.children[1];
+        const lineChartCanvas = lineChart.children[2];
         const widgetLegend = entry.target.children[2];
         const widgetLegendItems = widgetLegend.children[1].children;
 
         const widgetHeaderBP = crHeight * .071;
         let widgetLegendItemsWidth = 0;
 
-
         //Update sizes
         widgetHeader.style.paddingBottom = `${widgetHeaderBP}px`;
         widgetBody.style.maxHeight = `calc(100% - ${widgetHeader.clientHeight + widgetLegend.clientHeight}px)`;
+        lineChartCanvas.style.width = `calc(100% - ${lineChartTitle.clientWidth}px)`;
 
         //Legend size check
-        //console.log(widgetLegendItems)
         [...widgetLegendItems].forEach(e => {
             widgetLegendItemsWidth += e.clientWidth + 38;
         })
 
         if (widgetLegend.clientWidth * 2 - 28 <= widgetLegendItemsWidth) {
-            console.log('TRUE', widgetLegend.clientWidth * 2 - 28 <= widgetLegendItemsWidth, "ITEMS WIDTH", widgetLegendItemsWidth)
             widgetLegend.classList.add('small');
         } else {
-            console.log('FALSE', widgetLegend.clientWidth * 2 - 28 <= widgetLegendItemsWidth, "ITEMS WIDTH", widgetLegendItemsWidth)
             widgetLegend.classList.remove('small');
         }
-
-        //console.log('ITEMS', widgetLegendItemsWidth, 'PARENT', widgetLegend.clientWidth * 2)
     }
 });
 
@@ -63,6 +61,8 @@ allLineCharts.forEach(e => {
 
 //LINE CHART
 var ctx01 = document.getElementById("chart-01").getContext("2d");
+var ctx01 = document.getElementById("chart-01").getContext("2d");
+
 
 let chart01 = new Chart(ctx01, {
     type: "line",
