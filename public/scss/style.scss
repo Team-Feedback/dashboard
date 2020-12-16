@@ -11290,6 +11290,17 @@ input {
 
       }
 
+      // VALUE BOX WIDGET MODIFIERS
+      &.widget-value-box {
+        & .widget-header {
+          padding-bottom: 0;
+        }
+
+        & .widget-body {
+          overflow: hidden;
+        }
+      }
+
       &-header {
         width: 100%;
         padding-top: 2.1em;
@@ -11645,9 +11656,6 @@ input {
         & .pie-chart {
           height: 100%;
           width: 100%;
-          // @include flexbox();
-          // @include align-items(center);
-          // @include justify-content(center);
           overflow: hidden;
 
           &-main {
@@ -11660,6 +11668,37 @@ input {
 
             & .svg {
               margin: 0 auto;
+            }
+          }
+        }
+
+        & .value-box {
+          padding: 2.8em 2.2em;
+          @include flexbox();
+          @include align-items(center);
+          @include justify-content(center);
+          
+          &-item {
+            padding: 1em 0 1.2em;
+            width: 16em;
+            @include flexbox();
+            @include flex-direction(column);
+            @include align-items(center);
+            @include justify-content(center);
+
+            &-amount {
+              margin-bottom: emcalc(2.3,5.8);
+              font-size: 5.8em;
+              font-weight: 400;
+              color: #3b3b3b;
+            }
+
+            &-text {
+              font-size: 1.33em;
+              font-weight: 500;
+              line-height: 0.68;
+              letter-spacing: -0.07px;
+              color: #3b3b3b;
             }
           }
         }
