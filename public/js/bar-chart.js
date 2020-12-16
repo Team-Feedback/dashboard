@@ -13,8 +13,9 @@ var ro = new ResizeObserver(entries => {
         const widgetBody = entry.target.children[1];
         const barChart = widgetBody.children[0];
         const barChartArea = barChart.children[0];
+        const barChartAreaBack = barChartArea.children[0];
         const barChartAreaItems = barChartArea.children;
-        const barChartXAxis = barChart.children[1];
+        const barChartXAxis = barChart.children[2];
         const barChartXAxisItems = barChartXAxis.children;
 
         const widgetHeaderBP = crHeight * .071;
@@ -27,6 +28,7 @@ var ro = new ResizeObserver(entries => {
         widgetBody.style.maxHeight = `calc(100% - ${widgetHeader}px)`;
         entry.target.style.paddingBottom = `${crHeight * .054}px`;
         barChartArea.style.paddingTop = `${barChartAreaTP}px`;
+        document.documentElement.style.setProperty('--bar-graph-top-padding', barChartAreaTP + "px");
 
 
         [...barChartXAxisItems].forEach(e => {
@@ -38,8 +40,10 @@ var ro = new ResizeObserver(entries => {
         let barHeight = height / (barChartAreaItems.length * 1.5);
 
         [...barChartAreaItems].forEach(e => {
-            e.style.height = `${barHeight}px`;
-            e.style.marginBottom = `${(barHeight / 2) <= 10 ? 10 : (barHeight / 2)}px`;
+            if (e.classList.contains('bar-chart-area-item')) {
+                e.style.height = `${barHeight}px`;
+                e.style.marginBottom = `${(barHeight / 2) <= 10 ? 10 : (barHeight / 2)}px`;
+            }
         })
     }
 });

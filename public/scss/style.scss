@@ -120,6 +120,9 @@
   //TALBE
   --table-head-row-height: 3.4em;
   --table-body-row-height: 4.65em;
+
+  //WIDGETS
+  --bar-graph-top-padding: 2em;
 }
 
 // ==================================
@@ -11143,9 +11146,16 @@ input {
   & .content {
     padding: 4em;
 
-    & .placehoder-wrapper {}
+    & .placeholder-wrapper {
+      @include flexbox();
+      @include flex-wrap(wrap);
+      @include align-items(flex-start);
+      @include justify-content(flex-start);
+      margin: 0 -2em;
+    }
     
     & .placeholder-card {
+      margin: 2em;
       width: 630px;
       height: 392px;
       resize: both;
@@ -11270,6 +11280,11 @@ input {
         }
       }
 
+      // LINE CHART WIDGET MODIFIERS
+      &.widget-line-chart {
+
+      }
+
       &-header {
         width: 100%;
         padding-top: 2.1em;
@@ -11358,6 +11373,7 @@ input {
               border-radius: 4px;
               background-color: #fa711f;
 
+
               &-label {
                 top: .8rem;
                 left: 50%;
@@ -11440,6 +11456,7 @@ input {
 
         // BAR CHART
         & .bar-chart {
+          position: relative;
           height: 100%;
           display: grid;
           grid-template-areas: 
@@ -11449,9 +11466,10 @@ input {
           grid-template-rows: 1fr auto;
 
           &-area {
+            position: relative;
             padding-right: 6.3%;
             padding-top: 2em;
-            padding-left: calc(12.4em + 1.5px);
+            padding-left:12.4em;
             grid-area: area;
             z-index: 1;
 
@@ -11468,7 +11486,16 @@ input {
               height: 0;
             }
 
-            & .content {}
+            &::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: var(--bar-graph-top-padding);
+              background-color: #FFF;
+
+            }
 
             &-item {
               @include flexbox();
@@ -11481,6 +11508,8 @@ input {
               min-height: 2em;
               background-color: #9cd333;
               border-radius: 0 3px 3px 0;
+              border-left: solid 1.5px #e6e9ef;
+              z-index: 1;
 
               &:hover {
                 & .bar-chart-area-item-amount {
@@ -11515,6 +11544,27 @@ input {
                 transition: opacity .2s ease-in-out .1s, visibility .2s ease-in-out .1s;
               }
             }
+
+            &-back {
+              grid-area: area;
+              padding-right: 6.3%;
+              //padding-top: 2em;
+              padding-left:12.4em;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              min-height: 100%;
+              @include flexbox();
+              @include align-items(flex-start);
+              @include justify-content(space-between);
+
+              &-line {
+                height: 100%;
+                border-left: solid 1.5px #f5f6f8;
+              }
+            }
           }
 
           &-x-axis {
@@ -11542,6 +11592,7 @@ input {
               }
 
               &-line {
+                display: none;
                 position: absolute;
                 top: -1em;
                 left: 0;
@@ -11556,6 +11607,14 @@ input {
                 }
               }
             }
+          }
+        }
+
+        & .line-chart {
+          height: 100%;
+          
+          &-main {
+            height: 100%;
           }
         }
       }

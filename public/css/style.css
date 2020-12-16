@@ -20,7 +20,8 @@
   --page-header-height-default: 13.2em;
   --page-header-height-compare: 8.25em;
   --table-head-row-height: 3.4em;
-  --table-body-row-height: 4.65em; }
+  --table-body-row-height: 4.65em;
+  --bar-graph-top-padding: 2em; }
 
 @font-face {
   font-family: 'dashoard-icons';
@@ -9125,7 +9126,29 @@ input {
 
 #widgets .content {
   padding: 4em; }
+  #widgets .content .placeholder-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    align-items: flex-start;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    justify-content: flex-start;
+    margin: 0 -2em; }
   #widgets .content .placeholder-card {
+    margin: 2em;
     width: 630px;
     height: 392px;
     resize: both;
@@ -9376,15 +9399,17 @@ input {
               -ms-hyphens: auto;
               hyphens: auto; }
       #widgets .content .widget-body .bar-chart {
+        position: relative;
         height: 100%;
         display: grid;
         grid-template-areas: "area area" "xAxis xAxis";
         grid-template-columns: auto 1fr;
         grid-template-rows: 1fr auto; }
         #widgets .content .widget-body .bar-chart-area {
+          position: relative;
           padding-right: 6.3%;
           padding-top: 2em;
-          padding-left: calc(12.4em + 1.5px);
+          padding-left: 12.4em;
           grid-area: area;
           z-index: 1;
           overflow-y: auto;
@@ -9397,6 +9422,14 @@ input {
             /* WebKit */
             width: 0;
             height: 0; }
+          #widgets .content .widget-body .bar-chart-area::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--bar-graph-top-padding);
+            background-color: #FFF; }
           #widgets .content .widget-body .bar-chart-area-item {
             display: -webkit-box;
             display: -webkit-flex;
@@ -9419,7 +9452,9 @@ input {
             height: 2em;
             min-height: 2em;
             background-color: #9cd333;
-            border-radius: 0 3px 3px 0; }
+            border-radius: 0 3px 3px 0;
+            border-left: solid 1.5px #e6e9ef;
+            z-index: 1; }
             #widgets .content .widget-body .bar-chart-area-item:hover .bar-chart-area-item-amount {
               opacity: 1;
               visibility: visible; }
@@ -9445,6 +9480,34 @@ input {
               letter-spacing: 0.06px;
               color: #ffffff;
               transition: opacity .2s ease-in-out .1s, visibility .2s ease-in-out .1s; }
+          #widgets .content .widget-body .bar-chart-area-back {
+            grid-area: area;
+            padding-right: 6.3%;
+            padding-left: 12.4em;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            min-height: 100%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            -webkit-align-items: flex-start;
+            -moz-align-items: flex-start;
+            align-items: flex-start;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            -webkit-justify-content: space-between;
+            -moz-justify-content: space-between;
+            justify-content: space-between; }
+            #widgets .content .widget-body .bar-chart-area-back-line {
+              height: 100%;
+              border-left: solid 1.5px #f5f6f8; }
         #widgets .content .widget-body .bar-chart-x-axis {
           padding-top: 1em;
           padding-bottom: 1em;
@@ -9478,6 +9541,7 @@ input {
               font-weight: 400;
               color: #505050; }
             #widgets .content .widget-body .bar-chart-x-axis-item-line {
+              display: none;
               position: absolute;
               top: -1em;
               left: 0;
@@ -9486,6 +9550,10 @@ input {
               border-left: solid 1.5px #f5f6f8; }
             #widgets .content .widget-body .bar-chart-x-axis-item:first-of-type .bar-chart-x-axis-item-line {
               border-color: #e6e9ef !important; }
+      #widgets .content .widget-body .line-chart {
+        height: 100%; }
+        #widgets .content .widget-body .line-chart-main {
+          height: 100%; }
 
 .auth {
   display: -webkit-box;
