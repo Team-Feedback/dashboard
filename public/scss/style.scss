@@ -11636,6 +11636,7 @@ input {
         padding-top: 1.9em;
         padding-bottom: .4em;
         width: 100%;
+        
 
         &.small {
 
@@ -11694,9 +11695,10 @@ input {
         &-main {
           padding: 0 1.4em;
           width: 100%;
+          min-height: 4.7em;
           @include flexbox();
           @include flex-wrap(wrap);
-          @include align-items(flex-start);
+          @include align-items(flex-end);
           @include justify-content(center);
           background-color: #FFF;
 
