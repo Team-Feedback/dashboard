@@ -11646,6 +11646,7 @@ input {
 
           & .chart-legend-main {
             @include flex-direction(column);
+            @include align-items(flex-start);
             padding: 2em 1.5em;
             visibility: hidden;
             opacity: 0;

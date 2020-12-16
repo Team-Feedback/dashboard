@@ -9594,6 +9594,11 @@ input {
         -moz-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        -webkit-align-items: flex-start;
+        -moz-align-items: flex-start;
+        align-items: flex-start;
         padding: 2em 1.5em;
         visibility: hidden;
         opacity: 0;
