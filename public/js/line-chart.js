@@ -14,8 +14,6 @@ var ro = new ResizeObserver(entries => {
         const lineChart = widgetBody.children[0];
         const lineChartTitle = document.querySelector('.line-chart-title');
         const lineChartCanvas = document.querySelector('#chart-01');
-        console.log(lineChart.children, lineChartCanvas);
-        //const lineChartCanvas = document.getElementById('chart-01');
         const widgetLegend = entry.target.children[2];
         const widgetLegendItems = widgetLegend.children[1].children;
 
@@ -44,25 +42,8 @@ allLineCharts.forEach(e => {
     ro.observe(e);
 });
 
-// let allLegends = document.querySelectorAll('.chart-legend');
-
-// var ro02 = new ResizeObserver(entries => {
-//     for (let entry of entries) {
-//         if (entry.target.clientWidth < entry.target.firstElementChild.clientWidth + 20) {
-//             entry.target.classList.add('small');
-//         } else {
-//             entry.target.classList.remove('small');
-//         }
-//     }
-// })
-
-// allLegends.forEach(e => {
-//     ro02.observe(e);
-// });
-
 
 //LINE CHART
-var ctx01 = document.getElementById("chart-01").getContext("2d");
 var ctx01 = document.getElementById("chart-01").getContext("2d");
 
 
