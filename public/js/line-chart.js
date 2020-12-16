@@ -1,3 +1,49 @@
+// SELECT ALL CHARTS
+let lineCharts = document.querySelectorAll('.widget-line-chart');
+
+let allLineCharts = [...lineCharts];
+
+// REUSABLE RESIZE OBSERVER
+var ro = new ResizeObserver(entries => {
+    for (let entry of entries) {
+        const crWidth = entry.borderBoxSize[0].inlineSize;
+        const crHeight = entry.borderBoxSize[0].blockSize;
+
+        const widgetHeader = entry.target.children[0];
+        const widgetBody = entry.target.children[1];
+        const widgetLegend = entry.target.children[2];
+        const widgetLegendItems = widgetLegend.children[1].children;
+
+        const widgetHeaderBP = crHeight * .071;
+        let widgetLegendItemsWidth = 0;
+
+
+        //Update sizes
+        widgetHeader.style.paddingBottom = `${widgetHeaderBP}px`;
+        widgetBody.style.maxHeight = `calc(100% - ${widgetHeader.clientHeight + widgetLegend.clientHeight}px)`;
+
+        //Legend size check
+        //console.log(widgetLegendItems)
+        [...widgetLegendItems].forEach(e => {
+            widgetLegendItemsWidth += e.clientWidth + 38;
+        })
+
+        if (widgetLegend.clientWidth * 2 - 28 <= widgetLegendItemsWidth) {
+            console.log('TRUE', widgetLegend.clientWidth * 2 - 28 <= widgetLegendItemsWidth, "ITEMS WIDTH", widgetLegendItemsWidth)
+            widgetLegend.classList.add('small');
+        } else {
+            console.log('FALSE', widgetLegend.clientWidth * 2 - 28 <= widgetLegendItemsWidth, "ITEMS WIDTH", widgetLegendItemsWidth)
+            widgetLegend.classList.remove('small');
+        }
+
+        //console.log('ITEMS', widgetLegendItemsWidth, 'PARENT', widgetLegend.clientWidth * 2)
+    }
+});
+
+allLineCharts.forEach(e => {
+    ro.observe(e);
+});
+
 // let allLegends = document.querySelectorAll('.chart-legend');
 
 // var ro02 = new ResizeObserver(entries => {
@@ -36,18 +82,18 @@ let chart01 = new Chart(ctx01, {
         ],
         labels: [
             "",
-            "January",
-            "February",
-            "March",
-            "April",
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
             "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec",
             ""
         ],
     },
