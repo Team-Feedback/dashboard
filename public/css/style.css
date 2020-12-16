@@ -9576,6 +9576,7 @@ input {
           transform: rotateX(180deg) rotateY(180deg);
           writing-mode: vertical-rl; }
         #widgets .content .widget-body .line-chart-main {
+          width: calc(100% - 2.14em);
           height: 100%;
           flex: 1; }
     #widgets .content .widget .chart-legend {
@@ -9609,7 +9610,7 @@ input {
         left: 0;
         border-radius: 3px;
         box-shadow: 0 6px 12px 0 rgba(137, 137, 137, 0.27);
-        border: solid 1px #e4e8ec; }
+        border: solid 1.5px #f5f6f8; }
       #widgets .content .widget .chart-legend-cover {
         padding: 0 1.4em;
         margin-bottom: 1.1em;
@@ -9626,19 +9627,19 @@ input {
         justify-content: center;
         height: 4em;
         border-radius: 3px;
-        border: solid 1px #e4e8ec;
+        border: solid 1.5px #f5f6f8;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis; }
         #widgets .content .widget .chart-legend-cover-text {
-          font-size: 1.2em;
+          font-size: 1.18em;
           font-weight: 400;
-          letter-spacing: -0.18px;
-          color: #2c3c4d;
+          color: #989898;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis; }
           #widgets .content .widget .chart-legend-cover-text button {
+            color: inherit;
             font-weight: 500;
             text-decoration: underline; }
         #widgets .content .widget .chart-legend-cover:hover + .chart-legend-main {

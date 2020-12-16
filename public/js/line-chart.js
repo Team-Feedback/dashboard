@@ -12,8 +12,10 @@ var ro = new ResizeObserver(entries => {
         const widgetHeader = entry.target.children[0];
         const widgetBody = entry.target.children[1];
         const lineChart = widgetBody.children[0];
-        const lineChartTitle = lineChart.children[1];
-        const lineChartCanvas = lineChart.children[2];
+        const lineChartTitle = document.querySelector('.line-chart-title');
+        const lineChartCanvas = document.querySelector('#chart-01');
+        console.log(lineChart.children, lineChartCanvas);
+        //const lineChartCanvas = document.getElementById('chart-01');
         const widgetLegend = entry.target.children[2];
         const widgetLegendItems = widgetLegend.children[1].children;
 
@@ -23,7 +25,7 @@ var ro = new ResizeObserver(entries => {
         //Update sizes
         widgetHeader.style.paddingBottom = `${widgetHeaderBP}px`;
         widgetBody.style.maxHeight = `calc(100% - ${widgetHeader.clientHeight + widgetLegend.clientHeight}px)`;
-        lineChartCanvas.style.width = `calc(100% - ${lineChartTitle.clientWidth}px)`;
+        lineChartCanvas.style.maxWidth = `calc(100% - ${lineChartTitle.clientWidth}px)`;
 
         //Legend size check
         [...widgetLegendItems].forEach(e => {
