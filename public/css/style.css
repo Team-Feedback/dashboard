@@ -9610,6 +9610,8 @@ input {
           justify-content: center; }
           #widgets .content .widget-body .pie-chart-main .svg {
             margin: 0 auto; }
+          #widgets .content .widget-body .pie-chart-main svg > g > g:last-child {
+            pointer-events: none; }
       #widgets .content .widget-body .value-box {
         padding: 2.8em 2.2em;
         display: -webkit-box;

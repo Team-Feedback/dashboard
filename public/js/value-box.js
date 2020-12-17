@@ -13,8 +13,16 @@ var ro = new ResizeObserver(entries => {
         const valueBox = widgetBody.children[0];
 
         let valueBoxYP = crWidth * .12;
-        let size = Math.min(crWidth, crHeight);
-        let scale = (crHeight - widgetHeader.clientHeight) / 188;
+        let sizeWidget = Math.max(crWidth, crHeight);
+        let stale = 0;
+
+
+
+        if (crWidth <= crHeight) {
+            scale = (crWidth) / 233;
+        } else {
+            scale = (crHeight - widgetHeader.clientHeight) / 188;
+        }
 
         valueBox.style.fontSize = `${scale}em`;
 

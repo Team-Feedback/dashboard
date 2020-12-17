@@ -11669,6 +11669,8 @@ input {
             & .svg {
               margin: 0 auto;
             }
+
+            svg > g > g:last-child { pointer-events: none }
           }
         }
 
