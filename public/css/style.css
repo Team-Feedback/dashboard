@@ -2075,6 +2075,14 @@ input {
         width: 100%; }
       #modalCard .widgets .placeholder-card.half-width {
         width: 49%; }
+      #modalCard .widgets .placeholder-card .widget {
+        background-color: #FDFDFD; }
+        #modalCard .widgets .placeholder-card .widget .chart-legend-main {
+          background-color: transparent; }
+        #modalCard .widgets .placeholder-card .widget .column-chart .column-chart-y-axis-item:nth-of-type(2n + 1) {
+          display: inline-block !important; }
+        #modalCard .widgets .placeholder-card .widget .column-chart .column-chart-y-axis-item-line {
+          border-bottom: solid 1.5px #f5f6f8 !important; }
   #modalCard .custom-accordion {
     padding: 0 4.9em;
     padding-top: 2.6em; }
@@ -9621,7 +9629,8 @@ input {
       text-align: center;
       white-space: nowrap;
       overflow: hidden;
-      text-overflow: ellipsis; }
+      text-overflow: ellipsis;
+      background-color: transparent; }
     .widget-header-buttons {
       visibility: hidden;
       opacity: 0;

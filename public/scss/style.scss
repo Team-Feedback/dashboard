@@ -3132,6 +3132,28 @@ input {
       &.half-width {
         width: 49%;
       }
+
+      & .widget {
+        background-color: #FDFDFD;
+
+        & .chart-legend-main {
+          background-color: transparent;
+        }
+
+        & .column-chart {
+          & .column-chart-y-axis{
+            &-item {
+              &:nth-of-type(2n + 1) {
+                display: inline-block!important;
+              }
+
+              &-line {
+                border-bottom: solid 1.5px #f5f6f8!important;
+              }
+            }
+          }
+        }
+      }
     }
   }
 
@@ -12712,6 +12734,7 @@ input {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      background-color: transparent;
     }
 
     &-buttons {
