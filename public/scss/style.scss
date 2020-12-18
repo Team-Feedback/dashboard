@@ -11270,7 +11270,7 @@ input {
       
       // COMBO CHART WIDGET MODIFIERS
       &.widget-combo-chart {
-        padding-bottom: 2.7em;
+        //padding-bottom: 2.7em;
 
         &.rotate-text {
 
@@ -11446,6 +11446,9 @@ input {
             grid-area: title;
             @include flexbox();
             @include align-items(center);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
 
             &-text {
               font-size: 1.18em;
@@ -11453,6 +11456,9 @@ input {
               color: #989898;
               transform: rotateX(180deg) rotateY(180deg);
               writing-mode: vertical-rl;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
             }
           }
 
@@ -11569,6 +11575,9 @@ input {
             grid-area: title;
             @include flexbox();
             @include align-items(center);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
 
             &-text {
               font-size: 1.18em;
@@ -11576,6 +11585,9 @@ input {
               color: #989898;
               transform: rotateX(180deg) rotateY(180deg);
               writing-mode: vertical-rl;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
             }
           }
 
@@ -11851,6 +11863,9 @@ input {
             color: #989898;
             transform: rotateX(180deg) rotateY(180deg);
               writing-mode: vertical-rl;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
           }
 
           &-main {

@@ -17,15 +17,20 @@ var ro = new ResizeObserver(entries => {
     const comboChartYAxis = comboChart.children[2];
     const comboChartXAxis = comboChart.children[3];
     const comboChartYAxisItems = comboChartYAxis.children;
+    const widgetLegend = entry.target.children[2];
+    const widgetLegendItems = widgetLegend.children[1].children;
 
 
     const widgetHeaderBP = crHeight * .071;
     const comboChartYAxisPadding = crWidth * .013;
+    let widgetLegendItemsWidth = 0;
 
 
 
     //Update sizes
     widgetHeader.style.paddingBottom = `${widgetHeaderBP}px`;
+    widgetBody.style.height = `calc(100% - ${widgetHeader.clientHeight + widgetLegend.clientHeight}px)`;
+
     comboChartYAxis.style.padding = `0 ${comboChartYAxisPadding}px`;
     [...comboChartYAxisItems].forEach(e => {
       e.children[1].style.width = `${comboChartArea.clientWidth}px`;
@@ -38,6 +43,17 @@ var ro = new ResizeObserver(entries => {
       entry.target.classList.add('rotate-text');
     } else {
       entry.target.classList.remove('rotate-text');
+    }
+
+    //Legend size check
+    [...widgetLegendItems].forEach(e => {
+      widgetLegendItemsWidth += e.clientWidth + 38;
+    })
+
+    if (widgetLegend.clientWidth * 2 - 28 <= widgetLegendItemsWidth) {
+      widgetLegend.classList.add('small');
+    } else {
+      widgetLegend.classList.remove('small');
     }
 
     //HEIGHT CHECK
@@ -155,6 +171,7 @@ function regularComboGraphSize() {
         e.style.marginRight = `${itemWidth * .55}%`;
       }
     })
+
   })
 
 
