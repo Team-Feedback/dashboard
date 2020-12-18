@@ -116,39 +116,48 @@ allComboCharts.forEach(e => {
 
 
 function regularComboGraphSize() {
-  let comboChartArea = document.querySelector('.combo-chart-area');
-  let comboChartBars = document.querySelectorAll('.combo-chart-area-set');
-  let comboChartXAxisItems = document.querySelectorAll('.combo-chart-x-axis-item');
+  let comboCharts = document.querySelectorAll('.combo-chart');
+  // let comboChartArea = document.querySelector('.combo-chart-area');
+  // let comboChartBars = document.querySelectorAll('.combo-chart-area-set');
+  // let comboChartXAxisItems = document.querySelectorAll('.combo-chart-x-axis-item');
 
-  let itemWidth = 100 / (comboChartBars.length + ((comboChartBars.length - 2) * .73 + 2 * 1.1));
-  console.log('itemWidth', itemWidth);
+  comboCharts.forEach(combo => {
+    let comboChartArea = combo.querySelector('.combo-chart-area');
+    let comboChartBars = combo.querySelectorAll('.combo-chart-area-set');
+    let comboChartXAxisItems = combo.querySelectorAll('.combo-chart-x-axis-item');
 
-  comboChartBars.forEach((e, i, arr) => {
-    e.style.width = `${itemWidth}%`;
-    e.style.margin = `0 ${itemWidth * .367}%`;
+    let itemWidth = 100 / (comboChartBars.length + ((comboChartBars.length - 2) * .73 + 2 * 1.1));
+    console.log('itemWidth', itemWidth);
 
-    if (i === 0) {
-      e.style.marginLeft = `${itemWidth * .55}%`;
-    }
+    comboChartBars.forEach((e, i, arr) => {
+      e.style.width = `${itemWidth}%`;
+      e.style.margin = `0 ${itemWidth * .367}%`;
 
-    if (i === arr.length - 1) {
-      e.style.marginRight = `${itemWidth * .55}%`;
-    }
+      if (i === 0) {
+        e.style.marginLeft = `${itemWidth * .55}%`;
+      }
 
+      if (i === arr.length - 1) {
+        e.style.marginRight = `${itemWidth * .55}%`;
+      }
+
+    })
+
+    comboChartXAxisItems.forEach((e, i, arr) => {
+      e.style.width = `${itemWidth}%`;
+      e.style.margin = `0 ${itemWidth * .367}%`;
+
+      if (i === 0) {
+        e.style.marginLeft = `${itemWidth * .55}%`;
+      }
+
+      if (i === arr.length - 1) {
+        e.style.marginRight = `${itemWidth * .55}%`;
+      }
+    })
   })
 
-  comboChartXAxisItems.forEach((e, i, arr) => {
-    e.style.width = `${itemWidth}%`;
-    e.style.margin = `0 ${itemWidth * .367}%`;
 
-    if (i === 0) {
-      e.style.marginLeft = `${itemWidth * .55}%`;
-    }
-
-    if (i === arr.length - 1) {
-      e.style.marginRight = `${itemWidth * .55}%`;
-    }
-  })
 
 }
 
