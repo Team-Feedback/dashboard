@@ -1,7 +1,7 @@
 // SELECT ALL CHARTS
-let columnCharts = document.querySelectorAll('.widget-column-chart');
+let comboCharts = document.querySelectorAll('.widget-combo-chart');
 
-let allcolumnCharts = [...columnCharts];
+let allComboCharts = [...comboCharts];
 
 // REUSABLE RESIZE OBSERVER
 var ro = new ResizeObserver(entries => {
@@ -11,30 +11,30 @@ var ro = new ResizeObserver(entries => {
 
     const widgetHeader = entry.target.children[0];
     const widgetBody = entry.target.children[1];
-    const columnChart = widgetBody.children[0];
-    const columnChartTitle = columnChart.children[0];
-    const columnChartArea = columnChart.children[1];
-    const columnChartYAxis = columnChart.children[2];
-    const columnChartXAxis = columnChart.children[3];
-    const columnChartYAxisItems = columnChartYAxis.children;
+    const comboChart = widgetBody.children[0];
+    const comboChartTitle = comboChart.children[0];
+    const comboChartArea = comboChart.children[1];
+    const comboChartYAxis = comboChart.children[2];
+    const comboChartXAxis = comboChart.children[3];
+    const comboChartYAxisItems = comboChartYAxis.children;
 
 
     const widgetHeaderBP = crHeight * .071;
-    const columnChartYAxisPadding = crWidth * .013;
+    const comboChartYAxisPadding = crWidth * .013;
 
 
 
     //Update sizes
     widgetHeader.style.paddingBottom = `${widgetHeaderBP}px`;
-    columnChartYAxis.style.padding = `0 ${columnChartYAxisPadding}px`;
-    [...columnChartYAxisItems].forEach(e => {
-      e.children[1].style.width = `${columnChartArea.clientWidth}px`;
-      e.children[1].style.right = `-${columnChartYAxisPadding}px`;
+    comboChartYAxis.style.padding = `0 ${comboChartYAxisPadding}px`;
+    [...comboChartYAxisItems].forEach(e => {
+      e.children[1].style.width = `${comboChartArea.clientWidth}px`;
+      e.children[1].style.right = `-${comboChartYAxisPadding}px`;
     })
 
 
     //Rotate text
-    if (columnChartXAxis.children[0].clientWidth <= 60) {
+    if (comboChartXAxis.children[0].clientWidth <= 30) {
       entry.target.classList.add('rotate-text');
     } else {
       entry.target.classList.remove('rotate-text');
@@ -110,31 +110,49 @@ var ro = new ResizeObserver(entries => {
   }
 });
 
-allcolumnCharts.forEach(e => {
+allComboCharts.forEach(e => {
   ro.observe(e);
 });
 
 
-function regularColumnGraphSize() {
-  let columnChartArea = document.querySelector('.column-chart-area');
-  let columnChartBars = document.querySelectorAll('.column-chart-area-item');
-  let columnChartXAxisItems = document.querySelectorAll('.column-chart-x-axis-item');
+function regularComboGraphSize() {
+  let comboChartArea = document.querySelector('.combo-chart-area');
+  let comboChartBars = document.querySelectorAll('.combo-chart-area-set');
+  let comboChartXAxisItems = document.querySelectorAll('.combo-chart-x-axis-item');
 
-  let itemWidth = 100 / columnChartBars.length / 2;
+  let itemWidth = 100 / (comboChartBars.length + ((comboChartBars.length - 2) * .73 + 2 * 1.1));
+  console.log('itemWidth', itemWidth);
 
-  columnChartBars.forEach(e => {
+  comboChartBars.forEach((e, i, arr) => {
     e.style.width = `${itemWidth}%`;
-    e.style.margin = `0 ${itemWidth / 2}%`;
+    e.style.margin = `0 ${itemWidth * .367}%`;
+
+    if (i === 0) {
+      e.style.marginLeft = `${itemWidth * .55}%`;
+    }
+
+    if (i === arr.length - 1) {
+      e.style.marginRight = `${itemWidth * .55}%`;
+    }
+
   })
 
-  columnChartXAxisItems.forEach(e => {
-    e.style.width = `${itemWidth * 1.5}%`;
-    e.style.margin = `0 ${itemWidth / 4}%`;
+  comboChartXAxisItems.forEach((e, i, arr) => {
+    e.style.width = `${itemWidth}%`;
+    e.style.margin = `0 ${itemWidth * .367}%`;
+
+    if (i === 0) {
+      e.style.marginLeft = `${itemWidth * .55}%`;
+    }
+
+    if (i === arr.length - 1) {
+      e.style.marginRight = `${itemWidth * .55}%`;
+    }
   })
 
 }
 
-regularColumnGraphSize()
+regularComboGraphSize()
 
 
 

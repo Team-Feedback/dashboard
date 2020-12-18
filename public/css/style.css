@@ -9125,7 +9125,7 @@ input {
               text-overflow: ellipsis; }
 
 #widgets .content {
-  padding: 4em; }
+  padding: 3.6em 4.17%; }
   #widgets .content .placeholder-wrapper {
     display: -webkit-box;
     display: -webkit-flex;
@@ -9219,6 +9219,40 @@ input {
       #widgets .content .widget.widget-column-chart.h-30 .column-chart-y-axis-item:nth-of-type(5), #widgets .content .widget.widget-column-chart.h-25 .column-chart-y-axis-item:nth-of-type(5), #widgets .content .widget.widget-column-chart.h-20 .column-chart-y-axis-item:nth-of-type(5) {
         display: inline-block !important; }
       #widgets .content .widget.widget-column-chart.h-30 .column-chart-y-axis-item:last-of-type, #widgets .content .widget.widget-column-chart.h-25 .column-chart-y-axis-item:last-of-type, #widgets .content .widget.widget-column-chart.h-20 .column-chart-y-axis-item:last-of-type {
+        display: inline-block !important; }
+    #widgets .content .widget.widget-combo-chart {
+      padding-bottom: 2.7em; }
+      #widgets .content .widget.widget-combo-chart.rotate-text .combo-chart {
+        grid-template-rows: 1fr 6em; }
+      #widgets .content .widget.widget-combo-chart.rotate-text .combo-chart-x-axis-item {
+        position: relative;
+        height: 100%;
+        white-space: nowrap;
+        overflow: visible;
+        text-overflow: ellipsis; }
+        #widgets .content .widget.widget-combo-chart.rotate-text .combo-chart-x-axis-item-label {
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: rotate(-45deg) translate(-50%, -50%);
+          top: -.3em;
+          left: 42.5%;
+          transform: rotateZ(-45deg) translate(-100%, 0);
+          transform-origin: 0 0;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 7em;
+          text-align: right; }
+      #widgets .content .widget.widget-combo-chart.h-70 .combo-chart-y-axis-item, #widgets .content .widget.widget-combo-chart.h-65 .combo-chart-y-axis-item, #widgets .content .widget.widget-combo-chart.h-60 .combo-chart-y-axis-item {
+        display: inline-block !important; }
+      #widgets .content .widget.widget-combo-chart.h-55 .combo-chart-y-axis-item:nth-of-type(2n + 1), #widgets .content .widget.widget-combo-chart.h-50 .combo-chart-y-axis-item:nth-of-type(2n + 1), #widgets .content .widget.widget-combo-chart.h-45 .combo-chart-y-axis-item:nth-of-type(2n + 1), #widgets .content .widget.widget-combo-chart.h-40 .combo-chart-y-axis-item:nth-of-type(2n + 1), #widgets .content .widget.widget-combo-chart.h-35 .combo-chart-y-axis-item:nth-of-type(2n + 1) {
+        display: inline-block !important; }
+      #widgets .content .widget.widget-combo-chart.h-30 .combo-chart-y-axis-item:first-of-type, #widgets .content .widget.widget-combo-chart.h-25 .combo-chart-y-axis-item:first-of-type, #widgets .content .widget.widget-combo-chart.h-20 .combo-chart-y-axis-item:first-of-type {
+        display: inline-block !important; }
+      #widgets .content .widget.widget-combo-chart.h-30 .combo-chart-y-axis-item:nth-of-type(5), #widgets .content .widget.widget-combo-chart.h-25 .combo-chart-y-axis-item:nth-of-type(5), #widgets .content .widget.widget-combo-chart.h-20 .combo-chart-y-axis-item:nth-of-type(5) {
+        display: inline-block !important; }
+      #widgets .content .widget.widget-combo-chart.h-30 .combo-chart-y-axis-item:last-of-type, #widgets .content .widget.widget-combo-chart.h-25 .combo-chart-y-axis-item:last-of-type, #widgets .content .widget.widget-combo-chart.h-20 .combo-chart-y-axis-item:last-of-type {
         display: inline-block !important; }
     #widgets .content .widget.widget-bar-chart {
       padding-bottom: 2.1em; }
@@ -9390,6 +9424,149 @@ input {
             width: 15%;
             text-align: center; }
             #widgets .content .widget-body .column-chart-x-axis-item-label {
+              font-size: 1.05em;
+              font-weight: 400;
+              line-height: 1.14;
+              color: #505050;
+              display: -webkit-box;
+              -webkit-line-clamp: 4;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+              word-break: break-word;
+              -webkit-hyphens: auto;
+              -ms-hyphens: auto;
+              hyphens: auto; }
+      #widgets .content .widget-body .combo-chart {
+        height: 100%;
+        display: grid;
+        grid-template-areas: "title yAxis area" "none none xAxis";
+        grid-template-columns: auto auto 1fr;
+        grid-template-rows: 1fr auto; }
+        #widgets .content .widget-body .combo-chart-title {
+          grid-area: title;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          -moz-align-items: center;
+          align-items: center; }
+          #widgets .content .widget-body .combo-chart-title-text {
+            font-size: 1.18em;
+            font-weight: 400;
+            color: #989898;
+            transform: rotateX(180deg) rotateY(180deg);
+            writing-mode: vertical-rl; }
+        #widgets .content .widget-body .combo-chart-area {
+          grid-area: area;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: end;
+          -ms-flex-align: end;
+          -webkit-align-items: flex-end;
+          -moz-align-items: flex-end;
+          align-items: flex-end;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          -webkit-justify-content: space-between;
+          -moz-justify-content: space-between;
+          justify-content: space-between;
+          border-bottom: solid 1.5px #e6e9ef;
+          border-top: solid 1.5px #f5f6f8;
+          z-index: 1; }
+          #widgets .content .widget-body .combo-chart-area-set {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: end;
+            -ms-flex-align: end;
+            -webkit-align-items: flex-end;
+            -moz-align-items: flex-end;
+            align-items: flex-end;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            -webkit-justify-content: space-between;
+            -moz-justify-content: space-between;
+            justify-content: space-between;
+            position: relative;
+            width: 10%;
+            height: 100%; }
+            #widgets .content .widget-body .combo-chart-area-set-item {
+              width: 26.5%; }
+        #widgets .content .widget-body .combo-chart-y-axis {
+          width: 100%;
+          grid-area: yAxis;
+          margin: -.5em 0;
+          padding: 0 .8em;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-direction: normal;
+          -webkit-box-orient: vertical;
+          -webkit-flex-direction: column;
+          -moz-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-align: start;
+          -ms-flex-align: start;
+          -webkit-align-items: flex-start;
+          -moz-align-items: flex-start;
+          align-items: flex-start;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          -webkit-justify-content: space-between;
+          -moz-justify-content: space-between;
+          justify-content: space-between; }
+          #widgets .content .widget-body .combo-chart-y-axis-item {
+            display: none;
+            position: relative; }
+            #widgets .content .widget-body .combo-chart-y-axis-item-line {
+              position: absolute;
+              top: 50%;
+              right: -.8em;
+              transform: translate(100%, -50%);
+              width: 47em;
+              border-bottom: solid 1.5px #f5f6f8; }
+            #widgets .content .widget-body .combo-chart-y-axis-item:first-of-type .combo-chart-y-axis-item-line, #widgets .content .widget-body .combo-chart-y-axis-item:last-of-type .combo-chart-y-axis-item-line {
+              border-bottom: 0; }
+            #widgets .content .widget-body .combo-chart-y-axis-item-label {
+              font-size: 1.05em;
+              font-weight: 400;
+              color: #505050; }
+        #widgets .content .widget-body .combo-chart-x-axis {
+          padding-top: .9em;
+          grid-area: xAxis;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: end;
+          -ms-flex-align: end;
+          -webkit-align-items: flex-end;
+          -moz-align-items: flex-end;
+          align-items: flex-end;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          -webkit-justify-content: space-between;
+          -moz-justify-content: space-between;
+          justify-content: space-between; }
+          #widgets .content .widget-body .combo-chart-x-axis-item {
+            height: 100%;
+            margin: 0 2.5%;
+            width: 15%;
+            text-align: center; }
+            #widgets .content .widget-body .combo-chart-x-axis-item-label {
               font-size: 1.05em;
               font-weight: 400;
               line-height: 1.14;
@@ -9631,7 +9808,7 @@ input {
         justify-content: center; }
         #widgets .content .widget-body .value-box-item {
           padding: 1em 0 1.2em;
-          width: 16em;
+          width: 100%;
           display: -webkit-box;
           display: -webkit-flex;
           display: -moz-flex;
@@ -9657,13 +9834,16 @@ input {
             margin-bottom: 0.3965517241em;
             font-size: 5.8em;
             font-weight: 400;
-            color: #3b3b3b; }
+            color: #3b3b3b;
+            white-space: nowrap;
+            text-align: center; }
           #widgets .content .widget-body .value-box-item-text {
             font-size: 1.33em;
             font-weight: 500;
             line-height: 0.68;
             letter-spacing: -0.07px;
-            color: #3b3b3b; }
+            color: #3b3b3b;
+            white-space: nowrap; }
     #widgets .content .widget .chart-legend {
       position: relative;
       padding-top: 1.9em;
@@ -10248,7 +10428,7 @@ input {
     text-decoration: underline; }
 
 .react-grid-layout {
-  margin-top: -30px;
+  margin-top: -20px;
   position: relative;
   transition: height 200ms ease; }
 

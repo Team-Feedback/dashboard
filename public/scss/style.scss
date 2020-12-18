@@ -11144,7 +11144,7 @@ input {
 //=================================================================
 #widgets {
   & .content {
-    padding: 4em;
+    padding: 3.6em 4.17%;
 
     & .placeholder-wrapper {
       @include flexbox();
@@ -11250,6 +11250,91 @@ input {
         &.h-25,
         &.h-20 {
           & .column-chart-y-axis{
+            &-item {
+              &:first-of-type {
+                display: inline-block!important;
+              }
+
+              &:nth-of-type(5) {
+                display: inline-block!important;
+              }
+
+              &:last-of-type {
+                display: inline-block!important;
+              }
+            }
+          }
+        }
+      }
+
+      
+      // COMBO CHART WIDGET MODIFIERS
+      &.widget-combo-chart {
+        padding-bottom: 2.7em;
+
+        &.rotate-text {
+
+          & .combo-chart {
+            grid-template-rows: 1fr 6em;
+          }
+
+          & .combo-chart-x-axis-item {
+            position: relative;
+            height: 100%;
+            white-space: nowrap;
+            overflow: visible;
+            text-overflow: ellipsis;
+
+            &-label {
+              position: absolute;
+              top: 0;
+              left: 0;
+              transform:rotate(-45deg) translate(-50%, -50%);
+
+              top: -.3em;
+              left: 42.5%;
+              transform: rotateZ(-45deg) translate(-100%, 0);
+              transform-origin: 0 0;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              width: 7em;
+              text-align: right;
+            }
+          }
+        }
+
+        &.h-70,
+        &.h-65,
+        &.h-60 {
+          & .combo-chart-y-axis{
+            &-item {
+              display: inline-block!important;
+            }
+          }
+        }
+    
+    
+        &.h-55,
+        &.h-50,
+        &.h-45,
+        &.h-40,
+        &.h-35 {
+          & .combo-chart-y-axis{
+
+            &-item {
+              &:nth-of-type(2n + 1) {
+                display: inline-block!important;
+              }
+            }
+          }
+        }
+    
+    
+        &.h-30,
+        &.h-25,
+        &.h-20 {
+          & .combo-chart-y-axis{
             &-item {
               &:first-of-type {
                 display: inline-block!important;
@@ -11427,6 +11512,131 @@ input {
 
               &:first-of-type .column-chart-y-axis-item-line,
               &:last-of-type .column-chart-y-axis-item-line {
+                border-bottom: 0;
+              }
+
+              &-label {
+                font-size: 1.05em;
+                font-weight: 400;
+                color: #505050;
+              }
+            }
+          }
+
+          &-x-axis {
+            padding-top: .9em;
+            grid-area: xAxis;
+            @include flexbox();
+            @include align-items(flex-end);
+            @include justify-content(space-between);
+
+            &-item {
+              height: 100%;
+              margin: 0 2.5%;
+              width: 15%;
+              text-align: center;
+
+              &-label {
+                font-size: 1.05em;
+                font-weight: 400;
+                line-height: 1.14;
+                color: #505050;
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;  
+                overflow: hidden;
+                word-break: break-word;
+                -webkit-hyphens: auto;
+                -ms-hyphens: auto;
+                hyphens: auto;
+              }
+            }
+          }
+
+        }
+
+        // COMBO CHART
+        & .combo-chart {
+          height: 100%;
+          display: grid;
+          grid-template-areas: 
+          "title yAxis area"
+          "none none xAxis";
+          grid-template-columns: auto auto 1fr;
+          grid-template-rows: 1fr auto;
+
+          &-title {
+            grid-area: title;
+            @include flexbox();
+            @include align-items(center);
+
+            &-text {
+              font-size: 1.18em;
+              font-weight: 400;
+              color: #989898;
+              transform: rotateX(180deg) rotateY(180deg);
+              writing-mode: vertical-rl;
+            }
+          }
+
+          &-area {
+            grid-area: area;
+            @include flexbox();
+            @include align-items(flex-end);
+            @include justify-content(space-between);
+            border-bottom: solid 1.5px #e6e9ef;
+            border-top: solid 1.5px #f5f6f8;
+            z-index: 1;
+
+            &-set {
+              // padding: 0 3.6%;
+              @include flexbox();
+              @include align-items(flex-end);
+              @include justify-content(space-between);
+              //margin: 0 5%;
+              position: relative;
+              width: 10%;
+              height: 100%;
+
+              &-item {
+                width: 26.5%;
+              }
+
+              // &:first-of-type {
+              //   padding-left: 5.51%;
+              // }
+
+              // &:last-of-type {
+              //   padding-right: 5.51%;
+              // }
+            }
+          }
+
+          &-y-axis {
+            width: 100%;
+            grid-area: yAxis;
+            margin: -.5em 0;
+            padding: 0 .8em;
+            @include flexbox();
+            @include flex-direction(column);
+            @include align-items(flex-start);
+            @include justify-content(space-between);
+
+            &-item {
+              display: none;
+              position: relative;
+
+              &-line {
+                position: absolute;
+                top: 50%;
+                right: -.8em;
+                transform: translate(100%, -50%);
+                width: 47em;
+                border-bottom: solid 1.5px #f5f6f8;
+              }
+
+              &:first-of-type .combo-chart-y-axis-item-line,
+              &:last-of-type .combo-chart-y-axis-item-line {
                 border-bottom: 0;
               }
 
@@ -11682,7 +11892,7 @@ input {
           
           &-item {
             padding: 1em 0 1.2em;
-            width: 16em;
+            width: 100%;
             @include flexbox();
             @include flex-direction(column);
             @include align-items(center);
@@ -11693,6 +11903,10 @@ input {
               font-size: 5.8em;
               font-weight: 400;
               color: #3b3b3b;
+              white-space: nowrap;
+              //min-width: 100%;
+              text-align: center;
+              //min-height: 6.9rem;
             }
 
             &-text {
@@ -11701,6 +11915,7 @@ input {
               line-height: 0.68;
               letter-spacing: -0.07px;
               color: #3b3b3b;
+              white-space: nowrap;
             }
           }
         }
@@ -16161,7 +16376,7 @@ input {
 }
 
 .react-grid-layout {
-  margin-top: -30px;
+  margin-top: -20px;
   position: relative;
   transition: height 200ms ease;
 
