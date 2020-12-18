@@ -6590,6 +6590,7 @@ input {
     // background-image: linear-gradient(to right, #2a7bfa 1%, #1a68eb 99%);
     background-color: #0062ff;
     transition: height 0.5s ease-in-out, padding-top 0.5s ease-in-out, background-color 0.2s ease-in-out;
+    border-bottom: solid 1px #0062ff;
 
     &.hide {
       height: 0!important;
