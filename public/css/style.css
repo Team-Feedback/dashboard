@@ -9500,7 +9500,8 @@ input {
             width: 10%;
             height: 100%; }
             #widgets .content .widget-body .combo-chart-area-set-item {
-              width: 26.5%; }
+              width: 26.5%;
+              border-radius: 2px 2px  0 0; }
         #widgets .content .widget-body .combo-chart-y-axis {
           width: 100%;
           grid-area: yAxis;
