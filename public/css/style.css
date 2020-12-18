@@ -9223,7 +9223,7 @@ input {
     #widgets .content .widget.widget-combo-chart {
       padding-bottom: 2.7em; }
       #widgets .content .widget.widget-combo-chart.rotate-text .combo-chart {
-        grid-template-rows: 1fr 6em; }
+        grid-template-rows: 1fr 3em; }
       #widgets .content .widget.widget-combo-chart.rotate-text .combo-chart-x-axis-item {
         position: relative;
         height: 100%;
