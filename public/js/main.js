@@ -24,11 +24,13 @@ if (sideToglle.length) {
   })
 }
 
-document.addEventListener('click', function (event) {
-  if (side !== event.target && !side.contains(event.target) && sideToglle !== event.target && !sideToglle[0].contains(event.target)) {
-    side.classList.remove('open')
-  }
-});
+if (side) {
+  document.addEventListener('click', function (event) {
+    if (side !== event.target && !side.contains(event.target) && sideToglle !== event.target && !sideToglle[0].contains(event.target)) {
+      side.classList.remove('open')
+    }
+  });
+}
 
 // //GIVE FEEDBACK PAGE PEOPLE CONTAINER HEIGHT LIMIT
 // function peopleHeightLimit() {
@@ -220,6 +222,22 @@ if (document.querySelector('.header-nav-list')) {
 
 if (document.querySelector('.header-sub-nav-list')) {
   document.querySelector('.header-sub-nav-list').addEventListener('wheel', transformScroll);
+}
+
+let giveFeedbackPage = document.querySelector('#give-feedback');
+
+if (giveFeedbackPage) {
+  let contentWrapper = giveFeedbackPage.querySelector('.content');
+  let headerMain = giveFeedbackPage.querySelector('.header-main');
+  console.log(contentWrapper)
+
+  contentWrapper.addEventListener('scroll', function () {
+    if (this.scrollTop >= 400) {
+      headerMain.style.borderColor = "transparent";
+    } else {
+      headerMain.style.borderBottom = "solid 1px #f0f0f0";
+    }
+  })
 }
 
 

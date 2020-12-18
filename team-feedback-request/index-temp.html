@@ -14,14 +14,6 @@
   <main class="main" id="team-feedback-request-temp">
     <!-- Header -->
     <div class="header small">
-      <!-- Buttons -->
-      <div class="header-buttons">
-        <div class="header-buttons-settings"><i class="icon-cog"></i></div>
-        <div class="header-buttons-help"><i class="icon-question"></i></div>
-        <div class="header-buttons-notifications"><i class="icon-bell"></i></div>
-        <div class="header-buttons-initials">M</div>
-      </div>
-
       <!-- Header top -->
       <div class="header-top">
         <div class="header-top-logo">
@@ -39,6 +31,14 @@
             <i class="icon-arrow-left"></i>
           </div>
           <h1 class="header-main-info-title">Header H1</h1>
+        </div>
+
+        <!-- Buttons -->
+        <div class="header-buttons">
+          <div class="header-buttons-settings"><i class="icon-cog"></i></div>
+          <div class="header-buttons-help"><i class="icon-question"></i></div>
+          <div class="header-buttons-notifications"><i class="icon-bell"></i></div>
+          <div class="header-buttons-initials">M</div>
         </div>
       </div>
 
@@ -230,7 +230,6 @@
               </div>
             </div>
 
-
             <div class="request-card">
               <div class="request-card-header">
                 <p class="request-card-header-text"><span class="strong">Marko Rajkovic -
@@ -250,7 +249,14 @@
                   </div>
                 </div>
               </div>
-              <div class="request-card-body">
+
+              <div class="request-card-placeholder">
+                <p class="request-card-placeholder-title">No team member selected</p>
+                <p class="request-card-placeholder-text">Please select a team member from above to start adding
+                  requests.</p>
+              </div>
+
+              <div class="request-card-body" style="display: none;">
                 <div class="struct">
                   <div class="struct-left">
                     <div class="struct-item">
@@ -647,6 +653,10 @@
         this.classList.add('active');
       })
     })
+
+    const requestUsers = document.querySelector('.users');
+    const requestCard = document.querySelector('.request-card');
+    requestCard.style.height = `calc(100% - ${requestUsers.clientHeight + 20}px)`;
   </script>
 </body>
 

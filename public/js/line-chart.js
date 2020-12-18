@@ -44,10 +44,9 @@ allLineCharts.forEach(e => {
 
 
 //LINE CHART
-var ctx01 = document.getElementById("chart-01").getContext("2d");
+//var ctx01 = document.getElementById("chart-01").getContext("2d");
 
-
-let chart01 = new Chart(ctx01, {
+let options = {
     type: "line",
     data: {
         datasets: [
@@ -166,4 +165,11 @@ let chart01 = new Chart(ctx01, {
             ],
         },
     },
-});
+};
+
+allLineCharts.forEach((e, i) => {
+    window[`ctx${i}`] = e.querySelector('canvas').getContext("2d")
+    window[`chart${i}`] = new Chart(window[`ctx${i}`], options);
+})
+
+//
