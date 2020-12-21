@@ -14,6 +14,7 @@ var ro = new ResizeObserver(entries => {
     const columnChart = widgetBody.children[0];
     const columnChartTitle = columnChart.children[0];
     const columnChartArea = columnChart.children[1];
+    const columnChartAreaItems = columnChartArea.children;
     const columnChartYAxis = columnChart.children[2];
     const columnChartXAxis = columnChart.children[3];
     const columnChartYAxisItems = columnChartYAxis.children;
@@ -30,7 +31,19 @@ var ro = new ResizeObserver(entries => {
     [...columnChartYAxisItems].forEach(e => {
       e.children[1].style.width = `${columnChartArea.clientWidth}px`;
       e.children[1].style.right = `-${columnChartYAxisPadding}px`;
-    })
+    });
+
+    [...columnChartAreaItems].forEach(e => {
+      if (e.classList.contains('split')) {
+        let firstSplit = e.children[0];
+        let secondSplit = e.children[1];
+
+        console.log(firstSplit.children[0])
+
+        firstSplit.children[0].style.fontSize = `${1.7 * (firstSplit.clientWidth / 30)}em`;
+        secondSplit.children[0].style.fontSize = `${2.2 * (secondSplit.clientWidth / 30)}em`;
+      }
+    });
 
 
     //Rotate text
