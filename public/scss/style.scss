@@ -1950,10 +1950,15 @@ input {
         }
 
         &-desc {
+          padding: 0 1rem;
           font-size: 1.25em;
           font-weight: 400;
           letter-spacing: -0.06px;
           color: #7c8086;
+          border: 0;
+          text-align: center;
+          width: 100%;
+          overflow: visible;
         }
       }
 
@@ -2071,8 +2076,8 @@ input {
       }
 
       &:focus {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0!important;
+        border-bottom-right-radius: 0!important;
       }
     }
 
@@ -10016,14 +10021,37 @@ input {
     border-collapse: collapse;
 
     & .custom-table-row {
-      border: 1.25px solid #ededed;
+      position: relative;
+      //margin-top: -1.25px!important;
+      //border: 1.25px solid #ededed!important;
       border-left: 0;
       border-right: 0;
-      &:hover {
-        background-color: #faf9f9;
-  
-        //border: 1.25px solid #ededed;
+      z-index: 1;
+
+      &.hide-border {
+        border-color: transparent!important;
+      }
+
+      &::before {
+        display: none;
+        content:'';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, calc(-50%));
+        width: calc(100%);
+        height: calc(100% + 2.5px);
+        border: 1.25px solid #ededed!important;
         border-radius: 8px;
+        z-index: -1;
+        background-color: #FAFAFA;
+      }
+      &:hover:before {
+        display: block;
+      }
+
+      &:hover {
+        border-color: transparent!important;
       }
     }
   }
@@ -10895,6 +10923,11 @@ input {
         padding-right: clamp(4em, 6%, 9em);
       }
 
+      @include respond(desktop-xsm) {
+        padding-left: clamp(2.5em, 6%, 9em);
+        padding-right: clamp(2.5em, 6%, 9em);
+      }
+
       // @include respond(desktop-sm) {
       //   padding-left: 3.1em;
       //   padding-right: 3.1em;
@@ -11186,6 +11219,19 @@ input {
           @include align-items(center);
           @include justify-content(center);
           cursor: pointer;
+
+          @include custom-respond(800) {
+            width: 25%;
+          }
+
+          @include respond(desktop-xsm) {
+            font-size: .95em;
+            width: 33.333%;
+          }
+
+          @include custom-respond(450) {
+            font-size: .9em;
+          }
 
           &:hover .person-main-img,
           &:hover .person-main-initials {

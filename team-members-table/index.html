@@ -1924,6 +1924,18 @@
   <script src="../public/js/main.js"></script>
   <script src="../public/js/tables.js"></script>
   <script src="../public/js/feedback.js"></script>
+
+  <script>
+    document.querySelectorAll('.custom-table-body .custom-table-row').forEach((e, i, arr) => {
+      e.addEventListener('mouseover', function () {
+        this.previousElementSibling && this.previousElementSibling.classList.add('hide-border');
+      })
+
+      e.addEventListener('mouseout', function () {
+        this.previousElementSibling && this.previousElementSibling.classList.remove('hide-border');
+      })
+    })
+  </script>
 </body>
 
 </html>
