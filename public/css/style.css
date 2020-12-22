@@ -911,7 +911,18 @@ input {
     border-radius: 5px;
     box-shadow: 0 5px 10px 0 rgba(139, 139, 139, 0.08);
     border: solid 1.5px #eff0f2;
+    border: 0;
     background-color: #ffffff; }
+    .custom-dropdown.user-dropdown .custom-dropdown-menu::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+      border: solid 1.5px #eff0f2;
+      pointer-events: none; }
   .custom-dropdown.user-dropdown .user-dropdown-menu-header {
     padding-top: 2.5em;
     padding-bottom: 1.6em;
@@ -936,7 +947,6 @@ input {
     -webkit-justify-content: center;
     -moz-justify-content: center;
     justify-content: center;
-    border-bottom: 1px solid #e8eaed;
     cursor: default; }
     .custom-dropdown.user-dropdown .user-dropdown-menu-header-set {
       margin-bottom: 2.4em;
@@ -1030,8 +1040,9 @@ input {
     font-size: 1.3em;
     font-weight: 400;
     color: #373738;
-    border-bottom: 1px solid #e8eaed;
     cursor: pointer; }
+    .custom-dropdown.user-dropdown .user-dropdown-menu-item:not(:last-of-type) {
+      border-bottom: 1px solid #e8eaed; }
     .custom-dropdown.user-dropdown .user-dropdown-menu-item:hover {
       background-color: #f1f1f1; }
   .custom-dropdown.divider-dropdown:hover .struct-divider-symbol:after {
@@ -1200,6 +1211,8 @@ input {
           font-size: 1.2em;
           font-weight: 400;
           color: #757f95; }
+  .custom-dropdown.notification-dropdown:hover .notification-dropdown-trigger-amount {
+    display: none; }
   .custom-dropdown.notification-dropdown .notification-dropdown-trigger-amount {
     padding: 0 .45rem;
     position: absolute;
@@ -1278,6 +1291,34 @@ input {
         height: 3.4em;
         object-fit: contain;
         border-radius: 50%; }
+      .custom-dropdown.notification-dropdown .custom-dropdown-menu .notification-initials {
+        margin-right: 0.8965517241em;
+        display: -webkit-inline-box;
+        display: -webkit-inline-flex;
+        display: -moz-inline-flex;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        justify-content: center;
+        width: 2.3448275862em;
+        height: 2.3448275862em;
+        min-width: 2.3448275862em;
+        min-height: 2.3448275862em;
+        max-width: 2.3448275862em;
+        max-height: 2.3448275862em;
+        border-radius: 50%;
+        font-size: 1.45em;
+        font-weight: 700;
+        color: #FFF;
+        background-color: #FFBF12; }
       .custom-dropdown.notification-dropdown .custom-dropdown-menu .notification-main-text {
         margin-bottom: 0.96em;
         font-size: 1.25em;
@@ -4780,7 +4821,7 @@ input {
             text-overflow: ellipsis; }
             .custom-table-row td:not(.column-05) .table-set-info-name-icon {
               display: none;
-              margin-left: 0.9rem;
+              margin-left: 0.3rem;
               font-size: 1.078125em;
               color: #ffba00; }
             .custom-table-row td:not(.column-05) .table-set-info-name.lead .table-set-info-name-icon {
@@ -4819,6 +4860,8 @@ input {
       .custom-table-row .td-input::placeholder {
         letter-spacing: -0.06px;
         color: rgba(27, 39, 51, 0.38); }
+    .custom-table-row .no-data {
+      color: rgba(27, 39, 51, 0.38); }
   .custom-table-input-row {
     height: 6em;
     display: none;
@@ -5517,13 +5560,6 @@ input {
       /* Firefox */
       -ms-overflow-style: none;
       /* Internet Explorer 10+ */ }
-      .header-nav-list::after {
-        content: '';
-        padding-right: 3.45em;
-        display: inline-block;
-        width: 0;
-        height: 100%;
-        background-color: transparent; }
       .header-nav-list::-webkit-scrollbar {
         /* WebKit */
         width: 0;
@@ -5604,6 +5640,15 @@ input {
           z-index: 0; }
         .header-nav-list-item.active svg {
           display: block; }
+      .header-nav-list .add-new-widgets {
+        margin-left: auto; }
+        .header-nav-list .add-new-widgets button {
+          margin-left: 1em;
+          font-size: 1.25em;
+          font-weight: 600;
+          text-align: right;
+          color: var(--color-dark-gray);
+          white-space: nowrap; }
   .header-sub-nav {
     position: relative;
     margin: 1.6em 4em 0;
@@ -5722,15 +5767,6 @@ input {
           z-index: 0; }
         .header-sub-nav-list-item.active svg {
           display: block; }
-      .header-sub-nav-list .add-new-widgets {
-        margin-left: auto; }
-        .header-sub-nav-list .add-new-widgets button {
-          margin-left: 1em;
-          font-size: 1.25em;
-          font-weight: 600;
-          text-align: right;
-          color: var(--color-dark-gray);
-          white-space: nowrap; }
   .header.small {
     padding-top: 0; }
     .header.small .header-buttons-settings, .header.small .header-buttons-help, .header.small .header-buttons-notifications, .header.small .header-buttons .notification-dropdown .custom-dropdown-trigger {
@@ -8109,8 +8145,7 @@ input {
   #team-members-table .custom-table-body .custom-table-row {
     position: relative;
     border-left: 0;
-    border-right: 0;
-    z-index: 1; }
+    border-right: 0; }
     #team-members-table .custom-table-body .custom-table-row.hide-border {
       border-color: transparent !important; }
     #team-members-table .custom-table-body .custom-table-row::before {
@@ -8123,9 +8158,7 @@ input {
       width: calc(100%);
       height: calc(100% + 2.5px);
       border: 1.25px solid #ededed !important;
-      border-radius: 8px;
-      z-index: -1;
-      background-color: #FAFAFA; }
+      border-radius: 8px; }
     #team-members-table .custom-table-body .custom-table-row:hover:before {
       display: block; }
     #team-members-table .custom-table-body .custom-table-row:hover {
@@ -9185,8 +9218,8 @@ input {
           #give-feedback .content-card .people .person {
             font-size: .9em; } }
         #give-feedback .content-card .people .person:hover .person-main-img, #give-feedback .content-card .people .person:hover .person-main-initials {
-          transform: scale(1.05);
-          box-shadow: 0px 5px 8px rgba(116, 116, 116, 0.35); }
+          transform: scale(1.06) translateY(-2.5px);
+          box-shadow: 0 6px 12px 0 rgba(213, 213, 213, 0.5); }
         #give-feedback .content-card .people .person-main {
           margin-bottom: .7em;
           position: relative; }
@@ -9195,7 +9228,8 @@ input {
             height: 8.5em;
             object-fit: contain;
             border-radius: 16px;
-            transition: all .2s ease-in-out; }
+            transition: all .2s ease-in-out;
+            box-shadow: 0 3px 6px 0 rgba(221, 221, 221, 0.4); }
           #give-feedback .content-card .people .person-main-initials {
             text-transform: uppercase;
             display: -webkit-inline-box;
@@ -9222,7 +9256,8 @@ input {
             background-color: #fea42a;
             object-fit: contain;
             border-radius: 16px;
-            transition: all .2s ease-in-out; }
+            transition: all .2s ease-in-out;
+            box-shadow: 0 3px 6px 0 rgba(221, 221, 221, 0.4); }
           #give-feedback .content-card .people .person-main-icon {
             display: -webkit-box;
             display: -webkit-flex;
@@ -9470,8 +9505,42 @@ input {
             #team-members-grid .content-card-main .people .person-main-img {
               width: 7.5em;
               height: 7.5em;
+              min-width: 7.5em;
+              min-height: 7.5em;
+              max-width: 7.5em;
+              max-height: 7.5em;
               object-fit: contain;
               border-radius: 16px; }
+            #team-members-grid .content-card-main .people .person-main-initials {
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: -moz-flex;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-align: center;
+              -ms-flex-align: center;
+              -webkit-align-items: center;
+              -moz-align-items: center;
+              align-items: center;
+              -webkit-box-pack: center;
+              -ms-flex-pack: center;
+              -webkit-justify-content: center;
+              -moz-justify-content: center;
+              justify-content: center;
+              width: 2.6315789474em;
+              height: 2.6315789474em;
+              min-width: 2.6315789474em;
+              min-height: 2.6315789474em;
+              max-width: 2.6315789474em;
+              max-height: 2.6315789474em;
+              object-fit: contain;
+              font-size: 2.85em;
+              font-weight: 700;
+              line-height: 1.19;
+              letter-spacing: -0.43px;
+              color: #ffffff;
+              border-radius: 16px;
+              background-color: #fea42a; }
             #team-members-grid .content-card-main .people .person-main-icon {
               display: -webkit-box;
               display: -webkit-flex;

@@ -13,13 +13,6 @@
   <main class="main" id="team-members-grid">
     <!-- Header -->
     <div class="header small">
-      <!-- Buttons -->
-      <div class="header-buttons">
-        <div class="header-buttons-settings"><i class="icon-cog"></i></div>
-        <div class="header-buttons-help"><i class="icon-question"></i></div>
-        <div class="header-buttons-notifications"><i class="icon-bell"></i></div>
-        <div class="header-buttons-initials">M</div>
-      </div>
 
       <!-- Header top -->
       <div class="header-top">
@@ -39,10 +32,113 @@
           </div>
           <h1 class="header-main-info-title">Team Marketing</h1>
         </div>
+
+        <!-- Buttons -->
+        <div class="header-buttons">
+          <div class="header-buttons-settings"><i class="icon-cog"></i></div>
+          <div class="header-buttons-help"><i class="icon-question"></i></div>
+          <!-- NOTIFICATION DROPDOWN -->
+          <div class="custom-dropdown notification-dropdown">
+            <div class="custom-dropdown-trigger" tabindex="-1" onclick="this.focus()">
+              <i class="icon-bell"></i>
+              <span class="notification-dropdown-trigger-amount">99</span>
+            </div>
+
+            <ul class="custom-dropdown-menu">
+              <li class="custom-dropdown-menu-title-big">
+                <p class="custom-dropdown-menu-title-big-text">
+                  Notifications (4)
+                </p>
+              </li>
+              <li class="custom-dropdown-menu-title-small">
+                <p class="custom-dropdown-menu-title-small-text">
+                  Invitations / Rights
+                </p>
+              </li>
+              <li class="custom-dropdown-menu-notifications">
+                <div class="notification">
+                  <img src="../public/img/p-01.png" alt="User's profile image" class="notification-img" />
+                  <div class="notification-main">
+                    <p class="notification-main-text">
+                      Abdula Ahmed wants to invite you to become a
+                      <span>member</span> of the team <span>salsa-kings</span>
+                    </p>
+                    <div class="notification-main-buttons">
+                      <button class="notification-button confirm">
+                        Confirm
+                      </button>
+                      <button class="notification-button deny">Deny</button>
+                    </div>
+                    <p class="notification-main-time">1 Day ago</p>
+                  </div>
+                </div>
+
+                <div class="notification">
+                  <img src="../public/img/p-01.png" alt="User's profile image" class="notification-img" />
+                  <div class="notification-main">
+                    <p class="notification-main-text">
+                      Abdula Ahmed wants to invite you to become a
+                      <span>member</span> of the team <span>salsa-kings</span>
+                    </p>
+                    <div class="notification-main-buttons">
+                      <button class="button notification-button confirm">
+                        Confirm
+                      </button>
+                      <button class="button notification-button deny">
+                        Deny
+                      </button>
+                    </div>
+                    <p class="notification-main-time">1 Day ago</p>
+                  </div>
+                </div>
+
+                <div class="notification">
+                  <img src="../public/img/p-01.png" alt="User's profile image" class="notification-img" />
+                  <div class="notification-main">
+                    <p class="notification-main-text">
+                      Abdula Ahmed wants to invite you to become a
+                      <span>member</span> of the team <span>salsa-kings</span>
+                    </p>
+                    <div class="notification-main-buttons">
+                      <button class="button notification-button confirm">
+                        Confirm
+                      </button>
+                      <button class="button notification-button deny">
+                        Deny
+                      </button>
+                    </div>
+                    <p class="notification-main-time">1 Day ago</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="custom-dropdown user-dropdown">
+            <button class="custom-dropdown-trigger initials" tabindex="-1" onclick="this.focus()">
+              M
+            </button>
+            <ul class="custom-dropdown-menu">
+              <li class="user-dropdown-menu-header">
+                <div class="user-dropdown-menu-header-set">
+                  <div class="user-dropdown-menu-header-set-initials">M</div>
+                  <div class="user-dropdown-menu-header-set-upload">
+                    <i class="icon-camera"></i>
+                  </div>
+                </div>
+                <p class="user-dropdown-menu-header-title">Max Matinpalo</p>
+                <input class="user-dropdown-menu-header-desc" placeholder="Click here to add your job title"
+                  Value=""></input>
+              </li>
+              <li class="user-dropdown-menu-item">Open user settings</li>
+              <li class="user-dropdown-menu-item modal-trigger" target-modal="createCompanyModal">Create company</li>
+              <li class="user-dropdown-menu-item">Sign out</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       <!-- Header navigation -->
-      <div class="header-nav">
+      <!-- <div class="header-nav">
         <ul class="header-nav-list">
           <li class="header-nav-list-item">
             <button class="header-nav-list-item-text" text="Feedback charts">Feedback charts</button>
@@ -126,7 +222,7 @@
             </svg>
           </li>
         </ul>
-      </div>
+      </div> -->
 
       <!-- <div class="header-sub-nav">
         <ul class="header-sub-nav-list">
@@ -228,9 +324,9 @@
             <p class="content-card-header-title">Team members</p>
             <p class="options">
 
-              <button class="options-link">Table view</button>
+              <button class="options-link" onclick="location.href='../team-members-table';">Table view</button>
               <span class="options-divider">I</span>
-              <button class="options-link active">Grid view</button>
+              <button class="options-link active" onclick="location.href='../team-members-grid';">Grid view</button>
 
             </p>
             <div class="content-card-header-bottom">
@@ -267,7 +363,8 @@
             <div class="people">
               <div class="person">
                 <div class="person-main">
-                  <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+                  <!-- <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" /> -->
+                  <div class="person-main-initials">MR</div>
                   <div class="person-main-icon">
                     <i class="icon-thumbs-up"></i>
                   </div>
@@ -307,6 +404,7 @@
               <div class="person">
                 <div class="person-main">
                   <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+                  <div class="person-main-initials">MR</div>
                   <div class="person-main-icon">
                     <i class="icon-thumbs-up"></i>
                   </div>
@@ -346,6 +444,7 @@
               <div class="person">
                 <div class="person-main">
                   <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" />
+                  <div class="person-main-initials">MR</div>
                   <div class="person-main-icon">
                     <i class="icon-thumbs-up"></i>
                   </div>

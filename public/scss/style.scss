@@ -1886,7 +1886,20 @@ input {
       border-radius: 5px;
       box-shadow: 0 5px 10px 0 rgba(139, 139, 139, 0.08);
       border: solid 1.5px #eff0f2;
+      border: 0;
       background-color: #ffffff;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        border: solid 1.5px #eff0f2;
+        pointer-events: none;
+      }
     }
 
     & .user-dropdown-menu {
@@ -1897,8 +1910,10 @@ input {
         @include flex-direction(column);
         @include align-items(center);
         @include justify-content(center);
-        border-bottom: 1px solid #e8eaed;
+        //border-bottom: 1px solid #e8eaed;
         cursor: default;
+
+
 
         &-set {
           margin-bottom: 2.4em;
@@ -1970,8 +1985,12 @@ input {
         font-size: 1.3em;
         font-weight: 400;
         color: #373738;
-        border-bottom: 1px solid #e8eaed;
+        
         cursor: pointer;
+
+        &:not(:last-of-type) {
+          border-bottom: 1px solid #e8eaed;
+        }
 
         &:hover {
           background-color: #f1f1f1;
@@ -2169,6 +2188,10 @@ input {
   //NOTIFICATION DROPDOWN
   &.notification-dropdown {
 
+    &:hover .notification-dropdown-trigger-amount {
+      display: none;
+    }
+
     & .notification-dropdown-trigger {
       &-amount {
         padding: 0 .45rem;
@@ -2237,6 +2260,24 @@ input {
           height: 3.4em;
           object-fit: contain;
           border-radius: 50%;
+        }
+
+        &-initials {
+          margin-right: emcalc(1.3,1.45);
+          @include inline-flex();
+          @include align-items(center);
+          @include justify-content(center);
+          width: emcalc(3.4,1.45);
+          height: emcalc(3.4,1.45);
+          min-width: emcalc(3.4,1.45);
+          min-height: emcalc(3.4,1.45);
+          max-width: emcalc(3.4,1.45);
+          max-height: emcalc(3.4,1.45);
+          border-radius: 50%;
+          font-size: 1.45em;
+          font-weight: 700;
+          color: #FFF;
+          background-color: #FFBF12;
         }
 
         &-main {
@@ -6093,7 +6134,7 @@ input {
 
             &-icon {
               display: none;
-              margin-left: 0.9rem;
+              margin-left: 0.3rem;
               font-size: emcalc(1.38, 1.28);
               color: #ffba00;
             }
@@ -6164,6 +6205,10 @@ input {
         letter-spacing: -0.06px;
         color: rgba(27, 39, 51, 0.38);
       }
+    }
+
+    & .no-data {
+      color: rgba(27, 39, 51, 0.38);
     }
   }
 
@@ -6886,14 +6931,14 @@ input {
       width: 100%;
       min-width: 0;
 
-      &::after {
-        content: '';
-        padding-right: 3.45em;
-        display: inline-block;
-        width: 0;
-        height: 100%;
-        background-color: transparent;
-      }
+      // &::after {
+      //   content: '';
+      //   padding-right: 3.45em;
+      //   display: inline-block;
+      //   width: 0;
+      //   height: 100%;
+      //   background-color: transparent;
+      // }
 
       overflow-x: scroll;
       //max-width: 100vw;
@@ -7029,6 +7074,19 @@ input {
           display: block;
         }
       }
+
+      & .add-new-widgets {
+        margin-left: auto;
+
+        & button {
+          margin-left: 1em;
+          font-size: 1.25em;
+          font-weight: 600;
+          text-align: right;
+          color: var(--color-dark-gray);
+          white-space: nowrap;
+        }
+      }
     }
   }
 
@@ -7152,18 +7210,18 @@ input {
         }
       }
 
-      & .add-new-widgets {
-        margin-left: auto;
+      // & .add-new-widgets {
+      //   margin-left: auto;
 
-        & button {
-          margin-left: 1em;
-          font-size: 1.25em;
-          font-weight: 600;
-          text-align: right;
-          color: var(--color-dark-gray);
-          white-space: nowrap;
-        }
-      }
+      //   & button {
+      //     margin-left: 1em;
+      //     font-size: 1.25em;
+      //     font-weight: 600;
+      //     text-align: right;
+      //     color: var(--color-dark-gray);
+      //     white-space: nowrap;
+      //   }
+      // }
     }
   }
 
@@ -10026,7 +10084,7 @@ input {
       //border: 1.25px solid #ededed!important;
       border-left: 0;
       border-right: 0;
-      z-index: 1;
+      //z-index: 1;
 
       &.hide-border {
         border-color: transparent!important;
@@ -10043,8 +10101,8 @@ input {
         height: calc(100% + 2.5px);
         border: 1.25px solid #ededed!important;
         border-radius: 8px;
-        z-index: -1;
-        background-color: #FAFAFA;
+        //z-index: -1;
+        //background-color: #FAFAFA;
       }
       &:hover:before {
         display: block;
@@ -11235,8 +11293,8 @@ input {
 
           &:hover .person-main-img,
           &:hover .person-main-initials {
-            transform: scale(1.05);
-            box-shadow: 0px 5px 8px rgba(116,116,116,0.35);
+            transform: scale(1.06) translateY(-2.5px);
+            box-shadow: 0 6px 12px 0 rgba(213, 213, 213, 0.5);
           }
 
           &-main {
@@ -11249,6 +11307,7 @@ input {
               object-fit: contain;
               border-radius: 16px;
               transition: all .2s ease-in-out;
+              box-shadow: 0 3px 6px 0 rgba(221, 221, 221, 0.4);
             }
 
             &-initials {
@@ -11266,6 +11325,7 @@ input {
               object-fit: contain;
               border-radius: 16px;
               transition: all .2s ease-in-out;
+              box-shadow: 0 3px 6px 0 rgba(221, 221, 221, 0.4);
             }
 
             &-icon {
@@ -11519,8 +11579,32 @@ input {
               &-img {
                 width: 7.5em;
                 height: 7.5em;
+                min-width: 7.5em;
+                min-height: 7.5em;
+                max-width: 7.5em;
+                max-height: 7.5em;
                 object-fit: contain;
                 border-radius: 16px;
+              }
+
+              &-initials {
+                @include flexbox();
+                @include align-items(center);
+                @include justify-content(center);
+                width: emcalc(7.5,2.85);
+                height: emcalc(7.5,2.85);
+                min-width: emcalc(7.5,2.85);
+                min-height: emcalc(7.5,2.85);
+                max-width: emcalc(7.5,2.85);
+                max-height: emcalc(7.5,2.85);
+                object-fit: contain;
+                font-size: 2.85em;
+                font-weight: 700;
+                line-height: 1.19;
+                letter-spacing: -0.43px;
+                color: #ffffff;
+                border-radius: 16px;
+                background-color: #fea42a;
               }
 
               &-icon {
