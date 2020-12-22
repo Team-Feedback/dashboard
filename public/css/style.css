@@ -8520,35 +8520,28 @@ input {
   #team-members-table .content-card .placeholder-img {
     margin-bottom: 5.3em;
     width: 100%;
-    max-width: 22.5em;
+    max-width: clamp(15em, 30vw, 22.5em);
     min-width: 0;
     object-fit: contain; }
   #team-members-table .content-card .placeholder-title {
     margin-bottom: 0.8888888889em;
-    font-size: 1.8em;
+    font-size: clamp(1.5em, 2vw, 1.8em);
     font-weight: 600;
     letter-spacing: -0.45px;
     color: #2c3952; }
   #team-members-table .content-card .placeholder-text {
     padding-bottom: 2em;
-    font-size: 1.28em;
+    font-size: clamp(1.15em, 1.5vw, 1.28em);
     font-weight: 400;
     letter-spacing: -0.13px;
     color: #383838; }
-#team-members-table .content-card.show-placeholder .fake-card {
-  height: 100% !important;
-  z-index: -1; }
-#team-members-table .content-card.show-placeholder .placeholder {
+#team-members-table .content-card .no-results {
+  padding: clamp(3em, 50vh, 9em) 3em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
-  display: flex; }
-#team-members-table .content-card.show-placeholder .custom-table-wrapper {
-  display: none; }
-
-#team-members-grid .content-card .placeholder {
-  display: none;
+  display: flex;
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
   -webkit-flex-direction: column;
@@ -8565,45 +8558,181 @@ input {
   -webkit-justify-content: center;
   -moz-justify-content: center;
   justify-content: center;
-  height: 100%;
-  width: 100%;
-  border-radius: 5px;
-  box-shadow: 0 3px 6px 0 rgba(226, 226, 226, 0.11);
-  border: solid 1.5px #ebecf0;
-  background-color: #ffffff; }
-  #team-members-grid .content-card .placeholder-img {
-    margin-bottom: 5.3em;
-    width: 100%;
-    max-width: clamp(15em, 30vw, 22.5em);
-    min-width: 0;
-    object-fit: contain; }
-  #team-members-grid .content-card .placeholder-title {
-    margin-bottom: 0.8888888889em;
-    font-size: clamp(1.5em, 2vw, 1.8em);
-    font-weight: 600;
-    letter-spacing: -0.45px;
-    color: #2c3952; }
-  #team-members-grid .content-card .placeholder-text {
-    padding-bottom: 2em;
-    font-size: clamp(1.15em, 1.5vw, 1.28em);
-    font-weight: 400;
-    letter-spacing: -0.13px;
-    color: #383838; }
-#team-members-grid .content-card.show-placeholder {
-  height: 100% !important;
-  padding-bottom: 3.4em; }
-  #team-members-grid .content-card.show-placeholder .placeholder {
+  width: 100%; }
+  #team-members-table .content-card .no-results-wrapper {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox;
-    display: flex; }
-  #team-members-grid .content-card.show-placeholder .content-card-main {
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
+    width: 100%; }
+  #team-members-table .content-card .no-results-img {
+    margin-bottom: 2em;
+    width: 100%;
+    max-width: 5.8em;
+    object-fit: contain; }
+  #team-members-table .content-card .no-results-title {
+    margin-bottom: 0.8em;
+    font-size: 1.5em;
+    font-weight: 600;
+    letter-spacing: -0.26px;
+    color: #2c3952; }
+  #team-members-table .content-card .no-results-text {
+    font-size: 1.28em;
+    font-weight: 400;
+    letter-spacing: -0.06px;
+    color: #383838; }
+    #team-members-table .content-card .no-results-text button {
+      font-weight: 500;
+      color: #167efa; }
+      #team-members-table .content-card .no-results-text button:hover {
+        text-decoration: underline; }
+#team-members-table .content-card.show-placeholder .fake-card {
+  height: 100% !important;
+  z-index: -1; }
+#team-members-table .content-card.show-placeholder .placeholder {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
+#team-members-table .content-card.show-placeholder .custom-table-wrapper {
+  display: none; }
+
+#team-members-grid .content-card {
+  height: 100%; }
+  #team-members-grid .content-card .placeholder {
+    display: none;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
     height: 100%;
-    max-height: calc(100% - 14.454em);
-    padding: 0 !important; }
-  #team-members-grid .content-card.show-placeholder .people {
-    display: none; }
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px 0 rgba(226, 226, 226, 0.11);
+    border: solid 1.5px #ebecf0;
+    background-color: #ffffff; }
+    #team-members-grid .content-card .placeholder-img {
+      margin-bottom: 5.3em;
+      width: 100%;
+      max-width: clamp(15em, 30vw, 22.5em);
+      min-width: 0;
+      object-fit: contain; }
+    #team-members-grid .content-card .placeholder-title {
+      margin-bottom: 0.8888888889em;
+      font-size: clamp(1.5em, 2vw, 1.8em);
+      font-weight: 600;
+      letter-spacing: -0.45px;
+      color: #2c3952; }
+    #team-members-grid .content-card .placeholder-text {
+      padding-bottom: 2em;
+      font-size: clamp(1.15em, 1.5vw, 1.28em);
+      font-weight: 400;
+      letter-spacing: -0.13px;
+      color: #383838; }
+  #team-members-grid .content-card .no-results {
+    padding: clamp(3em, 50vh, 9em) 3em;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
+    width: 100%; }
+    #team-members-grid .content-card .no-results-wrapper {
+      margin-left: -1.1em;
+      margin-top: 3.6em;
+      max-width: 93.7em;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      justify-content: center;
+      width: 100%; }
+    #team-members-grid .content-card .no-results-img {
+      margin-bottom: 2em;
+      width: 100%;
+      max-width: 5.8em;
+      object-fit: contain; }
+    #team-members-grid .content-card .no-results-title {
+      margin-bottom: 0.8em;
+      font-size: 1.5em;
+      font-weight: 600;
+      letter-spacing: -0.26px;
+      color: #2c3952; }
+    #team-members-grid .content-card .no-results-text {
+      font-size: 1.28em;
+      font-weight: 400;
+      letter-spacing: -0.06px;
+      color: #383838; }
+      #team-members-grid .content-card .no-results-text button {
+        font-weight: 500;
+        color: #167efa; }
+        #team-members-grid .content-card .no-results-text button:hover {
+          text-decoration: underline; }
+  #team-members-grid .content-card.show-placeholder {
+    height: 100% !important;
+    padding-bottom: 3.4em; }
+    #team-members-grid .content-card.show-placeholder .placeholder {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    #team-members-grid .content-card.show-placeholder .content-card-main {
+      height: 100%;
+      max-height: calc(100% - 14.454em);
+      padding: 0 !important; }
+    #team-members-grid .content-card.show-placeholder .people {
+      display: none; }
 
 #company-admin-rights .content-card-header-caption-text {
   margin-bottom: 1.8461538462em;

@@ -10395,14 +10395,14 @@ input {
         &-img {
           margin-bottom: 5.3em;
           width: 100%;
-          max-width: 22.5em;
+          max-width: clamp(15em,30vw,22.5em);
           min-width: 0;
           object-fit: contain;
         }
 
         &-title {
           margin-bottom: emcalc(1.6,1.8);
-          font-size: 1.8em;
+          font-size: clamp(1.5em,2vw,1.8em,);
           font-weight: 600;
           letter-spacing: -0.45px;
           color: #2c3952;
@@ -10410,10 +10410,58 @@ input {
 
         &-text {
           padding-bottom: 2em;
-          font-size: 1.28em;
+          font-size: clamp(1.15em,1.5vw,1.28em,);
           font-weight: 400;
           letter-spacing: -0.13px;
           color: #383838;
+        }
+      }
+
+      & .no-results {
+
+        &-wrapper {
+          @include flexbox();
+          @include align-items(center);
+          @include justify-content(center);
+          width: 100%;
+        }
+
+        padding: clamp(3em,50vh,9em) 3em;
+        @include flexbox();
+        @include flex-direction(column);
+        @include align-items(center);
+        @include justify-content(center);
+        width: 100%;
+
+        &-img {
+          margin-bottom: 2em;
+          width: 100%;
+          max-width: 5.8em;
+          object-fit: contain;
+        }
+
+        &-title {
+          margin-bottom: emcalc(1.2,1.5);
+          font-size: 1.5em;
+          font-weight: 600;
+          letter-spacing: -0.26px;
+          color: #2c3952;
+        }
+
+        &-text {
+          font-size: 1.28em;
+          font-weight: 400;
+          letter-spacing: -0.06px;
+          color: #383838;
+
+          & button {
+            font-weight: 500;
+            color: #167efa;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
         }
       }
 
@@ -10439,7 +10487,7 @@ input {
   & .content {
     &-card {
       //background-color: #FFF;
-
+      height: 100%;
 
 
       & .placeholder {
@@ -10476,6 +10524,57 @@ input {
           font-weight: 400;
           letter-spacing: -0.13px;
           color: #383838;
+        }
+      }
+
+      & .no-results {
+
+        &-wrapper {
+          margin-left: -1.1em;
+          margin-top: 3.6em;
+          max-width: 93.7em;
+          @include flexbox();
+          @include align-items(center);
+          @include justify-content(center);
+          width: 100%;
+        }
+
+        padding: clamp(3em,50vh,9em) 3em;
+        @include flexbox();
+        @include flex-direction(column);
+        @include align-items(center);
+        @include justify-content(center);
+        width: 100%;
+
+        &-img {
+          margin-bottom: 2em;
+          width: 100%;
+          max-width: 5.8em;
+          object-fit: contain;
+        }
+
+        &-title {
+          margin-bottom: emcalc(1.2,1.5);
+          font-size: 1.5em;
+          font-weight: 600;
+          letter-spacing: -0.26px;
+          color: #2c3952;
+        }
+
+        &-text {
+          font-size: 1.28em;
+          font-weight: 400;
+          letter-spacing: -0.06px;
+          color: #383838;
+
+          & button {
+            font-weight: 500;
+            color: #167efa;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
         }
       }
 
