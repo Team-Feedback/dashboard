@@ -1154,7 +1154,9 @@ input {
         .custom-dropdown.side-menu-dropdown .custom-dropdown-menu .team:hover {
           background-color: #f0f1f4; }
     .custom-dropdown.side-menu-dropdown .team {
+      position: relative;
       padding: 0 1.4em;
+      padding-right: 3.3em;
       height: 6.1em;
       width: 100%;
       display: -webkit-box;
@@ -1172,6 +1174,12 @@ input {
       -webkit-justify-content: flex-start;
       -moz-justify-content: flex-start;
       justify-content: flex-start; }
+      .custom-dropdown.side-menu-dropdown .team:hover .team-close {
+        visibility: visible;
+        opacity: .5; }
+      .custom-dropdown.side-menu-dropdown .team-icon i {
+        font-size: 3.5em;
+        color: var(--color-primary); }
       .custom-dropdown.side-menu-dropdown .team-initials {
         height: 1.9444444444em;
         width: 1.9444444444em;
@@ -1200,17 +1208,40 @@ input {
       .custom-dropdown.side-menu-dropdown .team-set {
         margin-right: auto;
         margin-left: .9em;
-        text-align: left; }
+        text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
         .custom-dropdown.side-menu-dropdown .team-set-name {
           margin-bottom: 0.2564102564em;
           font-size: 1.17em;
           font-weight: 500;
           line-height: 1.18;
-          color: #0b2b62; }
+          color: #0b2b62;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
         .custom-dropdown.side-menu-dropdown .team-set-members {
           font-size: 1.2em;
           font-weight: 400;
-          color: #757f95; }
+          color: #757f95;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
+      .custom-dropdown.side-menu-dropdown .team-close {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        right: 1.6em;
+        transform: translate(0, -50%);
+        transition: opacity .2s ease-in-out, visibility .2s ease-in-out; }
+        .custom-dropdown.side-menu-dropdown .team-close i {
+          font-size: 1em;
+          color: #919BB1; }
+        .custom-dropdown.side-menu-dropdown .team-close:hover {
+          visibility: visible;
+          opacity: 1 !important; }
   .custom-dropdown.notification-dropdown:hover .notification-dropdown-trigger-amount {
     display: none; }
   .custom-dropdown.notification-dropdown .notification-dropdown-trigger-amount {
@@ -1785,7 +1816,8 @@ input {
       font-size: 1.4em;
       font-weight: 500;
       color: #414b62;
-      line-height: 1.45; }
+      line-height: 1.45;
+      word-break: break-all; }
     .custom-modal-body .rating-item .stars {
       display: -webkit-box;
       display: -webkit-flex;
@@ -5176,6 +5208,8 @@ input {
   font-weight: 400;
   letter-spacing: -0.06px;
   color: #1b2733; }
+  .settings-table-text.disabled {
+    color: #c9c9c9; }
 .settings-table-link {
   font-size: 1.28rem;
   font-weight: 500;
@@ -5203,6 +5237,31 @@ input {
   height: 5.7em;
   object-fit: contain;
   border-radius: 50%; }
+.settings-table-initials {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  width: 2.85em;
+  height: 2.85em;
+  font-size: 2em;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  color: #ffffff;
+  background-color: #ffa800;
+  text-transform: uppercase;
+  border-radius: 50%; }
 .settings-table .settings-input {
   padding: 0.5rem 1.1rem;
   width: 100%;
@@ -5221,7 +5280,7 @@ input {
     .settings-table .settings-input.desc.empty::placeholder {
       color: #c6c6c6 !important; }
 .settings-table .custom-dropdown-trigger {
-  padding: 0 0.9756097561em;
+  padding: 0 0.96em;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -moz-inline-flex;
@@ -5237,11 +5296,11 @@ input {
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
   justify-content: space-between;
-  width: 13.6585365854em;
-  height: 2.7642276423em;
+  width: 13.44em;
+  height: 2.72em;
   border-radius: 4px;
   border: solid 1px #cfd7e0;
-  font-size: 1.23em;
+  font-size: 1.25em;
   font-weight: 400;
   letter-spacing: -0.06px;
   color: #2d3640; }
@@ -5249,14 +5308,15 @@ input {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0; }
   .settings-table .custom-dropdown-trigger .icon-caret-down {
-    font-size: 0.5691056911em;
+    font-size: 0.56em;
     color: #686f7c; }
 .settings-table .custom-dropdown-menu {
   width: 100%;
   border: solid 1px #cfd7e0;
   border-top: 0;
   background-color: #fff;
-  z-index: 1000; }
+  z-index: 1000;
+  box-shadow: 0 6px 12px 0 rgba(178, 178, 178, 0.38); }
   .settings-table .custom-dropdown-menu-item {
     display: -webkit-box;
     display: -webkit-flex;
@@ -5273,9 +5333,9 @@ input {
     -webkit-justify-content: flex-start;
     -moz-justify-content: flex-start;
     justify-content: flex-start;
-    padding: 0 0.9756097561em;
-    height: 2.7642276423em;
-    font-size: 1.23em;
+    padding: 0 0.96em;
+    height: 2.72em;
+    font-size: 1.25em;
     font-weight: 400;
     letter-spacing: -0.06px;
     color: #2d3640; }
@@ -7676,52 +7736,6 @@ input {
     background-color: #ffffff;
     height: auto;
     max-height: 100%; }
-    #custom-questions .content-card .placeholder,
-    #custom-questions-team .content-card .placeholder {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-direction: normal;
-      -webkit-box-orient: vertical;
-      -webkit-flex-direction: column;
-      -moz-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      -moz-align-items: center;
-      align-items: center;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      -moz-justify-content: center;
-      justify-content: center;
-      width: 100%;
-      height: 100vh;
-      max-height: 36em; }
-      #custom-questions .content-card .placeholder-img,
-      #custom-questions-team .content-card .placeholder-img {
-        margin-bottom: 5.3em;
-        width: 100%;
-        max-width: 22.7em;
-        object-fit: contain; }
-      #custom-questions .content-card .placeholder-title,
-      #custom-questions-team .content-card .placeholder-title {
-        margin-bottom: 0.8888888889em;
-        font-size: 1.8em;
-        font-weight: 600;
-        line-height: 1.17;
-        letter-spacing: -0.45px;
-        color: #2c3952; }
-      #custom-questions .content-card .placeholder-text,
-      #custom-questions-team .content-card .placeholder-text {
-        font-size: 1.28em;
-        font-weight: 400;
-        letter-spacing: -0.13px;
-        color: #383838; }
     #custom-questions .content-card-header,
     #custom-questions-team .content-card-header {
       -webkit-box-direction: normal;
@@ -8237,6 +8251,48 @@ input {
       /* WebKit */
       width: 0;
       height: 0; }
+    #team-feedback .content-card .placeholder {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-direction: normal;
+      -webkit-box-orient: vertical;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      justify-content: center;
+      width: 100%;
+      height: 100vh;
+      max-height: 36em; }
+      #team-feedback .content-card .placeholder-img {
+        margin-bottom: 5.3em;
+        width: 100%;
+        max-width: 22.7em;
+        object-fit: contain; }
+      #team-feedback .content-card .placeholder-title {
+        margin-bottom: 0.8888888889em;
+        font-size: 1.8em;
+        font-weight: 600;
+        line-height: 1.17;
+        letter-spacing: -0.45px;
+        color: #2c3952; }
+      #team-feedback .content-card .placeholder-text {
+        font-size: 1.28em;
+        font-weight: 400;
+        letter-spacing: -0.13px;
+        color: #383838; }
     #team-feedback .content-card .answer {
       display: -webkit-box;
       display: -webkit-flex;
@@ -8308,6 +8364,17 @@ input {
           line-height: 1.44;
           color: #363636; }
 
+#company-employees .content-card .fake-card,
+#company-employees-archived .content-card .fake-card,
+#company-teams .content-card .fake-card,
+#company-teams-archived .content-card .fake-card,
+#company-admin-rights .content-card .fake-card,
+#team-settings-members .content-card .fake-card,
+#team-settings-lead .content-card .fake-card,
+#team-settings-viewing-rights .content-card .fake-card,
+#team-settings-admin-rights .content-card .fake-card,
+#user-settings-teams .content-card .fake-card {
+  height: 39.1em; }
 @media (max-width: 767px) {
   #company-employees .custom-table-row .column-02,
   #company-employees-archived .custom-table-row .column-02,
@@ -8317,7 +8384,8 @@ input {
   #team-settings-members .custom-table-row .column-02,
   #team-settings-lead .custom-table-row .column-02,
   #team-settings-viewing-rights .custom-table-row .column-02,
-  #team-settings-admin-rights .custom-table-row .column-02 {
+  #team-settings-admin-rights .custom-table-row .column-02,
+  #user-settings-teams .custom-table-row .column-02 {
     display: none; } }
 
 #company-employees .header-sub-nav,
@@ -8327,7 +8395,8 @@ input {
 #team-settings-lead .header-sub-nav,
 #team-settings-viewing-rights .header-sub-nav,
 #team-settings-admin-rights .header-sub-nav,
-#team-members-table .header-sub-nav {
+#team-members-table .header-sub-nav,
+#user-settings-teams .header-sub-nav {
   display: none; }
 #company-employees .content,
 #company-teams .content,
@@ -8336,7 +8405,8 @@ input {
 #team-settings-lead .content,
 #team-settings-viewing-rights .content,
 #team-settings-admin-rights .content,
-#team-members-table .content {
+#team-members-table .content,
+#user-settings-teams .content {
   height: 100%;
   max-height: 100%;
   padding: 1.6em;
@@ -8349,7 +8419,8 @@ input {
   #team-settings-lead .content-card,
   #team-settings-viewing-rights .content-card,
   #team-settings-admin-rights .content-card,
-  #team-members-table .content-card {
+  #team-members-table .content-card,
+  #user-settings-teams .content-card {
     position: relative;
     background-color: transparent;
     border: 0;
@@ -8366,7 +8437,8 @@ input {
     #team-settings-lead .content-card .fake-card,
     #team-settings-viewing-rights .content-card .fake-card,
     #team-settings-admin-rights .content-card .fake-card,
-    #team-members-table .content-card .fake-card {
+    #team-members-table .content-card .fake-card,
+    #user-settings-teams .content-card .fake-card {
       width: 100%;
       height: 100%;
       position: absolute;
@@ -8383,7 +8455,8 @@ input {
     #team-settings-lead .content-card-header,
     #team-settings-viewing-rights .content-card-header,
     #team-settings-admin-rights .content-card-header,
-    #team-members-table .content-card-header {
+    #team-members-table .content-card-header,
+    #user-settings-teams .content-card-header {
       position: relative;
       -webkit-box-direction: normal;
       -webkit-box-orient: vertical;
@@ -8404,7 +8477,8 @@ input {
       #team-settings-lead .content-card-header .options-link,
       #team-settings-viewing-rights .content-card-header .options-link,
       #team-settings-admin-rights .content-card-header .options-link,
-      #team-members-table .content-card-header .options-link {
+      #team-members-table .content-card-header .options-link,
+      #user-settings-teams .content-card-header .options-link {
         font-size: 1.3em; }
       #company-employees .content-card-header-title,
       #company-teams .content-card-header-title,
@@ -8413,7 +8487,8 @@ input {
       #team-settings-lead .content-card-header-title,
       #team-settings-viewing-rights .content-card-header-title,
       #team-settings-admin-rights .content-card-header-title,
-      #team-members-table .content-card-header-title {
+      #team-members-table .content-card-header-title,
+      #user-settings-teams .content-card-header-title {
         margin-bottom: 0.7428571429em;
         font-size: 1.75em;
         font-weight: 600;
@@ -8427,7 +8502,8 @@ input {
         #team-settings-lead .content-card-header-title span,
         #team-settings-viewing-rights .content-card-header-title span,
         #team-settings-admin-rights .content-card-header-title span,
-        #team-members-table .content-card-header-title span {
+        #team-members-table .content-card-header-title span,
+        #user-settings-teams .content-card-header-title span {
           font-weight: 400; }
       #company-employees .content-card-header .content-card-input-container,
       #company-teams .content-card-header .content-card-input-container,
@@ -8436,7 +8512,8 @@ input {
       #team-settings-lead .content-card-header .content-card-input-container,
       #team-settings-viewing-rights .content-card-header .content-card-input-container,
       #team-settings-admin-rights .content-card-header .content-card-input-container,
-      #team-members-table .content-card-header .content-card-input-container {
+      #team-members-table .content-card-header .content-card-input-container,
+      #user-settings-teams .content-card-header .content-card-input-container {
         width: 100%;
         max-width: 32em; }
         #company-employees .content-card-header .content-card-input-container input,
@@ -8446,7 +8523,8 @@ input {
         #team-settings-lead .content-card-header .content-card-input-container input,
         #team-settings-viewing-rights .content-card-header .content-card-input-container input,
         #team-settings-admin-rights .content-card-header .content-card-input-container input,
-        #team-members-table .content-card-header .content-card-input-container input {
+        #team-members-table .content-card-header .content-card-input-container input,
+        #user-settings-teams .content-card-header .content-card-input-container input {
           border-radius: 4px;
           display: -webkit-box;
           display: -webkit-flex;
@@ -8468,7 +8546,8 @@ input {
           #team-settings-lead .content-card-header .content-card-input-container input::placeholder,
           #team-settings-viewing-rights .content-card-header .content-card-input-container input::placeholder,
           #team-settings-admin-rights .content-card-header .content-card-input-container input::placeholder,
-          #team-members-table .content-card-header .content-card-input-container input::placeholder {
+          #team-members-table .content-card-header .content-card-input-container input::placeholder,
+          #user-settings-teams .content-card-header .content-card-input-container input::placeholder {
             color: #7e8a98; }
         #company-employees .content-card-header .content-card-input-container i,
         #company-teams .content-card-header .content-card-input-container i,
@@ -8477,7 +8556,8 @@ input {
         #team-settings-lead .content-card-header .content-card-input-container i,
         #team-settings-viewing-rights .content-card-header .content-card-input-container i,
         #team-settings-admin-rights .content-card-header .content-card-input-container i,
-        #team-members-table .content-card-header .content-card-input-container i {
+        #team-members-table .content-card-header .content-card-input-container i,
+        #user-settings-teams .content-card-header .content-card-input-container i {
           top: 48%;
           left: 1.2rem;
           font-size: 1.3em; }
@@ -8488,7 +8568,8 @@ input {
       #team-settings-lead .content-card-header-bottom,
       #team-settings-viewing-rights .content-card-header-bottom,
       #team-settings-admin-rights .content-card-header-bottom,
-      #team-members-table .content-card-header-bottom {
+      #team-members-table .content-card-header-bottom,
+      #user-settings-teams .content-card-header-bottom {
         margin-bottom: 2.4em;
         width: 100%;
         display: -webkit-box;
@@ -8513,7 +8594,8 @@ input {
         #team-settings-lead .content-card-header-bottom .button-light-gray,
         #team-settings-viewing-rights .content-card-header-bottom .button-light-gray,
         #team-settings-admin-rights .content-card-header-bottom .button-light-gray,
-        #team-members-table .content-card-header-bottom .button-light-gray {
+        #team-members-table .content-card-header-bottom .button-light-gray,
+        #user-settings-teams .content-card-header-bottom .button-light-gray {
           margin-left: 1.171875em;
           padding: 0 1.71875em;
           height: 2.5em;
@@ -8526,7 +8608,8 @@ input {
     #team-settings-lead .content-card-main,
     #team-settings-viewing-rights .content-card-main,
     #team-settings-admin-rights .content-card-main,
-    #team-members-table .content-card-main {
+    #team-members-table .content-card-main,
+    #user-settings-teams .content-card-main {
       height: 100%;
       max-height: calc(100% - 12.454em); }
     #company-employees .content-card-input-container,
@@ -8536,8 +8619,14 @@ input {
     #team-settings-lead .content-card-input-container,
     #team-settings-viewing-rights .content-card-input-container,
     #team-settings-admin-rights .content-card-input-container,
-    #team-members-table .content-card-input-container {
+    #team-members-table .content-card-input-container,
+    #user-settings-teams .content-card-input-container {
       height: 3.2em; }
+
+#user-settings-teams .custom-table-row .column-03 {
+  flex: .5; }
+#user-settings-teams .custom-table-row .column-04 {
+  flex: .6; }
 
 #team-members-table .content-card .placeholder {
   display: none;
@@ -8897,10 +8986,12 @@ input {
   #team-members-table .content-card-main .custom-table .column-05 {
     flex: 0.18; }
 
-#team-settings-general .content {
+#team-settings-general .content,
+#user-settings-general .content {
   height: 100%;
   padding: 1.6em 4em; }
-  #team-settings-general .content-card {
+  #team-settings-general .content-card,
+  #user-settings-general .content-card {
     height: auto;
     max-height: 100%;
     padding: 3.9em;
@@ -8915,11 +9006,13 @@ input {
     /* Firefox */
     -ms-overflow-style: none;
     /* Internet Explorer 10+ */ }
-    #team-settings-general .content-card::-webkit-scrollbar {
+    #team-settings-general .content-card::-webkit-scrollbar,
+    #user-settings-general .content-card::-webkit-scrollbar {
       /* WebKit */
       width: 0;
       height: 0; }
-    #team-settings-general .content-card-header {
+    #team-settings-general .content-card-header,
+    #user-settings-general .content-card-header {
       padding-top: 0em;
       padding-top: 3.5em;
       position: sticky;
@@ -8943,16 +9036,29 @@ input {
       align-items: flex-start;
       background-color: #fff;
       border-bottom: 1px solid #e4e8ec; }
-      #team-settings-general .content-card-header-title {
+      #team-settings-general .content-card-header-title,
+      #user-settings-general .content-card-header-title {
         margin-bottom: 0.5em;
         font-size: 1.6em;
         font-weight: 400;
         letter-spacing: -0.08px;
         color: var(--color-black); }
-    #team-settings-general .content-card-main .settings-table-row.row-01, #team-settings-general .content-card-main .settings-table-row.row-02, #team-settings-general .content-card-main .settings-table-row.row-06 {
+    #team-settings-general .content-card-main .settings-table-row.row-01, #team-settings-general .content-card-main .settings-table-row.row-02, #team-settings-general .content-card-main .settings-table-row.row-06,
+    #user-settings-general .content-card-main .settings-table-row.row-01,
+    #user-settings-general .content-card-main .settings-table-row.row-02,
+    #user-settings-general .content-card-main .settings-table-row.row-06 {
       height: 7.1em; }
-    #team-settings-general .content-card-main .settings-table-row.row-03, #team-settings-general .content-card-main .settings-table-row.row-04, #team-settings-general .content-card-main .settings-table-row.row-05, #team-settings-general .content-card-main .settings-table-row.row-07 {
+    #team-settings-general .content-card-main .settings-table-row.row-03, #team-settings-general .content-card-main .settings-table-row.row-04, #team-settings-general .content-card-main .settings-table-row.row-05, #team-settings-general .content-card-main .settings-table-row.row-07,
+    #user-settings-general .content-card-main .settings-table-row.row-03,
+    #user-settings-general .content-card-main .settings-table-row.row-04,
+    #user-settings-general .content-card-main .settings-table-row.row-05,
+    #user-settings-general .content-card-main .settings-table-row.row-07 {
       height: 9em; }
+
+#user-settings-general .content-card {
+  padding-bottom: 4.4em; }
+  #user-settings-general .content-card .settings-table-row {
+    border-bottom: solid 1px #e4e8ec; }
 
 #company-settings-general .header-sub-nav {
   display: none; }
@@ -9266,7 +9372,7 @@ input {
             border-radius: 50%; }
           #give-feedback .content-card .todo-list-item-initials {
             text-transform: uppercase;
-            margin-right: 0.8266666667em;
+            margin-right: 0.775em;
             display: -webkit-box;
             display: -webkit-flex;
             display: -moz-flex;
@@ -9282,11 +9388,11 @@ input {
             -webkit-justify-content: center;
             -moz-justify-content: center;
             justify-content: center;
-            width: 2.9333333333em;
-            height: 2.9333333333em;
+            width: 2.75em;
+            height: 2.75em;
             background-color: #fed745;
             border-radius: 50%;
-            font-size: 1.5em;
+            font-size: 1.6em;
             font-weight: 700;
             letter-spacing: -0.3px;
             color: #fff; }
@@ -9679,7 +9785,7 @@ input {
           -moz-justify-content: center;
           justify-content: center; }
           #team-members-grid .content-card-main .people .person-main {
-            margin-bottom: 0.2em;
+            margin-bottom: 0.6em;
             position: relative; }
             #team-members-grid .content-card-main .people .person-main-img {
               width: 7.5em;
@@ -10911,15 +11017,19 @@ input {
         transform: translate(0, -50%);
         font-size: 2em; }
       .auth-card .input-container.pass input {
+        padding-right: 2.4475524476em;
         border-color: #36b37e; }
       .auth-card .input-container.pass .icon-check-circle {
         display: inline-block;
         color: #36b37e; }
       .auth-card .input-container.fail input {
+        padding-right: 2.4475524476em;
         border-color: #ff2712; }
       .auth-card .input-container.fail .icon-exclamation-circle {
         display: inline-block;
         color: #ff2712; }
+      .auth-card .input-container.password input {
+        padding-right: 2.4475524476em; }
       .auth-card .input-container.password .show-password {
         cursor: pointer; }
         .auth-card .input-container.password .show-password .icon-eye-open, .auth-card .input-container.password .show-password .icon-eye-closed {
