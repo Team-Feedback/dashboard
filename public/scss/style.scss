@@ -10482,12 +10482,33 @@ input {
 #user-settings-teams {
   & .custom-table-row {
 
+    & .column-02 {
+      @include respond(desktop-sm) {
+        @include flexbox();
+      }
+
+      @include respond(desktop-xsm) {
+        display: none;
+      }
+    }
+
     & .column-03 {
       flex: .5;
+
+      @include respond(desktop-sm) {
+        display: none;
+      }
     }
 
     & .column-04 {
       flex: .6;
+
+      & p {
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
 
   }
@@ -11054,6 +11075,25 @@ input {
       & .settings-table {
         &-row {
           border-bottom: solid 1px #e4e8ec;
+        }
+
+        & .custom-dropdown {
+          &-trigger {
+            &:focus {
+              border-radius: 4px;
+              border-top-left-radius: 0;
+              border-top-right-radius: 0;
+            }
+          }
+          &-menu {
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            border: solid 1px #cfd7e0;
+            border-bottom: 0;
+            bottom: 100%;
+            transform: translate(0,0);
+            box-shadow: none;
+          }
         }
       }
     }
