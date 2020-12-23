@@ -67,7 +67,8 @@ function drawChart() {
             left: '0',
             right: '0',
         },
-        fontSize: '12.75'
+        fontSize: '12.75',
+        pieSliceTextStyle: { fontName: '"Inter", sans-serif' }
     };
 
     var chart02 = new google.visualization.PieChart(document.getElementById('chart-02'));

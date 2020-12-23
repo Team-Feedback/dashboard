@@ -819,11 +819,11 @@
 
 @font-face {
   font-family: 'dashoard-icons';
-  src:  url('../fonts/dashoard-icons.eot?itywvl');
-  src:  url('../fonts/dashoard-icons.eot?itywvl#iefix') format('embedded-opentype'),
-    url('../fonts/dashoard-icons.ttf?itywvl') format('truetype'),
-    url('../fonts/dashoard-icons.woff?itywvl') format('woff'),
-    url('../fonts/dashoard-icons.svg?itywvl#dashoard-icons') format('svg');
+  src:  url('../fonts/dashoard-icons.eot?thmngf');
+  src:  url('../fonts/dashoard-icons.eot?thmngf#iefix') format('embedded-opentype'),
+    url('../fonts/dashoard-icons.ttf?thmngf') format('truetype'),
+    url('../fonts/dashoard-icons.woff?thmngf') format('woff'),
+    url('../fonts/dashoard-icons.svg?thmngf#dashoard-icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -844,6 +844,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-half-star:before {
+  content: "\e957";
+}
 .icon-bubble-chart:before {
   content: "\e956";
 }
@@ -6836,6 +6839,39 @@ input {
       }
     }
 
+    &.white-logo {
+      background-color: #FFF;
+      border-bottom: solid 1px #f0f0f0;
+
+      & .header-main-info {
+        &-icon {
+          margin-left: 2.3em;
+          padding-left: 0;
+          padding-right: 1.2em;
+          width: 5em;
+          background-image: url(../img/logo-only.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: left;
+  
+          & i {
+            display: none;
+          }
+        }
+
+        &-title {
+          color: #0d1826;
+        }
+      }
+
+      & .header-buttons-settings i,
+      & .header-buttons-help i,
+      & .header-buttons-notifications i,
+      & .notification-dropdown .custom-dropdown-trigger i{
+        color: #505050!important;
+      }
+    }
+
     & .header-buttons {
       position: relative;
       @include flexbox();
@@ -6906,6 +6942,7 @@ input {
   
       &-initials,
       & .user-dropdown .custom-dropdown-trigger {
+        padding-bottom: 1px;
         @include flexbox();
         @include align-items(center);
         @include justify-content(center);
@@ -7081,16 +7118,16 @@ input {
         //   // font-family: "Inter-Medium";
         //   font-weight: 500;
         // }
-        // & .header-nav-list-item-text::before {
-        //   display: block;
-        //   content: attr(text);
-        //   // font-family: "Inter-Medium";
-        //   font-weight: 500;
-        //   height: 0;
-        //   overflow: hidden;
-        //   visibility: hidden;
-        //   cursor: pointer;
-        // }
+        & .header-nav-list-item-text::after {
+          display: block;
+          content: attr(text);
+          // font-family: "Inter-Medium";
+          font-weight: 600;
+          height: 0;
+          overflow: hidden;
+          visibility: hidden;
+          cursor: pointer;
+        }
 
         &.active {
           &::before {
@@ -7103,7 +7140,7 @@ input {
           font-weight: 600;
           color: #000;
         }
-        &.active .header-nav-list-item-text::before {
+        &.active .header-nav-list-item-text::after {
           display: block;
           content: attr(text);
           // font-family: "Inter-Semibold";
@@ -7363,7 +7400,7 @@ input {
 
     &-header {
       width: 100%;
-      padding: 4.3em 2em 0;
+      padding: 4em 2em 0;
     }
 
     &-main {
@@ -7387,12 +7424,12 @@ input {
       
       &-list {
         width: 100%;
-        padding: 2.8em 3.6em 0;
+        padding: 2.6em 3.6em 0;
 
         &-item {
           width: 100%;
           position: relative;
-          height: 4em;
+          height: 4.2em;
           @include flexbox();
           @include align-items(center);
           @include justify-content(flex-start);
@@ -7400,7 +7437,7 @@ input {
           z-index: 2;
 
           &:not(:last-of-type) {
-            margin-bottom: .9em;
+            margin-bottom: .5em;
           }
 
           &:hover:before {
@@ -7425,7 +7462,7 @@ input {
 
           &.active {
             & i {
-              color: #1661d1;
+              color: #1262f8;
             }
 
             & .side-menu-main-list-item-text {
@@ -7466,9 +7503,9 @@ input {
           }
 
           & i {
-            margin-right: emcalc(1.4,2);
-            font-size: 2em;
-            color: #15294b;
+            margin-right: emcalc(1.4,1.7);
+            font-size: 1.7em;
+            color: #42526e;
           }
 
           &-text {
@@ -7494,7 +7531,7 @@ input {
           height: emcalc(4.2,1.33);
           font-size: 1.33em;
           font-weight: 500;
-          letter-spacing: 0.07px;
+          letter-spacing: 0.23px;
           border-radius: 21px;
   
           & i {
