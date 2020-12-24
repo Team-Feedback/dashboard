@@ -3279,7 +3279,7 @@ input {
   color: #080808; }
 #companyChoose .custom-modal-body-text {
   max-width: 26.4052287582em;
-  margin-bottom: 0;
+  margin-bottom: 3.5294117647em;
   font-size: 1.53em;
   font-weight: 400;
   color: #626977; }
@@ -3299,21 +3299,33 @@ input {
   -webkit-justify-content: center;
   -moz-justify-content: center;
   justify-content: center; }
-  #companyChoose .custom-modal-body .cards .card-img {
-    margin-bottom: 3.9em;
-    width: 28.5em;
-    border-radius: 10px; }
-  #companyChoose .custom-modal-body .cards .card-title {
-    margin-bottom: 0.8421052632em;
-    font-size: 1.9em;
-    font-weight: 500;
-    color: #080808; }
-  #companyChoose .custom-modal-body .cards .card-text {
-    margin-bottom: 1.884057971em;
-    font-size: 1.38em;
-    font-weight: 400;
-    letter-spacing: -0.07px;
-    color: #707d8d; }
+  #companyChoose .custom-modal-body .cards .card {
+    margin: 0 5em; }
+    #companyChoose .custom-modal-body .cards .card-img {
+      margin-bottom: 3.9em;
+      width: 28.5em;
+      border-radius: 10px; }
+    #companyChoose .custom-modal-body .cards .card-title {
+      margin-bottom: 0.8421052632em;
+      font-size: 1.9em;
+      font-weight: 500;
+      color: #080808; }
+    #companyChoose .custom-modal-body .cards .card-text {
+      margin-bottom: 1.884057971em;
+      font-size: 1.38em;
+      font-weight: 400;
+      letter-spacing: -0.07px;
+      color: #707d8d; }
+    #companyChoose .custom-modal-body .cards .card .button {
+      max-width: 12.8965517241em;
+      height: 2.8965517241em;
+      font-size: 1.45em;
+      font-weight: 500;
+      letter-spacing: 0.07px; }
+    #companyChoose .custom-modal-body .cards .card:first-of-type {
+      margin-left: 0; }
+    #companyChoose .custom-modal-body .cards .card:last-of-type {
+      margin-right: 0; }
 
 #confirmationModal .custom-modal,
 #inviteUsersModal .custom-modal,
@@ -4837,6 +4849,30 @@ input {
           position: relative;
           width: 100%;
           height: 3.5em; }
+          #createNewTeamModal .custom-modal-body .members .search-dropdown-input-container.show-button .button-add {
+            display: -webkit-inline-box;
+            display: -webkit-inline-flex;
+            display: -moz-inline-flex;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0; }
+            #createNewTeamModal .custom-modal-body .members .search-dropdown-input-container.show-button .button-add:hover {
+              background-color: #F2F2F2; }
+          #createNewTeamModal .custom-modal-body .members .search-dropdown-input-container.show-button input {
+            padding-right: 3.8518518519em; }
+          #createNewTeamModal .custom-modal-body .members .search-dropdown-input-container .button-add {
+            display: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 3.8518518519em;
+            height: 2.5925925926em;
+            font-size: 1.35em;
+            font-weight: 500;
+            letter-spacing: -0.17px;
+            color: var(--color-primary);
+            border-left: solid 1px #ebebeb; }
           #createNewTeamModal .custom-modal-body .members .search-dropdown-input-container input {
             padding-top: 1px;
             padding-left: 2.5em;
@@ -4856,6 +4892,8 @@ input {
             font-size: 1.4em;
             color: #a3a3a3;
             transform: translate(0, -50%); }
+          #createNewTeamModal .custom-modal-body .members .search-dropdown-input-container .add-button {
+            position: absolute; }
         #createNewTeamModal .custom-modal-body .members .search-dropdown-menu {
           display: none;
           max-height: 16.4em;
@@ -4953,6 +4991,31 @@ input {
       height: 16em;
       border-radius: 50%;
       object-fit: cover; }
+    #imageUploadModal .custom-modal-body-initials,
+    #usersModal .custom-modal-body-initials {
+      margin-bottom: 0.4032258065em;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      justify-content: center;
+      width: 2.5806451613em;
+      height: 2.5806451613em;
+      font-size: 6.2em;
+      font-weight: 600;
+      color: #FFF;
+      border-radius: 50%;
+      background-color: #fea42a; }
     #imageUploadModal .custom-modal-body-icon,
     #usersModal .custom-modal-body-icon {
       margin-bottom: 0.15625em;
