@@ -1914,6 +1914,7 @@ input {
         @include align-items(center);
         @include justify-content(center);
         //border-bottom: 1px solid #e8eaed;
+        border-bottom: 1px solid #e8eaed;
         cursor: default;
 
 
@@ -1935,6 +1936,13 @@ input {
             font-weight: 600;
             color: #ffffff;
             border-radius: 50%;
+          }
+
+          &-img {
+            width: emcalc(8, 3.9);
+            height: emcalc(8, 3.9);
+            border-radius: 50%;
+            object-fit: cover;
           }
 
           &-upload {
@@ -2300,7 +2308,7 @@ input {
           margin-right: 1.3em;
           width: 3.4em;
           height: 3.4em;
-          object-fit: contain;
+          object-fit: cover;
           border-radius: 50%;
         }
 
@@ -2646,7 +2654,7 @@ input {
   &-img {
     margin-bottom: 2.1em;
     width: 5.69em;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   &-title {
@@ -2808,7 +2816,7 @@ input {
         height: 8.41em;
         border: solid 1px rgba(0, 0, 0, 0);
         border-radius: 50%;
-        object-fit: contain;
+        object-fit: cover;
       }
 
       &-initials {
@@ -3438,7 +3446,7 @@ input {
         margin-right: 1.1em;
         width: 4.25em;
         height: 4.25em;
-        object-fit: contain;
+        object-fit: cover;
         border-radius: 50%;
       }
 
@@ -3786,7 +3794,7 @@ input {
           height: 4.5em;          
           min-height: 4.5em;
           border-radius: 50%;
-          object-fit: contain;
+          object-fit: cover;
         }
 
         &-initials {
@@ -3900,6 +3908,87 @@ input {
 
       & .feedback-item {
         display: none;
+      }
+    }
+  }
+}
+
+//REGISTER COMPANY MODALS
+#regCoStep01 {
+  & .custom-modal {
+    width: 111.1em;
+    border-radius: 15px;
+
+    @include respond(desktop-md) {
+      max-width: 100%;
+      max-height: 100%;
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+      border: 0;
+    }
+
+    &-body {
+      @include flexbox();
+      @include flex-direction(column);
+      @include align-items(center);
+      @include justify-content(center);
+      text-align: center;
+      overflow-y: auto;
+      scrollbar-width: none;
+      /* Firefox */
+      -ms-overflow-style: none;
+      /* Internet Explorer 10+ */
+
+      &::-webkit-scrollbar {
+        /* WebKit */
+        width: 0;
+        height: 0;
+      }
+
+      & .button-primary {
+        width: 100%;
+        max-width: 40.4em;
+        height: emcalc(4.6,1.6);
+        min-height: emcalc(4.6,1.6);
+        font-size: 1.6em;
+        font-weight: 500;
+        letter-spacing: 0.12px;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+// modal specific
+#regCoStep01 {
+  & .custom-modal {
+    &-body {
+      padding: 2em 3em;
+      height: 95vh;
+      max-height: 65.4em;
+      //padding-top: 12.1em;
+
+      &-logo {
+        margin-bottom: 8.7em;
+        min-width: 0;
+        width: 100%;
+        max-width: 17.5em;
+      }
+
+      &-title {
+        margin-bottom: emcalc(3.5,3.7);
+        font-size: 3.7em;
+        font-weight: 600;
+        letter-spacing: -0.28px;
+        color: #080808;
+      }
+
+      &-text {
+        margin-bottom: emcalc(4.7,1.63);
+        font-size: 1.63em;
+        font-weight: 400;
+        color: #626977;
       }
     }
   }
@@ -4427,7 +4516,7 @@ input {
               width: 4em;
               height: 4em;
               border-radius: 50%;
-              object-fit: contain;
+              object-fit: cover;
             }
 
             &-initials {
@@ -4522,7 +4611,7 @@ input {
             width: 4em;
             height: 4em;
             border-radius: 50%;
-            object-fit: contain;
+            object-fit: cover;
           }
 
           &-initials {
@@ -4629,7 +4718,7 @@ input {
             margin-right: 1em;
             width: 4em;
             height: 4em;
-            object-fit: contain;
+            object-fit: cover;
             border-radius: 50%;
           }
 
@@ -4726,7 +4815,7 @@ input {
           width: 6.2em;
           height: 6.2em;
           margin-right: 1.3em;
-          object-fit: contain;
+          object-fit: cover;
           border-radius: 50%;
         }
 
@@ -5538,7 +5627,7 @@ input {
             min-width: 4em;
             height: 4em;            
             min-height: 4em;
-            object-fit: contain;
+            object-fit: cover;
             border-radius: 50%;
           }
 
@@ -5759,7 +5848,7 @@ input {
         width: 16em;
         height: 16em;
         border-radius: 50%;
-        object-fit: contain;
+        object-fit: cover;
       }
 
       &-icon {
@@ -6406,7 +6495,7 @@ input {
             width: 4em;
             height: 4em;
             border-radius: 50%;
-            object-fit: contain;
+            object-fit: cover;
           }
 
           &-initials {
@@ -6596,7 +6685,7 @@ input {
   &-img {
     width: 5.7em;
     height: 5.7em;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 50%;
   }
 
@@ -6940,8 +7029,7 @@ input {
         }
       }
   
-      &-initials,
-      & .user-dropdown .custom-dropdown-trigger {
+      & .user-dropdown .custom-dropdown-trigger .initials  {
         padding-bottom: 1px;
         @include flexbox();
         @include align-items(center);
@@ -6954,6 +7042,13 @@ input {
         color: #ffffff;
         background-color: #ffce00;
         border-radius: 50%;
+      }
+
+      & .user-dropdown .custom-dropdown-trigger .user-img {
+        width: 3.5em;
+        height: 3.5em;
+        border-radius: 50%;
+        object-fit: cover;
       }
     }
 
@@ -7984,7 +8079,7 @@ input {
                 &-img {
                   width: 7.25em;
                   height: 7.25em;
-                  object-fit: contain;
+                  object-fit: cover;
                   border-radius: 16px;
                 }
 
@@ -8734,7 +8829,7 @@ input {
                 &-img {
                   width: 7.25em;
                   height: 7.25em;
-                  object-fit: contain;
+                  object-fit: cover;
                   border-radius: 13px;
                   box-shadow: 0 3px 6px 0 rgba(221, 221, 221, 0.4);
                   transition: all .2s ease-in-out;
@@ -8752,7 +8847,7 @@ input {
                   font-weight: 700;
                   letter-spacing: -0.43px;
                   background-color: #fea42a;
-                  object-fit: contain;
+                  object-fit: cover;
                   border-radius: 16px;
                   transition: all .2s ease-in-out;
                 }
@@ -8915,7 +9010,7 @@ input {
 //             width: 4.5em;
 //             min-height: 4.5em;
 //             height: 4.5em;
-//             object-fit: contain;
+//             object-fit: cover;
 //             border-radius: 50%;
 //           }
 
@@ -8931,7 +9026,7 @@ input {
 //             font-weight: 600;
 //             letter-spacing: -0.19px;
 //             color: #FFF;
-//             object-fit: contain;
+//             object-fit: cover;
 //             border-radius: 50%;
 //             background-color: #2cadf6;
 //           }
@@ -9271,7 +9366,7 @@ input {
 
       &-body {
         height: 100%;
-        max-height: calc(100% - 8.6em);
+        max-height: calc(100% - 8.8em);
         overflow-y: auto;
         scrollbar-width: none;
         /* Firefox */
@@ -9319,7 +9414,7 @@ input {
             width: 4.5em;
             min-height: 4.5em;
             height: 4.5em;
-            object-fit: contain;
+            object-fit: cover;
             border-radius: 50%;
           }
 
@@ -9335,7 +9430,7 @@ input {
             font-weight: 600;
             letter-spacing: -0.19px;
             color: #FFF;
-            object-fit: contain;
+            object-fit: cover;
             border-radius: 50%;
             background-color: #2cadf6;
           }
@@ -9470,14 +9565,17 @@ input {
               //margin-bottom: 1.4em;
               width: 100%;
               @include flexbox();
+              @include flex-direction(column);
               @include align-items(flex-start);
-              @include justify-content(center);
+              @include justify-content(flex-start);
               border-radius: 2.5px;
+              min-height: calc(100% - 4.6em);
 
               border: 0;
               background-color: #f7f9fa;
 
               & .struct {
+                margin: 0 auto;
                 @include flexbox();
                 @include align-items(flex-start);
                 @include justify-content(flex-start);
@@ -9485,6 +9583,8 @@ input {
                 padding-bottom: 3.3em;
                 width: 100%;
                 max-width: 90em;
+                height: 100%;
+                
 
                 &-item {
                   margin-bottom: 2em;
@@ -10272,7 +10372,7 @@ input {
           margin-bottom: 5.3em;
           width: 100%;
           max-width: 22.7em;
-          object-fit: contain;
+          object-fit: cover;
         }
 
         &-title {
@@ -10312,7 +10412,7 @@ input {
           min-height: 4em;
           width: 4em;
           height: 4em;
-          object-fit: contain;
+          object-fit: cover;
           border-radius: 50%;
         }
 
@@ -10573,7 +10673,7 @@ input {
           width: 100%;
           max-width: clamp(15em,30vw,22.5em);
           min-width: 0;
-          object-fit: contain;
+          object-fit: cover;
         }
 
         &-title {
@@ -10613,7 +10713,7 @@ input {
           margin-bottom: 2em;
           width: 100%;
           max-width: 5.8em;
-          object-fit: contain;
+          object-fit: cover;
         }
 
         &-title {
@@ -10683,7 +10783,7 @@ input {
           width: 100%;
           max-width: clamp(15em,30vw,22.5em);
           min-width: 0;
-          object-fit: contain;
+          object-fit: cover;
         }
 
         &-title {
@@ -10726,7 +10826,7 @@ input {
           margin-bottom: 2em;
           width: 100%;
           max-width: 5.8em;
-          object-fit: contain;
+          object-fit: cover;
         }
 
         &-title {
@@ -11626,7 +11726,7 @@ input {
             &-img {
               width: 8.5em;
               height: 8.5em;
-              object-fit: contain;
+              object-fit: cover;
               border-radius: 16px;
               transition: all .2s ease-in-out;
               box-shadow: 0 3px 6px 0 rgba(221, 221, 221, 0.4);
@@ -11644,7 +11744,7 @@ input {
               font-weight: 700;
               letter-spacing: -0.43px;
               background-color: #fea42a;
-              object-fit: contain;
+              object-fit: cover;
               border-radius: 16px;
               transition: all .2s ease-in-out;
               box-shadow: 0 3px 6px 0 rgba(221, 221, 221, 0.4);
@@ -11905,7 +12005,7 @@ input {
                 min-height: 7.5em;
                 max-width: 7.5em;
                 max-height: 7.5em;
-                object-fit: contain;
+                object-fit: cover;
                 border-radius: 16px;
               }
 
@@ -11919,7 +12019,7 @@ input {
                 min-height: emcalc(7.5,2.85);
                 max-width: emcalc(7.5,2.85);
                 max-height: emcalc(7.5,2.85);
-                object-fit: contain;
+                object-fit: cover;
                 font-size: 2.85em;
                 font-weight: 700;
                 line-height: 1.19;

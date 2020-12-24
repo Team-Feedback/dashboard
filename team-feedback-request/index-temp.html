@@ -250,13 +250,14 @@
                 </div>
               </div>
 
-              <div class="request-card-placeholder">
+              <!-- <div class="request-card-placeholder">
                 <p class="request-card-placeholder-title">No team member selected</p>
                 <p class="request-card-placeholder-text">Please select a team member from above to start adding
                   requests.</p>
-              </div>
+              </div> -->
 
-              <div class="request-card-body" style="display: none;">
+              <div class="request-card-body">
+
                 <div class="struct">
                   <div class="struct-left">
                     <div class="struct-item">
@@ -656,7 +657,7 @@
 
     const requestUsers = document.querySelector('.users');
     const requestCard = document.querySelector('.request-card');
-    requestCard.style.height = `calc(100% - ${requestUsers.clientHeight + 20}px)`;
+    requestCard.style.height = `calc(100% - ${requestUsers.clientHeight + 22}px)`;
   </script>
 </body>
 
