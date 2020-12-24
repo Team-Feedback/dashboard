@@ -213,6 +213,10 @@
             target-modal="addUsersModal">
             Add users
           </button>
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;"
+            target-modal="changePasswordModal">
+            Change password
+          </button>
         </div>
       </div>
     </div>
@@ -769,6 +773,44 @@
             <button class="button button-light-gray" close-modal="createCompanyModal">Cancel</button>
             <button class="button button-primary">Create</button>
           </div>
+
+        </div>
+      </div>
+      <div class="custom-modal-backdrop"></div>
+    </div>
+
+    <!-- CHANGE PASSWORD MODAL-->
+    <div class="custom-modal-wrapper" id="changePasswordModal">
+      <div class="custom-modal">
+        <!-- Modal body -->
+        <div class="custom-modal-body">
+          <div class="custom-modal-close" close-modal="changePasswordModal">
+            <i class="icon-close"></i>
+          </div>
+          <p class="custom-modal-body-title">Change password</p>
+          <p class="custom-modal-body-label">Current password</p>
+          <div class="custom-modal-body-input-container">
+            <input type="password" placeholder="Enter password...">
+          </div>
+
+          <p class="custom-modal-body-label">Choose new password</p>
+          <div class="custom-modal-body-input-container">
+            <input type="password" placeholder="Enter new password...">
+          </div>
+
+          <p class="custom-modal-body-label">Confirm new password</p>
+          <div class="custom-modal-body-input-container">
+            <input type="password" placeholder="Confirm new password...">
+          </div>
+
+        </div>
+
+        <!-- Modal footer -->
+        <div class="custom-modal-footer">
+          <button class="button button-light-gray" close-modal="changePasswordModal">Cancel</button>
+          <button class="button button-primary send-feedback-modal">
+            Confirm
+          </button>
 
         </div>
       </div>

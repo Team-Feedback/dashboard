@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>All modals</title>
-  <!-- <link rel="stylesheet" href="../public/css/pretty-checkbox.css"> -->
+  <link rel="stylesheet" href="../public/css/pretty-checkbox.css">
   <link rel="stylesheet" href="../public/css/style.css">
 </head>
 
@@ -140,8 +140,33 @@
           </button>
 
           <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;"
+            target-modal="companyChoose">
+            Choose
+          </button>
+
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;"
             target-modal="regCoStep02">
             Step two
+          </button>
+
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;"
+            target-modal="regCoStep03">
+            Step three
+          </button>
+
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;"
+            target-modal="regCoStep04">
+            Step four
+          </button>
+
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;"
+            target-modal="joinCompany01">
+            Join company 01
+          </button>
+
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;"
+            target-modal="joinCompany02">
+            Join company 02
           </button>
         </div>
       </div>
@@ -168,6 +193,41 @@
       <div class="custom-modal-backdrop"></div>
     </div>
 
+    <!-- companyChoose-->
+    <div class="custom-modal-wrapper" id="companyChoose">
+      <div class="custom-modal">
+        <!-- Modal body -->
+        <div class="custom-modal-body">
+          <div class="custom-modal-close" close-modal="companyChoose">
+            <i class="icon-close"></i>
+          </div>
+
+          <p class="custom-modal-body-title">How would you like to get started</p>
+          <p class="custom-modal-body-text">Get started with three simple steps.</p>
+
+          <div class="cards">
+            <div class="card">
+              <img src="../public/img/company-choose-01.png" alt="Clip art" class="card-img">
+              <p class="card-title">Join a registered company</p>
+              <p class="card-text">Invitation required</p>
+
+              <button class="button button-primary">Continue</button>
+            </div>
+
+            <div class="card">
+              <img src="../public/img/company-choose-02.png" alt="Clip art" class="card-img">
+              <p class="card-title">Register a new company</p>
+              <p class="card-text">Free for up to 100 employees</p>
+
+              <button class="button button-primary">Continue</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="custom-modal-backdrop"></div>
+    </div>
+
     <!-- STEP TWO-->
     <div class="custom-modal-wrapper" id="regCoStep02">
       <div class="custom-modal">
@@ -185,9 +245,142 @@
 
 
           <p class="custom-modal-body-label">Company name</p>
-          <input type="text" placeholder="Enter company name">
+          <input class="custom-modal-body-input" type="text" placeholder="Enter company name">
 
-          <button class="button button-primary">Continue</button>
+          <button class="button button-primary modal-trigger" target-modal="regCoStep03">Continue</button>
+          <button class="custom-modal-body-link">Want to join a registered company? <span> Click here</span></button>
+
+        </div>
+      </div>
+      <div class="custom-modal-backdrop"></div>
+    </div>
+
+    <!-- STEP THREE -->
+    <div class="custom-modal-wrapper" id="regCoStep03">
+      <div class="custom-modal">
+        <!-- Modal body -->
+        <div class="custom-modal-body">
+          <div class="custom-modal-close" close-modal="regCoStep03">
+            <i class="icon-close"></i>
+          </div>
+
+          <p class="custom-modal-body-label">Company identification number</p>
+          <input class="custom-modal-body-input" type="text" placeholder="Company identification number">
+
+          <p class="custom-modal-body-label">Your position in the company</p>
+          <input class="custom-modal-body-input" type="text" placeholder="Your position in the company">
+
+          <div class="custom-modal-body-check">
+            <div class="pretty p-svg p-curve">
+              <input id="check01" type="checkbox" />
+              <div class="state p-primary">
+                <!-- svg path -->
+                <svg class="svg svg-icon" viewBox="0 0 20 20">
+                  <path
+                    d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z"
+                    style="stroke: white;fill:white;"></path>
+                </svg>
+                <label>&nbsp;</label>
+              </div>
+            </div>
+            <label for="check01" class="custom-modal-body-check-text" style="margin-top: -.4rem;">
+              Hereby I confirm that I have the rights to register this company
+              And take the admin rights to manage this company
+            </label>
+          </div>
+
+          <div class="custom-modal-body-check">
+            <div class="pretty p-svg p-curve">
+              <input id="check02" type="checkbox" />
+              <div class="state p-primary">
+                <!-- svg path -->
+                <svg class="svg svg-icon" viewBox="0 0 20 20">
+                  <path
+                    d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z"
+                    style="stroke: white;fill:white;"></path>
+                </svg>
+                <label>&nbsp;</label>
+              </div>
+            </div>
+            <label for="check02" class="custom-modal-body-check-text" style="margin-top: -.2rem;">
+              We agree to the Team Feedback <span>rights</span> and <span>terms</span>
+            </label>
+          </div>
+
+          <button class=" button button-primary modal-trigger" target-modal="regCoStep04">Continue</button>
+          <button class="custom-modal-body-link">Want to join a registered company? <span> Click
+              here</span></button>
+
+        </div>
+      </div>
+      <div class="custom-modal-backdrop"></div>
+    </div>
+
+    <!-- STEP FOUR-->
+    <div class="custom-modal-wrapper" id="regCoStep04">
+      <div class="custom-modal">
+        <!-- Modal body -->
+        <div class="custom-modal-body">
+          <div class="custom-modal-close" close-modal="regCoStep04">
+            <i class="icon-close"></i>
+          </div>
+
+          <img src="../public/img/example-logo.png" alt="Team feedback logo" class="custom-modal-body-company-logo">
+
+          <p class="custom-modal-body-title">Congratulations</p>
+          <p class="custom-modal-body-text">Your company has been successfully registered.</p>
+
+          <button class="button button-primary">Lets start</button>
+
+          <button class="custom-modal-body-link">Want to join a registered company? <span> Click
+              here</span></button>
+
+        </div>
+      </div>
+      <div class="custom-modal-backdrop"></div>
+    </div>
+
+    <!-- JOIN COMPANY STEP 01-->
+    <div class="custom-modal-wrapper" id="joinCompany01">
+      <div class="custom-modal">
+        <!-- Modal body -->
+        <div class="custom-modal-body">
+          <div class="custom-modal-close" close-modal="joinCompany01">
+            <i class="icon-close"></i>
+          </div>
+
+          <p class="custom-modal-body-title">Join a registered company</p>
+          <p class="custom-modal-body-text">To join a registered company you have to be invited.
+            Your email has not yet been invited.</p>
+
+          <img src="../public/img/join-company-img.png" alt="Clip art" class="custom-modal-body-img">
+
+          <button class="button button-primary modal-trigger" target-modal="regCoStep03">Continue</button>
+          <button class="custom-modal-body-link">Want to join a registered company? <span> Click here</span></button>
+
+        </div>
+      </div>
+      <div class="custom-modal-backdrop"></div>
+    </div>
+
+    <!-- JOIN COMPANY STEP 02-->
+    <div class="custom-modal-wrapper" id="joinCompany02">
+      <div class="custom-modal">
+        <!-- Modal body -->
+        <div class="custom-modal-body">
+          <div class="custom-modal-close" close-modal="joinCompany02">
+            <i class="icon-close"></i>
+          </div>
+
+          <p class="custom-modal-body-title">Join a registered company</p>
+          <p class="custom-modal-body-text">You have been invited to join following company:</p>
+
+          <img src="../public/img/example-logo.png" alt="Clip art" class="custom-modal-body-img">
+
+          <p class="custom-modal-body-name">Kone Oyj</p>
+          <p class="custom-modal-body-inviter">Inviter: Pekka Jokinen</p>
+
+          <button class="button button-primary modal-trigger" target-modal="regCoStep03">Continue</button>
           <button class="custom-modal-body-link">Want to join a registered company? <span> Click here</span></button>
 
         </div>

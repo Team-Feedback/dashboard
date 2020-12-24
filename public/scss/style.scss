@@ -2271,6 +2271,29 @@ input {
       border: solid 1.5px #eff0f2;
       background-color: #ffffff;
 
+      & .placeholder {
+        padding-top: 3.1em;
+        height: 14.3em;
+        text-align: center;
+
+        &-icon {
+
+          margin-bottom: 2.1em;
+
+          & i {
+            font-size: 3.6em;
+            color:#b7b7b7;
+          }
+        }
+
+        &-text {
+          font-size: 1.25em;
+          font-weight: 400;
+          letter-spacing: -0.06px;
+          color: #0b1f39;
+        }
+      }
+
       &-notifications {
         max-height: 24.92em;
         overflow-y: auto;
@@ -3181,7 +3204,8 @@ input {
 
 //SPECIFIC MOODAL MODIFIERS
 //modal card
-#modalCard {
+#modalCard,
+#userFeedbacksHighOrder  {
   position: absolute;
   height: calc(100% - 4em);
   margin-top: 1.6em;
@@ -3839,7 +3863,8 @@ input {
 #settingsModal,
 #feedbackModal,
 #settingsModalAddress,
-#settingsModalContact {
+#settingsModalContact,
+#changePasswordModal {
   & .custom-modal {
     width: 56.1em;
     max-height: 95vh;
@@ -3915,7 +3940,12 @@ input {
 
 //REGISTER COMPANY MODALS
 #regCoStep01,
-#regCoStep02 {
+#regCoStep02,
+#regCoStep03,
+#regCoStep04,
+#joinCompany01,
+#joinCompany02,
+#companyChoose {
   & .custom-modal {
     width: 111.1em;
     border-radius: 15px;
@@ -3930,6 +3960,9 @@ input {
     }
 
     &-body {
+      padding: 2em 3em;
+      height: 95vh;
+      max-height: 65.4em;
       @include flexbox();
       @include flex-direction(column);
       @include align-items(center);
@@ -3958,7 +3991,7 @@ input {
         text-align: left;
       }
 
-      & input {
+      &-input {
         margin-bottom: emcalc(1.35,1.35);
         padding: 0 emcalc(1.4,1.35);
         height: emcalc(4.2,1.35);
@@ -3969,6 +4002,33 @@ input {
         letter-spacing: 0.17px;
         color: #252a34;
         border: solid 1px #e3e3e3;
+        border-radius: 4px;
+      }
+
+      &-check {
+        margin-bottom: 2.2em;
+        @include flexbox();
+        @include align-items(flex-start);
+        @include justify-content(flex-start);
+        width: 100%;
+        max-width: 40.4em;
+        text-align: left;
+
+        & .pretty {
+          margin-right: 0;
+          font-size: 1.7em;
+          & label {
+
+          }
+        }
+
+        &-text {
+          font-size: 1.2em;
+          font-weight: 400;
+          line-height: 1.5;
+          letter-spacing: 0.09px;
+          color: #2b2b2b;
+        }
       }
 
       & .button-primary {
@@ -4005,9 +4065,6 @@ input {
 #regCoStep01 {
   & .custom-modal {
     &-body {
-      padding: 2em 3em;
-      height: 95vh;
-      max-height: 65.4em;
       //padding-top: 12.1em;
 
       &-logo {
@@ -4039,9 +4096,6 @@ input {
 #regCoStep02 {
   & .custom-modal {
     &-body {
-      padding: 2em 3em;
-      height: 95vh;
-      max-height: 65.4em;
 
       &-title {
         margin-bottom: emcalc(2.1,2.9);
@@ -4076,6 +4130,200 @@ input {
   }
 }
 
+#regCoStep03 {
+  & .custom-modal {
+    &-body {
+
+      &-input {
+        &:nth-of-type(1) {
+          margin-bottom: 3.4rem;
+        }
+
+        &:nth-of-type(2) {
+          margin-bottom: 4.6rem;
+        }
+      }
+
+      & .button-primary {
+        margin-top: 5.2rem;
+        margin-bottom: 2rem;
+      }
+
+
+    }
+  }
+}
+
+#regCoStep04 {
+  & .custom-modal {
+    &-body {
+
+      &-company-logo {
+        margin-bottom: 8em;
+        max-height: 11.2em;
+        object-fit: contain;
+      }
+
+      &-title {
+        margin-bottom: emcalc(1.8,2.6);
+        font-size: 2.6em;
+        font-weight: 600;
+        letter-spacing: -0.2px;
+        color: #080808;
+      }
+
+      & .button-primary {
+        margin-top: 5.2rem;
+        margin-bottom: 2rem;
+      }
+
+    }
+  }
+}
+
+
+#joinCompany01 {
+  & .custom-modal {
+    &-body {
+
+      &-title {
+        margin-bottom: emcalc(2.1,2.9);
+        font-size: 2.9em;
+        font-weight: 600;
+        letter-spacing: -0.22px;
+        color: #080808;
+      }
+
+      &-text {
+        max-width: emcalc(40.4,1.53);
+        margin-bottom: 0;
+        font-size: 1.53em;
+        font-weight: 400;
+        color: #626977;
+      }
+
+      &-img {
+        margin-top: 5em;
+        margin-bottom: 5em;
+        width: 22.5em;
+      }
+
+      & .button-primary {
+        margin-bottom: 2rem;
+      }
+
+
+    }
+  }
+}
+
+#joinCompany02 {
+  & .custom-modal {
+    &-body {
+
+      &-title {
+        margin-bottom: emcalc(2.1,2.9);
+        font-size: 2.9em;
+        font-weight: 600;
+        letter-spacing: -0.22px;
+        color: #080808;
+      }
+
+      &-text {
+        max-width: emcalc(40.4,1.53);
+        margin-bottom: 0;
+        font-size: 1.53em;
+        font-weight: 400;
+        color: #626977;
+      }
+
+      &-img {
+        margin-top: 8em;
+        margin-bottom: 4.2em;
+        width: 22.5em;
+      }
+
+      &-name {
+        margin-bottom: emcalc(1.2, 2.05);
+        font-size: 2.05em;
+        font-weight: 500;
+        color: #080808;
+      }
+
+      &-inviter {
+        margin-bottom: emcalc(5.4,1.38);
+        font-size: 1.38em;
+        font-weight: 400;
+        letter-spacing: 0.17px;
+        color: #636c79;
+      }
+
+      & .button-primary {
+        margin-bottom: 2rem;
+      }
+
+
+    }
+  }
+}
+
+#companyChoose {
+  & .custom-modal {
+    &-body {
+
+      &-title {
+        margin-bottom: emcalc(2.1,2.9);
+        font-size: 2.9em;
+        font-weight: 600;
+        letter-spacing: -0.22px;
+        color: #080808;
+      }
+
+      &-text {
+        max-width: emcalc(40.4,1.53);
+        margin-bottom: 0;
+        font-size: 1.53em;
+        font-weight: 400;
+        color: #626977;
+      }
+
+      & .cards {
+        @include flexbox();
+        @include align-items(flex-start);
+        @include justify-content(center);
+
+        & .card {
+
+          &-img {
+            margin-bottom: 3.9em;
+            width: 28.5em;
+            border-radius: 10px;
+          }
+
+          &-title {
+            margin-bottom: emcalc(1.6,1.9);
+            font-size: 1.9em;
+            font-weight: 500;
+            color: #080808;
+          }
+
+          &-text {
+            margin-bottom: emcalc(2.6,1.38);
+            font-size: 1.38em;
+            font-weight: 400;
+            letter-spacing: -0.07px;
+            color: #707d8d;
+          }
+
+          & .button {}
+        }
+      }
+
+
+    }
+  }
+}
+
 //small modals
 #confirmationModal,
 #inviteUsersModal,
@@ -4083,7 +4331,8 @@ input {
 #settingsModal,
 #settingsModalAddress,
 #settingsModalContact,
-#createCompanyModal {
+#createCompanyModal,
+#changePasswordModal {
   & .custom-modal {
     width: 39em;
     & .custom-modal-close {
@@ -4122,7 +4371,8 @@ input {
 }
 
 #settingsModalAddress,
-#settingsModalContact {
+#settingsModalContact,
+#changePasswordModal {
   & .custom-modal {
     &-body {
       padding-bottom: 2em;
