@@ -2866,18 +2866,21 @@ input {
   #settingsModalContact .custom-modal.success .feedback-item {
     display: none; }
 
-#regCoStep01 .custom-modal {
+#regCoStep01 .custom-modal,
+#regCoStep02 .custom-modal {
   width: 111.1em;
   border-radius: 15px; }
   @media (max-width: 991px) {
-    #regCoStep01 .custom-modal {
+    #regCoStep01 .custom-modal,
+    #regCoStep02 .custom-modal {
       max-width: 100%;
       max-height: 100%;
       width: 100%;
       height: 100%;
       border-radius: 0;
       border: 0; } }
-  #regCoStep01 .custom-modal-body {
+  #regCoStep01 .custom-modal-body,
+  #regCoStep02 .custom-modal-body {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;
@@ -2905,19 +2908,56 @@ input {
     /* Firefox */
     -ms-overflow-style: none;
     /* Internet Explorer 10+ */ }
-    #regCoStep01 .custom-modal-body::-webkit-scrollbar {
+    #regCoStep01 .custom-modal-body::-webkit-scrollbar,
+    #regCoStep02 .custom-modal-body::-webkit-scrollbar {
       /* WebKit */
       width: 0;
       height: 0; }
-    #regCoStep01 .custom-modal-body .button-primary {
+    #regCoStep01 .custom-modal-body-label,
+    #regCoStep02 .custom-modal-body-label {
       width: 100%;
-      max-width: 40.4em;
+      max-width: 31.5625em;
+      margin-bottom: 0.7421875em;
+      font-size: 1.28em;
+      font-weight: 500;
+      letter-spacing: 0.1px;
+      color: #142848;
+      text-align: left; }
+    #regCoStep01 .custom-modal-body input,
+    #regCoStep02 .custom-modal-body input {
+      margin-bottom: 1em;
+      padding: 0 1.037037037em;
+      height: 3.1111111111em;
+      width: 100%;
+      max-width: 29.9259259259em;
+      font-size: 1.35em;
+      font-weight: 400;
+      letter-spacing: 0.17px;
+      color: #252a34;
+      border: solid 1px #e3e3e3; }
+    #regCoStep01 .custom-modal-body .button-primary,
+    #regCoStep02 .custom-modal-body .button-primary {
+      width: 100%;
+      max-width: 25.25em;
       height: 2.875em;
       min-height: 2.875em;
       font-size: 1.6em;
       font-weight: 500;
       letter-spacing: 0.12px;
       color: #ffffff; }
+    #regCoStep01 .custom-modal-body-link,
+    #regCoStep02 .custom-modal-body-link {
+      font-size: 1.28em;
+      font-weight: 400;
+      letter-spacing: -0.03px;
+      color: #087af9; }
+      #regCoStep01 .custom-modal-body-link span,
+      #regCoStep02 .custom-modal-body-link span {
+        font-weight: 500;
+        cursor: pointer; }
+        #regCoStep01 .custom-modal-body-link span:hover,
+        #regCoStep02 .custom-modal-body-link span:hover {
+          text-decoration: underline; }
 
 #regCoStep01 .custom-modal-body {
   padding: 2em 3em;
@@ -2939,6 +2979,31 @@ input {
     font-size: 1.63em;
     font-weight: 400;
     color: #626977; }
+
+#regCoStep02 .custom-modal-body {
+  padding: 2em 3em;
+  height: 95vh;
+  max-height: 65.4em; }
+  #regCoStep02 .custom-modal-body-title {
+    margin-bottom: 0.724137931em;
+    font-size: 2.9em;
+    font-weight: 600;
+    letter-spacing: -0.22px;
+    color: #080808; }
+  #regCoStep02 .custom-modal-body-text {
+    margin-bottom: 3.5947712418em;
+    margin-bottom: 3.0718954248em;
+    font-size: 1.53em;
+    font-weight: 400;
+    color: #626977; }
+  #regCoStep02 .custom-modal-body-img-label {
+    margin-bottom: 6.5em;
+    width: 15em;
+    height: 15em;
+    background-image: url(../img/additional-info-img.png);
+    background-size: cover; }
+  #regCoStep02 .custom-modal-body .button-primary {
+    margin-bottom: 2rem; }
 
 #confirmationModal .custom-modal,
 #inviteUsersModal .custom-modal,

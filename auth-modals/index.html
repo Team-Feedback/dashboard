@@ -136,13 +136,18 @@
         <div class="content-card">
           <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;"
             target-modal="regCoStep01">
-            Sign in
+            Step one
+          </button>
+
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;"
+            target-modal="regCoStep02">
+            Step two
           </button>
         </div>
       </div>
     </div>
 
-    <!-- IMAGE UPLOAD MODAL-->
+    <!-- STEP ONE-->
     <div class="custom-modal-wrapper" id="regCoStep01">
       <div class="custom-modal">
         <!-- Modal body -->
@@ -156,7 +161,34 @@
           <p class="custom-modal-body-title">Welcome to Team Feedback</p>
           <p class="custom-modal-body-text">The great new tool to develop your teams.</p>
 
-          <button class="button button-primary">Lets start</button>
+          <button class="button button-primary modal-trigger" target-modal="regCoStep02">Lets start</button>
+
+        </div>
+      </div>
+      <div class="custom-modal-backdrop"></div>
+    </div>
+
+    <!-- STEP TWO-->
+    <div class="custom-modal-wrapper" id="regCoStep02">
+      <div class="custom-modal">
+        <!-- Modal body -->
+        <div class="custom-modal-body">
+          <div class="custom-modal-close" close-modal="regCoStep02">
+            <i class="icon-close"></i>
+          </div>
+
+          <p class="custom-modal-body-title">Register a new company</p>
+          <p class="custom-modal-body-text">Team Feedback is free of charge for companies up to 100 employees.</p>
+
+          <label for="uploadCompanyImg" class="custom-modal-body-img-label"></label>
+          <input type="file" id="uploadCompanyImg" class="custom-modal-body-img-input" hidden>
+
+
+          <p class="custom-modal-body-label">Company name</p>
+          <input type="text" placeholder="Enter company name">
+
+          <button class="button button-primary">Continue</button>
+          <button class="custom-modal-body-link">Want to join a registered company? <span> Click here</span></button>
 
         </div>
       </div>
@@ -164,6 +196,7 @@
     </div>
   </main>
 
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
   <script src="../public/js/main.js"></script>
   <script>
 

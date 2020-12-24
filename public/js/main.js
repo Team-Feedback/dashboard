@@ -102,11 +102,13 @@ modalTriggers.forEach((e) => {
       e.id !== 'modalCard' && e.classList.remove('open');
 
       let elem = document.querySelector('.grid');
-      let msnry = new Masonry(elem, {
-        // options
-        itemSelector: '.grid-item',
-        horizontalOrder: true
-      });
+      if (elem) {
+        let msnry = new Masonry(elem, {
+          // options
+          itemSelector: '.grid-item',
+          horizontalOrder: true
+        });
+      }
     })
     let modal = document.getElementById(`${e.getAttribute("target-modal")}`);
     modal.classList.add("open");

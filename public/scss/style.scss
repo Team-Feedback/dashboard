@@ -3914,7 +3914,8 @@ input {
 }
 
 //REGISTER COMPANY MODALS
-#regCoStep01 {
+#regCoStep01,
+#regCoStep02 {
   & .custom-modal {
     width: 111.1em;
     border-radius: 15px;
@@ -3946,15 +3947,55 @@ input {
         height: 0;
       }
 
+      &-label {
+        width: 100%;
+        max-width: emcalc(40.4, 1.28);
+        margin-bottom: emcalc(.95,1.28);
+        font-size: 1.28em;
+        font-weight: 500;
+        letter-spacing: 0.1px;
+        color: #142848;
+        text-align: left;
+      }
+
+      & input {
+        margin-bottom: emcalc(1.35,1.35);
+        padding: 0 emcalc(1.4,1.35);
+        height: emcalc(4.2,1.35);
+        width: 100%;
+        max-width: emcalc(40.4, 1.35);
+        font-size: 1.35em;
+        font-weight: 400;
+        letter-spacing: 0.17px;
+        color: #252a34;
+        border: solid 1px #e3e3e3;
+      }
+
       & .button-primary {
         width: 100%;
-        max-width: 40.4em;
+        max-width: emcalc(40.4,1.6);
         height: emcalc(4.6,1.6);
         min-height: emcalc(4.6,1.6);
         font-size: 1.6em;
         font-weight: 500;
         letter-spacing: 0.12px;
         color: #ffffff;
+      }
+
+      &-link {
+        font-size: 1.28em;
+        font-weight: 400;
+        letter-spacing: -0.03px;
+        color: #087af9;
+
+        & span {
+          font-weight: 500;
+          cursor: pointer;
+          
+          &:hover {
+            text-decoration: underline;
+          }
+        }
       }
     }
   }
@@ -3990,6 +4031,47 @@ input {
         font-weight: 400;
         color: #626977;
       }
+
+    }
+  }
+}
+
+#regCoStep02 {
+  & .custom-modal {
+    &-body {
+      padding: 2em 3em;
+      height: 95vh;
+      max-height: 65.4em;
+
+      &-title {
+        margin-bottom: emcalc(2.1,2.9);
+        font-size: 2.9em;
+        font-weight: 600;
+        letter-spacing: -0.22px;
+        color: #080808;
+      }
+
+      &-text {
+        margin-bottom: emcalc(5.5,1.53);
+        margin-bottom: emcalc(4.7,1.53);
+        font-size: 1.53em;
+        font-weight: 400;
+        color: #626977;
+      }
+
+      &-img-label {
+        margin-bottom: 6.5em;
+        width: 15em;
+        height: 15em;
+        background-image: url(../img/additional-info-img.png);
+        background-size: cover;
+      }
+
+      & .button-primary {
+        margin-bottom: 2rem;
+      }
+
+
     }
   }
 }
