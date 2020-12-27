@@ -44,7 +44,35 @@
 
         <!-- Buttons -->
         <div class="header-buttons">
-          <div class="header-buttons-settings"><i class="icon-cog"></i></div>
+          <!-- <div class="header-buttons-settings"><i class="icon-cog"></i></div> -->
+          <!-- SETTINGS DROPDOWN -->
+          <div class="custom-dropdown settings-dropdown">
+            <button class="custom-dropdown-trigger">
+              <i class="icon-cog"></i>
+            </button>
+            <div class="custom-dropdown-menu settings-dropdown-menu">
+              <div class="settings-dropdown-menu-header">
+                <p class="settings-dropdown-menu-header-text">Settings</p>
+              </div>
+              <div class="settings-dropdown-menu-section">
+                <div class="settings-dropdown-menu-section-header">
+                  <p class="settings-dropdown-menu-section-header-text">Theme color</p>
+                </div>
+                <div class="settings-dropdown-menu-section-main">
+                  <div class="theme">
+                    <p class="theme-text"><span class="strong">Light </span> - Default</p>
+                    <div class="theme-colors">
+                      <div class="theme-colors-item white selected" style="background-color: #bfdaff;"
+                        theme-color="#FFF"></div>
+                      <div class="theme-colors-item" style="background-color: #0e6ff9;" theme-color="#0e6ff9"></div>
+                      <div class="theme-colors-item" style="background-color: #ffa82b;" theme-color="#ffa82b"></div>
+                      <div class="theme-colors-item" style="background-color: #565656;" theme-color="#565656"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="header-buttons-help"><i class="icon-question"></i></div>
           <!-- NOTIFICATION DROPDOWN -->
           <div class="custom-dropdown notification-dropdown">
@@ -1951,6 +1979,26 @@
 
   <script src="../public/js/main.js"></script>
   <script src="../public/js/tm-grid.js"></script>
+
+  <script>
+    let themeColorItems = document.querySelectorAll('.theme-colors-item');
+
+    themeColorItems.forEach(e => {
+      e.addEventListener('click', function () {
+        themeColorItems.forEach(x => {
+          x.classList.remove('selected');
+        })
+
+        document.querySelector('.header-main').classList.remove('white-logo');
+
+        this.classList.add('selected');
+        if (this.classList.contains('white')) {
+          document.querySelector('.header-main').classList.add('white-logo');
+        }
+        document.documentElement.style.setProperty('--theme-color-primary', this.getAttribute('theme-color'));
+      })
+    })
+  </script>
 
 </body>
 

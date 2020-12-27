@@ -92,6 +92,8 @@
 // VARIABLES
 // ==================================
 :root {
+  //THEME COLORS
+  --theme-color-primary: #086cf9;
   //COLORS
   --color-primary: #086cf9;
   --color-green: #2f9b44;
@@ -819,11 +821,11 @@
 
 @font-face {
   font-family: 'dashoard-icons';
-  src:  url('../fonts/dashoard-icons.eot?thmngf');
-  src:  url('../fonts/dashoard-icons.eot?thmngf#iefix') format('embedded-opentype'),
-    url('../fonts/dashoard-icons.ttf?thmngf') format('truetype'),
-    url('../fonts/dashoard-icons.woff?thmngf') format('woff'),
-    url('../fonts/dashoard-icons.svg?thmngf#dashoard-icons') format('svg');
+  src:  url('../fonts/dashoard-icons.eot?suufj');
+  src:  url('../fonts/dashoard-icons.eot?suufj#iefix') format('embedded-opentype'),
+    url('../fonts/dashoard-icons.ttf?suufj') format('truetype'),
+    url('../fonts/dashoard-icons.woff?suufj') format('woff'),
+    url('../fonts/dashoard-icons.svg?suufj#dashoard-icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -844,6 +846,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-close-circle-01:before {
+  content: "\e958";
+}
 .icon-half-star:before {
   content: "\e957";
 }
@@ -1115,6 +1120,8 @@ button {
   background-color: transparent;
   font-size: inherit;
   font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
   border: 0;
   outline: none;
 }
@@ -2230,6 +2237,96 @@ input {
         &:hover {
           visibility: visible;
           opacity: 1!important;
+        }
+      }
+    }
+  }
+
+  &.settings-dropdown {
+    & .custom-dropdown-trigger {}
+
+    & .settings-dropdown-menu {
+      &-header {
+        padding: 2em 1.7em 1.45em;
+        border-bottom: solid 1.3px #ebebeb;
+
+        &-text {
+          font-size: 1.4em;
+          font-weight: 500;
+          letter-spacing: 0.07px;
+          color: #0f1f50;
+        }
+      }
+
+      &-section {
+
+        &-header {
+          padding: 1.1em 1.7em;
+          border-bottom: solid 1.3px #ebebeb;
+
+          &-text {
+            font-size: 1.18em;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.19;
+            letter-spacing: -0.06px;
+            text-align: left;
+            color: #6a7c8f;
+          }
+        }
+
+        &-main {
+          & .theme {
+            padding: 1.8em 1.7em;
+            padding-right: 2.2em;
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(space-between);
+
+            &-text {
+              font-size: 1.28em;
+              font-weight: 400;
+              letter-spacing: -0.03px;
+              color: #172b4d;
+
+              & .strong {
+                font-weight: 500;
+              }
+            }
+
+            &-colors {
+              @include flexbox();
+              @include align-items(center);
+              @include justify-content(center);
+
+              &-item {
+                position: relative;
+                width: 1.8em;
+                height: 1.8em;
+                border-radius: 100vh;
+                cursor: pointer;
+
+                &:not(:last-of-type) {
+                  margin-right: .9em;
+                }
+
+                &.selected {
+                  &::after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 2.6rem;
+                    height: 2.6rem;
+                    border: solid 1px #0077cc;
+                    border-radius: 100vh;
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -7162,6 +7259,7 @@ input {
       background-color: #fff;
       z-index: 1000;
       box-shadow: 0 6px 12px 0 rgba(178, 178, 178, 0.38);
+      border-radius: 0 0 4px 4px;
 
 
       &-item {
@@ -7277,9 +7375,9 @@ input {
     @include align-items(center);
     @include justify-content(flex-start);
     // background-image: linear-gradient(to right, #2a7bfa 1%, #1a68eb 99%);
-    background-color: #0062ff;
+    background-color: var(--theme-color-primary);
     transition: height 0.5s ease-in-out, padding-top 0.5s ease-in-out, background-color 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
-    border-bottom: solid 1px #0062ff;
+    border-bottom: solid 1px var(--theme-color-primary);
 
     &.hide {
       height: 0!important;
@@ -7288,8 +7386,8 @@ input {
     }
 
     &.white {
-      background-color: #FFF;
-      border-bottom: solid 1px #f0f0f0;
+      background-color: var(--theme-color-primary);
+      border-bottom: solid 1px var(--theme-color-primary);
 
       & .header-main-info {
         &-icon {
@@ -7309,7 +7407,8 @@ input {
           
       &-settings,
       &-help,
-      & .notification-dropdown {
+      & .notification-dropdown,
+      & .settings-dropdown {
         visibility: hidden;
         opacity: 0;
       }
@@ -7351,9 +7450,33 @@ input {
       & .header-buttons-settings i,
       & .header-buttons-help i,
       & .header-buttons-notifications i,
-      & .notification-dropdown .custom-dropdown-trigger i{
+      & .notification-dropdown .custom-dropdown-trigger i,
+      & .settings-dropdown .custom-dropdown-trigger i {
         color: #505050!important;
+
+
       }
+
+      & .header-buttons-settings,
+      & .header-buttons-help,
+      & .header-buttons-notifications,
+      & .notification-dropdown .custom-dropdown-trigger,
+      & .settings-dropdown .custom-dropdown-trigger {
+
+        &::before {
+          background-color: #505050!important;
+        }
+      }
+
+      & .notification-dropdown-trigger {
+        &-amount {
+          color: #505050;
+          background-color: rgba($color: #505050, $alpha: .15);
+        }
+  
+      }
+
+
     }
 
     & .header-buttons {
@@ -7375,7 +7498,8 @@ input {
       &-settings,
       &-help,
       &-notifications,
-      & .notification-dropdown .custom-dropdown-trigger {
+      & .notification-dropdown .custom-dropdown-trigger,
+        & .settings-dropdown .custom-dropdown-trigger {
         position: relative;
         cursor: pointer;
         opacity: 1;
@@ -7829,7 +7953,8 @@ input {
       &-settings,
       &-help,
       &-notifications,
-      & .notification-dropdown .custom-dropdown-trigger {
+      & .notification-dropdown .custom-dropdown-trigger,
+      & .settings-dropdown .custom-dropdown-trigger {
         position: relative;
 
         &::before {
@@ -9963,10 +10088,10 @@ input {
               @include flex-direction(column);
               @include align-items(flex-start);
               @include justify-content(flex-start);
-              border-radius: 2.5px;
-              min-height: calc(100% - 4.6em);
-
-              border: 0;
+              min-height: calc(100% - 4.2em);
+              border-radius: 2.5px 2.5px 0 0;
+              border: solid 1px #f2f2f2;
+              border-bottom: 0;
               background-color: #f7f9fa;
 
               & .struct {
@@ -10266,7 +10391,7 @@ input {
               }
 
               &:first-of-type {
-                margin-right: .2em;
+                margin-right: .3em;
               }
             }
           }
@@ -10761,7 +10886,7 @@ input {
         @include justify-content(center);
         width: 100%;
         height: 100vh;
-        max-height: 36em;
+        max-height: 43em;
 
         &-img {
           margin-bottom: 5.3em;
@@ -10789,6 +10914,7 @@ input {
 
       & .answer {
         @include flexbox();
+        display: none;
         @include align-items(flex-start);
         @include justify-content(flex-start);
         padding: 1.6em 2.6em;
@@ -10976,7 +11102,7 @@ input {
           }
 
           & i {
-            top: 48%;
+            top: 50%;
             left: 1.2rem;
             font-size: 1.3em;
           }
@@ -11618,8 +11744,7 @@ input {
             }
           }
           &-menu {
-            border-top-left-radius: 4px;
-            border-top-right-radius: 4px;
+            border-radius: 4px 4px 0 0;
             border: solid 1px #cfd7e0;
             border-bottom: 0;
             bottom: 100%;
@@ -18807,7 +18932,7 @@ input {
   transition: all 200ms ease;
   transition-property: left, top;
 
-  //@include loop-children();
+
 }
 .react-grid-item.cssTransforms {
   transition-property: transform;
@@ -18946,4 +19071,20 @@ input {
 .react-resizable-handle-s {
   bottom: 0;
   transform: rotate(45deg);
+}
+
+
+// ALL INPUTS
+input[type='text'],
+input[type='password'],
+input[type='email'] {
+  transition: background-color .1s ease-in-out, border-color .1s ease-in-out;
+  &:hover {
+    background-color: rgba(234, 236, 240, 0.51);
+  }
+
+  &:focus {
+    background-color: transparent;
+    border-color: #1262f8;
+  }
 }
