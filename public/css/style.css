@@ -5420,7 +5420,7 @@ input {
         overflow: hidden;
         text-overflow: ellipsis;
         cursor: pointer; }
-        .custom-table-row td:not(.column-05) .table-set:hover .table-set-info-name, .custom-table-row td:not(.column-05) .table-set:hover .table-set-info-email {
+        .custom-table-row td:not(.column-05) .table-set:hover .table-set-info-name {
           text-decoration: underline; }
         .custom-table-row td:not(.column-05) .table-set-img {
           margin-right: 1.5em;
@@ -6508,7 +6508,7 @@ input {
   z-index: 500;
   transform: translate(-100%, 0);
   visibility: hidden;
-  transition: all .3s ease-in-out;
+  transition: all .5s ease-in-out;
   transition-property: transform, visibility; }
   .side.open {
     opacity: 1 !important;
@@ -8885,7 +8885,8 @@ input {
       width: calc(100%);
       height: calc(100% + 2.5px);
       border: 1.25px solid #ededed !important;
-      border-radius: 8px; }
+      border-radius: 8px;
+      pointer-events: none; }
     #team-members-table .custom-table-body .custom-table-row:hover:before {
       display: block; }
     #team-members-table .custom-table-body .custom-table-row:hover {
@@ -8962,7 +8963,6 @@ input {
       display: -moz-flex;
       display: -ms-flexbox;
       display: flex;
-      display: none;
       -webkit-box-align: start;
       -ms-flex-align: start;
       -webkit-align-items: flex-start;
@@ -9002,11 +9002,11 @@ input {
         -webkit-justify-content: center;
         -moz-justify-content: center;
         justify-content: center;
-        min-width: 2.2222222222em;
-        min-height: 2.2222222222em;
-        width: 2.2222222222em;
-        height: 2.2222222222em;
-        font-size: 1.8em;
+        min-width: 2.5em;
+        min-height: 2.5em;
+        width: 2.5em;
+        height: 2.5em;
+        font-size: 1.6em;
         font-weight: 700;
         color: #ffffff;
         background-color: #0ab8ff;
@@ -9018,6 +9018,8 @@ input {
           font-size: 1.25em;
           font-weight: 500;
           color: #000; }
+          #team-feedback .content-card .answer-set-title:hover {
+            text-decoration: underline; }
           #team-feedback .content-card .answer-set-title-date {
             margin-left: 0.4em;
             font-weight: 400;
@@ -9051,6 +9053,17 @@ input {
   #team-settings-admin-rights .custom-table-row .column-02,
   #user-settings-teams .custom-table-row .column-02 {
     display: none; } }
+#company-employees .custom-table-body .custom-table-row .column-01:hover,
+#company-employees-archived .custom-table-body .custom-table-row .column-01:hover,
+#company-teams .custom-table-body .custom-table-row .column-01:hover,
+#company-teams-archived .custom-table-body .custom-table-row .column-01:hover,
+#company-admin-rights .custom-table-body .custom-table-row .column-01:hover,
+#team-settings-members .custom-table-body .custom-table-row .column-01:hover,
+#team-settings-lead .custom-table-body .custom-table-row .column-01:hover,
+#team-settings-viewing-rights .custom-table-body .custom-table-row .column-01:hover,
+#team-settings-admin-rights .custom-table-body .custom-table-row .column-01:hover,
+#user-settings-teams .custom-table-body .custom-table-row .column-01:hover {
+  text-decoration: underline; }
 
 #company-employees .header-sub-nav,
 #company-teams .header-sub-nav,
@@ -10237,7 +10250,7 @@ input {
             object-fit: cover;
             border-radius: 16px;
             transition: all .2s ease-in-out;
-            box-shadow: 0 3px 6px 0 rgba(221, 221, 221, 0.4); }
+            box-shadow: 0 3px 6px 0 rgba(221, 221, 221, 0.2); }
           #give-feedback .content-card .people .person-main-icon {
             display: -webkit-box;
             display: -webkit-flex;

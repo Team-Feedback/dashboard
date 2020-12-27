@@ -6716,8 +6716,7 @@ input {
         text-overflow: ellipsis;
         cursor: pointer;
 
-        &:hover .table-set-info-name,
-        &:hover .table-set-info-email {
+        &:hover .table-set-info-name {
           text-decoration: underline;
         }
 
@@ -7996,7 +7995,7 @@ input {
   visibility: hidden;
   // transition: transform .3s ease-in-out;
   // transition: transform .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  transition: all .5s ease-in-out;
     transition-property: transform, visibility;
 
     &.open {
@@ -10829,6 +10828,7 @@ input {
         height: calc(100% + 2.5px);
         border: 1.25px solid #ededed!important;
         border-radius: 8px;
+        pointer-events: none;
         //z-index: -1;
         //background-color: #FAFAFA;
       }
@@ -10916,7 +10916,6 @@ input {
 
       & .answer {
         @include flexbox();
-        display: none;
         @include align-items(flex-start);
         @include justify-content(flex-start);
         padding: 1.6em 2.6em;
@@ -10943,11 +10942,11 @@ input {
           @include flexbox();
           @include align-items(center);
           @include justify-content(center);
-          min-width: emcalc(4,1.8);
-          min-height: emcalc(4,1.8);
-          width: emcalc(4,1.8);
-          height: emcalc(4,1.8);
-          font-size: 1.8em;
+          min-width: emcalc(4,1.6);
+          min-height: emcalc(4,1.6);
+          width: emcalc(4,1.6);
+          height: emcalc(4,1.6);
+          font-size: 1.6em;
           font-weight: 700;
           color: #ffffff;
           background-color: #0ab8ff;
@@ -10962,6 +10961,10 @@ input {
             font-size: 1.25em;
             font-weight: 500;
             color: #000;
+
+            &:hover {
+              text-decoration: underline;
+            }
 
             &-date {
               margin-left: emcalc(.5,1.25);
@@ -11004,6 +11007,16 @@ input {
     & .column-02 {
       @include respond(desktop-sm) {
         display: none;
+      }
+    }
+  }
+
+  & .custom-table-body {
+    & .custom-table-row {
+      & .column-01 {
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -12269,7 +12282,7 @@ input {
               object-fit: cover;
               border-radius: 16px;
               transition: all .2s ease-in-out;
-              box-shadow: 0 3px 6px 0 rgba(221, 221, 221, 0.4);
+              box-shadow: 0 3px 6px 0 rgba(221, 221, 221, 0.2);
             }
 
             &-icon {
