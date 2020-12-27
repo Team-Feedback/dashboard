@@ -6072,14 +6072,13 @@ input {
       background-color: #FFF;
       border-bottom: solid 1px #f0f0f0; }
       .header-main.white-logo .header-main-info-icon {
-        margin-left: 2.3em;
         padding-left: 0;
         padding-right: 1.2em;
-        width: 5em;
         background-image: url(../img/logo-only.png);
         background-size: contain;
         background-repeat: no-repeat;
-        background-position: left; }
+        background-position: calc(100% - 1.25em) center;
+        border-color: #e4e8ec; }
         .header-main.white-logo .header-main-info-icon i {
           display: none; }
       .header-main.white-logo .header-main-info-title {
@@ -6191,6 +6190,7 @@ input {
       justify-content: flex-start;
       color: #fff; }
       .header-main-info-icon {
+        width: 7.6em;
         padding-left: 3.1em;
         height: 3.6em;
         display: -webkit-box;
