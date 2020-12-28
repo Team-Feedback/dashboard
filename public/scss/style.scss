@@ -1984,7 +1984,7 @@ input {
 
         &-desc {
           padding: 0 1rem;
-          font-size: 1.25em;
+          font-size: 1.2em;
           font-weight: 400;
           letter-spacing: -0.06px;
           color: #7c8086;
@@ -4212,10 +4212,23 @@ input {
 
       &-img-label {
         margin-bottom: 6.5em;
-        width: 15em;
-        height: 15em;
+        width: 100%;
+        max-width: 40em;
+        height: 100%;
+        max-height: 15em;
         background-image: url(../img/additional-info-img.png);
-        background-size: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      &-img {
+        margin-bottom: 6.5em;
+        width: 100%;
+        max-width: 40em;
+        height: 100%;
+        max-height: 15em;
+        object-fit: contain;
       }
 
       & .button-primary {
@@ -7490,7 +7503,7 @@ input {
       & .header-buttons-notifications i,
       & .notification-dropdown .custom-dropdown-trigger i,
       & .settings-dropdown .custom-dropdown-trigger i {
-        color: #505050!important;
+        color: #4F5662!important;
 
 
       }
@@ -7502,14 +7515,14 @@ input {
       & .settings-dropdown .custom-dropdown-trigger {
 
         &::before {
-          background-color: #505050!important;
+          background-color: #4F5662!important;
         }
       }
 
       & .notification-dropdown-trigger {
         &-amount {
-          color: #505050;
-          background-color: rgba($color: #505050, $alpha: .15);
+          color: #4F5662;
+          background-color: rgba($color: #4F5662, $alpha: .15);
         }
   
       }
@@ -7638,7 +7651,7 @@ input {
         font-size: 2.15em;
         font-weight: 600;
         letter-spacing: 0.05px;
-        color: #0d1826;
+        color: #FFF;
       }
     }
   }
@@ -8104,6 +8117,13 @@ input {
 
           &:not(:last-of-type) {
             margin-bottom: .5em;
+          }
+
+          &:nth-of-type(3)  {
+            & i {
+              margin-right: emcalc(1.1,2);
+              font-size: 2em;
+            }
           }
 
           &:hover:before {
@@ -10379,8 +10399,7 @@ input {
 
       & .custom-questions {
         margin-bottom: 4.6em;
-        min-height: 14em;
-        max-height: calc(100vh - 75em);
+        max-height: calc(100vh - 85em);
         overflow-y: auto;
         scrollbar-width: none;
         /* Firefox */
@@ -10547,7 +10566,7 @@ input {
   & .header {
     &.small {
       & + .content-wrapper .content .content-card .custom-questions {
-        max-height: calc(100vh - 55em);
+        max-height: calc(100vh - 35em);
       }
     }
   }
@@ -10572,7 +10591,7 @@ input {
   }
   & .content {
     &-card {
-      min-height: 44em;
+      //min-height: 44em;
 
       & .add-custom-question-button {
         margin-bottom: emcalc(2.6,1.28);
@@ -10588,8 +10607,7 @@ input {
       }
 
       & .custom-questions {
-        min-height: 19em;
-        max-height: calc(100vh - 55em);
+        max-height: calc(100vh - 35em);
         transition: max-height .5s ease-in-out;
       }
     }
@@ -10621,7 +10639,7 @@ input {
         @include align-items(center);
         @include justify-content(flex-start);
         border-radius: 6px;
-        box-shadow: 0 3px 6px 0 rgba(191, 191, 191, 0.11);
+        box-shadow: 0 3px 6px 0 rgba(209, 209, 209, 0.1);
         border: solid 1px #e4e8ec;
         background-color: #ffffff;
 
@@ -10671,7 +10689,7 @@ input {
             padding-right: 1.6rem;
             margin-bottom: 3rem;
             border-radius: 6px;
-            box-shadow: 0 3px 6px 0 rgba(191, 191, 191, 0.11);
+            box-shadow: 0 3px 6px 0 rgba(209, 209, 209, 0.1);
             border: solid 1px #e4e8ec;
             background-color: #ffffff;
             background-color: #ffffff;
@@ -10779,7 +10797,7 @@ input {
           padding: 1.5em 1.3em;
           padding-bottom: 0;
           border-radius: 6px;
-          box-shadow: 0 3px 6px 0 rgba(191, 191, 191, 0.11);
+          //box-shadow: 0 3px 6px 0 rgba(209, 209, 209, 0.1);
           border: solid 1px #e4e8ec;
           background-color: #f4f6f6;
 
@@ -19169,6 +19187,7 @@ input {
 }
 
 #sign-in {
+  background-color: #fcfdfd;
   & .auth-card {
     padding-bottom: 5.2em;
     width: 48em;
