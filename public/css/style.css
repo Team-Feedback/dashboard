@@ -6098,7 +6098,7 @@ input {
         background-image: url(../img/logo-only.png);
         background-size: contain;
         background-repeat: no-repeat;
-        background-position: calc(100% - 1.25em) center;
+        background-position: calc(100% - 1.05em) center;
         border-color: #e4e8ec; }
         .header-main.white-logo .header-main-info-icon i {
           display: none; }
@@ -6211,9 +6211,9 @@ input {
       justify-content: flex-start;
       color: #fff; }
       .header-main-info-icon {
-        width: 7.6em;
+        width: 7.2em;
         padding-left: 3.1em;
-        height: 3.6em;
+        height: 3.8em;
         display: -webkit-box;
         display: -webkit-flex;
         display: -moz-flex;
@@ -6229,7 +6229,7 @@ input {
         -webkit-justify-content: flex-start;
         -moz-justify-content: flex-start;
         justify-content: flex-start;
-        margin-right: 1.8em;
+        margin-right: 1.5em;
         padding-right: 2.1em;
         border-right: 2px solid rgba(228, 232, 236, 0.35);
         cursor: pointer;
@@ -6238,9 +6238,10 @@ input {
           font-size: 2.3em;
           transition: color .2s ease-in-out; }
       .header-main-info-title {
-        font-size: 2.2em;
+        font-size: 2.15em;
         font-weight: 600;
-        color: #ffffff; }
+        letter-spacing: 0.05px;
+        color: #0d1826; }
   .header-nav {
     position: relative;
     height: 5.4em;
