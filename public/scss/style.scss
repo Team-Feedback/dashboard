@@ -7353,7 +7353,15 @@ input {
   transition: padding-top 0.5s ease-in-out;
   z-index: 500;
 
+  &.show-dropdown {
+    & .nav-dropdown {
+      display: block;
+    }
 
+    & .header-nav {
+      display: none;
+    }
+  }
 
   &-top {
     position: absolute;
@@ -7428,6 +7436,7 @@ input {
     background-color: var(--theme-color-primary);
     transition: height 0.5s ease-in-out, padding-top 0.5s ease-in-out, background-color 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
     border-bottom: solid 1px var(--theme-color-primary);
+    z-index: 100;
 
     &.hide {
       height: 0!important;
@@ -7869,6 +7878,90 @@ input {
           text-align: right;
           color: var(--color-dark-gray);
           white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  & .nav-dropdown {
+    display: none;
+    position: relative;
+    z-index: 50;
+
+    &.open {
+      & .nav-dropdown-trigger {
+        & i {
+          transform: rotateZ(180deg);
+        }
+      }
+      & .nav-dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0, 100%);
+      }
+    }
+
+    &-trigger {
+      width: 100%;
+      height: 5.4em;
+      background-color: #FFFFFF;
+      border-bottom: 1px solid #e4e8ec;
+      text-align: center;
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(center);
+      outline: none;
+      cursor: pointer;
+      z-index: 40;
+
+      &-value {
+        font-size: 1.25em;
+        font-weight: 600;
+        color: #0a1533;
+      }
+
+      & i {
+        margin-left: emcalc(1,1.2);
+        font-size: 1.2em;
+        color: rgba(10, 21, 51, 0.67);
+        transition: transform .3s ease-in-out;
+      }
+    }
+
+    &-menu {
+      // opacity: 0;
+      // visibility: hidden;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      //transform: translate(0, 100%);
+      transform: translate(0, -100%);
+      box-shadow: 0 6px 12px 0 rgba(230, 230, 230, 0.39);
+      transition: transform .5s ease-in-out;
+      z-index: -1;
+
+      &-item {
+        width: 100%;
+        height: 5.4em;
+        background-color: #FFFFFF;
+        border-bottom: 1px solid #e4e8ec;
+        text-align: center;
+
+        &:hover {
+          background-color: #f4f6f6;
+        }
+
+        &-button {
+          @include inline-flex();
+          @include align-items(center);
+          @include justify-content(center);
+          width: 100%;
+          height: 100%;
+          font-size: 1.25em;
+          font-weight: 400;
+          color: #2b2f36;
+          cursor: pointer;
         }
       }
     }

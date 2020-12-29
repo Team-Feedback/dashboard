@@ -1,6 +1,22 @@
-//HEADER SMALL/BIG TOGGLE
+
 let header = document.querySelector(".header");
 let headerMain = document.querySelector(".header-main");
+let headerNavListItems = document.querySelectorAll(".header-nav-list-item");
+
+//CHANGE NAVIGATION TO DROPDOWN
+let headerNavListItemsWidth = 0;
+headerNavListItems.forEach(e => {
+  headerNavListItemsWidth += e.clientWidth + 45;
+})
+
+window.addEventListener('resize', function () {
+  console.log('LIST WIDTH', headerMain.scrollWidth)
+  if (headerNavListItemsWidth > headerMain.clientWidth) {
+    header.classList.add('show-dropdown');
+  } else {
+    header.classList.remove('show-dropdown');
+  }
+})
 
 // headerMain.addEventListener("click", function () {
 //   this.classList.toggle("white");
@@ -241,5 +257,4 @@ if (giveFeedbackPage) {
     }
   })
 }
-
 
