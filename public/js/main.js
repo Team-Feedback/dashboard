@@ -4,19 +4,24 @@ let headerMain = document.querySelector(".header-main");
 let headerNavListItems = document.querySelectorAll(".header-nav-list-item");
 
 //CHANGE NAVIGATION TO DROPDOWN
-let headerNavListItemsWidth = 0;
+window.headerNavListItemsWidth = 0;
 headerNavListItems.forEach(e => {
-  headerNavListItemsWidth += e.clientWidth + 45;
+  window.headerNavListItemsWidth += e.clientWidth + 45;
 })
 
-window.addEventListener('resize', function () {
-  console.log('LIST WIDTH', headerMain.scrollWidth)
-  if (headerNavListItemsWidth > headerMain.clientWidth) {
+console.log(window.headerNavListItemsWidth)
+
+function checkForNavDropdown() {
+  if (window.headerNavListItemsWidth > headerMain.clientWidth) {
     header.classList.add('show-dropdown');
   } else {
     header.classList.remove('show-dropdown');
   }
-})
+}
+
+checkForNavDropdown()
+
+window.addEventListener('resize', checkForNavDropdown)
 
 // headerMain.addEventListener("click", function () {
 //   this.classList.toggle("white");
