@@ -3008,7 +3008,6 @@ input {
         font-weight: 500;
         color: #414b62;
         line-height: 1.45;
-        word-break: break-all;
       }
 
       // & .stars {
@@ -10762,14 +10761,14 @@ input {
   }
 
   & .content {
-    padding: 1.6em 4.4em 2.7em;
+    padding: 2em 4.4em 2.7em;
 
     &-card {
 
       &.admin-card {
         max-width: 110em;
         padding: 0 3.2em;
-        margin-bottom: 2.5em;
+        margin-bottom: 2.2em;
         height: 10.5em;
         @include flexbox();
         @include align-items(center);
@@ -10782,8 +10781,8 @@ input {
         & .admin-card-info {
           margin-top: -.5em;
           &-title {
-            margin-bottom: emcalc(1.1,1.9);
-            font-size: 1.9em;
+            margin-bottom: emcalc(1.1,2);
+            font-size: 2em;
             font-weight: 600;
             color: #0f6cbc;
           }
@@ -10821,9 +10820,9 @@ input {
           & .data-card {
             width: 48.3%;
             position: relative;
-            padding: 2.9rem 2.6rem 2rem;
+            padding: 2.7rem 2.6rem 2rem;
             padding-right: 1.6rem;
-            margin-bottom: 3rem;
+            margin-bottom: 3.3rem;
             border-radius: 6px;
             box-shadow: 0 3px 6px 0 rgba(209, 209, 209, 0.1);
             border: solid 1px #e4e8ec;
@@ -12066,15 +12065,34 @@ input {
         & .settings-table {
           margin-bottom: 2.3em;
           &-row {
-            &.row-01,
-            &.row-05 {
+            &:last-of-type {
+              border: 0;
+            }
+
+            &.row-01 {
               height: 7.8em;
             }
 
             &.row-02,
-            &.row-03,
-            &.row-04 {
+            &.row-03 {
               height: 10em;
+            }
+
+            &.row-04 {
+              height: 9em;
+            }
+
+            &.row-05 {
+              height: 6.4em;
+            }
+
+            &.row-02,
+            &.row-03 {
+
+              & .settings-table-row-column-02 {
+                @include flex-direction(column);
+                @include align-items(flex-end);
+              }
             }
 
             & .settings-table-text {

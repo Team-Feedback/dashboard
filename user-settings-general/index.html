@@ -27,18 +27,149 @@
       <!-- Header main -->
       <div class="header-main">
         <div class="header-main-info">
-          <div class="header-main-info-icon">
-            <i class="icon-arrow-left"></i>
+          <div class="header-main-info-icon side-toggle">
+            <i class="icon-burger"></i>
           </div>
-          <h1 class="header-main-info-title">Team Marketing</h1>
+          <h1 class="header-main-info-title">Company admin area</h1>
         </div>
-
         <!-- Buttons -->
         <div class="header-buttons">
-          <div class="header-buttons-settings"><i class="icon-cog"></i></div>
+          <!-- <div class="header-buttons-settings"><i class="icon-cog"></i></div> -->
+          <!-- SETTINGS DROPDOWN -->
+          <div class="custom-dropdown settings-dropdown">
+            <button class="custom-dropdown-trigger">
+              <i class="icon-cog"></i>
+            </button>
+            <div class="custom-dropdown-menu settings-dropdown-menu">
+              <div class="settings-dropdown-menu-header">
+                <p class="settings-dropdown-menu-header-text">Settings</p>
+              </div>
+              <div class="settings-dropdown-menu-section">
+                <div class="settings-dropdown-menu-section-header">
+                  <p class="settings-dropdown-menu-section-header-text">Theme color</p>
+                </div>
+                <div class="settings-dropdown-menu-section-main">
+                  <div class="theme">
+                    <p class="theme-text"><span class="strong">Light </span> - Default</p>
+                    <div class="theme-colors">
+                      <div class="theme-colors-item white selected" style="background-color: #bfdaff;"
+                        theme-color="#FFF"></div>
+                      <div class="theme-colors-item" style="background-color: #0e6ff9;" theme-color="#0e6ff9"></div>
+                      <div class="theme-colors-item" style="background-color: #ffa82b;" theme-color="#ffa82b"></div>
+                      <div class="theme-colors-item" style="background-color: #565656;" theme-color="#565656"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="header-buttons-help"><i class="icon-question"></i></div>
-          <div class="header-buttons-notifications"><i class="icon-bell"></i></div>
-          <div class="header-buttons-initials">M</div>
+          <!-- NOTIFICATION DROPDOWN -->
+          <div class="custom-dropdown notification-dropdown">
+            <div class="custom-dropdown-trigger" tabindex="-1" onclick="this.focus()">
+              <i class="icon-bell"></i>
+              <span class="notification-dropdown-trigger-amount">99</span>
+            </div>
+
+            <ul class="custom-dropdown-menu">
+              <li class="custom-dropdown-menu-title-big">
+                <p class="custom-dropdown-menu-title-big-text">
+                  Notifications (4)
+                </p>
+              </li>
+              <div class="placeholder">
+                <div class="placeholder-icon">
+                  <i class="icon-bell"></i>
+                </div>
+                <p class="placeholder-text">You don’t have any notifications at the moment.</p>
+              </div>
+              <li class="custom-dropdown-menu-title-small">
+                <p class="custom-dropdown-menu-title-small-text">
+                  Invitations / Rights
+                </p>
+              </li>
+              <li class="custom-dropdown-menu-notifications">
+
+                <div class="notification">
+                  <img src="../public/img/p-01.png" alt="User's profile image" class="notification-img" />
+                  <div class="notification-main">
+                    <p class="notification-main-text">
+                      Abdula Ahmed wants to invite you to become a
+                      <span>member</span> of the team <span>salsa-kings</span>
+                    </p>
+                    <div class="notification-main-buttons">
+                      <button class="notification-button confirm">
+                        Confirm
+                      </button>
+                      <button class="notification-button deny">Deny</button>
+                    </div>
+                    <p class="notification-main-time">1 Day ago</p>
+                  </div>
+                </div>
+
+                <div class="notification">
+                  <img src="../public/img/p-01.png" alt="User's profile image" class="notification-img" />
+                  <div class="notification-main">
+                    <p class="notification-main-text">
+                      Abdula Ahmed wants to invite you to become a
+                      <span>member</span> of the team <span>salsa-kings</span>
+                    </p>
+                    <div class="notification-main-buttons">
+                      <button class="button notification-button confirm">
+                        Confirm
+                      </button>
+                      <button class="button notification-button deny">
+                        Deny
+                      </button>
+                    </div>
+                    <p class="notification-main-time">1 Day ago</p>
+                  </div>
+                </div>
+
+                <div class="notification">
+                  <img src="../public/img/p-01.png" alt="User's profile image" class="notification-img" />
+                  <div class="notification-main">
+                    <p class="notification-main-text">
+                      Abdula Ahmed wants to invite you to become a
+                      <span>member</span> of the team <span>salsa-kings</span>
+                    </p>
+                    <div class="notification-main-buttons">
+                      <button class="button notification-button confirm">
+                        Confirm
+                      </button>
+                      <button class="button notification-button deny">
+                        Deny
+                      </button>
+                    </div>
+                    <p class="notification-main-time">1 Day ago</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="custom-dropdown user-dropdown">
+            <button class="custom-dropdown-trigger" tabindex="-1" onclick="this.focus()">
+              <!-- <div class="initials">M</div> -->
+              <img src="../public/img/p-01.png" alt="User's profile image" class="user-img">
+            </button>
+            <ul class="custom-dropdown-menu">
+              <li class="user-dropdown-menu-header">
+                <div class="user-dropdown-menu-header-set">
+                  <div class="user-dropdown-menu-header-set-initials">M</div>
+                  <div class="user-dropdown-menu-header-set-upload">
+                    <i class="icon-camera"></i>
+                  </div>
+                </div>
+                <p class="user-dropdown-menu-header-title">Max Matinpalo</p>
+                <p class="user-dropdown-menu-header-desc">
+                  Click here to add your job title
+                </p>
+              </li>
+              <li class="user-dropdown-menu-item">Open user settings</li>
+              <li class="user-dropdown-menu-item modal-trigger" target-modal="createCompanyModal">Create company</li>
+              <li class="user-dropdown-menu-item">Sign out</li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -80,6 +211,129 @@
             </svg>
           </li>
         </ul>
+      </div>
+    </div>
+
+    <div class="side">
+      <div class="side-menu">
+        <div class="side-menu-header">
+          <div class="custom-dropdown side-menu-dropdown">
+            <button class="custom-dropdown-trigger" tabindex="-1" onclick="this.focus()">
+              <div class="team">
+                <div class="team-initials">M</div>
+                <div class="team-set">
+                  <p class="team-set-name">Marketing</p>
+                  <p class="team-set-members">32 Members</p>
+                </div>
+              </div>
+              <div class="icons">
+                <i class="icon-chevron-up"></i>
+                <i class="icon-chevron-down"></i>
+              </div>
+            </button>
+
+            <div class="custom-dropdown-menu"
+              onmouseover="this.previousElementSibling.style.borderRadius = '9px 9px 0 0'"
+              onmouseout="this.previousElementSibling.style.borderRadius = '9px 9px 9px 9px'">
+              <div class="team">
+                <div class="team-icon">
+                  <i class="icon-company-circle"></i>
+                </div>
+                <div class="team-set">
+                  <p class="team-set-name">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                  <p class="team-set-members">Company admin area</p>
+                </div>
+                <div class="team-close"><i class="icon-close"></i></div>
+              </div>
+              <div class="team">
+                <div class="team-icon">
+                  <i class="icon-company-circle"></i>
+                </div>
+                <div class="team-set">
+                  <p class="team-set-name">Nokia</p>
+                  <p class="team-set-members">Company admin area</p>
+                </div>
+                <div class="team-close"><i class="icon-close"></i></div>
+              </div>
+              <div class="team">
+                <div class="team-initials" style="background-color: #6c00ff;">S</div>
+                <div class="team-set">
+                  <p class="team-set-name">Sales</p>
+                  <p class="team-set-members">32 Members</p>
+                </div>
+                <div class="team-close"><i class="icon-close"></i></div>
+              </div>
+              <div class="team">
+                <div class="team-initials" style="background-color: #0089ff;">C</div>
+                <div class="team-set">
+                  <p class="team-set-name">Coders</p>
+                  <p class="team-set-members">32 Members</p>
+                </div>
+                <div class="team-close"><i class="icon-close"></i></div>
+              </div>
+              <div class="team create-new">
+                <div class="team-initials"><i class="icon-plus"></i></div>
+                <div class="team-set">
+                  <p class="team-set-name">Create new</p>
+                </div>
+                <div class="team-close"><i class="icon-close"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="side-menu-main">
+          <div class="side-menu-main-list">
+            <button class="side-menu-main-list-item active">
+              <i class="icon-half-star"></i>
+              <p class="side-menu-main-list-item-text">Give feedback</p>
+            </button>
+            <button class="side-menu-main-list-item">
+              <i class="icon-users"></i>
+              <p class="side-menu-main-list-item-text">Team members</p>
+            </button>
+            <button class="side-menu-main-list-item">
+              <i class="icon-chart-bar"></i>
+              <p class="side-menu-main-list-item-text">Feedback charts</p>
+            </button>
+            <button class="side-menu-main-list-item">
+              <i class="icon-chat"></i>
+              <p class="side-menu-main-list-item-text">Team feedback</p>
+            </button>
+            <button class="side-menu-main-list-item">
+              <i class="icon-cog-full"></i>
+              <p class="side-menu-main-list-item-text">Settings</p>
+            </button>
+          </div>
+
+          <div class="side-menu-main-list">
+            <div class="side-menu-main-list-item title">
+              <p class="side-menu-main-list-item-text">SHORTCUTS</p>
+            </div>
+            <button class="side-menu-main-list-item">
+              <i class="icon-git-pull"></i>
+              <p class="side-menu-main-list-item-text">Feedback requests</p>
+            </button>
+            <button class="side-menu-main-list-item">
+              <i class="icon-add-user"></i>
+              <p class="side-menu-main-list-item-text">Invite new members</p>
+            </button>
+          </div>
+
+          <div class="footer-button">
+            <button class="button button-primary">
+              <i class="icon-plus"></i>
+              Create a new team
+            </button>
+          </div>
+        </div>
+
+        <!-- <div class="side-menu-footer">
+          <button class="button button-primary">
+            <i class="icon-plus"></i>
+            Create a new team
+          </button>
+        </div> -->
       </div>
     </div>
 

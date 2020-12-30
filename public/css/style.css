@@ -1924,8 +1924,7 @@ input {
       font-size: 1.4em;
       font-weight: 500;
       color: #414b62;
-      line-height: 1.45;
-      word-break: break-all; }
+      line-height: 1.45; }
     .custom-modal-body .rating-item .stars {
       display: -webkit-box;
       display: -webkit-flex;
@@ -8795,11 +8794,11 @@ input {
 #company-overview .header-sub-nav-list {
   display: none; }
 #company-overview .content {
-  padding: 1.6em 4.4em 2.7em; }
+  padding: 2em 4.4em 2.7em; }
   #company-overview .content-card.admin-card {
     max-width: 110em;
     padding: 0 3.2em;
-    margin-bottom: 2.5em;
+    margin-bottom: 2.2em;
     height: 10.5em;
     display: -webkit-box;
     display: -webkit-flex;
@@ -8823,8 +8822,8 @@ input {
     #company-overview .content-card.admin-card .admin-card-info {
       margin-top: -.5em; }
       #company-overview .content-card.admin-card .admin-card-info-title {
-        margin-bottom: 0.5789473684em;
-        font-size: 1.9em;
+        margin-bottom: 0.55em;
+        font-size: 2em;
         font-weight: 600;
         color: #0f6cbc; }
       #company-overview .content-card.admin-card .admin-card-info-text {
@@ -8868,9 +8867,9 @@ input {
       #company-overview .content-card.main-card .main-card-top .data-card {
         width: 48.3%;
         position: relative;
-        padding: 2.9rem 2.6rem 2rem;
+        padding: 2.7rem 2.6rem 2rem;
         padding-right: 1.6rem;
-        margin-bottom: 3rem;
+        margin-bottom: 3.3rem;
         border-radius: 6px;
         box-shadow: 0 3px 6px 0 rgba(209, 209, 209, 0.1);
         border: solid 1px #e4e8ec;
@@ -9996,10 +9995,28 @@ input {
         color: #435365; }
     #company-settings-general .content-card-main .settings-table {
       margin-bottom: 2.3em; }
-      #company-settings-general .content-card-main .settings-table-row.row-01, #company-settings-general .content-card-main .settings-table-row.row-05 {
+      #company-settings-general .content-card-main .settings-table-row:last-of-type {
+        border: 0; }
+      #company-settings-general .content-card-main .settings-table-row.row-01 {
         height: 7.8em; }
-      #company-settings-general .content-card-main .settings-table-row.row-02, #company-settings-general .content-card-main .settings-table-row.row-03, #company-settings-general .content-card-main .settings-table-row.row-04 {
+      #company-settings-general .content-card-main .settings-table-row.row-02, #company-settings-general .content-card-main .settings-table-row.row-03 {
         height: 10em; }
+      #company-settings-general .content-card-main .settings-table-row.row-04 {
+        height: 9em; }
+      #company-settings-general .content-card-main .settings-table-row.row-05 {
+        height: 6.4em; }
+      #company-settings-general .content-card-main .settings-table-row.row-02 .settings-table-row-column-02, #company-settings-general .content-card-main .settings-table-row.row-03 .settings-table-row-column-02 {
+        -webkit-box-direction: normal;
+        -webkit-box-orient: vertical;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        -webkit-align-items: flex-end;
+        -moz-align-items: flex-end;
+        align-items: flex-end; }
       #company-settings-general .content-card-main .settings-table-row .settings-table-text {
         text-align: right;
         line-height: 1.5; }
