@@ -1416,6 +1416,11 @@ input {
       margin-top: -2em;
       margin-left: auto;
 
+      @include custom-respond(900) {
+        display: none;
+      }
+
+
       & .button {
         align-self: flex-end;
         padding: 0 emcalc(1.1, 1.25);
@@ -1451,11 +1456,11 @@ input {
         }
       }
 
-      &:nth-of-type(3) {
-        @include custom-respond(900) {
-          display: none;
-        }
-      }
+      // &:nth-of-type(3) {
+      //   @include custom-respond(900) {
+      //     display: none;
+      //   }
+      // }
 
       &:nth-of-type(4) {
         @include custom-respond(720) {
@@ -3029,8 +3034,11 @@ input {
           }
 
           &.selected {
+            animation: .7s 1 linear star-pulse;
             & .icon-star {
               color: #fedd31;
+
+              
             }
           }
 
@@ -3321,7 +3329,7 @@ input {
 
     & .page-header {
       height: 16.6em;
-      padding: 2.9em 4.9em 0; //3.2
+      padding: 2.9em 3.54% 0; //3.2
     }
 
     &-body {
@@ -3377,7 +3385,7 @@ input {
   }
 
   & .widgets {
-    padding: 2.6em 4.9em;
+    padding: 2.6em 3.54%;
     margin-bottom: .6em;
     @include flexbox();
     @include flex-wrap(wrap);
@@ -3421,7 +3429,7 @@ input {
   }
 
   & .custom-accordion {
-    padding: 0 4.9em;
+    padding: 0 3.54%;
     padding-top: 2em;
     &-card {
       &:not(:last-of-type) {
@@ -3849,6 +3857,22 @@ input {
     }
   }
 }
+
+// #modalCard {
+//   & .custom-modal {
+//     & .page-header {
+//       &-list {
+//         &-item {
+//           &:nth-of-type(3) {
+//             @include respond(desktop-md) {
+//               display: none;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
 #addUsersModal {
   & .custom-modal {
@@ -6774,7 +6798,9 @@ input {
           @include align-items(center);
           @include justify-content(center);
           width: emcalc(4,1.65);
+          min-width: emcalc(4,1.65);
           height: emcalc(4,1.65);
+          min-height: emcalc(4,1.65);
           font-size: 1.65em;
           font-weight: bold;
           font-stretch: normal;
@@ -10126,7 +10152,8 @@ input {
           cursor: pointer;
 
           &.active {
-            border: solid 2px var(--color-primary);
+            //border: solid 2px var(--color-primary);
+            box-shadow: 0 2px 6px 0 rgba(226, 226, 226, 0.51), inset -1px -1px 0 1px var(--color-primary), inset 1px 1px 0 1px var(--color-primary);
           }
 
           &-img {
@@ -10290,7 +10317,7 @@ input {
               @include flex-direction(column);
               @include align-items(flex-start);
               @include justify-content(flex-start);
-              min-height: calc(100% - 4.2em);
+              min-height: calc(100% - 4.8em);
               border-radius: 2.5px 2.5px 0 0;
               border: solid 1px #f2f2f2;
               border-bottom: 0;
@@ -10697,15 +10724,15 @@ input {
   & .header {
     &.small {
       & + .content-wrapper .content .content-card .custom-questions {
-        max-height: calc(100vh - 35em);
+        max-height: calc(100vh - 55em);
       }
     }
   }
   & .content {
     &-card {
-      min-height: 49.5em;
+      //min-height: 49.5em;
       & .custom-questions {
-        max-height: calc(100vh - 75em);
+        max-height: calc(100vh - 55em);
         transition: max-height .5s ease-in-out;
       }
     }
@@ -10716,7 +10743,7 @@ input {
   & .header {
     &.small {
       & + .content-wrapper .content .content-card .custom-questions {
-        max-height: calc(100vh - 35em);
+        max-height: calc(100vh - 38em);
       }
     }
   }
@@ -10742,7 +10769,7 @@ input {
       }
 
       & .custom-questions {
-        max-height: calc(100vh - 35em);
+        max-height: calc(100vh - 38em);
         transition: max-height .5s ease-in-out;
       }
     }
@@ -19589,6 +19616,19 @@ input {
 // ==================================
 //            ANIMATION
 // ==================================
+@keyframes star-pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
 @keyframes slide-in-right {
   from {
     transform: translate(-100%, 0);

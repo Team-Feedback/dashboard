@@ -596,6 +596,9 @@ input {
     .page-header-list .give-feedback-button {
       margin-top: -2em;
       margin-left: auto; }
+      @media (max-width: 900px) {
+        .page-header-list .give-feedback-button {
+          display: none; } }
       .page-header-list .give-feedback-button .button {
         align-self: flex-end;
         padding: 0 0.88em;
@@ -614,9 +617,6 @@ input {
         left: -1.25rem; }
       @media (max-width: 590px) {
         .page-header-list-item:nth-of-type(1) {
-          display: none; } }
-      @media (max-width: 900px) {
-        .page-header-list-item:nth-of-type(3) {
           display: none; } }
       @media (max-width: 720px) {
         .page-header-list-item:nth-of-type(4) {
@@ -1945,8 +1945,10 @@ input {
         cursor: pointer; }
         .custom-modal-body .rating-item .stars .star:not(:last-of-type) {
           margin-right: .3em; }
-        .custom-modal-body .rating-item .stars .star.selected .icon-star {
-          color: #fedd31; }
+        .custom-modal-body .rating-item .stars .star.selected {
+          animation: .7s 1 linear star-pulse; }
+          .custom-modal-body .rating-item .stars .star.selected .icon-star {
+            color: #fedd31; }
         .custom-modal-body .rating-item .stars .star .icon-star {
           font-size: 2.5em;
           color: #e8e8e8; }
@@ -2222,7 +2224,7 @@ input {
     #modalCard .custom-modal .page-header,
     #userFeedbacksHighOrder .custom-modal .page-header {
       height: 16.6em;
-      padding: 2.9em 4.9em 0; }
+      padding: 2.9em 3.54% 0; }
     #modalCard .custom-modal-body,
     #userFeedbacksHighOrder .custom-modal-body {
       height: 100%;
@@ -2286,7 +2288,7 @@ input {
         color: #137efe; }
   #modalCard .widgets,
   #userFeedbacksHighOrder .widgets {
-    padding: 2.6em 4.9em;
+    padding: 2.6em 3.54%;
     margin-bottom: .6em;
     display: -webkit-box;
     display: -webkit-flex;
@@ -2331,7 +2333,7 @@ input {
           border-bottom: solid 1.5px #f5f6f8 !important; }
   #modalCard .custom-accordion,
   #userFeedbacksHighOrder .custom-accordion {
-    padding: 0 4.9em;
+    padding: 0 3.54%;
     padding-top: 2em; }
     #modalCard .custom-accordion-card:not(:last-of-type),
     #userFeedbacksHighOrder .custom-accordion-card:not(:last-of-type) {
@@ -5476,7 +5478,9 @@ input {
           -moz-justify-content: center;
           justify-content: center;
           width: 2.4242424242em;
+          min-width: 2.4242424242em;
           height: 2.4242424242em;
+          min-height: 2.4242424242em;
           font-size: 1.65em;
           font-weight: bold;
           font-stretch: normal;
@@ -8150,7 +8154,7 @@ input {
         background-color: #ffffff;
         cursor: pointer; }
         #team-feedback-request-temp .content-card-body .user.active {
-          border: solid 2px var(--color-primary); }
+          box-shadow: 0 2px 6px 0 rgba(226, 226, 226, 0.51), inset -1px -1px 0 1px var(--color-primary), inset 1px 1px 0 1px var(--color-primary); }
         #team-feedback-request-temp .content-card-body .user-img {
           min-width: 4.5em;
           width: 4.5em;
@@ -8338,7 +8342,7 @@ input {
           -webkit-justify-content: flex-start;
           -moz-justify-content: flex-start;
           justify-content: flex-start;
-          min-height: calc(100% - 4.2em);
+          min-height: calc(100% - 4.8em);
           border-radius: 2.5px 2.5px 0 0;
           border: solid 1px #f2f2f2;
           border-bottom: 0;
@@ -8770,15 +8774,13 @@ input {
             background-color: #f5f5f5; }
 
 #custom-questions .header.small + .content-wrapper .content .content-card .custom-questions {
-  max-height: calc(100vh - 35em); }
-#custom-questions .content-card {
-  min-height: 49.5em; }
-  #custom-questions .content-card .custom-questions {
-    max-height: calc(100vh - 75em);
-    transition: max-height .5s ease-in-out; }
+  max-height: calc(100vh - 55em); }
+#custom-questions .content-card .custom-questions {
+  max-height: calc(100vh - 55em);
+  transition: max-height .5s ease-in-out; }
 
 #custom-questions-team .header.small + .content-wrapper .content .content-card .custom-questions {
-  max-height: calc(100vh - 35em); }
+  max-height: calc(100vh - 38em); }
 #custom-questions-team .content-card .add-custom-question-button {
   margin-bottom: 2.03125em; }
 #custom-questions-team .content-card-header .options {
@@ -8788,7 +8790,7 @@ input {
   #custom-questions-team .content-card-header .options-divider {
     margin: 0 0.42em; }
 #custom-questions-team .content-card .custom-questions {
-  max-height: calc(100vh - 35em);
+  max-height: calc(100vh - 38em);
   transition: max-height .5s ease-in-out; }
 
 #company-overview .header-sub-nav-list {
@@ -12250,6 +12252,13 @@ input {
   #join-company .auth-card-link {
     margin-bottom: 1.0769230769em; }
 
+@keyframes star-pulse {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.2); }
+  100% {
+    transform: scale(1); } }
 @keyframes slide-in-right {
   from {
     transform: translate(-100%, 0); }
