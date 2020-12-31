@@ -6288,7 +6288,8 @@ input {
         .header-main-info-icon i {
           position: relative;
           font-size: 2.4em;
-          transition: color .2s ease-in-out; }
+          transition: color .2s ease-in-out;
+          pointer-events: none; }
           .header-main-info-icon i::after {
             content: '';
             position: absolute;
@@ -6301,7 +6302,8 @@ input {
             background-color: rgba(255, 255, 255, 0.15);
             opacity: 0;
             visibility: hidden;
-            transition: all .3s ease-in-out; }
+            transition: all .3s ease-in-out;
+            pointer-events: none; }
       .header-main-info-title {
         font-size: 2.15em;
         font-weight: 600;
