@@ -34,6 +34,26 @@ window.addEventListener('resize', checkForNavDropdown)
 //   // }
 // });
 
+//COLOR THEME
+let themeColorItems = document.querySelectorAll('.theme-colors-item');
+
+themeColorItems.forEach(e => {
+  e.addEventListener('click', function () {
+    themeColorItems.forEach(x => {
+      x.classList.remove('selected');
+    })
+
+    document.querySelector('.header-main').classList.remove('white-logo');
+
+    this.classList.add('selected');
+    if (this.classList.contains('white')) {
+      document.querySelector('.header-main').classList.add('white-logo');
+    }
+    document.documentElement.style.setProperty('--theme-color-primary', this.getAttribute('theme-color'));
+  })
+})
+
+
 //SIDE MENU TOGGLE
 let side = document.querySelector('.side');
 let sideToglle = document.querySelectorAll('.side-toggle');

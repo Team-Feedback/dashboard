@@ -340,7 +340,11 @@ textarea {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  transition: none; }
+  transition: none;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden; }
 
 html {
   font-size: 62.5%;
@@ -445,21 +449,11 @@ input {
     z-index: 10;
     transition: left .3s ease-in-out; }
 
-.tooltip {
-  padding: .5rem 1rem;
-  opacity: 0;
-  visibility: hidden;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.6);
-  font-size: 1.4em;
-  font-weight: 600;
-  color: white;
-  border-radius: 4px;
-  pointer-events: none;
-  z-index: 2000; }
-  .tooltip.show {
-    opacity: 1;
-    visibility: visible; }
+.custom-tooltip {
+  padding: 0.5rem 1rem !important;
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  line-height: 1.22 !important; }
 
 .page-header {
   display: -webkit-box;
@@ -1152,6 +1146,8 @@ input {
       border-radius: 9px;
       border: solid 1px #e4e8ec;
       overflow: hidden; }
+      .custom-dropdown.side-menu-dropdown .custom-dropdown-trigger.open {
+        border-radius: 9px 9px 0 0; }
       .custom-dropdown.side-menu-dropdown .custom-dropdown-trigger .icons {
         position: absolute;
         top: 50%;
@@ -10679,7 +10675,7 @@ input {
             text-overflow: ellipsis; }
 
 #team-members-grid .content {
-  padding: 1.6em 4em;
+  padding: 2em 4em;
   height: 100%; }
   #team-members-grid .content-card {
     position: relative;
