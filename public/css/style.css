@@ -26,8 +26,8 @@
 
 @font-face {
   font-family: 'dashoard-icons';
-  src: url("../fonts/dashoard-icons.eot?suufj");
-  src: url("../fonts/dashoard-icons.eot?suufj#iefix") format("embedded-opentype"), url("../fonts/dashoard-icons.ttf?suufj") format("truetype"), url("../fonts/dashoard-icons.woff?suufj") format("woff"), url("../fonts/dashoard-icons.svg?suufj#dashoard-icons") format("svg");
+  src: url("../fonts/dashoard-icons.eot?fjx1e6");
+  src: url("../fonts/dashoard-icons.eot?fjx1e6#iefix") format("embedded-opentype"), url("../fonts/dashoard-icons.ttf?fjx1e6") format("truetype"), url("../fonts/dashoard-icons.woff?fjx1e6") format("woff"), url("../fonts/dashoard-icons.svg?fjx1e6#dashoard-icons") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block; }
@@ -43,6 +43,9 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+.icon-burger:before {
+  content: "\e945"; }
 
 .icon-close-circle-01:before {
   content: "\e958"; }
@@ -109,9 +112,6 @@
 
 .icon-eye-closed:before {
   content: "\e947"; }
-
-.icon-burger:before {
-  content: "\e945"; }
 
 .icon-camera:before {
   content: "\e944"; }
@@ -1016,10 +1016,13 @@ input {
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16), 0px 0px 0px 4px #fff;
         background-color: #ffffff;
         border-radius: 50%;
-        cursor: pointer; }
+        cursor: pointer;
+        transition: font-size .1s ease-in; }
         .custom-dropdown.user-dropdown .user-dropdown-menu-header-set-upload i {
           font-size: 1.43em;
           color: #000; }
+        .custom-dropdown.user-dropdown .user-dropdown-menu-header-set-upload:hover {
+          font-size: 1.05rem; }
     .custom-dropdown.user-dropdown .user-dropdown-menu-header-title {
       margin-bottom: 0.375em;
       font-size: 1.6em;
@@ -5018,7 +5021,8 @@ input {
             margin: 0;
             width: 100%;
             border-radius: 0;
-            border: 0; }
+            border: 0;
+            border-top: solid 1px #dee2e6; }
             #createNewTeamModal .custom-modal-body .members .search-dropdown-menu .member-img, #createNewTeamModal .custom-modal-body .members .search-dropdown-menu .member-initials {
               width: 3.75rem;
               min-width: 3.75rem;
@@ -5035,8 +5039,6 @@ input {
             #createNewTeamModal .custom-modal-body .members .search-dropdown-menu .member .button.select {
               font-size: 1.23em;
               color: #087af9; }
-            #createNewTeamModal .custom-modal-body .members .search-dropdown-menu .member:not(:last-of-type) {
-              border-bottom: solid 1px #dee2e6; }
   #createNewTeamModal .custom-modal-footer {
     padding: 3.4em 0 0;
     padding-bottom: clamp(4em, 14vh, 14em);
@@ -5974,7 +5976,8 @@ input {
   background-color: #fff;
   z-index: 1000;
   box-shadow: 0 6px 12px 0 rgba(178, 178, 178, 0.38);
-  border-radius: 0 0 4px 4px; }
+  border-radius: 0 0 4px 4px;
+  overflow: hidden; }
   .settings-table .custom-dropdown-menu-item {
     display: -webkit-box;
     display: -webkit-flex;
@@ -6240,8 +6243,8 @@ input {
       justify-content: flex-start;
       color: #fff; }
       .header-main-info-icon {
+        position: relative;
         width: 7.2em;
-        padding-left: 3.1em;
         height: 3.8em;
         display: -webkit-box;
         display: -webkit-flex;
@@ -6253,19 +6256,36 @@ input {
         -webkit-align-items: center;
         -moz-align-items: center;
         align-items: center;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        -webkit-justify-content: flex-start;
-        -moz-justify-content: flex-start;
-        justify-content: flex-start;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        -webkit-justify-content: flex-end;
+        -moz-justify-content: flex-end;
+        justify-content: flex-end;
         margin-right: 1.5em;
         padding-right: 2.1em;
         border-right: 2px solid rgba(228, 232, 236, 0.35);
         cursor: pointer;
         transition: border-color .2s ease-in-out; }
+        .header-main-info-icon:hover i:after {
+          opacity: 1;
+          visibility: visible; }
         .header-main-info-icon i {
-          font-size: 2.3em;
+          position: relative;
+          font-size: 2.4em;
           transition: color .2s ease-in-out; }
+          .header-main-info-icon i::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 5rem;
+            height: 5rem;
+            border-radius: 100vw;
+            background-color: rgba(255, 255, 255, 0.15);
+            opacity: 0;
+            visibility: hidden;
+            transition: all .3s ease-in-out; }
       .header-main-info-title {
         font-size: 2.15em;
         font-weight: 600;
@@ -6426,7 +6446,7 @@ input {
           font-size: 1.25em;
           font-weight: 600;
           text-align: right;
-          color: var(--color-dark-gray);
+          color: #000;
           white-space: nowrap; }
   .header .nav-dropdown {
     display: none;
@@ -6671,6 +6691,14 @@ input {
     visibility: visible !important;
     transform: translate(0, 0) !important;
     transition-property: transform, visibility; }
+    .side.open > * {
+      opacity: 1;
+      visibility: visible;
+      transition: all .3s ease-in-out .3s; }
+  .side > * {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in-out; }
   .side-menu {
     padding: 0 0;
     width: 100%;
@@ -9895,7 +9923,8 @@ input {
       -moz-align-items: flex-start;
       align-items: flex-start;
       background-color: #fff;
-      border-bottom: 1px solid #e4e8ec; }
+      border-bottom: 1px solid #e4e8ec;
+      z-index: 10; }
       #team-settings-general .content-card-header-title,
       #user-settings-general .content-card-header-title {
         margin-bottom: 0.5em;
@@ -10082,6 +10111,17 @@ input {
         #give-feedback .content-card-header .custom-dropdown-trigger i {
           font-size: 2.25em;
           color: #3d4452; }
+        #give-feedback .content-card-header .custom-dropdown-menu-item-link {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          -moz-align-items: center;
+          align-items: center; }
       #give-feedback .content-card-header-title {
         font-size: 1.75em;
         margin-bottom: 0.6857142857em;

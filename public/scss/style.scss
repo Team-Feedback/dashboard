@@ -822,11 +822,11 @@
 
 @font-face {
   font-family: 'dashoard-icons';
-  src:  url('../fonts/dashoard-icons.eot?suufj');
-  src:  url('../fonts/dashoard-icons.eot?suufj#iefix') format('embedded-opentype'),
-    url('../fonts/dashoard-icons.ttf?suufj') format('truetype'),
-    url('../fonts/dashoard-icons.woff?suufj') format('woff'),
-    url('../fonts/dashoard-icons.svg?suufj#dashoard-icons') format('svg');
+  src:  url('../fonts/dashoard-icons.eot?fjx1e6');
+  src:  url('../fonts/dashoard-icons.eot?fjx1e6#iefix') format('embedded-opentype'),
+    url('../fonts/dashoard-icons.ttf?fjx1e6') format('truetype'),
+    url('../fonts/dashoard-icons.woff?fjx1e6') format('woff'),
+    url('../fonts/dashoard-icons.svg?fjx1e6#dashoard-icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -847,6 +847,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-burger:before {
+  content: "\e945";
+}
 .icon-close-circle-01:before {
   content: "\e958";
 }
@@ -912,9 +915,6 @@
 }
 .icon-eye-closed:before {
   content: "\e947";
-}
-.icon-burger:before {
-  content: "\e945";
 }
 .icon-camera:before {
   content: "\e944";
@@ -1114,6 +1114,7 @@
 .icon-user-check:before {
   content: "\e93c";
 }
+
 
 
 
@@ -1972,10 +1973,15 @@ input {
             background-color: #ffffff;
             border-radius: 50%;
             cursor: pointer;
+            transition: font-size .1s ease-in;
 
             & i {
               font-size: 1.43em;
               color: #000;
+            }
+
+            &:hover {
+              font-size: 1.05rem;
             }
           }
         }
@@ -6288,6 +6294,7 @@ input {
               width: 100%;
               border-radius: 0;
               border: 0;
+              border-top: solid 1px #dee2e6;
 
               &-img,
               &-initials {
@@ -6320,9 +6327,9 @@ input {
                 }
               }
 
-              &:not(:last-of-type) {
-                border-bottom: solid 1px #dee2e6;
-              }
+              // &:not(:last-of-type) {
+              //   border-top: solid 1px #dee2e6;
+              // }
             }
           }
         }
@@ -7346,6 +7353,7 @@ input {
       z-index: 1000;
       box-shadow: 0 6px 12px 0 rgba(178, 178, 178, 0.38);
       border-radius: 0 0 4px 4px;
+      overflow: hidden;
 
 
       &-item {
@@ -7677,21 +7685,45 @@ input {
       color: #fff;
 
       &-icon {
+        position: relative;
         width: 7.2em;
-        padding-left: 3.1em;
+        //padding-left: 3.1em;
         height: 3.8em;
         @include flexbox();
         @include align-items(center);
-        @include justify-content(flex-start);
+        @include justify-content(flex-end);
         margin-right: 1.5em;
         padding-right: 2.1em;
         border-right: 2px solid rgba($color: #e4e8ec, $alpha: 0.35);
         cursor: pointer;
         transition: border-color .2s ease-in-out;
 
+        &:hover i:after {
+          opacity: 1;
+          visibility: visible;
+        }
+
+
+
         & i {
-          font-size: 2.3em;
+          position: relative;
+          font-size: 2.4em;
           transition: color .2s ease-in-out;
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 5rem;
+            height: 5rem;
+            border-radius: 100vw;
+            background-color: rgba($color: #FFF, $alpha: .15);
+            opacity: 0;
+            visibility: hidden;
+            transition: all .3s ease-in-out;
+          }
         }
       }
 
@@ -7917,7 +7949,7 @@ input {
           font-size: 1.25em;
           font-weight: 600;
           text-align: right;
-          color: var(--color-dark-gray);
+          color: #000;
           white-space: nowrap;
         }
       }
@@ -8216,7 +8248,20 @@ input {
       visibility: visible!important;
       transform: translate(0,0)!important;
       transition-property: transform, visibility;
+
+      & > * {
+        opacity: 1;
+        visibility: visible;
+        //transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out .3s;
+      }
     }
+
+  & > * {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+  }
 
   &-menu {
     padding: 0 0;
@@ -11931,6 +11976,7 @@ input {
         @include align-items(flex-start);
         background-color: #fff;
         border-bottom: 1px solid #e4e8ec;
+        z-index: 10;
 
         &-title {
           margin-bottom: emcalc(0.8, 1.6);
@@ -12208,6 +12254,15 @@ input {
             & i {
               font-size: 2.25em;
               color: #3d4452;
+            }
+          }
+
+          &-menu {
+            &-item {
+              &-link {
+                @include flexbox();
+                @include align-items(center);
+              }
             }
           }
         }
