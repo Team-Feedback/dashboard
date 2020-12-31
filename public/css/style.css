@@ -445,6 +445,22 @@ input {
     z-index: 10;
     transition: left .3s ease-in-out; }
 
+.tooltip {
+  padding: .5rem 1rem;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 1.4em;
+  font-weight: 600;
+  color: white;
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 2000; }
+  .tooltip.show {
+    opacity: 1;
+    visibility: visible; }
+
 .page-header {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1796,7 +1812,7 @@ input {
   border: 1.5px solid #f0f0f0;
   border-radius: 6px;
   z-index: 1000;
-  animation: modal-slide-in 0.22s ease-in;
+  animation: modal-slide-in 0.15s ease-out;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16); }
   .custom-modal-close {
     position: absolute;
@@ -12342,12 +12358,10 @@ input {
 @keyframes modal-slide-in {
   from {
     opacity: 0;
-    transform: translate(-50%, calc(-50% - 7em)); }
-  20% {
-    opacity: 0.4; }
+    transform: translate(-50%, -50%) scale(0.82); }
   to {
     opacity: 1;
-    transform: translate(-50%, -50%); } }
+    transform: translate(-50%, -50%) scale(1); } }
 @media not all and (min-resolution: 0.001dpcm) {
   @supports (-webkit-appearance: none) {
     .custom-table-head .icon-caret-up, .custom-table-head .icon-caret-down {

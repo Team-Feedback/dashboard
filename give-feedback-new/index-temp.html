@@ -36,7 +36,7 @@
       <!-- Header main WHITE-->
       <div class="header-main white-logo">
         <div class="header-main-info">
-          <div class="header-main-info-icon side-toggle">
+          <div class="header-main-info-icon side-toggle" tooltip-text="Menu" tooltip-position="bottom" has-tooltip>
             <i class="icon-burger"></i>
           </div>
           <h1 class="header-main-info-title">Example Team</h1>
@@ -2071,6 +2071,10 @@
     </div>
   </main>
 
+  <div class="tooltip">
+    <p class="tooltip-message">Test message</p>
+  </div>
+
 
   <script src="../public/js/main.js"></script>
   <script src="../public/js/tm-grid.js"></script>
@@ -2093,6 +2097,27 @@
         document.documentElement.style.setProperty('--theme-color-primary', this.getAttribute('theme-color'));
       })
     })
+
+
+    var tooltip = document.querySelector('.tooltip');
+    var tooltipMessage = document.querySelector('.tooltip-message');
+
+    document.addEventListener('mousemove', fn, true);
+
+    function fn(e) {
+      //console.log('test')
+      //event.stopPropagation();
+      if (e.target.hasAttribute('tooltip-text')) {
+        console.log('HOVER')
+        tooltip.classList.add('show');
+        tooltipMessage.innerText = e.target.getAttribute('tooltip-text');
+        tooltip.style.left = e.pageX + 'px';
+        tooltip.style.top = e.pageY + 'px';
+      } else {
+        tooltip.classList.remove('show');
+      }
+
+    }
   </script>
 
 </body>
