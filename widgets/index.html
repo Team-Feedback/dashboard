@@ -333,7 +333,8 @@
                           <i class="icon-check"></i>
                         </div>
 
-                        <div class="secondary-dropdown-menu">
+                        <div class="secondary-dropdown-menu" onmouseover="this.parentElement.classList.add('open')"
+                          onmouseout="this.parentElement.classList.remove('open')">
                           <div class="secondary-dropdown-menu-item active">
                             <p class="secondary-dropdown-menu-item-text">Lorem, ipsum.</p>
                             <i class="icon-check"></i>
@@ -459,15 +460,48 @@
           </div>
 
           <!-- WIDGET - COMBO CHART -->
-          <div class="placeholder-card">
+          <div class="placeholder-card" style="overflow: visible">
             <div class="widget widget-combo-chart">
               <!-- widget header -->
               <div class="widget-header">
                 <!-- <p class="widget-header-title">Bar Chart Vertical</p> -->
                 <input type="text" value="Chart title" class="widget-header-title" placeholder="Write Chart Title">
                 <div class="widget-header-buttons">
-                  <i class="icon-expand-outlined"></i>
-                  <i class="icon-cog-outlined"></i>
+                  <div class="exp-dropdown right">
+                    <button class="exp-dropdown-trigger">
+                      <i class="icon-cog-outlined"></i>
+                    </button>
+
+                    <div class="exp-dropdown-menu">
+                      <div class="secondary-dropdown">
+                        <div class="exp-dropdown-menu-item secondary-dropdown-trigger">
+                          <i class="icon-chevron-left"></i>
+                          <p class="exp-dropdown-menu-item-text">Lorem, ipsum.</p>
+                          <i class="icon-check"></i>
+                        </div>
+
+                        <div class="secondary-dropdown-menu" onmouseover="this.parentElement.classList.add('open')"
+                          onmouseout="this.parentElement.classList.remove('open')">
+                          <div class="secondary-dropdown-menu-item active">
+                            <p class="secondary-dropdown-menu-item-text">Lorem, ipsum.</p>
+                            <i class="icon-check"></i>
+                          </div>
+                          <div class="secondary-dropdown-menu-item">
+                            <p class="secondary-dropdown-menu-item-text">Lorem.</p>
+                            <i class="icon-check"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="exp-dropdown-menu-item active">
+                        <p class="exp-dropdown-menu-item-text">Lorem.</p>
+                        <i class="icon-check"></i>
+                      </div>
+                      <div class="exp-dropdown-menu-item">
+                        <p class="exp-dropdown-menu-item-text">Lorem, ipsum dolor.</p>
+                        <i class="icon-check"></i>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <!-- widget body -->

@@ -1662,6 +1662,61 @@ input {
 //    EXP DROPDOWN
 //========================
 .exp-dropdown {
+
+  &.right {
+    & .exp-dropdown-menu {
+      right: auto;
+      left: 0;
+
+      &-item {
+        & .icon-chevron-left {
+          left: auto;
+          right: 1.2rem;
+          transform: translate(0,-50%) rotateZ(180deg);
+        }
+
+        & .icon-check {
+          left: auto;
+          right: 1.35rem;
+        }
+      }
+
+      & .secondary-dropdown {
+        &-menu {
+          transform: translate(100%, 0);
+          left: auto;
+          right: -5px;
+
+          &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -5px;
+            width: 5px;
+            height: 100%;
+            transform: translate(0,0);
+            background-color: transparent;
+          }
+
+          &-item {
+            & .icon-chevron-left {
+              left: auto;
+              right: 1.2rem;
+              transform: translate(0,-50%) rotateZ(180deg);
+            }
+    
+            & .icon-check {
+              left: auto;
+              right: 1.35rem;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
   &-trigger {}
 
   &-menu {
@@ -1740,7 +1795,7 @@ input {
         z-index: 1;
 
         //LEFT
-        right: 1.35rem;
+        left: 1.35rem;
       }
       
       &-text {
@@ -1764,6 +1819,23 @@ input {
 
     & .secondary-dropdown {
       position: relative;
+
+      &.open {
+        & .secondary-dropdown-trigger {
+          &::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 0;
+            width: 100%;
+            height: calc(100% + 1px);
+            background-color: #f1f3f4;
+            z-index: 0;
+            border-top: 1px solid  rgba(221, 223, 227, 0.78);
+            border-bottom: 1px solid  rgba(221, 223, 227, 0.78);
+          }
+        }
+      }
 
       &:hover {
         & .secondary-dropdown-menu {
@@ -1865,7 +1937,7 @@ input {
             z-index: 1;
 
             //LEFT
-            right: 1.35rem;
+            left: 1.35rem;
           }
           
           &-text {
