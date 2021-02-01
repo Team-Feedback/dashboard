@@ -141,8 +141,8 @@ function regularColumnGraphSize() {
   })
 
   columnChartXAxisItems.forEach(e => {
-    e.style.width = `${itemWidth * 1.5}%`;
-    e.style.margin = `0 ${itemWidth / 4}%`;
+    e.style.width = `${itemWidth}%`;
+    e.style.margin = `0 ${itemWidth / 2}%`;
   })
 
 }

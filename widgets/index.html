@@ -24,12 +24,48 @@
         </div>
       </div>
       <!-- Header main -->
-      <div class="header-main">
+      <div class="header-main white-logo">
         <div class="header-main-info">
           <div class="header-main-info-icon side-toggle">
-            <i class="icon-burger"></i>
+            <div class="logo-container">
+              <img src="../public/img/logo-only.png" alt="Team feedback logo" class="logo">
+            </div>
           </div>
-          <h1 class="header-main-info-title">Team Marketing</h1>
+          <!-- <h1 class="header-main-info-title">Team Marketing</h1> -->
+          <div class="header-dropdown">
+            <button class="header-dropdown-trigger" onClick="this.parentElement.classList.toggle('open')">
+              <h1>Team Martketing</h1>
+              <i class="icon-chevron-down"></i>
+            </button>
+            <div class="header-dropdown-menu">
+              <div class="header-dropdown-menu-header">
+                <div class="input-container">
+                  <input type="text" placeholder="Search for a Team">
+                  <i class="icon-search"></i>
+                </div>
+              </div>
+              <div class="header-dropdown-menu-main">
+                <div class="header-dropdown-menu-main-item active">
+                  <p class="header-dropdown-menu-main-item-text">Team Marketing</p>
+                  <span>(selected)</span>
+                  <div class="header-dropdown-menu-main-item-close"><i class="icon-close"></i></div>
+                </div>
+                <div class="header-dropdown-menu-main-item">
+                  <p class="header-dropdown-menu-main-item-text">Team Recruitment</p>
+                  <span>(selected)</span>
+                  <div class="header-dropdown-menu-main-item-close"><i class="icon-close"></i></div>
+                </div>
+                <div class="header-dropdown-menu-main-item">
+                  <p class="header-dropdown-menu-main-item-text">Team Managment</p>
+                  <span>(selected)</span>
+                  <div class="header-dropdown-menu-main-item-close"><i class="icon-close"></i></div>
+                </div>
+              </div>
+              <div class="header-dropdown-menu-footer">
+                <button class="button button-light-gradient">Create a new team</button>
+              </div>
+            </div>
+          </div>
         </div>
         <!-- Buttons -->
         <div class="header-buttons">
@@ -141,140 +177,120 @@
         </ul>
       </div>
 
-      <div class="header-sub-nav">
-        <ul class="header-sub-nav-list">
-          <li class="header-sub-nav-list-item active">
-            <p class="header-sub-nav-list-item-text" text="Overall charts">
-              Overall charts
-            </p>
-          </li>
-          <li class="header-sub-nav-list-item">
-            <p class="header-sub-nav-list-item-text" text="Team member charts">
-              Team member charts
-            </p>
-          </li>
-          <li class="header-sub-nav-list-item">
-            <p class="header-sub-nav-list-item-text" text="Team lead charts">
-              Team lead charts
-            </p>
-          </li>
-        </ul>
-      </div>
-    </div>
 
+      <div class="side">
+        <div class="side-menu">
+          <div class="side-menu-header">
+            <div class="custom-dropdown side-menu-dropdown">
+              <button class="custom-dropdown-trigger" tabindex="-1" onclick="this.focus()">
+                <div class="team">
+                  <div class="team-initials">M</div>
+                  <div class="team-set">
+                    <p class="team-set-name">Marketing</p>
+                    <p class="team-set-members">32 Members</p>
+                  </div>
+                </div>
+                <div class="icons">
+                  <i class="icon-chevron-up"></i>
+                  <i class="icon-chevron-down"></i>
+                </div>
+              </button>
 
-    <div class="side">
-      <div class="side-menu">
-        <div class="side-menu-header">
-          <div class="custom-dropdown side-menu-dropdown">
-            <button class="custom-dropdown-trigger" tabindex="-1" onclick="this.focus()">
-              <div class="team">
-                <div class="team-initials">M</div>
-                <div class="team-set">
-                  <p class="team-set-name">Marketing</p>
-                  <p class="team-set-members">32 Members</p>
+              <div class="custom-dropdown-menu"
+                onmouseover="this.previousElementSibling.style.borderRadius = '9px 9px 0 0'"
+                onmouseout="this.previousElementSibling.style.borderRadius = '9px 9px 9px 9px'">
+                <div class="team">
+                  <div class="team-icon">
+                    <i class="icon-company-circle"></i>
+                  </div>
+                  <div class="team-set">
+                    <p class="team-set-name">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <p class="team-set-members">Company admin area</p>
+                  </div>
+                  <div class="team-close"><i class="icon-close"></i></div>
                 </div>
-              </div>
-              <div class="icons">
-                <i class="icon-chevron-up"></i>
-                <i class="icon-chevron-down"></i>
-              </div>
-            </button>
-
-            <div class="custom-dropdown-menu"
-              onmouseover="this.previousElementSibling.style.borderRadius = '9px 9px 0 0'"
-              onmouseout="this.previousElementSibling.style.borderRadius = '9px 9px 9px 9px'">
-              <div class="team">
-                <div class="team-icon">
-                  <i class="icon-company-circle"></i>
+                <div class="team">
+                  <div class="team-icon">
+                    <i class="icon-company-circle"></i>
+                  </div>
+                  <div class="team-set">
+                    <p class="team-set-name">Nokia</p>
+                    <p class="team-set-members">Company admin area</p>
+                  </div>
+                  <div class="team-close"><i class="icon-close"></i></div>
                 </div>
-                <div class="team-set">
-                  <p class="team-set-name">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                  <p class="team-set-members">Company admin area</p>
+                <div class="team">
+                  <div class="team-initials" style="background-color: #6c00ff;">S</div>
+                  <div class="team-set">
+                    <p class="team-set-name">Sales</p>
+                    <p class="team-set-members">32 Members</p>
+                  </div>
+                  <div class="team-close"><i class="icon-close"></i></div>
                 </div>
-                <div class="team-close"><i class="icon-close"></i></div>
-              </div>
-              <div class="team">
-                <div class="team-icon">
-                  <i class="icon-company-circle"></i>
+                <div class="team">
+                  <div class="team-initials" style="background-color: #0089ff;">C</div>
+                  <div class="team-set">
+                    <p class="team-set-name">Coders</p>
+                    <p class="team-set-members">32 Members</p>
+                  </div>
+                  <div class="team-close"><i class="icon-close"></i></div>
                 </div>
-                <div class="team-set">
-                  <p class="team-set-name">Nokia</p>
-                  <p class="team-set-members">Company admin area</p>
+                <div class="team create-new">
+                  <div class="team-initials"><i class="icon-plus"></i></div>
+                  <div class="team-set">
+                    <p class="team-set-name">Create new</p>
+                  </div>
+                  <div class="team-close"><i class="icon-close"></i></div>
                 </div>
-                <div class="team-close"><i class="icon-close"></i></div>
-              </div>
-              <div class="team">
-                <div class="team-initials" style="background-color: #6c00ff;">S</div>
-                <div class="team-set">
-                  <p class="team-set-name">Sales</p>
-                  <p class="team-set-members">32 Members</p>
-                </div>
-                <div class="team-close"><i class="icon-close"></i></div>
-              </div>
-              <div class="team">
-                <div class="team-initials" style="background-color: #0089ff;">C</div>
-                <div class="team-set">
-                  <p class="team-set-name">Coders</p>
-                  <p class="team-set-members">32 Members</p>
-                </div>
-                <div class="team-close"><i class="icon-close"></i></div>
-              </div>
-              <div class="team create-new">
-                <div class="team-initials"><i class="icon-plus"></i></div>
-                <div class="team-set">
-                  <p class="team-set-name">Create new</p>
-                </div>
-                <div class="team-close"><i class="icon-close"></i></div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="side-menu-main">
-          <div class="side-menu-main-list">
-            <button onclick="location.href='../give-feedback-new/index-temp.html';"
-              class="side-menu-main-list-item active">
-              <i class="icon-half-star"></i>
-              <p class="side-menu-main-list-item-text">Give feedback</p>
-            </button>
-            <button onclick="location.href='../team-members-table/index.html';" class="side-menu-main-list-item">
-              <i class="icon-users"></i>
-              <p class="side-menu-main-list-item-text">Team members</p>
-            </button>
-            <button onclick="location.href='../widgets/index.html';" class="side-menu-main-list-item">
-              <i class="icon-chart-bar"></i>
-              <p class="side-menu-main-list-item-text">Feedback charts</p>
-            </button>
-            <button onclick="location.href='../team-feedback/index.html';" class="side-menu-main-list-item">
-              <i class="icon-chat"></i>
-              <p class="side-menu-main-list-item-text">Team feedback</p>
-            </button>
-            <button onclick="location.href='../team-settings-general/index.html';" class="side-menu-main-list-item">
-              <i class="icon-cog-full"></i>
-              <p class="side-menu-main-list-item-text">Settings</p>
-            </button>
-          </div>
-
-          <div class="side-menu-main-list">
-            <div class="side-menu-main-list-item title">
-              <p class="side-menu-main-list-item-text">SHORTCUTS</p>
+          <div class="side-menu-main">
+            <div class="side-menu-main-list">
+              <button onclick="location.href='../give-feedback-new/index-temp.html';"
+                class="side-menu-main-list-item active">
+                <i class="icon-half-star"></i>
+                <p class="side-menu-main-list-item-text">Give feedback</p>
+              </button>
+              <button onclick="location.href='../team-members-table/index.html';" class="side-menu-main-list-item">
+                <i class="icon-users"></i>
+                <p class="side-menu-main-list-item-text">Team members</p>
+              </button>
+              <button onclick="location.href='../widgets/index.html';" class="side-menu-main-list-item">
+                <i class="icon-chart-bar"></i>
+                <p class="side-menu-main-list-item-text">Feedback charts</p>
+              </button>
+              <button onclick="location.href='../team-feedback/index.html';" class="side-menu-main-list-item">
+                <i class="icon-chat"></i>
+                <p class="side-menu-main-list-item-text">Team feedback</p>
+              </button>
+              <button onclick="location.href='../team-settings-general/index.html';" class="side-menu-main-list-item">
+                <i class="icon-cog-full"></i>
+                <p class="side-menu-main-list-item-text">Settings</p>
+              </button>
             </div>
-            <button onclick="location.href='../feedback-request/index-temp.html';" class="side-menu-main-list-item">
-              <i class="icon-git-pull"></i>
-              <p class="side-menu-main-list-item-text">Feedback requests</p>
-            </button>
-            <button class="side-menu-main-list-item">
-              <i class="icon-add-user"></i>
-              <p class="side-menu-main-list-item-text">Invite new members</p>
-            </button>
-          </div>
 
-          <div class="footer-button">
-            <button class="button button-primary">
-              <i class="icon-plus"></i>
-              Create a new team
-            </button>
+            <div class="side-menu-main-list">
+              <div class="side-menu-main-list-item title">
+                <p class="side-menu-main-list-item-text">SHORTCUTS</p>
+              </div>
+              <button onclick="location.href='../feedback-request/index-temp.html';" class="side-menu-main-list-item">
+                <i class="icon-git-pull"></i>
+                <p class="side-menu-main-list-item-text">Feedback requests</p>
+              </button>
+              <button class="side-menu-main-list-item">
+                <i class="icon-add-user"></i>
+                <p class="side-menu-main-list-item-text">Invite new members</p>
+              </button>
+            </div>
+
+            <div class="footer-button">
+              <button class="button button-primary">
+                <i class="icon-plus"></i>
+                Create a new team
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -283,6 +299,15 @@
     <!-- Content -->
     <div class="content-wrapper">
       <div class="content">
+
+        <div class="loader" style="display: none;">
+          <div class="loader-main"></div>
+          <p class="loader-title">Your dashboard is being set up</p>
+          <p class="loader-text">Usually it takes just a few seconds</p>
+        </div>
+
+
+
 
         <div class="placeholder-wrapper">
 
@@ -294,8 +319,41 @@
                 <!-- <p class="widget-header-title">Bar Chart Vertical</p> -->
                 <input type="text" value="Chart title" class="widget-header-title" placeholder="Write Chart Title">
                 <div class="widget-header-buttons">
-                  <i class="icon-expand-outlined"></i>
-                  <i class="icon-cog-outlined"></i>
+
+                  <div class="exp-dropdown">
+                    <button class="exp-dropdown-trigger">
+                      <i class="icon-cog-outlined"></i>
+                    </button>
+
+                    <div class="exp-dropdown-menu">
+                      <div class="secondary-dropdown">
+                        <div class="exp-dropdown-menu-item secondary-dropdown-trigger">
+                          <i class="icon-chevron-left"></i>
+                          <p class="exp-dropdown-menu-item-text">Lorem, ipsum.</p>
+                          <i class="icon-check"></i>
+                        </div>
+
+                        <div class="secondary-dropdown-menu">
+                          <div class="secondary-dropdown-menu-item active">
+                            <p class="secondary-dropdown-menu-item-text">Lorem, ipsum.</p>
+                            <i class="icon-check"></i>
+                          </div>
+                          <div class="secondary-dropdown-menu-item">
+                            <p class="secondary-dropdown-menu-item-text">Lorem.</p>
+                            <i class="icon-check"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="exp-dropdown-menu-item active">
+                        <p class="exp-dropdown-menu-item-text">Lorem.</p>
+                        <i class="icon-check"></i>
+                      </div>
+                      <div class="exp-dropdown-menu-item">
+                        <p class="exp-dropdown-menu-item-text">Lorem, ipsum dolor.</p>
+                        <i class="icon-check"></i>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <!-- widget body -->
@@ -307,14 +365,14 @@
                   </div>
                   <!-- column chart area -->
                   <div class="column-chart-area">
-                    <div class="column-chart-area-item split">
+                    <!-- <div class="column-chart-area-item split">
                       <div class="column-chart-area-item-split"><i class="icon-user"></i></div>
                       <div class="column-chart-area-item-split"><i class="icon-users"></i></div>
                     </div>
                     <div class="column-chart-area-item split">
                       <div class="column-chart-area-item-split"><i class="icon-user"></i></div>
                       <div class="column-chart-area-item-split"><i class="icon-users"></i></div>
-                    </div>
+                    </div> -->
                     <div class="column-chart-area-item" style="height: 20%; background-color: #fa711f;">
                       <p class="column-chart-area-item-label">18</p>
                     </div>
@@ -387,13 +445,13 @@
                     <div class="column-chart-x-axis-item">
                       <p class="column-chart-x-axis-item-label">Attitude</p>
                     </div>
-                    <div class="column-chart-x-axis-item">
+                    <!-- <div class="column-chart-x-axis-item">
                       <p class="column-chart-x-axis-item-label">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Officia, hic!</p>
                     </div>
                     <div class="column-chart-x-axis-item">
                       <p class="column-chart-x-axis-item-label">Teamworking</p>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </div>
@@ -820,15 +878,78 @@
               </div>
               <!-- widget body -->
               <div class="widget-body">
-                <div class="value-box">
+                <div class="value-box-placeholder">
+                  <p class="value-box-placeholder-title">No data yet</p>
+                  <p class="value-box-placeholder-text">How do people feel working in this team</p>
+                </div>
+                <div class="value-box" style="display:none">
                   <div class="value-box-item">
-                    <p class="value-box-item-amount">4.2</p>
-                    <p class="value-box-item-text">P2P Feedback</p>
+                    <div class="value-box-item-main">
+                      <p class="value-box-item-main-amount">4.2</p>
+                      <span class="arrow arrow-up"><i class="icon-arrow-right"></i></span>
+                    </div>
+                    <p class="value-box-item-text">How do people feel working in this team</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- WIDGET - VALUE BOX -->
+          <div class="placeholder-card" style="height: 230px; width: 244px;">
+            <div class="widget widget-value-box">
+              <!-- widget header -->
+              <div class="widget-header">
+                <!-- <p class="widget-header-title">Bar Chart Vertical</p> -->
+                <input type="text" value="Chart title" class="widget-header-title" placeholder="Write Chart Title">
+                <div class="widget-header-buttons">
+                  <i class="icon-expand-outlined"></i>
+                  <i class="icon-cog-outlined"></i>
+                </div>
+              </div>
+              <!-- widget body -->
+              <div class="widget-body">
+                <div class="value-box">
+                  <div class="value-box-item">
+                    <div class="value-box-item-main">
+                      <p class="value-box-item-main-amount">3.8</p>
+                      <span class="arrow arrow-down"><i class="icon-arrow-right"></i></span>
+                    </div>
+                    <p class="value-box-item-text">How do people feel working in this team</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WIDGET - VALUE BOX -->
+          <div class="placeholder-card" style="height: 230px; width: 244px;">
+            <div class="widget widget-value-box">
+              <!-- widget header -->
+              <div class="widget-header">
+                <!-- <p class="widget-header-title">Bar Chart Vertical</p> -->
+                <input type="text" value="Chart title" class="widget-header-title" placeholder="Write Chart Title">
+                <div class="widget-header-buttons">
+                  <i class="icon-expand-outlined"></i>
+                  <i class="icon-cog-outlined"></i>
+                </div>
+              </div>
+              <!-- widget body -->
+              <div class="widget-body">
+                <div class="value-box add-new">
+                  <div class="value-box-item">
+                    <div class="value-box-item-main">
+                      <p class="value-box-item-main-amount"><i class="icon-plus"></i></p>
+                      <span class="arrow arrow-up"><i class="icon-arrow-right"></i></span>
+                    </div>
+                    <p class="value-box-item-text">Add a new question to the team feedback</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
 
           <!-- WIDGET - LINE CHART -->
           <div class="placeholder-card">
@@ -893,7 +1014,23 @@
               </div>
               <!-- widget body -->
               <div class="widget-body">
-                <div class="bar-chart">
+                <div class="widget-placeholder">
+                  <div class="widget-placeholder-img">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="37.846" height="48" viewBox="0 0 37.846 48">
+                      <g transform="translate(-700 -407)">
+                        <rect width="7.385" height="48" rx="3" transform="translate(730.462 407)" fill="#44bcec" />
+                        <rect width="7.385" height="29.538" rx="3" transform="translate(720.308 425.462)"
+                          fill="#44bcec" />
+                        <rect width="7.385" height="21.231" rx="3" transform="translate(710.154 433.769)"
+                          fill="#44bcec" />
+                        <rect width="7.385" height="25.846" rx="3" transform="translate(700 429.154)" fill="#44bcec" />
+                      </g>
+                    </svg>
+                  </div>
+                  <p class="widget-placeholder-title">This question has no data yet</p>
+                  <p class="widget-placeholder-text">Check again soon</p>
+                </div>
+                <div class="bar-chart" style="display:none">
                   <div class="bar-chart-area">
                     <div class="bar-chart-area-item" style="background-color: #9cd333; width: 80%;">
                       <p class="bar-chart-area-item-label">Aki Kaurismaki</p>
@@ -966,7 +1103,7 @@
 
         </div>
 
-        <div class="add-widgets-card">
+        <div class="add-widgets-card" style="display:none">
           <div class="add-widgets-card-set">
             <p class="add-widgets-card-set-title">Add new widgets</p>
             <p class="add-widgets-card-set-text">Add from the widget gallery the widgets that best fit for your team</p>

@@ -50,7 +50,8 @@ var ro = new ResizeObserver(entries => {
       widgetLegendItemsWidth += e.clientWidth + 38;
     })
 
-    if (widgetLegend.clientWidth * 2 - 28 <= widgetLegendItemsWidth) {
+    if (widgetLegend.clientWidth * 2 - 100 <= widgetLegendItemsWidth) {
+      console.log(widgetLegend.clientWidth, widgetLegendItemsWidth)
       widgetLegend.classList.add('small');
     } else {
       widgetLegend.classList.remove('small');
@@ -141,8 +142,13 @@ function regularComboGraphSize() {
     let comboChartArea = combo.querySelector('.combo-chart-area');
     let comboChartBars = combo.querySelectorAll('.combo-chart-area-set');
     let comboChartXAxisItems = combo.querySelectorAll('.combo-chart-x-axis-item');
+    let numOfItems = comboChartBars.length;
 
-    let itemWidth = 100 / (comboChartBars.length + ((comboChartBars.length - 2) * .73 + 2 * 1.1));
+    if (numOfItems > 8) {
+      numOfItems = 8
+    }
+
+    let itemWidth = 100 / (numOfItems + ((numOfItems - 2) * .73 + 2 * 1.1));
     console.log('itemWidth', itemWidth);
 
     comboChartBars.forEach((e, i, arr) => {
