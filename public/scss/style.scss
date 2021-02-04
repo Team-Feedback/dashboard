@@ -8729,7 +8729,7 @@ input {
 
   &-sub-nav {
     position: relative;
-    margin: 1.6em 4em 0;
+    margin: 2em 4em 0;
     // padding: 0 2.4em;
     height: 52px;
     border-radius: 6px;
@@ -8737,6 +8737,16 @@ input {
     background-color: #ffffff;
     //z-index: 100;
     max-width: calc(100vw - 8em);
+
+    & svg {
+      position: absolute;
+      bottom: -2.48em;
+      transform: translate(-50%, 0);
+      width: 2.3em;
+      height: 1.5em;
+      z-index: 0;
+      transition: left 0.5s cubic-bezier(0.17, 0.67, 0.39, 0.89);
+    }
 
     &::after {
       content: '';
@@ -8795,7 +8805,9 @@ input {
         position: relative;
         cursor: pointer;
         white-space: nowrap;
-        padding-right: 3.3em;
+        &:not(:last-of-type) {
+          margin-right: 3.3em;
+        }
 
         &-text {
           font-size: 1.28em;
@@ -11511,10 +11523,187 @@ input {
           padding-left: 1.4em;
           padding-top: .2em;
           border-radius: 3px;
+          border: solid 1px #e6e9ef;
           background-color: #f5f7f8;
 
           &:not(:last-of-type) {
             margin-bottom: 1em;
+          }
+
+          &-wrapper {
+            &.open {
+              & .custom-question {
+                margin-bottom: 0;
+                border-radius: 3px 3px 0 0;
+              }
+
+              & .custom-question-body {
+                padding: 2em 7.2em 0 4.8em;
+                margin-bottom: 2.8em;
+                border: solid 1px #e6e9ef;
+                border-top: 0;
+              }
+            }
+          }
+
+          &-body {
+            padding: 2em 7.2em 0 4.8em;
+            padding-top: 0;
+            padding-bottom: 0;
+            border: 0;
+            background-color: rgba(245, 247, 248, 0.5);
+            transition: max-height 0.5s cubic-bezier(0, 1, 0, 1), padding 0.5s cubic-bezier(0, 1, 0, 1);
+            overflow-y: auto;
+            scrollbar-width: none;
+            /* Firefox */
+            -ms-overflow-style: none;
+            /* Internet Explorer 10+ */
+      
+            &::-webkit-scrollbar {
+              /* WebKit */
+              width: 0;
+              height: 0;
+            }
+
+            & .translation {
+              margin-bottom: 1.8em;
+
+              & .custom-input-group {
+
+                &:first-of-type {
+                  margin-bottom: .6em;
+                }
+              }
+            }
+
+            & .short {
+              padding-bottom: 4.2em;
+            }
+
+            &-info {
+              margin-bottom: emcalc(2.7, 1.2);
+              font-size: 1.2em;
+              font-weight: 600;
+              letter-spacing: -0.12px;
+              color: #006cbc;
+            }
+
+            &-label {
+              margin-bottom: emcalc(.6, 1.2);
+              font-size: 1.2em;
+              font-weight: 600;
+              letter-spacing: -0.06px;
+              color: #6b778b;
+            }
+
+            & .custom-input-group {
+              height: 3.6em;
+              width: 100%;
+              @include flexbox();
+              @include align-items(center);
+              
+              & .custom-dropdown {
+                height: 100%;
+
+                &-trigger {
+                  padding: 0 1.2em;
+                  @include inline-flex();
+                  @include align-items(center);
+                  justify-content: center;
+                  height: 100%;
+                  border: solid 1px #d3d7e0;
+                  border-right: 0;
+                  background-color: #f9f9fa;
+                  border-radius: 4px 0 0 4px;
+
+                  &-value {
+                    margin-right: emcalc(.6,1.28);
+                    font-size: 1.28em;
+                    font-weight: 500;
+                    letter-spacing: -0.03px;
+                    color: #1b304f;
+                  }
+
+                  & .icon-caret-down {
+                    font-size: .8em;
+                    opacity: 0.5;
+                    color: #5c6c74;
+                  }
+                }
+
+                &-menu {
+                  padding-top: .5em;
+                  padding-bottom: 1em;
+                  right: auto;
+                  left: 0;
+                  //padding: .2em 2.8em 1.7em 0;
+                  border-radius: 4px;
+                  box-shadow: 0 3px 6px 0 rgba(172, 172, 172, 0.16);
+                  border: solid 1px #d3d7e0;
+                  background-color: #FFF;
+
+                  &-item {
+                    padding-left: 1.6em;
+                    padding-right: 2.8em;
+                    height: 3.4em;
+                    @include flexbox();
+                    @include align-items(center);
+                    @include justify-content(flex-start);
+
+                    &:first-of-type {
+                      
+                    }
+
+                    &-img {
+                      margin-right: 1em;
+                      min-width: 2em;
+                      min-height: 2em;
+                      width: 2em;
+                      height: 2em;
+                      max-width: 2em;
+                      max-height: 2em;
+                      border-radius: 100%;
+                      object-fit: cover;
+                    }
+
+                    &-text {
+                      font-size: 1.28em;
+                      font-weight: 400;
+                      color: #1b304f;
+                    }
+                  }
+                }
+              }
+
+              & input {
+                padding: 0 emcalc(1.5, 1.28);
+                height: 100%;
+                flex: 1;
+                font-size: 1.28em;
+                font-weight: 400;
+                color: #1b304f;
+                border: solid 1px #d3d7e0;
+                border-radius: 0 4px 4px 0;
+              }
+            }
+
+            &-footer {
+              height: 8.4em;
+              @include flexbox();
+              @include align-items(center);
+              @include justify-content(flex-end);
+              border-top: solid 1px #e5e5e5;
+
+              & .button {
+                padding: 0 emcalc(1.5, 1.3);
+                height: emcalc(3.6, 1.3);
+                font-size: 1.3em;
+
+                &:first-of-type {
+                  margin-right: emcalc(1.2, 1.3);
+                }
+              }
+            }
           }
 
           &-icon {
