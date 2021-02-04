@@ -1663,6 +1663,16 @@ input {
 //========================
 .exp-dropdown {
 
+  &.open {
+    & .exp-dropdown-menu {
+      display: block;
+    }
+
+    & .exp-dropdown-trigger {
+
+    }
+  }
+
   &.right {
     & .exp-dropdown-menu {
       right: auto;
@@ -1720,6 +1730,7 @@ input {
   &-trigger {}
 
   &-menu {
+    display: none;
     position: absolute;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
     border: solid 1px rgba(221, 223, 227, 0.78);
@@ -3291,6 +3302,7 @@ input {
     right: 1.9em;
     cursor: pointer;
     transition: transform 0.1s ease-in-out;
+    z-index: 1;
 
     & .icon-close {
       font-size: 1.75em;
@@ -3325,7 +3337,7 @@ input {
   }
 
   &-backdrop {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -8359,6 +8371,7 @@ input {
     // }
 
     &::after {
+      display: none!important;
       content: '';
       position: absolute;
       bottom: 0;
@@ -8429,6 +8442,10 @@ input {
         height: 0;
       }
 
+      @include custom-respond(1135) {
+        padding: 0 2em;
+      }
+
       &-item {
         @include flexbox();
         @include align-items(center);
@@ -8437,7 +8454,16 @@ input {
         position: relative;
         cursor: pointer;
         white-space: nowrap;
-        margin-right: 3.45em;
+        
+        &:not(:last-of-type) {
+          margin-right: 3.45em;
+
+          @include custom-respond(1135) {
+            margin-right: 2.6em;
+          }
+        }
+
+
 
         &:hover .header-nav-list-item-text {
           color: #202227;
@@ -8590,6 +8616,7 @@ input {
     }
 
     &-trigger {
+      padding: 0 2em;
       width: 100%;
       height: 5.4em;
       background-color: #ffffff;
@@ -8597,10 +8624,38 @@ input {
       text-align: center;
       @include flexbox();
       @include align-items(center);
-      @include justify-content(center);
+      @include justify-content(flex-start);
       outline: none;
       cursor: pointer;
       z-index: 40;
+
+      & .add-new-widgets {
+        @include inline-flex();
+        @include align-content(center);
+        @include justify-content(center);
+        margin-left: auto;
+
+        & button {
+          margin-left: 1em;
+          font-size: 1.25em;
+          font-weight: 600;
+          text-align: right;
+          color: #000;
+          white-space: nowrap;
+        }
+
+        & span {
+          margin-top: 1px;
+          margin-left: 0rem;
+          font-size: 1em;
+
+          & i {
+            font-size: 1em!important;
+            margin-left: .6rem!important;
+            color: #000!important;
+          }
+        }
+      }
 
       &-value {
         font-size: 1.25em;
@@ -8642,6 +8697,7 @@ input {
       }
 
       &-item {
+        padding: 0 2em;
         width: 100%;
         height: 5.4em;
         background-color: #ffffff;
@@ -8659,7 +8715,7 @@ input {
         &-button {
           @include inline-flex();
           @include align-items(center);
-          @include justify-content(center);
+          @include justify-content(flex-start);
           width: 100%;
           height: 100%;
           font-size: 1.25em;
@@ -11384,7 +11440,8 @@ input {
 
     &-card {
       max-width: 90em;
-      padding: 3.5em 4.1em 2.6em;
+      padding: 3.2em 4.1em 2.6em;
+      padding-right: 5.7em;
       border-radius: 6px;
       box-shadow: 0 3px 6px 0 rgba(191, 191, 191, 0.11);
       border: solid 1px #e4e8ec;
@@ -11407,7 +11464,7 @@ input {
       &-header {
         @include flex-direction(column);
         @include align-items(flex-start);
-        margin-bottom: 2.1em;
+        margin-bottom: 2.4em;
 
         &-title {
           margin-bottom: emcalc(1, 1.6);
@@ -11432,8 +11489,8 @@ input {
         }
 
         & .button-green-primary {
-          padding: 0 emcalc(1,1.1);
-          height: 2.4em;
+          padding: 0 emcalc(1.2,1.1);
+          height: 2.2em;
           font-size: 1.1em;
           font-weight: 600;
           letter-spacing: -0.06px;
@@ -11442,7 +11499,7 @@ input {
       }
 
       & .custom-questions {
-        margin-bottom: 3.5em;
+        margin-bottom: 3.8em;
         width: 100%;
 
         & .custom-question {
@@ -11450,8 +11507,9 @@ input {
           @include flexbox();
           @include align-items(center);
           height: 4em;
-          padding: 0 1.8em;
+          padding: 0 1.3em;
           padding-left: 1.4em;
+          padding-top: .2em;
           border-radius: 3px;
           background-color: #f5f7f8;
 
@@ -11567,19 +11625,30 @@ input {
         }
 
         & .custom-dropdown {
+          width: 19.3em;
           &-trigger {
-            padding: 0 emcalc(1.2, 1.25);
+            width: 100%;
+            padding: 0 emcalc(1.2, 1.23);
+            padding-right: emcalc(1.65,1.23);
             @include inline-flex();
             @include align-items(center);
             @include justify-content(space-between);
-            width: emcalc(16.8, 1.25);
-            height: emcalc(3.4, 1.25);
+            //width: emcalc(16.8, 1.23);
+            height: emcalc(3.6, 1.23);
             border-radius: 4px;
             border: solid 1px #cfd7e0;
-            font-size: 1.25em;
+            font-size: 1.23em;
             font-weight: 400;
-            letter-spacing: -0.06px;
-            color: #2d3640;
+            letter-spacing: 0.03px;
+            color: #0d1826;
+
+            border-radius: 3px;
+            border: solid 1px #e6e9ef;
+            background-image: linear-gradient(to bottom, #fffeff, #edf4f2 95%, #e9f0ee);
+
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
       
             &:focus {
               border-bottom-left-radius: 0;
@@ -11607,11 +11676,15 @@ input {
               @include align-items(center);
               @include justify-content(flex-start);
               padding: 0 emcalc(1.2, 1.25);
-              height: emcalc(3.4, 1.25);
-              font-size: 1.25em;
+              height: emcalc(3.6, 1.25);
+              font-size: 1.23em;
               font-weight: 400;
-              letter-spacing: -0.06px;
-              color: #2d3640;
+              letter-spacing: 0.03px;
+              color: #0d1826;
+
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
       
               &:not(:last-of-type) {
                 border-bottom: solid 1px #cfd7e0;
@@ -13524,7 +13597,7 @@ input {
 
           &:hover .person-main-img,
           &:hover .person-main-initials {
-            transform: scale(1.06) translateY(-2.5px);
+            transform: scale(1.04) translateY(-1.7px);
             box-shadow: 0 6px 12px 0 rgba(213, 213, 213, 0.5);
           }
 
@@ -15792,7 +15865,7 @@ input {
       background-color: transparent;
 
       &:hover {
-        background-color: #FFF;
+        background-color: transparent!important;
       }
     }
 
@@ -15800,18 +15873,39 @@ input {
       visibility: hidden;
       opacity: 0;
       position: absolute;
-      top: 1.8em;
-      right: 1.8em;
+      top: 1.2em;
+      right: 1.2em;
       transition: opacity 0.2s ease-in-out 0.1s,
         visibility 0.2s ease-in-out 0.1s;
 
       & i {
-        font-size: 2.2em;
+        font-size: 2.5em;
         color: #5d636f;
         cursor: pointer;
 
         &:not(:last-of-type) {
           margin-right: emcalc(0.55, 2.2);
+        }
+      }
+
+      & .exp-dropdown {
+        &.open {
+          & .exp-dropdown-trigger {
+            background-color: #F0F0F0;
+          }
+        }
+        &-trigger {
+          @include flexbox();
+          @include align-items(center);
+          @include justify-content(center);
+          width: 3.5em;
+          height: 3.5em;
+          background-color: transparent;
+          border-radius: 100vw;
+
+          &:hover {
+            background-color: #F0F0F0;
+          }
         }
       }
     }
@@ -15871,6 +15965,7 @@ input {
           background-color: #fa711f;
 
           &.split {
+            height: 100%!important;
             @include flexbox();
             @include align-items(flex-end);
             @include justify-content(space-between);
@@ -16213,12 +16308,16 @@ input {
           &-line {
             height: 100%;
             border-left: solid 1.5px #f5f6f8;
+
+            &:first-of-type {
+              border-color: #e6e9ef;
+            }
           }
         }
       }
 
       &-x-axis {
-        padding-top: 1em;
+        padding-top: 1.5em;
         padding-bottom: 1em;
         padding-left: 12.4em;
         padding-right: 6.3%;
@@ -16447,7 +16546,7 @@ input {
       &-text {
         font-size: 1.18em;
         font-weight: 400;
-        color: #989898;
+        color: #505050;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -16482,6 +16581,7 @@ input {
 
       &-item {
         margin: 0 1.4em 1.1em;
+        margin-bottom: .6em;
         //max-width: 15em;
         @include flexbox();
         @include align-items(center);
@@ -16508,6 +16608,7 @@ input {
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
+          text-transform: capitalize;
         }
       }
     }

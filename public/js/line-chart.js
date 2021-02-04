@@ -52,7 +52,7 @@ let options = {
         datasets: [
             {
                 label: "Attitude",
-                data: [null, 3, 3.4, 3.5, 3.4, 3.5, 4, 3, 3.4, 3.5, 3.4, 3.5, 4, null],
+                data: [null, 13, 13.4, 13.5, 13.4, 13.5, 14, 13, 13.4, 13.5, 13.4, 13.5, 14, null],
                 fill: false,
                 borderWidth: 1.5,
                 borderColor: "#137ff6",
@@ -130,7 +130,7 @@ let options = {
                         fontStyle: "400",
                         beginAtZero: true,
                         padding: 8.6,
-                        max: 5,
+                        // max: 5,
                         min: 1,
                         stepSize: 1,
                     },
