@@ -14941,6 +14941,7 @@ input {
           }
 
           &-set {
+            width: 100%;
             &-header {
               opacity: 0.9;
               margin-bottom: .6em;
@@ -15187,8 +15188,6 @@ input {
       &-footer {
         position: relative;
         z-index: 1;
-
-
 
         &::before {
           content: "";
