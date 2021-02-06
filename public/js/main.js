@@ -3,13 +3,33 @@ let header = document.querySelector(".header");
 let headerMain = document.querySelector(".header-main");
 let headerNavListItems = document.querySelectorAll(".header-nav-list-item");
 
+
 //CHANGE NAVIGATION TO DROPDOWN
 window.headerNavListItemsWidth = 0;
 headerNavListItems.forEach(e => {
   window.headerNavListItemsWidth += e.clientWidth + 45;
 })
 
+
 console.log(window.headerNavListItemsWidth)
+
+function checkForNavDropdownMenu() {
+  const navDropdown = document.querySelector('.nav-dropdown');
+  const navDropdownMenuItems = document.querySelectorAll(".nav-dropdown-menu-item-button");
+  let dropdownMenuListItemsWidth = 0;
+
+  navDropdownMenuItems.forEach(e => {
+    dropdownMenuListItemsWidth += e.clientWidth + 32;
+  })
+
+  if (dropdownMenuListItemsWidth > headerMain.clientWidth) {
+    console.log("REMOVE MEDIUM")
+    navDropdown.classList.remove('medium');
+  } else {
+    console.log("ADD MEDIUM")
+    navDropdown.classList.add('medium');
+  }
+}
 
 function checkForNavDropdown() {
   if (window.headerNavListItemsWidth > headerMain.clientWidth) {
@@ -22,6 +42,7 @@ function checkForNavDropdown() {
 checkForNavDropdown()
 
 window.addEventListener('resize', checkForNavDropdown)
+window.addEventListener('resize', checkForNavDropdownMenu)
 
 // headerMain.addEventListener("click", function () {
 //   this.classList.toggle("white");

@@ -178,34 +178,32 @@
       <!-- Header navigation -->
       <div class="header-nav">
         <ul class="header-nav-list">
-          <li class="header-nav-list-item">
-            <button class="header-nav-list-item-text" text="General settings"
-              onclick="location.href='../team-settings-general';">General settings</button>
+          <li class="header-nav-list-item active">
+            <button class="header-nav-list-item-text" text="Feedback settings">Feedback settings</button>
 
           </li>
           <li class="header-nav-list-item">
-            <button class="header-nav-list-item-text" text="Team members"
-              onclick="location.href='../team-settings-members';">Team members</button>
+            <button class="header-nav-list-item-text" text="P2P requests">P2P requests</button>
 
           </li>
           <li class="header-nav-list-item">
-            <button class="header-nav-list-item-text" text="Team lead"
-              onclick="location.href='../team-settings-lead';">Team lead</button>
+            <button class="header-nav-list-item-text" text="Team members">Team members</button>
 
           </li>
           <li class="header-nav-list-item">
-            <button class="header-nav-list-item-text" text="Viewing rights"
-              onclick="location.href='../team-settings-viewing-rights';">Viewing rights</button>
+            <button class="header-nav-list-item-text" text="Team lead">Team lead</button>
 
           </li>
           <li class="header-nav-list-item">
-            <button class="header-nav-list-item-text" text="Admin rights"
-              onclick="location.href='../team-settings-admin-rights';">Admin rights</button>
+            <button class="header-nav-list-item-text" text="Viewing rights">Viewing rights</button>
+
+          </li>
+          <li class="header-nav-list-item">
+            <button class="header-nav-list-item-text" text="Admin rights">Admin rights</button>
 
           </li>
           <li class="header-nav-list-item active">
-            <button class="header-nav-list-item-text" text="Feedback input"
-              onclick="location.href='../custom-questions-team';">Feedback input</button>
+            <button class="header-nav-list-item-text" text="General settings">General settings</button>
           </li>
         </ul>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 15">
@@ -405,12 +403,47 @@
           </div>
           <div class="custom-questions custom-accordion">
             <div class="custom-question-wrapper custom-accordion-card open card-01">
-              <div class="custom-question accordion-card-trigger" accordion-trigger-target="card-01">
+              <div class="custom-question ">
                 <div class="custom-question-icon"><i class="icon-star"></i></div>
-                <input class="custom-question-text" value="How do people feel working in this team?">
+                <p class="custom-question-text">How do people feel working in this team?</p>
                 <div class="custom-question-buttons">
-                  <button class="button button-lock"><i class="icon-lock-circle-outlined"></i></button>
-                  <button class="button button-menu"><i class="icon-menu-circle-outlined"></i></button>
+                  <svg class="chevron-down-circle accordion-card-trigger" accordion-trigger-target="card-01"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g transform="translate(-815.784 -315.402)">
+                      <g transform="translate(815.784 315.402)" fill="none" stroke="#0d1826" stroke-width="1.5"
+                        opacity="0.798">
+                        <circle cx="12" cy="12" r="12" stroke="none" />
+                        <circle cx="12" cy="12" r="11.25" fill="none" />
+                      </g>
+                      <path
+                        d="M12.44,16.239l4.726-4.73a.89.89,0,0,1,1.262,0,.9.9,0,0,1,0,1.265l-5.355,5.359a.892.892,0,0,1-1.232.026L6.448,12.778A.893.893,0,1,1,7.71,11.513Z"
+                        transform="translate(815.293 313.754)" fill="#0d1826" opacity="0.797" />
+                    </g>
+                  </svg>
+                  <svg class="menu-cicle" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g transform="translate(-844.984 -317.402)">
+                      <g transform="translate(851.106 325.693)" fill="#fff" stroke="#0d1826" stroke-width="1"
+                        opacity="0.803">
+                        <rect width="11.962" height="1.553" rx="0.777" stroke="none" />
+                        <rect x="0.5" y="0.5" width="10.962" height="0.553" rx="0.277" fill="none" />
+                      </g>
+                      <g transform="translate(851.106 329.238)" fill="#fff" stroke="#0d1826" stroke-width="1"
+                        opacity="0.803">
+                        <rect width="11.962" height="1.553" rx="0.777" stroke="none" />
+                        <rect x="0.5" y="0.5" width="10.962" height="0.553" rx="0.277" fill="none" />
+                      </g>
+                      <g transform="translate(851.106 332.783)" fill="#fff" stroke="#0d1826" stroke-width="1"
+                        opacity="0.803">
+                        <rect width="11.962" height="1.553" rx="0.777" stroke="none" />
+                        <rect x="0.5" y="0.5" width="10.962" height="0.553" rx="0.277" fill="none" />
+                      </g>
+                      <g transform="translate(844.984 317.402)" fill="none" stroke="#0d1826" stroke-width="1.5"
+                        opacity="0.803">
+                        <circle cx="12" cy="12" r="12" stroke="none" />
+                        <circle cx="12" cy="12" r="11.25" fill="none" />
+                      </g>
+                    </g>
+                  </svg>
                 </div>
               </div>
               <div class="custom-question-body custom-accordion-card-body">
@@ -418,25 +451,27 @@
                   <p class="custom-question-body-label">Question</p>
                   <div class="custom-input-group">
                     <div class="custom-dropdown">
-                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1">
+                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1"
+                        onfocus="this.parentElement.parentElement.parentElement.parentElement.classList.add('no-overflow')"
+                        onfocusout="this.parentElement.parentElement.parentElement.parentElement.classList.remove('no-overflow')">
                         <p class="custom-dropdown-trigger-value">EN</p>
                         <i class="icon-caret-down"></i>
                       </button>
                       <div class="custom-dropdown-menu">
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                        <div class="custom-dropdown-menu-item active">
+                          <img src="../public//img/usa-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">English</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/fin-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Finnish</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/srb-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Serbian</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/ind-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Hindu</p>
                         </div>
                       </div>
@@ -445,25 +480,27 @@
                   </div>
                   <div class="custom-input-group">
                     <div class="custom-dropdown">
-                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1">
+                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1"
+                        onfocus="this.parentElement.parentElement.parentElement.parentElement.classList.add('no-overflow')"
+                        onfocusout="this.parentElement.parentElement.parentElement.parentElement.classList.remove('no-overflow')">
                         <p class="custom-dropdown-trigger-value">EN</p>
                         <i class="icon-caret-down"></i>
                       </button>
                       <div class="custom-dropdown-menu">
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                        <div class="custom-dropdown-menu-item active">
+                          <img src="../public//img/usa-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">English</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/fin-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Finnish</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/srb-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Serbian</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/ind-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Hindu</p>
                         </div>
                       </div>
@@ -478,25 +515,27 @@
                   <p class="custom-question-body-label">Short form</p>
                   <div class="custom-input-group">
                     <div class="custom-dropdown">
-                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1">
+                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1"
+                        onfocus="this.parentElement.parentElement.parentElement.parentElement.classList.add('no-overflow')"
+                        onfocusout="this.parentElement.parentElement.parentElement.parentElement.classList.remove('no-overflow')">
                         <p class="custom-dropdown-trigger-value">EN</p>
                         <i class="icon-caret-down"></i>
                       </button>
                       <div class="custom-dropdown-menu">
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                        <div class="custom-dropdown-menu-item active">
+                          <img src="../public//img/usa-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">English</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/fin-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Finnish</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/srb-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Serbian</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/ind-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Hindu</p>
                         </div>
                       </div>
@@ -514,12 +553,47 @@
             </div>
 
             <div class="custom-question-wrapper custom-accordion-card card-02">
-              <div class="custom-question  accordion-card-trigger" accordion-trigger-target="card-02">
+              <div class="custom-question  ">
                 <div class="custom-question-icon"><i class="icon-star"></i></div>
-                <input class="custom-question-text" value="How well work is planned and organized in this team?">
+                <p class="custom-question-text">How well work is planned and organized in this team?</p>
                 <div class="custom-question-buttons">
-                  <button class="button button-lock"><i class="icon-lock-circle-outlined"></i></button>
-                  <button class="button button-menu"><i class="icon-menu-circle-outlined"></i></button>
+                  <svg class="chevron-down-circle accordion-card-trigger" accordion-trigger-target="card-02"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g transform="translate(-815.784 -315.402)">
+                      <g transform="translate(815.784 315.402)" fill="none" stroke="#0d1826" stroke-width="1.5"
+                        opacity="0.798">
+                        <circle cx="12" cy="12" r="12" stroke="none" />
+                        <circle cx="12" cy="12" r="11.25" fill="none" />
+                      </g>
+                      <path
+                        d="M12.44,16.239l4.726-4.73a.89.89,0,0,1,1.262,0,.9.9,0,0,1,0,1.265l-5.355,5.359a.892.892,0,0,1-1.232.026L6.448,12.778A.893.893,0,1,1,7.71,11.513Z"
+                        transform="translate(815.293 313.754)" fill="#0d1826" opacity="0.797" />
+                    </g>
+                  </svg>
+                  <svg class="menu-cicle" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g transform="translate(-844.984 -317.402)">
+                      <g transform="translate(851.106 325.693)" fill="#fff" stroke="#0d1826" stroke-width="1"
+                        opacity="0.803">
+                        <rect width="11.962" height="1.553" rx="0.777" stroke="none" />
+                        <rect x="0.5" y="0.5" width="10.962" height="0.553" rx="0.277" fill="none" />
+                      </g>
+                      <g transform="translate(851.106 329.238)" fill="#fff" stroke="#0d1826" stroke-width="1"
+                        opacity="0.803">
+                        <rect width="11.962" height="1.553" rx="0.777" stroke="none" />
+                        <rect x="0.5" y="0.5" width="10.962" height="0.553" rx="0.277" fill="none" />
+                      </g>
+                      <g transform="translate(851.106 332.783)" fill="#fff" stroke="#0d1826" stroke-width="1"
+                        opacity="0.803">
+                        <rect width="11.962" height="1.553" rx="0.777" stroke="none" />
+                        <rect x="0.5" y="0.5" width="10.962" height="0.553" rx="0.277" fill="none" />
+                      </g>
+                      <g transform="translate(844.984 317.402)" fill="none" stroke="#0d1826" stroke-width="1.5"
+                        opacity="0.803">
+                        <circle cx="12" cy="12" r="12" stroke="none" />
+                        <circle cx="12" cy="12" r="11.25" fill="none" />
+                      </g>
+                    </g>
+                  </svg>
                 </div>
               </div>
               <div class="custom-question-body custom-accordion-card-body">
@@ -527,25 +601,27 @@
                   <p class="custom-question-body-label">Question</p>
                   <div class="custom-input-group">
                     <div class="custom-dropdown">
-                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1">
+                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1"
+                        onfocus="this.parentElement.parentElement.parentElement.parentElement.classList.add('no-overflow')"
+                        onfocusout="this.parentElement.parentElement.parentElement.parentElement.classList.remove('no-overflow')">
                         <p class="custom-dropdown-trigger-value">EN</p>
                         <i class="icon-caret-down"></i>
                       </button>
                       <div class="custom-dropdown-menu">
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                        <div class="custom-dropdown-menu-item active">
+                          <img src="../public//img/usa-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">English</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/fin-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Finnish</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/srb-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Serbian</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/ind-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Hindu</p>
                         </div>
                       </div>
@@ -554,25 +630,27 @@
                   </div>
                   <div class="custom-input-group">
                     <div class="custom-dropdown">
-                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1">
+                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1"
+                        onfocus="this.parentElement.parentElement.parentElement.parentElement.classList.add('no-overflow')"
+                        onfocusout="this.parentElement.parentElement.parentElement.parentElement.classList.remove('no-overflow')">
                         <p class="custom-dropdown-trigger-value">EN</p>
                         <i class="icon-caret-down"></i>
                       </button>
                       <div class="custom-dropdown-menu">
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                        <div class="custom-dropdown-menu-item active">
+                          <img src="../public//img/usa-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">English</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/fin-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Finnish</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/srb-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Serbian</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/ind-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Hindu</p>
                         </div>
                       </div>
@@ -587,25 +665,27 @@
                   <p class="custom-question-body-label">Short form</p>
                   <div class="custom-input-group">
                     <div class="custom-dropdown">
-                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1">
+                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1"
+                        onfocus="this.parentElement.parentElement.parentElement.parentElement.classList.add('no-overflow')"
+                        onfocusout="this.parentElement.parentElement.parentElement.parentElement.classList.remove('no-overflow')">
                         <p class="custom-dropdown-trigger-value">EN</p>
                         <i class="icon-caret-down"></i>
                       </button>
                       <div class="custom-dropdown-menu">
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                        <div class="custom-dropdown-menu-item active">
+                          <img src="../public//img/usa-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">English</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/fin-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Finnish</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/srb-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Serbian</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/ind-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Hindu</p>
                         </div>
                       </div>
@@ -623,12 +703,47 @@
             </div>
 
             <div class="custom-question-wrapper custom-accordion-card card-03">
-              <div class="custom-question accordion-card-trigger" accordion-trigger-target="card-03">
+              <div class="custom-question ">
                 <div class="custom-question-icon"><i class="icon-star"></i></div>
-                <input class="custom-question-text" value="How well work is planned and organized in this team?">
+                <p class="custom-question-text">How well work is planned and organized in this team?</p>
                 <div class="custom-question-buttons">
-                  <button class="button button-lock"><i class="icon-lock-circle-outlined"></i></button>
-                  <button class="button button-menu"><i class="icon-menu-circle-outlined"></i></button>
+                  <svg class="chevron-down-circle accordion-card-trigger" accordion-trigger-target="card-03"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g transform="translate(-815.784 -315.402)">
+                      <g transform="translate(815.784 315.402)" fill="none" stroke="#0d1826" stroke-width="1.5"
+                        opacity="0.798">
+                        <circle cx="12" cy="12" r="12" stroke="none" />
+                        <circle cx="12" cy="12" r="11.25" fill="none" />
+                      </g>
+                      <path
+                        d="M12.44,16.239l4.726-4.73a.89.89,0,0,1,1.262,0,.9.9,0,0,1,0,1.265l-5.355,5.359a.892.892,0,0,1-1.232.026L6.448,12.778A.893.893,0,1,1,7.71,11.513Z"
+                        transform="translate(815.293 313.754)" fill="#0d1826" opacity="0.797" />
+                    </g>
+                  </svg>
+                  <svg class="menu-cicle" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g transform="translate(-844.984 -317.402)">
+                      <g transform="translate(851.106 325.693)" fill="#fff" stroke="#0d1826" stroke-width="1"
+                        opacity="0.803">
+                        <rect width="11.962" height="1.553" rx="0.777" stroke="none" />
+                        <rect x="0.5" y="0.5" width="10.962" height="0.553" rx="0.277" fill="none" />
+                      </g>
+                      <g transform="translate(851.106 329.238)" fill="#fff" stroke="#0d1826" stroke-width="1"
+                        opacity="0.803">
+                        <rect width="11.962" height="1.553" rx="0.777" stroke="none" />
+                        <rect x="0.5" y="0.5" width="10.962" height="0.553" rx="0.277" fill="none" />
+                      </g>
+                      <g transform="translate(851.106 332.783)" fill="#fff" stroke="#0d1826" stroke-width="1"
+                        opacity="0.803">
+                        <rect width="11.962" height="1.553" rx="0.777" stroke="none" />
+                        <rect x="0.5" y="0.5" width="10.962" height="0.553" rx="0.277" fill="none" />
+                      </g>
+                      <g transform="translate(844.984 317.402)" fill="none" stroke="#0d1826" stroke-width="1.5"
+                        opacity="0.803">
+                        <circle cx="12" cy="12" r="12" stroke="none" />
+                        <circle cx="12" cy="12" r="11.25" fill="none" />
+                      </g>
+                    </g>
+                  </svg>
                 </div>
               </div>
               <div class="custom-question-body custom-accordion-card-body">
@@ -636,25 +751,27 @@
                   <p class="custom-question-body-label">Question</p>
                   <div class="custom-input-group">
                     <div class="custom-dropdown">
-                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1">
+                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1"
+                        onfocus="this.parentElement.parentElement.parentElement.parentElement.classList.add('no-overflow')"
+                        onfocusout="this.parentElement.parentElement.parentElement.parentElement.classList.remove('no-overflow')">
                         <p class="custom-dropdown-trigger-value">EN</p>
                         <i class="icon-caret-down"></i>
                       </button>
                       <div class="custom-dropdown-menu">
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                        <div class="custom-dropdown-menu-item active">
+                          <img src="../public//img/usa-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">English</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/fin-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Finnish</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/srb-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Serbian</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/ind-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Hindu</p>
                         </div>
                       </div>
@@ -663,25 +780,27 @@
                   </div>
                   <div class="custom-input-group">
                     <div class="custom-dropdown">
-                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1">
+                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1"
+                        onfocus="this.parentElement.parentElement.parentElement.parentElement.classList.add('no-overflow')"
+                        onfocusout="this.parentElement.parentElement.parentElement.parentElement.classList.remove('no-overflow')">
                         <p class="custom-dropdown-trigger-value">EN</p>
                         <i class="icon-caret-down"></i>
                       </button>
                       <div class="custom-dropdown-menu">
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                        <div class="custom-dropdown-menu-item active">
+                          <img src="../public//img/usa-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">English</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/fin-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Finnish</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/srb-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Serbian</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/ind-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Hindu</p>
                         </div>
                       </div>
@@ -696,25 +815,27 @@
                   <p class="custom-question-body-label">Short form</p>
                   <div class="custom-input-group">
                     <div class="custom-dropdown">
-                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1">
+                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1"
+                        onfocus="this.parentElement.parentElement.parentElement.parentElement.classList.add('no-overflow')"
+                        onfocusout="this.parentElement.parentElement.parentElement.parentElement.classList.remove('no-overflow')">
                         <p class="custom-dropdown-trigger-value">EN</p>
                         <i class="icon-caret-down"></i>
                       </button>
                       <div class="custom-dropdown-menu">
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                        <div class="custom-dropdown-menu-item active">
+                          <img src="../public//img/usa-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">English</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/fin-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Finnish</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/srb-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Serbian</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/ind-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Hindu</p>
                         </div>
                       </div>
@@ -732,12 +853,47 @@
             </div>
 
             <div class="custom-question-wrapper custom-accordion-card card-04">
-              <div class="custom-question accordion-card-trigger" accordion-trigger-target="card-04">
+              <div class="custom-question ">
                 <div class="custom-question-icon"><i class="icon-short-text"></i></div>
-                <input class="custom-question-text" value="What could we do better in this team?">
+                <p class="custom-question-text">What could we do better in this team?</p>
                 <div class="custom-question-buttons">
-                  <button class="button button-close"><i class="icon-close-circle-01"></i></button>
-                  <button class="button button-menu"><i class="icon-menu-circle-outlined"></i></button>
+                  <svg class="chevron-down-circle accordion-card-trigger" accordion-trigger-target="card-04"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g transform="translate(-815.784 -315.402)">
+                      <g transform="translate(815.784 315.402)" fill="none" stroke="#0d1826" stroke-width="1.5"
+                        opacity="0.798">
+                        <circle cx="12" cy="12" r="12" stroke="none" />
+                        <circle cx="12" cy="12" r="11.25" fill="none" />
+                      </g>
+                      <path
+                        d="M12.44,16.239l4.726-4.73a.89.89,0,0,1,1.262,0,.9.9,0,0,1,0,1.265l-5.355,5.359a.892.892,0,0,1-1.232.026L6.448,12.778A.893.893,0,1,1,7.71,11.513Z"
+                        transform="translate(815.293 313.754)" fill="#0d1826" opacity="0.797" />
+                    </g>
+                  </svg>
+                  <svg class="menu-cicle" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g transform="translate(-844.984 -317.402)">
+                      <g transform="translate(851.106 325.693)" fill="#fff" stroke="#0d1826" stroke-width="1"
+                        opacity="0.803">
+                        <rect width="11.962" height="1.553" rx="0.777" stroke="none" />
+                        <rect x="0.5" y="0.5" width="10.962" height="0.553" rx="0.277" fill="none" />
+                      </g>
+                      <g transform="translate(851.106 329.238)" fill="#fff" stroke="#0d1826" stroke-width="1"
+                        opacity="0.803">
+                        <rect width="11.962" height="1.553" rx="0.777" stroke="none" />
+                        <rect x="0.5" y="0.5" width="10.962" height="0.553" rx="0.277" fill="none" />
+                      </g>
+                      <g transform="translate(851.106 332.783)" fill="#fff" stroke="#0d1826" stroke-width="1"
+                        opacity="0.803">
+                        <rect width="11.962" height="1.553" rx="0.777" stroke="none" />
+                        <rect x="0.5" y="0.5" width="10.962" height="0.553" rx="0.277" fill="none" />
+                      </g>
+                      <g transform="translate(844.984 317.402)" fill="none" stroke="#0d1826" stroke-width="1.5"
+                        opacity="0.803">
+                        <circle cx="12" cy="12" r="12" stroke="none" />
+                        <circle cx="12" cy="12" r="11.25" fill="none" />
+                      </g>
+                    </g>
+                  </svg>
                 </div>
               </div>
               <div class="custom-question-body custom-accordion-card-body">
@@ -745,25 +901,27 @@
                   <p class="custom-question-body-label">Question</p>
                   <div class="custom-input-group">
                     <div class="custom-dropdown">
-                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1">
+                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1"
+                        onfocus="this.parentElement.parentElement.parentElement.parentElement.classList.add('no-overflow')"
+                        onfocusout="this.parentElement.parentElement.parentElement.parentElement.classList.remove('no-overflow')">
                         <p class="custom-dropdown-trigger-value">EN</p>
                         <i class="icon-caret-down"></i>
                       </button>
                       <div class="custom-dropdown-menu">
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                        <div class="custom-dropdown-menu-item active">
+                          <img src="../public//img/usa-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">English</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/fin-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Finnish</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/srb-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Serbian</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/ind-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Hindu</p>
                         </div>
                       </div>
@@ -772,25 +930,27 @@
                   </div>
                   <div class="custom-input-group">
                     <div class="custom-dropdown">
-                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1">
+                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1"
+                        onfocus="this.parentElement.parentElement.parentElement.parentElement.classList.add('no-overflow')"
+                        onfocusout="this.parentElement.parentElement.parentElement.parentElement.classList.remove('no-overflow')">
                         <p class="custom-dropdown-trigger-value">EN</p>
                         <i class="icon-caret-down"></i>
                       </button>
                       <div class="custom-dropdown-menu">
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                        <div class="custom-dropdown-menu-item active">
+                          <img src="../public//img/usa-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">English</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/fin-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Finnish</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/srb-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Serbian</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/ind-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Hindu</p>
                         </div>
                       </div>
@@ -805,25 +965,27 @@
                   <p class="custom-question-body-label">Short form</p>
                   <div class="custom-input-group">
                     <div class="custom-dropdown">
-                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1">
+                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1"
+                        onfocus="this.parentElement.parentElement.parentElement.parentElement.classList.add('no-overflow')"
+                        onfocusout="this.parentElement.parentElement.parentElement.parentElement.classList.remove('no-overflow')">
                         <p class="custom-dropdown-trigger-value">EN</p>
                         <i class="icon-caret-down"></i>
                       </button>
                       <div class="custom-dropdown-menu">
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                        <div class="custom-dropdown-menu-item active">
+                          <img src="../public//img/usa-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">English</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/fin-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Finnish</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/srb-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Serbian</p>
                         </div>
                         <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/p-01.png" alt="Flag" class="custom-dropdown-menu-item-img">
+                          <img src="../public/img/ind-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
                           <p class="custom-dropdown-menu-item-text">Hindu</p>
                         </div>
                       </div>
