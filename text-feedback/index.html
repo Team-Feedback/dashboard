@@ -309,7 +309,7 @@
 
         <div class="text-feedback-content">
           <div class="content-card questions">
-            <i class="icon-chevron-left" onclick="this.parentElement.classList.toggle('closed')"></i>
+            <i class="icon-chevron-left card-trigger"></i>
             <div class="questions-header">
               <p class="questions-header-title">Text feedback questions</p>
             </div>
@@ -324,6 +324,13 @@
               </div>
               <div class="question">
                 <p class="question-text">What if there is a long question will we?</p>
+                <span class="question-amount">3</span>
+              </div>
+              <div class="question">
+                <p class="question-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus
+                  consequuntur velit tempora exercitationem earum molestiae repellat fugit libero nisi saepe quod
+                  aliquid aliquam cum veniam iusto delectus nihil et soluta, recusandae ipsa, ab eveniet. Atque dolor
+                  magni quibusdam laudantium placeat.</p>
                 <span class="question-amount">3</span>
               </div>
               <button class="add-new-question">+ Add a new question</button>
@@ -437,7 +444,7 @@
           </div>
 
           <div class="content-card profile">
-            <i class="icon-chevron-right" onclick="this.parentElement.classList.toggle('closed')"></i>
+            <i class="icon-chevron-right card-trigger"></i>
             <div class="profile-header">
               <div class="profile-header-set">
                 <img src="../public/img/p-01.png" alt="User" class="profile-header-set-img">
@@ -524,7 +531,43 @@
   <script src="../public/js/main.js"></script>
 
   <script>
-    let colorArray = ['#12b2ed', '#ffce00', '#6bd833', '#535ff0', '#fc731d', '#ff9300', '#0080ff', '#af52de', '#c4d1cf', '#27e066',]
+    const cardTriggers = document.querySelectorAll('.card-trigger');
+
+    cardTriggers.forEach(el => {
+      el.addEventListener('click', openCard)
+    })
+
+    function openCard() {
+      const parent = this.parentElement;
+
+      if (document.documentElement.clientWidth < 1100) {
+        if (parent.classList.contains('closed')) {
+          cardTriggers.forEach(el => {
+            el.parentElement.classList.add('closed')
+          })
+        } else {
+          cardTriggers.forEach(el => {
+            el.parentElement.classList.remove('closed')
+          })
+        }
+      }
+
+
+      parent.classList.toggle('closed')
+    }
+
+    function closeProfileOnSmall() {
+      if (document.documentElement.clientWidth < 1100) {
+        document.querySelector('.content-card.profile').classList.add('closed')
+      } else {
+        document.querySelector('.content-card.profile').classList.remove('closed')
+        document.querySelector('.content-card.questions').classList.remove('closed')
+      }
+    }
+
+    closeProfileOnSmall()
+
+    window.addEventListener('resize', closeProfileOnSmall)
   </script>
 
 </body>

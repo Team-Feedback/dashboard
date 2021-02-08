@@ -22,12 +22,14 @@ function checkForNavDropdownMenu() {
     dropdownMenuListItemsWidth += e.clientWidth + 32;
   })
 
-  if (dropdownMenuListItemsWidth > headerMain.clientWidth) {
-    console.log("REMOVE MEDIUM")
-    navDropdown.classList.remove('medium');
-  } else {
-    console.log("ADD MEDIUM")
-    navDropdown.classList.add('medium');
+  if(navDropdown) {
+    if (dropdownMenuListItemsWidth > headerMain.clientWidth) {
+      console.log("REMOVE MEDIUM")
+      navDropdown.classList.remove('medium');
+    } else {
+      console.log("ADD MEDIUM")
+      navDropdown.classList.add('medium');
+    }
   }
 }
 

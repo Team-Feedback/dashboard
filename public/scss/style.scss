@@ -11514,7 +11514,7 @@ input {
 #custom-questions,
 #custom-questions-team {
   & .content {
-    padding: 2em 4em 3.2em;
+    padding: 2em 4em 0;
     height: 100%;
 
     &-card {
@@ -11527,6 +11527,9 @@ input {
       background-color: #ffffff;
       height: auto;
       max-height: 100%;
+      border-bottom: 0;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
 
       overflow-y: auto;
       scrollbar-width: none;
@@ -11962,7 +11965,7 @@ input {
 
           &-menu {
             width: 100%;
-            border: solid 1px #cfd7e0;
+            border: solid 1px #e6e9ef;
             border-top: 0;
             background-color: #fff;
             z-index: 1000;
@@ -11986,7 +11989,7 @@ input {
               white-space: nowrap;
 
               &:not(:last-of-type) {
-                border-bottom: solid 1px #cfd7e0;
+                border-bottom: solid 1px #e6e9ef;
               }
 
               &:hover {
@@ -14823,7 +14826,7 @@ input {
           &:last-of-type {
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
-            border-left: 0;
+            border-left: 0!important;
           }
   
           &.active {
@@ -14873,6 +14876,12 @@ input {
       transition: width 0.3s ease-in-out, min-width 0.3s ease-in-out,
         max-width 0.3s ease-in-out;
       overflow-x: hidden;
+
+      @include respond(desktop-sm) {
+        min-width: 28em;
+        width: 28em;
+        max-width: 28em;
+      }
 
       & i.icon-chevron-left {
         position: absolute;
@@ -14955,9 +14964,13 @@ input {
         visibility: visible;
         transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
+        @include respond(desktop-sm) {
+          min-width: 28em;
+        }
+
         & .question {
-          padding: 0 1.2em;
-          height: 3.9em;
+          padding: 1.2em;
+          //height: 3.9em;
           @include flexbox();
           @include align-items(center);
           @include justify-content(space-between);
@@ -14985,10 +14998,16 @@ input {
           }
 
           &-text {
+            padding-right: 1em;
             font-size: 1.25em;
             font-weight: 400;
             color: #0d1826;
             opacity: 0.8;
+
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;  
+            overflow: hidden;
           }
 
           &-amount {
@@ -15015,10 +15034,14 @@ input {
     & .answers {
       margin: 0 1.2em;
       flex: 1;
+      @include flexbox();
+      @include flex-direction(column);
+      @include justify-content(flex-start);
+      @include align-items(flex-start);
 
       &-header {
         padding: 1.7em 2.5em 1.5em;
-        height: 7.15em;
+        //height: 7.15em;
         border-bottom: solid 1px #d6dade;
 
         &-title {
@@ -15040,7 +15063,8 @@ input {
       }
 
       &-main {
-        height: calc(100% - 7.15em);
+        flex: 1;
+        //height: calc(100% - 7.15em);
         overflow-y: auto;
         overflow-x: visible;
         scrollbar-width: none;
@@ -15095,6 +15119,11 @@ input {
                 font-weight: 500;
                 letter-spacing: 0.03px;
                 color: #0d1826;
+                cursor: pointer;
+
+                &:hover {
+                  text-decoration: underline;
+                }
               }
 
               &-info {
@@ -15144,6 +15173,16 @@ input {
       transition: width 0.3s ease-in-out, min-width 0.3s ease-in-out,
         max-width 0.3s ease-in-out;
       overflow-x: hidden;
+      @include flexbox();
+      @include justify-content(flex-start);
+      @include align-items(flex-start);
+      @include flex-direction(column);
+
+      @include respond(desktop-sm) {
+        min-width: 28em;
+        width: 28em;
+        max-width: 28em;
+      }
 
       & i.icon-chevron-right {
         position: absolute;
@@ -15196,10 +15235,21 @@ input {
         transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
         min-width: 32em;
 
+        @include respond(desktop-sm) {
+          min-width: 28em;
+        }
+
         &-set {
           @include flexbox();
           @include align-items(center);
           @include justify-content(flex-start);
+
+          &:hover {
+            & .profile-header-set-name {
+              text-decoration: underline;
+              cursor: pointer;
+            }
+          }
 
           &-img {
             margin-right: 0.8em;
@@ -15238,6 +15288,11 @@ input {
         visibility: visible;
         transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
         min-width: 32em;
+
+        
+        @include respond(desktop-sm) {
+          min-width: 28em;
+        }
 
         &-item {
           margin-bottom: 1em;
@@ -15278,6 +15333,12 @@ input {
         visibility: visible;
         transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
         min-width: 32em;
+
+
+        
+        @include respond(desktop-sm) {
+          min-width: 28em;
+        }
 
         &.open {
           & .profile-feedback-header {
@@ -15372,11 +15433,12 @@ input {
       }
 
       &-footer-wrapper {
-        max-height: calc(100% - 34.1em);
+        //max-height: calc(100% - 34.1em);
         overflow-y: auto;
         overflow-x: visible;
         scrollbar-width: none;
         -ms-overflow-style: none;
+        flex: 1;
 
         &::-webkit-scrollbar {
           width: 0;
@@ -15386,6 +15448,11 @@ input {
         visibility: visible;
         transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
         min-width: 32em;
+
+        
+        @include respond(desktop-sm) {
+          min-width: 28em;
+        }
       }
 
       &-footer {
@@ -15512,12 +15579,13 @@ input {
       @include justify-content(center);
 
       & .button {
-        padding: 0 emcalc(1.8, 1.23);
-        height: emcalc(3.6, 1.23);
+        padding: 0 emcalc(1.5, 1.23);
+        height: emcalc(2.8, 1.23);
         font-size: 1.23em;
         letter-spacing: 0.03px;
         color: rgba($color: #2e3942, $alpha: 0.3);
         border: solid 1px #d6dade;
+        
 
         background-color: #e9ebed;
 
@@ -17447,6 +17515,7 @@ input {
 
             &.no-data-title {
               font-size: 2.2em;
+              font-weight: 500;
               height: emcalc(7, 2.2);
               margin-bottom: emcalc(1.1, 2.2);
               @include flexbox();
