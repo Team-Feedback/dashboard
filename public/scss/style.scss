@@ -1324,6 +1324,7 @@ input {
 
   &-green-primary {
     color: #fff;
+    font-weight: 500;
     background-color: #159e4f;
     border-color: #159e4f;
     border-radius: 3px;
@@ -14764,6 +14765,11 @@ input {
 //=================================================================
 #text-feedback {
   & .content {
+    height: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(flex-start);
+    @include justify-content(flex-start);
     padding: 1.4em 3em 1.6em;
 
     & .widgets-top {
@@ -14814,6 +14820,8 @@ input {
       @include justify-content(flex-start);
       max-height: 100%;
       height: 100%;
+      width: 100%;
+      flex: 1;
       overflow: hidden;
     }
 
@@ -14932,11 +14940,24 @@ input {
           @include justify-content(space-between);
           border-radius: 4px;
 
+          &:hover {
+            & .question-text {
+              text-decoration: underline;
+            }
+          }
+
           &.active {
             background-color: #f5f7f8;
 
             & .question-text {
+              font-weight: 500;
               opacity: 0.84;
+            }
+
+            &:hover {
+              & .question-text {
+                text-decoration: none;
+              }
             }
           }
 
@@ -14960,6 +14981,10 @@ input {
           font-size: 1.25em;
           font-weight: 500;
           color: var(--color-primary);
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
