@@ -1348,9 +1348,13 @@ input {
   &-green-primary {
     color: #fff;
     font-weight: 500;
-    background-color: #159e4f;
-    border-color: #159e4f;
+    // background-color: #159e4f;
+    // border-color: #159e4f;
+    // border-radius: 3px;
+    letter-spacing: 0.03px;
     border-radius: 3px;
+    border: solid 1px #147f42;
+    background-image: linear-gradient(to bottom, #15af57, #159f50);
   }
 
   &-dark {
@@ -3767,7 +3771,7 @@ input {
     background-color: #FFFFFF;
 
     &-body {
-      padding: 5.6em 4.5em 2.5em;
+      padding: 4.8em 5.5em 2.5em;
 
       &-title {
         margin-bottom: emcalc(1.9,1.8);
@@ -3782,6 +3786,7 @@ input {
         margin-bottom: emcalc(2.5, 1.3);
         font-size: 1.3em;
         font-weight: 400;
+        line-height: 1.54;
         letter-spacing: 0.03px;
         color: #49566f;
       }
@@ -3810,8 +3815,15 @@ input {
           border-radius: 4px;
           border: solid 1px #c7d2d8;
           background-color: #fff;
+          opacity: 0.5;
+
+          &:hover {
+            opacity: 1;
+          }
+
 
           &.active {
+            opacity: 1;
             font-weight: 500;
             color: #0d1826;
             border-radius: 4px;
@@ -3830,6 +3842,7 @@ input {
         margin-bottom: emcalc(4.5,1.2);
         font-size: 1.2em;
         font-weight: 400;
+        line-height: 1.5;
         letter-spacing: 0.03px;
         color: #49566f;
       }
@@ -3858,7 +3871,7 @@ input {
       width: auto;
       border-top: solid 1.5px #e7eeec;
       padding: 2.4em 0 4.2em;
-      margin: 0 4.5em;
+      margin: 0 5.5em;
       background-color: #fff;
       @include justify-content(flex-start);
 
