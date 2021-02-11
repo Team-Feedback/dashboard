@@ -146,13 +146,13 @@
 
 @mixin widgets-body-01($value: em) {
   @if $value == em {
-    font-size: 1.18em;
+    font-size: 1.1em;
   } @else {
-    font-size: 1.18rem;
+    font-size: 1.1rem;
   }
   letter-spacing: -0.06px;
-  font-weight: 500;
-  color: #0d1826;
+  font-weight: 400;
+  color: #2b373e;
 }
 
 @mixin widgets-body-02($value: em) {
@@ -3758,6 +3758,130 @@ input {
 }
 
 //SPECIFIC MOODAL MODIFIERS
+#widgetPlacementModal {
+  & .custom-modal {
+    width: 62.6em;
+    border-radius: 7.5px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    border: solid 1px #efefef;
+    background-color: #FFFFFF;
+
+    &-body {
+      padding: 5.6em 4.5em 2.5em;
+
+      &-title {
+        margin-bottom: emcalc(1.9,1.8);
+        font-size: 1.8em;
+        font-weight: 500;
+        letter-spacing: -0.18px;
+        color: #49566f;
+      }
+
+      &-text {
+        max-width: emcalc(39, 1.3);
+        margin-bottom: emcalc(2.5, 1.3);
+        font-size: 1.3em;
+        font-weight: 400;
+        letter-spacing: 0.03px;
+        color: #49566f;
+      }
+
+      &-label {
+        margin-bottom: emcalc(1, 1.2);
+        opacity: 0.8;
+        font-size: 1.2em;
+        font-weight: 600;
+        letter-spacing: -0.12px;
+        color: #49566f;
+      }
+
+      &-buttons {
+        margin-bottom: 1.8em;
+        display: block;
+
+        & .button {
+          padding: 0 emcalc(1.5,1.25);
+          width: auto;
+          height: emcalc(3.6,1.25);
+          font-size: 1.25em;
+          font-weight: 400;
+          letter-spacing: 0.03px;
+          color: #0d1826;
+          border-radius: 4px;
+          border: solid 1px #c7d2d8;
+          background-color: #fff;
+
+          &.active {
+            font-weight: 500;
+            color: #0d1826;
+            border-radius: 4px;
+            border: solid 1px #c7d2d8;
+            background-color: #e9ebed;
+          }
+
+          &:first-of-type {
+            margin-right: emcalc(1.2,1.25);
+          }
+        }
+      }
+
+      &-info-text {
+        //max-width: emcalc(43, 1.2);
+        margin-bottom: emcalc(4.5,1.2);
+        font-size: 1.2em;
+        font-weight: 400;
+        letter-spacing: 0.03px;
+        color: #49566f;
+      }
+
+      &-check {
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(flex-start);
+
+        & .pretty {
+          margin-right: 0;
+          font-size: 1.3em;
+        }
+
+        &-text {
+          font-size: 1.2em;
+          font-weight: 400;
+          letter-spacing: 0.03px;
+          color: #49566f;
+        }
+      }
+    }
+
+    &-footer {
+      height: auto;
+      width: auto;
+      border-top: solid 1.5px #e7eeec;
+      padding: 2.4em 0 4.2em;
+      margin: 0 4.5em;
+      background-color: #fff;
+      @include justify-content(flex-start);
+
+      & .button {
+        padding: 0 emcalc(1.8,1.3);
+        height: emcalc(3.4,1.3);
+        font-size: 1.3em;
+        border-radius: 3px;
+
+        &:first-of-type {
+          margin-right: emcalc(1.3,1.3);
+        }
+
+        &-light-gray {
+          border: solid 1px #d6dade;
+          background-image: linear-gradient(to bottom, #fdfefe, #e8efed);
+          color: #49566f;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
 //modal card
 #modalCard,
 #userFeedbacksHighOrder {
@@ -4327,6 +4451,43 @@ input {
 #addUsersModal {
   & .custom-modal {
     width: 39em;
+
+    & .modal-placeholder {
+      width: 100%;
+      height: 20em;
+      @include flexbox();
+      @include flex-direction(column);
+      @include justify-content(center);
+      @include align-items(center);
+      text-align: center;
+
+      &-img {
+        margin-bottom: 2.2em;
+        width: 5.6em;
+      }
+
+      &-title {
+        margin-bottom: emcalc(1.2, 1.5);
+        font-size: 1.5em;
+        font-weight: 600;
+        letter-spacing: -0.38px;
+        color: #2c3952;
+      }
+
+      &-text {
+        margin: 0 auto;
+        width: 28rem;
+        font-size: 1.28em;
+        font-weight: 400;
+        letter-spacing: -0.13px;
+        color: #383838;
+
+        & button {
+          font-weight: 500;
+          color: #167efa;
+        }
+      }
+    }
 
     &-header {
       padding-top: 3.4em;
@@ -13246,6 +13407,16 @@ input {
   }
 }
 
+#team-settings-general {
+  & .settings-table {
+    &-row {
+      &:last-of-type {
+        border-bottom: 0!important;
+      }
+    }
+  }
+}
+
 #user-settings-general {
   & .content {
     &-card {
@@ -15040,6 +15211,7 @@ input {
       @include align-items(flex-start);
 
       &-header {
+        width: 100%;
         padding: 1.7em 2.5em 1.5em;
         //height: 7.15em;
         border-bottom: solid 1px #d6dade;
@@ -15064,6 +15236,7 @@ input {
 
       &-main {
         flex: 1;
+        width: 100%;
         //height: calc(100% - 7.15em);
         overflow-y: auto;
         overflow-x: visible;
@@ -15073,6 +15246,34 @@ input {
         &::-webkit-scrollbar {
           width: 0;
           height: 0;
+        }
+
+        & .answers-placeholder {
+          height: 100%;
+          width: 100%;
+          @include flexbox();
+          @include flex-direction(column);
+          @include align-items(center);
+          @include justify-content(center);
+
+          &-img {
+            margin-bottom: 2em;
+            width: 5.8em;
+          }
+
+          &-title {
+            margin-bottom: emcalc(1.2,1.5);
+            font-size: 1.5em;
+            font-weight: 600;
+            letter-spacing: -0.04px;
+            color: #172650;
+          }
+
+          &-text {
+            font-size: 1.28em;
+            font-weight: 400;
+            color: #383838;
+          }
         }
 
         & .answer {
@@ -15091,6 +15292,13 @@ input {
             }
           }
 
+          &.anonymous  {
+            & .answer-img,
+            & .answer-initials {
+              display: none!important;
+            }
+          }
+
           &-img {
             margin-right: 1.1em;
             min-width: 4.25em;
@@ -15099,8 +15307,23 @@ input {
             height: 4.25em;
             max-width: 4.25em;
             max-height: 4.25em;
-            object-fit: contain;
+            object-fit: cover;
             border-radius: 100vh;
+          }
+
+          &-initials {
+            margin-right: emcalc(1.1,1.7);
+            text-transform: uppercase;
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(center);
+            width: emcalc(4.25, 1.7);
+            height: emcalc(4.25, 1.7);
+            background: linear-gradient(to bottom, #ffce33, #ffc033);
+            font-size: 1.7em;
+            font-weight: 600;
+            color: #ffffff;
+            border-radius: 50%;
           }
 
           &-set {
@@ -15184,6 +15407,16 @@ input {
         max-width: 28em;
       }
 
+      &.anonymous {
+        & .profile-header {
+          border-bottom: solid 1px #e6e9ef;
+        }
+
+        & .profile-info {
+          display: none!important;
+        }
+      }
+
       & i.icon-chevron-right {
         position: absolute;
         top: 3.1rem;
@@ -15259,8 +15492,38 @@ input {
             height: 3.5em;
             max-width: 3.5em;
             max-height: 3.5em;
-            object-fit: contain;
+            object-fit: cover;
             border-radius: 100vh;
+          }
+
+          &-initials {
+            margin-right: emcalc(1.1,1.4);
+            text-transform: uppercase;
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(center);
+            width: emcalc(3.5, 1.4);
+            height: emcalc(3.5, 1.4);
+            background: linear-gradient(to bottom, #ffce33, #ffc033);
+            font-size: 1.4em;
+            font-weight: 600;
+            color: #ffffff;
+            border-radius: 50%;
+          }
+
+          &-icon {
+            margin-right: emcalc(1.1,1.7);
+            text-transform: uppercase;
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(center);
+            width: emcalc(3.5, 1.7);
+            height: emcalc(3.5, 1.7);
+            background: #B5B5B5;
+            font-size: 1.7em;
+            font-weight: 600;
+            color: rgba(0,0,0, .4);
+            border-radius: 50%;
           }
 
           &-name {
