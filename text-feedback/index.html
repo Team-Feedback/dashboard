@@ -29,6 +29,7 @@
           <div class="header-main-info-icon side-toggle">
             <div class="logo-container">
               <img src="../public/img/logo-only.png" alt="Team feedback logo" class="logo">
+              <div class="custom-badge">12</div>
             </div>
           </div>
           <!-- <h1 class="header-main-info-title">Team Marketing</h1> -->
@@ -344,11 +345,11 @@
             </div>
 
             <div class="answers-main">
-              <div class="answers-placeholder">
+              <!-- <div class="answers-placeholder">
                 <img src="../public/img/table-placeholder-img-04.png" alt="Clip art" class="answers-placeholder-img">
                 <p class="answers-placeholder-title">No data yet</p>
                 <p class="answers-placeholder-text">This question has no data tet</p>
-              </div>
+              </div> -->
               <div class="answer">
                 <!-- <img src="../public/img/p-01.png" alt="User" class="answer-img"> -->
                 <!-- <div class="answer-initials">WW</div> -->
@@ -365,8 +366,10 @@
                     (email,chat, voicemail,web form,and tweet).
                   </p>
                 </div>
+
+
               </div>
-              <!-- <div class="answer active">
+              <div class="answer active">
                 <img src="../public/img/p-01.png" alt="User" class="answer-img">
                 <div class="answer-set">
                   <div class="answer-set-header">
@@ -380,6 +383,38 @@
                     This is your first ticket. Ta-da! Any customer request sent to your supported channels
                     (email,chat, voicemail,web form,and tweet).
                   </p>
+                  <div class="stars">
+                    <div class="star-item">
+                      <p class="star-item-text">Attitude</p>
+                      <div class="star-set">
+                        <i class="icon-star"></i>
+                        <i class="icon-star"></i>
+                        <i class="icon-star"></i>
+                        <i class="icon-star"></i>
+                        <i class="icon-star"></i>
+                      </div>
+                    </div>
+                    <div class="star-item">
+                      <p class="star-item-text">Productivity</p>
+                      <div class="star-set">
+                        <i class="icon-star"></i>
+                        <i class="icon-star"></i>
+                        <i class="icon-star"></i>
+                        <i class="icon-star"></i>
+                        <i class="icon-star"></i>
+                      </div>
+                    </div>
+                    <div class="star-item">
+                      <p class="star-item-text">Teamworking</p>
+                      <div class="star-set">
+                        <i class="icon-star"></i>
+                        <i class="icon-star"></i>
+                        <i class="icon-star"></i>
+                        <i class="icon-star"></i>
+                        <i class="icon-star"></i>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="answer">
@@ -445,7 +480,7 @@
                     (email,chat, voicemail,web form,and tweet).
                   </p>
                 </div>
-              </div> -->
+              </div>
             </div>
           </div>
 
@@ -472,7 +507,7 @@
             </div>
 
             <div class="profile-feedback open">
-              <div class="profile-feedback-header">
+              <div class="profile-feedback-header" onclick="this.parentElement.classList.toggle('open')">
                 <div class="profile-feedback-header-set">
                   <i class="icon-feather-thumbs-up"></i>
                   <p class="profile-feedback-header-set-text">Like this feedback</p>
@@ -514,13 +549,21 @@
                   </div>
                 </div>
 
-                <div class="profile-footer-item">
+                <div class="profile-footer-item" style="cursor:pointer" onclick="this.classList.toggle('open')">
+                  <i class="icon-chevron-down"></i>
                   <div class="profile-footer-item-icon" style="background-color: #457cb9">
                     <i class="icon-feather-pencil"></i>
                   </div>
                   <div class="profile-footer-item-set">
                     <p class="profile-footer-item-set-title">Commented by Viljami Lahtinen</p>
                     <p class="profile-footer-item-set-text">2 hours ago</p>
+                  </div>
+                  <div class="profile-footer-item-comment">
+                    <p class="profile-footer-item-comment-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quidem veritatis quis blanditiis
+                      veniam, fugiat reprehenderit exercitationem, voluptates vitae quos, ipsam doloribus magnam rerum!
+                      Deleniti neque error quisquam animi amet?
+                    </p>
                   </div>
                 </div>
               </div>
