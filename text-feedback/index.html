@@ -306,6 +306,9 @@
             <button class="button">Charts</button>
             <button class="button active">Text</button>
           </div>
+          <div class="reset-layout">
+            <i class="icon-backup-restore"></i>
+          </div>
         </div>
 
         <div class="text-feedback-content">
@@ -495,7 +498,15 @@
               </div>
             </div>
 
-            <div class="profile-info">
+            <div class="profile-placeholder">
+              <p class="profile-placeholder-title">No feedback selected</p>
+              <p class="profile-placeholder-text">
+                Please select a feedback to see
+                here more informations about it.
+              </p>
+            </div>
+
+            <div class="profile-info" style="display: none">
               <div class="profile-info-item position">
                 <i class="icon-feather-briefcase"></i>
                 <p class="profile-info-item-text">Junior Graphic Designer</p>
@@ -506,7 +517,7 @@
               </div>
             </div>
 
-            <div class="profile-feedback open">
+            <div class="profile-feedback open" style="display: none">
               <div class="profile-feedback-header" onclick="this.parentElement.classList.toggle('open')">
                 <div class="profile-feedback-header-set">
                   <i class="icon-feather-thumbs-up"></i>
@@ -527,7 +538,7 @@
 
             </div>
 
-            <div class="profile-footer-wrapper">
+            <div class="profile-footer-wrapper" style="display: none">
               <div class="profile-footer">
                 <div class="profile-footer-item">
                   <div class="profile-footer-item-icon" style="background-color: #ffb100">
