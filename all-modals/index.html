@@ -338,6 +338,14 @@
             target-modal="widgetPlacementModal">
             Widget placement
           </button>
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;"
+            target-modal="contactSupportModal">
+            Contact support
+          </button>
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;"
+            target-modal="requestRightsModal">
+            Request rights
+          </button>
         </div>
       </div>
     </div>
@@ -509,7 +517,7 @@
           <p class="custom-modal-body-subtitle">Team Marketing - P2P Feedback</p>
           <p class="custom-modal-body-label">Select type</p>
           <div class="buttons">
-            <button class="button star-rating">
+            <button class="button star-rating active">
               <i class="icon-star"></i>
               Star rating
             </button>
@@ -521,7 +529,11 @@
           <p class="custom-modal-body-label">Enter question</p>
           <input type="text" placeholder="How could we be more productive in our team?">
 
-          <button class="button button-primary">Add question</button>
+          <div class="custom-modal-body-footer">
+            <button class="button button-green-primary">Add question</button>
+            <button class="button button-light-gradient">Cancel</button>
+          </div>
+
         </div>
       </div>
       <div class="custom-modal-backdrop"></div>
@@ -1008,6 +1020,76 @@
       <div class="custom-modal-backdrop"></div>
     </div>
 
+    <!-- REQUEST RIGHTS MODAL-->
+    <div class="custom-modal-wrapper" id="requestRightsModal">
+      <div class="custom-modal">
+        <!-- Modal body -->
+        <div class="custom-modal-body">
+          <div class="custom-modal-close" close-modal="requestRightsModal">
+            <i class="icon-close"></i>
+          </div>
+
+          <p class="custom-modal-body-title">Request rights</p>
+          <p class="custom-modal-body-text">Request viewing rights to follow the development of an other team.</p>
+
+          <div class="input-container">
+            <i class="icon-search"></i>
+            <input type="text" placeholder="Search by team name or leaders name">
+          </div>
+
+          <div class="teams">
+            <div class="team">
+              <!-- <img src="../public/img/p-01.png" alt="User" class="team-img"> -->
+              <div class="team-initials">MR</div>
+              <div class="team-set">
+                <p class="team-set-name">Example team</p>
+                <p class="team-set-desc">Example team description</p>
+              </div>
+              <p class="team-members">32 Members</p>
+              <button class="button button-light-gradient">Select</button>
+            </div>
+            <div class="team">
+              <!-- <img src="../public/img/p-01.png" alt="User" class="team-img"> -->
+              <div class="team-initials">MR</div>
+              <div class="team-set">
+                <p class="team-set-name">Example team</p>
+                <p class="team-set-desc">Example team description</p>
+              </div>
+              <p class="team-members">32 Members</p>
+              <button class="button button-light-gradient">Select</button>
+            </div>
+            <div class="team">
+              <!-- <img src="../public/img/p-01.png" alt="User" class="team-img"> -->
+              <div class="team-initials">MR</div>
+              <div class="team-set">
+                <p class="team-set-name">Example team</p>
+                <p class="team-set-desc">Example team description</p>
+              </div>
+              <p class="team-members">32 Members</p>
+              <button class="button button-light-gradient">Select</button>
+            </div>
+            <div class="team">
+              <!-- <img src="../public/img/p-01.png" alt="User" class="team-img"> -->
+              <div class="team-initials">MR</div>
+              <div class="team-set">
+                <p class="team-set-name">Example team</p>
+                <p class="team-set-desc">Example team description</p>
+              </div>
+              <p class="team-members">32 Members</p>
+              <button class="button button-green-primary">Selected</button>
+            </div>
+          </div>
+
+          <div class="custom-modal-body-buttons">
+            <button class="button button-green-primary">Request rights</button>
+            <button class="button button-light-gradient">Cancel</button>
+          </div>
+
+        </div>
+      </div>
+      <div class="custom-modal-backdrop"></div>
+    </div>
+
     <!-- WIDGET PLACEMENT MODAL-->
     <div class="custom-modal-wrapper" id="widgetPlacementModal">
       <div class="custom-modal">
@@ -1200,6 +1282,51 @@
           <button class="button button-primary send-feedback-modal">
             Send Invites
           </button>
+
+        </div>
+      </div>
+      <div class="custom-modal-backdrop"></div>
+    </div>
+
+
+    <!-- CONTACT CUSTOMER SUPPRT MODAL-->
+    <div class="custom-modal-wrapper" id="contactSupportModal">
+      <div class="custom-modal">
+        <!-- Modal body -->
+        <div class="custom-modal-body">
+          <div class="custom-modal-close" close-modal="contactSupportModal">
+            <i class="icon-close"></i>
+          </div>
+          <p class="custom-modal-body-title">Contact customer service</p>
+
+          <p class="custom-modal-body-label">Select topic</p>
+          <div class="custom-dropdown">
+            <button class="custom-dropdown-trigger" tabindex="-1" onclick="this.focus()">
+              <p class="custom-dropdown-trigger-text">Team Marketing</p>
+              <div class="custom-dropdown-trigger-icon"><i class="icon-chevron-down"></i></div>
+            </button>
+            <ul class="custom-dropdown-menu">
+              <li class="custom-dropdown-menu-item">
+                <p class="custom-dropdown-menu-item-text">Example team</p>
+              </li>
+              <li class="custom-dropdown-menu-item">
+                <p class="custom-dropdown-menu-item-text">Example team</p>
+              </li>
+              <li class="custom-dropdown-menu-item">
+                <p class="custom-dropdown-menu-item-text">Example team</p>
+              </li>
+            </ul>
+          </div>
+
+          <p class="custom-modal-body-label">Your message</p>
+          <textarea class="custom-modal-body-textarea" placeholder="Enter here..."></textarea>
+
+        </div>
+
+        <!-- Modal footer -->
+        <div class="custom-modal-footer">
+          <button class="button button-green-primary">Send</button>
+          <button class="button button-light-gradient" close-modal="contactSupportModal">Cancel</button>
 
         </div>
       </div>

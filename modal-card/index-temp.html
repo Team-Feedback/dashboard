@@ -524,129 +524,185 @@
               <div class="custom-modal-close" close-modal="createNewTeamModal">
                 <i class="icon-close"></i>
               </div>
+              <p class="custom-modal-header-subtitle">Nokia Oyj</p>
               <p class="custom-modal-header-title">Create a new team</p>
             </div>
             <!-- Modal body -->
-            <div class="custom-modal-body">
-              <p class="custom-modal-body-label">Add team name</p>
-              <div class="input-container team-name check">
+            <div class="custom-modal-body step-01">
+
+              <div class="custom-breadcrumbs-container">
+                <div class="custom-breadcrumbs step-01">
+                  <div class="custom-breadcrumbs-item active">
+                    <i class="icon-check"></i>
+                    <p class="custom-breadcrumbs-item-text">Name Your Team</p>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10.055" height="31.519" viewBox="0 0 10.055 31.519">
+                    <path d="M3658.419,167.295l9.046,17.626-7.115,13.431" transform="translate(-3657.975 -167.066)"
+                      fill="none" stroke="#e8e9e9" stroke-width="1" />
+                  </svg>
+                  <div class="custom-breadcrumbs-item">
+                    <i class="icon-check"></i>
+                    <p class="custom-breadcrumbs-item-text">Add Members</p>
+                  </div>
+                </div>
+
+                <div class="custom-breadcrumbs step-02">
+                  <div class="custom-breadcrumbs-item checked">
+                    <i class="icon-check"></i>
+                    <p class="custom-breadcrumbs-item-text">Name Your Team</p>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10.055" height="31.519" viewBox="0 0 10.055 31.519">
+                    <path d="M3658.419,167.295l9.046,17.626-7.115,13.431" transform="translate(-3657.975 -167.066)"
+                      fill="none" stroke="#e8e9e9" stroke-width="1" />
+                  </svg>
+                  <div class="custom-breadcrumbs-item active">
+                    <i class="icon-check"></i>
+                    <p class="custom-breadcrumbs-item-text">Add Members</p>
+                  </div>
+                </div>
+
+                <button class="button button-green-primary step-01" onclick="changeSteps('step-02')">Next</button>
+                <button class="button button-link step-02" onclick="changeSteps('step-01')">&#8592; Go Back</button>
+                <button class="button button-primary step-02" style="margin-left: 0;">Create team</button>
+              </div>
+
+              <p class="custom-modal-body-title step-01">Team name and short description</p>
+              <p class="custom-modal-body-text step-01">The team name should be compact for examples 'Sales' or
+                'Marketing'.
+                Then add a short description to specify the team.</p>
+
+              <p class="custom-modal-body-title step-02">Add team members</p>
+              <p class="custom-modal-body-text step-02">You can add people who are already registered by search them
+                with their name.
+                If you want to add people who are not yet registered you have to enter their emails.</p>
+
+              <p class="custom-modal-body-label step-01">Add team name</p>
+              <div class="input-container team-name check step-01">
                 <input type="text" placeholder="Enter here">
                 <i class="icon-check"></i>
               </div>
 
-              <p class="custom-modal-body-label check">Add team description</p>
-              <div class="input-container team-desc">
+              <p class="custom-modal-body-label check step-01">Add team description</p>
+              <div class="input-container team-desc step-01">
                 <input type="text" placeholder="Enter here">
                 <i class="icon-check"></i>
               </div>
 
-              <p class="custom-modal-body-label">Add team members</p>
-              <div class="members">
-                <div class="member">
-                  <img src="../public/img/p-01.png" alt="User's profile image" class="member-img">
-                  <!-- <div class="member-initials">MR</div> -->
-                  <div class="member-set">
-                    <p class="member-set-name">Marko Rajkovic</p>
-                    <p class="member-set-position">Example Job Title</p>
-                  </div>
-                  <button class="button delete">Delete</button>
+              <p class="custom-modal-body-label step-02">Team leader</p>
+
+              <div class="search-dropdown step-02" onclick="this.scrollIntoView(true);">
+                <div class="search-dropdown-input-container show-button">
+                  <input type="text" placeholder="Enter name or email">
+                  <i class="icon-search"></i>
+                  <!-- <button class="button button-add">Add</button> -->
                 </div>
-                <div class="member">
-                  <!-- <img src="../public/img/p-01.png" alt="User's profile image" class="member-img"> -->
-                  <div class="member-initials">MR</div>
-                  <div class="member-set">
-                    <p class="member-set-name">Marko Rajkovic</p>
-                    <p class="member-set-position">Example Job Title</p>
-                  </div>
-                  <button class="button delete">Delete</button>
-                </div>
-                <div class="member">
-                  <img src="../public/img/p-01.png" alt="User's profile image" class="member-img">
-                  <!-- <div class="member-initials">MR</div> -->
-                  <div class="member-set">
-                    <p class="member-set-name">Marko Rajkovic</p>
-                    <p class="member-set-position">Example Job Title</p>
-                  </div>
-                  <button class="button delete">Delete</button>
-                </div>
-                <div class="member">
-                  <!-- <img src="../public/img/p-01.png" alt="User's profile image" class="member-img"> -->
-                  <div class="member-initials">MR</div>
-                  <div class="member-set">
-                    <p class="member-set-name">Marko Rajkovic</p>
-                    <p class="member-set-position">Example Job Title</p>
-                  </div>
-                  <button class="button delete">Delete</button>
-                </div>
-                <div class="member">
-                  <img src="../public/img/p-01.png" alt="User's profile image" class="member-img">
-                  <!-- <div class="member-initials">MR</div> -->
-                  <div class="member-set">
-                    <p class="member-set-name">Marko Rajkovic</p>
-                    <p class="member-set-position">Example Job Title</p>
-                  </div>
-                  <button class="button delete">Delete</button>
-                </div>
-                <div class="member">
-                  <!-- <img src="../public/img/p-01.png" alt="User's profile image" class="member-img"> -->
-                  <div class="member-initials">MR</div>
-                  <div class="member-set">
-                    <p class="member-set-name">Marko Rajkovic</p>
-                    <p class="member-set-position">Example Job Title</p>
-                  </div>
-                  <button class="button delete">Delete</button>
-                </div>
-                <div class="member">
-                  <img src="../public/img/p-01.png" alt="User's profile image" class="member-img">
-                  <!-- <div class="member-initials">MR</div> -->
-                  <div class="member-set">
-                    <p class="member-set-name">Marko Rajkovic</p>
-                    <p class="member-set-position">Example Job Title</p>
-                  </div>
-                  <button class="button delete">Delete</button>
-                </div>
-                <div class="member">
-                  <!-- <img src="../public/img/p-01.png" alt="User's profile image" class="member-img"> -->
-                  <div class="member-initials">MR</div>
-                  <div class="member-set">
-                    <p class="member-set-name">Marko Rajkovic</p>
-                    <p class="member-set-position">Example Job Title</p>
-                  </div>
-                  <button class="button delete">Delete</button>
-                </div>
-                <div class="search-dropdown" onclick="this.scrollIntoView(true);">
-                  <div class="search-dropdown-input-container show-button">
-                    <input type="text" placeholder="Enter name or email">
-                    <i class="icon-search"></i>
-                    <button class="button button-add">Add</button>
-                  </div>
-                  <div class="search-dropdown-menu">
-                    <div class="member">
-                      <img src="../public/img/p-01.png" alt="User's profile image" class="member-img">
-                      <!-- <div class="member-initials">MR</div> -->
-                      <div class="member-set">
-                        <p class="member-set-name">Marko Rajkovic</p>
-                        <p class="member-set-position">Example Job Title</p>
-                      </div>
-                      <button class="button select">Select</button>
+                <div class="search-dropdown-menu">
+                  <div class="member">
+                    <img src="../public/img/p-01.png" alt="User's profile image" class="member-img">
+                    <!-- <div class="member-initials">MR</div> -->
+                    <div class="member-set">
+                      <p class="member-set-name">Marko Rajkovic</p>
+                      <p class="member-set-position">Example Job Title</p>
                     </div>
-                    <div class="member">
-                      <!-- <img src="../public/img/p-01.png" alt="User's profile image" class="member-img"> -->
-                      <div class="member-initials">MR</div>
-                      <div class="member-set">
-                        <p class="member-set-name">Marko Rajkovic</p>
-                        <p class="member-set-position">Example Job Title</p>
-                      </div>
-                      <button class="button select">Select</button>
+                    <button class="button select">Select</button>
+                  </div>
+                  <div class="member">
+                    <!-- <img src="../public/img/p-01.png" alt="User's profile image" class="member-img"> -->
+                    <div class="member-initials">MR</div>
+                    <div class="member-set">
+                      <p class="member-set-name">Marko Rajkovic</p>
+                      <p class="member-set-position">Example Job Title</p>
                     </div>
+                    <button class="button select">Select</button>
                   </div>
                 </div>
               </div>
+
+              <p class="custom-modal-body-label step-02">Team members</p>
+              <div class="members step-02">
+                <div class="member">
+                  <img src="../public/img/p-01.png" alt="User's profile image" class="member-img">
+                  <!-- <div class="member-initials">MR</div> -->
+                  <div class="member-set">
+                    <p class="member-set-name">Marko Rajkovic</p>
+                    <p class="member-set-position">Example Job Title</p>
+                  </div>
+                  <button class="button delete">Delete</button>
+                </div>
+                <div class="member">
+                  <!-- <img src="../public/img/p-01.png" alt="User's profile image" class="member-img"> -->
+                  <div class="member-initials">MR</div>
+                  <div class="member-set">
+                    <p class="member-set-name">Marko Rajkovic</p>
+                    <p class="member-set-position">Example Job Title</p>
+                  </div>
+                  <button class="button delete">Delete</button>
+                </div>
+                <div class="member">
+                  <img src="../public/img/p-01.png" alt="User's profile image" class="member-img">
+                  <!-- <div class="member-initials">MR</div> -->
+                  <div class="member-set">
+                    <p class="member-set-name">Marko Rajkovic</p>
+                    <p class="member-set-position">Example Job Title</p>
+                  </div>
+                  <button class="button delete">Delete</button>
+                </div>
+                <div class="member">
+                  <!-- <img src="../public/img/p-01.png" alt="User's profile image" class="member-img"> -->
+                  <div class="member-initials">MR</div>
+                  <div class="member-set">
+                    <p class="member-set-name">Marko Rajkovic</p>
+                    <p class="member-set-position">Example Job Title</p>
+                  </div>
+                  <button class="button delete">Delete</button>
+                </div>
+                <div class="member">
+                  <img src="../public/img/p-01.png" alt="User's profile image" class="member-img">
+                  <!-- <div class="member-initials">MR</div> -->
+                  <div class="member-set">
+                    <p class="member-set-name">Marko Rajkovic</p>
+                    <p class="member-set-position">Example Job Title</p>
+                  </div>
+                  <button class="button delete">Delete</button>
+                </div>
+                <div class="member">
+                  <!-- <img src="../public/img/p-01.png" alt="User's profile image" class="member-img"> -->
+                  <div class="member-initials">MR</div>
+                  <div class="member-set">
+                    <p class="member-set-name">Marko Rajkovic</p>
+                    <p class="member-set-position">Example Job Title</p>
+                  </div>
+                  <button class="button delete">Delete</button>
+                </div>
+                <div class="member">
+                  <img src="../public/img/p-01.png" alt="User's profile image" class="member-img">
+                  <!-- <div class="member-initials">MR</div> -->
+                  <div class="member-set">
+                    <p class="member-set-name">Marko Rajkovic</p>
+                    <p class="member-set-position">Example Job Title</p>
+                  </div>
+                  <button class="button delete">Delete</button>
+                </div>
+                <div class="member">
+                  <!-- <img src="../public/img/p-01.png" alt="User's profile image" class="member-img"> -->
+                  <div class="member-initials">MR</div>
+                  <div class="member-set">
+                    <p class="member-set-name">Marko Rajkovic</p>
+                    <p class="member-set-position">Example Job Title</p>
+                  </div>
+                  <button class="button delete">Delete</button>
+                </div>
+
+              </div>
+              <div class="custom-modal-body-buttons">
+                <button class="button button-light-gradient step-01">Cancel</button>
+                <button class="button button-primary step-01" onclick="changeSteps('step-02')">Next</button>
+
+                <button class="button button-link step-02" onclick="changeSteps('step-01')">&#8592; Go Back</button>
+                <button class="button button-primary step-02">Create team</button>
+              </div>
             </div>
-            <!-- Modal footer -->
-            <div class="custom-modal-footer">
-              <button class="button button-primary">Create team</button>
-            </div>
+
           </div>
           <div class="custom-modal-backdrop"></div>
         </div>
@@ -1302,7 +1358,8 @@
                         </div>
                         <div class="feedback-rating">
                           <div class="feedback-rating-item">
-                            <p class="feedback-rating-item-name">Attitude:</p>
+                            <p class="feedback-rating-item-name">Lorem ipsum, dolor sit amet consectetur adipisicing
+                              elit. Illum, excepturi.:</p>
                             <div class="feedback-rating-item-stars">
                               <i class="icon-star"></i>
                               <i class="icon-star"></i>
@@ -3126,6 +3183,14 @@
     //     horizontalOrder: true
     //   });
     // }, 1000)
+
+    function changeSteps(step) {
+      const modalBody = document.querySelector("#createNewTeamModal .custom-modal-body");
+      modalBody.classList.remove("step-01")
+      modalBody.classList.remove("step-02")
+
+      modalBody.classList.add(`${step}`);
+    }
   </script>
 </body>
 

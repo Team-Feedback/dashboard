@@ -427,13 +427,22 @@
 
           <div class="content-card-header">
             <p class="content-card-header-title">Give feedback</p>
-            <div class="options">
-              <button class="options-link active">Grid view</button>
-              <span class="options-divider">I</span>
-              <button class="options-link">Todo list <span class="amount">12</span></button>
-            </div>
 
-            <div class="custom-dropdown half-line">
+            <div class="content-card-header-container">
+              <div class="option-buttons">
+                <button class="button active">All team members</button>
+                <button class="button">My todo list</button>
+              </div>
+
+              <div class="content-card-header-buttons">
+                <input type="text" placeholder="Search...">
+                <button class="button button-green-primary">Invite new members</button>
+                <button class="button button-light-gradient">
+                  <i class="icon-sort"></i>
+                </button>
+              </div>
+            </div>
+            <!-- <div class="custom-dropdown half-line">
               <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1">
                 <i class="icon-cog"></i>
               </button>
@@ -448,7 +457,7 @@
                   <p class="custom-dropdown-menu-item-link">Option III</p>
                 </button>
               </div>
-            </div>
+            </div> -->
           </div>
 
           <div class="people">
