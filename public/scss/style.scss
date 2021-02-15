@@ -1380,7 +1380,6 @@ input {
 
 .animated-input {
   position: relative;
-
   background-color: rgba(186, 186, 186, 0.15);
   border-radius: 1.5em;
 
@@ -2721,6 +2720,7 @@ input {
     }
 
     & .settings-dropdown-menu {
+      max-height: auto;
       &-header {
         padding: 2em 1.7em 1.45em;
         border-bottom: solid 1.3px #ebebeb;
@@ -2751,6 +2751,149 @@ input {
         }
 
         &-main {
+
+
+          & .section-fullscreen {
+            padding: 2em 0;
+            padding-left: 2.1em;
+            padding-right: 2.4em;
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(flex-start);
+
+            & .pretty {
+              font-size: 1.8em;
+              margin-right: 0;
+            }
+
+            &-set {
+              &-title {
+                margin-bottom: emcalc(.4, 1.25);
+                font-size: 1.25em;
+                font-weight: 500;
+                color: #172650;
+              }
+
+              &-text {
+                opacity: 0.9;
+                font-size: 1.18em;
+                font-weight: 400;
+                color: #49566f;
+              }
+            }
+
+            &-img {
+              margin-left: auto;
+              width: 5.2em;
+            }
+          }
+
+          & .section-size {
+            padding: 2em 0;
+            padding-left: 1.6em;
+            padding-right: 2.4em;
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(space-between);
+
+            &-text {
+              font-size: 1.25em;
+              font-weight: 500;
+              letter-spacing: 0.03px;
+              color: #172650;
+            }
+
+            &-buttons {
+              & button {
+                margin-right: .2em;
+                cursor: pointer;
+
+                & i {
+                  font-size: 2em;
+                  color: #c5c7c9;
+                }
+              }
+            }
+          }
+
+          & .section-appearance {
+            padding: 2em 0;
+            padding-left: 1.6em;
+            padding-right: 2.4em;
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(space-between);
+
+            &-text {
+              font-size: 1.25em;
+              font-weight: 500;
+              letter-spacing: 0.03px;
+              color: #172650;
+
+              & span {
+                font-weight: 400;
+              }
+            }
+
+            &-buttons {
+              @include flexbox();
+              @include align-items(center);
+              @include justify-content(flex-start);
+
+              &-item {
+                padding: 2px;
+                @include flexbox();
+                @include align-items(center);
+                @include justify-content(center);
+                border: solid 1px transparent;
+                border-radius: 100%;
+                cursor: pointer;
+                overflow: visible;
+
+                &.active {
+                  border-color: #57c083;
+                }
+
+                & img {
+                  min-width: 1.8em;
+                  min-height: 1.8em;
+                  width: 1.8em;
+                  height: 1.8em;
+                  max-width: 1.8em;
+                  max-height: 1.8em;
+                }
+              }
+            }
+          }
+
+          & .section-other {
+            padding: 3em 0;
+            padding-left: 1.6em;
+            padding-right: 1.4em;
+            padding-bottom: 1em;
+
+            &-item {
+              @include flexbox();
+              @include align-items(center);
+              @include justify-content(space-between);
+              margin-bottom: 2em;
+
+              &-text {
+                font-size: 1.25em;
+                font-weight: 400;
+                letter-spacing: 0.03px;
+                color: #172650;
+              }
+
+              & .pretty {
+                font-size: 2em;
+                margin-right: 0;
+              }
+            }
+          }
+
+
+
           & .theme {
             padding: 1.8em 1.7em;
             padding-right: 2.2em;
@@ -2988,7 +3131,7 @@ input {
       bottom: -0.7em;
       right: -0.7em;
       width: 32.3em;
-      max-height: 47.7em;
+      //max-height: 47.7em;
       border-radius: 5px;
       box-shadow: 0 5px 10px 0 rgba(139, 139, 139, 0.08);
       border: solid 1.5px #eff0f2;
@@ -3405,25 +3548,25 @@ input {
   &-header {
     &-set {
       &-img {
-        margin-bottom: 0.95em;
-        width: 8.41em;
-        height: 8.41em;
+        margin-bottom: 1.2em;
+        width: 8.75em;
+        height: 8.75em;
         border: solid 1px rgba(0, 0, 0, 0);
         border-radius: 50%;
         object-fit: cover;
       }
 
       &-initials {
-        margin-bottom: emcalc(0.95, 3.5);
+        margin-bottom: emcalc(1.2, 3.5);
         @include inline-flex();
         @include align-items(center);
         @include justify-content(center);
-        width: emcalc(8.41, 3.5);
-        height: emcalc(8.41, 3.5);
-        min-width: emcalc(8.41, 3.5);
-        min-height: emcalc(8.41, 3.5);
-        max-width: emcalc(8.41, 3.5);
-        max-height: emcalc(8.41, 3.5);
+        width: emcalc(8.75, 3.5);
+        height: emcalc(8.75, 3.5);
+        min-width: emcalc(8.75, 3.5);
+        min-height: emcalc(8.75, 3.5);
+        max-width: emcalc(8.75, 3.5);
+        max-height: emcalc(8.75, 3.5);
         border-radius: 50%;
         font-size: 3.5em;
         font-weight: 700;
@@ -3432,12 +3575,12 @@ input {
       }
 
       &-icon {
-        margin-bottom: 0.95em;
+        margin-bottom: 1.2em;
         @include inline-flex();
         @include align-items(center);
         @include justify-content(center);
-        width: 8.41em;
-        height: 8.41em;
+        width: 8.75em;
+        height: 8.75em;
         border-radius: 50%;
         background-color: var(--color-primary);
 
@@ -3448,19 +3591,21 @@ input {
       }
 
       &-subtitle {
-        margin-bottom: 0.3em;
+        margin-bottom: 0.4em;
         font-size: 1.38em;
         font-weight: 500;
         line-height: 1.02;
-        letter-spacing: -0.21px;
-        color: #8592ad;
+        letter-spacing: -0.1px;
+        opacity: 0.75;
+        color: #49566f;
       }
 
       &-title {
         font-size: 2.25em;
         font-weight: 500;
         letter-spacing: -0.17px;
-        color: #172650;
+        opacity: 0.9;
+        color: #0d1826;
       }
     }
   }
@@ -6721,7 +6866,8 @@ input {
       @include align-items(flex-start);
       padding: 8.9em 0 0;
       margin-left: 12.5%;
-      margin-right: 21%;
+      margin-right: auto;
+      max-width: 94.9em;
       width: calc(100% - 23.5%);
       text-align: left;
       border-bottom: solid 2px rgba(232, 233, 233, 0.75);
@@ -6765,7 +6911,7 @@ input {
       }
 
       &.step-02 {
-        max-width: 100%;
+        max-width: 94.9em;
         width: calc(100% - 23.5%);
 
         & .step-01 {
@@ -6859,6 +7005,7 @@ input {
         opacity: 0.9;
         font-size: 1.7em;
         font-weight: 600;
+        letter-spacing: normal;
         color: #0d1826;
       }
 
@@ -6871,6 +7018,10 @@ input {
         line-height: 1.38;
         font-weight: 400;
         color: #0d1826;
+
+        &.step-02 {
+          max-width: emcalc(52,1.3);
+        }
       }
 
       &-label {
@@ -6884,6 +7035,8 @@ input {
         position: relative;
         height: 3.4em;
         width: 100%;
+
+
 
         &.check {
           & input {
@@ -6900,7 +7053,7 @@ input {
         }
 
         &.team-desc {
-          margin-bottom: 4.2em;
+          margin-bottom: 5em;
           max-width: 42.9em;
         }
 
@@ -6950,7 +7103,7 @@ input {
       }
 
       & .members {
-        margin-bottom: 6em;
+        margin-bottom: 5em;
         @include flexbox();
         @include flex-wrap(wrap);
         @include align-items(flex-start);
@@ -6958,7 +7111,7 @@ input {
       }
 
       & .member {
-        margin-right: 2em;
+        margin-right: 1.9em;
         margin-bottom: 1.2em;
         padding-left: 1.4em;
         padding-right: 2.3em;
@@ -6967,7 +7120,7 @@ input {
         //min-width: 25em;
         //max-width: 32.6em;
         //max-width: max-content;
-        width: clamp(28em, 30%, 32.6em);
+        width: clamp(28em, 31.3%, 32.6em);
         @include flexbox();
         @include align-items(center);
         @include justify-content(flex-start);
@@ -7056,6 +7209,10 @@ input {
         border-radius: 4px;
         border: solid 1px #dee2e6;
         background-color: #fbfbfb;
+
+        &.step-02 {
+          margin-bottom: 2.7em;
+        }
 
         &.open {
           border-bottom-left-radius: 0;
@@ -8989,7 +9146,7 @@ input {
       & .header-buttons-notifications i,
       & .notification-dropdown .custom-dropdown-trigger i,
       & .settings-dropdown .custom-dropdown-trigger i {
-        color: #4f5662 !important;
+        color: rgba($color: #0d1826, $alpha: .85) !important;
       }
 
       & .header-buttons-settings,
@@ -15993,9 +16150,19 @@ input {
           }
 
           &-text {
+            margin: 0 auto;
+            width: 100%;
+            max-width: emcalc(27,1.28);
             font-size: 1.28em;
             font-weight: 400;
             color: #383838;
+            text-align: center;
+
+            & button {
+              text-decoration: underline;
+              font-weight: 500;
+              color: #0071F2;
+            }
           }
         }
 
@@ -16040,8 +16207,12 @@ input {
             @include flexbox();
             @include align-items(center);
             @include justify-content(center);
+            min-width: emcalc(4.25, 1.7);
+            min-height: emcalc(4.25, 1.7);
             width: emcalc(4.25, 1.7);
             height: emcalc(4.25, 1.7);
+            max-width: emcalc(4.25, 1.7);
+            max-height: emcalc(4.25, 1.7);
             background: linear-gradient(to bottom, #ffce33, #ffc033);
             font-size: 1.7em;
             font-weight: 600;
@@ -16168,13 +16339,14 @@ input {
       }
 
       &-placeholder {
-        padding: 0 22%;
+        padding: 0 20%;
         flex: 1;
         @include flexbox();
         @include justify-content(center);
         @include align-items(center);
         @include flex-direction(column);
         text-align: center;
+        background-color: rgba($color: #EDF5FB, $alpha: .37);
 
         &-title {
           margin-bottom: emcalc(1.6,1.35);
@@ -16588,9 +16760,12 @@ input {
             }
           }
 
-          &:hover {
-            & .profile-footer-item-set-title {
-              text-decoration: underline;
+          &.comment {
+            cursor: pointer;
+            &:hover {
+              & .profile-footer-item-set-title {
+                text-decoration: underline;
+              }
             }
           }
 

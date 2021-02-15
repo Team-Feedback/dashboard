@@ -10,6 +10,49 @@ headerNavListItems.forEach(e => {
   window.headerNavListItemsWidth += e.clientWidth + 45;
 })
 
+//FULL SCREEN MODE
+let fullScreenToggle = document.querySelectorAll(".fullscreen-toggle");
+
+let enterFs = document.fullscreenElement ? "requestFullscreen" : null;
+
+console.log(enterFs);
+
+function getFullscreenElement() {
+  return (
+    document.fullscreenElement ||
+    document.webkitFullscreenElement ||
+    document.mozFullscreenElement ||
+    document.msFullscreenElement
+  );
+}
+
+function toggleFullscreen() {
+  if (getFullscreenElement()) {
+    document.exitFullscreen =
+      document.exitFullscreen ||
+      document.mozExitFullscreen ||
+      document.webkitExitFullscreen ||
+      document.msExitFullscreen;
+
+    document.exitFullscreen();
+  } else {
+    document.documentElement.requestFullscreen =
+      document.documentElement.requestFullscreen ||
+      document.documentElement.mozRequestFullScreen ||
+      document.documentElement.webkitRequestFullscreen ||
+      document.documentElement.msRequestFullscreen;
+
+    document.documentElement.requestFullscreen();
+  }
+}
+
+fullScreenToggle.forEach((e) => {
+  e.addEventListener("dblclick", () => {
+    e.classList.toggle("active");
+    toggleFullscreen();
+  });
+});
+
 
 console.log(window.headerNavListItemsWidth)
 

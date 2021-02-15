@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Team Feedback | Give Feedback</title>
+
+  <link rel="stylesheet" href="../public/css/pretty-checkbox.css">
   <link rel="stylesheet" href="../public/css/style.css">
 </head>
 
@@ -56,17 +58,90 @@
               </div>
               <div class="settings-dropdown-menu-section">
                 <div class="settings-dropdown-menu-section-header">
-                  <p class="settings-dropdown-menu-section-header-text">Theme color</p>
+                  <p class="settings-dropdown-menu-section-header-text">Full screen mode</p>
                 </div>
                 <div class="settings-dropdown-menu-section-main">
-                  <div class="theme">
-                    <p class="theme-text"><span class="strong">Light </span> - Default</p>
-                    <div class="theme-colors">
-                      <div class="theme-colors-item white selected" style="background-color: #bfdaff;"
-                        theme-color="#FFF"></div>
-                      <div class="theme-colors-item" style="background-color: #0e6ff9;" theme-color="#0e6ff9"></div>
-                      <div class="theme-colors-item" style="background-color: #ffa82b;" theme-color="#ffa82b"></div>
-                      <div class="theme-colors-item" style="background-color: #565656;" theme-color="#565656"></div>
+                  <div class="section-fullscreen">
+                    <div class="pretty p-default p-round">
+                      <input type="checkbox" />
+                      <div class="state p-success">
+                        <label>&nbsp;</label>
+                      </div>
+                    </div>
+
+                    <div class="section-fullscreen-set">
+                      <p class="section-fullscreen-set-title">Double click header</p>
+                      <p class="section-fullscreen-set-text">To go and exit full screen</p>
+                    </div>
+
+                    <img src="../public/img/settings-fullscreen.png" alt="Clip art" class="section-fullscreen-img">
+                  </div>
+                </div>
+              </div>
+              <div class="settings-dropdown-menu-section">
+                <div class="settings-dropdown-menu-section-header">
+                  <p class="settings-dropdown-menu-section-header-text">Content size</p>
+                </div>
+                <div class="settings-dropdown-menu-section-main">
+                  <div class="section-size">
+                    <p class="section-size-text">No adjustment</p>
+                    <div class="section-size-buttons">
+                      <button>
+                        <i class="icon-minus-outlined"></i>
+                      </button>
+                      <button>
+                        <i class="icon-plus-outlined"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="settings-dropdown-menu-section">
+                <div class="settings-dropdown-menu-section-header">
+                  <p class="settings-dropdown-menu-section-header-text">Appearance</p>
+                </div>
+                <div class="settings-dropdown-menu-section-main">
+                  <div class="section-appearance">
+                    <p class="section-appearance-text">Automatic <span>- Recomended</span></p>
+
+                    <div class="section-appearance-buttons">
+                      <div class="section-appearance-buttons-item"><img src="../public/img/arangment-01.png"
+                          alt="Clip art"></div>
+                      <div class="section-appearance-buttons-item active"><img src="../public/img/arangment-02.png"
+                          alt="Clip art"></div>
+                      <div class="section-appearance-buttons-item"><img src="../public/img/arangment-03.png"
+                          alt="Clip art"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="settings-dropdown-menu-section">
+                <div class="settings-dropdown-menu-section-header">
+                  <p class="settings-dropdown-menu-section-header-text">Other settings</p>
+                </div>
+                <div class="settings-dropdown-menu-section-main">
+                  <div class="section-other">
+                    <div class="section-other-item">
+                      <p class="section-other-item-text">Keep me signed in</p>
+                      <!-- add class p-switch -->
+                      <div class="pretty p-switch p-fill">
+                        <input type="checkbox" />
+                        <div class="state p-success">
+                          <label>&nbsp;</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="section-other-item">
+                      <p class="section-other-item-text">Browser notifications</p>
+                      <!-- add class p-switch -->
+                      <div class="pretty p-switch p-fill">
+                        <input type="checkbox" />
+                        <div class="state p-success">
+                          <label>&nbsp;</label>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
