@@ -6,11 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Widgets</title>
   <link rel="stylesheet" href="../public/css/style.css" />
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
 </head>
 
 <body>
-  <main class="main" id="text-feedback">
+  <main class="main" id="team-table">
     <!-- Header -->
     <div class="header small">
 
@@ -50,17 +49,17 @@
                 <div class="header-dropdown-menu-main-item active">
                   <p class="header-dropdown-menu-main-item-text">Team Marketing</p>
                   <span>(selected)</span>
-                  <button class="header-dropdown-menu-main-item-close"><i class="icon-close"></i></button>
+                  <div class="header-dropdown-menu-main-item-close"><i class="icon-close"></i></div>
                 </div>
                 <div class="header-dropdown-menu-main-item">
                   <p class="header-dropdown-menu-main-item-text">Team Recruitment</p>
                   <span>(selected)</span>
-                  <button class="header-dropdown-menu-main-item-close"><i class="icon-close"></i></button>
+                  <div class="header-dropdown-menu-main-item-close"><i class="icon-close"></i></div>
                 </div>
                 <div class="header-dropdown-menu-main-item">
                   <p class="header-dropdown-menu-main-item-text">Team Managment</p>
                   <span>(selected)</span>
-                  <button class="header-dropdown-menu-main-item-close"><i class="icon-close"></i></button>
+                  <div class="header-dropdown-menu-main-item-close"><i class="icon-close"></i></div>
                 </div>
               </div>
               <div class="header-dropdown-menu-footer">
@@ -307,406 +306,534 @@
             <button class="button">Charts</button>
             <button class="button active">Text</button>
           </div>
-          <div class="reset-layout">
-            <i class="icon-backup-restore"></i>
-          </div>
         </div>
 
-        <div class="text-feedback-content">
-          <div class="content-card questions">
-            <i class="icon-chevron-left card-trigger"></i>
-            <div class="questions-header">
-              <p class="questions-header-title">Text feedback questions</p>
-            </div>
-            <div class="questions-main">
-              <div class="question active">
-                <p class="question-text">What we can do better in this team?</p>
-                <span class="question-amount">6</span>
-              </div>
-              <div class="question">
-                <p class="question-text">How could we improve our office?</p>
-                <span class="question-amount">5</span>
-              </div>
-              <div class="question">
-                <p class="question-text">What if there is a long question will we?</p>
-                <span class="question-amount">3</span>
-              </div>
-              <div class="question">
-                <p class="question-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus
-                  consequuntur velit tempora exercitationem earum molestiae repellat fugit libero nisi saepe quod
-                  aliquid aliquam cum veniam iusto delectus nihil et soluta, recusandae ipsa, ab eveniet. Atque dolor
-                  magni quibusdam laudantium placeat.</p>
-                <span class="question-amount">3</span>
-              </div>
-              <button class="add-new-question">+ Add a new question</button>
-            </div>
-          </div>
-
-          <div class="content-card answers">
-            <div class="answers-header">
-              <p class="answers-header-title">What we can do better in this team?</p>
-              <p class="answers-header-amount">6 new thoughts</p>
-            </div>
-
-            <div class="answers-main">
-              <!-- <div class="answers-placeholder">
-                <img src="../public/img/table-placeholder-img-04.png" alt="Clip art" class="answers-placeholder-img">
-                <p class="answers-placeholder-title">No data yet</p>
-                <p class="answers-placeholder-text">This question has no data tet</p>
-              </div> -->
-              <div class="answer">
-                <!-- <img src="../public/img/p-01.png" alt="User" class="answer-img"> -->
-                <!-- <div class="answer-initials">WW</div> -->
-                <div class="answer-set">
-                  <div class="answer-set-header">
-                    <p class="answer-set-header-name">Julia Martinez</p>
-                    <div class="answer-set-header-info">
-                      <span class="answer-set-header-info-circle"></span>
-                      <p class="answer-set-header-info-text">2 min ago</p>
-                    </div>
+        <div class="content-card">
+          <div class="team-table-wrapper">
+            <div class="team-table">
+              <div class="team-table-column">
+                <div class="team-table-column-header">
+                  <div class="team-table-column-header-item">
+                    <p class="team-table-column-header-item-text">
+                      Team member
+                    </p>
                   </div>
-                  <p class="answer-set-text">
-                    This is your first ticket. Ta-da! Any customer request sent to your supported channels
-                    (email,chat, voicemail,web form,and tweet).
-                  </p>
                 </div>
-
-
-              </div>
-              <div class="answer active">
-                <img src="../public/img/p-01.png" alt="User" class="answer-img">
-                <div class="answer-set">
-                  <div class="answer-set-header">
-                    <p class="answer-set-header-name">Julia Martinez</p>
-                    <div class="answer-set-header-info">
-                      <span class="answer-set-header-info-circle"></span>
-                      <p class="answer-set-header-info-text">2 min ago</p>
+                <div class="team-table-column-body">
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-img-wrapper">
+                      <img src="../public/img/p-01.png" alt="User" class="team-table-column-body-item-img">
                     </div>
+                    <p class="team-table-column-body-item-text"><span>Gregory Porter</span>&nbsp;- Senior Python
+                      Developer
+                    </p>
                   </div>
-                  <p class="answer-set-text">
-                    This is your first ticket. Ta-da! Any customer request sent to your supported channels
-                    (email,chat, voicemail,web form,and tweet).
-                  </p>
-                  <div class="stars">
-                    <div class="star-item">
-                      <p class="star-item-text">Attitude</p>
-                      <div class="star-set">
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-img-wrapper">
+                      <img src="../public/img/p-01.png" alt="User" class="team-table-column-body-item-img">
+                    </div>
+                    <p class="team-table-column-body-item-text"><span>Gregory Porter</span>&nbsp;- Senior Python
+                      Developer
+                    </p>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-img-wrapper">
+                      <img src="../public/img/p-01.png" alt="User" class="team-table-column-body-item-img">
+                    </div>
+                    <p class="team-table-column-body-item-text"><span>Gregory Porter</span>&nbsp;- Senior Python
+                      Developer
+                    </p>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-img-wrapper">
+                      <img src="../public/img/p-01.png" alt="User" class="team-table-column-body-item-img">
+                    </div>
+                    <p class="team-table-column-body-item-text"><span>Gregory Porter</span>&nbsp;- Senior Python
+                      Developer
+                    </p>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-img-wrapper">
+                      <img src="../public/img/p-01.png" alt="User" class="team-table-column-body-item-img">
+                    </div>
+                    <p class="team-table-column-body-item-text"><span>Gregory Porter</span>&nbsp;- Senior Python
+                      Developer
+                    </p>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-img-wrapper">
+                      <img src="../public/img/p-01.png" alt="User" class="team-table-column-body-item-img">
+                    </div>
+                    <p class="team-table-column-body-item-text"><span>Gregory Porter</span>&nbsp;- Senior Python
+                      Developer
+                    </p>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-img-wrapper">
+                      <img src="../public/img/p-01.png" alt="User" class="team-table-column-body-item-img">
+                    </div>
+                    <p class="team-table-column-body-item-text"><span>Gregory Porter</span>&nbsp;- Senior Python
+                      Developer
+                    </p>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-img-wrapper">
+                      <img src="../public/img/p-01.png" alt="User" class="team-table-column-body-item-img">
+                    </div>
+                    <p class="team-table-column-body-item-text"><span>Gregory Porter</span>&nbsp;- Senior Python
+                      Developer
+                    </p>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-img-wrapper">
+                      <img src="../public/img/p-01.png" alt="User" class="team-table-column-body-item-img">
+                    </div>
+                    <p class="team-table-column-body-item-text"><span>Gregory Porter</span>&nbsp;- Senior Python
+                      Developer
+                    </p>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-img-wrapper">
+                      <img src="../public/img/p-01.png" alt="User" class="team-table-column-body-item-img">
+                    </div>
+                    <p class="team-table-column-body-item-text"><span>Gregory Porter</span>&nbsp;- Senior Python
+                      Developer
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="team-table-column">
+                <div class="team-table-column-header">
+                  <div class="team-table-column-header-item">
+                    <p class="team-table-column-header-item-text">
+                      Attitude
+                    </p>
+                  </div>
+                </div>
+                <div class="team-table-column-body">
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-button green">Good</div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-button red">Weak</div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-button yellow">Ok</div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-button green">Good</div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-button green">Good</div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-button green">Good</div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-button green">Good</div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-button green">Good</div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-button green">Good</div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-button green">Good</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="team-table-column">
+                <div class="team-table-column-header">
+                  <div class="team-table-column-header-item">
+                    <p class="team-table-column-header-item-text">
+                      Productivity
+                    </p>
+                  </div>
+                </div>
+                <div class="team-table-column-body">
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-button green">Good</div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-button red">Weak</div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-button yellow">Ok</div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-button green">Good</div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-button green">Good</div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-button green">Good</div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-button green">Good</div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-button green">Good</div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-button green">Good</div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-button green">Good</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="team-table-column">
+                <div class="team-table-column-header">
+                  <div class="team-table-column-header-item">
+                    <p class="team-table-column-header-item-text">
+                      Teamworking
+                    </p>
+                  </div>
+                </div>
+                <div class="team-table-column-body">
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-button green">Good</div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-button red">Weak</div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-button yellow">Ok</div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-button green">Good</div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-button green">Good</div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-button green">Good</div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-button green">Good</div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-button green">Good</div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-button green">Good</div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-button green">Good</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="team-table-column">
+                <div class="team-table-column-header">
+                  <div class="team-table-column-header-item">
+                    <p class="team-table-column-header-item-text">
+                      Average feedback
+                    </p>
+                  </div>
+                </div>
+                <div class="team-table-column-body">
+                  <div class="team-table-column-body-item">
+                    <div class="stars">
+                      <div class="star full">
                         <i class="icon-star"></i>
+                      </div>
+                      <div class="star full">
                         <i class="icon-star"></i>
+                      </div>
+                      <div class="star full">
                         <i class="icon-star"></i>
+                      </div>
+                      <div class="star full">
                         <i class="icon-star"></i>
+                      </div>
+                      <div class="star">
                         <i class="icon-star"></i>
                       </div>
                     </div>
-                    <div class="star-item">
-                      <p class="star-item-text">Productivity</p>
-                      <div class="star-set">
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="stars">
+                      <div class="star full">
                         <i class="icon-star"></i>
+                      </div>
+                      <div class="star full">
                         <i class="icon-star"></i>
+                      </div>
+                      <div class="star full">
                         <i class="icon-star"></i>
+                      </div>
+                      <div class="star full">
                         <i class="icon-star"></i>
+                      </div>
+                      <div class="star">
                         <i class="icon-star"></i>
                       </div>
                     </div>
-                    <div class="star-item">
-                      <p class="star-item-text">Teamworking</p>
-                      <div class="star-set">
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="stars">
+                      <div class="star full">
                         <i class="icon-star"></i>
+                      </div>
+                      <div class="star full">
                         <i class="icon-star"></i>
+                      </div>
+                      <div class="star full">
                         <i class="icon-star"></i>
+                      </div>
+                      <div class="star full">
                         <i class="icon-star"></i>
+                      </div>
+                      <div class="star">
+                        <i class="icon-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="stars">
+                      <div class="star full">
+                        <i class="icon-star"></i>
+                      </div>
+                      <div class="star full">
+                        <i class="icon-star"></i>
+                      </div>
+                      <div class="star full">
+                        <i class="icon-star"></i>
+                      </div>
+                      <div class="star full">
+                        <i class="icon-star"></i>
+                      </div>
+                      <div class="star">
+                        <i class="icon-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="stars">
+                      <div class="star full">
+                        <i class="icon-star"></i>
+                      </div>
+                      <div class="star full">
+                        <i class="icon-star"></i>
+                      </div>
+                      <div class="star full">
+                        <i class="icon-star"></i>
+                      </div>
+                      <div class="star full">
+                        <i class="icon-star"></i>
+                      </div>
+                      <div class="star">
+                        <i class="icon-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="stars">
+                      <div class="star full">
+                        <i class="icon-star"></i>
+                      </div>
+                      <div class="star full">
+                        <i class="icon-star"></i>
+                      </div>
+                      <div class="star full">
+                        <i class="icon-star"></i>
+                      </div>
+                      <div class="star full">
+                        <i class="icon-star"></i>
+                      </div>
+                      <div class="star">
+                        <i class="icon-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="stars">
+                      <div class="star full">
+                        <i class="icon-star"></i>
+                      </div>
+                      <div class="star full">
+                        <i class="icon-star"></i>
+                      </div>
+                      <div class="star full">
+                        <i class="icon-star"></i>
+                      </div>
+                      <div class="star full">
+                        <i class="icon-star"></i>
+                      </div>
+                      <div class="star">
+                        <i class="icon-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="stars">
+                      <div class="star full">
+                        <i class="icon-star"></i>
+                      </div>
+                      <div class="star full">
+                        <i class="icon-star"></i>
+                      </div>
+                      <div class="star full">
+                        <i class="icon-star"></i>
+                      </div>
+                      <div class="star full">
+                        <i class="icon-star"></i>
+                      </div>
+                      <div class="star">
+                        <i class="icon-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="stars">
+                      <div class="star full">
+                        <i class="icon-star"></i>
+                      </div>
+                      <div class="star full">
+                        <i class="icon-star"></i>
+                      </div>
+                      <div class="star full">
+                        <i class="icon-star"></i>
+                      </div>
+                      <div class="star full">
+                        <i class="icon-star"></i>
+                      </div>
+                      <div class="star">
+                        <i class="icon-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="stars">
+                      <div class="star full">
+                        <i class="icon-star"></i>
+                      </div>
+                      <div class="star full">
+                        <i class="icon-star"></i>
+                      </div>
+                      <div class="star full">
+                        <i class="icon-star"></i>
+                      </div>
+                      <div class="star full">
+                        <i class="icon-star"></i>
+                      </div>
+                      <div class="star">
                         <i class="icon-star"></i>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="answer">
-                <img src="../public/img/p-01.png" alt="User" class="answer-img">
-                <div class="answer-set">
-                  <div class="answer-set-header">
-                    <p class="answer-set-header-name">Julia Martinez</p>
-                    <div class="answer-set-header-info">
-                      <span class="answer-set-header-info-circle"></span>
-                      <p class="answer-set-header-info-text">2 min ago</p>
+
+              <div class="team-table-column">
+                <div class="team-table-column-header">
+                  <div class="team-table-column-header-item">
+                    <p class="team-table-column-header-item-text">
+                      Amount of given feedback
+                    </p>
+                  </div>
+                </div>
+                <div class="team-table-column-body">
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-progress-wrapper">
+                      <div class="team-table-column-body-item-progress">
+                        <div class="team-table-column-body-item-progress-bar green" style="width:80%;">
+                          <p class="team-table-column-body-item-progress-bar-label">12</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <p class="answer-set-text">
-                    This is your first ticket. Ta-da! Any customer request sent to your supported channels
-                    (email,chat, voicemail,web form,and tweet).
-                  </p>
-                </div>
-              </div>
-              <div class="answer">
-                <img src="../public/img/p-01.png" alt="User" class="answer-img">
-                <div class="answer-set">
-                  <div class="answer-set-header">
-                    <p class="answer-set-header-name">Julia Martinez</p>
-                    <div class="answer-set-header-info">
-                      <span class="answer-set-header-info-circle"></span>
-                      <p class="answer-set-header-info-text">2 min ago</p>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-progress-wrapper">
+                      <div class="team-table-column-body-item-progress">
+                        <div class="team-table-column-body-item-progress-bar red" style="width:80%;">
+                          <p class="team-table-column-body-item-progress-bar-label">12</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <p class="answer-set-text">
-                    This is your first ticket. Ta-da! Any customer request sent to your supported channels
-                    (email,chat, voicemail,web form,and tweet).
-                  </p>
-                </div>
-              </div>
-              <div class="answer">
-                <img src="../public/img/p-01.png" alt="User" class="answer-img">
-                <div class="answer-set">
-                  <div class="answer-set-header">
-                    <p class="answer-set-header-name">Julia Martinez</p>
-                    <div class="answer-set-header-info">
-                      <span class="answer-set-header-info-circle"></span>
-                      <p class="answer-set-header-info-text">2 min ago</p>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-progress-wrapper">
+                      <div class="team-table-column-body-item-progress">
+                        <div class="team-table-column-body-item-progress-bar yellow" style="width:80%;">
+                          <p class="team-table-column-body-item-progress-bar-label">12</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <p class="answer-set-text">
-                    This is your first ticket. Ta-da! Any customer request sent to your supported channels
-                    (email,chat, voicemail,web form,and tweet).
-                  </p>
-                </div>
-              </div>
-              <div class="answer">
-                <img src="../public/img/p-01.png" alt="User" class="answer-img">
-                <div class="answer-set">
-                  <div class="answer-set-header">
-                    <p class="answer-set-header-name">Julia Martinez</p>
-                    <div class="answer-set-header-info">
-                      <span class="answer-set-header-info-circle"></span>
-                      <p class="answer-set-header-info-text">2 min ago</p>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-progress-wrapper">
+                      <div class="team-table-column-body-item-progress">
+                        <div class="team-table-column-body-item-progress-bar green" style="width:80%;">
+                          <p class="team-table-column-body-item-progress-bar-label">12</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <p class="answer-set-text">
-                    This is your first ticket. Ta-da! Any customer request sent to your supported channels
-                    (email,chat, voicemail,web form,and tweet).
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="content-card profile anonymous">
-            <i class="icon-chevron-right card-trigger"></i>
-            <div class="profile-header">
-              <div class="profile-header-set">
-                <!-- <img src="../public/img/p-01.png" alt="User" class="profile-header-set-img"> -->
-                <!-- <div class="profile-header-set-initials">WW</div> -->
-                <div class="profile-header-set-icon"><i class="icon-user"></i></div>
-                <p class="profile-header-set-name">Julia Martinez</p>
-              </div>
-            </div>
-
-            <!-- <div class="profile-placeholder">
-              <p class="profile-placeholder-title">No feedback selected</p>
-              <p class="profile-placeholder-text">
-                Please select a feedback to see
-                here more informations about it.
-              </p>
-            </div> -->
-
-            <div class="profile-info">
-              <div class="profile-info-item position">
-                <i class="icon-feather-briefcase"></i>
-                <p class="profile-info-item-text">Junior Graphic Designer</p>
-              </div>
-              <div class="profile-info-item email">
-                <i class="icon-feather-mail"></i>
-                <p class="profile-info-item-text">julia.martinez@example.com</p>
-              </div>
-            </div>
-
-            <div class="profile-feedback open">
-              <div class="profile-feedback-header">
-                <div class="profile-feedback-header-set">
-                  <i class="icon-feather-thumbs-up"></i>
-                  <p class="profile-feedback-header-set-text">Like this feedback</p>
-                </div>
-
-                <div class="profile-feedback-header-set toggle-profile-comment"
-                  onclick="this.parentElement.parentElement.classList.toggle('open')">
-                  <i class="icon-feather-edit"></i>
-                  <p class="profile-feedback-header-set-text">Comment</p>
-                </div>
-                <i class="icon-chevron-down"></i>
-              </div>
-              <div class="profile-feedback-main">
-                <i class="icon-feather-edit"></i>
-                <div class="profile-feedback-main-set">
-                  <textarea placeholder="Comment this feedback"></textarea>
-                  <div class="profile-feedback-main-set-footer">
-                    <button class="button button-green-primary">Add</button>
-                    <button class="button button-light-gray">Cancel</button>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-progress-wrapper">
+                      <div class="team-table-column-body-item-progress">
+                        <div class="team-table-column-body-item-progress-bar green" style="width:80%;">
+                          <p class="team-table-column-body-item-progress-bar-label">12</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-progress-wrapper">
+                      <div class="team-table-column-body-item-progress">
+                        <div class="team-table-column-body-item-progress-bar green" style="width:80%;">
+                          <p class="team-table-column-body-item-progress-bar-label">12</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-progress-wrapper">
+                      <div class="team-table-column-body-item-progress">
+                        <div class="team-table-column-body-item-progress-bar green" style="width:80%;">
+                          <p class="team-table-column-body-item-progress-bar-label">12</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-progress-wrapper">
+                      <div class="team-table-column-body-item-progress">
+                        <div class="team-table-column-body-item-progress-bar green" style="width:80%;">
+                          <p class="team-table-column-body-item-progress-bar-label">12</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-progress-wrapper">
+                      <div class="team-table-column-body-item-progress">
+                        <div class="team-table-column-body-item-progress-bar green" style="width:80%;">
+                          <p class="team-table-column-body-item-progress-bar-label">12</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="team-table-column-body-item">
+                    <div class="team-table-column-body-item-progress-wrapper">
+                      <div class="team-table-column-body-item-progress">
+                        <div class="team-table-column-body-item-progress-bar green" style="width:80%;">
+                          <p class="team-table-column-body-item-progress-bar-label">12</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
 
             </div>
-
-            <div class="profile-footer-wrapper">
-              <div class="profile-footer">
-                <div class="profile-footer-item">
-                  <div class="profile-footer-item-main">
-                    <div class="profile-footer-item-icon" style="background-color: #ffb100">
-                      <i class="icon-feather-chart"></i>
-                    </div>
-                    <div class="profile-footer-item-set">
-                      <p class="profile-footer-item-set-title">Feedback given</p>
-                      <p class="profile-footer-item-set-text">2 hours ago</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="profile-footer-item">
-                  <div class="profile-footer-item-main">
-                    <div class="profile-footer-item-icon" style="background-color: #12a952">
-                      <i class="icon-feather-thumbs-up" style="margin-top: -2px;"></i>
-                    </div>
-                    <div class="profile-footer-item-set">
-                      <p class="profile-footer-item-set-title">Liked by Johan Smith</p>
-                      <p class="profile-footer-item-set-text">2 hours ago</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="profile-footer-item">
-                  <div class="profile-footer-item-main">
-                    <div class="profile-footer-item-icon" style="background-color: #12a952">
-                      <i class="icon-feather-thumbs-up" style="margin-top: -2px;"></i>
-                    </div>
-                    <div class="profile-footer-item-set">
-                      <p class="profile-footer-item-set-title">Liked by Johan Smith</p>
-                      <p class="profile-footer-item-set-text">2 hours ago</p>
-                    </div>
-                  </div>
-                </div>
-
-
-                <div class="profile-footer-item" style="cursor:pointer" onclick="this.classList.toggle('open')">
-                  <div class="profile-footer-item-main">
-                    <i class="icon-chevron-down"></i>
-                    <div class="profile-footer-item-icon" style="background-color: #457cb9">
-                      <i class="icon-feather-pencil"></i>
-                    </div>
-                    <div class="profile-footer-item-set">
-                      <p class="profile-footer-item-set-title">Commented by Viljami Lahtinen</p>
-                      <p class="profile-footer-item-set-text">2 hours ago</p>
-                    </div>
-                  </div>
-                  <div class="profile-footer-item-comment">
-                    <p class="profile-footer-item-comment-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quidem veritatis quis blanditiis
-                      veniam, fugiat reprehenderit exercitationem, voluptates vitae quos, ipsam doloribus magnam rerum!
-                      Deleniti neque error quisquam animi amet?
-                    </p>
-                  </div>
-                </div>
-
-                <div class="profile-footer-item" style="cursor:pointer" onclick="this.classList.toggle('open')">
-                  <div class="profile-footer-item-main">
-                    <i class="icon-chevron-down"></i>
-                    <div class="profile-footer-item-icon" style="background-color: #457cb9">
-                      <i class="icon-feather-pencil"></i>
-                    </div>
-                    <div class="profile-footer-item-set">
-                      <p class="profile-footer-item-set-title">Commented by Viljami Lahtinen</p>
-                      <p class="profile-footer-item-set-text">2 hours ago</p>
-                    </div>
-                  </div>
-                  <div class="profile-footer-item-comment">
-                    <p class="profile-footer-item-comment-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quidem veritatis quis blanditiis
-                      veniam, fugiat reprehenderit exercitationem, voluptates vitae quos, ipsam doloribus magnam rerum!
-                      Deleniti neque error quisquam animi amet?
-                    </p>
-                  </div>
-                </div>
-
-                <div class="profile-footer-item" style="cursor:pointer" onclick="this.classList.toggle('open')">
-                  <div class="profile-footer-item-main">
-                    <i class="icon-chevron-down"></i>
-                    <div class="profile-footer-item-icon" style="background-color: #457cb9">
-                      <i class="icon-feather-pencil"></i>
-                    </div>
-                    <div class="profile-footer-item-set">
-                      <p class="profile-footer-item-set-title">Commented by Viljami Lahtinen</p>
-                      <p class="profile-footer-item-set-text">2 hours ago</p>
-                    </div>
-                  </div>
-                  <div class="profile-footer-item-comment">
-                    <p class="profile-footer-item-comment-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quidem veritatis quis blanditiis
-                      veniam, fugiat reprehenderit exercitationem, voluptates vitae quos, ipsam doloribus magnam rerum!
-                      Deleniti neque error quisquam animi amet?
-                    </p>
-                  </div>
-                </div>
-
-                <div class="profile-footer-item" style="cursor:pointer" onclick="this.classList.toggle('open')">
-                  <div class="profile-footer-item-main">
-                    <i class="icon-chevron-down"></i>
-                    <div class="profile-footer-item-icon" style="background-color: #457cb9">
-                      <i class="icon-feather-pencil"></i>
-                    </div>
-                    <div class="profile-footer-item-set">
-                      <p class="profile-footer-item-set-title">Commented by Viljami Lahtinen</p>
-                      <p class="profile-footer-item-set-text">2 hours ago</p>
-                    </div>
-                  </div>
-                  <div class="profile-footer-item-comment">
-                    <p class="profile-footer-item-comment-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quidem veritatis quis blanditiis
-                      veniam, fugiat reprehenderit exercitationem, voluptates vitae quos, ipsam doloribus magnam rerum!
-                      Deleniti neque error quisquam animi amet?
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- <div class="profile-footer-wrapper">
-              <div class="profile-footer">
-                <div class="profile-footer-item">
-                  <div class="profile-footer-item-icon" style="background-color: #ffb100">
-                    <i class="icon-feather-chart"></i>
-                  </div>
-                  <div class="profile-footer-item-set">
-                    <p class="profile-footer-item-set-title">Feedback given</p>
-                    <p class="profile-footer-item-set-text">2 hours ago</p>
-                  </div>
-                </div>
-
-                <div class="profile-footer-item active">
-                  <div class="profile-footer-item-icon" style="background-color: #12a952">
-                    <i class="icon-feather-thumbs-up" style="margin-top: -2px;"></i>
-                  </div>
-                  <div class="profile-footer-item-set">
-                    <p class="profile-footer-item-set-title">Liked by Johan Smith</p>
-                    <p class="profile-footer-item-set-text">2 hours ago</p>
-                  </div>
-                </div>
-
-                <div class="profile-footer-item" style="cursor:pointer" onclick="this.classList.toggle('open')">
-                  <i class="icon-chevron-down"></i>
-                  <div class="profile-footer-item-icon" style="background-color: #457cb9">
-                    <i class="icon-feather-pencil"></i>
-                  </div>
-                  <div class="profile-footer-item-set">
-                    <p class="profile-footer-item-set-title">Commented by Viljami Lahtinen</p>
-                    <p class="profile-footer-item-set-text">2 hours ago</p>
-                  </div>
-                  <div class="profile-footer-item-comment">
-                    <p class="profile-footer-item-comment-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quidem veritatis quis blanditiis
-                      veniam, fugiat reprehenderit exercitationem, voluptates vitae quos, ipsam doloribus magnam rerum!
-                      Deleniti neque error quisquam animi amet?
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div> -->
           </div>
         </div>
 

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Team Feedback | Give Feedback</title>
   <link rel="stylesheet" href="../public/css/style.css">
+  <link rel="stylesheet" href="../public/css/animate.css" />
 </head>
 
 <body>
@@ -50,7 +51,7 @@
             <button class="custom-dropdown-trigger">
               <i class="icon-cog"></i>
             </button>
-            <div class="custom-dropdown-menu settings-dropdown-menu">
+            <div class="custom-dropdown-menu settings-dropdown-menu animate__animated animate__bounceInDown">
               <div class="settings-dropdown-menu-header">
                 <p class="settings-dropdown-menu-header-text">Settings</p>
               </div>
@@ -430,37 +431,53 @@
 
             <div class="content-card-header-container">
               <div class="option-buttons">
-                <button class="button active">All team members</button>
-                <button class="button">My todo list</button>
+                <button class="button active">
+                  <p class="button-text">All team members</p>
+                </button>
+                <button class="button">
+                  <p class="button-text">My todo list</p> <span class="amount">8</span>
+                </button>
               </div>
 
               <div class="content-card-header-buttons">
                 <input type="text" placeholder="Search...">
                 <button class="button button-green-primary">Invite new members</button>
-                <button class="button button-light-gradient">
-                  <i class="icon-sort"></i>
-                </button>
+
+                <div class="exp-dropdown">
+                  <button class="button button-light-gradient exp-dropdown-trigger"
+                    onclick="this.parentElement.classList.toggle('open')">
+                    <i class="icon-sort"></i>
+                  </button>
+
+                  <div class="exp-dropdown-menu">
+                    <div class="exp-dropdown-menu-item active">
+                      <p class="exp-dropdown-menu-item-text">Sort by name</p>
+                      <i class="icon-check"></i>
+                    </div>
+                    <div class="exp-dropdown-menu-item">
+                      <p class="exp-dropdown-menu-item-text">Sort by job title</p>
+                      <i class="icon-check"></i>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
-            <!-- <div class="custom-dropdown half-line">
-              <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1">
-                <i class="icon-cog"></i>
-              </button>
-              <div class="custom-dropdown-menu">
-                <button class="custom-dropdown-menu-item" style="display: block;">
-                  <p class="custom-dropdown-menu-item-link">Option I</p>
-                </button>
-                <button class="custom-dropdown-menu-item" style="display: block;">
-                  <p class="custom-dropdown-menu-item-link">Option II</p>
-                </button>
-                <button class="custom-dropdown-menu-item" style="display: block;">
-                  <p class="custom-dropdown-menu-item-link">Option III</p>
-                </button>
-              </div>
-            </div> -->
           </div>
 
-          <div class="people">
+          <div class="placeholder no-results">
+            <img src="../public/img/table-placeholder-img-no-results.png" alt="Clip art" class="placeholder-img">
+            <p class="placeholder-title">No search results</p>
+          </div>
+
+          <div class="placeholder" style="display: none;">
+            <img src="../public/img/feedback-placeholder-img.png" alt="Clip art" class="placeholder-img">
+            <p class="placeholder-title">No team members yet</p>
+            <p class="placeholder-text">This team doesn’t have any members at the moment.
+              Click <button>here</button> to invite your first team members.</p>
+          </div>
+
+          <div class="people" style="display: none;">
             <div class="person modal-trigger" target-modal="feedbackTypeModal">
               <div class="person-main">
                 <!-- <img src="../public/img/p-01.png" alt="User's profile image" class="person-main-img" /> -->

@@ -303,6 +303,10 @@
             Users modal
           </button>
           <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;"
+            target-modal="seeUsersModal">
+            See users modal
+          </button>
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;"
             target-modal="inviteEmployeesModal">
             Invite employees
           </button>
@@ -779,12 +783,15 @@
 
           <div class="feedback-item">
             <p class="feedback-item-name">Add a compliment</p>
-            <input class="feedback-item-input" type="text" placeholder="Write here..." />
+            <span class="feedback-item-input lang-en" role="textbox" contenteditable></span>
+            <!-- <input class="feedback-item-input" type="text" placeholder="Write here..." /> -->
+            <!-- <textarea class="feedback-item-textarea" placeholder="Write here..."></textarea> -->
           </div>
 
           <div class="feedback-item">
             <p class="feedback-item-name">Add an improvement idea</p>
-            <input class="feedback-item-input" type="text" placeholder="Write here..." />
+            <span class="feedback-item-input lang-en" role="textbox" contenteditable></span>
+            <!-- <input class="feedback-item-input" type="text" placeholder="Write here..." /> -->
           </div>
 
           <div class="success-message">
@@ -1052,7 +1059,7 @@
               </div>
 
               <div class="dropdown-menu-item">
-                <img src="../public/img/p-01.png" alt="User" class="dropdown-menu-item-img">
+                <div class="dropdown-menu-item-initials">WW</div>
                 <div class="dropdown-menu-item-set">
                   <p class="dropdown-menu-item-set-title">Julia Smith</p>
                   <p class="dropdown-menu-item-set-text">Frontend developer</p>
@@ -1335,6 +1342,31 @@
             <button class="button button-primary">Open profile</button>
           </div>
 
+        </div>
+      </div>
+      <div class="custom-modal-backdrop"></div>
+    </div>
+
+    <!-- USERS MODAL-->
+    <div class="custom-modal-wrapper" id="seeUsersModal">
+      <div class="custom-modal">
+        <!-- Modal body -->
+        <div class="custom-modal-body">
+          <div class="custom-modal-close" close-modal="seeUsersModal">
+            <i class="icon-close"></i>
+          </div>
+
+          <!-- <img src="../public/img/p-01.png" alt="User's profile image" class="custom-modal-body-img"> -->
+          <d class="custom-modal-body-initials">PS</d>
+
+          <div class="custom-modal-body-set">
+            <p class="custom-modal-body-set-subtitle">Marketing director</p>
+            <p class="custom-modal-body-set-title">Peter Smith</p>
+          </div>
+
+          <div class="custom-modal-body-buttons">
+            <button class="button button-light-gradient" close-modal="seeUsersModal">Cancel</button>
+          </div>
         </div>
       </div>
       <div class="custom-modal-backdrop"></div>

@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" href="../public/css/pretty-checkbox.css">
   <link rel="stylesheet" href="../public/css/style.css">
+  <link rel="stylesheet" href="../public/css/animate.css">
 </head>
 
 <body>
@@ -52,7 +53,7 @@
             <button class="custom-dropdown-trigger">
               <i class="icon-cog"></i>
             </button>
-            <div class="custom-dropdown-menu settings-dropdown-menu">
+            <div class="custom-dropdown-menu settings-dropdown-menu animate__animated animate__bounceInDown">
               <div class="settings-dropdown-menu-header">
                 <p class="settings-dropdown-menu-header-text">Settings</p>
               </div>
@@ -86,10 +87,10 @@
                   <div class="section-size">
                     <p class="section-size-text">No adjustment</p>
                     <div class="section-size-buttons">
-                      <button>
+                      <button class="adjust-size minus">
                         <i class="icon-minus-outlined"></i>
                       </button>
-                      <button>
+                      <button class="adjust-size plus">
                         <i class="icon-plus-outlined"></i>
                       </button>
                     </div>
@@ -156,7 +157,7 @@
               <span class="notification-dropdown-trigger-amount">99</span>
             </div>
 
-            <ul class="custom-dropdown-menu">
+            <ul class="custom-dropdown-menu animate__animated animate__bounceInDown">
               <li class="custom-dropdown-menu-title-big">
                 <p class="custom-dropdown-menu-title-big-text">
                   Notifications (4)
@@ -176,7 +177,8 @@
               <li class="custom-dropdown-menu-notifications">
 
                 <div class="notification">
-                  <img src="../public/img/p-01.png" alt="User's profile image" class="notification-img" />
+                  <!-- <img src="../public/img/p-01.png" alt="User's profile image" class="notification-img" /> -->
+                  <div class="notification-initials">WW</div>
                   <div class="notification-main">
                     <p class="notification-main-text">
                       Abdula Ahmed wants to invite you to become a
@@ -2174,11 +2176,11 @@
   <script src="../public/js/tm-grid.js"></script>
 
   <script>
-    let themeColorItems = document.querySelectorAll('.theme-colors-item');
+    let themeColorItems02 = document.querySelectorAll('.theme-colors-item');
 
-    themeColorItems.forEach(e => {
+    themeColorItems02.forEach(e => {
       e.addEventListener('click', function () {
-        themeColorItems.forEach(x => {
+        themeColorItems02.forEach(x => {
           x.classList.remove('selected');
         })
 
@@ -2189,6 +2191,26 @@
           document.querySelector('.header-main').classList.add('white-logo');
         }
         document.documentElement.style.setProperty('--theme-color-primary', this.getAttribute('theme-color'));
+      })
+    })
+
+    const sizeButtons = document.querySelectorAll('.adjust-size');
+    const htmlEl = document.querySelector('html');
+    const sizesArr = ['55%', '57.5%', '60%', '62.5%', '65%', '67.5%', '70%']
+    let step = 3;
+
+    sizeButtons.forEach(e => {
+      e.addEventListener('click', function (e) {
+        if (step >= 4) step = 4
+
+        if (step <= 0) step = 0
+        if (e.currentTarget.classList.contains('plus')) {
+          step += 1;
+          htmlEl.style.fontSize = `${sizesArr[step]}`;
+        } else {
+          step -= 1;
+          htmlEl.style.fontSize = `${sizesArr[step]}`;
+        }
       })
     })
   </script>
