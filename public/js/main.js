@@ -184,11 +184,11 @@ let accordionTriggers = document.querySelectorAll(".accordion-card-trigger");
 
 accordionTriggers.forEach((e) => {
   e.addEventListener("click", function () {
-    document.querySelectorAll('.custom-accordion-card').forEach(e => {
-      if (!e.classList.contains(this.getAttribute("accordion-trigger-target"))) {
-        e.classList.remove('open')
-      }
-    })
+    // document.querySelectorAll('.custom-accordion-card').forEach(e => {
+    //   if (!e.classList.contains(this.getAttribute("accordion-trigger-target"))) {
+    //     e.classList.remove('open')
+    //   }
+    // })
     document
       .querySelectorAll(`.${e.getAttribute("accordion-trigger-target")}`)
       .forEach((e) => {

@@ -1042,21 +1042,21 @@
 
               <ul class="page-header-list">
                 <li class="page-header-list-item">
-                  <button class="page-header-list-item-link">
+                  <button class="page-header-list-item-link" text="Development charts">
                     Development charts
                   </button>
                 </li>
                 <li class="page-header-list-item">
-                  <button class="page-header-list-item-link active">
+                  <button class="page-header-list-item-link active" text="Received feedback">
                     Received feedback
                     <div class="page-header-list-item-notification">99</div>
                   </button>
                 </li>
                 <li class="page-header-list-item">
-                  <button class="page-header-list-item-link">Given feedback</button>
+                  <button class="page-header-list-item-link" text="Given feedback">Given feedback</button>
                 </li>
                 <li class="page-header-list-item">
-                  <button class="page-header-list-item-link">
+                  <button class="page-header-list-item-link" text="Self evaluations">
                     Self evaluations
                   </button>
                 </li>
@@ -1065,11 +1065,12 @@
                     Give feedback
                   </button>
                 </li>
+                <div class="page-header-list-line"></div>
               </ul>
             </div>
             <!-- Modal body -->
             <div class="custom-modal-body">
-              <div class="widgets">
+              <div class="widgets" style="display: none;">
                 <!-- WIDGET - COLUMN CHART -->
                 <div class="placeholder-card full-width">
                   <div class="widget widget-column-chart">
@@ -3171,6 +3172,46 @@
 
       modalBody.classList.add(`${step}`);
     }
+  </script>
+
+  <script>
+    function positionArrow(transition) {
+      const activeShowcaseLink = document.querySelector('.page-header-list-item-link.active');
+      const activeShowcaseLine = document.querySelector('.page-header-list-line');
+
+      const viewportOffset = activeShowcaseLink.getBoundingClientRect();
+      const rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
+      const left = viewportOffset.left / rem;
+      const width = activeShowcaseLink.offsetWidth / rem;
+      const leftOffset = left - (width * 1.2 - width) / 2;
+
+      activeShowcaseLine.style.left = `${leftOffset - 2.7}em`;
+      activeShowcaseLine.style.width = `${width * 1.2}em`;
+
+      if (!transition) {
+        activeShowcaseLine.style.transition = 'none';
+      } else {
+        activeShowcaseLine.style.transition = 'left .3s cubic-bezier(.17,.67,.39,.89), width .3s cubic-bezier(.17,.67,.39,.89)';
+      }
+    }
+
+    const showcaseLinks = document.querySelectorAll('.page-header-list-item-link');
+
+    showcaseLinks.forEach(e => {
+      e.addEventListener('click', function (e) {
+        showcaseLinks.forEach(x => {
+          x.classList.remove('active');
+        })
+        e.currentTarget.classList.add('active');
+        positionArrow(true);
+      })
+    })
+
+    window.addEventListener('resize', function () {
+      positionArrow(false);
+    })
+
+    positionArrow(true);
   </script>
 </body>
 

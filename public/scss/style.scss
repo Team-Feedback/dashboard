@@ -1590,23 +1590,33 @@ input {
       }
     }
 
+    &-line {
+      position: absolute;
+      top: 16.45rem;
+      left: 50%;
+      display: block;
+      width: 100px;
+      //transform: translate(-50%, 100%);
+      border-bottom: 1.5px solid #7c7c7c;
+    }
+
     &-item {
       white-space: nowrap;
       &:not(:last-of-type) {
         margin-right: 3.6em;
       }
 
-      &:first-of-type {
-        & .page-header-list-item-link {
-          &::after {
-            content: '';
-            width: 122%;
-            transform: translate(0, 100%);
-            left: -1.25rem;
-            //display: none;
-          }
-        }
-      }
+      // &:first-of-type {
+      //   & .page-header-list-item-link {
+      //     &::after {
+      //       content: '';
+      //       width: 122%;
+      //       transform: translate(0, 100%);
+      //       left: -1.25rem;
+      //       //display: none;
+      //     }
+      //   }
+      // }
 
       &:nth-of-type(1) {
         @include custom-respond(590) {
@@ -1649,16 +1659,16 @@ input {
           font-weight: 600;
           color: #19232e;
 
-          &::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            display: block;
-            width: 128%;
-            transform: translate(-50%, 100%);
-            border-bottom: 1.5px solid #7c7c7c;
-          }
+          // &::after {
+          //   content: '';
+            // position: absolute;
+            // bottom: 0;
+            // left: 50%;
+            // display: block;
+            // width: 128%;
+            // transform: translate(-50%, 100%);
+            // border-bottom: 1.5px solid #7c7c7c;
+          // }
         }
 
         &:hover:not(.active) {
@@ -1666,19 +1676,19 @@ input {
           z-index: 1;
         }
 
-        &:hover:not(.active):after {
-          content: '';
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, calc(-50% - .8rem));
-          height: 3.3rem;
-          width: calc(100% + 3.2rem);
-          opacity: 0.75;
-          border-radius: 3px;
-          background-color: #f5f7f8;
-          z-index: -1;
-        }
+        // &:hover:not(.active):after {
+        //   content: '';
+        //   position: absolute;
+        //   top: 50%;
+        //   left: 50%;
+        //   transform: translate(-50%, calc(-50% - .8rem));
+        //   height: 3.3rem;
+        //   width: calc(100% + 3.2rem);
+        //   opacity: 0.75;
+        //   border-radius: 3px;
+        //   background-color: #f5f7f8;
+        //   z-index: -1;
+        // }
 
         &:hover {
           color: #19232e;
