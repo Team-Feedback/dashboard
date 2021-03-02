@@ -2402,6 +2402,8 @@ input {
       border: solid 1.5px #eff0f2;
       border: 0;
       background-color: #ffffff;
+      animation: bounceInDown; /* referring directly to the animation's @keyframe declaration */
+      animation-duration: .25s; /* don't forget to set a duration! */
 
       &::before {
         content: '';
@@ -2763,7 +2765,7 @@ input {
 
     & .settings-dropdown-menu {
       animation: bounceInDown; /* referring directly to the animation's @keyframe declaration */
-      animation-duration: .3s; /* don't forget to set a duration! */
+      animation-duration: .25s; /* don't forget to set a duration! */
       max-height: auto;
       &-header {
         padding: 2em 1.7em 1.45em;
@@ -3021,7 +3023,7 @@ input {
     }
     & .custom-dropdown-menu {
       animation: bounceInDown; /* referring directly to the animation's @keyframe declaration */
-      animation-duration: .3s; /* don't forget to set a duration! */
+      animation-duration: .25s; /* don't forget to set a duration! */
       max-height: auto;
       bottom: -0.7em;
       right: -0.7em;
@@ -5299,6 +5301,7 @@ input {
     width: 111.1em;
     border-radius: 15px;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 
     &-backdrop {
       position: absolute;
@@ -8914,6 +8917,7 @@ input {
           border-top-right-radius: 0;
           border: solid 1px #d1d7dd;
           border-top: 0;
+          background-color: #FFF!important;
 
           &-item {
             @include flexbox();
@@ -8921,6 +8925,10 @@ input {
             @include justify-content(flex-start);
             padding-left: 1.3em;
             height: 3.5em;
+
+            &:hover {
+              background-color: #fbfbfb;
+            }
 
             &:not(:last-of-type) {
               border-bottom: solid 1px #d1d7dd;
@@ -8943,7 +8951,11 @@ input {
         font-size: 1.3em;
         font-weight: 400;
         letter-spacing: 0.03px;
-        color: rgba($color: #0d1826, $alpha: .33);
+        color: #0d1826;
+
+        &::placeholder {
+          color: rgba($color: #0d1826, $alpha: .33);
+        }
       }
     }
 
@@ -13843,6 +13855,7 @@ input {
             /* Firefox */
             -ms-overflow-style: none;
             /* Internet Explorer 10+ */
+            border-radius: 0 0 3px 3px;
 
             &::-webkit-scrollbar {
               /* WebKit */
@@ -17870,7 +17883,7 @@ input {
       }
 
       &-main {
-        padding: 1.1em 1.8em;
+        padding: 1.1em 1.8em 2em;
         height: calc(100% - 5.567em);
         opacity: 1;
         visibility: visible;
@@ -18974,7 +18987,7 @@ input {
     & .widgets-top {
       width: 100%;
       margin-top: -0.7em;
-      margin-bottom: 1.6em;
+      margin-bottom: 1.4em;
       @include flexbox();
       @include align-items(center);
       @include justify-content(flex-start);
@@ -25838,11 +25851,12 @@ input[type='email'] {
 .custom-toast-message {
   font-family: 'Inter', sans-serif;
   margin: 0 1.5rem;
-  font-size: 1.38rem;
+  font-size: 1.35rem;
   font-weight: 500;
   line-height: 1.16;
   letter-spacing: normal;
-  color: #4a566e;
+  color: #172650;
+  opacity: .9;
 }
 .custom-toast-close {
   width: 1.2647rem;
