@@ -13770,11 +13770,22 @@ input {
     & .preview {
       padding: 6.5em 4.95vw 0;
       padding: 0 4.95vw;
+      padding: 2em 3em;
       @include flexbox();
       @include align-items(center);
-      @include justify-content(flex-start);
+      @include justify-content(center);
       height: 100%;
       overflow: visible;
+      box-shadow: 0 3px 6px 0 rgba(226, 226, 226, 0.11);
+      border: solid 1px #e4e6e9;
+      border-left: 0;
+      background-color: #f2f2f2;
+      border-radius: 0 6px 6px 0;
+      flex: 1;
+
+      @include custom-respond(1050) {
+        display: none;
+      }
 
       & .phone {
         position: relative;
@@ -13786,7 +13797,9 @@ input {
 
         width: 31.1em;
         height: 100%;
+        min-height: 50em;
         max-height: 57.6em;
+        max-height: 61.6em;
 
         &-frame {
           position: absolute;
@@ -13935,12 +13948,12 @@ input {
       max-width: 90em;
       padding: 3.2em 4.1em 2.6em;
       padding-right: 5.7em;
-      border-radius: 6px;
       box-shadow: 0 3px 6px 0 rgba(191, 191, 191, 0.11);
       border: solid 1px #e4e8ec;
       background-color: #ffffff;
       height: 100%;
       max-height: calc(100% + 5px);
+      border-radius: 6px 0 0 6px;
 
 
       overflow-y: auto;
@@ -13961,6 +13974,7 @@ input {
         margin-bottom: 2.7em;
 
         & .custom-dropdown {
+          margin-right: 2em;
           width: 100%;
           max-width: 36.3em;
 
@@ -13974,6 +13988,8 @@ input {
             }
 
             & .feedback-dropdown-item {
+              padding-right: 5em!important;
+              
               // background-color: #f2f2f2!important;
 
               & .icon-chevron-down {
@@ -14003,6 +14019,9 @@ input {
             @include align-items(center);
             @include justify-content(flex-start);
             background-color: #fff;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
             cursor: pointer;
 
             &:not(:last-of-type) {
@@ -14047,12 +14066,16 @@ input {
               text-overflow: ellipsis;
               white-space: nowrap;
 
+
               &-title {
                 font-size: 1.28em;
                 font-weight: 600;
                 line-height: 1.18;
                 letter-spacing: normal;
                 color: #0d1826;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
               }
 
               &-text {
@@ -14063,6 +14086,9 @@ input {
                 font-weight: 400;
                 letter-spacing: normal;
                 color: #0d1826;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
