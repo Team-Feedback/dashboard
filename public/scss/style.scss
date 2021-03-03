@@ -3767,6 +3767,10 @@ input {
         border: 0;
         border-bottom: 1.25px solid #f0f0f0;
 
+        &::first-letter {
+          text-transform: capitalize;
+        }
+
         &::placeholder {
           color: #afafaf;
         }
@@ -13987,6 +13991,7 @@ input {
           &-trigger {
             border: solid 1px #d6dade;
             border-radius: 4px;
+            overflow: hidden;
 
             &:focus,
             &.open {
@@ -14074,6 +14079,7 @@ input {
 
 
               &-title {
+                margin-bottom: emcalc(.3,1.28);
                 font-size: 1.28em;
                 font-weight: 600;
                 line-height: 1.18;
@@ -14085,7 +14091,7 @@ input {
               }
 
               &-text {
-                margin-bottom: emcalc(.3,1.08);
+               
                 opacity: 0.9;
                 font-family: Inter;
                 font-size: 1.08em;
@@ -17987,6 +17993,275 @@ input {
                     letter-spacing: 0.03px;
                     color: #f5f6f8;
                   }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//=================================================================
+//                      APP USAGE
+//=================================================================
+#app-usage {
+  & .content {
+    padding: 2em;
+    padding-top: 2em;
+    padding-left: 4em;
+    padding-right: 4em;
+    height: 100%;
+
+    &-card {
+      max-height: 100%;
+      padding: 3.2em 4em 0;
+      @include flexbox();
+      @include flex-direction(column);
+      @include align-items(flex-start);
+      @include justify-content(flex-start);
+
+      &-header {
+        width: 100%;
+        max-width: 82em;
+        @include flex-direction(column);
+        @include align-items(flex-start);
+        padding-bottom: 3em;
+        border-bottom: solid 1px rgba($color: #e4e6e9, $alpha: .75);
+
+        &-title {
+          margin-bottom: emcalc(1.2,1.8);
+          opacity: 0.9;
+          font-size: 1.8em;
+          font-weight: 600;
+          letter-spacing: normal;
+          color: #0d1826;
+        }
+
+        &-text {
+          opacity: 0.9;
+          font-size: 1.3em;
+          font-weight: 400;
+          letter-spacing: 0.16px;
+          color: #0d1826;
+
+          & button {
+            font-weight: 500;
+            color: #087af9;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+
+      &-plan {
+        width: 100%;
+        max-width: 82em;
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(space-between);
+        border-bottom: solid 1px #e6e8eb;
+
+        &-info {
+          @include flexbox();
+          @include align-items(center);
+          @include justify-content(flex-start);
+
+          &-img {
+            margin-right: 1.2em;
+            min-width: 4.2em;
+            min-height: 4.2em;
+            width: 4.2em;
+            height: 4.2em;
+            max-width: 4.2em;
+            max-height: 4.2em;
+            object-fit: cover;
+            border-radius: 100vh;
+          }
+
+          &-set {
+            padding: 3.8em 0;
+
+            &-title {
+              margin-bottom: emcalc(.6,1.6);
+              font-size: 1.6em;
+              font-weight: 500;
+              letter-spacing: 0.04px;
+              color: #1b2733;
+            }
+
+            &-text {
+              font-size: 1.25em;
+              font-weight: 500;
+              letter-spacing: normal;
+              color: #1273dd;
+
+              &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+
+        & .button {
+          padding: 0 emcalc(4.2, 1.35);
+          height: emcalc(3.2, 1.35);
+          font-size: 1.35em;
+          letter-spacing: 0.07px;
+        }
+      }
+
+      &-main {
+        width: 100%;
+        max-width: 82em;
+        @include flexbox();
+        @include flex-direction(column);
+        @include align-items(flex-start);
+        @include justify-content(flex-start);
+
+        flex: 1;
+
+        overflow-y: auto;
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* Internet Explorer 10+ */
+
+        &::-webkit-scrollbar {
+          /* WebKit */
+          width: 0;
+          height: 0;
+        }
+
+
+
+        &-charts {
+          width: 100%;
+          padding-top: 3.6em;
+          padding-bottom: 10.3em;
+
+
+          & .chart {
+            
+            &:not(:last-of-type) {
+              margin-bottom: 4.3em;
+            }
+
+            &-header {
+              margin-bottom: 1.5em;
+              @include flexbox();
+              @include align-items(center);
+              @include justify-content(space-between);
+
+              &-title {
+                font-size: 1.4em;
+                font-weight: 500;
+                letter-spacing: normal;
+                color: #1b2733;
+              }
+
+              &-amount {
+                font-size: 1.4em;
+                font-weight: 400;
+                letter-spacing: normal;
+                color: #1b2733;
+
+                & span {
+                  font-weight: 700;
+                }
+              }
+            }
+
+            &-area {
+              margin-bottom: 2.1em;
+              width: 100%;
+              height: 2.2em;
+              @include flexbox();
+              @include align-items(center);
+              @include justify-content(flex-start);
+              border-radius: 3px;
+              border: solid 1px #ebebeb;
+              background-color: #FFF;
+              overflow: hidden;
+
+              &-item {
+                height: 100%;
+                width: 20%;
+
+                &:nth-of-type(1) {
+                  background-color: #1ac12d;
+                  border-radius: 3px 0 0 3px;
+                }
+
+                &:nth-of-type(2) {
+                  background-color: rgba(74, 206, 89, 0.8);
+                }
+
+                &:nth-of-type(3) {
+                  background-color: rgba(74, 206, 89, 0.6);
+                }
+
+                &:nth-of-type(4) {
+                  background-color: rgba(74, 206, 89, 0.4);
+                }
+              }
+            }
+
+            &-legend {
+              @include flexbox();
+              @include align-items(center);
+              @include justify-content(flex-start);
+
+              &-item {
+                @include flexbox();
+                @include align-items(center);
+                @include justify-content(flex-start);
+
+                &:nth-of-type(1) {
+                  & .chart-legend-item-box {
+                    background-color: #1ac12d;
+                  }
+                }
+
+                &:nth-of-type(2) {
+                  & .chart-legend-item-box {
+                    background-color: rgba(74, 206, 89, 0.8);
+                  }
+                }
+
+                &:nth-of-type(3) {
+                  & .chart-legend-item-box {
+                    background-color: rgba(74, 206, 89, 0.6);
+                  }
+                }
+
+                &:nth-of-type(4) {
+                  & .chart-legend-item-box {
+                    background-color: rgba(74, 206, 89, 0.4);
+                  }
+                }
+
+                &:not(:last-of-type) {
+                  margin-right: 2em;
+                }
+
+                &-box {
+                  width: 1.3em;
+                  height: 1.3em;
+                  margin-right: .7em;
+                  border-radius: 2px;
+                  background-color: #1ac12d;
+                }
+
+                &-text {
+                  font-size: 1.25em;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  color: #333333;
                 }
               }
             }
