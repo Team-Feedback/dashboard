@@ -876,11 +876,11 @@
 
 @font-face {
   font-family: 'dashoard-icons';
-  src:  url('../fonts/dashoard-icons.eot?oayu6y');
-  src:  url('../fonts/dashoard-icons.eot?oayu6y#iefix') format('embedded-opentype'),
-    url('../fonts/dashoard-icons.ttf?oayu6y') format('truetype'),
-    url('../fonts/dashoard-icons.woff?oayu6y') format('woff'),
-    url('../fonts/dashoard-icons.svg?oayu6y#dashoard-icons') format('svg');
+  src:  url('../fonts/dashoard-icons.eot?ibbnue');
+  src:  url('../fonts/dashoard-icons.eot?ibbnue#iefix') format('embedded-opentype'),
+    url('../fonts/dashoard-icons.ttf?ibbnue') format('truetype'),
+    url('../fonts/dashoard-icons.woff?ibbnue') format('woff'),
+    url('../fonts/dashoard-icons.svg?ibbnue#dashoard-icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -901,6 +901,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-users-leader:before {
+  content: "\e962";
+}
+.icon-users-p2p2:before {
+  content: "\e966";
+}
+.icon-users-self1:before {
+  content: "\e967";
+}
+.icon-users-supervisor1:before {
+  content: "\e968";
+}
+.icon-users-p2p3:before {
+  content: "\e969";
+}
 .icon-backup-restore:before {
   content: "\e961";
 }
@@ -1195,6 +1210,8 @@
 .icon-user-check:before {
   content: "\e93c";
 }
+
+
 
 
 
@@ -4468,6 +4485,7 @@ input {
         width: 0;
         height: 0;
       }
+      
 
       & .content {
         padding-left: 3.54%;
@@ -13742,9 +13760,176 @@ input {
 #custom-questions,
 #custom-questions-team {
   & .content {
-    padding: 2em 4em 0;
+    padding: 2em 4em 5.3em;
     height: 100%;
     overflow: hidden;
+    @include flexbox();
+    @include align-items(flex-start);
+    @include justify-content(flex-start);
+
+    & .preview {
+      padding: 6.5em 4.95vw 0;
+      padding: 0 4.95vw;
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(flex-start);
+      height: 100%;
+      overflow: visible;
+
+      & .phone {
+        position: relative;
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+        overflow: visible;
+
+
+        width: 31.1em;
+        height: 100%;
+        max-height: 57.6em;
+
+        &-frame {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          height: 100%;
+          //object-fit: contain;
+          z-index: 50;
+          pointer-events: none;
+        }
+
+        &-content {
+          padding: 0 1em;
+          width: 79.74%;
+          height: 88.02%;
+          background-color: #fff;
+          @include flexbox();
+          @include flex-direction(column);
+          @include align-items(flex-start);
+          @include justify-content(flex-start);
+
+          &-header {
+            padding: 3.2em .1em .5em;
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(flex-start);
+            border-bottom: solid 1px #edeeef;
+
+            &-img {
+              margin-right: .62em;
+              min-width: 4.45em;
+              min-height: 4.45em;
+              width: 4.45em;
+              height: 4.45em;
+              max-width: 4.45em;
+              max-height: 4.45em;
+              border-radius: 100vh;
+              object-fit: cover;
+            }
+
+            &-set {
+              &-subtitle {
+                margin-bottom: emcalc(.3,.95);
+                font-size: .95em;
+                font-weight: 500;
+                letter-spacing: normal;
+                color: #8e8e8e;
+              }
+
+              &-title {
+                font-size: 1.8em;
+                font-weight: 700;
+                letter-spacing: -0.14px;
+                color: #000000;
+              }
+            }
+          }
+
+          &-body {
+            padding: 3.5em 2.4em 2.9em;
+            flex: 1;
+            overflow-y: auto;
+            scrollbar-width: none;
+            /* Firefox */
+            -ms-overflow-style: none;
+            /* Internet Explorer 10+ */
+      
+            &::-webkit-scrollbar {
+              /* WebKit */
+              width: 0;
+              height: 0;
+            }
+
+            & .rating {
+              margin-bottom: 2.9em;
+              @include flexbox();
+              @include flex-direction(column);
+              @include align-items(center);
+              @include justify-content(center);
+              text-align: center;
+
+              &:last-of-type {
+                margin-bottom: 5.6em;
+              }
+
+              &-title {
+                margin-bottom: emcalc(.8,1.28);
+                font-size: 1.28em;
+                font-weight: 600;
+                line-height: 1.57;
+                letter-spacing: normal;
+                color: #222222;
+              }
+
+              & .stars {
+                & i {
+                  font-size: 2.4em;
+                  color: #ffdd36;
+
+                  &:not(:last-of-type) {
+                    margin-right: emcalc(.2,2.4);
+                  }
+                }
+              }
+            }
+
+            &-input {
+              margin-bottom: 2.7em;
+              margin-bottom: 2em;
+              padding-bottom: 1em;
+              border-bottom: solid 1px #edeeef;
+
+              &:last-of-type {
+                margin-bottom: 2.7em;
+              }
+              
+              &-text {
+                font-size: 1.15em;
+                font-weight: 500;
+                letter-spacing: normal;
+                color: #939daa;
+              }
+            }
+
+            &-button {
+              height: emcalc(3.2,1.35);
+              width: 100%;
+              @include inline-flex();
+              @include align-items(center);
+              @include justify-content(center);
+              font-size: 1.35em;
+              font-weight: 600;
+              letter-spacing: 0.17px;
+              color: #fefffe;
+              border-radius: 5px;
+              background-image: linear-gradient(to bottom, #ffa700, #ff9300);
+            }
+          }
+        }
+      }
+    }
 
     &-card {
       max-width: 90em;
@@ -13754,7 +13939,7 @@ input {
       box-shadow: 0 3px 6px 0 rgba(191, 191, 191, 0.11);
       border: solid 1px #e4e8ec;
       background-color: #ffffff;
-      height: auto;
+      height: 100%;
       max-height: calc(100% + 5px);
 
 
@@ -13773,7 +13958,122 @@ input {
       &-header {
         @include flex-direction(column);
         @include align-items(flex-start);
-        margin-bottom: 2.4em;
+        margin-bottom: 2.7em;
+
+        & .custom-dropdown {
+          width: 100%;
+          max-width: 36.3em;
+
+          &-trigger {
+            border: solid 1px #d6dade;
+            border-radius: 4px;
+
+            &:focus,
+            &.open {
+              border-radius: 4px 4px 0 0;
+            }
+
+            & .feedback-dropdown-item {
+              // background-color: #f2f2f2!important;
+
+              & .icon-chevron-down {
+                position: absolute;
+                top: 50%;
+                right: emcalc(2.6,1.28);
+                transform: translate(0, -50%);
+                font-size: 1.28em;
+                color: #0d1826;
+                opacity: 0.8;
+              }
+            }
+          }
+          
+          &-menu {
+            width: 100%;
+            border: solid 1px #d6dade;
+            border-top: 0;
+            border-radius: 0 0 4px 4px;
+            background-color: #fff;
+          }
+
+          & .feedback-dropdown-item {
+            padding: 0 1.4em;
+            height: 5.1em;
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(flex-start);
+            background-color: #fff;
+            cursor: pointer;
+
+            &:not(:last-of-type) {
+              border-bottom: solid 1px #d6dade;
+            }
+            
+            &:hover {
+              background-color: #f2f2f2;
+            }
+
+            &-icon {
+              margin-right: .76em;
+              width: 3.57em;
+              @include inline-flex();
+              @include align-items(center);
+              @include justify-content(center);
+
+              & i {
+                font-size: 3em;
+                color: #242e3a;
+
+                &.icon-users {
+                  font-size: 2.5em;
+                }
+                &.icon-users-p2p2 {
+                  font-size: 3.57em;
+                }
+                &.icon-users-self1 {
+                  font-size: 2.991em;
+                }
+                &.icon-users-leader {
+                  font-size: 3.57em;
+                }
+                &.icon-users-supervisor1 {
+                  font-size: 3.57em;
+                }
+              }
+            }
+
+            &-set {
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+
+              &-title {
+                font-size: 1.28em;
+                font-weight: 600;
+                line-height: 1.18;
+                letter-spacing: normal;
+                color: #0d1826;
+              }
+
+              &-text {
+                margin-bottom: emcalc(.3,1.08);
+                opacity: 0.9;
+                font-family: Inter;
+                font-size: 1.08em;
+                font-weight: 400;
+                letter-spacing: normal;
+                color: #0d1826;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+              }
+            }
+          }
+        }
+
+        &-caption {
+          margin-bottom: 2.5em;
+        }
 
         &-title {
           margin-bottom: emcalc(1, 1.6);
@@ -13784,6 +14084,7 @@ input {
         }
 
         &-text {
+          margin-bottom: emcalc(2.5, 1.23);
           font-size: 1.23em;
           font-weight: 400;
           letter-spacing: -0.03px;
@@ -13793,7 +14094,7 @@ input {
         &-bottom {
           width: 100%;
           @include flexbox();
-          @include align-items(flex-end);
+          @include align-items(center);
           @include justify-content(space-between);
         }
 
