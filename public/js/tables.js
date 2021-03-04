@@ -50,7 +50,7 @@ if (inputRow) {
 }
 
 //NEW TALBE DROPDOWN POSITION
-let tableTriggers = document.querySelectorAll('.custom-table tbody .custom-dropdown-trigger')
+let tableTriggers = document.querySelectorAll('.custom-table tbody .custom-dropdown-trigger, .custom-table tbody .exp-dropdown')
 console.log(tableTriggers)
 
 tableTriggers.forEach(e => {

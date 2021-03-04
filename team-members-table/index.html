@@ -319,14 +319,11 @@
 
           <div class="fake-card fake-card-team-members-table"></div>
           <div class="content-card-header">
-            <p class="content-card-header-title">Team members</p>
-            <div class="options">
-              <button class="options-link active" onclick="location.href='../team-members-table/index.html';">Grid
-                view</button>
-              <span class="options-divider">I</span>
-              <button class="options-link" onclick="location.href='../team-members-grid/index.html';">Table
-                view</button>
+            <div class="content-card-header-caption">
+              <p class="content-card-header-title">Team members</p>
+              <p class="content-card-header-text">Here you can add, edit and delete team members and leaders.</p>
             </div>
+
             <div class="content-card-header-bottom">
               <div class="content-card-input-container">
                 <input type="text" placeholder="Search">
@@ -358,11 +355,11 @@
                         <i class="icon-caret-down"></i>
                       </th>
                       <th class="column-03">
-                        <p>Average feedback</p>
+                        <p>Account type</p>
                         <i class="icon-caret-down"></i>
                       </th>
                       <th class="column-04">
-                        <p>Development trend</p>
+                        <p>Status</p>
                         <i class="icon-caret-down"></i>
                       </th>
                       <th class="column-05">
@@ -451,33 +448,52 @@
                       <td class="column-02">
                         <input class="td-input" type="text" placeholder="Add job title" />
                       </td>
+
                       <td class="column-03">
-                        <button class="button button-green">Amazing</button>
+                        <div class="span leader"></div>
+                        <p>Team leader</p>
                       </td>
                       <td class="column-04">
-                        <p>+25%</p>
+                        <button class="button button-green">Amazing</button>
                       </td>
                       <td class="column-05">
-                        <div class="custom-dropdown half-line">
-                          <button class="custom-dropdown-trigger" tabindex="-1" onclick="this.focus()">
+                        <div class="exp-dropdown">
+                          <button class="exp-dropdown-trigger" onclick="this.focus()">
                             <i class="icon-ellipsis"></i>
                           </button>
 
-                          <div class="custom-dropdown-menu">
-                            <div class="custom-dropdown-menu-item">
-                              <button class="custom-dropdown-menu-item-link">
-                                Open profile
-                              </button>
+                          <div class="exp-dropdown-menu">
+                            <div class="exp-dropdown-menu-item">
+                              <p class="exp-dropdown-menu-item-text">Make team leader</p>
+                              <i class="icon-check"></i>
                             </div>
-                            <div class="custom-dropdown-menu-item selected">
-                              <button class="custom-dropdown-menu-item-link">
-                                Give feedback
-                              </button>
+                            <div class="secondary-dropdown">
+                              <div class="exp-dropdown-menu-item secondary-dropdown-trigger">
+                                <i class="icon-chevron-left"></i>
+                                <p class="exp-dropdown-menu-item-text">Give rights</p>
+                                <i class="icon-check"></i>
+                              </div>
+
+                              <div class="secondary-dropdown-menu"
+                                onmouseover="this.parentElement.classList.add('open')"
+                                onmouseout="this.parentElement.classList.remove('open')">
+                                <div class="secondary-dropdown-menu-item active">
+                                  <p class="secondary-dropdown-menu-item-text">Right I</p>
+                                  <i class="icon-check"></i>
+                                </div>
+                                <div class="secondary-dropdown-menu-item">
+                                  <p class="secondary-dropdown-menu-item-text">Right II</p>
+                                  <i class="icon-check"></i>
+                                </div>
+                              </div>
                             </div>
-                            <div class="custom-dropdown-menu-item delete">
-                              <button class="custom-dropdown-menu-item-link">
-                                Delete member
-                              </button>
+                            <div class="exp-dropdown-menu-item">
+                              <p class="exp-dropdown-menu-item-text">Edit job title</p>
+                              <i class="icon-check"></i>
+                            </div>
+                            <div class="exp-dropdown-menu-item delete">
+                              <p class="exp-dropdown-menu-item-text">Delete team member</p>
+                              <i class="icon-check"></i>
                             </div>
                           </div>
                         </div>
@@ -499,32 +515,50 @@
                         <p>Example job title</p>
                       </td>
                       <td class="column-03">
-                        <button class="button button-green">Amazing</button>
+                        <div class="span"></div>
+                        <p>Team leader</p>
                       </td>
                       <td class="column-04">
-                        <p>+25%</p>
+                        <button class="button button-green">Amazing</button>
                       </td>
                       <td class="column-05">
-                        <div class="custom-dropdown half-line">
-                          <button class="custom-dropdown-trigger" tabindex="-1" onclick="this.focus()">
+                        <div class="exp-dropdown">
+                          <button class="exp-dropdown-trigger" onclick="this.focus()">
                             <i class="icon-ellipsis"></i>
                           </button>
 
-                          <div class="custom-dropdown-menu">
-                            <div class="custom-dropdown-menu-item">
-                              <button class="custom-dropdown-menu-item-link">
-                                Open profile
-                              </button>
+                          <div class="exp-dropdown-menu">
+                            <div class="exp-dropdown-menu-item">
+                              <p class="exp-dropdown-menu-item-text">Make team leader</p>
+                              <i class="icon-check"></i>
                             </div>
-                            <div class="custom-dropdown-menu-item selected">
-                              <button class="custom-dropdown-menu-item-link">
-                                Give feedback
-                              </button>
+                            <div class="secondary-dropdown">
+                              <div class="exp-dropdown-menu-item secondary-dropdown-trigger">
+                                <i class="icon-chevron-left"></i>
+                                <p class="exp-dropdown-menu-item-text">Give rights</p>
+                                <i class="icon-check"></i>
+                              </div>
+
+                              <div class="secondary-dropdown-menu"
+                                onmouseover="this.parentElement.classList.add('open')"
+                                onmouseout="this.parentElement.classList.remove('open')">
+                                <div class="secondary-dropdown-menu-item active">
+                                  <p class="secondary-dropdown-menu-item-text">Right I</p>
+                                  <i class="icon-check"></i>
+                                </div>
+                                <div class="secondary-dropdown-menu-item">
+                                  <p class="secondary-dropdown-menu-item-text">Right II</p>
+                                  <i class="icon-check"></i>
+                                </div>
+                              </div>
                             </div>
-                            <div class="custom-dropdown-menu-item delete">
-                              <button class="custom-dropdown-menu-item-link">
-                                Delete member
-                              </button>
+                            <div class="exp-dropdown-menu-item">
+                              <p class="exp-dropdown-menu-item-text">Edit job title</p>
+                              <i class="icon-check"></i>
+                            </div>
+                            <div class="exp-dropdown-menu-item delete">
+                              <p class="exp-dropdown-menu-item-text">Delete team member</p>
+                              <i class="icon-check"></i>
                             </div>
                           </div>
                         </div>
@@ -546,32 +580,50 @@
                         <input class="td-input" type="text" placeholder="Add job title" />
                       </td>
                       <td class="column-03">
-                        <button class="button button-green">Amazing</button>
+                        <div class="span"></div>
+                        <p>Team leader</p>
                       </td>
                       <td class="column-04">
-                        <p>+25%</p>
+                        <button class="button button-green">Amazing</button>
                       </td>
                       <td class="column-05">
-                        <div class="custom-dropdown half-line">
-                          <button class="custom-dropdown-trigger" tabindex="-1" onclick="this.focus()">
+                        <div class="exp-dropdown">
+                          <button class="exp-dropdown-trigger" onclick="this.focus()">
                             <i class="icon-ellipsis"></i>
                           </button>
 
-                          <div class="custom-dropdown-menu">
-                            <div class="custom-dropdown-menu-item">
-                              <button class="custom-dropdown-menu-item-link">
-                                Open profile
-                              </button>
+                          <div class="exp-dropdown-menu">
+                            <div class="exp-dropdown-menu-item">
+                              <p class="exp-dropdown-menu-item-text">Make team leader</p>
+                              <i class="icon-check"></i>
                             </div>
-                            <div class="custom-dropdown-menu-item selected">
-                              <button class="custom-dropdown-menu-item-link">
-                                Give feedback
-                              </button>
+                            <div class="secondary-dropdown">
+                              <div class="exp-dropdown-menu-item secondary-dropdown-trigger">
+                                <i class="icon-chevron-left"></i>
+                                <p class="exp-dropdown-menu-item-text">Give rights</p>
+                                <i class="icon-check"></i>
+                              </div>
+
+                              <div class="secondary-dropdown-menu"
+                                onmouseover="this.parentElement.classList.add('open')"
+                                onmouseout="this.parentElement.classList.remove('open')">
+                                <div class="secondary-dropdown-menu-item active">
+                                  <p class="secondary-dropdown-menu-item-text">Right I</p>
+                                  <i class="icon-check"></i>
+                                </div>
+                                <div class="secondary-dropdown-menu-item">
+                                  <p class="secondary-dropdown-menu-item-text">Right II</p>
+                                  <i class="icon-check"></i>
+                                </div>
+                              </div>
                             </div>
-                            <div class="custom-dropdown-menu-item delete">
-                              <button class="custom-dropdown-menu-item-link">
-                                Delete member
-                              </button>
+                            <div class="exp-dropdown-menu-item">
+                              <p class="exp-dropdown-menu-item-text">Edit job title</p>
+                              <i class="icon-check"></i>
+                            </div>
+                            <div class="exp-dropdown-menu-item delete">
+                              <p class="exp-dropdown-menu-item-text">Delete team member</p>
+                              <i class="icon-check"></i>
                             </div>
                           </div>
                         </div>
@@ -593,32 +645,50 @@
                         <p>Example job title</p>
                       </td>
                       <td class="column-03">
-                        <button class="button button-green">Amazing</button>
+                        <div class="span"></div>
+                        <p>Team leader</p>
                       </td>
                       <td class="column-04">
-                        <p>+25%</p>
+                        <button class="button button-green">Amazing</button>
                       </td>
                       <td class="column-05">
-                        <div class="custom-dropdown half-line">
-                          <button class="custom-dropdown-trigger" tabindex="-1" onclick="this.focus()">
+                        <div class="exp-dropdown">
+                          <button class="exp-dropdown-trigger" onclick="this.focus()">
                             <i class="icon-ellipsis"></i>
                           </button>
 
-                          <div class="custom-dropdown-menu">
-                            <div class="custom-dropdown-menu-item">
-                              <button class="custom-dropdown-menu-item-link">
-                                Open profile
-                              </button>
+                          <div class="exp-dropdown-menu">
+                            <div class="exp-dropdown-menu-item">
+                              <p class="exp-dropdown-menu-item-text">Make team leader</p>
+                              <i class="icon-check"></i>
                             </div>
-                            <div class="custom-dropdown-menu-item selected">
-                              <button class="custom-dropdown-menu-item-link">
-                                Give feedback
-                              </button>
+                            <div class="secondary-dropdown">
+                              <div class="exp-dropdown-menu-item secondary-dropdown-trigger">
+                                <i class="icon-chevron-left"></i>
+                                <p class="exp-dropdown-menu-item-text">Give rights</p>
+                                <i class="icon-check"></i>
+                              </div>
+
+                              <div class="secondary-dropdown-menu"
+                                onmouseover="this.parentElement.classList.add('open')"
+                                onmouseout="this.parentElement.classList.remove('open')">
+                                <div class="secondary-dropdown-menu-item active">
+                                  <p class="secondary-dropdown-menu-item-text">Right I</p>
+                                  <i class="icon-check"></i>
+                                </div>
+                                <div class="secondary-dropdown-menu-item">
+                                  <p class="secondary-dropdown-menu-item-text">Right II</p>
+                                  <i class="icon-check"></i>
+                                </div>
+                              </div>
                             </div>
-                            <div class="custom-dropdown-menu-item delete">
-                              <button class="custom-dropdown-menu-item-link">
-                                Delete member
-                              </button>
+                            <div class="exp-dropdown-menu-item">
+                              <p class="exp-dropdown-menu-item-text">Edit job title</p>
+                              <i class="icon-check"></i>
+                            </div>
+                            <div class="exp-dropdown-menu-item delete">
+                              <p class="exp-dropdown-menu-item-text">Delete team member</p>
+                              <i class="icon-check"></i>
                             </div>
                           </div>
                         </div>
@@ -639,33 +709,52 @@
                       <td class="column-02">
                         <input class="td-input" type="text" placeholder="Add job title" />
                       </td>
+
                       <td class="column-03">
-                        <button class="button button-green">Amazing</button>
+                        <div class="span"></div>
+                        <p>Team leader</p>
                       </td>
                       <td class="column-04">
-                        <p>+25%</p>
+                        <button class="button button-green">Amazing</button>
                       </td>
                       <td class="column-05">
-                        <div class="custom-dropdown half-line">
-                          <button class="custom-dropdown-trigger" tabindex="-1" onclick="this.focus()">
+                        <div class="exp-dropdown">
+                          <button class="exp-dropdown-trigger" onclick="this.focus()">
                             <i class="icon-ellipsis"></i>
                           </button>
 
-                          <div class="custom-dropdown-menu">
-                            <div class="custom-dropdown-menu-item">
-                              <button class="custom-dropdown-menu-item-link">
-                                Open profile
-                              </button>
+                          <div class="exp-dropdown-menu">
+                            <div class="exp-dropdown-menu-item">
+                              <p class="exp-dropdown-menu-item-text">Make team leader</p>
+                              <i class="icon-check"></i>
                             </div>
-                            <div class="custom-dropdown-menu-item selected">
-                              <button class="custom-dropdown-menu-item-link">
-                                Give feedback
-                              </button>
+                            <div class="secondary-dropdown">
+                              <div class="exp-dropdown-menu-item secondary-dropdown-trigger">
+                                <i class="icon-chevron-left"></i>
+                                <p class="exp-dropdown-menu-item-text">Give rights</p>
+                                <i class="icon-check"></i>
+                              </div>
+
+                              <div class="secondary-dropdown-menu"
+                                onmouseover="this.parentElement.classList.add('open')"
+                                onmouseout="this.parentElement.classList.remove('open')">
+                                <div class="secondary-dropdown-menu-item active">
+                                  <p class="secondary-dropdown-menu-item-text">Right I</p>
+                                  <i class="icon-check"></i>
+                                </div>
+                                <div class="secondary-dropdown-menu-item">
+                                  <p class="secondary-dropdown-menu-item-text">Right II</p>
+                                  <i class="icon-check"></i>
+                                </div>
+                              </div>
                             </div>
-                            <div class="custom-dropdown-menu-item delete">
-                              <button class="custom-dropdown-menu-item-link">
-                                Delete member
-                              </button>
+                            <div class="exp-dropdown-menu-item">
+                              <p class="exp-dropdown-menu-item-text">Edit job title</p>
+                              <i class="icon-check"></i>
+                            </div>
+                            <div class="exp-dropdown-menu-item delete">
+                              <p class="exp-dropdown-menu-item-text">Delete team member</p>
+                              <i class="icon-check"></i>
                             </div>
                           </div>
                         </div>
@@ -687,32 +776,50 @@
                         <p>Example job title</p>
                       </td>
                       <td class="column-03">
-                        <button class="button button-green">Amazing</button>
+                        <div class="span"></div>
+                        <p>Team leader</p>
                       </td>
                       <td class="column-04">
-                        <p>+25%</p>
+                        <button class="button button-green">Amazing</button>
                       </td>
                       <td class="column-05">
-                        <div class="custom-dropdown half-line">
-                          <button class="custom-dropdown-trigger" tabindex="-1" onclick="this.focus()">
+                        <div class="exp-dropdown">
+                          <button class="exp-dropdown-trigger" onclick="this.focus()">
                             <i class="icon-ellipsis"></i>
                           </button>
 
-                          <div class="custom-dropdown-menu">
-                            <div class="custom-dropdown-menu-item">
-                              <button class="custom-dropdown-menu-item-link">
-                                Open profile
-                              </button>
+                          <div class="exp-dropdown-menu">
+                            <div class="exp-dropdown-menu-item">
+                              <p class="exp-dropdown-menu-item-text">Make team leader</p>
+                              <i class="icon-check"></i>
                             </div>
-                            <div class="custom-dropdown-menu-item selected">
-                              <button class="custom-dropdown-menu-item-link">
-                                Give feedback
-                              </button>
+                            <div class="secondary-dropdown">
+                              <div class="exp-dropdown-menu-item secondary-dropdown-trigger">
+                                <i class="icon-chevron-left"></i>
+                                <p class="exp-dropdown-menu-item-text">Give rights</p>
+                                <i class="icon-check"></i>
+                              </div>
+
+                              <div class="secondary-dropdown-menu"
+                                onmouseover="this.parentElement.classList.add('open')"
+                                onmouseout="this.parentElement.classList.remove('open')">
+                                <div class="secondary-dropdown-menu-item active">
+                                  <p class="secondary-dropdown-menu-item-text">Right I</p>
+                                  <i class="icon-check"></i>
+                                </div>
+                                <div class="secondary-dropdown-menu-item">
+                                  <p class="secondary-dropdown-menu-item-text">Right II</p>
+                                  <i class="icon-check"></i>
+                                </div>
+                              </div>
                             </div>
-                            <div class="custom-dropdown-menu-item delete">
-                              <button class="custom-dropdown-menu-item-link">
-                                Delete member
-                              </button>
+                            <div class="exp-dropdown-menu-item">
+                              <p class="exp-dropdown-menu-item-text">Edit job title</p>
+                              <i class="icon-check"></i>
+                            </div>
+                            <div class="exp-dropdown-menu-item delete">
+                              <p class="exp-dropdown-menu-item-text">Delete team member</p>
+                              <i class="icon-check"></i>
                             </div>
                           </div>
                         </div>
@@ -733,33 +840,52 @@
                       <td class="column-02">
                         <input class="td-input" type="text" placeholder="Add job title" />
                       </td>
+
                       <td class="column-03">
-                        <button class="button button-green">Amazing</button>
+                        <div class="span"></div>
+                        <p>Team leader</p>
                       </td>
                       <td class="column-04">
-                        <p>+25%</p>
+                        <button class="button button-green">Amazing</button>
                       </td>
                       <td class="column-05">
-                        <div class="custom-dropdown half-line">
-                          <button class="custom-dropdown-trigger" tabindex="-1" onclick="this.focus()">
+                        <div class="exp-dropdown">
+                          <button class="exp-dropdown-trigger" onclick="this.focus()">
                             <i class="icon-ellipsis"></i>
                           </button>
 
-                          <div class="custom-dropdown-menu">
-                            <div class="custom-dropdown-menu-item">
-                              <button class="custom-dropdown-menu-item-link">
-                                Open profile
-                              </button>
+                          <div class="exp-dropdown-menu">
+                            <div class="exp-dropdown-menu-item">
+                              <p class="exp-dropdown-menu-item-text">Make team leader</p>
+                              <i class="icon-check"></i>
                             </div>
-                            <div class="custom-dropdown-menu-item selected">
-                              <button class="custom-dropdown-menu-item-link">
-                                Give feedback
-                              </button>
+                            <div class="secondary-dropdown">
+                              <div class="exp-dropdown-menu-item secondary-dropdown-trigger">
+                                <i class="icon-chevron-left"></i>
+                                <p class="exp-dropdown-menu-item-text">Give rights</p>
+                                <i class="icon-check"></i>
+                              </div>
+
+                              <div class="secondary-dropdown-menu"
+                                onmouseover="this.parentElement.classList.add('open')"
+                                onmouseout="this.parentElement.classList.remove('open')">
+                                <div class="secondary-dropdown-menu-item active">
+                                  <p class="secondary-dropdown-menu-item-text">Right I</p>
+                                  <i class="icon-check"></i>
+                                </div>
+                                <div class="secondary-dropdown-menu-item">
+                                  <p class="secondary-dropdown-menu-item-text">Right II</p>
+                                  <i class="icon-check"></i>
+                                </div>
+                              </div>
                             </div>
-                            <div class="custom-dropdown-menu-item delete">
-                              <button class="custom-dropdown-menu-item-link">
-                                Delete member
-                              </button>
+                            <div class="exp-dropdown-menu-item">
+                              <p class="exp-dropdown-menu-item-text">Edit job title</p>
+                              <i class="icon-check"></i>
+                            </div>
+                            <div class="exp-dropdown-menu-item delete">
+                              <p class="exp-dropdown-menu-item-text">Delete team member</p>
+                              <i class="icon-check"></i>
                             </div>
                           </div>
                         </div>
@@ -781,32 +907,50 @@
                         <p>Example job title</p>
                       </td>
                       <td class="column-03">
-                        <button class="button button-green">Amazing</button>
+                        <div class="span"></div>
+                        <p>Team leader</p>
                       </td>
                       <td class="column-04">
-                        <p>+25%</p>
+                        <button class="button button-green">Amazing</button>
                       </td>
                       <td class="column-05">
-                        <div class="custom-dropdown half-line">
-                          <button class="custom-dropdown-trigger" tabindex="-1" onclick="this.focus()">
+                        <div class="exp-dropdown">
+                          <button class="exp-dropdown-trigger" onclick="this.focus()">
                             <i class="icon-ellipsis"></i>
                           </button>
 
-                          <div class="custom-dropdown-menu">
-                            <div class="custom-dropdown-menu-item">
-                              <button class="custom-dropdown-menu-item-link">
-                                Open profile
-                              </button>
+                          <div class="exp-dropdown-menu">
+                            <div class="exp-dropdown-menu-item">
+                              <p class="exp-dropdown-menu-item-text">Make team leader</p>
+                              <i class="icon-check"></i>
                             </div>
-                            <div class="custom-dropdown-menu-item selected">
-                              <button class="custom-dropdown-menu-item-link">
-                                Give feedback
-                              </button>
+                            <div class="secondary-dropdown">
+                              <div class="exp-dropdown-menu-item secondary-dropdown-trigger">
+                                <i class="icon-chevron-left"></i>
+                                <p class="exp-dropdown-menu-item-text">Give rights</p>
+                                <i class="icon-check"></i>
+                              </div>
+
+                              <div class="secondary-dropdown-menu"
+                                onmouseover="this.parentElement.classList.add('open')"
+                                onmouseout="this.parentElement.classList.remove('open')">
+                                <div class="secondary-dropdown-menu-item active">
+                                  <p class="secondary-dropdown-menu-item-text">Right I</p>
+                                  <i class="icon-check"></i>
+                                </div>
+                                <div class="secondary-dropdown-menu-item">
+                                  <p class="secondary-dropdown-menu-item-text">Right II</p>
+                                  <i class="icon-check"></i>
+                                </div>
+                              </div>
                             </div>
-                            <div class="custom-dropdown-menu-item delete">
-                              <button class="custom-dropdown-menu-item-link">
-                                Delete member
-                              </button>
+                            <div class="exp-dropdown-menu-item">
+                              <p class="exp-dropdown-menu-item-text">Edit job title</p>
+                              <i class="icon-check"></i>
+                            </div>
+                            <div class="exp-dropdown-menu-item delete">
+                              <p class="exp-dropdown-menu-item-text">Delete team member</p>
+                              <i class="icon-check"></i>
                             </div>
                           </div>
                         </div>
