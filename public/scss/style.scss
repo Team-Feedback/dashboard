@@ -8772,6 +8772,61 @@ input {
   }
 }
 
+#tutorModal {
+  & .custom-modal {
+    width: 40em;
+    border-radius: 7.5px;
+    background-color: #0052cc;
+    border: 0;
+    box-shadow: none;
+
+    &-backdrop {
+      top: auto;
+      bottom: 0;
+      height: calc(100% - 16.4em);
+      opacity: 0.55;
+      background-color: #f5f6f7;
+    }
+
+    &-body {
+      padding: 1.6em 2em;
+      @include flexbox();
+      @include flex-direction(column);
+      @include align-items(flex-start);
+      @include justify-content(flex-start);
+
+      &-title {
+        margin-bottom: emcalc(.6,1.75);
+        font-size: 1.75em;
+        font-weight: 500;
+        line-height: 1.43;
+        letter-spacing: 0.13px;
+        color: #ffffff;
+      }
+
+      &-text {
+        width: 100%;
+        max-width: emcalc(28.5, 1.45);
+        font-size: 1.45em;
+        font-weight: 400;
+        letter-spacing: 0.07px;
+        color: #ffffff;
+      }
+
+      & .button.confirm {
+        margin-left: auto;
+        padding: 0 emcalc(1.6,1.4);
+        height: emcalc(3.2, 1.4);
+        font-size: 1.4em;
+        font-weight: 500;
+        letter-spacing: normal;
+        color: #ffffff;
+        background-color: #5c9dff;
+      }
+    }
+  }
+}
+
 //Image modals
 #imageUploadModal,
 #usersModal,

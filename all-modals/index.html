@@ -354,7 +354,10 @@
             target-modal="inviteMemberNew">
             Invite members new
           </button>
-
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;"
+            target-modal="tutorModal">
+            Tutor modal 01
+          </button>
         </div>
       </div>
     </div>
@@ -1004,6 +1007,22 @@
             Send feedback
           </button>
 
+        </div>
+      </div>
+      <div class="custom-modal-backdrop"></div>
+    </div>
+
+    <!-- TUTOR MODAL-->
+    <div class="custom-modal-wrapper" id="tutorModal">
+      <div class="custom-modal">
+        <!-- Modal body -->
+        <div class="custom-modal-body">
+          <p class="custom-modal-body-title">Welcome to the feedback explorer</p>
+          <p class="custom-modal-body-text">
+            Here you find all the single reviews and
+            you can like or comment them.
+          </p>
+          <button class="button confirm" close-modal="tutorModal">Got it</button>
         </div>
       </div>
       <div class="custom-modal-backdrop"></div>
