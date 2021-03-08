@@ -1634,6 +1634,10 @@ input {
       white-space: nowrap;
       &:not(:last-of-type) {
         margin-right: 3.6em;
+
+        @include respond(desktop-md) {
+          margin-right: 2.6em;
+        }
       }
 
       // &:first-of-type {
@@ -1673,6 +1677,10 @@ input {
         font-weight: 400;
         color: #344562;
         cursor: pointer;
+
+        @include respond(desktop-md) {
+          font-size: 1.2em;
+        }
 
         &::before {
           display: block;
@@ -3578,10 +3586,11 @@ input {
 //==============================
 //CUSTOM MODAL
 .custom-modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+  position: relative;
   min-width: 0;
   width: 40em;
   max-width: calc(100% - 4em);
@@ -3626,9 +3635,13 @@ input {
     width: 100vw;
     height: 100vh;
     z-index: 10000;
+    
+    @include align-items(center);
+    @include justify-content(center);
 
     &.open {
-      display: block;
+      // display: block;
+      @include flexbox();
     }
   }
 
@@ -4440,9 +4453,9 @@ input {
 #modalCard,
 #userFeedbacksHighOrder {
   position: absolute;
-  height: calc(100% - 4em);
+  height: calc(100% - 1.6em);
   margin-top: 1.6em;
-  margin-bottom: 2.4em;
+  //margin-bottom: 2.4em;
 
   & .widget {
     background-color: #fdfdfd!important;
@@ -4459,9 +4472,10 @@ input {
     height: 100%;
     animation: none;
     max-width: calc(100% - 2.9em - 2.5em);
-    border-radius: 3px;
+    border-radius: 3px 3px 0 0;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
     border: solid 1px #efefef;
+    border-bottom: 0;
 
 
 
@@ -4499,7 +4513,7 @@ input {
 
     &-body {
       height: 100%;
-      max-height: calc(100% - 17em);
+      max-height: calc(100% - 16.7em);
       overflow-y: auto;
       scrollbar-width: none;
       /* Firefox */
@@ -8123,14 +8137,15 @@ input {
       // width: calc(100% - 23.5%);
       width: 100%;
       //flex: 1;
-      overflow-y: auto;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-      scroll-behavior: smooth;
+
 
       &.step-01 {
         // max-width: 67.5em;
         // width: calc(100% - 23.5%);
+        overflow-y: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        scroll-behavior: smooth;
 
         & .step-02 {
           display: none!important;
@@ -8159,12 +8174,30 @@ input {
         }
 
         &.step-02 {
+          height: 100%;
+          @include flexbox();
+          @include flex-direction(column);
+          @include align-items(flex-start);
+          @include justify-content(flex-start);
           margin-left: 12.5%;
           margin-right: 15%;
           //width: 100%;
           //max-width: 67.5em;
           //width: calc(100% - 23.5%);
           width: calc(100% - 27.5%);
+
+          & .scrollable {
+            flex: 1;
+            overflow-y: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            scroll-behavior: smooth;
+  
+            &::-webkit-scrollbar {
+              width: 0;
+              height: 0;
+            }
+          }
         }
       }
 
@@ -10093,6 +10126,21 @@ input {
         }
       }
     }
+  }
+
+  & input[type="number"] {
+    padding: 0 emcalc(1.2, 1.25);
+    @include inline-flex();
+    @include align-items(center);
+    @include justify-content(space-between);
+    width: emcalc(16.8, 1.25);
+    height: emcalc(3.4, 1.25);
+    border-radius: 4px;
+    border: solid 1px #cfd7e0;
+    font-size: 1.25em;
+    font-weight: 400;
+    letter-spacing: -0.06px;
+    color: #2d3640;
   }
 
   & .custom-dropdown {
@@ -14062,6 +14110,47 @@ input {
               object-fit: cover;
             }
 
+            &-initials {
+              @include inline-flex();
+              @include align-items(center);
+              @include justify-content(center);
+              margin-right: emcalc(.62, 1.9);
+              min-width: emcalc(4.45, 1.9);
+              min-height: emcalc(4.45, 1.9);
+              width: emcalc(4.45, 1.9);
+              height: emcalc(4.45, 1.9);
+              max-width: emcalc(4.45, 1.9);
+              max-height: emcalc(4.45, 1.9);
+              border-radius: 100vh;
+
+              font-size: 1.9em;
+              font-weight: 700;
+              letter-spacing: -0.38px;
+              color: #ffffff;
+              background-color: #2d96ff;
+            }
+
+
+            &-icon {
+              @include inline-flex();
+              @include align-items(center);
+              @include justify-content(center);
+              margin-right: .62em;
+              min-width: 4.45em;
+              min-height: 4.45em;
+              width: 4.45em;
+              height: 4.45em;
+              max-width: 4.45em;
+              max-height: 4.45em;
+              border-radius: 100vh;
+              background-color: #ffb12d;
+
+              & i {
+                font-size: 3em;
+                color: #ffffff;
+              }
+            }
+
             &-set {
               &-subtitle {
                 margin-bottom: emcalc(.3,.95);
@@ -14845,13 +14934,8 @@ input {
             color: #0d1826;
 
             border-radius: 3px;
-            border: solid 1px #e6e9ef;
-            background-image: linear-gradient(
-              to bottom,
-              #fffeff,
-              #edf4f2 95%,
-              #e9f0ee
-            );
+            border: solid 1px #D6DADE;
+            background-color: #FBFBFB;
 
             text-overflow: ellipsis;
             overflow: hidden;
@@ -14870,7 +14954,7 @@ input {
 
           &-menu {
             width: 100%;
-            border: solid 1px #e6e9ef;
+            border: solid 1px #D6DADE;
             border-top: 0;
             background-color: #fff;
             z-index: 1000;
@@ -14894,7 +14978,7 @@ input {
               white-space: nowrap;
 
               &:not(:last-of-type) {
-                border-bottom: solid 1px #e6e9ef;
+                border-bottom: solid 1px #D6DADE;
               }
 
               &:hover {
@@ -20115,6 +20199,7 @@ input {
 #my-widgets {
   & .content {
     & .widgets-top {
+      margin-top: 0!important;
       margin-bottom: 2em!important;
     }
   }
