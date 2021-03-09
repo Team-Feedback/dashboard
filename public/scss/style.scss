@@ -1476,6 +1476,18 @@ input {
   line-height: 1.22 !important;
 }
 
+// .tutor-tooltip-01 {
+//   padding: 1.2rem!important;
+//   width: 15.5rem;
+//   font-size: 1.45em!important;
+//   font-weight: 400!important;
+//   letter-spacing: 0.07px!important;
+//   color: #ffffff!important;
+//   border-radius: 5px!important;
+//   box-shadow: 0 3px 6px 0 rgba(159, 159, 159, 0.16)!important;
+//   background-color: #1866db!important;
+// }
+
 //========================
 //    PAGE HEADER
 //========================
@@ -3586,10 +3598,10 @@ input {
 //==============================
 //CUSTOM MODAL
 .custom-modal {
-  // position: absolute;
-  // top: 50%;
-  // left: 50%;
-  // transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   position: relative;
   min-width: 0;
   width: 40em;
@@ -3636,12 +3648,12 @@ input {
     height: 100vh;
     z-index: 10000;
     
-    @include align-items(center);
-    @include justify-content(center);
+    // @include align-items(center);
+    // @include justify-content(center);
 
     &.open {
-      // display: block;
-      @include flexbox();
+      display: block;
+      // @include flexbox();
     }
   }
 
@@ -4297,6 +4309,12 @@ input {
           
           &::placeholder {
             color: rgba($color: #4c5055, $alpha: .28);
+          }
+
+          &:disabled {
+            opacity: 1;
+            color: rgba($color: #0d1826, $alpha: .9);
+            -webkit-text-fill-color: rgba($color: #0d1826, $alpha: .9);
           }
         }
 
@@ -8773,17 +8791,20 @@ input {
 }
 
 #tutorModal {
+  top: auto;
+  bottom: 0;
+  height: calc(100% - 16.4em);
+
   & .custom-modal {
+    top: 40%;
     width: 40em;
     border-radius: 7.5px;
     background-color: #0052cc;
     border: 0;
-    box-shadow: none;
+    box-shadow: 0 6px 12px 0 rgba(134, 134, 134, 0.33);
 
     &-backdrop {
-      top: auto;
-      bottom: 0;
-      height: calc(100% - 16.4em);
+      position: absolute;
       opacity: 0.55;
       background-color: #f5f6f7;
     }
@@ -8822,6 +8843,10 @@ input {
         letter-spacing: normal;
         color: #ffffff;
         background-color: #5c9dff;
+
+        &:hover {
+          background-color: #82b1f8;
+        }
       }
     }
   }
@@ -18331,6 +18356,8 @@ input {
         }
 
         &-column {
+          resize: horizontal;
+          overflow: hidden;
 
           &-header {
 
@@ -18781,6 +18808,64 @@ input {
     }
   }
 }
+//=================================================================
+//                      TUTOR ELEMENTS
+//=================================================================
+.tutor-tooltip {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(0, 100%);
+  z-index: 10000;
+
+  &.open {
+    display: block;
+  }
+
+  &-01 {
+    left: -.4em;
+    bottom: -1.8em;
+    width: 15.5em;
+
+    & .tutor-tooltip-arrow {
+      top: .4em;
+      left: 1.7em;
+      transform: translate(0, -100%);
+    }
+  }
+
+  &-02 {
+    left: -.4em;
+    bottom: -1.8em;
+    width: 15.5em;
+
+    & .tutor-tooltip-arrow {
+      top: .4em;
+      left: 1.7em;
+      transform: translate(0, -100%);
+    }
+  }
+
+  &-arrow {
+    position: absolute;
+  }
+
+  &-main {
+    padding: 1.2em;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px 0 rgba(159, 159, 159, 0.16);
+    background-color: #1866db;
+
+    &-text {
+      font-size: 1.45em;
+      font-weight: 400;
+      line-height: 1.38;
+      letter-spacing: 0.07px;
+      color: #ffffff;
+    }
+  }
+}
 
 //=================================================================
 //                      TEXT FEEDBACK
@@ -19155,6 +19240,7 @@ input {
       }
 
       &-header {
+        position: relative;
         width: 100%;
         padding: 1.7em 2.5em 1.5em;
         //height: 7.15em;
@@ -19204,6 +19290,13 @@ input {
             color: #15202b;
             opacity: 65;
           }
+        }
+
+        & svg {
+          position: absolute;
+          right: 3.1em;
+          bottom: 1.55em;
+          cursor: pointer;
         }
       }
 
@@ -19684,6 +19777,7 @@ input {
       }
 
       &-feedback {
+        position: relative;
         padding: 0 1.7em;
         padding-right: 2.2em;
         border-bottom: solid 1px #e8eaeb;
@@ -19691,8 +19785,6 @@ input {
         visibility: visible;
         transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
         min-width: 32em;
-
-
         
         @include respond(desktop-sm) {
           min-width: 28em;

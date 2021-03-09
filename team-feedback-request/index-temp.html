@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Team Feedback | Team | Feedback Request</title>
+  <link rel="stylesheet" href="../public/css/animate.css">
   <link rel="stylesheet" href="../public/css/pretty-checkbox.css" />
   <link rel="stylesheet" href="../public/css/style.css">
 </head>
@@ -367,7 +368,7 @@
                 </div>
               </div>
 
-              <div class="request-card-placeholder">
+              <div class="request-card-placeholder" style="display:none;">
                 <p class="request-card-placeholder-title">No team member selected</p>
                 <p class="request-card-placeholder-text">Please select a team member from above to start adding
                   requests.</p>
@@ -557,7 +558,8 @@
                     </div>
                     <!-- STRUCT ITEM END -->
 
-                    <button class="add-button modal-trigger" target-modal="addUsersModal">
+                    <button class="add-button modal-trigger animate__animated animate__pulse animate__infinite	infinite"
+                      target-modal="addUsersModal">
                       <div class="add-button-icon">
                         <i class="icon-add-user"></i>
                       </div>
