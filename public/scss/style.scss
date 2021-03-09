@@ -19368,16 +19368,15 @@ input {
               //   }
               // }
   
-              // & .button {
-              //   &.select {
-              //     font-size: 1.23em;
-              //     color: #087af9;
-              //   }
-              // }
+              & .button {
+                &.select {
+                  color: #087af9;
+                }
+              }
   
-              // // &:not(:last-of-type) {
-              // //   border-top: solid 1px #dee2e6;
-              // // }
+              // &:not(:last-of-type) {
+              //   border-top: solid 1px #dee2e6;
+              // }
             }
           }
         }
