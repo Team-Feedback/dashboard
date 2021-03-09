@@ -34,16 +34,7 @@
               <img src="../public/img/logo-only.png" alt="Team feedback logo" class="logo">
               <div class="custom-badge">12</div>
 
-              <div class="tutor-tooltip tutor-tooltip-01">
-                <div class="tutor-tooltip-arrow">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" viewBox="0 0 18 12">
-                    <path d="M8.2,1.067a1,1,0,0,1,1.6,0l7,9.333A1,1,0,0,1,16,12H2a1,1,0,0,1-.8-1.6Z" fill="#1866db" />
-                  </svg>
-                </div>
-                <div class="tutor-tooltip-main">
-                  <p class="tutor-tooltip-main-text">Click here to give your first feedback</p>
-                </div>
-              </div>
+
             </div>
           </div>
           <!-- <h1 class="header-main-info-title">Team Marketing</h1> -->
@@ -540,17 +531,7 @@
             </div>
 
             <div class="profile-feedback open">
-              <div class="tutor-tooltip tutor-tooltip-02">
-                <div class="tutor-tooltip-arrow">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" viewBox="0 0 18 12">
-                    <path d="M8.2,1.067a1,1,0,0,1,1.6,0l7,9.333A1,1,0,0,1,16,12H2a1,1,0,0,1-.8-1.6Z" fill="#1866db" />
-                  </svg>
-                </div>
-                <div class="tutor-tooltip-main">
-                  <p class="tutor-tooltip-main-text">Here you can like or
-                    comment a feedback.</p>
-                </div>
-              </div>
+
               <div class="profile-feedback-header">
                 <div class="profile-feedback-header-set">
                   <i class="icon-feather-thumbs-up"></i>
@@ -759,6 +740,31 @@
       </div>
       <div class="custom-modal-backdrop"></div>
     </div>
+
+    <div class="tutor-container">
+      <div class="tutor-tooltip tutor-tooltip-01 open">
+        <div class="tutor-tooltip-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" viewBox="0 0 18 12">
+            <path d="M8.2,1.067a1,1,0,0,1,1.6,0l7,9.333A1,1,0,0,1,16,12H2a1,1,0,0,1-.8-1.6Z" fill="#1866db" />
+          </svg>
+        </div>
+        <div class="tutor-tooltip-main">
+          <p class="tutor-tooltip-main-text">Click here to give your first feedback</p>
+        </div>
+      </div>
+
+      <div class="tutor-tooltip tutor-tooltip-02 open">
+        <div class="tutor-tooltip-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" viewBox="0 0 18 12">
+            <path d="M8.2,1.067a1,1,0,0,1,1.6,0l7,9.333A1,1,0,0,1,16,12H2a1,1,0,0,1-.8-1.6Z" fill="#1866db" />
+          </svg>
+        </div>
+        <div class="tutor-tooltip-main">
+          <p class="tutor-tooltip-main-text">Here you can like or
+            comment a feedback.</p>
+        </div>
+      </div>
+    </div>
   </main>
 
 
@@ -787,6 +793,7 @@
       }
 
       parent.classList.toggle('closed')
+      repositionTooltips(300)
     }
 
     function closeProfileOnSmall() {
@@ -796,11 +803,43 @@
         document.querySelector('.content-card.profile').classList.remove('closed')
         document.querySelector('.content-card.questions').classList.remove('closed')
       }
+
+      repositionTooltips()
     }
 
     closeProfileOnSmall()
 
     window.addEventListener('resize', closeProfileOnSmall)
+
+
+    function repositionTooltips(interval) {
+      const tooltip02 = document.querySelector('.tutor-tooltip-02');
+      const profileCard = document.querySelector('.content-card.profile');
+
+      if (interval) {
+        const animationInterval = setInterval(() => {
+          const viewportOffset = profileCard.getBoundingClientRect();
+          // const top = viewportOffset.top;
+          const left = viewportOffset.left;
+
+          tooltip02.style.left = `${left + 12}px`;
+        }, 50)
+
+        setTimeout(() => {
+          clearInterval(animationInterval)
+        }, interval)
+      } else {
+        const viewportOffset = profileCard.getBoundingClientRect();
+        // these are relative to the viewport, i.e. the window
+        const top = viewportOffset.top;
+        const left = viewportOffset.left;
+
+        tooltip02.style.left = `${left + 12}px`;
+      }
+
+    }
+
+    repositionTooltips()
   </script>
 
 </body>

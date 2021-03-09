@@ -18811,58 +18811,71 @@ input {
 //=================================================================
 //                      TUTOR ELEMENTS
 //=================================================================
-.tutor-tooltip {
-  display: none;
-  position: absolute;
-  bottom: 0;
+.tutor-container {
+  position: fixed;
+  top: 0;
   left: 0;
-  transform: translate(0, 100%);
-  z-index: 10000;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1000;
 
-  &.open {
-    display: block;
-  }
-
-  &-01 {
-    left: -.4em;
-    bottom: -1.8em;
-    width: 15.5em;
-
-    & .tutor-tooltip-arrow {
-      top: .4em;
-      left: 1.7em;
-      transform: translate(0, -100%);
-    }
-  }
-
-  &-02 {
-    left: -.4em;
-    bottom: -1.8em;
-    width: 15.5em;
-
-    & .tutor-tooltip-arrow {
-      top: .4em;
-      left: 1.7em;
-      transform: translate(0, -100%);
-    }
-  }
-
-  &-arrow {
+  .tutor-tooltip {
+    display: none;
     position: absolute;
-  }
-
-  &-main {
-    padding: 1.2em;
-    border-radius: 5px;
-    box-shadow: 0 3px 6px 0 rgba(159, 159, 159, 0.16);
-    background-color: #1866db;
-
-    &-text {
-      font-size: 1.45em;
-      font-weight: 400;
-      line-height: 1.38;
-      letter-spacing: 0.07px;
-      color: #ffffff;
+  
+    &.open {
+      display: block;
+    }
+  
+    &-01 {
+      left: 1.7em;
+      top: 7em;
+      width: 15.5em;
+  
+      & .tutor-tooltip-arrow {
+        top: .4em;
+        left: 1.7em;
+        transform: translate(0, -100%);
+      }
+    }
+  
+    &-02 {
+      right: 34.8em;
+      top: 30.4em;
+      width: 17.4em;
+      transform: translate(-100%, 0);
+  
+      & .tutor-tooltip-arrow {
+        top: 50%;
+        right: .6em;
+        transform: translate(100%, -50%) rotateZ(90deg);
+      }
+      
+      & .tutor-tooltip-main {
+        &-text {
+          text-align: right;
+        }
+      }
+    }
+  
+    &-arrow {
+      position: absolute;
+    }
+  
+    &-main {
+      padding: 1.2em;
+      border-radius: 5px;
+      box-shadow: 0 3px 6px 0 rgba(159, 159, 159, 0.16);
+      background-color: #1866db;
+  
+      &-text {
+        font-size: 1.45em;
+        font-weight: 400;
+        line-height: 1.38;
+        letter-spacing: 0.07px;
+        color: #ffffff;
+      }
     }
   }
 }
@@ -27312,3 +27325,5 @@ input[type='email'] {
   transform: translateZ(0) translate(0, -100%);
 }
 }
+
+
