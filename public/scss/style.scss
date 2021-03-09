@@ -19034,6 +19034,7 @@ input {
       }
 
       &.card-01 {
+        padding-bottom: 20vh;
         width: 100%;
         max-width: 46.6em;
 
@@ -19084,6 +19085,7 @@ input {
 
 
         &-label {
+          padding-left: emcalc(.2,1.25);
           margin-bottom: emcalc(1.1, 1.25);
           opacity: 0.9;
           font-size: 1.25em;
@@ -19184,9 +19186,11 @@ input {
         & .button-green-primary {
           margin: 0 auto;
           height: emcalc(4.6, 1.6);
+          min-height: emcalc(4.6, 1.6);
           font-size: 1.6em;
           font-weight: 500;
           letter-spacing: 0.2px;
+          border-radius: 5px;
         }
 
         &-text-small {
@@ -19236,6 +19240,7 @@ input {
             position: relative;
             width: 100%;
             height: 4.2em;
+            z-index: 10;
   
             &.show-button {
               & .button-add {
@@ -19339,40 +19344,40 @@ input {
                 border-bottom: solid 1px #dee2e6;
               }
   
-              &-img,
-              &-initials {
-                width: 3.75rem;
-                min-width: 3.75rem;
-                height: 3.75rem;
-                min-height: 3.75rem;
-              }
-  
-              &-initials {
-                font-size: 1.6em;
-              }
-  
-              &-set {
-                margin-left: 1.1em;
-  
-                &-name {
-                  font-size: 1.2em;
-                }
-  
-                &-position {
-                  font-size: 1.08em;
-                }
-              }
-  
-              & .button {
-                &.select {
-                  font-size: 1.23em;
-                  color: #087af9;
-                }
-              }
-  
-              // &:not(:last-of-type) {
-              //   border-top: solid 1px #dee2e6;
+              // &-img,
+              // &-initials {
+              //   width: 3.75rem;
+              //   min-width: 3.75rem;
+              //   height: 3.75rem;
+              //   min-height: 3.75rem;
               // }
+  
+              // &-initials {
+              //   font-size: 1.6em;
+              // }
+  
+              // &-set {
+              //   margin-left: 1.1em;
+  
+              //   &-name {
+              //     font-size: 1.2em;
+              //   }
+  
+              //   &-position {
+              //     font-size: 1.08em;
+              //   }
+              // }
+  
+              // & .button {
+              //   &.select {
+              //     font-size: 1.23em;
+              //     color: #087af9;
+              //   }
+              // }
+  
+              // // &:not(:last-of-type) {
+              // //   border-top: solid 1px #dee2e6;
+              // // }
             }
           }
         }
@@ -19386,7 +19391,7 @@ input {
         & .scrollable {
 
           padding-top: 2em;
-          padding-bottom: 20vh;
+          padding-bottom: 10vh;
           flex: 1;
           overflow-x: hidden;
           overflow-y: auto;
