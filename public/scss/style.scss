@@ -19073,6 +19073,7 @@ input {
       }
 
       &-main {
+        width: 100%;
         padding-top: 4.4em;
         @include flexbox();
         @include flex-direction(column);
@@ -19147,6 +19148,7 @@ input {
           @include justify-content(space-between);
   
           &-set {
+            margin-right: 1.5em;
             width: 100%;
             max-width: 31.6em;
   
@@ -19170,11 +19172,11 @@ input {
   
           & .pretty {
             margin-right: 0;
-            font-size: 3em;
+            font-size: 2.7em;
   
             & .state label:before,
             & .state label:after {
-              top: calc((0% - (100% - .95em)) - 8%)!important;
+              top: calc((0% - (100% - .96em)) - 8%)!important;
             }
           }
         }
