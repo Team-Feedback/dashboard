@@ -19017,6 +19017,22 @@ input {
       border: 0;
       box-shadow: none;
 
+      @include respond(desktop-md) {
+        font-size: .95em;
+      }
+
+      @include respond(desktop-sm) {
+        font-size: .9em;
+      }
+
+      @include respond(desktop-xsm) {
+        font-size: .85em;
+      }
+
+      @include respond(desktop-xxsm) {
+        font-size: .8em;
+      }
+
       &.card-01 {
         width: 100%;
         max-width: 46.6em;
@@ -19067,12 +19083,19 @@ input {
 
 
         &-label {
-          margin-bottom: emcalc(1.1, 1.35);
+          margin-bottom: emcalc(1.1, 1.25);
           opacity: 0.9;
-          font-size: 1.35em;
+          font-size: 1.25em;
           font-weight: 600;
           letter-spacing: normal;
           color: #0d1826;
+
+          & span {
+            opacity: 0.8;
+            font-weight: 500;
+            letter-spacing: normal;
+            color: #313a4b;
+          }
         }
 
         & .input-container {
