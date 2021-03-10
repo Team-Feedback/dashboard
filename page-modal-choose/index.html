@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Feedback | Give Feedback</title>
+
+  <link rel="stylesheet" href="../public/css/pretty-checkbox.css">
+  <link rel="stylesheet" href="../public/css/style.css">
+  <link rel="stylesheet" href="../public/css/animate.css">
+</head>
+
+<body>
+
+  <main class="main" id="page-modal">
+    <!-- Header -->
+    <div class="header small">
+      <!-- Buttons -->
+      <!-- <div class="header-buttons">
+        <div class="header-buttons-settings"><i class="icon-cog"></i></div>
+        <div class="header-buttons-help"><i class="icon-question"></i></div>
+        <div class="header-buttons-notifications"><i class="icon-bell"></i></div>
+        <div class="header-buttons-initials">M</div>
+      </div> -->
+
+      <!-- Header top -->
+      <div class="header-top">
+        <div class="header-top-logo">
+          <img src="../public/img/logo-only.png" alt="Team feedback logo" class="header-top-logo-img">
+        </div>
+        <div class="header-top-input-container">
+          <input type="text" placeholder="Search">
+          <i class="icon-search"></i>
+        </div>
+      </div>
+
+
+      <!-- Header main WHITE-->
+      <div class="header-main white-logo">
+        <div class="header-main-info">
+          <div class="header-main-info-icon side-toggle">
+            <div class="logo-container">
+              <img src="../public/img/logo-only.png" alt="Team feedback logo" class="logo">
+              <div class="custom-badge">1</div>
+
+
+            </div>
+          </div>
+          <!-- <h1 class="header-main-info-title">Team Marketing</h1> -->
+          <div class="header-dropdown">
+            <button class="header-dropdown-trigger" onClick="this.parentElement.classList.toggle('open')">
+              <h1>Team Martketing Team Martketing Team Martketing Team Martketing</h1>
+              <i class="icon-chevron-down"></i>
+            </button>
+            <div class="header-dropdown-menu">
+              <div class="header-dropdown-menu-header">
+                <div class="input-container">
+                  <input type="text" placeholder="Search for a Team">
+                  <i class="icon-search"></i>
+                </div>
+              </div>
+              <div class="header-dropdown-menu-main">
+                <div class="header-dropdown-menu-main-item active">
+                  <p class="header-dropdown-menu-main-item-text">Team Marketing</p>
+                  <span>(selected)</span>
+                  <button class="header-dropdown-menu-main-item-close"><i class="icon-close"></i></button>
+                </div>
+                <div class="header-dropdown-menu-main-item">
+                  <p class="header-dropdown-menu-main-item-text">Team Recruitment</p>
+                  <span>(selected)</span>
+                  <button class="header-dropdown-menu-main-item-close"><i class="icon-close"></i></button>
+                </div>
+                <div class="header-dropdown-menu-main-item">
+                  <p class="header-dropdown-menu-main-item-text">Team Managment</p>
+                  <span>(selected)</span>
+                  <button class="header-dropdown-menu-main-item-close"><i class="icon-close"></i></button>
+                </div>
+              </div>
+              <div class="header-dropdown-menu-footer">
+                <button class="button button-light-gradient">Create a new team</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="header-buttons">
+          <!-- <div class="header-buttons-settings"><i class="icon-cog"></i></div> -->
+          <!-- SETTINGS DROPDOWN -->
+          <div class="custom-dropdown settings-dropdown">
+            <button class="custom-dropdown-trigger">
+              <i class="icon-cog"></i>
+            </button>
+            <div class="custom-dropdown-menu settings-dropdown-menu animate__animated animate__bounceInDown">
+              <div class="settings-dropdown-menu-header">
+                <p class="settings-dropdown-menu-header-text">Settings</p>
+              </div>
+              <div class="settings-dropdown-menu-section">
+                <div class="settings-dropdown-menu-section-header">
+                  <p class="settings-dropdown-menu-section-header-text">Full screen mode</p>
+                </div>
+                <div class="settings-dropdown-menu-section-main">
+                  <div class="section-fullscreen">
+                    <div class="pretty p-default p-round">
+                      <input type="checkbox" />
+                      <div class="state p-success">
+                        <label>&nbsp;</label>
+                      </div>
+                    </div>
+
+                    <div class="section-fullscreen-set">
+                      <p class="section-fullscreen-set-title">Double click header</p>
+                      <p class="section-fullscreen-set-text">To go and exit full screen</p>
+                    </div>
+
+                    <img src="../public/img/settings-fullscreen.png" alt="Clip art" class="section-fullscreen-img">
+                  </div>
+                </div>
+              </div>
+              <div class="settings-dropdown-menu-section">
+                <div class="settings-dropdown-menu-section-header">
+                  <p class="settings-dropdown-menu-section-header-text">Content size</p>
+                </div>
+                <div class="settings-dropdown-menu-section-main">
+                  <div class="section-size">
+                    <p class="section-size-text">No adjustment</p>
+                    <div class="section-size-buttons">
+                      <button class="adjust-size minus">
+                        <i class="icon-minus-outlined"></i>
+                      </button>
+                      <button class="adjust-size plus">
+                        <i class="icon-plus-outlined"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="settings-dropdown-menu-section">
+                <div class="settings-dropdown-menu-section-header">
+                  <p class="settings-dropdown-menu-section-header-text">Appearance</p>
+                </div>
+                <div class="settings-dropdown-menu-section-main">
+                  <div class="section-appearance">
+                    <p class="section-appearance-text">Automatic <span>- Recomended</span></p>
+
+                    <div class="section-appearance-buttons">
+                      <div class="section-appearance-buttons-item"><img src="../public/img/arangment-01.png"
+                          alt="Clip art"></div>
+                      <div class="section-appearance-buttons-item active"><img src="../public/img/arangment-02.png"
+                          alt="Clip art"></div>
+                      <div class="section-appearance-buttons-item"><img src="../public/img/arangment-03.png"
+                          alt="Clip art"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="settings-dropdown-menu-section">
+                <div class="settings-dropdown-menu-section-header">
+                  <p class="settings-dropdown-menu-section-header-text">Other settings</p>
+                </div>
+                <div class="settings-dropdown-menu-section-main">
+                  <div class="section-other">
+                    <div class="section-other-item">
+                      <p class="section-other-item-text">Keep me signed in</p>
+                      <!-- add class p-switch -->
+                      <div class="pretty p-switch p-fill">
+                        <input type="checkbox" />
+                        <div class="state p-success">
+                          <label>&nbsp;</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="section-other-item">
+                      <p class="section-other-item-text">Browser notifications</p>
+                      <!-- add class p-switch -->
+                      <div class="pretty p-switch p-fill">
+                        <input type="checkbox" />
+                        <div class="state p-success">
+                          <label>&nbsp;</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header-buttons-help"><i class="icon-question"></i></div>
+          <!-- NOTIFICATION DROPDOWN -->
+          <div class="custom-dropdown notification-dropdown">
+            <div class="custom-dropdown-trigger" tabindex="-1" onclick="this.focus()">
+              <i class="icon-bell"></i>
+              <span class="notification-dropdown-trigger-amount">99</span>
+            </div>
+
+            <ul class="custom-dropdown-menu animate__animated animate__bounceInDown">
+              <li class="custom-dropdown-menu-title-big">
+                <p class="custom-dropdown-menu-title-big-text">
+                  Notifications (4)
+                </p>
+              </li>
+              <div class="placeholder">
+                <div class="placeholder-icon">
+                  <i class="icon-bell"></i>
+                </div>
+                <p class="placeholder-text">You don’t have any notifications at the moment.</p>
+              </div>
+              <li class="custom-dropdown-menu-title-small">
+                <p class="custom-dropdown-menu-title-small-text">
+                  Invitations / Rights
+                </p>
+              </li>
+              <li class="custom-dropdown-menu-notifications">
+
+                <div class="notification">
+                  <!-- <img src="../public/img/p-01.png" alt="User's profile image" class="notification-img" /> -->
+                  <div class="notification-initials">WW</div>
+                  <div class="notification-main">
+                    <p class="notification-main-text">
+                      Abdula Ahmed wants to invite you to become a
+                      <span>member</span> of the team <span>salsa-kings</span>
+                    </p>
+                    <div class="notification-main-buttons">
+                      <button class="notification-button confirm">
+                        Confirm
+                      </button>
+                      <button class="notification-button deny">Deny</button>
+                    </div>
+                    <p class="notification-main-time">1 Day ago</p>
+                  </div>
+                </div>
+
+                <div class="notification">
+                  <img src="../public/img/p-01.png" alt="User's profile image" class="notification-img" />
+                  <div class="notification-main">
+                    <p class="notification-main-text">
+                      Abdula Ahmed wants to invite you to become a
+                      <span>member</span> of the team <span>salsa-kings</span>
+                    </p>
+                    <div class="notification-main-buttons">
+                      <button class="button notification-button confirm">
+                        Confirm
+                      </button>
+                      <button class="button notification-button deny">
+                        Deny
+                      </button>
+                    </div>
+                    <p class="notification-main-time">1 Day ago</p>
+                  </div>
+                </div>
+
+                <div class="notification">
+                  <img src="../public/img/p-01.png" alt="User's profile image" class="notification-img" />
+                  <div class="notification-main">
+                    <p class="notification-main-text">
+                      Abdula Ahmed wants to invite you to become a
+                      <span>member</span> of the team <span>salsa-kings</span>
+                    </p>
+                    <div class="notification-main-buttons">
+                      <button class="button notification-button confirm">
+                        Confirm
+                      </button>
+                      <button class="button notification-button deny">
+                        Deny
+                      </button>
+                    </div>
+                    <p class="notification-main-time">1 Day ago</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="custom-dropdown user-dropdown">
+            <button class="custom-dropdown-trigger" tabindex="-1" onclick="this.focus()">
+              <!-- <div class="initials">M</div> -->
+              <img src="../public/img/p-01.png" alt="User's profile image" class="user-img">
+            </button>
+            <ul class="custom-dropdown-menu">
+              <li class="user-dropdown-menu-header">
+                <div class="user-dropdown-menu-header-set">
+                  <div class="user-dropdown-menu-header-set-initials">M</div>
+                  <div class="user-dropdown-menu-header-set-upload">
+                    <i class="icon-camera"></i>
+                  </div>
+                </div>
+                <p class="user-dropdown-menu-header-title">Max Matinpalo</p>
+                <p class="user-dropdown-menu-header-desc">
+                  Click here to add your job title
+                </p>
+              </li>
+              <li class="user-dropdown-menu-item" onclick="location.href='../user-settings-general/index.html';">Open
+                user settings</li>
+              <li class="user-dropdown-menu-item modal-trigger" target-modal="createCompanyModal">Create company</li>
+              <li class="user-dropdown-menu-item">Sign out</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="side">
+      <div class="side-menu">
+        <div class="side-menu-header">
+          <div class="custom-dropdown side-menu-dropdown">
+            <button class="custom-dropdown-trigger" tabindex="-1" onclick="this.focus()">
+              <div class="team">
+                <div class="team-initials">M</div>
+                <div class="team-set">
+                  <p class="team-set-name">Marketing</p>
+                  <p class="team-set-members">32 Members</p>
+                </div>
+              </div>
+              <div class="icons">
+                <i class="icon-chevron-up"></i>
+                <i class="icon-chevron-down"></i>
+              </div>
+            </button>
+
+            <div class="custom-dropdown-menu"
+              onmouseover="this.previousElementSibling.style.borderRadius = '9px 9px 0 0'"
+              onmouseout="this.previousElementSibling.style.borderRadius = '9px 9px 9px 9px'">
+              <div class="team">
+                <div class="team-icon">
+                  <i class="icon-company-circle"></i>
+                </div>
+                <div class="team-set">
+                  <p class="team-set-name">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                  <p class="team-set-members">Company admin area</p>
+                </div>
+                <div class="team-close"><i class="icon-close"></i></div>
+              </div>
+              <div class="team">
+                <div class="team-icon">
+                  <i class="icon-company-circle"></i>
+                </div>
+                <div class="team-set">
+                  <p class="team-set-name">Nokia</p>
+                  <p class="team-set-members">Company admin area</p>
+                </div>
+                <div class="team-close"><i class="icon-close"></i></div>
+              </div>
+              <div class="team">
+                <div class="team-initials" style="background-color: #6c00ff;">S</div>
+                <div class="team-set">
+                  <p class="team-set-name">Sales</p>
+                  <p class="team-set-members">32 Members</p>
+                </div>
+                <div class="team-close"><i class="icon-close"></i></div>
+              </div>
+              <div class="team">
+                <div class="team-initials" style="background-color: #0089ff;">C</div>
+                <div class="team-set">
+                  <p class="team-set-name">Coders</p>
+                  <p class="team-set-members">32 Members</p>
+                </div>
+                <div class="team-close"><i class="icon-close"></i></div>
+              </div>
+              <div class="team create-new">
+                <div class="team-initials"><i class="icon-plus"></i></div>
+                <div class="team-set">
+                  <p class="team-set-name">Create new</p>
+                </div>
+                <div class="team-close"><i class="icon-close"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="side-menu-main">
+          <div class="side-menu-main-list">
+            <button class="side-menu-main-list-item active">
+              <i class="icon-half-star"></i>
+              <p class="side-menu-main-list-item-text">Give feedback</p>
+            </button>
+            <button class="side-menu-main-list-item">
+              <i class="icon-chart-bar"></i>
+              <p class="side-menu-main-list-item-text">Feedback charts</p>
+            </button>
+            <button class="side-menu-main-list-item">
+              <i class="icon-users"></i>
+              <p class="side-menu-main-list-item-text">Team members</p>
+            </button>
+            <button class="side-menu-main-list-item">
+              <i class="icon-chat"></i>
+              <p class="side-menu-main-list-item-text">Team feedback</p>
+            </button>
+            <button class="side-menu-main-list-item">
+              <i class="icon-cog-full"></i>
+              <p class="side-menu-main-list-item-text">Settings</p>
+            </button>
+          </div>
+
+          <div class="side-menu-main-list">
+            <div class="side-menu-main-list-item title">
+              <p class="side-menu-main-list-item-text">SHORTCUTS</p>
+            </div>
+            <button class="side-menu-main-list-item">
+              <i class="icon-git-pull"></i>
+              <p class="side-menu-main-list-item-text">Feedback requests</p>
+            </button>
+            <button class="side-menu-main-list-item">
+              <i class="icon-add-user"></i>
+              <p class="side-menu-main-list-item-text">Invite new members</p>
+            </button>
+          </div>
+
+          <div class="footer-button">
+            <button class="button button-primary">
+              <i class="icon-plus"></i>
+              Create a new team
+            </button>
+          </div>
+        </div>
+
+        <!-- <div class="side-menu-footer">
+          <button class="button button-primary">
+            <i class="icon-plus"></i>
+            Create a new team
+          </button>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="side">
+      <div class="side-menu">
+        <div class="side-menu-header">
+          <div class="custom-dropdown side-menu-dropdown">
+            <button class="custom-dropdown-trigger" tabindex="-1" onclick="this.focus()">
+              <div class="team">
+                <div class="team-initials">M</div>
+                <div class="team-set">
+                  <p class="team-set-name">Marketing</p>
+                  <p class="team-set-members">32 Members</p>
+                </div>
+              </div>
+              <div class="icons">
+                <i class="icon-chevron-up"></i>
+                <i class="icon-chevron-down"></i>
+              </div>
+            </button>
+
+            <div class="custom-dropdown-menu"
+              onmouseover="this.previousElementSibling.style.borderRadius = '9px 9px 0 0'"
+              onmouseout="this.previousElementSibling.style.borderRadius = '9px 9px 9px 9px'">
+              <div class="team">
+                <div class="team-icon">
+                  <i class="icon-company-circle"></i>
+                </div>
+                <div class="team-set">
+                  <p class="team-set-name">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                  <p class="team-set-members">Company admin area</p>
+                </div>
+                <div class="team-close"><i class="icon-close"></i></div>
+              </div>
+              <div class="team">
+                <div class="team-icon">
+                  <i class="icon-company-circle"></i>
+                </div>
+                <div class="team-set">
+                  <p class="team-set-name">Nokia</p>
+                  <p class="team-set-members">Company admin area</p>
+                </div>
+                <div class="team-close"><i class="icon-close"></i></div>
+              </div>
+              <div class="team">
+                <div class="team-initials" style="background-color: #6c00ff;">S</div>
+                <div class="team-set">
+                  <p class="team-set-name">Sales</p>
+                  <p class="team-set-members">32 Members</p>
+                </div>
+                <div class="team-close"><i class="icon-close"></i></div>
+              </div>
+              <div class="team">
+                <div class="team-initials" style="background-color: #0089ff;">C</div>
+                <div class="team-set">
+                  <p class="team-set-name">Coders</p>
+                  <p class="team-set-members">32 Members</p>
+                </div>
+                <div class="team-close"><i class="icon-close"></i></div>
+              </div>
+              <div class="team create-new">
+                <div class="team-initials"><i class="icon-plus"></i></div>
+                <div class="team-set">
+                  <p class="team-set-name">Create new</p>
+                </div>
+                <div class="team-close"><i class="icon-close"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="side-menu-main">
+          <div class="side-menu-main-list">
+            <button onclick="location.href='../give-feedback-new/index-temp.html';"
+              class="side-menu-main-list-item active">
+              <i class="icon-half-star"></i>
+              <p class="side-menu-main-list-item-text">Give feedback</p>
+            </button>
+            <button onclick="location.href='../team-members-table/index.html';" class="side-menu-main-list-item">
+              <i class="icon-users"></i>
+              <p class="side-menu-main-list-item-text">Team members</p>
+            </button>
+            <button onclick="location.href='../widgets/index.html';" class="side-menu-main-list-item">
+              <i class="icon-chart-bar"></i>
+              <p class="side-menu-main-list-item-text">Feedback charts</p>
+            </button>
+            <button onclick="location.href='../team-feedback/index.html';" class="side-menu-main-list-item">
+              <i class="icon-chat"></i>
+              <p class="side-menu-main-list-item-text">Team feedback</p>
+            </button>
+            <button onclick="location.href='../team-settings-general/index.html';" class="side-menu-main-list-item">
+              <i class="icon-cog-full"></i>
+              <p class="side-menu-main-list-item-text">Settings</p>
+            </button>
+          </div>
+
+          <div class="side-menu-main-list">
+            <div class="side-menu-main-list-item title">
+              <p class="side-menu-main-list-item-text">SHORTCUTS</p>
+            </div>
+            <button onclick="location.href='../feedback-request/index-temp.html';" class="side-menu-main-list-item">
+              <i class="icon-git-pull"></i>
+              <p class="side-menu-main-list-item-text">Feedback requests</p>
+            </button>
+            <button class="side-menu-main-list-item">
+              <i class="icon-add-user"></i>
+              <p class="side-menu-main-list-item-text">Invite new members</p>
+            </button>
+          </div>
+
+          <div class="footer-button">
+            <button class="button button-primary">
+              <i class="icon-plus"></i>
+              Create a new team
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="content-card card-05">
+          <div class="content-card-main">
+            <p class="content-card-main-title">How would you like to get started</p>
+            <p class="content-card-main-text">Get started with three simple steps.</p>
+
+            <div class="cards">
+              <div class="card">
+                <img src="../public/img/company-choose-01.png" alt="Clip art" class="card-img">
+                <p class="card-title">Join a registered company</p>
+                <p class="card-text">Invitation required</p>
+
+                <button class="button button-primary">Continue</button>
+              </div>
+
+              <div class="divider"></div>
+
+              <div class="card">
+                <img src="../public/img/company-choose-02.png" alt="Clip art" class="card-img">
+                <p class="card-title">Register a new team</p>
+                <p class="card-text">Basic features free of charge</p>
+
+                <button class="button button-primary">Continue</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+  </main>
+
+
+  <script src="../public/js/main.js"></script>
+  <script src="../public/js/tm-grid.js"></script>
+
+</body>
+
+</html>

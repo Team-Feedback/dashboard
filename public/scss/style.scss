@@ -5973,6 +5973,7 @@ input {
         @include flexbox();
         @include align-items(flex-start);
         @include justify-content(space-between);
+        
 
         & .divider {
           height: 100%;
@@ -5981,6 +5982,7 @@ input {
 
         & .card {
           margin: 0 5em;
+
 
           &-img {
             margin-bottom: 3.5em;
@@ -11868,30 +11870,29 @@ input {
         text-overflow: ellipsis;
 
         &-title {
-          margin-bottom: emcalc(1, 1.58);
-          font-size: 1.58em;
-          font-weight: 500;
-          letter-spacing: -0.12px;
-          color: #394158;
+          margin-bottom: emcalc(1.3,1.8);
+          font-size: 1.8em;
+          font-weight: 600;
+          letter-spacing: normal;
+          color: #26303c;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
         }
         &-text {
-          font-size: 1.23em;
-          // font-family: "Inter-Regular";
+          font-size: 1.25em;
           font-weight: 400;
-          line-height: 1.31;
-          letter-spacing: -0.03px;
-          color: #435365;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
+          letter-spacing: 0.16px;
+          color: #26303c;
 
           & button {
             font-weight: 500;
             color: #087af9;
-            text-decoration: underline;
+
+            &:hover {
+              cursor: pointer;
+              text-decoration: underline;
+            }
           }
         }
       }
@@ -13469,7 +13470,7 @@ input {
     height: 100%;
 
     &-card {
-      padding: 0 3em;
+      padding: 0 4em;
       width: 100%;
       height: 100%;
       max-height: 100%;
@@ -13479,31 +13480,34 @@ input {
       border-bottom-right-radius: 0;
 
       &-header {
-        padding-top: 2.2em;
-        padding-bottom: 1.8em;
+        // padding-top: 2.2em;
+        // padding-bottom: 1.8em;
+        padding-top: 3.2em;
+        padding-bottom: 3em;
         @include flex-direction(column);
         @include justify-content(flex-start);
         @include align-items(flex-start);
         border-bottom: solid 1px #ededed;
 
         &-title {
-          margin-bottom: emcalc(1, 1.75);
-          font-size: 1.75em;
+          margin-bottom: emcalc(1.3,1.8);
+          font-size: 1.8em;
           font-weight: 600;
-          color: #172b4d;
+          letter-spacing: normal;
+          color: #26303c;
         }
 
         &-text {
-          font-size: 1.35em;
+          font-size: 1.25em;
           font-weight: 400;
-          letter-spacing: -0.03px;
-          color: #435365;
+          letter-spacing: 0.16px;
+          color: #26303c;
         }
       }
 
       &-body {
         height: 100%;
-        max-height: calc(100% - 8.9em);
+        max-height: calc(100% - 11.4em);
         overflow-y: auto;
         scrollbar-width: none;
         /* Firefox */
@@ -14340,7 +14344,7 @@ input {
 
     &-card {
       max-width: 90em;
-      padding: 3.2em 4.1em 4em;
+      padding: 3.2em 4em 4em;
       padding-right: 5.7em;
       box-shadow: 0 3px 6px 0 rgba(191, 191, 191, 0.11);
       border: solid 1px #e4e8ec;
@@ -14369,7 +14373,7 @@ input {
       &-header {
         @include flex-direction(column);
         @include align-items(flex-start);
-        margin-bottom: 2.7em;
+        margin-bottom: 3em;
 
         & .custom-dropdown {
           margin-right: 2em;
@@ -14510,19 +14514,18 @@ input {
         }
 
         &-title {
-          margin-bottom: emcalc(1, 1.6);
-          font-size: 1.6em;
-          font-weight: 400;
-          letter-spacing: -0.04px;
-          color: #0a1533;
+          margin-bottom: emcalc(1.3,1.8);
+          font-size: 1.8em;
+          font-weight: 600;
+          letter-spacing: normal;
+          color: #26303c;
         }
 
         &-text {
-          margin-bottom: emcalc(2.5, 1.23);
-          font-size: 1.23em;
+          font-size: 1.25em;
           font-weight: 400;
-          letter-spacing: -0.03px;
-          color: #435365;
+          letter-spacing: 0.16px;
+          color: #26303c;
         }
 
         &-bottom {
@@ -15755,6 +15758,7 @@ input {
         box-shadow: 0 3px 6px 0 rgba(191, 191, 191, 0.11);
         border: solid 1px #e4e8ec;
         background-color: #ffffff;
+        max-height: calc(100vh - 15.2rem);
       }
 
       &-header {
@@ -15770,12 +15774,11 @@ input {
         }
 
         &-title {
-          margin-bottom: emcalc(1.3, 1.75);
-          font-size: 1.75em;
-          font-weight: 600;
-          line-height: 1.2;
-          letter-spacing: normal;
-          color: #172b4d;
+          margin-bottom: emcalc(1.3,1.8)!important;
+          font-size: 1.8em!important;
+          font-weight: 600!important;
+          letter-spacing: normal!important;
+          color: #26303c!important;
 
           & span {
             font-weight: 400;
@@ -15878,7 +15881,7 @@ input {
   & .content {
     padding-bottom: 5.3em;
     &-card {
-      padding: 3.2em 4em 0;
+      padding: 3.3em 4.1em 0;
 
       & .fake-card-team-members-table {
         height: 100%!important;
@@ -15894,11 +15897,20 @@ input {
         @include justify-content(space-between);
 
         &-text {
-          opacity: 0.85;
-          font-size: 1.3em;
+          font-size: 1.25em;
           font-weight: 400;
           letter-spacing: 0.16px;
-          color: #0d1826;
+          color: #26303c;
+
+          & button {
+            font-weight: 500;
+            color: #087af9;
+
+            &:hover {
+              cursor: pointer;
+              text-decoration: underline;
+            }
+          }
         }
 
         &-caption {}
@@ -16214,9 +16226,9 @@ input {
   & .content {
     &-card {
       max-width: 89.9em;
-      padding-left: 4.2em;
+      padding-left: 4.1em;
       padding-right: 4em;
-      padding-top: 3.6em;
+      padding-top: 3.3em;
       &-header {
         &-bottom {
           @include align-items(flex-end);
@@ -16393,7 +16405,7 @@ input {
       height: auto;
       max-height: 100%;
       padding: 3.9em;
-      padding-left: 4.1em;
+      padding-left: 4em;
       padding-bottom: 4.3em;
       padding-top: 0;
       max-width: 89.9em;
@@ -16413,7 +16425,7 @@ input {
 
       &-header {
         padding-top: 0em;
-        padding-top: 3.5em;
+        padding-top: 3.2em;
         position: sticky;
         position: -webkit-sticky;
         position: -moz-sticky;
@@ -16421,7 +16433,7 @@ input {
         position: -o-sticky;
         top: 0;
         width: 100%;
-        padding-bottom: 2.6em;
+        padding-bottom: 3em;
         @include flex-direction(column);
         @include align-items(flex-start);
         background-color: #fff;
@@ -16429,12 +16441,11 @@ input {
         z-index: 10;
 
         &-title {
-          margin-bottom: emcalc(0.8, 1.6);
-          font-size: 1.6em;
-          // font-family: "Inter-Regular";
-          font-weight: 400;
-          letter-spacing: -0.08px;
-          color: var(--color-black);
+          margin-bottom: emcalc(1.3,1.8);
+          font-size: 1.8em;
+          font-weight: 600;
+          letter-spacing: normal;
+          color: #26303c;
         }
 
         // &-caption {
@@ -18991,7 +19002,7 @@ input {
   & .content {
     padding: 0;
     //padding-top: calc(20vh - 6.2em);
-    padding: calc(20vh - 6.2em) 6% 0;
+    padding: 0 6% 0;
     width: 100%;
     height: 100%;
     max-height: 100%;
@@ -19004,6 +19015,7 @@ input {
 
     &-card {
       padding: 0;
+      padding-top: calc(20vh - 6.2em);
       margin: 0 auto;
       @include flexbox();
       @include flex-direction(column);
@@ -19050,6 +19062,343 @@ input {
 
       }
 
+      &.card-03 {
+        padding-bottom: 20vh;
+        width: 100%;
+        
+        & .content-card-main {
+          padding-top: 5.7em;
+          margin: 0 auto;
+          max-width: 46.6em;
+
+          & .input-container {
+            margin-bottom: 7em;
+          }
+        }
+
+        & .button-green-primary {
+          margin-bottom: emcalc(2, 1.6);
+          padding: 0 emcalc(6.6, 1.6);
+        }
+      }
+
+      &.card-04 {
+        & .content-card-main {
+          padding-top: 0;
+          @include align-items(center);
+
+          &-logo {
+            margin-bottom: 9em;
+            min-width: 0;
+            width: 100%;
+            max-width: 17.5em;
+          }
+    
+          &-title {
+            opacity: .87;
+            margin-bottom: emcalc(3.7, 3.6);
+            font-size: 3.6em;
+            font-weight: 600;
+            letter-spacing: normal;
+            color: #0d1826;
+          }
+    
+          &-text {
+            margin-bottom: emcalc(4.8, 1.63);
+            font-size: 1.6em;
+            font-weight: 400;
+            letter-spacing: 0.2px;
+            text-align: center;
+            color: #0d1826;
+            opacity: .85;
+          }
+    
+          & .button-green-primary {
+            margin-bottom: emcalc(2, 1.6);
+            padding: 0 emcalc(6.6, 1.6);
+          }
+        }
+      }
+
+      &.card-05 {
+        padding-top: calc(18.4vh - 6.2em);
+        max-width: 80.5em;
+        & .content-card-main {
+          padding-top: 0;
+          @include align-items(center);
+
+          &-title {
+            margin-bottom: emcalc(1.9, 3.2);
+             font-size: 3.2em;
+            font-weight: 600;
+            letter-spacing: normal;
+            color: #0d1826;
+          }
+    
+          &-text {
+            max-width: emcalc(40.4, 1.6);
+            margin-bottom: 8.5vh;
+            opacity: 0.85;
+            font-size: 1.6em;
+            font-weight: 400;
+            letter-spacing: 0.19px;
+            color: #0d1826;
+          }
+    
+          & .cards {
+            width: 100%;
+            max-width: 70.4em;
+            @include flexbox();
+            @include align-items(flex-start);
+            @include justify-content(space-between);
+    
+            & .divider {
+              height: 100%;
+              border-right: solid 1.8px rgba(219, 219, 219, 0.27);
+            }
+    
+            & .card {
+              margin: 0 5em;
+              text-align: center;
+              @include flexbox();
+              @include flex-direction(column);
+              @include align-items(center);
+              @include justify-content(flex-start);
+    
+              &-img {
+                margin-bottom: 3.5em;
+                width: 28.5em;
+                border-radius: 10px;
+              }
+    
+              &-title {
+                margin-bottom: emcalc(1.6, 2);
+                font-size: 2em;
+                font-weight: 500;
+                letter-spacing: 0.15px;
+                color: #0d1826;
+              }
+    
+              &-text {
+                margin-bottom: emcalc(2.8, 1.35);
+                font-size: 1.35em;
+                font-weight: 400;
+                letter-spacing: .1px;
+                color: #0d1826;
+                opacity: .6;
+              }
+    
+              & .button {
+                width: 100%;
+                max-width: emcalc(18.7, 1.48);
+                height: emcalc(4.2, 1.48);
+                font-size: 1.48em;
+                font-weight: 500;
+                letter-spacing: 0.07px;
+                border-radius: 4px;
+              }
+    
+              &:first-of-type {
+                margin-left: 0;
+              }
+    
+              &:last-of-type {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+
+      &.card-06 {
+        padding-top: calc(20vh - 6.2em);
+        max-width: 80.5em;
+
+        & .content-card-main {
+          padding-top: 0;
+          @include align-items(center);
+
+          &-title {
+            margin-bottom: emcalc(1.9, 3.2);
+            font-size: 3.2em;
+            font-weight: 600;
+            letter-spacing: normal;
+            color: #0d1826;
+            text-align: center;
+          }
+    
+          &-text {
+            max-width: emcalc(40.4, 1.5);
+            opacity: 0.85;
+            font-size: 1.5em;
+            font-weight: 400;
+            line-height: 1.53;
+            letter-spacing: 0.19px;
+            color: #0d1826;
+            text-align: center;
+          }
+    
+          &-img {
+            margin-top: 4vh;
+            margin-bottom: 7vh;
+            width: 100%;
+            max-width: 26.5em;
+          }
+    
+          & .button-primary {
+            margin-bottom: emcalc(2, 1.6);
+            padding: 0 emcalc(4, 1.6);
+            height: emcalc(4.6, 1.6);
+            font-size: 1.6em;
+            min-width: emcalc(28, 1.6);
+            margin-bottom: 2.2rem;
+            border-radius: 5px;
+          }
+    
+          &-text-bottom {
+            opacity: 0.7;
+            font-size: 1.2em;
+            font-weight: 400;
+            letter-spacing: 0.03px;
+            color: #0d1826;
+          }
+        }
+      }
+
+      &.card-07 {
+        padding-top: calc(20vh - 6.2em);
+        max-width: 80.5em;
+
+        & .content-card-main {
+          padding-top: 0;
+          @include align-items(center);
+
+          &-title {
+            margin-bottom: emcalc(1.9, 3.2);
+            font-size: 3.2em;
+            font-weight: 600;
+            letter-spacing: normal;
+            color: #0d1826;
+            text-align: center;
+          }
+    
+          &-text {
+            max-width: emcalc(40.4, 1.5);
+            opacity: 0.85;
+            font-size: 1.5em;
+            font-weight: 400;
+            line-height: 1.53;
+            letter-spacing: 0.19px;
+            color: #0d1826;
+            text-align: center;
+          }
+    
+          &-icon {
+            margin: 7.4vh 0 4.3vh;
+            min-width: 17.5em;
+            min-height: 17.5em;
+            width: 17.5em;
+            height: 17.5em;
+            max-width: 17.5em;
+            max-height: 17.5em;
+            @include inline-flex();
+            @include align-items(center);
+            @include justify-content(center);
+            background-image: linear-gradient(to bottom, #ffce00, #ffa700);
+            border-radius: 9999px;
+
+            & svg {
+
+            }
+          }
+
+          &-company {
+            margin-bottom: emcalc(1.2,2.05);
+            font-size: 2.05em;
+            font-weight: 500;
+            letter-spacing: normal;
+            color: #0d1826;
+          }
+
+          &-inviter {
+            margin-bottom: 7.2vh;
+            opacity: 0.7;
+            font-size: 1.38em;
+            font-weight: 400;
+            letter-spacing: 0.17px;
+            color: #0d1826;
+          }
+    
+          & .button-primary {
+            margin-bottom: emcalc(2, 1.6);
+            padding: 0 emcalc(4, 1.6);
+            height: emcalc(4.6, 1.6);
+            font-size: 1.6em;
+            min-width: emcalc(28, 1.6);
+            margin-bottom: 2.2rem;
+            border-radius: 5px;
+          }
+    
+          &-text-bottom {
+            opacity: 0.7;
+            font-size: 1.2em;
+            font-weight: 400;
+            letter-spacing: 0.03px;
+            color: #0d1826;
+          }
+        }
+      }
+
+      &.card-08 {
+        width: 100%;
+        max-width: 99.7em;
+
+        & .content-card-main {
+          &-buttons {
+            & .button {
+              padding: 0 emcalc(5.6, 1.6);
+              margin: 0 auto!important;
+
+              & i {
+                margin-left: emcalc(1.1, 1.6);
+                font-size: emcalc(1.7, 1.6);
+              }
+            }
+          }
+        }
+      }
+
+      &.card-09 {
+        padding-top: calc(34vh - 6.2em);
+        padding-bottom: 20vh;
+        width: 100%;
+        max-width: 54em;
+
+        & .content-card-header {
+          &-title {
+            margin-bottom: emcalc(3,3.2);
+          }
+
+          &-subtitle {
+            opacity: 0.85;
+            font-size: 1.6em;
+            font-weight: 400;
+            line-height: 1.69;
+            letter-spacing: 0.2px;
+            color: #0d1826;
+          }
+        }
+
+        & .content-card-main {
+          padding-top: 3.8em;
+        }
+
+        & .button-green-primary {
+          margin-bottom: emcalc(1.8, 1.6);
+          padding: 0 emcalc(2.9, 1.6);
+        }
+      }
+
       &-header {
         @include flexbox();
         @include flex-direction(column);
@@ -19062,6 +19411,7 @@ input {
           font-weight: 400;
           letter-spacing: 0.19px;
           color: #0d1826;
+          text-align: center;
         }
   
         &-title {
@@ -19070,6 +19420,7 @@ input {
           font-weight: 600;
           letter-spacing: normal;
           color: #0d1826;
+          text-align: center;
         }
       }
 
@@ -19136,6 +19487,11 @@ input {
               font-weight: 400;
               letter-spacing: normal;
               color: #0d1826;
+            }
+
+            & i {
+              font-size: 1.8em;
+              color: rgba($color: #000000, $alpha: .63);
             }
           }
         }
@@ -19850,20 +20206,18 @@ input {
         border-bottom: solid 1px rgba($color: #e4e6e9, $alpha: .75);
 
         &-title {
-          margin-bottom: emcalc(1.2,1.8);
-          opacity: 0.9;
+          margin-bottom: emcalc(1.3,1.8);
           font-size: 1.8em;
           font-weight: 600;
           letter-spacing: normal;
-          color: #0d1826;
+          color: #26303c;
         }
 
         &-text {
-          opacity: 0.9;
-          font-size: 1.3em;
+          font-size: 1.25em;
           font-weight: 400;
           letter-spacing: 0.16px;
-          color: #0d1826;
+          color: #26303c;
 
           & button {
             font-weight: 500;
