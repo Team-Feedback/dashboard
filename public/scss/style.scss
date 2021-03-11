@@ -8920,12 +8920,13 @@ input {
 
 #successModal {
   & .custom-modal {
-    padding: 6.1em 4em 7.8em;
+
     width: 70.6em;
     border-radius: 7.5px;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 
     &-body {
+      padding: 6.1em 4em 7.8em;
       @include flexbox();
       @include flex-direction(column);
       @include align-items(center);
