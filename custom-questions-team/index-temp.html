@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Team Feedback | Custom Questions Teams</title>
+  <link rel="stylesheet" href="../public/css/animate.css">
   <link rel="stylesheet" href="../public/css/style.css">
 </head>
 
@@ -13,7 +14,6 @@
   <main class="main" id="custom-questions-team">
     <!-- Header -->
     <div class="header small">
-
 
       <!-- Header top -->
       <div class="header-top">
@@ -411,7 +411,9 @@
                 </div>
               </div>
 
-              <button class="button button-green-primary">&#65291; ADD NEW QUESTION</button>
+              <button
+                class="button button-green-primary animate__animated animate__pulse animate__infinite	infinite">&#65291;
+                ADD NEW QUESTION</button>
             </div>
 
           </div>
@@ -1113,6 +1115,21 @@
               <div class="custom-dropdown-trigger" tabindex="-1" onclick="this.focus()">
                 <p class="value">At least once per month</p>
                 <i class="icon-caret-down"></i>
+
+                <div class="tutor-tooltip tutor-tooltip-frequency-dropdown open absolute">
+                  <div class="tutor-tooltip-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="14" viewBox="0 0 22 14">
+                      <path
+                        d="M9.821,1.5a1.5,1.5,0,0,1,2.359,0l7.914,10.072A1.5,1.5,0,0,1,18.914,14H3.086a1.5,1.5,0,0,1-1.179-2.427Z"
+                        fill="#1177ef" />
+                    </svg>
+                  </div>
+                  <div class="tutor-tooltip-main">
+                    <p class="tutor-tooltip-main-title">Frequency</p>
+                    <p class="tutor-tooltip-main-text">Here you can select how often this feedback should be collected
+                      in your team.</p>
+                  </div>
+                </div>
               </div>
               <div class="custom-dropdown-menu">
                 <div class="custom-dropdown-menu-item">

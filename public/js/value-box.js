@@ -20,7 +20,7 @@ var ro = new ResizeObserver(entries => {
         let scale = 0;
         let rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
 
-        console.log((parseInt(getComputedStyle(valueBoxItemAmount).fontSize)) * ((valueBoxItem.clientWidth / valueBoxItemAmount.clientWidth) / rem))
+        // console.log((parseInt(getComputedStyle(valueBoxItemAmount).fontSize)) * ((valueBoxItem.clientWidth / valueBoxItemAmount.clientWidth) / rem))
 
 
 
