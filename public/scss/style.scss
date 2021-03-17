@@ -21379,6 +21379,121 @@ input {
         }
       }
 
+      &.card-13 {
+        width: 100%;
+        //max-width: 80.5em;
+
+        & .content-card-main {
+          padding-top: 0;
+          @include align-items(center);
+          width: 100%;
+          max-width: 46.6em;
+
+          &-title {
+            margin-bottom: emcalc(1.9, 3.2);
+            font-size: 3.2em;
+            font-weight: 600;
+            letter-spacing: normal;
+            color: #0d1826;
+            text-align: center;
+          }
+    
+          &-text {
+            opacity: 0.85;
+            font-size: 1.5em;
+            font-weight: 400;
+            line-height: 1.53;
+            letter-spacing: 0.19px;
+            color: #0d1826;
+            text-align: center;
+          }
+
+          &-label {
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+          }
+
+          &-upload {
+            margin-bottom: emcalc(5, 1.45);
+            opacity: 0.7;
+            font-size: 1.45em;
+            font-weight: 500;
+            letter-spacing: -0.07px;
+            color: #333333;
+          }
+    
+          &-icon {
+            margin: 7.4vh 0 2.5em;
+            min-width: 17.5em;
+            min-height: 17.5em;
+            width: 17.5em;
+            height: 17.5em;
+            max-width: 17.5em;
+            max-height: 17.5em;
+            @include inline-flex();
+            @include align-items(center);
+            @include justify-content(center);
+            background-image: linear-gradient(to bottom, #ffce00, #ffa700);
+            border-radius: 9999px;
+
+            & svg {
+
+            }
+          }
+
+          &-img {
+            margin: 7.4vh 0 2.5em;
+            min-width: 17.5em;
+            min-height: 17.5em;
+            width: 17.5em;
+            height: 17.5em;
+            max-width: 17.5em;
+            max-height: 17.5em;
+            @include inline-flex();
+            @include align-items(center);
+            @include justify-content(center);
+            border-radius: 9999px;
+            object-fit: cover;
+          }
+
+          &-company {
+            margin-bottom: emcalc(1.2,2.05);
+            font-size: 2.05em;
+            font-weight: 500;
+            letter-spacing: normal;
+            color: #0d1826;
+          }
+
+          &-inviter {
+            margin-bottom: 7.2vh;
+            opacity: 0.7;
+            font-size: 1.38em;
+            font-weight: 400;
+            letter-spacing: 0.17px;
+            color: #0d1826;
+          }
+    
+          & .button-primary {
+            margin-bottom: emcalc(2, 1.6);
+            padding: 0 emcalc(4, 1.6);
+            height: emcalc(4.6, 1.6);
+            font-size: 1.6em;
+            min-width: emcalc(28, 1.6);
+            margin-bottom: 2.2rem;
+            border-radius: 5px;
+          }
+    
+          &-text-bottom {
+            opacity: 0.7;
+            font-size: 1.2em;
+            font-weight: 400;
+            letter-spacing: 0.03px;
+            color: #0d1826;
+          }
+        }
+      }
+
       &-header {
         width: 100%;
         max-width:79em;
