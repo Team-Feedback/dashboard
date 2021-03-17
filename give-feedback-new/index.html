@@ -47,6 +47,9 @@
 
             </div>
           </div>
+          <h1 class="full-size-title">Back to feedback data</h1>
+          <p class="full-size-hover card-resize-trigger">Back to normal mode <i class="icon-arrow-down"></i></p>
+
           <!-- <h1 class="header-main-info-title">Team Marketing</h1> -->
           <div class="header-dropdown">
             <button class="header-dropdown-trigger" onClick="this.parentElement.classList.toggle('open')">
@@ -544,9 +547,9 @@
     <!-- Content -->
     <div class="content-wrapper">
       <div class="content">
-        <div class="card-resize">
+        <div class="card-resize card-resize-trigger">
           <i class="icon-fullscreen-enter"></i>
-          <i class="icon-fullscreen-exit"></i>
+          <!-- <i class="icon-fullscreen-exit"></i> -->
         </div>
         <div class="content-card">
 
@@ -2345,12 +2348,15 @@
   </script>
 
   <script>
-    const cardResize = document.querySelector('.card-resize');
+    const cardResizeTriggers = document.querySelectorAll('.card-resize-trigger');
+    const cardResizeContainer = document.querySelector('.card-resize');
     const currentMain = document.querySelector('#give-feedback-new');
 
-    cardResize.addEventListener('click', function (e) {
-      currentMain.classList.toggle('full-size');
-      e.currentTarget.classList.toggle('active');
+    cardResizeTriggers.forEach(e => {
+      e.addEventListener('click', function (e) {
+        currentMain.classList.toggle('full-size');
+        cardResizeContainer.classList.toggle('active');
+      })
     })
   </script>
 
