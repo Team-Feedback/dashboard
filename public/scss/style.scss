@@ -17408,6 +17408,16 @@ input {
         & .header-dropdown {
           display: none!important;
         }
+
+        & .full-size-title {
+          
+          display: inline-block!important;
+        }
+
+        & .full-size-hover {
+          
+          display: inline-block!important;
+        }
       }
 
       &:hover {
@@ -17421,11 +17431,13 @@ input {
           }
 
           & .full-size-title {
-            display: inline-block!important;
+            opacity: 1;
+            
           }
 
           & .full-size-hover {
-            display: inline-block!important;
+            opacity: 1;
+            
           }
         }
       }
@@ -17455,12 +17467,15 @@ input {
 
   & .header {
     & .full-size-title {
+      padding-left: 0.9rem;
       display: none;
       font-size: 2.15em;
       font-weight: 600;
       letter-spacing: 0.05px;
       color: #0d1826;
       cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
     }
 
     & .full-size-hover {
@@ -17477,6 +17492,8 @@ input {
       letter-spacing: normal;
       color: #838383;
       cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
     }
   }
 
