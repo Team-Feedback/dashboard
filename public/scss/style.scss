@@ -17398,15 +17398,34 @@ input {
 
     & .header-main {
       border-color: #fff!important;
+
+      &-info-icon {
+        border-right: 0!important;
+      }
+
+      & .header-dropdown {
+        display: none!important;
+      }
     }
     
     & .content {
       padding: 0!important;
 
       &-card {
-        padding: 4.8em 7em 2em!important;
+        //padding: 6.6em 9.2em 0;
+        padding: 4.5em 9.2em 0;
+        // padding: 4.8em 7em 2em!important;
         border-radius: 0!important;
         border-color: #fff!important;
+
+        & .caption-title {
+          margin-bottom: emcalc(2.6,2.8)!important;
+          font-size: 2.8em!important;
+        }
+
+        & .caption-bottom {
+          padding-bottom: 3.2em;
+        }
       }
     }
   }
@@ -17417,6 +17436,7 @@ input {
     padding: 2em;
     padding-left: 4em;
     padding-right: 4em;
+    padding-bottom: 0;
     -webkit-transition: padding .2s ease-in-out;
     transition: padding .2s ease-in-out;
     -webkit-backface-visibility: hidden;
@@ -17464,12 +17484,13 @@ input {
       width: 100%;
       max-height: 100%;
       //max-width: 88.1em;
-      padding: 2.8em 3em 0;
+      padding: 4.6em 5.2em 0;
       box-shadow: none;
       z-index: 10;
-      border-radius: 6px;
+      border-radius: 6px 6px 0 0;
       box-shadow: 0 3px 6px 0 rgba(226, 226, 226, 0.11);
       border: solid 1px #e4e8ec;
+      border-bottom: 0;
       overflow-y: auto;
       scrollbar-width: none;
       /* Firefox */
@@ -17920,25 +17941,24 @@ input {
 
         &.big {
           padding-top: 0;
-
-          & .caption-title {
-            margin-bottom: emcalc(2.7, 2.8);
-          }
         }
+
         &-title {
-          margin-bottom: emcalc(2.6, 2.8);
-          font-size: 2.8em;
+          margin-bottom: emcalc(2, 2.2);
+          font-size: 2.2em;
           font-weight: 600;
           color: #121f36;
+          transition: font-size .2s ease-in-out, margin-bottom .2s ease-in-out;
         }
 
         &-bottom {
-          padding-bottom: 3.5em;
+          padding-bottom: 2.8em;
           @include flexbox();
           @include align-items(center);
           @include justify-content(space-between);
           border-bottom: 1.5px solid #f0f0f0;
           white-space: nowrap;
+          transition: padding-bottom .2s ease-in-out;
 
           & .options {
             @include flexbox();
