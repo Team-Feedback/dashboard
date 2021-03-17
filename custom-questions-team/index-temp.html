@@ -344,14 +344,19 @@
     <div class="content-wrapper">
       <div class="content">
         <div class="content-card">
-
-          <div class="content-card-header">
-
+          <div class="content-card-header-caption-wrapper">
             <div class="content-card-header-caption">
               <p class="content-card-header-caption-title">Feedback settings</p>
               <p class="content-card-header-caption-text">Which questions would you like to ask your team members</p>
             </div>
+          </div>
 
+          <div class="content-card-header">
+
+
+
+            <p class="content-card-label" style="padding-left: 0; padding-right: 0; margin-bottom: .8rem;">
+              Feedback-category</p>
             <div class="content-card-header-bottom">
               <div class="custom-dropdown feedback-dropdown">
                 <div class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1">
@@ -411,14 +416,42 @@
                 </div>
               </div>
 
+              <div class="custom-dropdown frequency-box-dropdown">
+                <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1">
+                  <div class="custom-dropdown-trigger-icon"><i class="icon-calendar"></i></div>
+                  <p class="custom-dropdown-trigger-value">4 weeks</p>
+                </button>
+
+                <div class="custom-dropdown-menu">
+                  <div class="custom-dropdown-menu-item">
+                    <button class="custom-dropdown-menu-item-link">4 weeks</button>
+                  </div>
+
+                  <div class="custom-dropdown-menu-item">
+                    <button class="custom-dropdown-menu-item-link">8 weeks</button>
+                  </div>
+
+                  <div class="custom-dropdown-menu-item">
+                    <button class="custom-dropdown-menu-item-link">12 weeks</button>
+                  </div>
+
+                  <div class="custom-dropdown-menu-item">
+                    <button class="custom-dropdown-menu-item-link">16 weeks</button>
+                  </div>
+                </div>
+              </div>
+
+
+
               <button
                 class="button button-green-primary animate__animated animate__pulse animate__infinite	infinite">&#65291;
                 ADD NEW QUESTION</button>
             </div>
 
           </div>
-          <div class="custom-questions custom-accordion">
-            <div class="custom-question-wrapper custom-accordion-card open card-01">
+          <p class="content-card-label">Questions</p>
+          <div class="custom-questions custom-questions-stars custom-accordion">
+            <div class="custom-question-wrapper custom-accordion-card card-01">
               <div class="custom-question">
                 <div class="custom-question-icon"><i class="icon-star"></i></div>
                 <p class="custom-question-text">How do people feel working in this team?</p>
@@ -482,106 +515,26 @@
                   </svg>
                 </div>
               </div>
-              <div class="custom-question-body custom-accordion-card-body disabled">
+              <div class="custom-question-body custom-accordion-card-body">
                 <div class="translation">
                   <p class="custom-question-body-label">Question</p>
                   <div class="custom-input-group">
-                    <!-- <div class="custom-dropdown">
-                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1"
-                        onfocus="this.parentElement.parentElement.parentElement.parentElement.classList.add('no-overflow')"
-                        onfocusout="this.parentElement.parentElement.parentElement.parentElement.classList.remove('no-overflow')">
-                        <p class="custom-dropdown-trigger-value">EN</p>
-                        <i class="icon-caret-down"></i>
-                      </button>
-                      <div class="custom-dropdown-menu">
-                        <div class="custom-dropdown-menu-item active">
-                          <img src="../public//img/usa-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">English</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/fin-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Finnish</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/srb-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Serbian</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/ind-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Hindu</p>
-                        </div>
-                      </div>
-                    </div> -->
-                    <input type="text" value="How do people feel working in this team?" placeholder="Enter question..."
-                      disabled>
+                    <input type="text" value="How do people feel working in this team?" placeholder="Enter question...">
                     <i class="icon-material-lock"></i>
                   </div>
-                  <div class="custom-input-group">
-                    <!-- <div class="custom-dropdown">
-                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1"
-                        onfocus="this.parentElement.parentElement.parentElement.parentElement.classList.add('no-overflow')"
-                        onfocusout="this.parentElement.parentElement.parentElement.parentElement.classList.remove('no-overflow')">
-                        <p class="custom-dropdown-trigger-value">EN</p>
-                        <i class="icon-caret-down"></i>
-                      </button>
-                      <div class="custom-dropdown-menu">
-                        <div class="custom-dropdown-menu-item active">
-                          <img src="../public//img/usa-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">English</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/fin-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Finnish</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/srb-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Serbian</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/ind-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Hindu</p>
-                        </div>
-                      </div>
-                    </div> -->
-                    <input type="text" value="How do people feel working in this team?" placeholder="Enter question..."
-                      disabled>
+                  <!-- <div class="custom-input-group">
+                    <input type="text" value="How do people feel working in this team?" placeholder="Enter question...">
                     <i class="icon-material-lock"></i>
-                  </div>
+                  </div> -->
                 </div>
 
-                <button class="custom-question-body-info">+ Add a translation</button>
+                <!-- <button class="custom-question-body-info">+ Add a translation</button> -->
 
                 <div class="short">
-                  <p class="custom-question-body-label">Short form</p>
+                  <p class="custom-question-body-label">Short form <span class="tooltip-icon"><i
+                        class="icon-info"></i></span></p>
                   <div class="custom-input-group">
-                    <!-- <div class="custom-dropdown">
-                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1"
-                        onfocus="this.parentElement.parentElement.parentElement.parentElement.classList.add('no-overflow')"
-                        onfocusout="this.parentElement.parentElement.parentElement.parentElement.classList.remove('no-overflow')">
-                        <p class="custom-dropdown-trigger-value">EN</p>
-                        <i class="icon-caret-down"></i>
-                      </button>
-                      <div class="custom-dropdown-menu">
-                        <div class="custom-dropdown-menu-item active">
-                          <img src="../public//img/usa-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">English</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/fin-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Finnish</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/srb-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Serbian</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/ind-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Hindu</p>
-                        </div>
-                      </div>
-                    </div> -->
-                    <input type="text" value="How do people feel working in this team?"
-                      placeholder="Enter question... disabled" disabled>
+                    <input type="text" value="How do people feel working in this team?" placeholder="Enter question...">
                     <i class="icon-material-lock"></i>
                   </div>
                 </div>
@@ -658,104 +611,27 @@
                   </svg>
                 </div>
               </div>
-              <div class="custom-question-body custom-accordion-card-body disabled-delete">
+              <div class="custom-question-body custom-accordion-card-body">
                 <div class="translation">
                   <p class="custom-question-body-label">Question</p>
                   <div class="custom-input-group">
-                    <!-- <div class="custom-dropdown">
-                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1"
-                        onfocus="this.parentElement.parentElement.parentElement.parentElement.classList.add('no-overflow')"
-                        onfocusout="this.parentElement.parentElement.parentElement.parentElement.classList.remove('no-overflow')">
-                        <p class="custom-dropdown-trigger-value">EN</p>
-                        <i class="icon-caret-down"></i>
-                      </button>
-                      <div class="custom-dropdown-menu">
-                        <div class="custom-dropdown-menu-item active">
-                          <img src="../public//img/usa-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">English</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/fin-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Finnish</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/srb-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Serbian</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/ind-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Hindu</p>
-                        </div>
-                      </div>
-                    </div> -->
-                    <input type="text" value="How do people feel working in this team?" placeholder="Enter question..."
-                      disabled>
+                    <input type="text" value="How do people feel working in this team?" placeholder="Enter question...">
+                    <i class="icon-material-lock"></i>
                   </div>
-                  <div class="custom-input-group">
-                    <!-- <div class="custom-dropdown">
-                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1"
-                        onfocus="this.parentElement.parentElement.parentElement.parentElement.classList.add('no-overflow')"
-                        onfocusout="this.parentElement.parentElement.parentElement.parentElement.classList.remove('no-overflow')">
-                        <p class="custom-dropdown-trigger-value">EN</p>
-                        <i class="icon-caret-down"></i>
-                      </button>
-                      <div class="custom-dropdown-menu">
-                        <div class="custom-dropdown-menu-item active">
-                          <img src="../public//img/usa-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">English</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/fin-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Finnish</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/srb-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Serbian</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/ind-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Hindu</p>
-                        </div>
-                      </div>
-                    </div> -->
-                    <input type="text" value="How do people feel working in this team?" placeholder="Enter question..."
-                      disabled>
-                  </div>
+                  <!-- <div class="custom-input-group">
+                    <input type="text" value="How do people feel working in this team?" placeholder="Enter question...">
+                    <i class="icon-material-lock"></i>
+                  </div> -->
                 </div>
 
-                <button class="custom-question-body-info">+ Add a translation</button>
+                <!-- <button class="custom-question-body-info">+ Add a translation</button> -->
 
                 <div class="short">
-                  <p class="custom-question-body-label">Short form</p>
+                  <p class="custom-question-body-label">Short form <span class="tooltip-icon"><i
+                        class="icon-info"></i></span></p>
                   <div class="custom-input-group">
-                    <!-- <div class="custom-dropdown">
-                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1"
-                        onfocus="this.parentElement.parentElement.parentElement.parentElement.classList.add('no-overflow')"
-                        onfocusout="this.parentElement.parentElement.parentElement.parentElement.classList.remove('no-overflow')">
-                        <p class="custom-dropdown-trigger-value">EN</p>
-                        <i class="icon-caret-down"></i>
-                      </button>
-                      <div class="custom-dropdown-menu">
-                        <div class="custom-dropdown-menu-item active">
-                          <img src="../public//img/usa-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">English</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/fin-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Finnish</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/srb-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Serbian</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/ind-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Hindu</p>
-                        </div>
-                      </div>
-                    </div> -->
-                    <input type="text" value="How do people feel working in this team?" placeholder="Enter question..."
-                      disabled>
+                    <input type="text" value="How do people feel working in this team?" placeholder="Enter question...">
+                    <i class="icon-material-lock"></i>
                   </div>
                 </div>
 
@@ -769,16 +645,21 @@
               </div>
             </div>
 
+          </div>
+
+
+          <p class="content-card-label">Questions</p>
+          <div class="custom-questions custom-questions-text custom-accordion">
             <div class="custom-question-wrapper custom-accordion-card card-03">
-              <div class="custom-question ">
-                <div class="custom-question-icon"><i class="icon-star"></i></div>
-                <p class="custom-question-text">How well work is planned and organized in this team?</p>
+              <div class="custom-question">
+                <div class="custom-question-icon"><i class="icon-chat"></i></div>
+                <p class="custom-question-text">How do people feel working in this team?</p>
                 <div class="custom-question-buttons">
                   <svg class="chevron-down-circle accordion-card-trigger" accordion-trigger-target="card-03"
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <g transform="translate(-815.784 -315.402)">
-                      <g transform="translate(815.784 315.402)" fill="none" stroke="#0d1826" stroke-width="1.5"
-                        opacity="0.798">
+                      <g class="fill" transform="translate(815.784 315.402)" fill="none" stroke="#0d1826"
+                        stroke-width="1.5" opacity="0.798">
                         <circle cx="12" cy="12" r="12" stroke="none" />
                         <circle cx="12" cy="12" r="11.25" fill="none" />
                       </g>
@@ -789,8 +670,8 @@
                   </svg>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
                     <g transform="translate(-815.784 -317.402)">
-                      <g transform="translate(815.784 317.402)" fill="none" stroke="#0d1826" stroke-width="1.5"
-                        opacity="0.803">
+                      <g class="fill" transform="translate(815.784 317.402)" fill="none" stroke="#0d1826"
+                        stroke-width="1.5" opacity="0.803">
                         <circle cx="13" cy="13" r="13" stroke="none" />
                         <circle cx="13" cy="13" r="12.25" fill="none" />
                       </g>
@@ -807,6 +688,13 @@
                   </svg>
                   <svg class="menu-cicle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <g transform="translate(-844.984 -317.402)">
+
+                      <g transform="translate(844.984 317.402)" fill="none" stroke="#0d1826" stroke-width="1.5"
+                        opacity="0.803">
+                        <circle class="fill" cx="12" cy="12" r="12" stroke="none" />
+                        <circle class="fill" cx="12" cy="12" r="11.25" fill="none" />
+                      </g>
+
                       <g transform="translate(851.106 325.693)" fill="#fff" stroke="#0d1826" stroke-width="1"
                         opacity="0.803">
                         <rect width="11.962" height="1.553" rx="0.777" stroke="none" />
@@ -822,11 +710,6 @@
                         <rect width="11.962" height="1.553" rx="0.777" stroke="none" />
                         <rect x="0.5" y="0.5" width="10.962" height="0.553" rx="0.277" fill="none" />
                       </g>
-                      <g transform="translate(844.984 317.402)" fill="none" stroke="#0d1826" stroke-width="1.5"
-                        opacity="0.803">
-                        <circle cx="12" cy="12" r="12" stroke="none" />
-                        <circle cx="12" cy="12" r="11.25" fill="none" />
-                      </g>
                     </g>
                   </svg>
                 </div>
@@ -835,101 +718,29 @@
                 <div class="translation">
                   <p class="custom-question-body-label">Question</p>
                   <div class="custom-input-group">
-                    <!-- <div class="custom-dropdown">
-                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1"
-                        onfocus="this.parentElement.parentElement.parentElement.parentElement.classList.add('no-overflow')"
-                        onfocusout="this.parentElement.parentElement.parentElement.parentElement.classList.remove('no-overflow')">
-                        <p class="custom-dropdown-trigger-value">EN</p>
-                        <i class="icon-caret-down"></i>
-                      </button>
-                      <div class="custom-dropdown-menu">
-                        <div class="custom-dropdown-menu-item active">
-                          <img src="../public//img/usa-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">English</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/fin-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Finnish</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/srb-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Serbian</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/ind-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Hindu</p>
-                        </div>
-                      </div>
-                    </div> -->
                     <input type="text" value="How do people feel working in this team?" placeholder="Enter question...">
+                    <i class="icon-material-lock"></i>
                   </div>
-                  <div class="custom-input-group">
-                    <div class="custom-dropdown">
-                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1"
-                        onfocus="this.parentElement.parentElement.parentElement.parentElement.classList.add('no-overflow')"
-                        onfocusout="this.parentElement.parentElement.parentElement.parentElement.classList.remove('no-overflow')">
-                        <p class="custom-dropdown-trigger-value">EN</p>
-                        <i class="icon-caret-down"></i>
-                      </button>
-                      <div class="custom-dropdown-menu">
-                        <div class="custom-dropdown-menu-item active">
-                          <img src="../public//img/usa-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">English</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/fin-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Finnish</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/srb-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Serbian</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/ind-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Hindu</p>
-                        </div>
-                      </div>
-                    </div>
+                  <!-- <div class="custom-input-group">
                     <input type="text" value="How do people feel working in this team?" placeholder="Enter question...">
-                  </div>
+                    <i class="icon-material-lock"></i>
+                  </div> -->
                 </div>
 
-                <button class="custom-question-body-info">+ Add a translation</button>
+                <!-- <button class="custom-question-body-info">+ Add a translation</button> -->
 
                 <div class="short">
-                  <p class="custom-question-body-label">Short form</p>
+                  <p class="custom-question-body-label">Short form <span class="tooltip-icon"><i
+                        class="icon-info"></i></span></p>
                   <div class="custom-input-group">
-                    <div class="custom-dropdown">
-                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1"
-                        onfocus="this.parentElement.parentElement.parentElement.parentElement.classList.add('no-overflow')"
-                        onfocusout="this.parentElement.parentElement.parentElement.parentElement.classList.remove('no-overflow')">
-                        <p class="custom-dropdown-trigger-value">EN</p>
-                        <i class="icon-caret-down"></i>
-                      </button>
-                      <div class="custom-dropdown-menu">
-                        <div class="custom-dropdown-menu-item active">
-                          <img src="../public//img/usa-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">English</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/fin-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Finnish</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/srb-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Serbian</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/ind-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Hindu</p>
-                        </div>
-                      </div>
-                    </div>
                     <input type="text" value="How do people feel working in this team?" placeholder="Enter question...">
+                    <i class="icon-material-lock"></i>
                   </div>
                 </div>
 
                 <div class="custom-question-body-footer">
+                  <p class="custom-question-body-footer-text">This is a company level question which can not be edited.
+                  </p>
                   <button class="button button-light-gray">Delete question</button>
                   <button class="button button-green-primary">Save changes</button>
                 </div>
@@ -939,8 +750,8 @@
 
             <div class="custom-question-wrapper custom-accordion-card card-04">
               <div class="custom-question ">
-                <div class="custom-question-icon"><i class="icon-short-text"></i></div>
-                <p class="custom-question-text">What could we do better in this team?</p>
+                <div class="custom-question-icon"><i class="icon-chat"></i></div>
+                <p class="custom-question-text">How well work is planned and organized in this team?</p>
                 <div class="custom-question-buttons">
                   <svg class="chevron-down-circle accordion-card-trigger" accordion-trigger-target="card-04"
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -1003,162 +814,37 @@
                 <div class="translation">
                   <p class="custom-question-body-label">Question</p>
                   <div class="custom-input-group">
-                    <div class="custom-dropdown">
-                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1"
-                        onfocus="this.parentElement.parentElement.parentElement.parentElement.classList.add('no-overflow')"
-                        onfocusout="this.parentElement.parentElement.parentElement.parentElement.classList.remove('no-overflow')">
-                        <p class="custom-dropdown-trigger-value">EN</p>
-                        <i class="icon-caret-down"></i>
-                      </button>
-                      <div class="custom-dropdown-menu">
-                        <div class="custom-dropdown-menu-item active">
-                          <img src="../public//img/usa-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">English</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/fin-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Finnish</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/srb-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Serbian</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/ind-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Hindu</p>
-                        </div>
-                      </div>
-                    </div>
                     <input type="text" value="How do people feel working in this team?" placeholder="Enter question...">
+                    <i class="icon-material-lock"></i>
                   </div>
-                  <div class="custom-input-group">
-                    <div class="custom-dropdown">
-                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1"
-                        onfocus="this.parentElement.parentElement.parentElement.parentElement.classList.add('no-overflow')"
-                        onfocusout="this.parentElement.parentElement.parentElement.parentElement.classList.remove('no-overflow')">
-                        <p class="custom-dropdown-trigger-value">EN</p>
-                        <i class="icon-caret-down"></i>
-                      </button>
-                      <div class="custom-dropdown-menu">
-                        <div class="custom-dropdown-menu-item active">
-                          <img src="../public//img/usa-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">English</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/fin-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Finnish</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/srb-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Serbian</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/ind-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Hindu</p>
-                        </div>
-                      </div>
-                    </div>
+                  <!-- <div class="custom-input-group">
                     <input type="text" value="How do people feel working in this team?" placeholder="Enter question...">
-                  </div>
+                    <i class="icon-material-lock"></i>
+                  </div> -->
                 </div>
 
-                <button class="custom-question-body-info">+ Add a translation</button>
+                <!-- <button class="custom-question-body-info">+ Add a translation</button> -->
 
                 <div class="short">
-                  <p class="custom-question-body-label">Short form</p>
+                  <p class="custom-question-body-label">Short form <span class="tooltip-icon"><i
+                        class="icon-info"></i></span></p>
                   <div class="custom-input-group">
-                    <div class="custom-dropdown">
-                      <button class="custom-dropdown-trigger" onclick="this.focus()" tabindex="-1"
-                        onfocus="this.parentElement.parentElement.parentElement.parentElement.classList.add('no-overflow')"
-                        onfocusout="this.parentElement.parentElement.parentElement.parentElement.classList.remove('no-overflow')">
-                        <p class="custom-dropdown-trigger-value">EN</p>
-                        <i class="icon-caret-down"></i>
-                      </button>
-                      <div class="custom-dropdown-menu">
-                        <div class="custom-dropdown-menu-item active">
-                          <img src="../public//img/usa-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">English</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/fin-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Finnish</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/srb-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Serbian</p>
-                        </div>
-                        <div class="custom-dropdown-menu-item">
-                          <img src="../public/img/ind-flag.png" alt="Flag" class="custom-dropdown-menu-item-img">
-                          <p class="custom-dropdown-menu-item-text">Hindu</p>
-                        </div>
-                      </div>
-                    </div>
                     <input type="text" value="How do people feel working in this team?" placeholder="Enter question...">
+                    <i class="icon-material-lock"></i>
                   </div>
                 </div>
 
                 <div class="custom-question-body-footer">
+                  <p class="custom-question-body-footer-text">This is a company level question which can not be edited.
+                  </p>
                   <button class="button button-light-gray">Delete question</button>
                   <button class="button button-green-primary">Save changes</button>
                 </div>
 
               </div>
             </div>
+
           </div>
-
-          <div class="settings-section">
-            <div class="settings-section-set">
-              <p class="settings-section-set-title">Frequency</p>
-              <p class="settings-section-set-text">Select how often the team feedback should be collected</p>
-            </div>
-            <div class="custom-dropdown">
-              <div class="custom-dropdown-trigger" tabindex="-1" onclick="this.focus()">
-                <p class="value">At least once per month</p>
-                <i class="icon-caret-down"></i>
-
-                <div class="tutor-tooltip tutor-tooltip-frequency-dropdown open absolute">
-                  <div class="tutor-tooltip-arrow">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="14" viewBox="0 0 22 14">
-                      <path
-                        d="M9.821,1.5a1.5,1.5,0,0,1,2.359,0l7.914,10.072A1.5,1.5,0,0,1,18.914,14H3.086a1.5,1.5,0,0,1-1.179-2.427Z"
-                        fill="#1177ef" />
-                    </svg>
-                  </div>
-                  <div class="tutor-tooltip-main">
-                    <p class="tutor-tooltip-main-title">Frequency</p>
-                    <p class="tutor-tooltip-main-text">Here you can select how often this feedback should be collected
-                      in your team.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="custom-dropdown-menu">
-                <div class="custom-dropdown-menu-item">
-                  <button>Twice per month</button>
-                </div>
-                <div class="custom-dropdown-menu-item">
-                  <button>At least once per month</button>
-                </div>
-                <div class="custom-dropdown-menu-item">
-                  <button>Every 3rd week</button>
-                </div>
-                <div class="custom-dropdown-menu-item">
-                  <button>Monthly</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- <div class="settings-section">
-            <div class="settings-section-set">
-              <p class="settings-section-set-title">Status</p>
-              <p class="settings-section-set-text">Here you can activate or disable the team feedback </p>
-            </div>
-            <div class="option-buttons">
-              <button class="button active">Active</button>
-              <button class="button">Disable</button>
-            </div>
-          </div> -->
-
 
         </div>
 

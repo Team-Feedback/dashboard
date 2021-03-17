@@ -13,7 +13,7 @@
 
 <body>
 
-  <main class="main" id="give-feedback">
+  <main class="main" id="give-feedback-new">
     <!-- Header -->
     <div class="header small">
       <!-- Buttons -->
@@ -40,9 +40,48 @@
       <div class="header-main white-logo">
         <div class="header-main-info">
           <div class="header-main-info-icon side-toggle">
-            <i class="icon-burger"></i>
+            <div class="logo-container">
+              <img src="../public/img/logo-only.png" alt="Team feedback logo" class="logo">
+              <div class="custom-badge">1</div>
+
+
+            </div>
           </div>
-          <h1 class="header-main-info-title">Team Marketing</h1>
+          <!-- <h1 class="header-main-info-title">Team Marketing</h1> -->
+          <div class="header-dropdown">
+            <button class="header-dropdown-trigger" onClick="this.parentElement.classList.toggle('open')">
+              <h1>Team Martketing Team Martketing Team Martketing Team Martketing</h1>
+              <i class="icon-chevron-down"></i>
+            </button>
+            <div class="header-dropdown-menu">
+              <div class="header-dropdown-menu-header">
+                <div class="input-container">
+                  <input type="text" placeholder="Search for a Team">
+                  <i class="icon-search"></i>
+                </div>
+              </div>
+              <div class="header-dropdown-menu-main">
+                <div class="header-dropdown-menu-main-item active">
+                  <p class="header-dropdown-menu-main-item-text">Team Marketing</p>
+                  <span>(selected)</span>
+                  <button class="header-dropdown-menu-main-item-close"><i class="icon-close"></i></button>
+                </div>
+                <div class="header-dropdown-menu-main-item">
+                  <p class="header-dropdown-menu-main-item-text">Team Recruitment</p>
+                  <span>(selected)</span>
+                  <button class="header-dropdown-menu-main-item-close"><i class="icon-close"></i></button>
+                </div>
+                <div class="header-dropdown-menu-main-item">
+                  <p class="header-dropdown-menu-main-item-text">Team Managment</p>
+                  <span>(selected)</span>
+                  <button class="header-dropdown-menu-main-item-close"><i class="icon-close"></i></button>
+                </div>
+              </div>
+              <div class="header-dropdown-menu-footer">
+                <button class="button button-light-gradient">Create a new team</button>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Buttons -->
@@ -505,12 +544,83 @@
     <!-- Content -->
     <div class="content-wrapper">
       <div class="content">
+        <div class="card-resize">
+          <i class="icon-fullscreen-enter"></i>
+          <i class="icon-fullscreen-exit"></i>
+        </div>
         <div class="content-card">
+
           <div class="caption big">
             <p class="caption-title">Todo list</p>
           </div>
           <div class="todo">
             <ul class="todo-list">
+              <li class="todo-list-item">
+                <div class="todo-list-item-icon">
+                  <i class="icon-users"></i>
+                </div>
+                <div class="todo-list-item-info">
+                  <p class="todo-list-item-info-subtitle">Team Feedback</p>
+                  <p class="todo-list-item-info-title">Team React Native</p>
+                </div>
+                <i class="icon-chevron-right"></i>
+              </li>
+
+              <li class="todo-list-item">
+                <img src="../public/img/p-01.png" alt="User's profile picture" class="todo-list-item-img" />
+                <div class="todo-list-item-info">
+                  <p class="todo-list-item-info-subtitle">
+                    Peer to peer feedback
+                  </p>
+                  <p class="todo-list-item-info-title">Peter Smith</p>
+                </div>
+                <i class="icon-chevron-right"></i>
+              </li>
+
+              <li class="todo-list-item">
+                <div class="todo-list-item-initials">MM</div>
+                <div class="todo-list-item-info">
+                  <p class="todo-list-item-info-subtitle">
+                    Peer to peer feedback
+                  </p>
+                  <p class="todo-list-item-info-title">Peter Smith</p>
+                </div>
+                <i class="icon-chevron-right"></i>
+              </li>
+
+              <li class="todo-list-item">
+                <div class="todo-list-item-icon">
+                  <i class="icon-users"></i>
+                </div>
+                <div class="todo-list-item-info">
+                  <p class="todo-list-item-info-subtitle">Team Feedback</p>
+                  <p class="todo-list-item-info-title">Team React Native</p>
+                </div>
+                <i class="icon-chevron-right"></i>
+              </li>
+
+              <li class="todo-list-item">
+                <img src="../public/img/p-01.png" alt="User's profile picture" class="todo-list-item-img" />
+                <div class="todo-list-item-info">
+                  <p class="todo-list-item-info-subtitle">
+                    Peer to peer feedback
+                  </p>
+                  <p class="todo-list-item-info-title">Peter Smith</p>
+                </div>
+                <i class="icon-chevron-right"></i>
+              </li>
+
+              <li class="todo-list-item">
+                <div class="todo-list-item-initials">MM</div>
+                <div class="todo-list-item-info">
+                  <p class="todo-list-item-info-subtitle">
+                    Peer to peer feedback
+                  </p>
+                  <p class="todo-list-item-info-title">Peter Smith</p>
+                </div>
+                <i class="icon-chevron-right"></i>
+              </li>
+
               <li class="todo-list-item">
                 <div class="todo-list-item-icon">
                   <i class="icon-users"></i>
@@ -2173,7 +2283,7 @@
 
 
   <script src="../public/js/main.js"></script>
-  <script src="../public/js/tm-grid.js"></script>
+  <!-- <script src="../public/js/tm-grid.js"></script> -->
 
   <script>
     let themeColorItems02 = document.querySelectorAll('.theme-colors-item');
@@ -2212,6 +2322,35 @@
           htmlEl.style.fontSize = `${sizesArr[step]}`;
         }
       })
+    })
+  </script>
+
+  <script>
+    function styleTodoItems() {
+      const grid = Array.from(document.querySelector(".todo-list").children);
+      const baseOffset = grid[0].offsetTop;
+      const breakIndex = grid.findIndex(item => item.offsetTop > baseOffset);
+      const numPerRow = (breakIndex === -1 ? grid.length : breakIndex);
+      grid.forEach(e => {
+        e.style.borderTop = 'none';
+      })
+      console.log(numPerRow)
+      Array.from(Array(numPerRow).keys()).forEach((e, i) => {
+        grid[i].style.borderTop = '1.5px solid #f0f0f0';
+      })
+    }
+
+    styleTodoItems();
+    window.addEventListener('resize', styleTodoItems)
+  </script>
+
+  <script>
+    const cardResize = document.querySelector('.card-resize');
+    const currentMain = document.querySelector('#give-feedback-new');
+
+    cardResize.addEventListener('click', function (e) {
+      currentMain.classList.toggle('full-size');
+      e.currentTarget.classList.toggle('active');
     })
   </script>
 

@@ -402,14 +402,14 @@
   border-color: #035c9a;
   background-color: #035c9a !important; }
 .pretty input:checked ~ .state.p-success label:after, .pretty.p-toggle .state.p-success label:after {
-  background-color: #5cb85c !important; }
+  background-color: #15af57 !important; }
 .pretty input:checked ~ .state.p-success .icon,
 .pretty input:checked ~ .state.p-success .svg, .pretty.p-toggle .state.p-success .icon,
 .pretty.p-toggle .state.p-success .svg {
   color: #fff;
   stroke: #fff; }
 .pretty input:checked ~ .state.p-success-o label:before, .pretty.p-toggle .state.p-success-o label:before {
-  border-color: #5cb85c; }
+  border-color: #15af57; }
 .pretty input:checked ~ .state.p-success-o label:after, .pretty.p-toggle .state.p-success-o label:after {
   background-color: transparent; }
 .pretty input:checked ~ .state.p-success-o .icon,
@@ -417,17 +417,17 @@
 .pretty input:checked ~ .state.p-success-o svg, .pretty.p-toggle .state.p-success-o .icon,
 .pretty.p-toggle .state.p-success-o .svg,
 .pretty.p-toggle .state.p-success-o svg {
-  color: #5cb85c;
-  stroke: #5cb85c; }
+  color: #15af57;
+  stroke: #15af57; }
 .pretty.p-default:not(.p-fill) input:checked ~ .state.p-success-o label:after {
-  background-color: #5cb85c !important; }
+  background-color: #15af57 !important; }
 .pretty.p-switch input:checked ~ .state.p-success:before {
-  border-color: #5cb85c; }
+  border-color: #15af57; }
 .pretty.p-switch.p-fill input:checked ~ .state.p-success:before {
-  background-color: #5cb85c !important; }
+  background-color: #15af57 !important; }
 .pretty.p-switch.p-slim input:checked ~ .state.p-success:before {
-  border-color: #357935;
-  background-color: #357935 !important; }
+  border-color: #0a542a;
+  background-color: #0a542a !important; }
 .pretty input:checked ~ .state.p-warning label:after, .pretty.p-toggle .state.p-warning label:after {
   background-color: #ffa82b !important; }
 .pretty input:checked ~ .state.p-warning .icon,
@@ -502,5 +502,3 @@
     /* stylelint-disable */
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact; } }
-
-/*# sourceMappingURL=pretty-checkbox.css.map */

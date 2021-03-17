@@ -362,6 +362,14 @@
             target-modal="successModal">
             Success modal
           </button>
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;"
+            target-modal="addNewRightModal">
+            Add new right
+          </button>
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;"
+            target-modal="resendCodeModal">
+            Resend code
+          </button>
         </div>
       </div>
     </div>
@@ -822,6 +830,24 @@
 
 
     <!-- CONFIRMATION MODAL-->
+    <div class="custom-modal-wrapper" id="resendCodeModal">
+      <div class="custom-modal">
+        <!-- Modal body -->
+        <div class="custom-modal-body">
+          <div class="custom-modal-close" close-modal="resendCodeModal">
+            <i class="icon-close"></i>
+          </div>
+          <p class="custom-modal-body-title">Didn't receive the code</p>
+          <p class="custom-modal-body-text">First please check your spam folder. If you
+            still can not find the code, click resend.</p>
+          <div class="custom-modal-body-buttons">
+            <button class="button button-primary">Confirm</button>
+          </div>
+        </div>
+      </div>
+      <div class="custom-modal-backdrop"></div>
+    </div>
+
     <div class="custom-modal-wrapper" id="confirmationModal">
       <div class="custom-modal">
         <!-- Modal body -->
@@ -1049,6 +1075,83 @@
             &#128521;</p>
 
           <button class="button button-light-gradient">Ok, I’ll try.</button>
+
+        </div>
+      </div>
+      <div class="custom-modal-backdrop"></div>
+    </div>
+
+    <!-- ADD NEW RIGHT MODAL-->
+    <div class="custom-modal-wrapper" id="addNewRightModal">
+      <div class="custom-modal">
+        <!-- Modal body -->
+        <div class="custom-modal-body">
+          <div class="custom-modal-close" close-modal="addNewRightModal">
+            <i class="icon-close"></i>
+          </div>
+
+          <p class="custom-modal-body-title">Add new rights</p>
+
+          <p class="custom-modal-body-label">Search or enter email</p>
+
+          <div class="dropdown-menu-item single">
+            <div class="dropdown-menu-item-initials">WW</div>
+            <div class="dropdown-menu-item-set">
+              <p class="dropdown-menu-item-set-title">Julia Smith</p>
+              <p class="dropdown-menu-item-set-text">Frontend developer</p>
+            </div>
+            <button class="button link">Add</button>
+          </div>
+
+          <!-- <div class="input-container">
+            <input type="text" placeholder="Enter email">
+
+            <div class="dropdown-menu">
+              <div class="dropdown-menu-item">
+                <img src="../public/img/p-01.png" alt="User" class="dropdown-menu-item-img">
+                <div class="dropdown-menu-item-set">
+                  <p class="dropdown-menu-item-set-title">Julia Smith</p>
+                  <p class="dropdown-menu-item-set-text">Frontend developer</p>
+                </div>
+                <button class="button link">Add</button>
+              </div>
+
+              <div class="dropdown-menu-item">
+                <div class="dropdown-menu-item-initials">WW</div>
+                <div class="dropdown-menu-item-set">
+                  <p class="dropdown-menu-item-set-title">Julia Smith</p>
+                  <p class="dropdown-menu-item-set-text">Frontend developer</p>
+                </div>
+                <button class="button link">Add</button>
+              </div>
+
+              <div class="dropdown-menu-item">
+                <img src="../public/img/p-01.png" alt="User" class="dropdown-menu-item-img">
+                <div class="dropdown-menu-item-set">
+                  <p class="dropdown-menu-item-set-title">Julia Smith</p>
+                  <p class="dropdown-menu-item-set-text">Frontend developer</p>
+                </div>
+                <button class="button link">Add</button>
+              </div>
+            </div>
+          </div> -->
+
+          <p class="custom-modal-body-label">Select type of rights</p>
+
+          <div class="rights-type">
+            <button class="button active"><i class="icon-eye-open"></i>Viewing rights</button>
+            <button class="button"><i class="icon-tools"></i>Admin rights</button>
+          </div>
+
+          <p class="custom-modal-body-text">
+            Users with viewing rights have full access to see the
+            feedback data of this team.
+          </p>
+
+          <div class="custom-modal-body-buttons">
+            <button class="button button-green-primary">Confirm</button>
+            <button class="button button-light-gradient">Cancel</button>
+          </div>
 
         </div>
       </div>
