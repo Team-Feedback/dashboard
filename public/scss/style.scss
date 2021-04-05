@@ -23428,12 +23428,12 @@ input {
         border-bottom: solid 1px #e6e9eb;
 
         &-title {
-          opacity: 0.85;
+          // opacity: 0.85;
           margin-bottom: emcalc(0.6, 1.5);
           font-size: 1.5em;
-          font-weight: 500;
+          font-weight: 600;
           letter-spacing: 0.04px;
-          color: #0d1826;
+          color: #1c2022;
         }
 
         &-amount {
