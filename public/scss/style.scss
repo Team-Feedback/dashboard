@@ -23544,7 +23544,7 @@ input {
         }
 
         & .answer {
-          padding: 1.6em 3.1em 1.3em 2.6em;
+          padding: 1.6em 4.6em 1.3em 2.6em;
           @include flexbox();
           @include align-items(flex-start);
           @include justify-content(flex-start);
@@ -23552,7 +23552,12 @@ input {
           cursor: pointer;
 
           &-wrapper {
+            &.active {
+              background-color: #f5f7f8;
+            }
             &.open {
+              //background-color: #f5f7f8;
+              border-bottom: solid 1px rgba($color: #d6dade, $alpha: 0.6);
               & .comments {
                 max-height: 9999px;
                 transition: max-height 1s ease-in-out;
@@ -23573,9 +23578,9 @@ input {
             }
           }
 
-          &:hover:not(.active) {
-            background-color: rgba($color: #f5f7f8, $alpha: 0.4);
-          }
+          // &:hover:not(.active) {
+          //   background-color: rgba($color: #f5f7f8, $alpha: 0.4);
+          // }
 
           &.anonymous {
             & .answer-img,
@@ -23586,12 +23591,12 @@ input {
 
           &-img {
             margin-right: 1.1em;
-            min-width: 4.25em;
-            min-height: 4.25em;
-            width: 4.25em;
-            height: 4.25em;
-            max-width: 4.25em;
-            max-height: 4.25em;
+            min-width: 4.8em;
+            min-height: 4.8em;
+            width: 4.8em;
+            height: 4.8em;
+            max-width: 4.8em;
+            max-height: 4.8em;
             object-fit: cover;
             border-radius: 100vh;
 
@@ -23607,17 +23612,18 @@ input {
             @include flexbox();
             @include align-items(center);
             @include justify-content(center);
-            min-width: emcalc(4.25, 1.7);
-            min-height: emcalc(4.25, 1.7);
-            width: emcalc(4.25, 1.7);
-            height: emcalc(4.25, 1.7);
-            max-width: emcalc(4.25, 1.7);
-            max-height: emcalc(4.25, 1.7);
+            min-width: emcalc(4.8, 2.2);
+            min-height: emcalc(4.8, 2.2);
+            width: emcalc(4.8, 2.2);
+            height: emcalc(4.8, 2.2);
+            max-width: emcalc(4.8, 2.2);
+            max-height: emcalc(4.8, 2.2);
             background: linear-gradient(to bottom, #ffce33, #ffc033);
-            font-size: 1.7em;
-            font-weight: 600;
+            font-size: 2.2em;
+            font-weight: 700;
             color: #ffffff;
             border-radius: 50%;
+            letter-spacing: 0.06px;
 
             &:hover {
               cursor: pointer;
@@ -23637,12 +23643,12 @@ input {
               @include justify-content(flex-start);
 
               &-name {
-                margin-right: emcalc(1.3, 1.3);
+                margin-right: emcalc(1.3, 1.38);
                 opacity: 0.9;
-                font-size: 1.3em;
-                font-weight: 500;
+                font-size: 1.38em;
+                font-weight: 600;
                 letter-spacing: 0.03px;
-                color: #0d1826;
+                color: #0f1419;
                 cursor: pointer;
 
                 &:hover {
@@ -23712,17 +23718,16 @@ input {
             &-text {
               position: relative;
               padding-right: 10%;
-              font-size: 1.3em;
+              font-size: 1.33em;
               font-weight: 400;
-              line-height: 1.54;
-              color: #0d1826;
-              opacity: 0.8;
+              line-height: 1.58;
+              color: #0f1419;
 
               & .icon-feather-thumbs-up {
                 position: absolute;
                 top: 0;
                 right: 0;
-                font-size: 1.5rem;
+                font-size: 1.7rem;
                 color: #d1d3d5;
               }
             }
