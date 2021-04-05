@@ -23408,11 +23408,12 @@ input {
       }
 
       &-header {
+        height: 7.1em;
         position: relative;
         width: 100%;
         padding: 1.7em 2.5em 1.5em;
         //height: 7.15em;
-        border-bottom: solid 1px rgba($color: #d6dade, $alpha: 0.6);
+        border-bottom: solid 1px #e6e9eb;
 
         &-title {
           opacity: 0.85;
@@ -23529,13 +23530,16 @@ input {
         }
 
         & .comments {
-          padding-left: 2.5em;
+          margin: 0 2em;
+          padding-left: 0.5em;
           height: auto;
           max-height: 0;
           overflow: hidden;
           transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+          border-top: solid 1px transparent;
 
           & .answer {
+            padding-right: 2.6em;
             border-bottom: 0;
             opacity: 0;
             visibility: hidden;
@@ -23548,19 +23552,21 @@ input {
           @include flexbox();
           @include align-items(flex-start);
           @include justify-content(flex-start);
-          border-bottom: solid 1px rgba($color: #d6dade, $alpha: 0.6);
+          //border-bottom: solid 1px rgba($color: #d6dade, $alpha: 0.6);
           cursor: pointer;
 
           &-wrapper {
+            border-bottom: solid 1px rgba($color: #d6dade, $alpha: 0.6);
             &.active {
               background-color: #f5f7f8;
             }
             &.open {
               //background-color: #f5f7f8;
-              border-bottom: solid 1px rgba($color: #d6dade, $alpha: 0.6);
+              // border-bottom: solid 1px rgba($color: #d6dade, $alpha: 0.6);
               & .comments {
                 max-height: 9999px;
                 transition: max-height 1s ease-in-out;
+                border-top: solid 1px rgba($color: #d6dade, $alpha: 0.6);
 
                 & .answer {
                   opacity: 1;
@@ -23886,6 +23892,7 @@ input {
       }
 
       &-header {
+        height: 7.1em;
         padding: 1.7em 2.2em 1.4em 1.3em;
         @include flexbox();
         @include align-items(center);
@@ -23894,6 +23901,7 @@ input {
         visibility: visible;
         transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
         min-width: 32em;
+        border-bottom: solid 1px #e6e9eb;
 
         @include respond(desktop-sm) {
           min-width: 28em;
@@ -23912,13 +23920,13 @@ input {
           }
 
           &-img {
-            margin-right: 0.8em;
-            min-width: 3.5em;
-            min-height: 3.5em;
-            width: 3.5em;
-            height: 3.5em;
-            max-width: 3.5em;
-            max-height: 3.5em;
+            margin-right: 1.2em;
+            min-width: 4.3em;
+            min-height: 4.3em;
+            width: 4.3em;
+            height: 4.3em;
+            max-width: 4.3em;
+            max-height: 4.3em;
             object-fit: cover;
             border-radius: 100vh;
 
@@ -23929,13 +23937,13 @@ input {
           }
 
           &-initials {
-            margin-right: emcalc(1.1, 1.4);
+            margin-right: emcalc(1.2, 1.4);
             text-transform: uppercase;
             @include flexbox();
             @include align-items(center);
             @include justify-content(center);
-            width: emcalc(3.5, 1.4);
-            height: emcalc(3.5, 1.4);
+            width: emcalc(4.3, 1.4);
+            height: emcalc(4.3, 1.4);
             background: linear-gradient(to bottom, #ffce33, #ffc033);
             font-size: 1.4em;
             font-weight: 600;
@@ -23949,18 +23957,48 @@ input {
           }
 
           &-icon {
-            margin-right: emcalc(1.1, 1.7);
+            margin-right: emcalc(1.2, 1.7);
             text-transform: uppercase;
             @include flexbox();
             @include align-items(center);
             @include justify-content(center);
-            width: emcalc(3.5, 1.7);
-            height: emcalc(3.5, 1.7);
+            width: emcalc(4.3, 1.7);
+            height: emcalc(4.3, 1.7);
             background: #b5b5b5;
             font-size: 1.7em;
             font-weight: 600;
             color: rgba(0, 0, 0, 0.4);
             border-radius: 50%;
+          }
+
+          &-info {
+            &-name {
+              margin-bottom: emcalc(0.4, 1.4);
+              opacity: 0.85;
+              font-size: 1.4em;
+              font-weight: 500;
+              letter-spacing: 0.04px;
+              color: #0d1826;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+
+            &-position {
+              @include inline-flex();
+              @include align-items(center);
+              opacity: 0.83;
+              font-size: 1.23em;
+              font-weight: 400;
+              letter-spacing: 0.03px;
+              color: #0d1826;
+
+              & i {
+                margin-right: 0.7rem;
+                color: #68737e;
+                font-size: 1.3rem;
+              }
+            }
           }
 
           &-name {
@@ -24026,7 +24064,7 @@ input {
 
       &-feedback {
         position: relative;
-        padding: 0 1.7em;
+        padding: 0 1.9em;
         padding-right: 2.2em;
         border-bottom: solid 1px #e8eaeb;
         opacity: 1;
@@ -24057,8 +24095,8 @@ input {
 
         &-header {
           position: relative;
-          padding-top: 1.45em;
-          padding-bottom: 1.9em;
+          padding-top: 2.7em;
+          padding-bottom: 2.1em;
           @include flexbox();
           @include align-items(center);
           @include justify-content(flex-start);
@@ -24115,14 +24153,14 @@ input {
 
             & i {
               margin-right: 1.28rem;
-              font-size: 1.2em;
+              font-size: 1.3em;
               color: #68737e;
             }
 
             &-text {
               opacity: 0.9;
-              font-size: 1.2em;
-              font-weight: 400;
+              font-size: 1.23em;
+              font-weight: 500;
               color: #0d1826;
             }
 
@@ -24179,7 +24217,7 @@ input {
 
           & i {
             margin-right: 1.28rem;
-            font-size: 1.2em;
+            font-size: 1.3em;
             color: #68737e;
           }
 
@@ -24187,7 +24225,7 @@ input {
             flex: 1;
 
             &-footer {
-              padding-bottom: 3.6em;
+              padding-bottom: 2.6em;
 
               .button {
                 padding: 0 emcalc(1.5, 1.2);
@@ -24204,16 +24242,16 @@ input {
           & textarea {
             margin-bottom: 1rem;
             width: calc(100% - 4px);
-            height: emcalc(6.9, 1.2);
+            height: emcalc(8.4, 1.2);
             padding: 0.6rem 0.9rem;
-            border-radius: 3px;
+            border-radius: 4px;
             border: solid 1px #d6dade;
             font-size: 1.2em;
             font-weight: 400;
             color: rgba($color: #0d1826, $alpha: 0.81);
 
             &::placeholder {
-              opacity: 0.35;
+              opacity: 0.23;
             }
 
             &:hover {
@@ -24228,10 +24266,23 @@ input {
       }
 
       &-footer {
+        padding-top: 1.8rem;
+        padding-bottom: 1.8rem;
+        padding-left: 1.9rem;
+        padding-right: 1.9rem;
         background-color: rgba($color: #edf5fb, $alpha: 0.37);
         //border-top: solid 1px #e8eaeb;
         border-bottom: solid 1px #e8eaeb;
         width: 100%;
+
+        &-title {
+          margin-bottom: 0.6rem;
+          opacity: 0.6;
+          font-size: 1.03em;
+          font-weight: 600;
+          letter-spacing: 0.34px;
+          color: #0d1826;
+        }
 
         &-wrapper {
           flex: 1;
@@ -24254,6 +24305,65 @@ input {
 
         @include respond(desktop-sm) {
           min-width: 28em;
+        }
+
+        &-person {
+          position: relative;
+          padding: 1em 0;
+          @include flexbox();
+          @include align-items(center);
+
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: 0.25em;
+            left: 2.1em;
+            height: 2.5em;
+            border-right: 1.5px solid #e4e6e9;
+            transform: translate(-1.5px, 50%);
+            z-index: 0;
+          }
+
+          &:last-of-type {
+            &::after {
+              display: none;
+            }
+          }
+
+          &-img {
+            margin-right: 1em;
+            min-width: 4.2em;
+            min-height: 4.2em;
+            width: 4.2em;
+            height: 4.2em;
+            max-width: 4.2em;
+            max-height: 4.2em;
+            border-radius: 999px;
+            object-fit: cover;
+            z-index: 1;
+          }
+
+          &-set {
+            // @include flexbox();
+            // @include align-items(center);
+
+            &-title {
+              margin-bottom: 0.4rem;
+              opacity: 0.86;
+              font-size: 1.2em;
+              font-weight: 500;
+              letter-spacing: 0.03px;
+              color: #0d1826;
+            }
+
+            &-text {
+              opacity: 0.55;
+              font-size: 1.1em;
+              font-weight: 400;
+              letter-spacing: normal;
+              color: #0d1826;
+            }
+          }
         }
 
         &-item {
