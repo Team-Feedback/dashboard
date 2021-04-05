@@ -23269,7 +23269,7 @@ input {
         @include flex-direction(column);
         @include align-items(flex-start);
         @include justify-content(flex-end);
-        border-bottom: solid 1px rgba($color: #d6dade, $alpha: 0.6);
+        border-bottom: solid 1px #ecedf0;
         overflow: visible;
         opacity: 1;
         visibility: visible;
