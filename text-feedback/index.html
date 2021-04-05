@@ -308,8 +308,41 @@
 
         <div class="widgets-top">
           <div class="option-buttons">
-            <button class="button">Charts</button>
-            <button class="button active">Text</button>
+            <button class="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                <g id="Group_11407" data-name="Group 11407" transform="translate(-41 -87)">
+                  <rect id="Rectangle_4145" data-name="Rectangle 4145" width="18" height="18" transform="translate(41 87)" fill="#c3c3c3" opacity="0"/>
+                  <g id="Icon_feather-bar-chart-2" data-name="Icon feather-bar-chart-2" transform="translate(36.5 84)">
+                    <path id="Path_9462" data-name="Path 9462" d="M27,22.5V15" transform="translate(-9 -4.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+                    <path id="Path_9463" data-name="Path 9463" d="M18,18V6" transform="translate(-4.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+                    <path id="Path_9464" data-name="Path 9464" d="M9,25.5V21" transform="translate(0 -7.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+                  </g>
+                </g>
+              </svg>
+              
+              Charts</button>
+            <button class="button active">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="13.5" viewBox="0 0 16.5 13.5">
+                <g id="Icon_feather-archive" data-name="Icon feather-archive" transform="translate(-0.75 -3.75)">
+                  <path id="Path_9459" data-name="Path 9459" d="M16.773,12v8.667H4.5V12" transform="translate(-1.636 -4.167)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+                  <path id="Path_9460" data-name="Path 9460" d="M1.5,4.5h15V7.833H1.5Z" transform="translate(0 0)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+                  <path id="Path_9461" data-name="Path 9461" d="M15,18h2.727" transform="translate(-7.364 -7.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+                </g>
+              </svg>
+              
+              Explorer</button>
+            <button class="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                <g id="Group_11409" data-name="Group 11409" transform="translate(-228 -86)">
+                  <rect id="Rectangle_4143" data-name="Rectangle 4143" width="18" height="18" transform="translate(228 86)" fill="#c3c3c3" opacity="0"/>
+                  <g id="Icon_feather-settings" data-name="Icon feather-settings" transform="translate(229 87)">
+                    <path id="Path_9465" data-name="Path 9465" d="M17.864,15.682A2.182,2.182,0,1,1,15.682,13.5,2.182,2.182,0,0,1,17.864,15.682Z" transform="translate(-7.682 -7.682)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+                    <path id="Path_9466" data-name="Path 9466" d="M14.882,11.682a1.2,1.2,0,0,0,.24,1.324l.044.044a1.455,1.455,0,1,1-2.058,2.058l-.044-.044a1.21,1.21,0,0,0-2.051.858v.124a1.455,1.455,0,0,1-2.909,0V15.98a1.2,1.2,0,0,0-.785-1.1,1.2,1.2,0,0,0-1.324.24l-.044.044a1.455,1.455,0,1,1-2.058-2.058l.044-.044a1.21,1.21,0,0,0-.858-2.051H2.955a1.455,1.455,0,0,1,0-2.909H3.02a1.2,1.2,0,0,0,1.1-.785,1.2,1.2,0,0,0-.24-1.324l-.044-.044A1.455,1.455,0,1,1,5.893,3.893l.044.044a1.2,1.2,0,0,0,1.324.24h.058a1.2,1.2,0,0,0,.727-1.1V2.955a1.455,1.455,0,1,1,2.909,0V3.02a1.21,1.21,0,0,0,2.051.858l.044-.044a1.455,1.455,0,1,1,2.058,2.058l-.044.044a1.2,1.2,0,0,0-.24,1.324v.058a1.2,1.2,0,0,0,1.1.727h.124a1.455,1.455,0,0,1,0,2.909H15.98a1.2,1.2,0,0,0-1.1.727Z" transform="translate(-1.5 -1.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+                  </g>
+                </g>
+              </svg>
+              
+              Settings</button>
           </div>
           <div class="reset-layout">
             <i class="icon-backup-restore"></i>
@@ -320,7 +353,32 @@
           <div class="content-card questions">
             <i class="icon-chevron-left card-trigger"></i>
             <div class="questions-header">
-              <p class="questions-header-title">Text feedback questions</p>
+              <!-- <p class="questions-header-title">Team Feedback</p> -->
+              <div class="custom-dropdown">
+                <button class="custom-dropdown-trigger questions-header-title">Team Feedback <i class="icon-chevron-down"></i></button>
+                <div class="custom-dropdown-menu">
+                  <button class="custom-dropdown-menu-item checked">
+                    <i class="icon-check"></i>
+                    <p class="custom-dropdown-menu-item-text">Team Feedback</p>
+                  </button>
+                  <button class="custom-dropdown-menu-item">
+                    <i class="icon-check"></i>
+                    <p class="custom-dropdown-menu-item-text">P2P Feedback</p>
+                  </button>
+                  <button class="custom-dropdown-menu-item">
+                    <i class="icon-check"></i>
+                    <p class="custom-dropdown-menu-item-text">Self evaluation</p>
+                  </button>
+                  <button class="custom-dropdown-menu-item">
+                    <i class="icon-check"></i>
+                    <p class="custom-dropdown-menu-item-text">Feedback about the team lead</p>
+                  </button>
+                  <button class="custom-dropdown-menu-item">
+                    <i class="icon-check"></i>
+                    <p class="custom-dropdown-menu-item-text">Subordinate feedback</p>
+                  </button>
+                </div>
+              </div>
               <p class="questions-header-text">3 Text feedback questions</p>
             </div>
             <div class="questions-main">
