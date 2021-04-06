@@ -23304,6 +23304,10 @@ input {
               margin-left: 0.8rem;
               font-size: 1.2rem;
               color: #d1d2d3;
+
+              &::after {
+                display: none !important;
+              }
             }
 
             &:focus,
@@ -23382,20 +23386,24 @@ input {
       }
 
       &-main {
-        padding: 1.1em 1.8em 2em;
-        height: calc(100% - 5.567em);
+        padding: 1.4em 1.4em 2em;
+        height: calc(100% - 7.1em);
         opacity: 1;
         visibility: visible;
         transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
         overflow-y: auto;
         overflow-x: visible;
         scrollbar-width: none;
+        /* Firefox */
         -ms-overflow-style: none;
+        /* Internet Explorer 10+ */
 
         &::-webkit-scrollbar {
+          /* WebKit */
           width: 0;
           height: 0;
         }
+
         min-width: 34em;
         opacity: 1;
         visibility: visible;
@@ -23409,6 +23417,7 @@ input {
           @include justify-content(space-between);
           border-radius: 4px;
           cursor: pointer;
+          border: solid 1px transparent;
 
           &:not(:last-of-type) {
             margin-bottom: 0.2rem;
@@ -23421,6 +23430,7 @@ input {
           // }
 
           &:hover {
+            border: solid 1px #f0f0f0;
             background-color: #f5f7f8;
 
             & .question-text {
@@ -23635,11 +23645,20 @@ input {
             opacity: 0;
             visibility: hidden;
             transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+            & .icon-feather-thumbs-up {
+              right: 2rem;
+            }
+
+            &:last-of-type {
+              padding-bottom: 2.3em;
+            }
           }
         }
 
         & .answer {
-          padding: 1.6em 4.6em 1.3em 2.6em;
+          position: relative;
+          padding: 1.8em 4.6em 1.3em 2em;
           @include flexbox();
           @include align-items(flex-start);
           @include justify-content(flex-start);
@@ -23649,7 +23668,7 @@ input {
           &-wrapper {
             border-bottom: solid 1px rgba($color: #d6dade, $alpha: 0.6);
             &.active {
-              background-color: #f5f7f8;
+              background-color: #f9fcfe;
             }
             &.open {
               //background-color: #f5f7f8;
@@ -23668,7 +23687,7 @@ input {
           }
 
           &.active {
-            background-color: #f5f7f8;
+            background-color: #f9fcfe;
 
             & .answer-set-text {
               opacity: 1;
@@ -23721,6 +23740,7 @@ input {
             color: #ffffff;
             border-radius: 50%;
             letter-spacing: 0.06px;
+            background-color: #00174d;
 
             &:hover {
               cursor: pointer;
@@ -23738,6 +23758,18 @@ input {
               @include flexbox();
               @include align-items(center);
               @include justify-content(flex-start);
+
+              &-circle {
+                margin-right: 0.55em;
+                min-width: 0.75em;
+                min-height: 0.75em;
+                width: 0.75em;
+                height: 0.75em;
+                max-height: 0.75em;
+                max-width: 0.75em;
+                background-color: #087af9;
+                border-radius: 999px;
+              }
 
               &-name {
                 margin-right: emcalc(1.3, 1.38);
@@ -23759,9 +23791,35 @@ input {
                 @include justify-content(center);
 
                 &-item {
+                  position: relative;
                   @include inline-flex();
                   @include align-items(center);
                   @include justify-content(center);
+                  z-index: 1;
+
+                  &:hover:before {
+                    opacity: 1;
+                    visibility: visible;
+                  }
+
+                  &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: calc(100% + 1em);
+                    height: calc(100% + 0.4em);
+                    border-radius: 6px;
+                    border: solid 1px #f0f0f0;
+                    background-color: #f5f7f8;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity 0.2s ease-in-out,
+                      visibility 0.2s ease-in-out;
+                    z-index: -1;
+                  }
 
                   &-img {
                     margin-right: 0.4em;
@@ -23813,7 +23871,7 @@ input {
             }
 
             &-text {
-              position: relative;
+              //position: relative;
               padding-right: 10%;
               font-size: 1.33em;
               font-weight: 400;
@@ -23822,10 +23880,17 @@ input {
 
               & .icon-feather-thumbs-up {
                 position: absolute;
-                top: 0;
-                right: 0;
+                top: 50%;
+                right: 4rem;
+                transform: translate(0, -50%);
                 font-size: 1.7rem;
                 color: #d1d3d5;
+
+                &:hover {
+                  transform: translate(0, -50%) scale(1.7);
+                  color: #13ba3a;
+                  transition: transform 0.1s ease-in-out;
+                }
               }
             }
 
@@ -23984,7 +24049,7 @@ input {
 
       &-header {
         height: 7.1em;
-        padding: 1.7em 2.2em 1.4em 1.3em;
+        padding: 1.4em 2.2em 1.4em 2em;
         @include flexbox();
         @include align-items(center);
         @include justify-content(space-between);
@@ -24336,10 +24401,11 @@ input {
             height: emcalc(8.4, 1.2);
             padding: 0.6rem 0.9rem;
             border-radius: 4px;
-            border: solid 1px #d6dade;
+            border: solid 1px #e2e7eb;
             font-size: 1.2em;
             font-weight: 400;
             color: rgba($color: #0d1826, $alpha: 0.81);
+            background-color: #fcfcfc;
 
             &::placeholder {
               opacity: 0.23;
