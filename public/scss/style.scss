@@ -23440,6 +23440,7 @@ input {
           }
 
           &.active {
+            border: solid 1px #f0f0f0;
             background-color: #f5f7f8;
 
             & .question-text {
@@ -23641,6 +23642,8 @@ input {
 
           & .answer {
             padding-right: 2.6em;
+            padding-top: 1em;
+            padding-bottom: 1em;
             border-bottom: 0;
             opacity: 0;
             visibility: hidden;
@@ -23648,6 +23651,10 @@ input {
 
             & .icon-feather-thumbs-up {
               right: 2rem;
+            }
+
+            &:first-of-type {
+              padding-top: 1.8em;
             }
 
             &:last-of-type {
@@ -23734,7 +23741,6 @@ input {
             height: emcalc(4.8, 2.2);
             max-width: emcalc(4.8, 2.2);
             max-height: emcalc(4.8, 2.2);
-            background: linear-gradient(to bottom, #ffce33, #ffc033);
             font-size: 2.2em;
             font-weight: 700;
             color: #ffffff;
@@ -23796,6 +23802,12 @@ input {
                   @include align-items(center);
                   @include justify-content(center);
                   z-index: 1;
+
+                  &:first-of-type {
+                    &::before {
+                      display: none;
+                    }
+                  }
 
                   &:hover:before {
                     opacity: 1;
@@ -23887,7 +23899,7 @@ input {
                 color: #d1d3d5;
 
                 &:hover {
-                  transform: translate(0, -50%) scale(1.7);
+                  transform: translate(0, -50%) scale(1.07);
                   color: #13ba3a;
                   transition: transform 0.1s ease-in-out;
                 }
@@ -24100,7 +24112,7 @@ input {
             @include justify-content(center);
             width: emcalc(4.3, 1.4);
             height: emcalc(4.3, 1.4);
-            background: linear-gradient(to bottom, #ffce33, #ffc033);
+            background-color: #00174d;
             font-size: 1.4em;
             font-weight: 600;
             color: #ffffff;
@@ -24498,6 +24510,37 @@ input {
             border-radius: 999px;
             object-fit: cover;
             z-index: 1;
+
+            &:hover {
+              cursor: pointer;
+              box-shadow: 0 0 0 3px white, 0 0 0 4px #e6e9eb;
+            }
+          }
+
+          &-initials {
+            @include inline-flex();
+            @include align-items(center);
+            @include justify-content(center);
+            margin-right: 1rem;
+            min-width: 4.2rem;
+            min-height: 4.2rem;
+            width: 4.2rem;
+            height: 4.2rem;
+            max-width: 4.2rem;
+            max-height: 4.2rem;
+            border-radius: 999px;
+            object-fit: cover;
+            z-index: 1;
+            font-size: 1.85em;
+            letter-spacing: 0.06px;
+            font-weight: 700;
+            background-color: #00174d;
+            color: #fff;
+
+            &:hover {
+              cursor: pointer;
+              box-shadow: 0 0 0 3px white, 0 0 0 4px #e6e9eb;
+            }
           }
 
           &-set {
