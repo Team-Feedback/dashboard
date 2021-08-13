@@ -17503,6 +17503,11 @@ input {
         }
       }
 
+      &-nav,
+      & .nav-dropdown {
+        display: none;
+      }
+
       &:hover {
         & .header-main {
           background-color: #fafafa !important;
@@ -22342,7 +22347,7 @@ input {
             }
           }
 
-          &-body {
+          .team-table-body {
             padding-top: 1em;
 
             &-item {
@@ -22487,6 +22492,245 @@ input {
             }
           }
         }
+      }
+    }
+  }
+}
+
+.public_fixedDataTableCell_main,
+.public_fixedDataTableRow_highlighted,
+.public_fixedDataTableRow_highlighted .public_fixedDataTableCell_main {
+  background-color: #fff !important;
+}
+
+.fixedDataTableCellLayout_wrap1 {
+  width: 100% !important;
+}
+
+.public_fixedDataTableCell_cellContent {
+  padding: 0 4px 4px 0 !important;
+}
+
+.fixedDataTableCellLayout_main {
+  border: none !important;
+}
+
+.public_fixedDataTable_header,
+.public_fixedDataTable_header .public_fixedDataTableCell_main {
+  //background-color: transparent !important;
+  background-image: none !important;
+}
+
+.fixedDataTableCellLayout_columnReorderContainer {
+  // position: absolute !important;
+  // top: 0 !important;
+  // left: 0 !important;
+  // background-color: #fff !important;
+  // width: 100% !important;
+
+  // &::after {
+  //   display: none !important;
+  // }
+}
+
+.fixedDataTableCellLayout_columnResizerContainer {
+  height: 24px !important;
+  margin-top: 4px !important;
+  margin-bottom: 5px !important;
+  width: 1px !important;
+  background-color: #e4e6e9 !important;
+
+  &:hover {
+    background-color: transparent !important;
+  }
+}
+
+.fixedDataTableCellLayout_columnResizerContainer:hover
+  .fixedDataTableCellLayout_columnResizerKnob {
+  height: 35px !important;
+  margin-top: -4px !important;
+  margin-bottom: 0 !important;
+  border-right: none !important;
+}
+
+.public_fixedDataTableCell_hasReorderHandle
+  .public_fixedDataTableCell_cellContent {
+  margin-left: 8px !important;
+  font-size: 1.1em !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.08px !important;
+  text-align: left !important;
+  color: #0d1826 !important;
+  opacity: 0.8 !important;
+  pointer-events: none !important;
+}
+
+.public_fixedDataTable_header {
+  border-bottom: 2px solid #e4e6e9 !important;
+}
+
+.public_fixedDataTableRow_fixedColumnsDivider {
+  border-right: 0 !important;
+  border-color: transparent !important;
+}
+
+.public_fixedDataTable_header .public_fixedDataTableCell_cellContent {
+  padding-left: 8px !important;
+  font-size: 1.1em !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.08px !important;
+  text-align: left !important;
+  color: #0d1826 !important;
+  opacity: 0.8 !important;
+  pointer-events: none !important;
+}
+
+.public_fixedDataTable_scrollbarSpacer {
+  display: none !important;
+}
+
+.team-table-body-item {
+  // margin-right: 0.4em;
+  // margin-bottom: 0.4em;
+  height: 3.5em;
+  @include flexbox();
+  @include align-items(flex-start);
+  @include justify-content(flex-start);
+  width: 100%;
+
+  &-img {
+    min-width: 3em;
+    min-height: 3em;
+    width: 3em;
+    height: 3em;
+    max-width: 3em;
+    max-height: 3em;
+    border-radius: 100vh;
+    object-fit: cover;
+
+    &-wrapper {
+      margin-right: 0.4em;
+      height: 100%;
+      width: 6em;
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(center);
+      border-radius: 2px;
+      background-color: #f5f6f8;
+    }
+  }
+
+  &-text {
+    height: 100%;
+    padding: 0 emcalc(1.4, 1.2);
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(flex-start);
+    font-size: 1.2em;
+    font-weight: 400;
+    letter-spacing: normal;
+    color: #0d1826;
+    border-radius: 2px;
+    background-color: #f5f6f8;
+    flex: 1;
+    // white-space: nowrap;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+
+    & span {
+      font-weight: 500;
+      // white-space: nowrap;
+    }
+  }
+
+  &-button {
+    height: 100%;
+    width: 100%;
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+    font-size: 1.2em;
+    font-weight: 600;
+    letter-spacing: 0.03px;
+    color: #fff;
+    border-radius: 2px;
+
+    &.green {
+      background-color: #1ac362;
+    }
+
+    &.red {
+      background-color: #fa711f;
+    }
+
+    &.yellow {
+      background-color: #febd2b;
+    }
+  }
+
+  & .stars {
+    padding: 0 1.3em;
+    height: 100%;
+    width: 100%;
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+    border-radius: 3px;
+    background-color: #f5f6f8;
+
+    & .star {
+      margin-right: emcalc(0.3, 1.7);
+      font-size: 2em;
+      color: #fece2f;
+
+      &.full {
+        color: #ffce00;
+      }
+    }
+  }
+
+  &-progress {
+    width: 100%;
+    height: 2.2em;
+    border-radius: 11px;
+    background-color: #e3e3e3;
+
+    &-wrapper {
+      padding: 0 1.4em;
+      width: 100%;
+      height: 100%;
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(center);
+      border-radius: 2px;
+      background-color: #f5f6f8;
+    }
+
+    &-bar {
+      width: 100%;
+      height: 100%;
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(center);
+      border-radius: 11px;
+
+      &.green {
+        background-color: #1ac362;
+      }
+
+      &.red {
+        background-color: #fa711f;
+      }
+
+      &.yellow {
+        background-color: #feab29;
+      }
+
+      &-label {
+        font-size: 1.2em;
+        font-weight: 600;
+        letter-spacing: 0.03px;
+        color: #f5f6f8;
       }
     }
   }
